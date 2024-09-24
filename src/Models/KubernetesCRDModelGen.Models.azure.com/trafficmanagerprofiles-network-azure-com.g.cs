@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
 /// <summary>Storage version of v1api20220401.DnsConfig Class containing DNS settings in a Traffic Manager profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileSpecDnsConfig
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -25,6 +26,7 @@ public partial class V1api20220401storageTrafficManagerProfileSpecDnsConfig
 }
 
 /// <summary>Storage version of v1api20220401.MonitorConfig_CustomHeaders</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileSpecMonitorConfigCustomHeaders
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -41,6 +43,7 @@ public partial class V1api20220401storageTrafficManagerProfileSpecMonitorConfigC
 }
 
 /// <summary>Storage version of v1api20220401.MonitorConfig_ExpectedStatusCodeRanges</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileSpecMonitorConfigExpectedStatusCodeRanges
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -57,6 +60,7 @@ public partial class V1api20220401storageTrafficManagerProfileSpecMonitorConfigE
 }
 
 /// <summary>Storage version of v1api20220401.MonitorConfig Class containing endpoint monitoring settings in a Traffic Manager profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileSpecMonitorConfig
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -101,6 +105,7 @@ public partial class V1api20220401storageTrafficManagerProfileSpecMonitorConfig
 }
 
 /// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileSpecOperatorSpecConfigMapsDnsConfigFqdn
 {
     /// <summary>Key is the key in the ConfigMap being referenced</summary>
@@ -113,6 +118,7 @@ public partial class V1api20220401storageTrafficManagerProfileSpecOperatorSpecCo
 }
 
 /// <summary>Storage version of v1api20220401.TrafficManagerProfileOperatorConfigMaps</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileSpecOperatorSpecConfigMaps
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -125,6 +131,7 @@ public partial class V1api20220401storageTrafficManagerProfileSpecOperatorSpecCo
 }
 
 /// <summary>Storage version of v1api20220401.TrafficManagerProfileOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -137,6 +144,7 @@ public partial class V1api20220401storageTrafficManagerProfileSpecOperatorSpec
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileSpecOwner
 {
     /// <summary></summary>
@@ -149,6 +157,7 @@ public partial class V1api20220401storageTrafficManagerProfileSpecOwner
 }
 
 /// <summary>Storage version of v1api20220401.Trafficmanagerprofile_Spec</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -213,6 +222,7 @@ public partial class V1api20220401storageTrafficManagerProfileSpec
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -245,6 +255,7 @@ public partial class V1api20220401storageTrafficManagerProfileStatusConditions
 }
 
 /// <summary>Storage version of v1api20220401.DnsConfig_STATUS Class containing DNS settings in a Traffic Manager profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileStatusDnsConfig
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -265,6 +276,7 @@ public partial class V1api20220401storageTrafficManagerProfileStatusDnsConfig
 }
 
 /// <summary>Storage version of v1api20220401.Endpoint_STATUS Class representing a Traffic Manager endpoint.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileStatusEndpoints
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -277,6 +289,7 @@ public partial class V1api20220401storageTrafficManagerProfileStatusEndpoints
 }
 
 /// <summary>Storage version of v1api20220401.MonitorConfig_CustomHeaders_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileStatusMonitorConfigCustomHeaders
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -293,6 +306,7 @@ public partial class V1api20220401storageTrafficManagerProfileStatusMonitorConfi
 }
 
 /// <summary>Storage version of v1api20220401.MonitorConfig_ExpectedStatusCodeRanges_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileStatusMonitorConfigExpectedStatusCodeRanges
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -309,6 +323,7 @@ public partial class V1api20220401storageTrafficManagerProfileStatusMonitorConfi
 }
 
 /// <summary>Storage version of v1api20220401.MonitorConfig_STATUS Class containing endpoint monitoring settings in a Traffic Manager profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileStatusMonitorConfig
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -353,6 +368,7 @@ public partial class V1api20220401storageTrafficManagerProfileStatusMonitorConfi
 }
 
 /// <summary>Storage version of v1api20220401.Trafficmanagerprofile_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -416,8 +432,9 @@ public partial class V1api20220401storageTrafficManagerProfileStatus
     public string? Type { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Storage version of v1api20220401.TrafficManagerProfile Generator information: - Generated from: /trafficmanager/resource-manager/Microsoft.Network/stable/2022-04-01/trafficmanager.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1api20220401storageTrafficManagerProfile : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220401storageTrafficManagerProfileSpec>, IStatus<V1api20220401storageTrafficManagerProfileStatus>
 {
     public const string KubeApiVersion = "v1api20220401storage";

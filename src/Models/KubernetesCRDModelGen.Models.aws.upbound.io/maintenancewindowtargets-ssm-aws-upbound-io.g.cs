@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ssm.aws.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTargetSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1MaintenanceWindowTargetSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecForProviderTargets
 {
     /// <summary></summary>
@@ -30,6 +32,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecForProviderTargets
     public IList<string>? Values { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTargetSpecForProviderWindowIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -40,6 +43,7 @@ public enum V1beta1MaintenanceWindowTargetSpecForProviderWindowIdRefPolicyResolu
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTargetSpecForProviderWindowIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -51,6 +55,7 @@ public enum V1beta1MaintenanceWindowTargetSpecForProviderWindowIdRefPolicyResolv
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecForProviderWindowIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -65,6 +70,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecForProviderWindowIdRefPol
 }
 
 /// <summary>Reference to a MaintenanceWindow in ssm to populate windowId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecForProviderWindowIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -76,6 +82,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecForProviderWindowIdRef
     public V1beta1MaintenanceWindowTargetSpecForProviderWindowIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTargetSpecForProviderWindowIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -86,6 +93,7 @@ public enum V1beta1MaintenanceWindowTargetSpecForProviderWindowIdSelectorPolicyR
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTargetSpecForProviderWindowIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -97,6 +105,7 @@ public enum V1beta1MaintenanceWindowTargetSpecForProviderWindowIdSelectorPolicyR
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecForProviderWindowIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -111,6 +120,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecForProviderWindowIdSelect
 }
 
 /// <summary>Selector for a MaintenanceWindow in ssm to populate windowId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecForProviderWindowIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -127,6 +137,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecForProviderWindowIdSelect
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecForProvider
 {
     /// <summary>The description of the maintenance window target.</summary>
@@ -167,6 +178,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecInitProviderTargets
 {
     /// <summary></summary>
@@ -178,6 +190,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecInitProviderTargets
     public IList<string>? Values { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -188,6 +201,7 @@ public enum V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdRefPolicyResol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -199,6 +213,7 @@ public enum V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdRefPolicyResol
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -213,6 +228,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdRefPo
 }
 
 /// <summary>Reference to a MaintenanceWindow in ssm to populate windowId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -224,6 +240,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdRef
     public V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -234,6 +251,7 @@ public enum V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdSelectorPolicy
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -245,6 +263,7 @@ public enum V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdSelectorPolicy
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -259,6 +278,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdSelec
 }
 
 /// <summary>Selector for a MaintenanceWindow in ssm to populate windowId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -275,6 +295,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdSelec
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecInitProvider
 {
     /// <summary>The description of the maintenance window target.</summary>
@@ -310,6 +331,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecInitProvider
     public V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdSelector? WindowIdSelector { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTargetSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -332,6 +354,7 @@ public enum V1beta1MaintenanceWindowTargetSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTargetSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -342,6 +365,7 @@ public enum V1beta1MaintenanceWindowTargetSpecProviderConfigRefPolicyResolutionE
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTargetSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -353,6 +377,7 @@ public enum V1beta1MaintenanceWindowTargetSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -367,6 +392,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -378,6 +404,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecProviderConfigRef
     public V1beta1MaintenanceWindowTargetSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTargetSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -388,6 +415,7 @@ public enum V1beta1MaintenanceWindowTargetSpecPublishConnectionDetailsToConfigRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTargetSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -399,6 +427,7 @@ public enum V1beta1MaintenanceWindowTargetSpecPublishConnectionDetailsToConfigRe
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -413,6 +442,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecPublishConnectionDetailsT
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -425,6 +455,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecPublishConnectionDetailsT
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -441,6 +472,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecPublishConnectionDetailsT
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -457,6 +489,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecPublishConnectionDetailsT
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -469,6 +502,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecWriteConnectionSecretToRe
 }
 
 /// <summary>MaintenanceWindowTargetSpec defines the desired state of MaintenanceWindowTarget</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -502,6 +536,7 @@ public partial class V1beta1MaintenanceWindowTargetSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetStatusAtProviderTargets
 {
     /// <summary></summary>
@@ -514,6 +549,7 @@ public partial class V1beta1MaintenanceWindowTargetStatusAtProviderTargets
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetStatusAtProvider
 {
     /// <summary>The description of the maintenance window target.</summary>
@@ -546,6 +582,7 @@ public partial class V1beta1MaintenanceWindowTargetStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -574,6 +611,7 @@ public partial class V1beta1MaintenanceWindowTargetStatusConditions
 }
 
 /// <summary>MaintenanceWindowTargetStatus defines the observed state of MaintenanceWindowTarget.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetStatus
 {
     /// <summary></summary>
@@ -589,8 +627,9 @@ public partial class V1beta1MaintenanceWindowTargetStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>MaintenanceWindowTarget is the Schema for the MaintenanceWindowTargets API. Provides an SSM Maintenance Window Target resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1MaintenanceWindowTarget : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MaintenanceWindowTargetSpec>, IStatus<V1beta1MaintenanceWindowTargetStatus>
 {
     public const string KubeApiVersion = "v1beta1";

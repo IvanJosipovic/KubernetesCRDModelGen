@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apimanagement.azure.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1IdentityProviderTwitterSpecDeletionPolicyEnum
 }
 
 /// <summary>App Consumer API key for Twitter.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecForProviderApiKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -34,6 +36,7 @@ public partial class V1beta1IdentityProviderTwitterSpecForProviderApiKeySecretRe
     public string Namespace { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -44,6 +47,7 @@ public enum V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameRefPol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -55,6 +59,7 @@ public enum V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameRefPol
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -69,6 +74,7 @@ public partial class V1beta1IdentityProviderTwitterSpecForProviderApiManagementN
 }
 
 /// <summary>Reference to a Management in apimanagement to populate apiManagementName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -80,6 +86,7 @@ public partial class V1beta1IdentityProviderTwitterSpecForProviderApiManagementN
     public V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -90,6 +97,7 @@ public enum V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameSelect
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -101,6 +109,7 @@ public enum V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameSelect
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -115,6 +124,7 @@ public partial class V1beta1IdentityProviderTwitterSpecForProviderApiManagementN
 }
 
 /// <summary>Selector for a Management in apimanagement to populate apiManagementName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -131,6 +141,7 @@ public partial class V1beta1IdentityProviderTwitterSpecForProviderApiManagementN
 }
 
 /// <summary>App Consumer API secret key for Twitter.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecForProviderApiSecretKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -146,6 +157,7 @@ public partial class V1beta1IdentityProviderTwitterSpecForProviderApiSecretKeySe
     public string Namespace { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -156,6 +168,7 @@ public enum V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameRefPol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -167,6 +180,7 @@ public enum V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameRefPol
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -181,6 +195,7 @@ public partial class V1beta1IdentityProviderTwitterSpecForProviderResourceGroupN
 }
 
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -192,6 +207,7 @@ public partial class V1beta1IdentityProviderTwitterSpecForProviderResourceGroupN
     public V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -202,6 +218,7 @@ public enum V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameSelect
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -213,6 +230,7 @@ public enum V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameSelect
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -227,6 +245,7 @@ public partial class V1beta1IdentityProviderTwitterSpecForProviderResourceGroupN
 }
 
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -243,6 +262,7 @@ public partial class V1beta1IdentityProviderTwitterSpecForProviderResourceGroupN
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecForProvider
 {
     /// <summary>App Consumer API key for Twitter.</summary>
@@ -279,6 +299,7 @@ public partial class V1beta1IdentityProviderTwitterSpecForProvider
 }
 
 /// <summary>App Consumer API key for Twitter.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -294,6 +315,7 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiKeySecretR
     public string Namespace { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -304,6 +326,7 @@ public enum V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameRefPo
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -315,6 +338,7 @@ public enum V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameRefPo
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -329,6 +353,7 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiManagement
 }
 
 /// <summary>Reference to a Management in apimanagement to populate apiManagementName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -340,6 +365,7 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiManagement
     public V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -350,6 +376,7 @@ public enum V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameSelec
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -361,6 +388,7 @@ public enum V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameSelec
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -375,6 +403,7 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiManagement
 }
 
 /// <summary>Selector for a Management in apimanagement to populate apiManagementName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -391,6 +420,7 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiManagement
 }
 
 /// <summary>App Consumer API secret key for Twitter.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiSecretKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -406,6 +436,7 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiSecretKeyS
     public string Namespace { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -416,6 +447,7 @@ public enum V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameRefPo
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -427,6 +459,7 @@ public enum V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameRefPo
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -441,6 +474,7 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProviderResourceGroup
 }
 
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -452,6 +486,7 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProviderResourceGroup
     public V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -462,6 +497,7 @@ public enum V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameSelec
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -473,6 +509,7 @@ public enum V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameSelec
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -487,6 +524,7 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProviderResourceGroup
 }
 
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -503,6 +541,7 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProviderResourceGroup
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecInitProvider
 {
     /// <summary>App Consumer API key for Twitter.</summary>
@@ -538,6 +577,7 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProvider
     public V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -560,6 +600,7 @@ public enum V1beta1IdentityProviderTwitterSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -570,6 +611,7 @@ public enum V1beta1IdentityProviderTwitterSpecProviderConfigRefPolicyResolutionE
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -581,6 +623,7 @@ public enum V1beta1IdentityProviderTwitterSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -595,6 +638,7 @@ public partial class V1beta1IdentityProviderTwitterSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -606,6 +650,7 @@ public partial class V1beta1IdentityProviderTwitterSpecProviderConfigRef
     public V1beta1IdentityProviderTwitterSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -616,6 +661,7 @@ public enum V1beta1IdentityProviderTwitterSpecPublishConnectionDetailsToConfigRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -627,6 +673,7 @@ public enum V1beta1IdentityProviderTwitterSpecPublishConnectionDetailsToConfigRe
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -641,6 +688,7 @@ public partial class V1beta1IdentityProviderTwitterSpecPublishConnectionDetailsT
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -653,6 +701,7 @@ public partial class V1beta1IdentityProviderTwitterSpecPublishConnectionDetailsT
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -669,6 +718,7 @@ public partial class V1beta1IdentityProviderTwitterSpecPublishConnectionDetailsT
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -685,6 +735,7 @@ public partial class V1beta1IdentityProviderTwitterSpecPublishConnectionDetailsT
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -697,6 +748,7 @@ public partial class V1beta1IdentityProviderTwitterSpecWriteConnectionSecretToRe
 }
 
 /// <summary>IdentityProviderTwitterSpec defines the desired state of IdentityProviderTwitter</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -730,6 +782,7 @@ public partial class V1beta1IdentityProviderTwitterSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterStatusAtProvider
 {
     /// <summary>The Name of the API Management Service where this Twitter Identity Provider should be created. Changing this forces a new resource to be created.</summary>
@@ -746,6 +799,7 @@ public partial class V1beta1IdentityProviderTwitterStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -774,6 +828,7 @@ public partial class V1beta1IdentityProviderTwitterStatusConditions
 }
 
 /// <summary>IdentityProviderTwitterStatus defines the observed state of IdentityProviderTwitter.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterStatus
 {
     /// <summary></summary>
@@ -789,8 +844,9 @@ public partial class V1beta1IdentityProviderTwitterStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>IdentityProviderTwitter is the Schema for the IdentityProviderTwitters API. Manages an API Management Twitter Identity Provider.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1IdentityProviderTwitter : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IdentityProviderTwitterSpec>, IStatus<V1beta1IdentityProviderTwitterStatus>
 {
     public const string KubeApiVersion = "v1beta1";

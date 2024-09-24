@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetPoolSpecBackupTargetPoolRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeTargetPool` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1ComputeTargetPoolSpecBackupTargetPoolRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetPoolSpecHealthChecksHttpHealthCheckRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeHTTPHealthCheck` resource.</summary>
@@ -41,6 +43,7 @@ public partial class V1beta1ComputeTargetPoolSpecHealthChecksHttpHealthCheckRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetPoolSpecHealthChecks
 {
     /// <summary></summary>
@@ -49,6 +52,7 @@ public partial class V1beta1ComputeTargetPoolSpecHealthChecks
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetPoolSpecInstances
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeInstance` resource.</summary>
@@ -65,6 +69,7 @@ public partial class V1beta1ComputeTargetPoolSpecInstances
 }
 
 /// <summary>The resource URL for the security policy associated with this target pool.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetPoolSpecSecurityPolicyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSecurityPolicy` resource.</summary>
@@ -81,6 +86,7 @@ public partial class V1beta1ComputeTargetPoolSpecSecurityPolicyRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetPoolSpec
 {
     /// <summary></summary>
@@ -121,6 +127,7 @@ public partial class V1beta1ComputeTargetPoolSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetPoolStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -145,6 +152,7 @@ public partial class V1beta1ComputeTargetPoolStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetPoolStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -160,8 +168,9 @@ public partial class V1beta1ComputeTargetPoolStatus
     public string? SelfLink { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ComputeTargetPool : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeTargetPoolSpec>, IStatus<V1beta1ComputeTargetPoolStatus>
 {
     public const string KubeApiVersion = "v1beta1";

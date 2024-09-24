@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.hub.traefik.io;
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIAccessSpecApiSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -25,6 +26,7 @@ public partial class V1alpha1APIAccessSpecApiSelectorMatchExpressions
 }
 
 /// <summary>APISelector selects the APIs that will be accessible to the configured audience. Multiple APIAccesses can select the same set of APIs. This field is optional and follows standard label selector semantics. An empty APISelector matches any API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIAccessSpecApiSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -37,6 +39,7 @@ public partial class V1alpha1APIAccessSpecApiSelector
 }
 
 /// <summary>APIReference references an API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIAccessSpecApis
 {
     /// <summary>Name of the API.</summary>
@@ -45,6 +48,7 @@ public partial class V1alpha1APIAccessSpecApis
 }
 
 /// <summary>OperationFilter specifies the allowed operations on APIs and APIVersions. If not set, all operations are available. An empty OperationFilter prohibits all operations.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIAccessSpecOperationFilter
 {
     /// <summary>Include defines the names of OperationSets that will be accessible.</summary>
@@ -53,6 +57,7 @@ public partial class V1alpha1APIAccessSpecOperationFilter
 }
 
 /// <summary>The desired behavior of this APIAccess.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIAccessSpec
 {
     /// <summary>APISelector selects the APIs that will be accessible to the configured audience. Multiple APIAccesses can select the same set of APIs. This field is optional and follows standard label selector semantics. An empty APISelector matches any API.</summary>
@@ -77,6 +82,7 @@ public partial class V1alpha1APIAccessSpec
 }
 
 /// <summary>The current status of this APIAccess.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIAccessStatus
 {
     /// <summary>Hash is a hash representing the APIAccess.</summary>
@@ -92,8 +98,9 @@ public partial class V1alpha1APIAccessStatus
     public string? Version { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>APIAccess defines who can access to a set of APIs.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1APIAccess : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1APIAccessSpec>, IStatus<V1alpha1APIAccessStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

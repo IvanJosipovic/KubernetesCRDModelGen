@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.connect.aws.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserHierarchyStructureSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1UserHierarchyStructureSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecForProviderHierarchyStructureLevelFive
 {
     /// <summary>The name of the user hierarchy level. Must not be more than 50 characters.</summary>
@@ -27,6 +29,7 @@ public partial class V1beta1UserHierarchyStructureSpecForProviderHierarchyStruct
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecForProviderHierarchyStructureLevelFour
 {
     /// <summary>The name of the user hierarchy level. Must not be more than 50 characters.</summary>
@@ -35,6 +38,7 @@ public partial class V1beta1UserHierarchyStructureSpecForProviderHierarchyStruct
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecForProviderHierarchyStructureLevelOne
 {
     /// <summary>The name of the user hierarchy level. Must not be more than 50 characters.</summary>
@@ -43,6 +47,7 @@ public partial class V1beta1UserHierarchyStructureSpecForProviderHierarchyStruct
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecForProviderHierarchyStructureLevelThree
 {
     /// <summary>The name of the user hierarchy level. Must not be more than 50 characters.</summary>
@@ -51,6 +56,7 @@ public partial class V1beta1UserHierarchyStructureSpecForProviderHierarchyStruct
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecForProviderHierarchyStructureLevelTwo
 {
     /// <summary>The name of the user hierarchy level. Must not be more than 50 characters.</summary>
@@ -59,6 +65,7 @@ public partial class V1beta1UserHierarchyStructureSpecForProviderHierarchyStruct
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecForProviderHierarchyStructure
 {
     /// <summary>A block that defines the details of level five. The level block is documented below.</summary>
@@ -82,6 +89,7 @@ public partial class V1beta1UserHierarchyStructureSpecForProviderHierarchyStruct
     public IList<V1beta1UserHierarchyStructureSpecForProviderHierarchyStructureLevelTwo>? LevelTwo { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserHierarchyStructureSpecForProviderInstanceIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -92,6 +100,7 @@ public enum V1beta1UserHierarchyStructureSpecForProviderInstanceIdRefPolicyResol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserHierarchyStructureSpecForProviderInstanceIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -103,6 +112,7 @@ public enum V1beta1UserHierarchyStructureSpecForProviderInstanceIdRefPolicyResol
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecForProviderInstanceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -117,6 +127,7 @@ public partial class V1beta1UserHierarchyStructureSpecForProviderInstanceIdRefPo
 }
 
 /// <summary>Reference to a Instance in connect to populate instanceId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecForProviderInstanceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -128,6 +139,7 @@ public partial class V1beta1UserHierarchyStructureSpecForProviderInstanceIdRef
     public V1beta1UserHierarchyStructureSpecForProviderInstanceIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserHierarchyStructureSpecForProviderInstanceIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -138,6 +150,7 @@ public enum V1beta1UserHierarchyStructureSpecForProviderInstanceIdSelectorPolicy
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserHierarchyStructureSpecForProviderInstanceIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -149,6 +162,7 @@ public enum V1beta1UserHierarchyStructureSpecForProviderInstanceIdSelectorPolicy
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecForProviderInstanceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -163,6 +177,7 @@ public partial class V1beta1UserHierarchyStructureSpecForProviderInstanceIdSelec
 }
 
 /// <summary>Selector for a Instance in connect to populate instanceId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecForProviderInstanceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -179,6 +194,7 @@ public partial class V1beta1UserHierarchyStructureSpecForProviderInstanceIdSelec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecForProvider
 {
     /// <summary>A block that defines the hierarchy structure's levels. The hierarchy_structure block is documented below.</summary>
@@ -203,6 +219,7 @@ public partial class V1beta1UserHierarchyStructureSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecInitProviderHierarchyStructureLevelFive
 {
     /// <summary>The name of the user hierarchy level. Must not be more than 50 characters.</summary>
@@ -211,6 +228,7 @@ public partial class V1beta1UserHierarchyStructureSpecInitProviderHierarchyStruc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecInitProviderHierarchyStructureLevelFour
 {
     /// <summary>The name of the user hierarchy level. Must not be more than 50 characters.</summary>
@@ -219,6 +237,7 @@ public partial class V1beta1UserHierarchyStructureSpecInitProviderHierarchyStruc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecInitProviderHierarchyStructureLevelOne
 {
     /// <summary>The name of the user hierarchy level. Must not be more than 50 characters.</summary>
@@ -227,6 +246,7 @@ public partial class V1beta1UserHierarchyStructureSpecInitProviderHierarchyStruc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecInitProviderHierarchyStructureLevelThree
 {
     /// <summary>The name of the user hierarchy level. Must not be more than 50 characters.</summary>
@@ -235,6 +255,7 @@ public partial class V1beta1UserHierarchyStructureSpecInitProviderHierarchyStruc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecInitProviderHierarchyStructureLevelTwo
 {
     /// <summary>The name of the user hierarchy level. Must not be more than 50 characters.</summary>
@@ -243,6 +264,7 @@ public partial class V1beta1UserHierarchyStructureSpecInitProviderHierarchyStruc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecInitProviderHierarchyStructure
 {
     /// <summary>A block that defines the details of level five. The level block is documented below.</summary>
@@ -266,6 +288,7 @@ public partial class V1beta1UserHierarchyStructureSpecInitProviderHierarchyStruc
     public IList<V1beta1UserHierarchyStructureSpecInitProviderHierarchyStructureLevelTwo>? LevelTwo { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserHierarchyStructureSpecInitProviderInstanceIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -276,6 +299,7 @@ public enum V1beta1UserHierarchyStructureSpecInitProviderInstanceIdRefPolicyReso
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserHierarchyStructureSpecInitProviderInstanceIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -287,6 +311,7 @@ public enum V1beta1UserHierarchyStructureSpecInitProviderInstanceIdRefPolicyReso
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecInitProviderInstanceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -301,6 +326,7 @@ public partial class V1beta1UserHierarchyStructureSpecInitProviderInstanceIdRefP
 }
 
 /// <summary>Reference to a Instance in connect to populate instanceId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecInitProviderInstanceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -312,6 +338,7 @@ public partial class V1beta1UserHierarchyStructureSpecInitProviderInstanceIdRef
     public V1beta1UserHierarchyStructureSpecInitProviderInstanceIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserHierarchyStructureSpecInitProviderInstanceIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -322,6 +349,7 @@ public enum V1beta1UserHierarchyStructureSpecInitProviderInstanceIdSelectorPolic
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserHierarchyStructureSpecInitProviderInstanceIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -333,6 +361,7 @@ public enum V1beta1UserHierarchyStructureSpecInitProviderInstanceIdSelectorPolic
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecInitProviderInstanceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -347,6 +376,7 @@ public partial class V1beta1UserHierarchyStructureSpecInitProviderInstanceIdSele
 }
 
 /// <summary>Selector for a Instance in connect to populate instanceId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecInitProviderInstanceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -363,6 +393,7 @@ public partial class V1beta1UserHierarchyStructureSpecInitProviderInstanceIdSele
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecInitProvider
 {
     /// <summary>A block that defines the hierarchy structure's levels. The hierarchy_structure block is documented below.</summary>
@@ -382,6 +413,7 @@ public partial class V1beta1UserHierarchyStructureSpecInitProvider
     public V1beta1UserHierarchyStructureSpecInitProviderInstanceIdSelector? InstanceIdSelector { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserHierarchyStructureSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -404,6 +436,7 @@ public enum V1beta1UserHierarchyStructureSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserHierarchyStructureSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -414,6 +447,7 @@ public enum V1beta1UserHierarchyStructureSpecProviderConfigRefPolicyResolutionEn
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserHierarchyStructureSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -425,6 +459,7 @@ public enum V1beta1UserHierarchyStructureSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -439,6 +474,7 @@ public partial class V1beta1UserHierarchyStructureSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -450,6 +486,7 @@ public partial class V1beta1UserHierarchyStructureSpecProviderConfigRef
     public V1beta1UserHierarchyStructureSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserHierarchyStructureSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -460,6 +497,7 @@ public enum V1beta1UserHierarchyStructureSpecPublishConnectionDetailsToConfigRef
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserHierarchyStructureSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -471,6 +509,7 @@ public enum V1beta1UserHierarchyStructureSpecPublishConnectionDetailsToConfigRef
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -485,6 +524,7 @@ public partial class V1beta1UserHierarchyStructureSpecPublishConnectionDetailsTo
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -497,6 +537,7 @@ public partial class V1beta1UserHierarchyStructureSpecPublishConnectionDetailsTo
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -513,6 +554,7 @@ public partial class V1beta1UserHierarchyStructureSpecPublishConnectionDetailsTo
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -529,6 +571,7 @@ public partial class V1beta1UserHierarchyStructureSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -541,6 +584,7 @@ public partial class V1beta1UserHierarchyStructureSpecWriteConnectionSecretToRef
 }
 
 /// <summary>UserHierarchyStructureSpec defines the desired state of UserHierarchyStructure</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -574,6 +618,7 @@ public partial class V1beta1UserHierarchyStructureSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureStatusAtProviderHierarchyStructureLevelFive
 {
     /// <summary>The Amazon Resource Name (ARN) of the hierarchy level.</summary>
@@ -590,6 +635,7 @@ public partial class V1beta1UserHierarchyStructureStatusAtProviderHierarchyStruc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureStatusAtProviderHierarchyStructureLevelFour
 {
     /// <summary>The Amazon Resource Name (ARN) of the hierarchy level.</summary>
@@ -606,6 +652,7 @@ public partial class V1beta1UserHierarchyStructureStatusAtProviderHierarchyStruc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureStatusAtProviderHierarchyStructureLevelOne
 {
     /// <summary>The Amazon Resource Name (ARN) of the hierarchy level.</summary>
@@ -622,6 +669,7 @@ public partial class V1beta1UserHierarchyStructureStatusAtProviderHierarchyStruc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureStatusAtProviderHierarchyStructureLevelThree
 {
     /// <summary>The Amazon Resource Name (ARN) of the hierarchy level.</summary>
@@ -638,6 +686,7 @@ public partial class V1beta1UserHierarchyStructureStatusAtProviderHierarchyStruc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureStatusAtProviderHierarchyStructureLevelTwo
 {
     /// <summary>The Amazon Resource Name (ARN) of the hierarchy level.</summary>
@@ -654,6 +703,7 @@ public partial class V1beta1UserHierarchyStructureStatusAtProviderHierarchyStruc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureStatusAtProviderHierarchyStructure
 {
     /// <summary>A block that defines the details of level five. The level block is documented below.</summary>
@@ -678,6 +728,7 @@ public partial class V1beta1UserHierarchyStructureStatusAtProviderHierarchyStruc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureStatusAtProvider
 {
     /// <summary>A block that defines the hierarchy structure's levels. The hierarchy_structure block is documented below.</summary>
@@ -694,6 +745,7 @@ public partial class V1beta1UserHierarchyStructureStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -722,6 +774,7 @@ public partial class V1beta1UserHierarchyStructureStatusConditions
 }
 
 /// <summary>UserHierarchyStructureStatus defines the observed state of UserHierarchyStructure.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureStatus
 {
     /// <summary></summary>
@@ -737,8 +790,9 @@ public partial class V1beta1UserHierarchyStructureStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>UserHierarchyStructure is the Schema for the UserHierarchyStructures API. Provides details about a specific Amazon Connect User Hierarchy Structure</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1UserHierarchyStructure : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1UserHierarchyStructureSpec>, IStatus<V1beta1UserHierarchyStructureStatus>
 {
     public const string KubeApiVersion = "v1beta1";

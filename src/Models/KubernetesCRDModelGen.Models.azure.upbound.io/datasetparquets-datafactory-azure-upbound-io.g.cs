@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datafactory.azure.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetParquetSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1DataSetParquetSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetSpecForProviderAzureBlobFsLocation
 {
     /// <summary>Is the file_system using dynamic expression, function or system variables? Defaults to false.</summary>
@@ -47,6 +49,7 @@ public partial class V1beta1DataSetParquetSpecForProviderAzureBlobFsLocation
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetSpecForProviderAzureBlobStorageLocation
 {
     /// <summary>The container on the Azure Blob Storage Account hosting the file.</summary>
@@ -74,6 +77,7 @@ public partial class V1beta1DataSetParquetSpecForProviderAzureBlobStorageLocatio
     public string? Path { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetParquetSpecForProviderDataFactoryIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -84,6 +88,7 @@ public enum V1beta1DataSetParquetSpecForProviderDataFactoryIdRefPolicyResolution
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetParquetSpecForProviderDataFactoryIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -95,6 +100,7 @@ public enum V1beta1DataSetParquetSpecForProviderDataFactoryIdRefPolicyResolveEnu
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetSpecForProviderDataFactoryIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -109,6 +115,7 @@ public partial class V1beta1DataSetParquetSpecForProviderDataFactoryIdRefPolicy
 }
 
 /// <summary>Reference to a Factory in datafactory to populate dataFactoryId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetSpecForProviderDataFactoryIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -120,6 +127,7 @@ public partial class V1beta1DataSetParquetSpecForProviderDataFactoryIdRef
     public V1beta1DataSetParquetSpecForProviderDataFactoryIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetParquetSpecForProviderDataFactoryIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -130,6 +138,7 @@ public enum V1beta1DataSetParquetSpecForProviderDataFactoryIdSelectorPolicyResol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetParquetSpecForProviderDataFactoryIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -141,6 +150,7 @@ public enum V1beta1DataSetParquetSpecForProviderDataFactoryIdSelectorPolicyResol
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetSpecForProviderDataFactoryIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -155,6 +165,7 @@ public partial class V1beta1DataSetParquetSpecForProviderDataFactoryIdSelectorPo
 }
 
 /// <summary>Selector for a Factory in datafactory to populate dataFactoryId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetSpecForProviderDataFactoryIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -171,6 +182,7 @@ public partial class V1beta1DataSetParquetSpecForProviderDataFactoryIdSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetSpecForProviderHttpServerLocation
 {
     /// <summary>Is the filename using dynamic expression, function or system variables? Defaults to false.</summary>
@@ -194,6 +206,7 @@ public partial class V1beta1DataSetParquetSpecForProviderHttpServerLocation
     public string? RelativeUrl { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetParquetSpecForProviderLinkedServiceNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -204,6 +217,7 @@ public enum V1beta1DataSetParquetSpecForProviderLinkedServiceNameRefPolicyResolu
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetParquetSpecForProviderLinkedServiceNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -215,6 +229,7 @@ public enum V1beta1DataSetParquetSpecForProviderLinkedServiceNameRefPolicyResolv
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetSpecForProviderLinkedServiceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -229,6 +244,7 @@ public partial class V1beta1DataSetParquetSpecForProviderLinkedServiceNameRefPol
 }
 
 /// <summary>Reference to a LinkedServiceWeb in datafactory to populate linkedServiceName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetSpecForProviderLinkedServiceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -240,6 +256,7 @@ public partial class V1beta1DataSetParquetSpecForProviderLinkedServiceNameRef
     public V1beta1DataSetParquetSpecForProviderLinkedServiceNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetParquetSpecForProviderLinkedServiceNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -250,6 +267,7 @@ public enum V1beta1DataSetParquetSpecForProviderLinkedServiceNameSelectorPolicyR
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetParquetSpecForProviderLinkedServiceNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -261,6 +279,7 @@ public enum V1beta1DataSetParquetSpecForProviderLinkedServiceNameSelectorPolicyR
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetSpecForProviderLinkedServiceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -275,6 +294,7 @@ public partial class V1beta1DataSetParquetSpecForProviderLinkedServiceNameSelect
 }
 
 /// <summary>Selector for a LinkedServiceWeb in datafactory to populate linkedServiceName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetSpecForProviderLinkedServiceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -291,6 +311,7 @@ public partial class V1beta1DataSetParquetSpecForProviderLinkedServiceNameSelect
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetSpecForProviderSchemaColumn
 {
     /// <summary>The description of the column.</summary>
@@ -307,6 +328,7 @@ public partial class V1beta1DataSetParquetSpecForProviderSchemaColumn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetSpecForProvider
 {
     /// <summary>A map of additional properties to associate with the Data Factory Dataset.</summary>
@@ -379,6 +401,7 @@ public partial class V1beta1DataSetParquetSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetSpecInitProviderAzureBlobFsLocation
 {
     /// <summary>Is the file_system using dynamic expression, function or system variables? Defaults to false.</summary>
@@ -407,6 +430,7 @@ public partial class V1beta1DataSetParquetSpecInitProviderAzureBlobFsLocation
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetSpecInitProviderAzureBlobStorageLocation
 {
     /// <summary>The container on the Azure Blob Storage Account hosting the file.</summary>
@@ -435,6 +459,7 @@ public partial class V1beta1DataSetParquetSpecInitProviderAzureBlobStorageLocati
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetSpecInitProviderHttpServerLocation
 {
     /// <summary>Is the filename using dynamic expression, function or system variables? Defaults to false.</summary>
@@ -458,6 +483,7 @@ public partial class V1beta1DataSetParquetSpecInitProviderHttpServerLocation
     public string? RelativeUrl { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetParquetSpecInitProviderLinkedServiceNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -468,6 +494,7 @@ public enum V1beta1DataSetParquetSpecInitProviderLinkedServiceNameRefPolicyResol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetParquetSpecInitProviderLinkedServiceNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -479,6 +506,7 @@ public enum V1beta1DataSetParquetSpecInitProviderLinkedServiceNameRefPolicyResol
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetSpecInitProviderLinkedServiceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -493,6 +521,7 @@ public partial class V1beta1DataSetParquetSpecInitProviderLinkedServiceNameRefPo
 }
 
 /// <summary>Reference to a LinkedServiceWeb in datafactory to populate linkedServiceName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetSpecInitProviderLinkedServiceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -504,6 +533,7 @@ public partial class V1beta1DataSetParquetSpecInitProviderLinkedServiceNameRef
     public V1beta1DataSetParquetSpecInitProviderLinkedServiceNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetParquetSpecInitProviderLinkedServiceNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -514,6 +544,7 @@ public enum V1beta1DataSetParquetSpecInitProviderLinkedServiceNameSelectorPolicy
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetParquetSpecInitProviderLinkedServiceNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -525,6 +556,7 @@ public enum V1beta1DataSetParquetSpecInitProviderLinkedServiceNameSelectorPolicy
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetSpecInitProviderLinkedServiceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -539,6 +571,7 @@ public partial class V1beta1DataSetParquetSpecInitProviderLinkedServiceNameSelec
 }
 
 /// <summary>Selector for a LinkedServiceWeb in datafactory to populate linkedServiceName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetSpecInitProviderLinkedServiceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -555,6 +588,7 @@ public partial class V1beta1DataSetParquetSpecInitProviderLinkedServiceNameSelec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetSpecInitProviderSchemaColumn
 {
     /// <summary>The description of the column.</summary>
@@ -571,6 +605,7 @@ public partial class V1beta1DataSetParquetSpecInitProviderSchemaColumn
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetSpecInitProvider
 {
     /// <summary>A map of additional properties to associate with the Data Factory Dataset.</summary>
@@ -630,6 +665,7 @@ public partial class V1beta1DataSetParquetSpecInitProvider
     public IList<V1beta1DataSetParquetSpecInitProviderSchemaColumn>? SchemaColumn { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetParquetSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -652,6 +688,7 @@ public enum V1beta1DataSetParquetSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetParquetSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -662,6 +699,7 @@ public enum V1beta1DataSetParquetSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetParquetSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -673,6 +711,7 @@ public enum V1beta1DataSetParquetSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -687,6 +726,7 @@ public partial class V1beta1DataSetParquetSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -698,6 +738,7 @@ public partial class V1beta1DataSetParquetSpecProviderConfigRef
     public V1beta1DataSetParquetSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetParquetSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -708,6 +749,7 @@ public enum V1beta1DataSetParquetSpecPublishConnectionDetailsToConfigRefPolicyRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetParquetSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -719,6 +761,7 @@ public enum V1beta1DataSetParquetSpecPublishConnectionDetailsToConfigRefPolicyRe
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -733,6 +776,7 @@ public partial class V1beta1DataSetParquetSpecPublishConnectionDetailsToConfigRe
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -745,6 +789,7 @@ public partial class V1beta1DataSetParquetSpecPublishConnectionDetailsToConfigRe
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -761,6 +806,7 @@ public partial class V1beta1DataSetParquetSpecPublishConnectionDetailsToMetadata
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -777,6 +823,7 @@ public partial class V1beta1DataSetParquetSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -789,6 +836,7 @@ public partial class V1beta1DataSetParquetSpecWriteConnectionSecretToRef
 }
 
 /// <summary>DataSetParquetSpec defines the desired state of DataSetParquet</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -822,6 +870,7 @@ public partial class V1beta1DataSetParquetSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetStatusAtProviderAzureBlobFsLocation
 {
     /// <summary>Is the file_system using dynamic expression, function or system variables? Defaults to false.</summary>
@@ -850,6 +899,7 @@ public partial class V1beta1DataSetParquetStatusAtProviderAzureBlobFsLocation
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetStatusAtProviderAzureBlobStorageLocation
 {
     /// <summary>The container on the Azure Blob Storage Account hosting the file.</summary>
@@ -878,6 +928,7 @@ public partial class V1beta1DataSetParquetStatusAtProviderAzureBlobStorageLocati
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetStatusAtProviderHttpServerLocation
 {
     /// <summary>Is the filename using dynamic expression, function or system variables? Defaults to false.</summary>
@@ -902,6 +953,7 @@ public partial class V1beta1DataSetParquetStatusAtProviderHttpServerLocation
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetStatusAtProviderSchemaColumn
 {
     /// <summary>The description of the column.</summary>
@@ -918,6 +970,7 @@ public partial class V1beta1DataSetParquetStatusAtProviderSchemaColumn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetStatusAtProvider
 {
     /// <summary>A map of additional properties to associate with the Data Factory Dataset.</summary>
@@ -978,6 +1031,7 @@ public partial class V1beta1DataSetParquetStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1006,6 +1060,7 @@ public partial class V1beta1DataSetParquetStatusConditions
 }
 
 /// <summary>DataSetParquetStatus defines the observed state of DataSetParquet.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetParquetStatus
 {
     /// <summary></summary>
@@ -1021,8 +1076,9 @@ public partial class V1beta1DataSetParquetStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>DataSetParquet is the Schema for the DataSetParquets API. Manages an Azure Parquet Dataset inside an Azure Data Factory.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1DataSetParquet : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DataSetParquetSpec>, IStatus<V1beta1DataSetParquetStatus>
 {
     public const string KubeApiVersion = "v1beta1";

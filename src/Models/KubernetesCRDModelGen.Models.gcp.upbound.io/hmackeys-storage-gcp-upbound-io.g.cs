@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.gcp.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HMACKeySpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -18,6 +19,7 @@ public enum V1beta1HMACKeySpecDeletionPolicyEnum
     Delete
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HMACKeySpecForProviderServiceAccountEmailRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -28,6 +30,7 @@ public enum V1beta1HMACKeySpecForProviderServiceAccountEmailRefPolicyResolutionE
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HMACKeySpecForProviderServiceAccountEmailRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -39,6 +42,7 @@ public enum V1beta1HMACKeySpecForProviderServiceAccountEmailRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HMACKeySpecForProviderServiceAccountEmailRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -53,6 +57,7 @@ public partial class V1beta1HMACKeySpecForProviderServiceAccountEmailRefPolicy
 }
 
 /// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HMACKeySpecForProviderServiceAccountEmailRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -64,6 +69,7 @@ public partial class V1beta1HMACKeySpecForProviderServiceAccountEmailRef
     public V1beta1HMACKeySpecForProviderServiceAccountEmailRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HMACKeySpecForProviderServiceAccountEmailSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -74,6 +80,7 @@ public enum V1beta1HMACKeySpecForProviderServiceAccountEmailSelectorPolicyResolu
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HMACKeySpecForProviderServiceAccountEmailSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -85,6 +92,7 @@ public enum V1beta1HMACKeySpecForProviderServiceAccountEmailSelectorPolicyResolv
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HMACKeySpecForProviderServiceAccountEmailSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -99,6 +107,7 @@ public partial class V1beta1HMACKeySpecForProviderServiceAccountEmailSelectorPol
 }
 
 /// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HMACKeySpecForProviderServiceAccountEmailSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -115,6 +124,7 @@ public partial class V1beta1HMACKeySpecForProviderServiceAccountEmailSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HMACKeySpecForProvider
 {
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
@@ -138,6 +148,7 @@ public partial class V1beta1HMACKeySpecForProvider
     public string? State { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HMACKeySpecInitProviderServiceAccountEmailRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -148,6 +159,7 @@ public enum V1beta1HMACKeySpecInitProviderServiceAccountEmailRefPolicyResolution
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HMACKeySpecInitProviderServiceAccountEmailRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -159,6 +171,7 @@ public enum V1beta1HMACKeySpecInitProviderServiceAccountEmailRefPolicyResolveEnu
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HMACKeySpecInitProviderServiceAccountEmailRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -173,6 +186,7 @@ public partial class V1beta1HMACKeySpecInitProviderServiceAccountEmailRefPolicy
 }
 
 /// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HMACKeySpecInitProviderServiceAccountEmailRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -184,6 +198,7 @@ public partial class V1beta1HMACKeySpecInitProviderServiceAccountEmailRef
     public V1beta1HMACKeySpecInitProviderServiceAccountEmailRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HMACKeySpecInitProviderServiceAccountEmailSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -194,6 +209,7 @@ public enum V1beta1HMACKeySpecInitProviderServiceAccountEmailSelectorPolicyResol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HMACKeySpecInitProviderServiceAccountEmailSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -205,6 +221,7 @@ public enum V1beta1HMACKeySpecInitProviderServiceAccountEmailSelectorPolicyResol
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HMACKeySpecInitProviderServiceAccountEmailSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -219,6 +236,7 @@ public partial class V1beta1HMACKeySpecInitProviderServiceAccountEmailSelectorPo
 }
 
 /// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HMACKeySpecInitProviderServiceAccountEmailSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -235,6 +253,7 @@ public partial class V1beta1HMACKeySpecInitProviderServiceAccountEmailSelector
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HMACKeySpecInitProvider
 {
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
@@ -258,6 +277,7 @@ public partial class V1beta1HMACKeySpecInitProvider
     public string? State { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HMACKeySpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -280,6 +300,7 @@ public enum V1beta1HMACKeySpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HMACKeySpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -290,6 +311,7 @@ public enum V1beta1HMACKeySpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HMACKeySpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -301,6 +323,7 @@ public enum V1beta1HMACKeySpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HMACKeySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -315,6 +338,7 @@ public partial class V1beta1HMACKeySpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HMACKeySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -326,6 +350,7 @@ public partial class V1beta1HMACKeySpecProviderConfigRef
     public V1beta1HMACKeySpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HMACKeySpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -336,6 +361,7 @@ public enum V1beta1HMACKeySpecPublishConnectionDetailsToConfigRefPolicyResolutio
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HMACKeySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -347,6 +373,7 @@ public enum V1beta1HMACKeySpecPublishConnectionDetailsToConfigRefPolicyResolveEn
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HMACKeySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -361,6 +388,7 @@ public partial class V1beta1HMACKeySpecPublishConnectionDetailsToConfigRefPolicy
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HMACKeySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -373,6 +401,7 @@ public partial class V1beta1HMACKeySpecPublishConnectionDetailsToConfigRef
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HMACKeySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -389,6 +418,7 @@ public partial class V1beta1HMACKeySpecPublishConnectionDetailsToMetadata
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HMACKeySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -405,6 +435,7 @@ public partial class V1beta1HMACKeySpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HMACKeySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -417,6 +448,7 @@ public partial class V1beta1HMACKeySpecWriteConnectionSecretToRef
 }
 
 /// <summary>HMACKeySpec defines the desired state of HMACKey</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HMACKeySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -450,6 +482,7 @@ public partial class V1beta1HMACKeySpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HMACKeyStatusAtProvider
 {
     /// <summary>The access ID of the HMAC Key.</summary>
@@ -482,6 +515,7 @@ public partial class V1beta1HMACKeyStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HMACKeyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -510,6 +544,7 @@ public partial class V1beta1HMACKeyStatusConditions
 }
 
 /// <summary>HMACKeyStatus defines the observed state of HMACKey.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HMACKeyStatus
 {
     /// <summary></summary>
@@ -525,8 +560,9 @@ public partial class V1beta1HMACKeyStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>HMACKey is the Schema for the HMACKeys API. The hmacKeys resource represents an HMAC key within Cloud Storage.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1HMACKey : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1HMACKeySpec>, IStatus<V1beta1HMACKeyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

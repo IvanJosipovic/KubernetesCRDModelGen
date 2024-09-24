@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networking.istio.io;
 /// <summary>Specifies the details of the proxy image.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyConfigSpecImage
 {
     /// <summary>The image type of the image.</summary>
@@ -17,6 +18,7 @@ public partial class V1beta1ProxyConfigSpecImage
 }
 
 /// <summary>Optional.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyConfigSpecSelector
 {
     /// <summary>One or more labels that indicate a specific set of pods/VMs on which a policy should be applied.</summary>
@@ -25,6 +27,7 @@ public partial class V1beta1ProxyConfigSpecSelector
 }
 
 /// <summary>Provides configuration for individual workloads. See more details at: https://istio.io/docs/reference/config/networking/proxy-config.html</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyConfigSpec
 {
     /// <summary>The number of worker threads to run.</summary>
@@ -44,8 +47,9 @@ public partial class V1beta1ProxyConfigSpec
     public V1beta1ProxyConfigSpecSelector? Selector { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ProxyConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ProxyConfigSpec>, IStatus<JsonNode>
 {
     public const string KubeApiVersion = "v1beta1";

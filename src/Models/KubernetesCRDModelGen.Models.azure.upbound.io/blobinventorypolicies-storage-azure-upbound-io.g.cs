@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.azure.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BlobInventoryPolicySpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1BlobInventoryPolicySpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecForProviderRulesFilter
 {
     /// <summary>A set of blob types. Possible values are blockBlob, appendBlob, and pageBlob. The storage account with is_hns_enabled is true doesn't support pageBlob.</summary>
@@ -46,6 +48,7 @@ public partial class V1beta1BlobInventoryPolicySpecForProviderRulesFilter
     public IList<string>? PrefixMatch { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BlobInventoryPolicySpecForProviderRulesStorageContainerNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -56,6 +59,7 @@ public enum V1beta1BlobInventoryPolicySpecForProviderRulesStorageContainerNameRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BlobInventoryPolicySpecForProviderRulesStorageContainerNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -67,6 +71,7 @@ public enum V1beta1BlobInventoryPolicySpecForProviderRulesStorageContainerNameRe
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecForProviderRulesStorageContainerNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -81,6 +86,7 @@ public partial class V1beta1BlobInventoryPolicySpecForProviderRulesStorageContai
 }
 
 /// <summary>Reference to a Container in storage to populate storageContainerName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecForProviderRulesStorageContainerNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -92,6 +98,7 @@ public partial class V1beta1BlobInventoryPolicySpecForProviderRulesStorageContai
     public V1beta1BlobInventoryPolicySpecForProviderRulesStorageContainerNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BlobInventoryPolicySpecForProviderRulesStorageContainerNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -102,6 +109,7 @@ public enum V1beta1BlobInventoryPolicySpecForProviderRulesStorageContainerNameSe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BlobInventoryPolicySpecForProviderRulesStorageContainerNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -113,6 +121,7 @@ public enum V1beta1BlobInventoryPolicySpecForProviderRulesStorageContainerNameSe
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecForProviderRulesStorageContainerNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -127,6 +136,7 @@ public partial class V1beta1BlobInventoryPolicySpecForProviderRulesStorageContai
 }
 
 /// <summary>Selector for a Container in storage to populate storageContainerName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecForProviderRulesStorageContainerNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -143,6 +153,7 @@ public partial class V1beta1BlobInventoryPolicySpecForProviderRulesStorageContai
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecForProviderRules
 {
     /// <summary>A filter block as defined above. Can only be set when the scope is Blob.</summary>
@@ -182,6 +193,7 @@ public partial class V1beta1BlobInventoryPolicySpecForProviderRules
     public V1beta1BlobInventoryPolicySpecForProviderRulesStorageContainerNameSelector? StorageContainerNameSelector { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BlobInventoryPolicySpecForProviderStorageAccountIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -192,6 +204,7 @@ public enum V1beta1BlobInventoryPolicySpecForProviderStorageAccountIdRefPolicyRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BlobInventoryPolicySpecForProviderStorageAccountIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -203,6 +216,7 @@ public enum V1beta1BlobInventoryPolicySpecForProviderStorageAccountIdRefPolicyRe
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecForProviderStorageAccountIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -217,6 +231,7 @@ public partial class V1beta1BlobInventoryPolicySpecForProviderStorageAccountIdRe
 }
 
 /// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecForProviderStorageAccountIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -228,6 +243,7 @@ public partial class V1beta1BlobInventoryPolicySpecForProviderStorageAccountIdRe
     public V1beta1BlobInventoryPolicySpecForProviderStorageAccountIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BlobInventoryPolicySpecForProviderStorageAccountIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -238,6 +254,7 @@ public enum V1beta1BlobInventoryPolicySpecForProviderStorageAccountIdSelectorPol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BlobInventoryPolicySpecForProviderStorageAccountIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -249,6 +266,7 @@ public enum V1beta1BlobInventoryPolicySpecForProviderStorageAccountIdSelectorPol
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecForProviderStorageAccountIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -263,6 +281,7 @@ public partial class V1beta1BlobInventoryPolicySpecForProviderStorageAccountIdSe
 }
 
 /// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecForProviderStorageAccountIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -279,6 +298,7 @@ public partial class V1beta1BlobInventoryPolicySpecForProviderStorageAccountIdSe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecForProvider
 {
     /// <summary>One or more rules blocks as defined below.</summary>
@@ -299,6 +319,7 @@ public partial class V1beta1BlobInventoryPolicySpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecInitProviderRulesFilter
 {
     /// <summary>A set of blob types. Possible values are blockBlob, appendBlob, and pageBlob. The storage account with is_hns_enabled is true doesn't support pageBlob.</summary>
@@ -326,6 +347,7 @@ public partial class V1beta1BlobInventoryPolicySpecInitProviderRulesFilter
     public IList<string>? PrefixMatch { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BlobInventoryPolicySpecInitProviderRulesStorageContainerNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -336,6 +358,7 @@ public enum V1beta1BlobInventoryPolicySpecInitProviderRulesStorageContainerNameR
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BlobInventoryPolicySpecInitProviderRulesStorageContainerNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -347,6 +370,7 @@ public enum V1beta1BlobInventoryPolicySpecInitProviderRulesStorageContainerNameR
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecInitProviderRulesStorageContainerNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -361,6 +385,7 @@ public partial class V1beta1BlobInventoryPolicySpecInitProviderRulesStorageConta
 }
 
 /// <summary>Reference to a Container in storage to populate storageContainerName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecInitProviderRulesStorageContainerNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -372,6 +397,7 @@ public partial class V1beta1BlobInventoryPolicySpecInitProviderRulesStorageConta
     public V1beta1BlobInventoryPolicySpecInitProviderRulesStorageContainerNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BlobInventoryPolicySpecInitProviderRulesStorageContainerNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -382,6 +408,7 @@ public enum V1beta1BlobInventoryPolicySpecInitProviderRulesStorageContainerNameS
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BlobInventoryPolicySpecInitProviderRulesStorageContainerNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -393,6 +420,7 @@ public enum V1beta1BlobInventoryPolicySpecInitProviderRulesStorageContainerNameS
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecInitProviderRulesStorageContainerNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -407,6 +435,7 @@ public partial class V1beta1BlobInventoryPolicySpecInitProviderRulesStorageConta
 }
 
 /// <summary>Selector for a Container in storage to populate storageContainerName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecInitProviderRulesStorageContainerNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -423,6 +452,7 @@ public partial class V1beta1BlobInventoryPolicySpecInitProviderRulesStorageConta
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecInitProviderRules
 {
     /// <summary>A filter block as defined above. Can only be set when the scope is Blob.</summary>
@@ -462,6 +492,7 @@ public partial class V1beta1BlobInventoryPolicySpecInitProviderRules
     public V1beta1BlobInventoryPolicySpecInitProviderRulesStorageContainerNameSelector? StorageContainerNameSelector { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BlobInventoryPolicySpecInitProviderStorageAccountIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -472,6 +503,7 @@ public enum V1beta1BlobInventoryPolicySpecInitProviderStorageAccountIdRefPolicyR
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BlobInventoryPolicySpecInitProviderStorageAccountIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -483,6 +515,7 @@ public enum V1beta1BlobInventoryPolicySpecInitProviderStorageAccountIdRefPolicyR
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecInitProviderStorageAccountIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -497,6 +530,7 @@ public partial class V1beta1BlobInventoryPolicySpecInitProviderStorageAccountIdR
 }
 
 /// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecInitProviderStorageAccountIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -508,6 +542,7 @@ public partial class V1beta1BlobInventoryPolicySpecInitProviderStorageAccountIdR
     public V1beta1BlobInventoryPolicySpecInitProviderStorageAccountIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BlobInventoryPolicySpecInitProviderStorageAccountIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -518,6 +553,7 @@ public enum V1beta1BlobInventoryPolicySpecInitProviderStorageAccountIdSelectorPo
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BlobInventoryPolicySpecInitProviderStorageAccountIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -529,6 +565,7 @@ public enum V1beta1BlobInventoryPolicySpecInitProviderStorageAccountIdSelectorPo
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecInitProviderStorageAccountIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -543,6 +580,7 @@ public partial class V1beta1BlobInventoryPolicySpecInitProviderStorageAccountIdS
 }
 
 /// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecInitProviderStorageAccountIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -559,6 +597,7 @@ public partial class V1beta1BlobInventoryPolicySpecInitProviderStorageAccountIdS
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecInitProvider
 {
     /// <summary>One or more rules blocks as defined below.</summary>
@@ -578,6 +617,7 @@ public partial class V1beta1BlobInventoryPolicySpecInitProvider
     public V1beta1BlobInventoryPolicySpecInitProviderStorageAccountIdSelector? StorageAccountIdSelector { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BlobInventoryPolicySpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -600,6 +640,7 @@ public enum V1beta1BlobInventoryPolicySpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BlobInventoryPolicySpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -610,6 +651,7 @@ public enum V1beta1BlobInventoryPolicySpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BlobInventoryPolicySpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -621,6 +663,7 @@ public enum V1beta1BlobInventoryPolicySpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -635,6 +678,7 @@ public partial class V1beta1BlobInventoryPolicySpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -646,6 +690,7 @@ public partial class V1beta1BlobInventoryPolicySpecProviderConfigRef
     public V1beta1BlobInventoryPolicySpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BlobInventoryPolicySpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -656,6 +701,7 @@ public enum V1beta1BlobInventoryPolicySpecPublishConnectionDetailsToConfigRefPol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BlobInventoryPolicySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -667,6 +713,7 @@ public enum V1beta1BlobInventoryPolicySpecPublishConnectionDetailsToConfigRefPol
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -681,6 +728,7 @@ public partial class V1beta1BlobInventoryPolicySpecPublishConnectionDetailsToCon
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -693,6 +741,7 @@ public partial class V1beta1BlobInventoryPolicySpecPublishConnectionDetailsToCon
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -709,6 +758,7 @@ public partial class V1beta1BlobInventoryPolicySpecPublishConnectionDetailsToMet
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -725,6 +775,7 @@ public partial class V1beta1BlobInventoryPolicySpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -737,6 +788,7 @@ public partial class V1beta1BlobInventoryPolicySpecWriteConnectionSecretToRef
 }
 
 /// <summary>BlobInventoryPolicySpec defines the desired state of BlobInventoryPolicy</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -770,6 +822,7 @@ public partial class V1beta1BlobInventoryPolicySpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicyStatusAtProviderRulesFilter
 {
     /// <summary>A set of blob types. Possible values are blockBlob, appendBlob, and pageBlob. The storage account with is_hns_enabled is true doesn't support pageBlob.</summary>
@@ -798,6 +851,7 @@ public partial class V1beta1BlobInventoryPolicyStatusAtProviderRulesFilter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicyStatusAtProviderRules
 {
     /// <summary>A filter block as defined above. Can only be set when the scope is Blob.</summary>
@@ -830,6 +884,7 @@ public partial class V1beta1BlobInventoryPolicyStatusAtProviderRules
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicyStatusAtProvider
 {
     /// <summary>The ID of the Storage Blob Inventory Policy.</summary>
@@ -846,6 +901,7 @@ public partial class V1beta1BlobInventoryPolicyStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -874,6 +930,7 @@ public partial class V1beta1BlobInventoryPolicyStatusConditions
 }
 
 /// <summary>BlobInventoryPolicyStatus defines the observed state of BlobInventoryPolicy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicyStatus
 {
     /// <summary></summary>
@@ -889,8 +946,9 @@ public partial class V1beta1BlobInventoryPolicyStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>BlobInventoryPolicy is the Schema for the BlobInventoryPolicys API. Manages a Storage Blob Inventory Policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1BlobInventoryPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BlobInventoryPolicySpec>, IStatus<V1beta1BlobInventoryPolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInsightsAnalysisSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -18,6 +19,7 @@ public enum V1beta1NetworkInsightsAnalysisSpecDeletionPolicyEnum
     Delete
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInsightsAnalysisSpecForProviderNetworkInsightsPathIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -28,6 +30,7 @@ public enum V1beta1NetworkInsightsAnalysisSpecForProviderNetworkInsightsPathIdRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInsightsAnalysisSpecForProviderNetworkInsightsPathIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -39,6 +42,7 @@ public enum V1beta1NetworkInsightsAnalysisSpecForProviderNetworkInsightsPathIdRe
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisSpecForProviderNetworkInsightsPathIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -53,6 +57,7 @@ public partial class V1beta1NetworkInsightsAnalysisSpecForProviderNetworkInsight
 }
 
 /// <summary>Reference to a NetworkInsightsPath in ec2 to populate networkInsightsPathId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisSpecForProviderNetworkInsightsPathIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -64,6 +69,7 @@ public partial class V1beta1NetworkInsightsAnalysisSpecForProviderNetworkInsight
     public V1beta1NetworkInsightsAnalysisSpecForProviderNetworkInsightsPathIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInsightsAnalysisSpecForProviderNetworkInsightsPathIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -74,6 +80,7 @@ public enum V1beta1NetworkInsightsAnalysisSpecForProviderNetworkInsightsPathIdSe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInsightsAnalysisSpecForProviderNetworkInsightsPathIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -85,6 +92,7 @@ public enum V1beta1NetworkInsightsAnalysisSpecForProviderNetworkInsightsPathIdSe
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisSpecForProviderNetworkInsightsPathIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -99,6 +107,7 @@ public partial class V1beta1NetworkInsightsAnalysisSpecForProviderNetworkInsight
 }
 
 /// <summary>Selector for a NetworkInsightsPath in ec2 to populate networkInsightsPathId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisSpecForProviderNetworkInsightsPathIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -115,6 +124,7 @@ public partial class V1beta1NetworkInsightsAnalysisSpecForProviderNetworkInsight
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisSpecForProvider
 {
     /// <summary>A list of ARNs for resources the path must traverse.</summary>
@@ -146,6 +156,7 @@ public partial class V1beta1NetworkInsightsAnalysisSpecForProvider
     public bool? WaitForCompletion { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInsightsAnalysisSpecInitProviderNetworkInsightsPathIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -156,6 +167,7 @@ public enum V1beta1NetworkInsightsAnalysisSpecInitProviderNetworkInsightsPathIdR
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInsightsAnalysisSpecInitProviderNetworkInsightsPathIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -167,6 +179,7 @@ public enum V1beta1NetworkInsightsAnalysisSpecInitProviderNetworkInsightsPathIdR
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisSpecInitProviderNetworkInsightsPathIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -181,6 +194,7 @@ public partial class V1beta1NetworkInsightsAnalysisSpecInitProviderNetworkInsigh
 }
 
 /// <summary>Reference to a NetworkInsightsPath in ec2 to populate networkInsightsPathId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisSpecInitProviderNetworkInsightsPathIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -192,6 +206,7 @@ public partial class V1beta1NetworkInsightsAnalysisSpecInitProviderNetworkInsigh
     public V1beta1NetworkInsightsAnalysisSpecInitProviderNetworkInsightsPathIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInsightsAnalysisSpecInitProviderNetworkInsightsPathIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -202,6 +217,7 @@ public enum V1beta1NetworkInsightsAnalysisSpecInitProviderNetworkInsightsPathIdS
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInsightsAnalysisSpecInitProviderNetworkInsightsPathIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -213,6 +229,7 @@ public enum V1beta1NetworkInsightsAnalysisSpecInitProviderNetworkInsightsPathIdS
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisSpecInitProviderNetworkInsightsPathIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -227,6 +244,7 @@ public partial class V1beta1NetworkInsightsAnalysisSpecInitProviderNetworkInsigh
 }
 
 /// <summary>Selector for a NetworkInsightsPath in ec2 to populate networkInsightsPathId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisSpecInitProviderNetworkInsightsPathIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -243,6 +261,7 @@ public partial class V1beta1NetworkInsightsAnalysisSpecInitProviderNetworkInsigh
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisSpecInitProvider
 {
     /// <summary>A list of ARNs for resources the path must traverse.</summary>
@@ -270,6 +289,7 @@ public partial class V1beta1NetworkInsightsAnalysisSpecInitProvider
     public bool? WaitForCompletion { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInsightsAnalysisSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -292,6 +312,7 @@ public enum V1beta1NetworkInsightsAnalysisSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInsightsAnalysisSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -302,6 +323,7 @@ public enum V1beta1NetworkInsightsAnalysisSpecProviderConfigRefPolicyResolutionE
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInsightsAnalysisSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -313,6 +335,7 @@ public enum V1beta1NetworkInsightsAnalysisSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -327,6 +350,7 @@ public partial class V1beta1NetworkInsightsAnalysisSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -338,6 +362,7 @@ public partial class V1beta1NetworkInsightsAnalysisSpecProviderConfigRef
     public V1beta1NetworkInsightsAnalysisSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInsightsAnalysisSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -348,6 +373,7 @@ public enum V1beta1NetworkInsightsAnalysisSpecPublishConnectionDetailsToConfigRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInsightsAnalysisSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -359,6 +385,7 @@ public enum V1beta1NetworkInsightsAnalysisSpecPublishConnectionDetailsToConfigRe
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -373,6 +400,7 @@ public partial class V1beta1NetworkInsightsAnalysisSpecPublishConnectionDetailsT
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -385,6 +413,7 @@ public partial class V1beta1NetworkInsightsAnalysisSpecPublishConnectionDetailsT
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -401,6 +430,7 @@ public partial class V1beta1NetworkInsightsAnalysisSpecPublishConnectionDetailsT
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -417,6 +447,7 @@ public partial class V1beta1NetworkInsightsAnalysisSpecPublishConnectionDetailsT
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -429,6 +460,7 @@ public partial class V1beta1NetworkInsightsAnalysisSpecWriteConnectionSecretToRe
 }
 
 /// <summary>NetworkInsightsAnalysisSpec defines the desired state of NetworkInsightsAnalysis</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -462,6 +494,7 @@ public partial class V1beta1NetworkInsightsAnalysisSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderAlternatePathHints
 {
     /// <summary>The Amazon Resource Name (ARN) of the component.</summary>
@@ -474,6 +507,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderAlternatePath
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsAcl
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -490,6 +524,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsAclRulePortRange
 {
     /// <summary></summary>
@@ -502,6 +537,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsAclRule
 {
     /// <summary></summary>
@@ -530,6 +566,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsAttachedTo
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -546,6 +583,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsClassicLoadBalancerListener
 {
     /// <summary></summary>
@@ -558,6 +596,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsComponent
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -574,6 +613,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsCustomerGateway
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -590,6 +630,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsDestination
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -606,6 +647,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsD
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsDestinationVpc
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -622,6 +664,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsD
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsElasticLoadBalancerListener
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -638,6 +681,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsE
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsIngressRouteTable
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -654,6 +698,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsI
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsInternetGateway
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -670,6 +715,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsI
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsLoadBalancerTargetGroup
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -686,6 +732,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsL
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsLoadBalancerTargetGroups
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -702,6 +749,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsL
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsNatGateway
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -718,6 +766,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsN
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsNetworkInterface
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -734,6 +783,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsN
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsPortRanges
 {
     /// <summary></summary>
@@ -746,6 +796,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsPrefixList
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -762,6 +813,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsRouteTable
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -778,6 +830,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsRouteTableRoute
 {
     /// <summary></summary>
@@ -822,6 +875,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsSecurityGroup
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -838,6 +892,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsSecurityGroupRulePortRange
 {
     /// <summary></summary>
@@ -850,6 +905,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsSecurityGroupRule
 {
     /// <summary></summary>
@@ -878,6 +934,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsSecurityGroups
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -894,6 +951,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsSourceVpc
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -910,6 +968,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsSubnet
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -926,6 +985,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsSubnetRouteTable
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -942,6 +1002,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsTransitGateway
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -958,6 +1019,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsT
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsTransitGatewayAttachment
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -974,6 +1036,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsT
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsTransitGatewayRouteTable
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -990,6 +1053,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsT
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsTransitGatewayRouteTableRoute
 {
     /// <summary>ID of the Network Insights Analysis.</summary>
@@ -1022,6 +1086,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsT
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsVpc
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1038,6 +1103,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsV
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsVpcEndpoint
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1054,6 +1120,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsV
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsVpcPeeringConnection
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1070,6 +1137,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsV
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsVpnConnection
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1086,6 +1154,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsV
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsVpnGateway
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1102,6 +1171,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsV
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanations
 {
     /// <summary></summary>
@@ -1298,6 +1368,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanations
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsAclRulePortRange
 {
     /// <summary></summary>
@@ -1310,6 +1381,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsAclRule
 {
     /// <summary></summary>
@@ -1338,6 +1410,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsAdditionalDetailsComponent
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1354,6 +1427,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsAdditionalDetails
 {
     /// <summary></summary>
@@ -1366,6 +1440,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsAttachedTo
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1382,6 +1457,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsComponent
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1398,6 +1474,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsDestinationVpc
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1414,6 +1491,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsInboundHeaderDestinationPortRanges
 {
     /// <summary></summary>
@@ -1426,6 +1504,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsInboundHeaderSourcePortRanges
 {
     /// <summary></summary>
@@ -1438,6 +1517,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsInboundHeader
 {
     /// <summary></summary>
@@ -1462,6 +1542,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsOutboundHeaderDestinationPortRanges
 {
     /// <summary></summary>
@@ -1474,6 +1555,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsOutboundHeaderSourcePortRanges
 {
     /// <summary></summary>
@@ -1486,6 +1568,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsOutboundHeader
 {
     /// <summary></summary>
@@ -1510,6 +1593,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsRouteTableRoute
 {
     /// <summary></summary>
@@ -1554,6 +1638,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsSecurityGroupRulePortRange
 {
     /// <summary></summary>
@@ -1566,6 +1651,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsSecurityGroupRule
 {
     /// <summary></summary>
@@ -1594,6 +1680,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsSourceVpc
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1610,6 +1697,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsSubnet
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1626,6 +1714,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsTransitGateway
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1642,6 +1731,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsTransitGatewayRouteTableRoute
 {
     /// <summary>ID of the Network Insights Analysis.</summary>
@@ -1674,6 +1764,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsVpc
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1690,6 +1781,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponents
 {
     /// <summary></summary>
@@ -1754,6 +1846,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsAclRulePortRange
 {
     /// <summary></summary>
@@ -1766,6 +1859,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsAclRule
 {
     /// <summary></summary>
@@ -1794,6 +1888,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsAdditionalDetailsComponent
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1810,6 +1905,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsAdditionalDetails
 {
     /// <summary></summary>
@@ -1822,6 +1918,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsAttachedTo
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1838,6 +1935,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsComponent
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1854,6 +1952,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsDestinationVpc
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1870,6 +1969,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsInboundHeaderDestinationPortRanges
 {
     /// <summary></summary>
@@ -1882,6 +1982,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsInboundHeaderSourcePortRanges
 {
     /// <summary></summary>
@@ -1894,6 +1995,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsInboundHeader
 {
     /// <summary></summary>
@@ -1918,6 +2020,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsOutboundHeaderDestinationPortRanges
 {
     /// <summary></summary>
@@ -1930,6 +2033,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsOutboundHeaderSourcePortRanges
 {
     /// <summary></summary>
@@ -1942,6 +2046,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsOutboundHeader
 {
     /// <summary></summary>
@@ -1966,6 +2071,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsRouteTableRoute
 {
     /// <summary></summary>
@@ -2010,6 +2116,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsSecurityGroupRulePortRange
 {
     /// <summary></summary>
@@ -2022,6 +2129,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsSecurityGroupRule
 {
     /// <summary></summary>
@@ -2050,6 +2158,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsSourceVpc
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -2066,6 +2175,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsSubnet
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -2082,6 +2192,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsTransitGateway
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -2098,6 +2209,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsTransitGatewayRouteTableRoute
 {
     /// <summary>ID of the Network Insights Analysis.</summary>
@@ -2130,6 +2242,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsVpc
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -2146,6 +2259,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponents
 {
     /// <summary></summary>
@@ -2210,6 +2324,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProvider
 {
     /// <summary>Potential intermediate components of a feasible path. Described below.</summary>
@@ -2278,6 +2393,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2306,6 +2422,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusConditions
 }
 
 /// <summary>NetworkInsightsAnalysisStatus defines the observed state of NetworkInsightsAnalysis.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsAnalysisStatus
 {
     /// <summary></summary>
@@ -2321,8 +2438,9 @@ public partial class V1beta1NetworkInsightsAnalysisStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>NetworkInsightsAnalysis is the Schema for the NetworkInsightsAnalysiss API. Provides a Network Insights Analysis resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1NetworkInsightsAnalysis : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NetworkInsightsAnalysisSpec>, IStatus<V1beta1NetworkInsightsAnalysisStatus>
 {
     public const string KubeApiVersion = "v1beta1";

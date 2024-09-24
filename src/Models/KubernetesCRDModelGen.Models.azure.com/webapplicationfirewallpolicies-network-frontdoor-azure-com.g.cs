@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.frontdoor.azure.com;
 /// <summary>Storage version of v1api20220501.MatchCondition Define a match condition.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageWebApplicationFirewallPolicySpecCustomRulesRulesMatchConditions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -41,6 +42,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicySpecCustomR
 }
 
 /// <summary>Storage version of v1api20220501.CustomRule Defines contents of a web application rule</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageWebApplicationFirewallPolicySpecCustomRulesRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -81,6 +83,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicySpecCustomR
 }
 
 /// <summary>Storage version of v1api20220501.CustomRuleList Defines contents of custom rules</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageWebApplicationFirewallPolicySpecCustomRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -93,6 +96,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicySpecCustomR
 }
 
 /// <summary>Storage version of v1api20220501.ManagedRuleExclusion Exclude variables from managed rule evaluation.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageWebApplicationFirewallPolicySpecManagedRulesManagedRuleSetsExclusions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -113,6 +117,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicySpecManaged
 }
 
 /// <summary>Storage version of v1api20220501.ManagedRuleExclusion Exclude variables from managed rule evaluation.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageWebApplicationFirewallPolicySpecManagedRulesManagedRuleSetsRuleGroupOverridesExclusions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -133,6 +138,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicySpecManaged
 }
 
 /// <summary>Storage version of v1api20220501.ManagedRuleExclusion Exclude variables from managed rule evaluation.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageWebApplicationFirewallPolicySpecManagedRulesManagedRuleSetsRuleGroupOverridesRulesExclusions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -153,6 +159,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicySpecManaged
 }
 
 /// <summary>Storage version of v1api20220501.ManagedRuleOverride Defines a managed rule group override setting.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageWebApplicationFirewallPolicySpecManagedRulesManagedRuleSetsRuleGroupOverridesRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -177,6 +184,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicySpecManaged
 }
 
 /// <summary>Storage version of v1api20220501.ManagedRuleGroupOverride Defines a managed rule group override setting.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageWebApplicationFirewallPolicySpecManagedRulesManagedRuleSetsRuleGroupOverrides
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -197,6 +205,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicySpecManaged
 }
 
 /// <summary>Storage version of v1api20220501.ManagedRuleSet Defines a managed rule set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageWebApplicationFirewallPolicySpecManagedRulesManagedRuleSets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -225,6 +234,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicySpecManaged
 }
 
 /// <summary>Storage version of v1api20220501.ManagedRuleSetList Defines the list of managed rule sets for the policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageWebApplicationFirewallPolicySpecManagedRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -237,6 +247,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicySpecManaged
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageWebApplicationFirewallPolicySpecOwner
 {
     /// <summary></summary>
@@ -249,6 +260,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicySpecOwner
 }
 
 /// <summary>Storage version of v1api20220501.PolicySettings Defines top-level WebApplicationFirewallPolicy configuration settings.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageWebApplicationFirewallPolicySpecPolicySettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -281,6 +293,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicySpecPolicyS
 }
 
 /// <summary>Storage version of v1api20220501.Sku The pricing tier of the web application firewall policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageWebApplicationFirewallPolicySpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -293,6 +306,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicySpecSku
 }
 
 /// <summary>Storage version of v1api20220501.FrontDoorWebApplicationFirewallPolicy_Spec</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageWebApplicationFirewallPolicySpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -341,6 +355,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicySpec
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -373,6 +388,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatusCondi
 }
 
 /// <summary>Storage version of v1api20220501.MatchCondition_STATUS Define a match condition.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatusCustomRulesRulesMatchConditions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -405,6 +421,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatusCusto
 }
 
 /// <summary>Storage version of v1api20220501.CustomRule_STATUS Defines contents of a web application rule</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatusCustomRulesRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -445,6 +462,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatusCusto
 }
 
 /// <summary>Storage version of v1api20220501.CustomRuleList_STATUS Defines contents of custom rules</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatusCustomRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -457,6 +475,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatusCusto
 }
 
 /// <summary>Storage version of v1api20220501.FrontendEndpointLink_STATUS Defines the Resource ID for a Frontend Endpoint.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatusFrontendEndpointLinks
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -469,6 +488,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatusFront
 }
 
 /// <summary>Storage version of v1api20220501.ManagedRuleExclusion_STATUS Exclude variables from managed rule evaluation.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatusManagedRulesManagedRuleSetsExclusions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -489,6 +509,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatusManag
 }
 
 /// <summary>Storage version of v1api20220501.ManagedRuleExclusion_STATUS Exclude variables from managed rule evaluation.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatusManagedRulesManagedRuleSetsRuleGroupOverridesExclusions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -509,6 +530,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatusManag
 }
 
 /// <summary>Storage version of v1api20220501.ManagedRuleExclusion_STATUS Exclude variables from managed rule evaluation.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatusManagedRulesManagedRuleSetsRuleGroupOverridesRulesExclusions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -529,6 +551,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatusManag
 }
 
 /// <summary>Storage version of v1api20220501.ManagedRuleOverride_STATUS Defines a managed rule group override setting.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatusManagedRulesManagedRuleSetsRuleGroupOverridesRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -553,6 +576,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatusManag
 }
 
 /// <summary>Storage version of v1api20220501.ManagedRuleGroupOverride_STATUS Defines a managed rule group override setting.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatusManagedRulesManagedRuleSetsRuleGroupOverrides
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -573,6 +597,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatusManag
 }
 
 /// <summary>Storage version of v1api20220501.ManagedRuleSet_STATUS Defines a managed rule set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatusManagedRulesManagedRuleSets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -601,6 +626,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatusManag
 }
 
 /// <summary>Storage version of v1api20220501.ManagedRuleSetList_STATUS Defines the list of managed rule sets for the policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatusManagedRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -613,6 +639,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatusManag
 }
 
 /// <summary>Storage version of v1api20220501.PolicySettings_STATUS Defines top-level WebApplicationFirewallPolicy configuration settings.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatusPolicySettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -645,6 +672,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatusPolic
 }
 
 /// <summary>Storage version of v1api20220501.RoutingRuleLink_STATUS Defines the Resource ID for a Routing Rule.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatusRoutingRuleLinks
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -657,6 +685,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatusRouti
 }
 
 /// <summary>Storage version of v1api20220501.SecurityPolicyLink_STATUS Defines the Resource ID for a Security Policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatusSecurityPolicyLinks
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -669,6 +698,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatusSecur
 }
 
 /// <summary>Storage version of v1api20220501.Sku_STATUS The pricing tier of the web application firewall policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -681,6 +711,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatusSku
 }
 
 /// <summary>Storage version of v1api20220501.FrontDoorWebApplicationFirewallPolicy_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -752,8 +783,9 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatus
     public string? Type { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Storage version of v1api20220501.WebApplicationFirewallPolicy Generator information: - Generated from: /frontdoor/resource-manager/Microsoft.Network/stable/2022-05-01/webapplicationfirewall.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/FrontDoorWebApplicationFirewallPolicies/{policyName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1api20220501storageWebApplicationFirewallPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220501storageWebApplicationFirewallPolicySpec>, IStatus<V1api20220501storageWebApplicationFirewallPolicyStatus>
 {
     public const string KubeApiVersion = "v1api20220501storage";

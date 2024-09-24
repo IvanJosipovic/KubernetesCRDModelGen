@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudidentity.cnrm.cloud.google.com;
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudIdentityMembershipSpecGroupRef
 {
     /// <summary>The group for the resource  Allowed value: The Google Cloud resource name of a `CloudIdentityGroup` resource (format: `groups/{{name}}`).</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1CloudIdentityMembershipSpecGroupRef
 }
 
 /// <summary>Immutable. The `EntityKey` of the member. Either `member_key` or `preferred_member_key` must be set when calling MembershipsService.CreateMembership but not both; both shall be set when returned.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudIdentityMembershipSpecMemberKey
 {
     /// <summary>The ID of the entity. For Google-managed entities, the `id` must be the email address of an existing group or user. For external-identity-mapped entities, the `id` must be a string conforming to the Identity Source's requirements. Must be unique within a `namespace`.</summary>
@@ -37,6 +39,7 @@ public partial class V1beta1CloudIdentityMembershipSpecMemberKey
 }
 
 /// <summary>Immutable. Required. Immutable. The `EntityKey` of the member.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudIdentityMembershipSpecPreferredMemberKey
 {
     /// <summary>Immutable. The ID of the entity. For Google-managed entities, the `id` must be the email address of a group or user. For external-identity-mapped entities, the `id` must be a string conforming to the Identity Source's requirements. Must be unique within a `namespace`.</summary>
@@ -49,6 +52,7 @@ public partial class V1beta1CloudIdentityMembershipSpecPreferredMemberKey
 }
 
 /// <summary>The expiry details of the `MembershipRole`. Expiry details are only supported for `MEMBER` `MembershipRoles`. May be set if `name` is `MEMBER`. Must not be set if `name` is any other value.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudIdentityMembershipSpecRolesExpiryDetail
 {
     /// <summary>The time at which the `MembershipRole` will expire.</summary>
@@ -57,6 +61,7 @@ public partial class V1beta1CloudIdentityMembershipSpecRolesExpiryDetail
 }
 
 /// <summary>Evaluation of the member restriction applied to this membership. Empty if the user lacks permission to view the restriction evaluation.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudIdentityMembershipSpecRolesRestrictionEvaluationsMemberRestrictionEvaluation
 {
     /// <summary>Output only. The current state of the restriction Possible values: ENCRYPTION_STATE_UNSPECIFIED, UNSUPPORTED_BY_DEVICE, ENCRYPTED, NOT_ENCRYPTED</summary>
@@ -65,6 +70,7 @@ public partial class V1beta1CloudIdentityMembershipSpecRolesRestrictionEvaluatio
 }
 
 /// <summary>Evaluations of restrictions applied to parent group on this membership.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudIdentityMembershipSpecRolesRestrictionEvaluations
 {
     /// <summary>Evaluation of the member restriction applied to this membership. Empty if the user lacks permission to view the restriction evaluation.</summary>
@@ -73,6 +79,7 @@ public partial class V1beta1CloudIdentityMembershipSpecRolesRestrictionEvaluatio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudIdentityMembershipSpecRoles
 {
     /// <summary>The expiry details of the `MembershipRole`. Expiry details are only supported for `MEMBER` `MembershipRoles`. May be set if `name` is `MEMBER`. Must not be set if `name` is any other value.</summary>
@@ -89,6 +96,7 @@ public partial class V1beta1CloudIdentityMembershipSpecRoles
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudIdentityMembershipSpec
 {
     /// <summary>Immutable.</summary>
@@ -113,6 +121,7 @@ public partial class V1beta1CloudIdentityMembershipSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudIdentityMembershipStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -137,6 +146,7 @@ public partial class V1beta1CloudIdentityMembershipStatusConditions
 }
 
 /// <summary>Output only. The display name of this member, if available</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudIdentityMembershipStatusDisplayName
 {
     /// <summary>Output only. Member's family name</summary>
@@ -153,6 +163,7 @@ public partial class V1beta1CloudIdentityMembershipStatusDisplayName
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudIdentityMembershipStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -184,8 +195,9 @@ public partial class V1beta1CloudIdentityMembershipStatus
     public string? UpdateTime { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1CloudIdentityMembership : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CloudIdentityMembershipSpec>, IStatus<V1beta1CloudIdentityMembershipStatus>
 {
     public const string KubeApiVersion = "v1beta1";

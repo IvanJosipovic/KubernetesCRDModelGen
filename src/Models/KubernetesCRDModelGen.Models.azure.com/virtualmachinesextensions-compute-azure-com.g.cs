@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.azure.com;
 /// <summary>Storage version of v1api20220301.InstanceViewStatus Instance view status.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionSpecInstanceViewStatuses
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -37,6 +38,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionSpecInstanceVie
 }
 
 /// <summary>Storage version of v1api20220301.InstanceViewStatus Instance view status.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionSpecInstanceViewSubstatuses
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -65,6 +67,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionSpecInstanceVie
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineExtensionInstanceView The instance view of a virtual machine extension.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionSpecInstanceView
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -93,6 +96,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionSpecInstanceVie
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a compute.azure.com/VirtualMachine resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionSpecOwner
 {
     /// <summary></summary>
@@ -105,6 +109,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionSpecOwner
 }
 
 /// <summary>SecretMapReference is a reference to a Kubernetes secret in the same namespace as the resource it is on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionSpecProtectedSettings
 {
     /// <summary>Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource</summary>
@@ -113,6 +118,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionSpecProtectedSe
 }
 
 /// <summary>Reference: Resource Id</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionSpecProtectedSettingsFromKeyVaultSourceVaultReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -133,6 +139,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionSpecProtectedSe
 }
 
 /// <summary>Storage version of v1api20220301.SubResource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionSpecProtectedSettingsFromKeyVaultSourceVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -145,6 +152,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionSpecProtectedSe
 }
 
 /// <summary>Storage version of v1api20220301.KeyVaultSecretReference Describes a reference to Key Vault Secret</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionSpecProtectedSettingsFromKeyVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -161,6 +169,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionSpecProtectedSe
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachines_Extension_Spec</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -233,6 +242,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionSpec
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -265,6 +275,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionStatusCondition
 }
 
 /// <summary>Storage version of v1api20220301.InstanceViewStatus_STATUS Instance view status.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionStatusInstanceViewStatuses
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -293,6 +304,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionStatusInstanceV
 }
 
 /// <summary>Storage version of v1api20220301.InstanceViewStatus_STATUS Instance view status.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionStatusInstanceViewSubstatuses
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -321,6 +333,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionStatusInstanceV
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineExtensionInstanceView_STATUS The instance view of a virtual machine extension.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionStatusInstanceView
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -349,6 +362,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionStatusInstanceV
 }
 
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionStatusProtectedSettingsFromKeyVaultSourceVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -361,6 +375,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionStatusProtected
 }
 
 /// <summary>Storage version of v1api20220301.KeyVaultSecretReference_STATUS Describes a reference to Key Vault Secret</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionStatusProtectedSettingsFromKeyVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -377,6 +392,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionStatusProtected
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachines_Extension_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -452,8 +468,9 @@ public partial class V1api20220301storageVirtualMachinesExtensionStatus
     public string? TypeHandlerVersion { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Storage version of v1api20220301.VirtualMachinesExtension Generator information: - Generated from: /compute/resource-manager/Microsoft.Compute/ComputeRP/stable/2022-03-01/virtualMachine.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/extensions/{vmExtensionName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1api20220301storageVirtualMachinesExtension : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220301storageVirtualMachinesExtensionSpec>, IStatus<V1api20220301storageVirtualMachinesExtensionStatus>
 {
     public const string KubeApiVersion = "v1api20220301storage";

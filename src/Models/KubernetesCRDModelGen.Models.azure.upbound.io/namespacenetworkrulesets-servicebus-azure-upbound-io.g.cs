@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.servicebus.azure.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -18,6 +19,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecDeletionPolicyEnum
     Delete
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -28,6 +30,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdRefPolicyRes
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -39,6 +42,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdRefPolicyRes
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -53,6 +57,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdRef
 }
 
 /// <summary>Reference to a ServiceBusNamespace in servicebus to populate namespaceId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -64,6 +69,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdRef
     public V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -74,6 +80,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdSelectorPoli
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -85,6 +92,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdSelectorPoli
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -99,6 +107,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdSel
 }
 
 /// <summary>Selector for a ServiceBusNamespace in servicebus to populate namespaceId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -114,6 +123,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdSel
     public V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSubnetIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -124,6 +134,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSubnetIdRef
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSubnetIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -135,6 +146,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSubnetIdRef
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -149,6 +161,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSu
 }
 
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -160,6 +173,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSu
     public V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSubnetIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSubnetIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -170,6 +184,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSubnetIdSel
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSubnetIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -181,6 +196,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSubnetIdSel
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -195,6 +211,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSu
 }
 
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -211,6 +228,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRules
 {
     /// <summary>Should the ServiceBus Namespace Network Rule Set ignore missing Virtual Network Service Endpoint option in the Subnet? Defaults to false.</summary>
@@ -231,6 +249,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRules
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceNetworkRuleSetSpecForProvider
 {
     /// <summary>Specifies the default action for the ServiceBus Namespace Network Rule Set. Possible values are Allow and Deny. Defaults to Allow.</summary>
@@ -266,6 +285,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecForProvider
     public bool? TrustedServicesAllowed { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -276,6 +296,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdRefPolicyRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -287,6 +308,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdRefPolicyRe
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -301,6 +323,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdRe
 }
 
 /// <summary>Reference to a ServiceBusNamespace in servicebus to populate namespaceId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -312,6 +335,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdRe
     public V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -322,6 +346,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdSelectorPol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -333,6 +358,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdSelectorPol
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -347,6 +373,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdSe
 }
 
 /// <summary>Selector for a ServiceBusNamespace in servicebus to populate namespaceId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -362,6 +389,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdSe
     public V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesSubnetIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -372,6 +400,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesSubnetIdRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesSubnetIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -383,6 +412,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesSubnetIdRe
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -397,6 +427,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesS
 }
 
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -408,6 +439,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesS
     public V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesSubnetIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesSubnetIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -418,6 +450,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesSubnetIdSe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesSubnetIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -429,6 +462,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesSubnetIdSe
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -443,6 +477,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesS
 }
 
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -459,6 +494,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRules
 {
     /// <summary>Should the ServiceBus Namespace Network Rule Set ignore missing Virtual Network Service Endpoint option in the Subnet? Defaults to false.</summary>
@@ -479,6 +515,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRules
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceNetworkRuleSetSpecInitProvider
 {
     /// <summary>Specifies the default action for the ServiceBus Namespace Network Rule Set. Possible values are Allow and Deny. Defaults to Allow.</summary>
@@ -514,6 +551,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecInitProvider
     public bool? TrustedServicesAllowed { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -536,6 +574,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -546,6 +585,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecProviderConfigRefPolicyResolutionE
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -557,6 +597,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceNetworkRuleSetSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -571,6 +612,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceNetworkRuleSetSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -582,6 +624,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecProviderConfigRef
     public V1beta1NamespaceNetworkRuleSetSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -592,6 +635,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecPublishConnectionDetailsToConfigRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -603,6 +647,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecPublishConnectionDetailsToConfigRe
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceNetworkRuleSetSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -617,6 +662,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecPublishConnectionDetailsT
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceNetworkRuleSetSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -629,6 +675,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecPublishConnectionDetailsT
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceNetworkRuleSetSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -645,6 +692,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecPublishConnectionDetailsT
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceNetworkRuleSetSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -661,6 +709,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecPublishConnectionDetailsT
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceNetworkRuleSetSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -673,6 +722,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecWriteConnectionSecretToRe
 }
 
 /// <summary>NamespaceNetworkRuleSetSpec defines the desired state of NamespaceNetworkRuleSet</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceNetworkRuleSetSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -706,6 +756,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceNetworkRuleSetStatusAtProviderNetworkRules
 {
     /// <summary>Should the ServiceBus Namespace Network Rule Set ignore missing Virtual Network Service Endpoint option in the Subnet? Defaults to false.</summary>
@@ -718,6 +769,7 @@ public partial class V1beta1NamespaceNetworkRuleSetStatusAtProviderNetworkRules
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceNetworkRuleSetStatusAtProvider
 {
     /// <summary>Specifies the default action for the ServiceBus Namespace Network Rule Set. Possible values are Allow and Deny. Defaults to Allow.</summary>
@@ -750,6 +802,7 @@ public partial class V1beta1NamespaceNetworkRuleSetStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceNetworkRuleSetStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -778,6 +831,7 @@ public partial class V1beta1NamespaceNetworkRuleSetStatusConditions
 }
 
 /// <summary>NamespaceNetworkRuleSetStatus defines the observed state of NamespaceNetworkRuleSet.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceNetworkRuleSetStatus
 {
     /// <summary></summary>
@@ -793,8 +847,9 @@ public partial class V1beta1NamespaceNetworkRuleSetStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>NamespaceNetworkRuleSet is the Schema for the NamespaceNetworkRuleSets API. Manages a ServiceBus Namespace Network Rule Set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1NamespaceNetworkRuleSet : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NamespaceNetworkRuleSetSpec>, IStatus<V1beta1NamespaceNetworkRuleSetStatus>
 {
     public const string KubeApiVersion = "v1beta1";

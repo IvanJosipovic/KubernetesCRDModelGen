@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.search.azure.com;
 /// <summary>Storage version of v1api20220901.DataPlaneAadOrApiKeyAuthOption Indicates that either the API key or an access token from Azure Active Directory can be used for authentication.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220901storageSearchServiceSpecAuthOptionsAadOrApiKey
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -21,6 +22,7 @@ public partial class V1api20220901storageSearchServiceSpecAuthOptionsAadOrApiKey
 }
 
 /// <summary>Storage version of v1api20220901.DataPlaneAuthOptions Defines the options for how the data plane API of a Search service authenticates requests. This cannot be set if 'disableLocalAuth' is set to true.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220901storageSearchServiceSpecAuthOptions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -33,6 +35,7 @@ public partial class V1api20220901storageSearchServiceSpecAuthOptions
 }
 
 /// <summary>Storage version of v1api20220901.EncryptionWithCmk Describes a policy that determines how resources within the search service are to be encrypted with Customer Managed Keys.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220901storageSearchServiceSpecEncryptionWithCmk
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -45,6 +48,7 @@ public partial class V1api20220901storageSearchServiceSpecEncryptionWithCmk
 }
 
 /// <summary>Storage version of v1api20220901.Identity Identity for the resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220901storageSearchServiceSpecIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -57,6 +61,7 @@ public partial class V1api20220901storageSearchServiceSpecIdentity
 }
 
 /// <summary>Storage version of v1api20220901.IpRule The IP restriction rule of the Azure Cognitive Search service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220901storageSearchServiceSpecNetworkRuleSetIpRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -69,6 +74,7 @@ public partial class V1api20220901storageSearchServiceSpecNetworkRuleSetIpRules
 }
 
 /// <summary>Storage version of v1api20220901.NetworkRuleSet Network specific rules that determine how the Azure Cognitive Search service may be reached.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220901storageSearchServiceSpecNetworkRuleSet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -81,6 +87,7 @@ public partial class V1api20220901storageSearchServiceSpecNetworkRuleSet
 }
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220901storageSearchServiceSpecOperatorSpecSecretsAdminPrimaryKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -93,6 +100,7 @@ public partial class V1api20220901storageSearchServiceSpecOperatorSpecSecretsAdm
 }
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220901storageSearchServiceSpecOperatorSpecSecretsAdminSecondaryKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -105,6 +113,7 @@ public partial class V1api20220901storageSearchServiceSpecOperatorSpecSecretsAdm
 }
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220901storageSearchServiceSpecOperatorSpecSecretsQueryKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -117,6 +126,7 @@ public partial class V1api20220901storageSearchServiceSpecOperatorSpecSecretsQue
 }
 
 /// <summary>Storage version of v1api20220901.SearchServiceOperatorSecrets</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220901storageSearchServiceSpecOperatorSpecSecrets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -137,6 +147,7 @@ public partial class V1api20220901storageSearchServiceSpecOperatorSpecSecrets
 }
 
 /// <summary>Storage version of v1api20220901.SearchServiceOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220901storageSearchServiceSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -149,6 +160,7 @@ public partial class V1api20220901storageSearchServiceSpecOperatorSpec
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220901storageSearchServiceSpecOwner
 {
     /// <summary></summary>
@@ -161,6 +173,7 @@ public partial class V1api20220901storageSearchServiceSpecOwner
 }
 
 /// <summary>Storage version of v1api20220901.Sku Defines the SKU of an Azure Cognitive Search Service, which determines price tier and capacity limits.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220901storageSearchServiceSpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -173,6 +186,7 @@ public partial class V1api20220901storageSearchServiceSpecSku
 }
 
 /// <summary>Storage version of v1api20220901.SearchService_Spec</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220901storageSearchServiceSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -245,6 +259,7 @@ public partial class V1api20220901storageSearchServiceSpec
 }
 
 /// <summary>Storage version of v1api20220901.DataPlaneAadOrApiKeyAuthOption_STATUS Indicates that either the API key or an access token from Azure Active Directory can be used for authentication.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220901storageSearchServiceStatusAuthOptionsAadOrApiKey
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -257,6 +272,7 @@ public partial class V1api20220901storageSearchServiceStatusAuthOptionsAadOrApiK
 }
 
 /// <summary>Storage version of v1api20220901.DataPlaneAuthOptions_STATUS Defines the options for how the data plane API of a Search service authenticates requests. This cannot be set if 'disableLocalAuth' is set to true.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220901storageSearchServiceStatusAuthOptions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -273,6 +289,7 @@ public partial class V1api20220901storageSearchServiceStatusAuthOptions
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220901storageSearchServiceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -305,6 +322,7 @@ public partial class V1api20220901storageSearchServiceStatusConditions
 }
 
 /// <summary>Storage version of v1api20220901.EncryptionWithCmk_STATUS Describes a policy that determines how resources within the search service are to be encrypted with Customer Managed Keys.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220901storageSearchServiceStatusEncryptionWithCmk
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -321,6 +339,7 @@ public partial class V1api20220901storageSearchServiceStatusEncryptionWithCmk
 }
 
 /// <summary>Storage version of v1api20220901.Identity_STATUS Identity for the resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220901storageSearchServiceStatusIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -341,6 +360,7 @@ public partial class V1api20220901storageSearchServiceStatusIdentity
 }
 
 /// <summary>Storage version of v1api20220901.IpRule_STATUS The IP restriction rule of the Azure Cognitive Search service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220901storageSearchServiceStatusNetworkRuleSetIpRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -353,6 +373,7 @@ public partial class V1api20220901storageSearchServiceStatusNetworkRuleSetIpRule
 }
 
 /// <summary>Storage version of v1api20220901.NetworkRuleSet_STATUS Network specific rules that determine how the Azure Cognitive Search service may be reached.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220901storageSearchServiceStatusNetworkRuleSet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -365,6 +386,7 @@ public partial class V1api20220901storageSearchServiceStatusNetworkRuleSet
 }
 
 /// <summary>Storage version of v1api20220901.PrivateEndpointConnection_STATUS Describes an existing Private Endpoint connection to the Azure Cognitive Search service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220901storageSearchServiceStatusPrivateEndpointConnections
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -377,6 +399,7 @@ public partial class V1api20220901storageSearchServiceStatusPrivateEndpointConne
 }
 
 /// <summary>Storage version of v1api20220901.SharedPrivateLinkResource_STATUS Describes a Shared Private Link Resource managed by the Azure Cognitive Search service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220901storageSearchServiceStatusSharedPrivateLinkResources
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -389,6 +412,7 @@ public partial class V1api20220901storageSearchServiceStatusSharedPrivateLinkRes
 }
 
 /// <summary>Storage version of v1api20220901.Sku_STATUS Defines the SKU of an Azure Cognitive Search Service, which determines price tier and capacity limits.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220901storageSearchServiceStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -401,6 +425,7 @@ public partial class V1api20220901storageSearchServiceStatusSku
 }
 
 /// <summary>Storage version of v1api20220901.SearchService_STATUS Describes an Azure Cognitive Search service and its current state.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220901storageSearchServiceStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -492,8 +517,9 @@ public partial class V1api20220901storageSearchServiceStatus
     public string? Type { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Storage version of v1api20220901.SearchService Generator information: - Generated from: /search/resource-manager/Microsoft.Search/stable/2022-09-01/search.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Search/searchServices/{searchServiceName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1api20220901storageSearchService : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220901storageSearchServiceSpec>, IStatus<V1api20220901storageSearchServiceStatus>
 {
     public const string KubeApiVersion = "v1api20220901storage";

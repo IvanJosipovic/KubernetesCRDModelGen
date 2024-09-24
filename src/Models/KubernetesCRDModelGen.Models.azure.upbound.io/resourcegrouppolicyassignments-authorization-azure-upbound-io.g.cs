@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.authorization.azure.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ResourceGroupPolicyAssignmentSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1ResourceGroupPolicyAssignmentSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderIdentity
 {
     /// <summary>A list of User Managed Identity IDs which should be assigned to the Policy Definition.</summary>
@@ -31,6 +33,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderIdentity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderNonComplianceMessage
 {
     /// <summary>The non-compliance message text. When assigning policy sets (initiatives), unless policy_definition_reference_id is specified then this message will be the default for all policies.</summary>
@@ -43,6 +46,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderNonCompl
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderOverridesSelectors
 {
     /// <summary>The list of allowed values for the specified kind. Cannot be used with not_in. Can contain up to 50 values.</summary>
@@ -55,6 +59,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderOverride
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderOverrides
 {
     /// <summary>One or more override_selector block as defined below.</summary>
@@ -66,6 +71,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderOverride
     public string? Value { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ResourceGroupPolicyAssignmentSpecForProviderPolicyDefinitionIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -76,6 +82,7 @@ public enum V1beta1ResourceGroupPolicyAssignmentSpecForProviderPolicyDefinitionI
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ResourceGroupPolicyAssignmentSpecForProviderPolicyDefinitionIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -87,6 +94,7 @@ public enum V1beta1ResourceGroupPolicyAssignmentSpecForProviderPolicyDefinitionI
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderPolicyDefinitionIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -101,6 +109,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderPolicyDe
 }
 
 /// <summary>Reference to a PolicyDefinition in authorization to populate policyDefinitionId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderPolicyDefinitionIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -112,6 +121,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderPolicyDe
     public V1beta1ResourceGroupPolicyAssignmentSpecForProviderPolicyDefinitionIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ResourceGroupPolicyAssignmentSpecForProviderPolicyDefinitionIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -122,6 +132,7 @@ public enum V1beta1ResourceGroupPolicyAssignmentSpecForProviderPolicyDefinitionI
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ResourceGroupPolicyAssignmentSpecForProviderPolicyDefinitionIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -133,6 +144,7 @@ public enum V1beta1ResourceGroupPolicyAssignmentSpecForProviderPolicyDefinitionI
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderPolicyDefinitionIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -147,6 +159,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderPolicyDe
 }
 
 /// <summary>Selector for a PolicyDefinition in authorization to populate policyDefinitionId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderPolicyDefinitionIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -162,6 +175,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderPolicyDe
     public V1beta1ResourceGroupPolicyAssignmentSpecForProviderPolicyDefinitionIdSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ResourceGroupPolicyAssignmentSpecForProviderResourceGroupIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -172,6 +186,7 @@ public enum V1beta1ResourceGroupPolicyAssignmentSpecForProviderResourceGroupIdRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ResourceGroupPolicyAssignmentSpecForProviderResourceGroupIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -183,6 +198,7 @@ public enum V1beta1ResourceGroupPolicyAssignmentSpecForProviderResourceGroupIdRe
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderResourceGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -197,6 +213,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderResource
 }
 
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderResourceGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -208,6 +225,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderResource
     public V1beta1ResourceGroupPolicyAssignmentSpecForProviderResourceGroupIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ResourceGroupPolicyAssignmentSpecForProviderResourceGroupIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -218,6 +236,7 @@ public enum V1beta1ResourceGroupPolicyAssignmentSpecForProviderResourceGroupIdSe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ResourceGroupPolicyAssignmentSpecForProviderResourceGroupIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -229,6 +248,7 @@ public enum V1beta1ResourceGroupPolicyAssignmentSpecForProviderResourceGroupIdSe
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderResourceGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -243,6 +263,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderResource
 }
 
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderResourceGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -259,6 +280,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderResourceSelectorsSelectors
 {
     /// <summary>The list of allowed values for the specified kind. Cannot be used with not_in. Can contain up to 50 values.</summary>
@@ -275,6 +297,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderResourceSelectors
 {
     /// <summary>Specifies a name for the resource selector.</summary>
@@ -287,6 +310,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProvider
 {
     /// <summary>A description which should be used for this Policy Assignment.</summary>
@@ -359,6 +383,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderIdentity
 {
     /// <summary>A list of User Managed Identity IDs which should be assigned to the Policy Definition.</summary>
@@ -371,6 +396,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderIdentit
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderNonComplianceMessage
 {
     /// <summary>The non-compliance message text. When assigning policy sets (initiatives), unless policy_definition_reference_id is specified then this message will be the default for all policies.</summary>
@@ -383,6 +409,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderNonComp
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderOverridesSelectors
 {
     /// <summary>The list of allowed values for the specified kind. Cannot be used with not_in. Can contain up to 50 values.</summary>
@@ -395,6 +422,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderOverrid
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderOverrides
 {
     /// <summary>One or more override_selector block as defined below.</summary>
@@ -406,6 +434,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderOverrid
     public string? Value { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ResourceGroupPolicyAssignmentSpecInitProviderPolicyDefinitionIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -416,6 +445,7 @@ public enum V1beta1ResourceGroupPolicyAssignmentSpecInitProviderPolicyDefinition
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ResourceGroupPolicyAssignmentSpecInitProviderPolicyDefinitionIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -427,6 +457,7 @@ public enum V1beta1ResourceGroupPolicyAssignmentSpecInitProviderPolicyDefinition
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderPolicyDefinitionIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -441,6 +472,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderPolicyD
 }
 
 /// <summary>Reference to a PolicyDefinition in authorization to populate policyDefinitionId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderPolicyDefinitionIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -452,6 +484,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderPolicyD
     public V1beta1ResourceGroupPolicyAssignmentSpecInitProviderPolicyDefinitionIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ResourceGroupPolicyAssignmentSpecInitProviderPolicyDefinitionIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -462,6 +495,7 @@ public enum V1beta1ResourceGroupPolicyAssignmentSpecInitProviderPolicyDefinition
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ResourceGroupPolicyAssignmentSpecInitProviderPolicyDefinitionIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -473,6 +507,7 @@ public enum V1beta1ResourceGroupPolicyAssignmentSpecInitProviderPolicyDefinition
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderPolicyDefinitionIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -487,6 +522,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderPolicyD
 }
 
 /// <summary>Selector for a PolicyDefinition in authorization to populate policyDefinitionId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderPolicyDefinitionIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -502,6 +538,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderPolicyD
     public V1beta1ResourceGroupPolicyAssignmentSpecInitProviderPolicyDefinitionIdSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourceGroupIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -512,6 +549,7 @@ public enum V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourceGroupIdR
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourceGroupIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -523,6 +561,7 @@ public enum V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourceGroupIdR
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourceGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -537,6 +576,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourc
 }
 
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourceGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -548,6 +588,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourc
     public V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourceGroupIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourceGroupIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -558,6 +599,7 @@ public enum V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourceGroupIdS
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourceGroupIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -569,6 +611,7 @@ public enum V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourceGroupIdS
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourceGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -583,6 +626,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourc
 }
 
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourceGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -599,6 +643,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourceSelectorsSelectors
 {
     /// <summary>The list of allowed values for the specified kind. Cannot be used with not_in. Can contain up to 50 values.</summary>
@@ -615,6 +660,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourceSelectors
 {
     /// <summary>Specifies a name for the resource selector.</summary>
@@ -627,6 +673,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourc
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProvider
 {
     /// <summary>A description which should be used for this Policy Assignment.</summary>
@@ -698,6 +745,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProvider
     public IList<V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourceSelectors>? ResourceSelectors { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ResourceGroupPolicyAssignmentSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -720,6 +768,7 @@ public enum V1beta1ResourceGroupPolicyAssignmentSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ResourceGroupPolicyAssignmentSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -730,6 +779,7 @@ public enum V1beta1ResourceGroupPolicyAssignmentSpecProviderConfigRefPolicyResol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ResourceGroupPolicyAssignmentSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -741,6 +791,7 @@ public enum V1beta1ResourceGroupPolicyAssignmentSpecProviderConfigRefPolicyResol
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -755,6 +806,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecProviderConfigRefPo
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -766,6 +818,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecProviderConfigRef
     public V1beta1ResourceGroupPolicyAssignmentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ResourceGroupPolicyAssignmentSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -776,6 +829,7 @@ public enum V1beta1ResourceGroupPolicyAssignmentSpecPublishConnectionDetailsToCo
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ResourceGroupPolicyAssignmentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -787,6 +841,7 @@ public enum V1beta1ResourceGroupPolicyAssignmentSpecPublishConnectionDetailsToCo
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -801,6 +856,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecPublishConnectionDe
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -813,6 +869,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecPublishConnectionDe
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -829,6 +886,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecPublishConnectionDe
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -845,6 +903,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecPublishConnectionDe
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -857,6 +916,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecWriteConnectionSecr
 }
 
 /// <summary>ResourceGroupPolicyAssignmentSpec defines the desired state of ResourceGroupPolicyAssignment</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -890,6 +950,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentStatusAtProviderIdentity
 {
     /// <summary>A list of User Managed Identity IDs which should be assigned to the Policy Definition.</summary>
@@ -910,6 +971,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentStatusAtProviderIdentit
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentStatusAtProviderNonComplianceMessage
 {
     /// <summary>The non-compliance message text. When assigning policy sets (initiatives), unless policy_definition_reference_id is specified then this message will be the default for all policies.</summary>
@@ -922,6 +984,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentStatusAtProviderNonComp
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentStatusAtProviderOverridesSelectors
 {
     /// <summary>The list of allowed values for the specified kind. Cannot be used with not_in. Can contain up to 50 values.</summary>
@@ -938,6 +1001,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentStatusAtProviderOverrid
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentStatusAtProviderOverrides
 {
     /// <summary>One or more override_selector block as defined below.</summary>
@@ -950,6 +1014,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentStatusAtProviderOverrid
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentStatusAtProviderResourceSelectorsSelectors
 {
     /// <summary>The list of allowed values for the specified kind. Cannot be used with not_in. Can contain up to 50 values.</summary>
@@ -966,6 +1031,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentStatusAtProviderResourc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentStatusAtProviderResourceSelectors
 {
     /// <summary>Specifies a name for the resource selector.</summary>
@@ -978,6 +1044,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentStatusAtProviderResourc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentStatusAtProvider
 {
     /// <summary>A description which should be used for this Policy Assignment.</summary>
@@ -1038,6 +1105,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1066,6 +1134,7 @@ public partial class V1beta1ResourceGroupPolicyAssignmentStatusConditions
 }
 
 /// <summary>ResourceGroupPolicyAssignmentStatus defines the observed state of ResourceGroupPolicyAssignment.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentStatus
 {
     /// <summary></summary>
@@ -1081,8 +1150,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>ResourceGroupPolicyAssignment is the Schema for the ResourceGroupPolicyAssignments API. Manages a Resource Group Policy Assignment.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ResourceGroupPolicyAssignment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ResourceGroupPolicyAssignmentSpec>, IStatus<V1beta1ResourceGroupPolicyAssignmentStatus>
 {
     public const string KubeApiVersion = "v1beta1";

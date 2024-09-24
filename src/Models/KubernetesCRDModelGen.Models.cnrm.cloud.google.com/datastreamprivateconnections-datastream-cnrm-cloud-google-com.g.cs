@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datastream.cnrm.cloud.google.com;
 /// <summary>The project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamPrivateConnectionSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1alpha1DatastreamPrivateConnectionSpecProjectRef
 }
 
 /// <summary>Immutable. The VPC Peering configuration is used to create VPC peering between Datastream and the consumer's VPC.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamPrivateConnectionSpecVpcPeeringConfig
 {
     /// <summary>Immutable. A free subnet for peering. (CIDR of /29).</summary>
@@ -37,6 +39,7 @@ public partial class V1alpha1DatastreamPrivateConnectionSpecVpcPeeringConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamPrivateConnectionSpec
 {
     /// <summary>Immutable. Display name.</summary>
@@ -61,6 +64,7 @@ public partial class V1alpha1DatastreamPrivateConnectionSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamPrivateConnectionStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -85,6 +89,7 @@ public partial class V1alpha1DatastreamPrivateConnectionStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamPrivateConnectionStatusError
 {
     /// <summary>A list of messages that carry the error details.</summary>
@@ -97,6 +102,7 @@ public partial class V1alpha1DatastreamPrivateConnectionStatusError
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamPrivateConnectionStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -120,8 +126,9 @@ public partial class V1alpha1DatastreamPrivateConnectionStatus
     public string? State { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1DatastreamPrivateConnection : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DatastreamPrivateConnectionSpec>, IStatus<V1alpha1DatastreamPrivateConnectionStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

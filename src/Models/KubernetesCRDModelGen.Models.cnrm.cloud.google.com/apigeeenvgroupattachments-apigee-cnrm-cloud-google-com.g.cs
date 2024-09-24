@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigee.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApigeeEnvgroupAttachmentSpec
 {
     /// <summary>Immutable. The Apigee environment group associated with the Apigee environment, in the format 'organizations/{{org_name}}/envgroups/{{envgroup_name}}'.</summary>
@@ -25,6 +26,7 @@ public partial class V1alpha1ApigeeEnvgroupAttachmentSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApigeeEnvgroupAttachmentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -49,6 +51,7 @@ public partial class V1alpha1ApigeeEnvgroupAttachmentStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApigeeEnvgroupAttachmentStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -64,8 +67,9 @@ public partial class V1alpha1ApigeeEnvgroupAttachmentStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1ApigeeEnvgroupAttachment : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ApigeeEnvgroupAttachmentSpec>, IStatus<V1alpha1ApigeeEnvgroupAttachmentStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

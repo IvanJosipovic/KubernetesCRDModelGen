@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpotFleetRequestSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1SpotFleetRequestSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationEbsBlockDevice
 {
     /// <summary></summary>
@@ -59,6 +61,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationEb
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationEphemeralBlockDevice
 {
     /// <summary>The name of the launch template. Conflicts with id.</summary>
@@ -70,6 +73,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationEp
     public string? VirtualName { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationIamInstanceProfileArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -80,6 +84,7 @@ public enum V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationIamInstance
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationIamInstanceProfileArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -91,6 +96,7 @@ public enum V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationIamInstance
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationIamInstanceProfileArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -105,6 +111,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationIa
 }
 
 /// <summary>Reference to a InstanceProfile in iam to populate iamInstanceProfileArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationIamInstanceProfileArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -116,6 +123,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationIa
     public V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationIamInstanceProfileArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationIamInstanceProfileArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -126,6 +134,7 @@ public enum V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationIamInstance
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationIamInstanceProfileArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -137,6 +146,7 @@ public enum V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationIamInstance
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationIamInstanceProfileArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -151,6 +161,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationIa
 }
 
 /// <summary>Selector for a InstanceProfile in iam to populate iamInstanceProfileArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationIamInstanceProfileArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -167,6 +178,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationIa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationRootBlockDevice
 {
     /// <summary></summary>
@@ -199,6 +211,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationRo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchSpecification
 {
     /// <summary></summary>
@@ -290,6 +303,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchSpecification
     public string? WeightedCapacity { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -300,6 +314,7 @@ public enum V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemp
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -311,6 +326,7 @@ public enum V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemp
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -325,6 +341,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigL
 }
 
 /// <summary>Reference to a LaunchTemplate in ec2 to populate id.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -336,6 +353,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigL
     public V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -346,6 +364,7 @@ public enum V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemp
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -357,6 +376,7 @@ public enum V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemp
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -371,6 +391,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigL
 }
 
 /// <summary>Selector for a LaunchTemplate in ec2 to populate id.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -386,6 +407,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigL
     public V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationIdSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -396,6 +418,7 @@ public enum V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemp
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -407,6 +430,7 @@ public enum V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemp
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -421,6 +445,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigL
 }
 
 /// <summary>Reference to a LaunchTemplate in ec2 to populate version.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -432,6 +457,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigL
     public V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -442,6 +468,7 @@ public enum V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemp
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -453,6 +480,7 @@ public enum V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemp
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -467,6 +495,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigL
 }
 
 /// <summary>Selector for a LaunchTemplate in ec2 to populate version.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -483,6 +512,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigL
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecification
 {
     /// <summary>The ID of the launch template. Conflicts with name.</summary>
@@ -515,6 +545,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigL
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigOverridesInstanceRequirementsAcceleratorCount
 {
     /// <summary>Maximum.</summary>
@@ -527,6 +558,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigO
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigOverridesInstanceRequirementsAcceleratorTotalMemoryMib
 {
     /// <summary>Maximum.</summary>
@@ -539,6 +571,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigO
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigOverridesInstanceRequirementsBaselineEbsBandwidthMbps
 {
     /// <summary>Maximum.</summary>
@@ -551,6 +584,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigO
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigOverridesInstanceRequirementsMemoryGibPerVcpu
 {
     /// <summary>Maximum.</summary>
@@ -563,6 +597,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigO
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigOverridesInstanceRequirementsMemoryMib
 {
     /// <summary>Maximum.</summary>
@@ -575,6 +610,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigO
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigOverridesInstanceRequirementsNetworkBandwidthGbps
 {
     /// <summary>Maximum.</summary>
@@ -587,6 +623,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigO
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigOverridesInstanceRequirementsNetworkInterfaceCount
 {
     /// <summary>Maximum.</summary>
@@ -599,6 +636,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigO
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigOverridesInstanceRequirementsTotalLocalStorageGb
 {
     /// <summary>Maximum.</summary>
@@ -611,6 +649,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigO
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigOverridesInstanceRequirementsVcpuCount
 {
     /// <summary>Maximum.</summary>
@@ -623,6 +662,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigO
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigOverridesInstanceRequirements
 {
     /// <summary>Block describing the minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips). Default is no minimum or maximum.</summary>
@@ -719,6 +759,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigO
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigOverrides
 {
     /// <summary>The availability zone in which to place the request.</summary>
@@ -751,6 +792,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigO
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfig
 {
     /// <summary>Launch template specification. See Launch Template Specification below for more details.</summary>
@@ -763,6 +805,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecForProviderSpotMaintenanceStrategiesCapacityRebalance
 {
     /// <summary>The replacement strategy to use. Only available for spot fleets with fleet_type set to maintain. Valid values: launch.</summary>
@@ -771,6 +814,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderSpotMaintenanceStrate
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecForProviderSpotMaintenanceStrategies
 {
     /// <summary>Nested argument containing the capacity rebalance for your fleet request. Defined below.</summary>
@@ -779,6 +823,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderSpotMaintenanceStrate
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecForProvider
 {
     /// <summary>Indicates how to allocate the target capacity across the Spot pools specified by the Spot fleet request. Valid values: lowestPrice, diversified, capacityOptimized, capacityOptimizedPrioritized, and priceCapacityOptimized. The default is lowestPrice.</summary>
@@ -887,6 +932,7 @@ public partial class V1beta1SpotFleetRequestSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationEbsBlockDevice
 {
     /// <summary></summary>
@@ -927,6 +973,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationE
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationEphemeralBlockDevice
 {
     /// <summary>The name of the launch template. Conflicts with id.</summary>
@@ -938,6 +985,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationE
     public string? VirtualName { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationIamInstanceProfileArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -948,6 +996,7 @@ public enum V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationIamInstanc
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationIamInstanceProfileArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -959,6 +1008,7 @@ public enum V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationIamInstanc
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationIamInstanceProfileArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -973,6 +1023,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationI
 }
 
 /// <summary>Reference to a InstanceProfile in iam to populate iamInstanceProfileArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationIamInstanceProfileArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -984,6 +1035,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationI
     public V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationIamInstanceProfileArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationIamInstanceProfileArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -994,6 +1046,7 @@ public enum V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationIamInstanc
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationIamInstanceProfileArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1005,6 +1058,7 @@ public enum V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationIamInstanc
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationIamInstanceProfileArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1019,6 +1073,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationI
 }
 
 /// <summary>Selector for a InstanceProfile in iam to populate iamInstanceProfileArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationIamInstanceProfileArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1035,6 +1090,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationI
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationRootBlockDevice
 {
     /// <summary></summary>
@@ -1067,6 +1123,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchSpecification
 {
     /// <summary></summary>
@@ -1158,6 +1215,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchSpecification
     public string? WeightedCapacity { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1168,6 +1226,7 @@ public enum V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTem
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1179,6 +1238,7 @@ public enum V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTem
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1193,6 +1253,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
 }
 
 /// <summary>Reference to a LaunchTemplate in ec2 to populate id.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1204,6 +1265,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
     public V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1214,6 +1276,7 @@ public enum V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTem
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1225,6 +1288,7 @@ public enum V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTem
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1239,6 +1303,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
 }
 
 /// <summary>Selector for a LaunchTemplate in ec2 to populate id.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1254,6 +1319,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
     public V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationIdSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1264,6 +1330,7 @@ public enum V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTem
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1275,6 +1342,7 @@ public enum V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTem
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1289,6 +1357,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
 }
 
 /// <summary>Reference to a LaunchTemplate in ec2 to populate version.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1300,6 +1369,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
     public V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1310,6 +1380,7 @@ public enum V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTem
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1321,6 +1392,7 @@ public enum V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTem
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1335,6 +1407,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
 }
 
 /// <summary>Selector for a LaunchTemplate in ec2 to populate version.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1351,6 +1424,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecification
 {
     /// <summary>The ID of the launch template. Conflicts with name.</summary>
@@ -1383,6 +1457,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigOverridesInstanceRequirementsAcceleratorCount
 {
     /// <summary>Maximum.</summary>
@@ -1395,6 +1470,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigOverridesInstanceRequirementsAcceleratorTotalMemoryMib
 {
     /// <summary>Maximum.</summary>
@@ -1407,6 +1483,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigOverridesInstanceRequirementsBaselineEbsBandwidthMbps
 {
     /// <summary>Maximum.</summary>
@@ -1419,6 +1496,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigOverridesInstanceRequirementsMemoryGibPerVcpu
 {
     /// <summary>Maximum.</summary>
@@ -1431,6 +1509,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigOverridesInstanceRequirementsMemoryMib
 {
     /// <summary>Maximum.</summary>
@@ -1443,6 +1522,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigOverridesInstanceRequirementsNetworkBandwidthGbps
 {
     /// <summary>Maximum.</summary>
@@ -1455,6 +1535,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigOverridesInstanceRequirementsNetworkInterfaceCount
 {
     /// <summary>Maximum.</summary>
@@ -1467,6 +1548,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigOverridesInstanceRequirementsTotalLocalStorageGb
 {
     /// <summary>Maximum.</summary>
@@ -1479,6 +1561,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigOverridesInstanceRequirementsVcpuCount
 {
     /// <summary>Maximum.</summary>
@@ -1491,6 +1574,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigOverridesInstanceRequirements
 {
     /// <summary>Block describing the minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips). Default is no minimum or maximum.</summary>
@@ -1587,6 +1671,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigOverrides
 {
     /// <summary>The availability zone in which to place the request.</summary>
@@ -1619,6 +1704,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
 {
     /// <summary>Launch template specification. See Launch Template Specification below for more details.</summary>
@@ -1631,6 +1717,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecInitProviderSpotMaintenanceStrategiesCapacityRebalance
 {
     /// <summary>The replacement strategy to use. Only available for spot fleets with fleet_type set to maintain. Valid values: launch.</summary>
@@ -1639,6 +1726,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderSpotMaintenanceStrat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecInitProviderSpotMaintenanceStrategies
 {
     /// <summary>Nested argument containing the capacity rebalance for your fleet request. Defined below.</summary>
@@ -1647,6 +1735,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderSpotMaintenanceStrat
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecInitProvider
 {
     /// <summary>Indicates how to allocate the target capacity across the Spot pools specified by the Spot fleet request. Valid values: lowestPrice, diversified, capacityOptimized, capacityOptimizedPrioritized, and priceCapacityOptimized. The default is lowestPrice.</summary>
@@ -1750,6 +1839,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProvider
     public bool? WaitForFulfillment { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpotFleetRequestSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -1772,6 +1862,7 @@ public enum V1beta1SpotFleetRequestSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpotFleetRequestSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1782,6 +1873,7 @@ public enum V1beta1SpotFleetRequestSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpotFleetRequestSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1793,6 +1885,7 @@ public enum V1beta1SpotFleetRequestSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1807,6 +1900,7 @@ public partial class V1beta1SpotFleetRequestSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1818,6 +1912,7 @@ public partial class V1beta1SpotFleetRequestSpecProviderConfigRef
     public V1beta1SpotFleetRequestSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpotFleetRequestSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1828,6 +1923,7 @@ public enum V1beta1SpotFleetRequestSpecPublishConnectionDetailsToConfigRefPolicy
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpotFleetRequestSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1839,6 +1935,7 @@ public enum V1beta1SpotFleetRequestSpecPublishConnectionDetailsToConfigRefPolicy
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1853,6 +1950,7 @@ public partial class V1beta1SpotFleetRequestSpecPublishConnectionDetailsToConfig
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1865,6 +1963,7 @@ public partial class V1beta1SpotFleetRequestSpecPublishConnectionDetailsToConfig
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1881,6 +1980,7 @@ public partial class V1beta1SpotFleetRequestSpecPublishConnectionDetailsToMetada
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1897,6 +1997,7 @@ public partial class V1beta1SpotFleetRequestSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1909,6 +2010,7 @@ public partial class V1beta1SpotFleetRequestSpecWriteConnectionSecretToRef
 }
 
 /// <summary>SpotFleetRequestSpec defines the desired state of SpotFleetRequest</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1942,6 +2044,7 @@ public partial class V1beta1SpotFleetRequestSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchSpecificationEbsBlockDevice
 {
     /// <summary></summary>
@@ -1982,6 +2085,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchSpecificationE
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchSpecificationEphemeralBlockDevice
 {
     /// <summary>The name of the launch template. Conflicts with id.</summary>
@@ -1994,6 +2098,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchSpecificationE
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchSpecificationRootBlockDevice
 {
     /// <summary></summary>
@@ -2026,6 +2131,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchSpecificationR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchSpecification
 {
     /// <summary></summary>
@@ -2110,6 +2216,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchSpecification
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfigLaunchTemplateSpecification
 {
     /// <summary>The ID of the launch template. Conflicts with name.</summary>
@@ -2126,6 +2233,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfigOverridesInstanceRequirementsAcceleratorCount
 {
     /// <summary>Maximum.</summary>
@@ -2138,6 +2246,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfigOverridesInstanceRequirementsAcceleratorTotalMemoryMib
 {
     /// <summary>Maximum.</summary>
@@ -2150,6 +2259,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfigOverridesInstanceRequirementsBaselineEbsBandwidthMbps
 {
     /// <summary>Maximum.</summary>
@@ -2162,6 +2272,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfigOverridesInstanceRequirementsMemoryGibPerVcpu
 {
     /// <summary>Maximum.</summary>
@@ -2174,6 +2285,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfigOverridesInstanceRequirementsMemoryMib
 {
     /// <summary>Maximum.</summary>
@@ -2186,6 +2298,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfigOverridesInstanceRequirementsNetworkBandwidthGbps
 {
     /// <summary>Maximum.</summary>
@@ -2198,6 +2311,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfigOverridesInstanceRequirementsNetworkInterfaceCount
 {
     /// <summary>Maximum.</summary>
@@ -2210,6 +2324,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfigOverridesInstanceRequirementsTotalLocalStorageGb
 {
     /// <summary>Maximum.</summary>
@@ -2222,6 +2337,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfigOverridesInstanceRequirementsVcpuCount
 {
     /// <summary>Maximum.</summary>
@@ -2234,6 +2350,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfigOverridesInstanceRequirements
 {
     /// <summary>Block describing the minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips). Default is no minimum or maximum.</summary>
@@ -2330,6 +2447,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfigOverrides
 {
     /// <summary>The availability zone in which to place the request.</summary>
@@ -2362,6 +2480,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfig
 {
     /// <summary>Launch template specification. See Launch Template Specification below for more details.</summary>
@@ -2374,6 +2493,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestStatusAtProviderSpotMaintenanceStrategiesCapacityRebalance
 {
     /// <summary>The replacement strategy to use. Only available for spot fleets with fleet_type set to maintain. Valid values: launch.</summary>
@@ -2382,6 +2502,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderSpotMaintenanceStrat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestStatusAtProviderSpotMaintenanceStrategies
 {
     /// <summary>Nested argument containing the capacity rebalance for your fleet request. Defined below.</summary>
@@ -2390,6 +2511,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderSpotMaintenanceStrat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestStatusAtProvider
 {
     /// <summary>Indicates how to allocate the target capacity across the Spot pools specified by the Spot fleet request. Valid values: lowestPrice, diversified, capacityOptimized, capacityOptimizedPrioritized, and priceCapacityOptimized. The default is lowestPrice.</summary>
@@ -2510,6 +2632,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2538,6 +2661,7 @@ public partial class V1beta1SpotFleetRequestStatusConditions
 }
 
 /// <summary>SpotFleetRequestStatus defines the observed state of SpotFleetRequest.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotFleetRequestStatus
 {
     /// <summary></summary>
@@ -2553,8 +2677,9 @@ public partial class V1beta1SpotFleetRequestStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>SpotFleetRequest is the Schema for the SpotFleetRequests API. Provides a Spot Fleet Request resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1SpotFleetRequest : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SpotFleetRequestSpec>, IStatus<V1beta1SpotFleetRequestStatus>
 {
     public const string KubeApiVersion = "v1beta1";

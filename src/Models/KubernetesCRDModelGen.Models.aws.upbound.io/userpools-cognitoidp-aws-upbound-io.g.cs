@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cognitoidp.aws.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1UserPoolSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderAccountRecoverySettingRecoveryMechanism
 {
     /// <summary>Name of the user pool.</summary>
@@ -31,6 +33,7 @@ public partial class V1beta1UserPoolSpecForProviderAccountRecoverySettingRecover
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderAccountRecoverySetting
 {
     /// <summary>List of Account Recovery Options of the following structure:</summary>
@@ -39,6 +42,7 @@ public partial class V1beta1UserPoolSpecForProviderAccountRecoverySetting
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderAdminCreateUserConfigInviteMessageTemplate
 {
     /// <summary>Message template for email messages. Must contain {username} and {####} placeholders, for username and temporary password, respectively.</summary>
@@ -55,6 +59,7 @@ public partial class V1beta1UserPoolSpecForProviderAdminCreateUserConfigInviteMe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderAdminCreateUserConfig
 {
     /// <summary>Set to True if only the administrator is allowed to create user profiles. Set to False if users can sign themselves up via an app.</summary>
@@ -67,6 +72,7 @@ public partial class V1beta1UserPoolSpecForProviderAdminCreateUserConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderDeviceConfiguration
 {
     /// <summary>Whether a challenge is required on a new device. Only applicable to a new device.</summary>
@@ -79,6 +85,7 @@ public partial class V1beta1UserPoolSpecForProviderDeviceConfiguration
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderEmailConfiguration
 {
     /// <summary>Email configuration set name from SES.</summary>
@@ -102,6 +109,7 @@ public partial class V1beta1UserPoolSpecForProviderEmailConfiguration
     public string? SourceArn { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallengeRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -112,6 +120,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallengeRefPoli
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallengeRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -123,6 +132,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallengeRefPoli
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallengeRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -137,6 +147,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallen
 }
 
 /// <summary>Reference to a Function in lambda to populate createAuthChallenge.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallengeRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -148,6 +159,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallen
     public V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallengeRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallengeSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -158,6 +170,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallengeSelecto
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallengeSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -169,6 +182,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallengeSelecto
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallengeSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -183,6 +197,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallen
 }
 
 /// <summary>Selector for a Function in lambda to populate createAuthChallenge.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallengeSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -198,6 +213,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallen
     public V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallengeSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSenderLambdaArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -208,6 +224,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSenderLambdaArn
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSenderLambdaArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -219,6 +236,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSenderLambdaArn
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSenderLambdaArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -233,6 +251,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSender
 }
 
 /// <summary>Reference to a Function in lambda to populate lambdaArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSenderLambdaArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -244,6 +263,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSender
     public V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSenderLambdaArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSenderLambdaArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -254,6 +274,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSenderLambdaArn
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSenderLambdaArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -265,6 +286,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSenderLambdaArn
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSenderLambdaArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +301,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSender
 }
 
 /// <summary>Selector for a Function in lambda to populate lambdaArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSenderLambdaArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -295,6 +318,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSender
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSender
 {
     /// <summary>The Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send email notifications to users.</summary>
@@ -314,6 +338,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSender
     public string? LambdaVersion { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -324,6 +349,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageRefPolicyReso
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -335,6 +361,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageRefPolicyReso
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -349,6 +376,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageRefP
 }
 
 /// <summary>Reference to a Function in lambda to populate customMessage.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -360,6 +388,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageRef
     public V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -370,6 +399,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageSelectorPolic
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -381,6 +411,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageSelectorPolic
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -395,6 +426,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageSele
 }
 
 /// <summary>Selector for a Function in lambda to populate customMessage.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -410,6 +442,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageSele
     public V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLambdaArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -420,6 +453,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLambdaArnRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLambdaArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -431,6 +465,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLambdaArnRe
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLambdaArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -445,6 +480,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLa
 }
 
 /// <summary>Reference to a Function in lambda to populate lambdaArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLambdaArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -456,6 +492,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLa
     public V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLambdaArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLambdaArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -466,6 +503,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLambdaArnSe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLambdaArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -477,6 +515,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLambdaArnSe
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLambdaArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -491,6 +530,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLa
 }
 
 /// <summary>Selector for a Function in lambda to populate lambdaArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLambdaArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -507,6 +547,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSender
 {
     /// <summary>The Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send SMS notifications to users.</summary>
@@ -526,6 +567,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSender
     public string? LambdaVersion { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallengeRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -536,6 +578,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallengeRefPoli
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallengeRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -547,6 +590,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallengeRefPoli
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallengeRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -561,6 +605,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallen
 }
 
 /// <summary>Reference to a Function in lambda to populate defineAuthChallenge.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallengeRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -572,6 +617,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallen
     public V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallengeRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallengeSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -582,6 +628,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallengeSelecto
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallengeSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -593,6 +640,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallengeSelecto
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallengeSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -607,6 +655,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallen
 }
 
 /// <summary>Selector for a Function in lambda to populate defineAuthChallenge.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallengeSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -622,6 +671,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallen
     public V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallengeSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -632,6 +682,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdRefPolicyResolutio
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -643,6 +694,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdRefPolicyResolveEn
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -657,6 +709,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdRefPolicy
 }
 
 /// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -668,6 +721,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdRef
     public V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -678,6 +732,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdSelectorPolicyReso
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -689,6 +744,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdSelectorPolicyReso
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -703,6 +759,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdSelectorP
 }
 
 /// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -718,6 +775,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdSelector
     public V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticationRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -728,6 +786,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticationRefPolic
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticationRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -739,6 +798,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticationRefPolic
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -753,6 +813,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticatio
 }
 
 /// <summary>Reference to a Function in lambda to populate postAuthentication.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -764,6 +825,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticatio
     public V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticationRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticationSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -774,6 +836,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticationSelector
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticationSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -785,6 +848,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticationSelector
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -799,6 +863,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticatio
 }
 
 /// <summary>Selector for a Function in lambda to populate postAuthentication.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -814,6 +879,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticatio
     public V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticationSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -824,6 +890,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationRefPolicyR
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -835,6 +902,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationRefPolicyR
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -849,6 +917,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationR
 }
 
 /// <summary>Reference to a Function in lambda to populate postConfirmation.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -860,6 +929,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationR
     public V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -870,6 +940,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationSelectorPo
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -881,6 +952,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationSelectorPo
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -895,6 +967,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationS
 }
 
 /// <summary>Selector for a Function in lambda to populate postConfirmation.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -910,6 +983,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationS
     public V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigPreAuthenticationRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -920,6 +994,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigPreAuthenticationRefPolicy
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigPreAuthenticationRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -931,6 +1006,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigPreAuthenticationRefPolicy
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreAuthenticationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -945,6 +1021,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreAuthentication
 }
 
 /// <summary>Reference to a Function in lambda to populate preAuthentication.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreAuthenticationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -956,6 +1033,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreAuthentication
     public V1beta1UserPoolSpecForProviderLambdaConfigPreAuthenticationRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigPreAuthenticationSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -966,6 +1044,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigPreAuthenticationSelectorP
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigPreAuthenticationSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -977,6 +1056,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigPreAuthenticationSelectorP
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreAuthenticationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -991,6 +1071,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreAuthentication
 }
 
 /// <summary>Selector for a Function in lambda to populate preAuthentication.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreAuthenticationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1006,6 +1087,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreAuthentication
     public V1beta1UserPoolSpecForProviderLambdaConfigPreAuthenticationSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1016,6 +1098,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpRefPolicyResoluti
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1027,6 +1110,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpRefPolicyResolveE
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1041,6 +1125,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpRefPolic
 }
 
 /// <summary>Reference to a Function in lambda to populate preSignUp.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1052,6 +1137,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpRef
     public V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1062,6 +1148,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpSelectorPolicyRes
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1073,6 +1160,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpSelectorPolicyRes
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1087,6 +1175,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpSelector
 }
 
 /// <summary>Selector for a Function in lambda to populate preSignUp.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1103,6 +1192,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGenerationConfig
 {
     /// <summary>The Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send SMS notifications to users.</summary>
@@ -1114,6 +1204,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGeneratio
     public string? LambdaVersion { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGenerationRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1124,6 +1215,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGenerationRefPolic
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGenerationRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1135,6 +1227,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGenerationRefPolic
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGenerationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1149,6 +1242,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGeneratio
 }
 
 /// <summary>Reference to a Function in lambda to populate preTokenGeneration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGenerationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1160,6 +1254,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGeneratio
     public V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGenerationRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGenerationSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1170,6 +1265,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGenerationSelector
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGenerationSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1181,6 +1277,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGenerationSelector
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGenerationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1195,6 +1292,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGeneratio
 }
 
 /// <summary>Selector for a Function in lambda to populate preTokenGeneration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGenerationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1210,6 +1308,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGeneratio
     public V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGenerationSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1220,6 +1319,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationRefPolicyReso
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1231,6 +1331,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationRefPolicyReso
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1245,6 +1346,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationRefP
 }
 
 /// <summary>Reference to a Function in lambda to populate userMigration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1256,6 +1358,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationRef
     public V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1266,6 +1369,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationSelectorPolic
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1277,6 +1381,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationSelectorPolic
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1291,6 +1396,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationSele
 }
 
 /// <summary>Selector for a Function in lambda to populate userMigration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1306,6 +1412,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationSele
     public V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallengeResponseRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1316,6 +1423,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallengeRespons
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallengeResponseRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1327,6 +1435,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallengeRespons
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallengeResponseRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1341,6 +1450,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallen
 }
 
 /// <summary>Reference to a Function in lambda to populate verifyAuthChallengeResponse.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallengeResponseRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1352,6 +1462,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallen
     public V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallengeResponseRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallengeResponseSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1362,6 +1473,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallengeRespons
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallengeResponseSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1373,6 +1485,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallengeRespons
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallengeResponseSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1387,6 +1500,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallen
 }
 
 /// <summary>Selector for a Function in lambda to populate verifyAuthChallengeResponse.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallengeResponseSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1403,6 +1517,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallen
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfig
 {
     /// <summary>ARN of the lambda creating an authentication challenge.</summary>
@@ -1551,6 +1666,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderPasswordPolicy
 {
     /// <summary>Minimum length of the password policy that you have set.</summary>
@@ -1579,6 +1695,7 @@ public partial class V1beta1UserPoolSpecForProviderPasswordPolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderSchemaNumberAttributeConstraints
 {
     /// <summary>Maximum value of an attribute that is of the number data type.</summary>
@@ -1591,6 +1708,7 @@ public partial class V1beta1UserPoolSpecForProviderSchemaNumberAttributeConstrai
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderSchemaStringAttributeConstraints
 {
     /// <summary>Maximum length of an attribute value of the string type.</summary>
@@ -1603,6 +1721,7 @@ public partial class V1beta1UserPoolSpecForProviderSchemaStringAttributeConstrai
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderSchema
 {
     /// <summary>Attribute data type. Must be one of Boolean, Number, String, DateTime.</summary>
@@ -1634,6 +1753,7 @@ public partial class V1beta1UserPoolSpecForProviderSchema
     public IList<V1beta1UserPoolSpecForProviderSchemaStringAttributeConstraints>? StringAttributeConstraints { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1644,6 +1764,7 @@ public enum V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnRefPolicyR
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1655,6 +1776,7 @@ public enum V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnRefPolicyR
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1669,6 +1791,7 @@ public partial class V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnR
 }
 
 /// <summary>Reference to a Role in iam to populate snsCallerArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1680,6 +1803,7 @@ public partial class V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnR
     public V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1690,6 +1814,7 @@ public enum V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnSelectorPo
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1701,6 +1826,7 @@ public enum V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnSelectorPo
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1715,6 +1841,7 @@ public partial class V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnS
 }
 
 /// <summary>Selector for a Role in iam to populate snsCallerArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1731,6 +1858,7 @@ public partial class V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderSmsConfiguration
 {
     /// <summary>External ID used in IAM role trust relationships. For more information about using external IDs, see How to Use an External ID When Granting Access to Your AWS Resources to a Third Party.</summary>
@@ -1755,6 +1883,7 @@ public partial class V1beta1UserPoolSpecForProviderSmsConfiguration
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderSoftwareTokenMfaConfiguration
 {
     /// <summary>Boolean whether to enable software token Multi-Factor (MFA) tokens, such as Time-based One-Time Password (TOTP). To disable software token MFA When sms_configuration is not present, the mfa_configuration argument must be set to OFF and the software_token_mfa_configuration configuration block must be fully removed.</summary>
@@ -1763,6 +1892,7 @@ public partial class V1beta1UserPoolSpecForProviderSoftwareTokenMfaConfiguration
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderUserAttributeUpdateSettings
 {
     /// <summary>A list of attributes requiring verification before update. If set, the provided value(s) must also be set in auto_verified_attributes. Valid values: email, phone_number.</summary>
@@ -1771,6 +1901,7 @@ public partial class V1beta1UserPoolSpecForProviderUserAttributeUpdateSettings
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderUserPoolAddOns
 {
     /// <summary>Mode for advanced security, must be one of OFF, AUDIT or ENFORCED.</summary>
@@ -1779,6 +1910,7 @@ public partial class V1beta1UserPoolSpecForProviderUserPoolAddOns
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderUsernameConfiguration
 {
     /// <summary>Whether username case sensitivity will be applied for all users in the user pool through Cognito APIs.</summary>
@@ -1787,6 +1919,7 @@ public partial class V1beta1UserPoolSpecForProviderUsernameConfiguration
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderVerificationMessageTemplate
 {
     /// <summary>Default email option. Must be either CONFIRM_WITH_CODE or CONFIRM_WITH_LINK. Defaults to CONFIRM_WITH_CODE.</summary>
@@ -1815,6 +1948,7 @@ public partial class V1beta1UserPoolSpecForProviderVerificationMessageTemplate
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProvider
 {
     /// <summary>Configuration block to define which verified available method a user can use to recover their forgotten password. Detailed below.</summary>
@@ -1919,6 +2053,7 @@ public partial class V1beta1UserPoolSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderAccountRecoverySettingRecoveryMechanism
 {
     /// <summary>Name of the user pool.</summary>
@@ -1931,6 +2066,7 @@ public partial class V1beta1UserPoolSpecInitProviderAccountRecoverySettingRecove
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderAccountRecoverySetting
 {
     /// <summary>List of Account Recovery Options of the following structure:</summary>
@@ -1939,6 +2075,7 @@ public partial class V1beta1UserPoolSpecInitProviderAccountRecoverySetting
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderAdminCreateUserConfigInviteMessageTemplate
 {
     /// <summary>Message template for email messages. Must contain {username} and {####} placeholders, for username and temporary password, respectively.</summary>
@@ -1955,6 +2092,7 @@ public partial class V1beta1UserPoolSpecInitProviderAdminCreateUserConfigInviteM
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderAdminCreateUserConfig
 {
     /// <summary>Set to True if only the administrator is allowed to create user profiles. Set to False if users can sign themselves up via an app.</summary>
@@ -1967,6 +2105,7 @@ public partial class V1beta1UserPoolSpecInitProviderAdminCreateUserConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderDeviceConfiguration
 {
     /// <summary>Whether a challenge is required on a new device. Only applicable to a new device.</summary>
@@ -1979,6 +2118,7 @@ public partial class V1beta1UserPoolSpecInitProviderDeviceConfiguration
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderEmailConfiguration
 {
     /// <summary>Email configuration set name from SES.</summary>
@@ -2002,6 +2142,7 @@ public partial class V1beta1UserPoolSpecInitProviderEmailConfiguration
     public string? SourceArn { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChallengeRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2012,6 +2153,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChallengeRefPol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChallengeRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2023,6 +2165,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChallengeRefPol
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChallengeRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2037,6 +2180,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChalle
 }
 
 /// <summary>Reference to a Function in lambda to populate createAuthChallenge.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChallengeRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2048,6 +2192,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChalle
     public V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChallengeRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChallengeSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2058,6 +2203,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChallengeSelect
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChallengeSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2069,6 +2215,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChallengeSelect
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChallengeSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2083,6 +2230,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChalle
 }
 
 /// <summary>Selector for a Function in lambda to populate createAuthChallenge.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChallengeSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2098,6 +2246,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChalle
     public V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChallengeSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSenderLambdaArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2108,6 +2257,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSenderLambdaAr
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSenderLambdaArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2119,6 +2269,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSenderLambdaAr
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSenderLambdaArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2133,6 +2284,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSende
 }
 
 /// <summary>Reference to a Function in lambda to populate lambdaArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSenderLambdaArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2144,6 +2296,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSende
     public V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSenderLambdaArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSenderLambdaArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2154,6 +2307,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSenderLambdaAr
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSenderLambdaArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2165,6 +2319,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSenderLambdaAr
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSenderLambdaArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2179,6 +2334,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSende
 }
 
 /// <summary>Selector for a Function in lambda to populate lambdaArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSenderLambdaArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2195,6 +2351,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSende
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSender
 {
     /// <summary>The Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send email notifications to users.</summary>
@@ -2214,6 +2371,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSende
     public string? LambdaVersion { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2224,6 +2382,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageRefPolicyRes
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2235,6 +2394,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageRefPolicyRes
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2249,6 +2409,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageRef
 }
 
 /// <summary>Reference to a Function in lambda to populate customMessage.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2260,6 +2421,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageRef
     public V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2270,6 +2432,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageSelectorPoli
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2281,6 +2444,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageSelectorPoli
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2295,6 +2459,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageSel
 }
 
 /// <summary>Selector for a Function in lambda to populate customMessage.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2310,6 +2475,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageSel
     public V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderLambdaArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2320,6 +2486,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderLambdaArnR
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderLambdaArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2331,6 +2498,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderLambdaArnR
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderLambdaArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2345,6 +2513,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderL
 }
 
 /// <summary>Reference to a Function in lambda to populate lambdaArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderLambdaArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2356,6 +2525,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderL
     public V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderLambdaArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderLambdaArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2366,6 +2536,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderLambdaArnS
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderLambdaArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2377,6 +2548,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderLambdaArnS
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderLambdaArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2391,6 +2563,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderL
 }
 
 /// <summary>Selector for a Function in lambda to populate lambdaArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderLambdaArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2407,6 +2580,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderL
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSender
 {
     /// <summary>The Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send SMS notifications to users.</summary>
@@ -2426,6 +2600,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSender
     public string? LambdaVersion { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChallengeRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2436,6 +2611,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChallengeRefPol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChallengeRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2447,6 +2623,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChallengeRefPol
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChallengeRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2461,6 +2638,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChalle
 }
 
 /// <summary>Reference to a Function in lambda to populate defineAuthChallenge.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChallengeRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2472,6 +2650,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChalle
     public V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChallengeRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChallengeSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2482,6 +2661,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChallengeSelect
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChallengeSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2493,6 +2673,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChallengeSelect
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChallengeSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2507,6 +2688,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChalle
 }
 
 /// <summary>Selector for a Function in lambda to populate defineAuthChallenge.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChallengeSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2522,6 +2704,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChalle
     public V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChallengeSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2532,6 +2715,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdRefPolicyResoluti
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2543,6 +2727,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdRefPolicyResolveE
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2557,6 +2742,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdRefPolic
 }
 
 /// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2568,6 +2754,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdRef
     public V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2578,6 +2765,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdSelectorPolicyRes
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2589,6 +2777,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdSelectorPolicyRes
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2603,6 +2792,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdSelector
 }
 
 /// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2618,6 +2808,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdSelector
     public V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticationRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2628,6 +2819,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticationRefPoli
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticationRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2639,6 +2831,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticationRefPoli
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2653,6 +2846,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticati
 }
 
 /// <summary>Reference to a Function in lambda to populate postAuthentication.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2664,6 +2858,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticati
     public V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticationRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticationSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2674,6 +2869,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticationSelecto
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticationSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2685,6 +2881,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticationSelecto
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2699,6 +2896,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticati
 }
 
 /// <summary>Selector for a Function in lambda to populate postAuthentication.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2714,6 +2912,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticati
     public V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticationSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmationRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2724,6 +2923,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmationRefPolicy
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmationRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2735,6 +2935,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmationRefPolicy
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2749,6 +2950,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmation
 }
 
 /// <summary>Reference to a Function in lambda to populate postConfirmation.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2760,6 +2962,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmation
     public V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmationRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmationSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2770,6 +2973,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmationSelectorP
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmationSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2781,6 +2985,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmationSelectorP
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2795,6 +3000,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmation
 }
 
 /// <summary>Selector for a Function in lambda to populate postConfirmation.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2810,6 +3016,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmation
     public V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmationSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticationRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2820,6 +3027,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticationRefPolic
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticationRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2831,6 +3039,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticationRefPolic
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2845,6 +3054,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticatio
 }
 
 /// <summary>Reference to a Function in lambda to populate preAuthentication.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2856,6 +3066,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticatio
     public V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticationRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticationSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2866,6 +3077,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticationSelector
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticationSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2877,6 +3089,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticationSelector
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2891,6 +3104,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticatio
 }
 
 /// <summary>Selector for a Function in lambda to populate preAuthentication.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2906,6 +3120,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticatio
     public V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticationSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2916,6 +3131,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpRefPolicyResolut
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2927,6 +3143,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpRefPolicyResolve
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2941,6 +3158,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpRefPoli
 }
 
 /// <summary>Reference to a Function in lambda to populate preSignUp.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2952,6 +3170,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpRef
     public V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2962,6 +3181,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpSelectorPolicyRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2973,6 +3193,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpSelectorPolicyRe
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2987,6 +3208,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpSelecto
 }
 
 /// <summary>Selector for a Function in lambda to populate preSignUp.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -3003,6 +3225,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpSelecto
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerationConfig
 {
     /// <summary>The Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send SMS notifications to users.</summary>
@@ -3014,6 +3237,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerati
     public string? LambdaVersion { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerationRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -3024,6 +3248,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerationRefPoli
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerationRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -3035,6 +3260,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerationRefPoli
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3049,6 +3275,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerati
 }
 
 /// <summary>Reference to a Function in lambda to populate preTokenGeneration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3060,6 +3287,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerati
     public V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerationRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerationSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -3070,6 +3298,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerationSelecto
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerationSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -3081,6 +3310,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerationSelecto
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3095,6 +3325,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerati
 }
 
 /// <summary>Selector for a Function in lambda to populate preTokenGeneration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -3110,6 +3341,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerati
     public V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerationSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -3120,6 +3352,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationRefPolicyRes
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -3131,6 +3364,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationRefPolicyRes
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3145,6 +3379,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationRef
 }
 
 /// <summary>Reference to a Function in lambda to populate userMigration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3156,6 +3391,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationRef
     public V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -3166,6 +3402,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationSelectorPoli
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -3177,6 +3414,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationSelectorPoli
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3191,6 +3429,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationSel
 }
 
 /// <summary>Selector for a Function in lambda to populate userMigration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -3206,6 +3445,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationSel
     public V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChallengeResponseRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -3216,6 +3456,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChallengeRespon
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChallengeResponseRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -3227,6 +3468,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChallengeRespon
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChallengeResponseRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3241,6 +3483,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChalle
 }
 
 /// <summary>Reference to a Function in lambda to populate verifyAuthChallengeResponse.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChallengeResponseRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3252,6 +3495,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChalle
     public V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChallengeResponseRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChallengeResponseSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -3262,6 +3506,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChallengeRespon
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChallengeResponseSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -3273,6 +3518,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChallengeRespon
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChallengeResponseSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3287,6 +3533,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChalle
 }
 
 /// <summary>Selector for a Function in lambda to populate verifyAuthChallengeResponse.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChallengeResponseSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -3303,6 +3550,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChalle
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfig
 {
     /// <summary>ARN of the lambda creating an authentication challenge.</summary>
@@ -3451,6 +3699,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderPasswordPolicy
 {
     /// <summary>Minimum length of the password policy that you have set.</summary>
@@ -3479,6 +3728,7 @@ public partial class V1beta1UserPoolSpecInitProviderPasswordPolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderSchemaNumberAttributeConstraints
 {
     /// <summary>Maximum value of an attribute that is of the number data type.</summary>
@@ -3491,6 +3741,7 @@ public partial class V1beta1UserPoolSpecInitProviderSchemaNumberAttributeConstra
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderSchemaStringAttributeConstraints
 {
     /// <summary>Maximum length of an attribute value of the string type.</summary>
@@ -3503,6 +3754,7 @@ public partial class V1beta1UserPoolSpecInitProviderSchemaStringAttributeConstra
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderSchema
 {
     /// <summary>Attribute data type. Must be one of Boolean, Number, String, DateTime.</summary>
@@ -3534,6 +3786,7 @@ public partial class V1beta1UserPoolSpecInitProviderSchema
     public IList<V1beta1UserPoolSpecInitProviderSchemaStringAttributeConstraints>? StringAttributeConstraints { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -3544,6 +3797,7 @@ public enum V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArnRefPolicy
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -3555,6 +3809,7 @@ public enum V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArnRefPolicy
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3569,6 +3824,7 @@ public partial class V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArn
 }
 
 /// <summary>Reference to a Role in iam to populate snsCallerArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3580,6 +3836,7 @@ public partial class V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArn
     public V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -3590,6 +3847,7 @@ public enum V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArnSelectorP
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -3601,6 +3859,7 @@ public enum V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArnSelectorP
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3615,6 +3874,7 @@ public partial class V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArn
 }
 
 /// <summary>Selector for a Role in iam to populate snsCallerArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -3631,6 +3891,7 @@ public partial class V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderSmsConfiguration
 {
     /// <summary>External ID used in IAM role trust relationships. For more information about using external IDs, see How to Use an External ID When Granting Access to Your AWS Resources to a Third Party.</summary>
@@ -3655,6 +3916,7 @@ public partial class V1beta1UserPoolSpecInitProviderSmsConfiguration
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderSoftwareTokenMfaConfiguration
 {
     /// <summary>Boolean whether to enable software token Multi-Factor (MFA) tokens, such as Time-based One-Time Password (TOTP). To disable software token MFA When sms_configuration is not present, the mfa_configuration argument must be set to OFF and the software_token_mfa_configuration configuration block must be fully removed.</summary>
@@ -3663,6 +3925,7 @@ public partial class V1beta1UserPoolSpecInitProviderSoftwareTokenMfaConfiguratio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderUserAttributeUpdateSettings
 {
     /// <summary>A list of attributes requiring verification before update. If set, the provided value(s) must also be set in auto_verified_attributes. Valid values: email, phone_number.</summary>
@@ -3671,6 +3934,7 @@ public partial class V1beta1UserPoolSpecInitProviderUserAttributeUpdateSettings
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderUserPoolAddOns
 {
     /// <summary>Mode for advanced security, must be one of OFF, AUDIT or ENFORCED.</summary>
@@ -3679,6 +3943,7 @@ public partial class V1beta1UserPoolSpecInitProviderUserPoolAddOns
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderUsernameConfiguration
 {
     /// <summary>Whether username case sensitivity will be applied for all users in the user pool through Cognito APIs.</summary>
@@ -3687,6 +3952,7 @@ public partial class V1beta1UserPoolSpecInitProviderUsernameConfiguration
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderVerificationMessageTemplate
 {
     /// <summary>Default email option. Must be either CONFIRM_WITH_CODE or CONFIRM_WITH_LINK. Defaults to CONFIRM_WITH_CODE.</summary>
@@ -3715,6 +3981,7 @@ public partial class V1beta1UserPoolSpecInitProviderVerificationMessageTemplate
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProvider
 {
     /// <summary>Configuration block to define which verified available method a user can use to recover their forgotten password. Detailed below.</summary>
@@ -3814,6 +4081,7 @@ public partial class V1beta1UserPoolSpecInitProvider
     public IList<V1beta1UserPoolSpecInitProviderVerificationMessageTemplate>? VerificationMessageTemplate { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -3836,6 +4104,7 @@ public enum V1beta1UserPoolSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -3846,6 +4115,7 @@ public enum V1beta1UserPoolSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -3857,6 +4127,7 @@ public enum V1beta1UserPoolSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3871,6 +4142,7 @@ public partial class V1beta1UserPoolSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3882,6 +4154,7 @@ public partial class V1beta1UserPoolSpecProviderConfigRef
     public V1beta1UserPoolSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -3892,6 +4165,7 @@ public enum V1beta1UserPoolSpecPublishConnectionDetailsToConfigRefPolicyResoluti
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1UserPoolSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -3903,6 +4177,7 @@ public enum V1beta1UserPoolSpecPublishConnectionDetailsToConfigRefPolicyResolveE
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3917,6 +4192,7 @@ public partial class V1beta1UserPoolSpecPublishConnectionDetailsToConfigRefPolic
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3929,6 +4205,7 @@ public partial class V1beta1UserPoolSpecPublishConnectionDetailsToConfigRef
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -3945,6 +4222,7 @@ public partial class V1beta1UserPoolSpecPublishConnectionDetailsToMetadata
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -3961,6 +4239,7 @@ public partial class V1beta1UserPoolSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -3973,6 +4252,7 @@ public partial class V1beta1UserPoolSpecWriteConnectionSecretToRef
 }
 
 /// <summary>UserPoolSpec defines the desired state of UserPool</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -4006,6 +4286,7 @@ public partial class V1beta1UserPoolSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderAccountRecoverySettingRecoveryMechanism
 {
     /// <summary>Name of the user pool.</summary>
@@ -4018,6 +4299,7 @@ public partial class V1beta1UserPoolStatusAtProviderAccountRecoverySettingRecove
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderAccountRecoverySetting
 {
     /// <summary>List of Account Recovery Options of the following structure:</summary>
@@ -4026,6 +4308,7 @@ public partial class V1beta1UserPoolStatusAtProviderAccountRecoverySetting
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderAdminCreateUserConfigInviteMessageTemplate
 {
     /// <summary>Message template for email messages. Must contain {username} and {####} placeholders, for username and temporary password, respectively.</summary>
@@ -4042,6 +4325,7 @@ public partial class V1beta1UserPoolStatusAtProviderAdminCreateUserConfigInviteM
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderAdminCreateUserConfig
 {
     /// <summary>Set to True if only the administrator is allowed to create user profiles. Set to False if users can sign themselves up via an app.</summary>
@@ -4054,6 +4338,7 @@ public partial class V1beta1UserPoolStatusAtProviderAdminCreateUserConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderDeviceConfiguration
 {
     /// <summary>Whether a challenge is required on a new device. Only applicable to a new device.</summary>
@@ -4066,6 +4351,7 @@ public partial class V1beta1UserPoolStatusAtProviderDeviceConfiguration
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderEmailConfiguration
 {
     /// <summary>Email configuration set name from SES.</summary>
@@ -4090,6 +4376,7 @@ public partial class V1beta1UserPoolStatusAtProviderEmailConfiguration
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderLambdaConfigCustomEmailSender
 {
     /// <summary>The Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send email notifications to users.</summary>
@@ -4102,6 +4389,7 @@ public partial class V1beta1UserPoolStatusAtProviderLambdaConfigCustomEmailSende
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderLambdaConfigCustomSmsSender
 {
     /// <summary>The Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send SMS notifications to users.</summary>
@@ -4114,6 +4402,7 @@ public partial class V1beta1UserPoolStatusAtProviderLambdaConfigCustomSmsSender
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderLambdaConfigPreTokenGenerationConfig
 {
     /// <summary>The Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send SMS notifications to users.</summary>
@@ -4126,6 +4415,7 @@ public partial class V1beta1UserPoolStatusAtProviderLambdaConfigPreTokenGenerati
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderLambdaConfig
 {
     /// <summary>ARN of the lambda creating an authentication challenge.</summary>
@@ -4186,6 +4476,7 @@ public partial class V1beta1UserPoolStatusAtProviderLambdaConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderPasswordPolicy
 {
     /// <summary>Minimum length of the password policy that you have set.</summary>
@@ -4214,6 +4505,7 @@ public partial class V1beta1UserPoolStatusAtProviderPasswordPolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderSchemaNumberAttributeConstraints
 {
     /// <summary>Maximum value of an attribute that is of the number data type.</summary>
@@ -4226,6 +4518,7 @@ public partial class V1beta1UserPoolStatusAtProviderSchemaNumberAttributeConstra
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderSchemaStringAttributeConstraints
 {
     /// <summary>Maximum length of an attribute value of the string type.</summary>
@@ -4238,6 +4531,7 @@ public partial class V1beta1UserPoolStatusAtProviderSchemaStringAttributeConstra
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderSchema
 {
     /// <summary>Attribute data type. Must be one of Boolean, Number, String, DateTime.</summary>
@@ -4270,6 +4564,7 @@ public partial class V1beta1UserPoolStatusAtProviderSchema
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderSmsConfiguration
 {
     /// <summary>External ID used in IAM role trust relationships. For more information about using external IDs, see How to Use an External ID When Granting Access to Your AWS Resources to a Third Party.</summary>
@@ -4286,6 +4581,7 @@ public partial class V1beta1UserPoolStatusAtProviderSmsConfiguration
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderSoftwareTokenMfaConfiguration
 {
     /// <summary>Boolean whether to enable software token Multi-Factor (MFA) tokens, such as Time-based One-Time Password (TOTP). To disable software token MFA When sms_configuration is not present, the mfa_configuration argument must be set to OFF and the software_token_mfa_configuration configuration block must be fully removed.</summary>
@@ -4294,6 +4590,7 @@ public partial class V1beta1UserPoolStatusAtProviderSoftwareTokenMfaConfiguratio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderUserAttributeUpdateSettings
 {
     /// <summary>A list of attributes requiring verification before update. If set, the provided value(s) must also be set in auto_verified_attributes. Valid values: email, phone_number.</summary>
@@ -4302,6 +4599,7 @@ public partial class V1beta1UserPoolStatusAtProviderUserAttributeUpdateSettings
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderUserPoolAddOns
 {
     /// <summary>Mode for advanced security, must be one of OFF, AUDIT or ENFORCED.</summary>
@@ -4310,6 +4608,7 @@ public partial class V1beta1UserPoolStatusAtProviderUserPoolAddOns
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderUsernameConfiguration
 {
     /// <summary>Whether username case sensitivity will be applied for all users in the user pool through Cognito APIs.</summary>
@@ -4318,6 +4617,7 @@ public partial class V1beta1UserPoolStatusAtProviderUsernameConfiguration
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderVerificationMessageTemplate
 {
     /// <summary>Default email option. Must be either CONFIRM_WITH_CODE or CONFIRM_WITH_LINK. Defaults to CONFIRM_WITH_CODE.</summary>
@@ -4346,6 +4646,7 @@ public partial class V1beta1UserPoolStatusAtProviderVerificationMessageTemplate
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProvider
 {
     /// <summary>Configuration block to define which verified available method a user can use to recover their forgotten password. Detailed below.</summary>
@@ -4482,6 +4783,7 @@ public partial class V1beta1UserPoolStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -4510,6 +4812,7 @@ public partial class V1beta1UserPoolStatusConditions
 }
 
 /// <summary>UserPoolStatus defines the observed state of UserPool.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatus
 {
     /// <summary></summary>
@@ -4525,8 +4828,9 @@ public partial class V1beta1UserPoolStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>UserPool is the Schema for the UserPools API. Provides a Cognito User Pool resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1UserPool : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1UserPoolSpec>, IStatus<V1beta1UserPoolStatus>
 {
     public const string KubeApiVersion = "v1beta1";

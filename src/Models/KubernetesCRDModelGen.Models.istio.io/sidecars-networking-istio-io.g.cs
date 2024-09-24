@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networking.istio.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SidecarSpecEgressCaptureModeEnum
 {
     [EnumMember(Value = "DEFAULT"), JsonStringEnumMemberName("DEFAULT")]
@@ -22,6 +23,7 @@ public enum V1beta1SidecarSpecEgressCaptureModeEnum
 }
 
 /// <summary>The port associated with the listener.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SidecarSpecEgressPort
 {
     /// <summary>Label assigned to the port.</summary>
@@ -42,6 +44,7 @@ public partial class V1beta1SidecarSpecEgressPort
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SidecarSpecEgress
 {
     /// <summary>The IP(IPv4 or IPv6) or the Unix domain socket to which the listener should be bound to.</summary>
@@ -62,6 +65,7 @@ public partial class V1beta1SidecarSpecEgress
     public V1beta1SidecarSpecEgressPort? Port { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SidecarSpecInboundConnectionPoolHttpH2UpgradePolicyEnum
 {
     [EnumMember(Value = "DEFAULT"), JsonStringEnumMemberName("DEFAULT")]
@@ -76,6 +80,7 @@ public enum V1beta1SidecarSpecInboundConnectionPoolHttpH2UpgradePolicyEnum
 }
 
 /// <summary>HTTP connection pool settings.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SidecarSpecInboundConnectionPoolHttp
 {
     /// <summary>Specify if http1.1 connection should be upgraded to http2 for the associated destination.  Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE</summary>
@@ -113,6 +118,7 @@ public partial class V1beta1SidecarSpecInboundConnectionPoolHttp
 }
 
 /// <summary>If set then set SO_KEEPALIVE on the socket to enable TCP Keepalives.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SidecarSpecInboundConnectionPoolTcpTcpKeepalive
 {
     /// <summary>The time duration between keep-alive probes.</summary>
@@ -129,6 +135,7 @@ public partial class V1beta1SidecarSpecInboundConnectionPoolTcpTcpKeepalive
 }
 
 /// <summary>Settings common to both HTTP and TCP upstream connections.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SidecarSpecInboundConnectionPoolTcp
 {
     /// <summary>TCP connection timeout.</summary>
@@ -153,6 +160,7 @@ public partial class V1beta1SidecarSpecInboundConnectionPoolTcp
 }
 
 /// <summary>Settings controlling the volume of connections Envoy will accept from the network.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SidecarSpecInboundConnectionPool
 {
     /// <summary>HTTP connection pool settings.</summary>
@@ -164,6 +172,7 @@ public partial class V1beta1SidecarSpecInboundConnectionPool
     public V1beta1SidecarSpecInboundConnectionPoolTcp? Tcp { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SidecarSpecIngressCaptureModeEnum
 {
     [EnumMember(Value = "DEFAULT"), JsonStringEnumMemberName("DEFAULT")]
@@ -177,6 +186,7 @@ public enum V1beta1SidecarSpecIngressCaptureModeEnum
     NONE
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SidecarSpecIngressConnectionPoolHttpH2UpgradePolicyEnum
 {
     [EnumMember(Value = "DEFAULT"), JsonStringEnumMemberName("DEFAULT")]
@@ -191,6 +201,7 @@ public enum V1beta1SidecarSpecIngressConnectionPoolHttpH2UpgradePolicyEnum
 }
 
 /// <summary>HTTP connection pool settings.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SidecarSpecIngressConnectionPoolHttp
 {
     /// <summary>Specify if http1.1 connection should be upgraded to http2 for the associated destination.  Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE</summary>
@@ -228,6 +239,7 @@ public partial class V1beta1SidecarSpecIngressConnectionPoolHttp
 }
 
 /// <summary>If set then set SO_KEEPALIVE on the socket to enable TCP Keepalives.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SidecarSpecIngressConnectionPoolTcpTcpKeepalive
 {
     /// <summary>The time duration between keep-alive probes.</summary>
@@ -244,6 +256,7 @@ public partial class V1beta1SidecarSpecIngressConnectionPoolTcpTcpKeepalive
 }
 
 /// <summary>Settings common to both HTTP and TCP upstream connections.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SidecarSpecIngressConnectionPoolTcp
 {
     /// <summary>TCP connection timeout.</summary>
@@ -268,6 +281,7 @@ public partial class V1beta1SidecarSpecIngressConnectionPoolTcp
 }
 
 /// <summary>Settings controlling the volume of connections Envoy will accept from the network.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SidecarSpecIngressConnectionPool
 {
     /// <summary>HTTP connection pool settings.</summary>
@@ -280,6 +294,7 @@ public partial class V1beta1SidecarSpecIngressConnectionPool
 }
 
 /// <summary>The port associated with the listener.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SidecarSpecIngressPort
 {
     /// <summary>Label assigned to the port.</summary>
@@ -299,6 +314,7 @@ public partial class V1beta1SidecarSpecIngressPort
     public int? TargetPort { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SidecarSpecIngressTlsMaxProtocolVersionEnum
 {
     [EnumMember(Value = "TLS_AUTO"), JsonStringEnumMemberName("TLS_AUTO")]
@@ -318,6 +334,7 @@ public enum V1beta1SidecarSpecIngressTlsMaxProtocolVersionEnum
     TLSV13
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SidecarSpecIngressTlsMinProtocolVersionEnum
 {
     [EnumMember(Value = "TLS_AUTO"), JsonStringEnumMemberName("TLS_AUTO")]
@@ -337,6 +354,7 @@ public enum V1beta1SidecarSpecIngressTlsMinProtocolVersionEnum
     TLSV13
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SidecarSpecIngressTlsModeEnum
 {
     [EnumMember(Value = "PASSTHROUGH"), JsonStringEnumMemberName("PASSTHROUGH")]
@@ -360,6 +378,7 @@ public enum V1beta1SidecarSpecIngressTlsModeEnum
 }
 
 /// <summary>Set of TLS related options that will enable TLS termination on the sidecar for requests originating from outside the mesh.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SidecarSpecIngressTls
 {
     /// <summary>REQUIRED if mode is `MUTUAL` or `OPTIONAL_MUTUAL`.</summary>
@@ -419,6 +438,7 @@ public partial class V1beta1SidecarSpecIngressTls
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SidecarSpecIngress
 {
     /// <summary>The IP(IPv4 or IPv6) to which the listener should be bound.</summary>
@@ -448,6 +468,7 @@ public partial class V1beta1SidecarSpecIngress
 }
 
 /// <summary>Specifies the port on the host that is being addressed.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SidecarSpecOutboundTrafficPolicyEgressProxyPort
 {
     /// <summary></summary>
@@ -456,6 +477,7 @@ public partial class V1beta1SidecarSpecOutboundTrafficPolicyEgressProxyPort
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SidecarSpecOutboundTrafficPolicyEgressProxy
 {
     /// <summary>The name of a service from the service registry.</summary>
@@ -471,6 +493,7 @@ public partial class V1beta1SidecarSpecOutboundTrafficPolicyEgressProxy
     public string? Subset { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SidecarSpecOutboundTrafficPolicyModeEnum
 {
     [EnumMember(Value = "REGISTRY_ONLY"), JsonStringEnumMemberName("REGISTRY_ONLY")]
@@ -482,6 +505,7 @@ public enum V1beta1SidecarSpecOutboundTrafficPolicyModeEnum
 }
 
 /// <summary>Configuration for the outbound traffic policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SidecarSpecOutboundTrafficPolicy
 {
     /// <summary></summary>
@@ -495,6 +519,7 @@ public partial class V1beta1SidecarSpecOutboundTrafficPolicy
 }
 
 /// <summary>Criteria used to select the specific set of pods/VMs on which this `Sidecar` configuration should be applied.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SidecarSpecWorkloadSelector
 {
     /// <summary>One or more labels that indicate a specific set of pods/VMs on which the configuration should be applied.</summary>
@@ -503,6 +528,7 @@ public partial class V1beta1SidecarSpecWorkloadSelector
 }
 
 /// <summary>Configuration affecting network reachability of a sidecar. See more details at: https://istio.io/docs/reference/config/networking/sidecar.html</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SidecarSpec
 {
     /// <summary>Egress specifies the configuration of the sidecar for processing outbound traffic from the attached workload instance to other services in the mesh.</summary>
@@ -526,8 +552,9 @@ public partial class V1beta1SidecarSpec
     public V1beta1SidecarSpecWorkloadSelector? WorkloadSelector { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Sidecar : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SidecarSpec>, IStatus<JsonNode>
 {
     public const string KubeApiVersion = "v1beta1";

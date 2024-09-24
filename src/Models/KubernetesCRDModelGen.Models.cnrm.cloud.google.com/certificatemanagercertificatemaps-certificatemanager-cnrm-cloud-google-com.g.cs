@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.certificatemanager.cnrm.cloud.google.com;
 /// <summary>The project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CertificateManagerCertificateMapSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1alpha1CertificateManagerCertificateMapSpecProjectRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CertificateManagerCertificateMapSpec
 {
     /// <summary>A human-readable description of the resource.</summary>
@@ -41,6 +43,7 @@ public partial class V1alpha1CertificateManagerCertificateMapSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CertificateManagerCertificateMapStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -65,6 +68,7 @@ public partial class V1alpha1CertificateManagerCertificateMapStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CertificateManagerCertificateMapStatusGclbTargetsIpConfigs
 {
     /// <summary>An external IP address.</summary>
@@ -77,6 +81,7 @@ public partial class V1alpha1CertificateManagerCertificateMapStatusGclbTargetsIp
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CertificateManagerCertificateMapStatusGclbTargets
 {
     /// <summary>An IP configuration where this Certificate Map is serving.</summary>
@@ -93,6 +98,7 @@ public partial class V1alpha1CertificateManagerCertificateMapStatusGclbTargets
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CertificateManagerCertificateMapStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -116,8 +122,9 @@ public partial class V1alpha1CertificateManagerCertificateMapStatus
     public string? UpdateTime { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1CertificateManagerCertificateMap : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1CertificateManagerCertificateMapSpec>, IStatus<V1alpha1CertificateManagerCertificateMapStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

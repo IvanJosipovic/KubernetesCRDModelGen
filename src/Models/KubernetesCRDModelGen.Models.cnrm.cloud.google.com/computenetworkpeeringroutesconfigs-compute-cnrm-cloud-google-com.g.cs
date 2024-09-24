@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkPeeringRoutesConfigSpecNetworkRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeNetwork` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1alpha1ComputeNetworkPeeringRoutesConfigSpecNetworkRef
 }
 
 /// <summary>The project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkPeeringRoutesConfigSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -41,6 +43,7 @@ public partial class V1alpha1ComputeNetworkPeeringRoutesConfigSpecProjectRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkPeeringRoutesConfigSpec
 {
     /// <summary>Whether to export the custom routes to the peer network.</summary>
@@ -65,6 +68,7 @@ public partial class V1alpha1ComputeNetworkPeeringRoutesConfigSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkPeeringRoutesConfigStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -89,6 +93,7 @@ public partial class V1alpha1ComputeNetworkPeeringRoutesConfigStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkPeeringRoutesConfigStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -100,8 +105,9 @@ public partial class V1alpha1ComputeNetworkPeeringRoutesConfigStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1ComputeNetworkPeeringRoutesConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputeNetworkPeeringRoutesConfigSpec>, IStatus<V1alpha1ComputeNetworkPeeringRoutesConfigStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

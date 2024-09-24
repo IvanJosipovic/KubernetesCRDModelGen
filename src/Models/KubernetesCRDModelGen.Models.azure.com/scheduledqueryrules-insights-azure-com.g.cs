@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.com;
 /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleSpecActionsActionGroupsReferences
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -29,6 +30,7 @@ public partial class V1api20220615storageScheduledQueryRuleSpecActionsActionGrou
 }
 
 /// <summary>Storage version of v1api20220615.Actions Actions to invoke when the alert fires.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleSpecActions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -45,6 +47,7 @@ public partial class V1api20220615storageScheduledQueryRuleSpecActions
 }
 
 /// <summary>Storage version of v1api20220615.Dimension Dimension splitting and filtering definition</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleSpecCriteriaAllOfDimensions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -65,6 +68,7 @@ public partial class V1api20220615storageScheduledQueryRuleSpecCriteriaAllOfDime
 }
 
 /// <summary>Storage version of v1api20220615.Condition_FailingPeriods</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleSpecCriteriaAllOfFailingPeriods
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -81,6 +85,7 @@ public partial class V1api20220615storageScheduledQueryRuleSpecCriteriaAllOfFail
 }
 
 /// <summary>ResourceIdColumnReference: The column containing the resource id. The content of the column must be a uri formatted as resource id. Relevant only for rules of the kind LogAlert.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleSpecCriteriaAllOfResourceIdColumnReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -101,6 +106,7 @@ public partial class V1api20220615storageScheduledQueryRuleSpecCriteriaAllOfReso
 }
 
 /// <summary>Storage version of v1api20220615.Condition A condition of the scheduled query rule.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleSpecCriteriaAllOf
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -145,6 +151,7 @@ public partial class V1api20220615storageScheduledQueryRuleSpecCriteriaAllOf
 }
 
 /// <summary>Storage version of v1api20220615.ScheduledQueryRuleCriteria The rule criteria that defines the conditions of the scheduled query rule.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleSpecCriteria
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -157,6 +164,7 @@ public partial class V1api20220615storageScheduledQueryRuleSpecCriteria
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleSpecOwner
 {
     /// <summary></summary>
@@ -169,6 +177,7 @@ public partial class V1api20220615storageScheduledQueryRuleSpecOwner
 }
 
 /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleSpecScopesReferences
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -189,6 +198,7 @@ public partial class V1api20220615storageScheduledQueryRuleSpecScopesReferences
 }
 
 /// <summary>Storage version of v1api20220615.ScheduledQueryRule_Spec</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -281,6 +291,7 @@ public partial class V1api20220615storageScheduledQueryRuleSpec
 }
 
 /// <summary>Storage version of v1api20220615.Actions_STATUS Actions to invoke when the alert fires.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleStatusActions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -297,6 +308,7 @@ public partial class V1api20220615storageScheduledQueryRuleStatusActions
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -329,6 +341,7 @@ public partial class V1api20220615storageScheduledQueryRuleStatusConditions
 }
 
 /// <summary>Storage version of v1api20220615.Dimension_STATUS Dimension splitting and filtering definition</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleStatusCriteriaAllOfDimensions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -349,6 +362,7 @@ public partial class V1api20220615storageScheduledQueryRuleStatusCriteriaAllOfDi
 }
 
 /// <summary>Storage version of v1api20220615.Condition_FailingPeriods_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleStatusCriteriaAllOfFailingPeriods
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -365,6 +379,7 @@ public partial class V1api20220615storageScheduledQueryRuleStatusCriteriaAllOfFa
 }
 
 /// <summary>Storage version of v1api20220615.Condition_STATUS A condition of the scheduled query rule.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleStatusCriteriaAllOf
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -409,6 +424,7 @@ public partial class V1api20220615storageScheduledQueryRuleStatusCriteriaAllOf
 }
 
 /// <summary>Storage version of v1api20220615.ScheduledQueryRuleCriteria_STATUS The rule criteria that defines the conditions of the scheduled query rule.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleStatusCriteria
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -421,6 +437,7 @@ public partial class V1api20220615storageScheduledQueryRuleStatusCriteria
 }
 
 /// <summary>Storage version of v1api20220615.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -453,6 +470,7 @@ public partial class V1api20220615storageScheduledQueryRuleStatusSystemData
 }
 
 /// <summary>Storage version of v1api20220615.ScheduledQueryRule_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -568,8 +586,9 @@ public partial class V1api20220615storageScheduledQueryRuleStatus
     public string? WindowSize { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Storage version of v1api20220615.ScheduledQueryRule Generator information: - Generated from: /monitor/resource-manager/Microsoft.Insights/stable/2022-06-15/scheduledQueryRule_API.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/scheduledQueryRules/{ruleName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1api20220615storageScheduledQueryRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220615storageScheduledQueryRuleSpec>, IStatus<V1api20220615storageScheduledQueryRuleStatus>
 {
     public const string KubeApiVersion = "v1api20220615storage";

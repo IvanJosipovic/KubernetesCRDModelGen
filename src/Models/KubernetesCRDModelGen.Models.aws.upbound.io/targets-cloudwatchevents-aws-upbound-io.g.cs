@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudwatchevents.aws.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1TargetSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderBatchTarget
 {
     /// <summary>The size of the array, if this is an array batch job. Valid values are integers between 2 and 10,000.</summary>
@@ -39,6 +41,7 @@ public partial class V1beta1TargetSpecForProviderBatchTarget
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderDeadLetterConfig
 {
     /// <summary>- ARN of the SQS queue specified as the target for the dead-letter queue.</summary>
@@ -47,6 +50,7 @@ public partial class V1beta1TargetSpecForProviderDeadLetterConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderEcsTargetCapacityProviderStrategy
 {
     /// <summary>The base value designates how many tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined. Defaults to 0.</summary>
@@ -63,6 +67,7 @@ public partial class V1beta1TargetSpecForProviderEcsTargetCapacityProviderStrate
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderEcsTargetNetworkConfiguration
 {
     /// <summary>Assign a public IP address to the ENI (Fargate launch type only). Valid values are true or false. Defaults to false.</summary>
@@ -79,6 +84,7 @@ public partial class V1beta1TargetSpecForProviderEcsTargetNetworkConfiguration
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderEcsTargetOrderedPlacementStrategy
 {
     /// <summary>The field to apply the placement strategy against. For the spread placement strategy, valid values are instanceId (or host, which has the same effect), or any platform or custom attribute that is applied to a container instance, such as attribute:ecs.availability-zone. For the binpack placement strategy, valid values are cpu and memory. For the random placement strategy, this field is not used. For more information, see Amazon ECS task placement strategies.</summary>
@@ -91,6 +97,7 @@ public partial class V1beta1TargetSpecForProviderEcsTargetOrderedPlacementStrate
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderEcsTargetPlacementConstraint
 {
     /// <summary>Cluster Query Language expression to apply to the constraint. Does not need to be specified for the distinctInstance type. For more information, see Cluster Query Language in the Amazon EC2 Container Service Developer Guide.</summary>
@@ -102,6 +109,7 @@ public partial class V1beta1TargetSpecForProviderEcsTargetPlacementConstraint
     public string? Type { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecForProviderEcsTargetTaskDefinitionArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -112,6 +120,7 @@ public enum V1beta1TargetSpecForProviderEcsTargetTaskDefinitionArnRefPolicyResol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecForProviderEcsTargetTaskDefinitionArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -123,6 +132,7 @@ public enum V1beta1TargetSpecForProviderEcsTargetTaskDefinitionArnRefPolicyResol
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderEcsTargetTaskDefinitionArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -137,6 +147,7 @@ public partial class V1beta1TargetSpecForProviderEcsTargetTaskDefinitionArnRefPo
 }
 
 /// <summary>Reference to a TaskDefinition in ecs to populate taskDefinitionArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderEcsTargetTaskDefinitionArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -148,6 +159,7 @@ public partial class V1beta1TargetSpecForProviderEcsTargetTaskDefinitionArnRef
     public V1beta1TargetSpecForProviderEcsTargetTaskDefinitionArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecForProviderEcsTargetTaskDefinitionArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -158,6 +170,7 @@ public enum V1beta1TargetSpecForProviderEcsTargetTaskDefinitionArnSelectorPolicy
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecForProviderEcsTargetTaskDefinitionArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -169,6 +182,7 @@ public enum V1beta1TargetSpecForProviderEcsTargetTaskDefinitionArnSelectorPolicy
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderEcsTargetTaskDefinitionArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -183,6 +197,7 @@ public partial class V1beta1TargetSpecForProviderEcsTargetTaskDefinitionArnSelec
 }
 
 /// <summary>Selector for a TaskDefinition in ecs to populate taskDefinitionArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderEcsTargetTaskDefinitionArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -199,6 +214,7 @@ public partial class V1beta1TargetSpecForProviderEcsTargetTaskDefinitionArnSelec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderEcsTarget
 {
     /// <summary>The capacity provider strategy to use for the task. If a capacity_provider_strategy specified, the launch_type parameter must be omitted. If no capacity_provider_strategy or launch_type is specified, the default capacity provider strategy for the cluster is used. Can be one or more. See below.</summary>
@@ -262,6 +278,7 @@ public partial class V1beta1TargetSpecForProviderEcsTarget
     public V1beta1TargetSpecForProviderEcsTargetTaskDefinitionArnSelector? TaskDefinitionArnSelector { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecForProviderEventBusNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -272,6 +289,7 @@ public enum V1beta1TargetSpecForProviderEventBusNameRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecForProviderEventBusNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -283,6 +301,7 @@ public enum V1beta1TargetSpecForProviderEventBusNameRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderEventBusNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -297,6 +316,7 @@ public partial class V1beta1TargetSpecForProviderEventBusNameRefPolicy
 }
 
 /// <summary>Reference to a Bus in cloudwatchevents to populate eventBusName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderEventBusNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -308,6 +328,7 @@ public partial class V1beta1TargetSpecForProviderEventBusNameRef
     public V1beta1TargetSpecForProviderEventBusNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecForProviderEventBusNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -318,6 +339,7 @@ public enum V1beta1TargetSpecForProviderEventBusNameSelectorPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecForProviderEventBusNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -329,6 +351,7 @@ public enum V1beta1TargetSpecForProviderEventBusNameSelectorPolicyResolveEnum
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderEventBusNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -343,6 +366,7 @@ public partial class V1beta1TargetSpecForProviderEventBusNameSelectorPolicy
 }
 
 /// <summary>Selector for a Bus in cloudwatchevents to populate eventBusName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderEventBusNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -359,6 +383,7 @@ public partial class V1beta1TargetSpecForProviderEventBusNameSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderHttpTarget
 {
     /// <summary>Enables you to specify HTTP headers to add to the request.</summary>
@@ -375,6 +400,7 @@ public partial class V1beta1TargetSpecForProviderHttpTarget
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderInputTransformer
 {
     /// <summary>Key value pairs specified in the form of JSONPath (for example, time = $.time)</summary>
@@ -387,6 +413,7 @@ public partial class V1beta1TargetSpecForProviderInputTransformer
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderKinesisTarget
 {
     /// <summary>The JSON path to be extracted from the event and used as the partition key.</summary>
@@ -395,6 +422,7 @@ public partial class V1beta1TargetSpecForProviderKinesisTarget
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderRedshiftTarget
 {
     /// <summary>The name of the database.</summary>
@@ -423,6 +451,7 @@ public partial class V1beta1TargetSpecForProviderRedshiftTarget
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderRetryPolicy
 {
     /// <summary>The age in seconds to continue to make retry attempts.</summary>
@@ -434,6 +463,7 @@ public partial class V1beta1TargetSpecForProviderRetryPolicy
     public double? MaximumRetryAttempts { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecForProviderRoleArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -444,6 +474,7 @@ public enum V1beta1TargetSpecForProviderRoleArnRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecForProviderRoleArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -455,6 +486,7 @@ public enum V1beta1TargetSpecForProviderRoleArnRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -469,6 +501,7 @@ public partial class V1beta1TargetSpecForProviderRoleArnRefPolicy
 }
 
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -480,6 +513,7 @@ public partial class V1beta1TargetSpecForProviderRoleArnRef
     public V1beta1TargetSpecForProviderRoleArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecForProviderRoleArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -490,6 +524,7 @@ public enum V1beta1TargetSpecForProviderRoleArnSelectorPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecForProviderRoleArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -501,6 +536,7 @@ public enum V1beta1TargetSpecForProviderRoleArnSelectorPolicyResolveEnum
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -515,6 +551,7 @@ public partial class V1beta1TargetSpecForProviderRoleArnSelectorPolicy
 }
 
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -530,6 +567,7 @@ public partial class V1beta1TargetSpecForProviderRoleArnSelector
     public V1beta1TargetSpecForProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecForProviderRuleRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -540,6 +578,7 @@ public enum V1beta1TargetSpecForProviderRuleRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecForProviderRuleRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -551,6 +590,7 @@ public enum V1beta1TargetSpecForProviderRuleRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderRuleRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -565,6 +605,7 @@ public partial class V1beta1TargetSpecForProviderRuleRefPolicy
 }
 
 /// <summary>Reference to a Rule in cloudwatchevents to populate rule.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderRuleRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -576,6 +617,7 @@ public partial class V1beta1TargetSpecForProviderRuleRef
     public V1beta1TargetSpecForProviderRuleRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecForProviderRuleSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -586,6 +628,7 @@ public enum V1beta1TargetSpecForProviderRuleSelectorPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecForProviderRuleSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -597,6 +640,7 @@ public enum V1beta1TargetSpecForProviderRuleSelectorPolicyResolveEnum
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderRuleSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -611,6 +655,7 @@ public partial class V1beta1TargetSpecForProviderRuleSelectorPolicy
 }
 
 /// <summary>Selector for a Rule in cloudwatchevents to populate rule.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderRuleSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -627,6 +672,7 @@ public partial class V1beta1TargetSpecForProviderRuleSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderRunCommandTargets
 {
     /// <summary>Can be either tag:tag-key or InstanceIds.</summary>
@@ -639,6 +685,7 @@ public partial class V1beta1TargetSpecForProviderRunCommandTargets
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderSagemakerPipelineTargetPipelineParameterList
 {
     /// <summary>Name of parameter to start execution of a SageMaker Model Building Pipeline.</summary>
@@ -651,6 +698,7 @@ public partial class V1beta1TargetSpecForProviderSagemakerPipelineTargetPipeline
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderSagemakerPipelineTarget
 {
     /// <summary>List of Parameter names and values for SageMaker Model Building Pipeline execution.</summary>
@@ -659,6 +707,7 @@ public partial class V1beta1TargetSpecForProviderSagemakerPipelineTarget
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderSqsTarget
 {
     /// <summary>The FIFO message group ID to use as the target.</summary>
@@ -667,6 +716,7 @@ public partial class V1beta1TargetSpecForProviderSqsTarget
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProvider
 {
     /// <summary>The Amazon Resource Name (ARN) of the target.</summary>
@@ -775,6 +825,7 @@ public partial class V1beta1TargetSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderBatchTarget
 {
     /// <summary>The size of the array, if this is an array batch job. Valid values are integers between 2 and 10,000.</summary>
@@ -795,6 +846,7 @@ public partial class V1beta1TargetSpecInitProviderBatchTarget
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderDeadLetterConfig
 {
     /// <summary>- ARN of the SQS queue specified as the target for the dead-letter queue.</summary>
@@ -803,6 +855,7 @@ public partial class V1beta1TargetSpecInitProviderDeadLetterConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderEcsTargetCapacityProviderStrategy
 {
     /// <summary>The base value designates how many tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined. Defaults to 0.</summary>
@@ -819,6 +872,7 @@ public partial class V1beta1TargetSpecInitProviderEcsTargetCapacityProviderStrat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderEcsTargetNetworkConfiguration
 {
     /// <summary>Assign a public IP address to the ENI (Fargate launch type only). Valid values are true or false. Defaults to false.</summary>
@@ -835,6 +889,7 @@ public partial class V1beta1TargetSpecInitProviderEcsTargetNetworkConfiguration
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderEcsTargetOrderedPlacementStrategy
 {
     /// <summary>The field to apply the placement strategy against. For the spread placement strategy, valid values are instanceId (or host, which has the same effect), or any platform or custom attribute that is applied to a container instance, such as attribute:ecs.availability-zone. For the binpack placement strategy, valid values are cpu and memory. For the random placement strategy, this field is not used. For more information, see Amazon ECS task placement strategies.</summary>
@@ -847,6 +902,7 @@ public partial class V1beta1TargetSpecInitProviderEcsTargetOrderedPlacementStrat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderEcsTargetPlacementConstraint
 {
     /// <summary>Cluster Query Language expression to apply to the constraint. Does not need to be specified for the distinctInstance type. For more information, see Cluster Query Language in the Amazon EC2 Container Service Developer Guide.</summary>
@@ -858,6 +914,7 @@ public partial class V1beta1TargetSpecInitProviderEcsTargetPlacementConstraint
     public string? Type { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecInitProviderEcsTargetTaskDefinitionArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -868,6 +925,7 @@ public enum V1beta1TargetSpecInitProviderEcsTargetTaskDefinitionArnRefPolicyReso
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecInitProviderEcsTargetTaskDefinitionArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -879,6 +937,7 @@ public enum V1beta1TargetSpecInitProviderEcsTargetTaskDefinitionArnRefPolicyReso
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderEcsTargetTaskDefinitionArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -893,6 +952,7 @@ public partial class V1beta1TargetSpecInitProviderEcsTargetTaskDefinitionArnRefP
 }
 
 /// <summary>Reference to a TaskDefinition in ecs to populate taskDefinitionArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderEcsTargetTaskDefinitionArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -904,6 +964,7 @@ public partial class V1beta1TargetSpecInitProviderEcsTargetTaskDefinitionArnRef
     public V1beta1TargetSpecInitProviderEcsTargetTaskDefinitionArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecInitProviderEcsTargetTaskDefinitionArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -914,6 +975,7 @@ public enum V1beta1TargetSpecInitProviderEcsTargetTaskDefinitionArnSelectorPolic
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecInitProviderEcsTargetTaskDefinitionArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -925,6 +987,7 @@ public enum V1beta1TargetSpecInitProviderEcsTargetTaskDefinitionArnSelectorPolic
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderEcsTargetTaskDefinitionArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -939,6 +1002,7 @@ public partial class V1beta1TargetSpecInitProviderEcsTargetTaskDefinitionArnSele
 }
 
 /// <summary>Selector for a TaskDefinition in ecs to populate taskDefinitionArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderEcsTargetTaskDefinitionArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -955,6 +1019,7 @@ public partial class V1beta1TargetSpecInitProviderEcsTargetTaskDefinitionArnSele
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderEcsTarget
 {
     /// <summary>The capacity provider strategy to use for the task. If a capacity_provider_strategy specified, the launch_type parameter must be omitted. If no capacity_provider_strategy or launch_type is specified, the default capacity provider strategy for the cluster is used. Can be one or more. See below.</summary>
@@ -1018,6 +1083,7 @@ public partial class V1beta1TargetSpecInitProviderEcsTarget
     public V1beta1TargetSpecInitProviderEcsTargetTaskDefinitionArnSelector? TaskDefinitionArnSelector { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecInitProviderEventBusNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1028,6 +1094,7 @@ public enum V1beta1TargetSpecInitProviderEventBusNameRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecInitProviderEventBusNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1039,6 +1106,7 @@ public enum V1beta1TargetSpecInitProviderEventBusNameRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderEventBusNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1053,6 +1121,7 @@ public partial class V1beta1TargetSpecInitProviderEventBusNameRefPolicy
 }
 
 /// <summary>Reference to a Bus in cloudwatchevents to populate eventBusName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderEventBusNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1064,6 +1133,7 @@ public partial class V1beta1TargetSpecInitProviderEventBusNameRef
     public V1beta1TargetSpecInitProviderEventBusNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecInitProviderEventBusNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1074,6 +1144,7 @@ public enum V1beta1TargetSpecInitProviderEventBusNameSelectorPolicyResolutionEnu
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecInitProviderEventBusNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1085,6 +1156,7 @@ public enum V1beta1TargetSpecInitProviderEventBusNameSelectorPolicyResolveEnum
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderEventBusNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1099,6 +1171,7 @@ public partial class V1beta1TargetSpecInitProviderEventBusNameSelectorPolicy
 }
 
 /// <summary>Selector for a Bus in cloudwatchevents to populate eventBusName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderEventBusNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1115,6 +1188,7 @@ public partial class V1beta1TargetSpecInitProviderEventBusNameSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderHttpTarget
 {
     /// <summary>Enables you to specify HTTP headers to add to the request.</summary>
@@ -1131,6 +1205,7 @@ public partial class V1beta1TargetSpecInitProviderHttpTarget
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderInputTransformer
 {
     /// <summary>Key value pairs specified in the form of JSONPath (for example, time = $.time)</summary>
@@ -1143,6 +1218,7 @@ public partial class V1beta1TargetSpecInitProviderInputTransformer
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderKinesisTarget
 {
     /// <summary>The JSON path to be extracted from the event and used as the partition key.</summary>
@@ -1151,6 +1227,7 @@ public partial class V1beta1TargetSpecInitProviderKinesisTarget
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderRedshiftTarget
 {
     /// <summary>The name of the database.</summary>
@@ -1179,6 +1256,7 @@ public partial class V1beta1TargetSpecInitProviderRedshiftTarget
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderRetryPolicy
 {
     /// <summary>The age in seconds to continue to make retry attempts.</summary>
@@ -1190,6 +1268,7 @@ public partial class V1beta1TargetSpecInitProviderRetryPolicy
     public double? MaximumRetryAttempts { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecInitProviderRoleArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1200,6 +1279,7 @@ public enum V1beta1TargetSpecInitProviderRoleArnRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecInitProviderRoleArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1211,6 +1291,7 @@ public enum V1beta1TargetSpecInitProviderRoleArnRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1225,6 +1306,7 @@ public partial class V1beta1TargetSpecInitProviderRoleArnRefPolicy
 }
 
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1236,6 +1318,7 @@ public partial class V1beta1TargetSpecInitProviderRoleArnRef
     public V1beta1TargetSpecInitProviderRoleArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecInitProviderRoleArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1246,6 +1329,7 @@ public enum V1beta1TargetSpecInitProviderRoleArnSelectorPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecInitProviderRoleArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1257,6 +1341,7 @@ public enum V1beta1TargetSpecInitProviderRoleArnSelectorPolicyResolveEnum
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1271,6 +1356,7 @@ public partial class V1beta1TargetSpecInitProviderRoleArnSelectorPolicy
 }
 
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1286,6 +1372,7 @@ public partial class V1beta1TargetSpecInitProviderRoleArnSelector
     public V1beta1TargetSpecInitProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecInitProviderRuleRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1296,6 +1383,7 @@ public enum V1beta1TargetSpecInitProviderRuleRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecInitProviderRuleRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1307,6 +1395,7 @@ public enum V1beta1TargetSpecInitProviderRuleRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderRuleRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1321,6 +1410,7 @@ public partial class V1beta1TargetSpecInitProviderRuleRefPolicy
 }
 
 /// <summary>Reference to a Rule in cloudwatchevents to populate rule.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderRuleRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1332,6 +1422,7 @@ public partial class V1beta1TargetSpecInitProviderRuleRef
     public V1beta1TargetSpecInitProviderRuleRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecInitProviderRuleSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1342,6 +1433,7 @@ public enum V1beta1TargetSpecInitProviderRuleSelectorPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecInitProviderRuleSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1353,6 +1445,7 @@ public enum V1beta1TargetSpecInitProviderRuleSelectorPolicyResolveEnum
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderRuleSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1367,6 +1460,7 @@ public partial class V1beta1TargetSpecInitProviderRuleSelectorPolicy
 }
 
 /// <summary>Selector for a Rule in cloudwatchevents to populate rule.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderRuleSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1383,6 +1477,7 @@ public partial class V1beta1TargetSpecInitProviderRuleSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderRunCommandTargets
 {
     /// <summary>Can be either tag:tag-key or InstanceIds.</summary>
@@ -1395,6 +1490,7 @@ public partial class V1beta1TargetSpecInitProviderRunCommandTargets
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderSagemakerPipelineTargetPipelineParameterList
 {
     /// <summary>Name of parameter to start execution of a SageMaker Model Building Pipeline.</summary>
@@ -1407,6 +1503,7 @@ public partial class V1beta1TargetSpecInitProviderSagemakerPipelineTargetPipelin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderSagemakerPipelineTarget
 {
     /// <summary>List of Parameter names and values for SageMaker Model Building Pipeline execution.</summary>
@@ -1415,6 +1512,7 @@ public partial class V1beta1TargetSpecInitProviderSagemakerPipelineTarget
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderSqsTarget
 {
     /// <summary>The FIFO message group ID to use as the target.</summary>
@@ -1423,6 +1521,7 @@ public partial class V1beta1TargetSpecInitProviderSqsTarget
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProvider
 {
     /// <summary>The Amazon Resource Name (ARN) of the target.</summary>
@@ -1526,6 +1625,7 @@ public partial class V1beta1TargetSpecInitProvider
     public string? TargetId { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -1548,6 +1648,7 @@ public enum V1beta1TargetSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1558,6 +1659,7 @@ public enum V1beta1TargetSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1569,6 +1671,7 @@ public enum V1beta1TargetSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1583,6 +1686,7 @@ public partial class V1beta1TargetSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1594,6 +1698,7 @@ public partial class V1beta1TargetSpecProviderConfigRef
     public V1beta1TargetSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1604,6 +1709,7 @@ public enum V1beta1TargetSpecPublishConnectionDetailsToConfigRefPolicyResolution
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1615,6 +1721,7 @@ public enum V1beta1TargetSpecPublishConnectionDetailsToConfigRefPolicyResolveEnu
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1629,6 +1736,7 @@ public partial class V1beta1TargetSpecPublishConnectionDetailsToConfigRefPolicy
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1641,6 +1749,7 @@ public partial class V1beta1TargetSpecPublishConnectionDetailsToConfigRef
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1657,6 +1766,7 @@ public partial class V1beta1TargetSpecPublishConnectionDetailsToMetadata
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1673,6 +1783,7 @@ public partial class V1beta1TargetSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1685,6 +1796,7 @@ public partial class V1beta1TargetSpecWriteConnectionSecretToRef
 }
 
 /// <summary>TargetSpec defines the desired state of Target</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1718,6 +1830,7 @@ public partial class V1beta1TargetSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetStatusAtProviderBatchTarget
 {
     /// <summary>The size of the array, if this is an array batch job. Valid values are integers between 2 and 10,000.</summary>
@@ -1738,6 +1851,7 @@ public partial class V1beta1TargetStatusAtProviderBatchTarget
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetStatusAtProviderDeadLetterConfig
 {
     /// <summary>- ARN of the SQS queue specified as the target for the dead-letter queue.</summary>
@@ -1746,6 +1860,7 @@ public partial class V1beta1TargetStatusAtProviderDeadLetterConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetStatusAtProviderEcsTargetCapacityProviderStrategy
 {
     /// <summary>The base value designates how many tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined. Defaults to 0.</summary>
@@ -1762,6 +1877,7 @@ public partial class V1beta1TargetStatusAtProviderEcsTargetCapacityProviderStrat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetStatusAtProviderEcsTargetNetworkConfiguration
 {
     /// <summary>Assign a public IP address to the ENI (Fargate launch type only). Valid values are true or false. Defaults to false.</summary>
@@ -1778,6 +1894,7 @@ public partial class V1beta1TargetStatusAtProviderEcsTargetNetworkConfiguration
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetStatusAtProviderEcsTargetOrderedPlacementStrategy
 {
     /// <summary>The field to apply the placement strategy against. For the spread placement strategy, valid values are instanceId (or host, which has the same effect), or any platform or custom attribute that is applied to a container instance, such as attribute:ecs.availability-zone. For the binpack placement strategy, valid values are cpu and memory. For the random placement strategy, this field is not used. For more information, see Amazon ECS task placement strategies.</summary>
@@ -1790,6 +1907,7 @@ public partial class V1beta1TargetStatusAtProviderEcsTargetOrderedPlacementStrat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetStatusAtProviderEcsTargetPlacementConstraint
 {
     /// <summary>Cluster Query Language expression to apply to the constraint. Does not need to be specified for the distinctInstance type. For more information, see Cluster Query Language in the Amazon EC2 Container Service Developer Guide.</summary>
@@ -1802,6 +1920,7 @@ public partial class V1beta1TargetStatusAtProviderEcsTargetPlacementConstraint
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetStatusAtProviderEcsTarget
 {
     /// <summary>The capacity provider strategy to use for the task. If a capacity_provider_strategy specified, the launch_type parameter must be omitted. If no capacity_provider_strategy or launch_type is specified, the default capacity provider strategy for the cluster is used. Can be one or more. See below.</summary>
@@ -1858,6 +1977,7 @@ public partial class V1beta1TargetStatusAtProviderEcsTarget
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetStatusAtProviderHttpTarget
 {
     /// <summary>Enables you to specify HTTP headers to add to the request.</summary>
@@ -1874,6 +1994,7 @@ public partial class V1beta1TargetStatusAtProviderHttpTarget
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetStatusAtProviderInputTransformer
 {
     /// <summary>Key value pairs specified in the form of JSONPath (for example, time = $.time)</summary>
@@ -1886,6 +2007,7 @@ public partial class V1beta1TargetStatusAtProviderInputTransformer
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetStatusAtProviderKinesisTarget
 {
     /// <summary>The JSON path to be extracted from the event and used as the partition key.</summary>
@@ -1894,6 +2016,7 @@ public partial class V1beta1TargetStatusAtProviderKinesisTarget
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetStatusAtProviderRedshiftTarget
 {
     /// <summary>The name of the database.</summary>
@@ -1922,6 +2045,7 @@ public partial class V1beta1TargetStatusAtProviderRedshiftTarget
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetStatusAtProviderRetryPolicy
 {
     /// <summary>The age in seconds to continue to make retry attempts.</summary>
@@ -1934,6 +2058,7 @@ public partial class V1beta1TargetStatusAtProviderRetryPolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetStatusAtProviderRunCommandTargets
 {
     /// <summary>Can be either tag:tag-key or InstanceIds.</summary>
@@ -1946,6 +2071,7 @@ public partial class V1beta1TargetStatusAtProviderRunCommandTargets
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetStatusAtProviderSagemakerPipelineTargetPipelineParameterList
 {
     /// <summary>Name of parameter to start execution of a SageMaker Model Building Pipeline.</summary>
@@ -1958,6 +2084,7 @@ public partial class V1beta1TargetStatusAtProviderSagemakerPipelineTargetPipelin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetStatusAtProviderSagemakerPipelineTarget
 {
     /// <summary>List of Parameter names and values for SageMaker Model Building Pipeline execution.</summary>
@@ -1966,6 +2093,7 @@ public partial class V1beta1TargetStatusAtProviderSagemakerPipelineTarget
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetStatusAtProviderSqsTarget
 {
     /// <summary>The FIFO message group ID to use as the target.</summary>
@@ -1974,6 +2102,7 @@ public partial class V1beta1TargetStatusAtProviderSqsTarget
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetStatusAtProvider
 {
     /// <summary>The Amazon Resource Name (ARN) of the target.</summary>
@@ -2058,6 +2187,7 @@ public partial class V1beta1TargetStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2086,6 +2216,7 @@ public partial class V1beta1TargetStatusConditions
 }
 
 /// <summary>TargetStatus defines the observed state of Target.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetStatus
 {
     /// <summary></summary>
@@ -2101,8 +2232,9 @@ public partial class V1beta1TargetStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Target is the Schema for the Targets API. Provides an EventBridge Target resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Target : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TargetSpec>, IStatus<V1beta1TargetStatus>
 {
     public const string KubeApiVersion = "v1beta1";

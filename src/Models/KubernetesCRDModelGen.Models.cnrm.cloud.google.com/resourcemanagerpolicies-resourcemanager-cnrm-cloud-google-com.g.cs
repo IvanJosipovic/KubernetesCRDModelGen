@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.resourcemanager.cnrm.cloud.google.com;
 /// <summary>A boolean policy is a constraint that is either enforced or not.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceManagerPolicySpecBooleanPolicy
 {
     /// <summary>If true, then the Policy is enforced. If false, then any configuration is acceptable.</summary>
@@ -17,6 +18,7 @@ public partial class V1beta1ResourceManagerPolicySpecBooleanPolicy
 }
 
 /// <summary>The folder on which to configure the constraint. Only one of projectRef, folderRef, or organizationRef may be specified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceManagerPolicySpecFolderRef
 {
     /// <summary>Allowed value: The `name` field of a `Folder` resource.</summary>
@@ -33,6 +35,7 @@ public partial class V1beta1ResourceManagerPolicySpecFolderRef
 }
 
 /// <summary>One or the other must be set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceManagerPolicySpecListPolicyAllow
 {
     /// <summary>The policy allows or denies all values.</summary>
@@ -45,6 +48,7 @@ public partial class V1beta1ResourceManagerPolicySpecListPolicyAllow
 }
 
 /// <summary>One or the other must be set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceManagerPolicySpecListPolicyDeny
 {
     /// <summary>The policy allows or denies all values.</summary>
@@ -57,6 +61,7 @@ public partial class V1beta1ResourceManagerPolicySpecListPolicyDeny
 }
 
 /// <summary>A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. .</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceManagerPolicySpecListPolicy
 {
     /// <summary>One or the other must be set.</summary>
@@ -77,6 +82,7 @@ public partial class V1beta1ResourceManagerPolicySpecListPolicy
 }
 
 /// <summary>The organization on which to configure the constraint. Only one of projectRef, folderRef, or organizationRef may be specified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceManagerPolicySpecOrganizationRef
 {
     /// <summary>Allowed value: The `name` field of an `Organization` resource.</summary>
@@ -93,6 +99,7 @@ public partial class V1beta1ResourceManagerPolicySpecOrganizationRef
 }
 
 /// <summary>The project on which to configure the constraint. Only one of projectRef, folderRef, or organizationRef may be specified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceManagerPolicySpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -109,6 +116,7 @@ public partial class V1beta1ResourceManagerPolicySpecProjectRef
 }
 
 /// <summary>A restore policy is a constraint to restore the default policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceManagerPolicySpecRestorePolicy
 {
     /// <summary>May only be set to true. If set, then the default Policy is restored.</summary>
@@ -117,6 +125,7 @@ public partial class V1beta1ResourceManagerPolicySpecRestorePolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceManagerPolicySpec
 {
     /// <summary>A boolean policy is a constraint that is either enforced or not.</summary>
@@ -153,6 +162,7 @@ public partial class V1beta1ResourceManagerPolicySpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceManagerPolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -177,6 +187,7 @@ public partial class V1beta1ResourceManagerPolicyStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceManagerPolicyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -196,8 +207,9 @@ public partial class V1beta1ResourceManagerPolicyStatus
     public string? UpdateTime { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ResourceManagerPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ResourceManagerPolicySpec>, IStatus<V1beta1ResourceManagerPolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

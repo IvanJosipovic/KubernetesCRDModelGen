@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.traefik.io;
 /// <summary>ForwardingTimeouts defines the timeouts for requests forwarded to the backend servers.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ServersTransportSpecForwardingTimeouts
 {
     /// <summary>DialTimeout is the amount of time to wait until a connection to a backend server can be established.</summary>
@@ -33,6 +34,7 @@ public partial class V1alpha1ServersTransportSpecForwardingTimeouts
 }
 
 /// <summary>Spiffe defines the SPIFFE configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ServersTransportSpecSpiffe
 {
     /// <summary>IDs defines the allowed SPIFFE IDs (takes precedence over the SPIFFE TrustDomain).</summary>
@@ -45,6 +47,7 @@ public partial class V1alpha1ServersTransportSpecSpiffe
 }
 
 /// <summary>ServersTransportSpec defines the desired state of a ServersTransport.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ServersTransportSpec
 {
     /// <summary>CertificatesSecrets defines a list of secret storing client certificates for mTLS.</summary>
@@ -84,8 +87,9 @@ public partial class V1alpha1ServersTransportSpec
     public V1alpha1ServersTransportSpecSpiffe? Spiffe { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>ServersTransport is the CRD implementation of a ServersTransport. If no serversTransport is specified, the default@internal will be used. The default@internal serversTransport is created from the static configuration. More info: https://doc.traefik.io/traefik/v3.1/routing/services/#serverstransport_1</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1ServersTransport : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ServersTransportSpec>
 {
     public const string KubeApiVersion = "v1alpha1";

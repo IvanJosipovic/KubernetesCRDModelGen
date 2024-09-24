@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.hub.traefik.io;
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIRateLimitSpecApiSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -25,6 +26,7 @@ public partial class V1alpha1APIRateLimitSpecApiSelectorMatchExpressions
 }
 
 /// <summary>APISelector selects the APIs that will be rate limited. Multiple APIRateLimits can select the same set of APIs. This field is optional and follows standard label selector semantics. An empty APISelector matches any API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIRateLimitSpecApiSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -37,6 +39,7 @@ public partial class V1alpha1APIRateLimitSpecApiSelector
 }
 
 /// <summary>APIReference references an API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIRateLimitSpecApis
 {
     /// <summary>Name of the API.</summary>
@@ -44,6 +47,7 @@ public partial class V1alpha1APIRateLimitSpecApis
     public string Name { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1APIRateLimitSpecStrategyEnum
 {
     [EnumMember(Value = "local"), JsonStringEnumMemberName("local")]
@@ -55,6 +59,7 @@ public enum V1alpha1APIRateLimitSpecStrategyEnum
 }
 
 /// <summary>The desired behavior of this APIRateLimit.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIRateLimitSpec
 {
     /// <summary>APISelector selects the APIs that will be rate limited. Multiple APIRateLimits can select the same set of APIs. This field is optional and follows standard label selector semantics. An empty APISelector matches any API.</summary>
@@ -88,6 +93,7 @@ public partial class V1alpha1APIRateLimitSpec
 }
 
 /// <summary>The current status of this APIRateLimit.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIRateLimitStatus
 {
     /// <summary>Hash is a hash representing the APIRateLimit.</summary>
@@ -103,8 +109,9 @@ public partial class V1alpha1APIRateLimitStatus
     public string? Version { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>APIRateLimit defines how group of consumers are rate limited on a set of APIs.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1APIRateLimit : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1APIRateLimitSpec>, IStatus<V1alpha1APIRateLimitStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

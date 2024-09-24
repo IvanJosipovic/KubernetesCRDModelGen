@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudfront.aws.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FieldLevelEncryptionConfigSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1FieldLevelEncryptionConfigSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigSpecForProviderContentTypeProfileConfigContentTypeProfilesItems
 {
     /// <summary>he content type for a field-level encryption content type-profile mapping. Valid value is application/x-www-form-urlencoded.</summary>
@@ -35,6 +37,7 @@ public partial class V1beta1FieldLevelEncryptionConfigSpecForProviderContentType
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigSpecForProviderContentTypeProfileConfigContentTypeProfiles
 {
     /// <summary></summary>
@@ -43,6 +46,7 @@ public partial class V1beta1FieldLevelEncryptionConfigSpecForProviderContentType
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigSpecForProviderContentTypeProfileConfig
 {
     /// <summary>Object that contains an attribute items that contains the list of configurations for a field-level encryption content type-profile. See Content Type Profile.</summary>
@@ -54,6 +58,7 @@ public partial class V1beta1FieldLevelEncryptionConfigSpecForProviderContentType
     public bool? ForwardWhenContentTypeIsUnknown { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FieldLevelEncryptionConfigSpecForProviderQueryArgProfileConfigQueryArgProfilesItemsProfileIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -64,6 +69,7 @@ public enum V1beta1FieldLevelEncryptionConfigSpecForProviderQueryArgProfileConfi
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FieldLevelEncryptionConfigSpecForProviderQueryArgProfileConfigQueryArgProfilesItemsProfileIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -75,6 +81,7 @@ public enum V1beta1FieldLevelEncryptionConfigSpecForProviderQueryArgProfileConfi
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigSpecForProviderQueryArgProfileConfigQueryArgProfilesItemsProfileIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -89,6 +96,7 @@ public partial class V1beta1FieldLevelEncryptionConfigSpecForProviderQueryArgPro
 }
 
 /// <summary>Reference to a FieldLevelEncryptionProfile in cloudfront to populate profileId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigSpecForProviderQueryArgProfileConfigQueryArgProfilesItemsProfileIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -100,6 +108,7 @@ public partial class V1beta1FieldLevelEncryptionConfigSpecForProviderQueryArgPro
     public V1beta1FieldLevelEncryptionConfigSpecForProviderQueryArgProfileConfigQueryArgProfilesItemsProfileIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FieldLevelEncryptionConfigSpecForProviderQueryArgProfileConfigQueryArgProfilesItemsProfileIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -110,6 +119,7 @@ public enum V1beta1FieldLevelEncryptionConfigSpecForProviderQueryArgProfileConfi
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FieldLevelEncryptionConfigSpecForProviderQueryArgProfileConfigQueryArgProfilesItemsProfileIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -121,6 +131,7 @@ public enum V1beta1FieldLevelEncryptionConfigSpecForProviderQueryArgProfileConfi
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigSpecForProviderQueryArgProfileConfigQueryArgProfilesItemsProfileIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -135,6 +146,7 @@ public partial class V1beta1FieldLevelEncryptionConfigSpecForProviderQueryArgPro
 }
 
 /// <summary>Selector for a FieldLevelEncryptionProfile in cloudfront to populate profileId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigSpecForProviderQueryArgProfileConfigQueryArgProfilesItemsProfileIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -151,6 +163,7 @@ public partial class V1beta1FieldLevelEncryptionConfigSpecForProviderQueryArgPro
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigSpecForProviderQueryArgProfileConfigQueryArgProfilesItems
 {
     /// <summary>The profile ID for a field-level encryption content type-profile mapping.</summary>
@@ -171,6 +184,7 @@ public partial class V1beta1FieldLevelEncryptionConfigSpecForProviderQueryArgPro
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigSpecForProviderQueryArgProfileConfigQueryArgProfiles
 {
     /// <summary></summary>
@@ -179,6 +193,7 @@ public partial class V1beta1FieldLevelEncryptionConfigSpecForProviderQueryArgPro
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigSpecForProviderQueryArgProfileConfig
 {
     /// <summary>Flag to set if you want a request to be forwarded to the origin even if the profile specified by the field-level encryption query argument, fle-profile, is unknown.</summary>
@@ -191,6 +206,7 @@ public partial class V1beta1FieldLevelEncryptionConfigSpecForProviderQueryArgPro
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigSpecForProvider
 {
     /// <summary>An optional comment about the Field Level Encryption Config.</summary>
@@ -211,6 +227,7 @@ public partial class V1beta1FieldLevelEncryptionConfigSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigSpecInitProviderContentTypeProfileConfigContentTypeProfilesItems
 {
     /// <summary>he content type for a field-level encryption content type-profile mapping. Valid value is application/x-www-form-urlencoded.</summary>
@@ -227,6 +244,7 @@ public partial class V1beta1FieldLevelEncryptionConfigSpecInitProviderContentTyp
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigSpecInitProviderContentTypeProfileConfigContentTypeProfiles
 {
     /// <summary></summary>
@@ -235,6 +253,7 @@ public partial class V1beta1FieldLevelEncryptionConfigSpecInitProviderContentTyp
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigSpecInitProviderContentTypeProfileConfig
 {
     /// <summary>Object that contains an attribute items that contains the list of configurations for a field-level encryption content type-profile. See Content Type Profile.</summary>
@@ -246,6 +265,7 @@ public partial class V1beta1FieldLevelEncryptionConfigSpecInitProviderContentTyp
     public bool? ForwardWhenContentTypeIsUnknown { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FieldLevelEncryptionConfigSpecInitProviderQueryArgProfileConfigQueryArgProfilesItemsProfileIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -256,6 +276,7 @@ public enum V1beta1FieldLevelEncryptionConfigSpecInitProviderQueryArgProfileConf
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FieldLevelEncryptionConfigSpecInitProviderQueryArgProfileConfigQueryArgProfilesItemsProfileIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -267,6 +288,7 @@ public enum V1beta1FieldLevelEncryptionConfigSpecInitProviderQueryArgProfileConf
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigSpecInitProviderQueryArgProfileConfigQueryArgProfilesItemsProfileIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -281,6 +303,7 @@ public partial class V1beta1FieldLevelEncryptionConfigSpecInitProviderQueryArgPr
 }
 
 /// <summary>Reference to a FieldLevelEncryptionProfile in cloudfront to populate profileId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigSpecInitProviderQueryArgProfileConfigQueryArgProfilesItemsProfileIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -292,6 +315,7 @@ public partial class V1beta1FieldLevelEncryptionConfigSpecInitProviderQueryArgPr
     public V1beta1FieldLevelEncryptionConfigSpecInitProviderQueryArgProfileConfigQueryArgProfilesItemsProfileIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FieldLevelEncryptionConfigSpecInitProviderQueryArgProfileConfigQueryArgProfilesItemsProfileIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -302,6 +326,7 @@ public enum V1beta1FieldLevelEncryptionConfigSpecInitProviderQueryArgProfileConf
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FieldLevelEncryptionConfigSpecInitProviderQueryArgProfileConfigQueryArgProfilesItemsProfileIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -313,6 +338,7 @@ public enum V1beta1FieldLevelEncryptionConfigSpecInitProviderQueryArgProfileConf
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigSpecInitProviderQueryArgProfileConfigQueryArgProfilesItemsProfileIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -327,6 +353,7 @@ public partial class V1beta1FieldLevelEncryptionConfigSpecInitProviderQueryArgPr
 }
 
 /// <summary>Selector for a FieldLevelEncryptionProfile in cloudfront to populate profileId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigSpecInitProviderQueryArgProfileConfigQueryArgProfilesItemsProfileIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -343,6 +370,7 @@ public partial class V1beta1FieldLevelEncryptionConfigSpecInitProviderQueryArgPr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigSpecInitProviderQueryArgProfileConfigQueryArgProfilesItems
 {
     /// <summary>The profile ID for a field-level encryption content type-profile mapping.</summary>
@@ -363,6 +391,7 @@ public partial class V1beta1FieldLevelEncryptionConfigSpecInitProviderQueryArgPr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigSpecInitProviderQueryArgProfileConfigQueryArgProfiles
 {
     /// <summary></summary>
@@ -371,6 +400,7 @@ public partial class V1beta1FieldLevelEncryptionConfigSpecInitProviderQueryArgPr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigSpecInitProviderQueryArgProfileConfig
 {
     /// <summary>Flag to set if you want a request to be forwarded to the origin even if the profile specified by the field-level encryption query argument, fle-profile, is unknown.</summary>
@@ -383,6 +413,7 @@ public partial class V1beta1FieldLevelEncryptionConfigSpecInitProviderQueryArgPr
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigSpecInitProvider
 {
     /// <summary>An optional comment about the Field Level Encryption Config.</summary>
@@ -398,6 +429,7 @@ public partial class V1beta1FieldLevelEncryptionConfigSpecInitProvider
     public IList<V1beta1FieldLevelEncryptionConfigSpecInitProviderQueryArgProfileConfig>? QueryArgProfileConfig { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FieldLevelEncryptionConfigSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -420,6 +452,7 @@ public enum V1beta1FieldLevelEncryptionConfigSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FieldLevelEncryptionConfigSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -430,6 +463,7 @@ public enum V1beta1FieldLevelEncryptionConfigSpecProviderConfigRefPolicyResoluti
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FieldLevelEncryptionConfigSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -441,6 +475,7 @@ public enum V1beta1FieldLevelEncryptionConfigSpecProviderConfigRefPolicyResolveE
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -455,6 +490,7 @@ public partial class V1beta1FieldLevelEncryptionConfigSpecProviderConfigRefPolic
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -466,6 +502,7 @@ public partial class V1beta1FieldLevelEncryptionConfigSpecProviderConfigRef
     public V1beta1FieldLevelEncryptionConfigSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FieldLevelEncryptionConfigSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -476,6 +513,7 @@ public enum V1beta1FieldLevelEncryptionConfigSpecPublishConnectionDetailsToConfi
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FieldLevelEncryptionConfigSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -487,6 +525,7 @@ public enum V1beta1FieldLevelEncryptionConfigSpecPublishConnectionDetailsToConfi
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -501,6 +540,7 @@ public partial class V1beta1FieldLevelEncryptionConfigSpecPublishConnectionDetai
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -513,6 +553,7 @@ public partial class V1beta1FieldLevelEncryptionConfigSpecPublishConnectionDetai
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -529,6 +570,7 @@ public partial class V1beta1FieldLevelEncryptionConfigSpecPublishConnectionDetai
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -545,6 +587,7 @@ public partial class V1beta1FieldLevelEncryptionConfigSpecPublishConnectionDetai
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -557,6 +600,7 @@ public partial class V1beta1FieldLevelEncryptionConfigSpecWriteConnectionSecretT
 }
 
 /// <summary>FieldLevelEncryptionConfigSpec defines the desired state of FieldLevelEncryptionConfig</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -590,6 +634,7 @@ public partial class V1beta1FieldLevelEncryptionConfigSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigStatusAtProviderContentTypeProfileConfigContentTypeProfilesItems
 {
     /// <summary>he content type for a field-level encryption content type-profile mapping. Valid value is application/x-www-form-urlencoded.</summary>
@@ -606,6 +651,7 @@ public partial class V1beta1FieldLevelEncryptionConfigStatusAtProviderContentTyp
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigStatusAtProviderContentTypeProfileConfigContentTypeProfiles
 {
     /// <summary></summary>
@@ -614,6 +660,7 @@ public partial class V1beta1FieldLevelEncryptionConfigStatusAtProviderContentTyp
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigStatusAtProviderContentTypeProfileConfig
 {
     /// <summary>Object that contains an attribute items that contains the list of configurations for a field-level encryption content type-profile. See Content Type Profile.</summary>
@@ -626,6 +673,7 @@ public partial class V1beta1FieldLevelEncryptionConfigStatusAtProviderContentTyp
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigStatusAtProviderQueryArgProfileConfigQueryArgProfilesItems
 {
     /// <summary>The profile ID for a field-level encryption content type-profile mapping.</summary>
@@ -638,6 +686,7 @@ public partial class V1beta1FieldLevelEncryptionConfigStatusAtProviderQueryArgPr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigStatusAtProviderQueryArgProfileConfigQueryArgProfiles
 {
     /// <summary></summary>
@@ -646,6 +695,7 @@ public partial class V1beta1FieldLevelEncryptionConfigStatusAtProviderQueryArgPr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigStatusAtProviderQueryArgProfileConfig
 {
     /// <summary>Flag to set if you want a request to be forwarded to the origin even if the profile specified by the field-level encryption query argument, fle-profile, is unknown.</summary>
@@ -658,6 +708,7 @@ public partial class V1beta1FieldLevelEncryptionConfigStatusAtProviderQueryArgPr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigStatusAtProvider
 {
     /// <summary>Internal value used by CloudFront to allow future updates to the Field Level Encryption Config.</summary>
@@ -686,6 +737,7 @@ public partial class V1beta1FieldLevelEncryptionConfigStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -714,6 +766,7 @@ public partial class V1beta1FieldLevelEncryptionConfigStatusConditions
 }
 
 /// <summary>FieldLevelEncryptionConfigStatus defines the observed state of FieldLevelEncryptionConfig.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionConfigStatus
 {
     /// <summary></summary>
@@ -729,8 +782,9 @@ public partial class V1beta1FieldLevelEncryptionConfigStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>FieldLevelEncryptionConfig is the Schema for the FieldLevelEncryptionConfigs API. Provides a CloudFront Field-level Encryption Config resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1FieldLevelEncryptionConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FieldLevelEncryptionConfigSpec>, IStatus<V1beta1FieldLevelEncryptionConfigStatus>
 {
     public const string KubeApiVersion = "v1beta1";

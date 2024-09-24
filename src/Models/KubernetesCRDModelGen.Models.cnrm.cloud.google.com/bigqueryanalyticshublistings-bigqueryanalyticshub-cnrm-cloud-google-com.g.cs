@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigqueryanalyticshub.cnrm.cloud.google.com;
 /// <summary>Shared dataset i.e. BigQuery dataset source.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryAnalyticsHubListingSpecBigqueryDataset
 {
     /// <summary>Resource name of the dataset source for this listing. e.g. projects/myproject/datasets/123.</summary>
@@ -17,6 +18,7 @@ public partial class V1alpha1BigQueryAnalyticsHubListingSpecBigqueryDataset
 }
 
 /// <summary>Details of the data provider who owns the source data.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryAnalyticsHubListingSpecDataProvider
 {
     /// <summary>Name of the data provider.</summary>
@@ -29,6 +31,7 @@ public partial class V1alpha1BigQueryAnalyticsHubListingSpecDataProvider
 }
 
 /// <summary>The project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryAnalyticsHubListingSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -45,6 +48,7 @@ public partial class V1alpha1BigQueryAnalyticsHubListingSpecProjectRef
 }
 
 /// <summary>Details of the publisher who owns the listing and who can share the source data.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryAnalyticsHubListingSpecPublisher
 {
     /// <summary>Name of the listing publisher.</summary>
@@ -57,6 +61,7 @@ public partial class V1alpha1BigQueryAnalyticsHubListingSpecPublisher
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryAnalyticsHubListingSpec
 {
     /// <summary>Shared dataset i.e. BigQuery dataset source.</summary>
@@ -117,6 +122,7 @@ public partial class V1alpha1BigQueryAnalyticsHubListingSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryAnalyticsHubListingStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -141,6 +147,7 @@ public partial class V1alpha1BigQueryAnalyticsHubListingStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryAnalyticsHubListingStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -156,8 +163,9 @@ public partial class V1alpha1BigQueryAnalyticsHubListingStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1BigQueryAnalyticsHubListing : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1BigQueryAnalyticsHubListingSpec>, IStatus<V1alpha1BigQueryAnalyticsHubListingStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

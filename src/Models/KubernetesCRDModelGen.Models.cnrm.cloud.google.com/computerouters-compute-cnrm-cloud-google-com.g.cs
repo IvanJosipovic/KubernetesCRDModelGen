@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRouterSpecBgpAdvertisedIpRanges
 {
     /// <summary>User-specified description for the IP range.</summary>
@@ -21,6 +22,7 @@ public partial class V1beta1ComputeRouterSpecBgpAdvertisedIpRanges
 }
 
 /// <summary>BGP information specific to this router.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRouterSpecBgp
 {
     /// <summary>User-specified flag to indicate which mode to use for advertisement. Default value: "DEFAULT" Possible values: ["DEFAULT", "CUSTOM"].</summary>
@@ -45,6 +47,7 @@ public partial class V1beta1ComputeRouterSpecBgp
 }
 
 /// <summary>A reference to the network to which this router belongs.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRouterSpecNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -61,6 +64,7 @@ public partial class V1beta1ComputeRouterSpecNetworkRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRouterSpec
 {
     /// <summary>BGP information specific to this router.</summary>
@@ -89,6 +93,7 @@ public partial class V1beta1ComputeRouterSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRouterStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -113,6 +118,7 @@ public partial class V1beta1ComputeRouterStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRouterStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -132,8 +138,9 @@ public partial class V1beta1ComputeRouterStatus
     public string? SelfLink { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ComputeRouter : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeRouterSpec>, IStatus<V1beta1ComputeRouterStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.securityinsights.azure.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -18,6 +19,7 @@ public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecDeletionPolicyEnum
     Delete
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderResourceGroupNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -28,6 +30,7 @@ public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderResourc
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderResourceGroupNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -39,6 +42,7 @@ public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderResourc
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -53,6 +57,7 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProvid
 }
 
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -64,6 +69,7 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProvid
     public V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -74,6 +80,7 @@ public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderResourc
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderResourceGroupNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -85,6 +92,7 @@ public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderResourc
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -99,6 +107,7 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProvid
 }
 
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -114,6 +123,7 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProvid
     public V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderWorkspaceNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -124,6 +134,7 @@ public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderWorkspa
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderWorkspaceNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -135,6 +146,7 @@ public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderWorkspa
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderWorkspaceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -149,6 +161,7 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProvid
 }
 
 /// <summary>Reference to a Workspace in operationalinsights to populate workspaceName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderWorkspaceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -160,6 +173,7 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProvid
     public V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderWorkspaceNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderWorkspaceNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -170,6 +184,7 @@ public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderWorkspa
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderWorkspaceNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -181,6 +196,7 @@ public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderWorkspa
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderWorkspaceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -195,6 +211,7 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProvid
 }
 
 /// <summary>Selector for a Workspace in operationalinsights to populate workspaceName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderWorkspaceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -211,6 +228,7 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProvid
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProvider
 {
     /// <summary>Specifies if the Workspace is using Customer managed key. Defaults to false. Changing this forces a new resource to be created.</summary>
@@ -246,6 +264,7 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProvid
     public V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderWorkspaceNameSelector? WorkspaceNameSelector { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderResourceGroupNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -256,6 +275,7 @@ public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderResour
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderResourceGroupNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -267,6 +287,7 @@ public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderResour
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -281,6 +302,7 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProvi
 }
 
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -292,6 +314,7 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProvi
     public V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -302,6 +325,7 @@ public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderResour
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -313,6 +337,7 @@ public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderResour
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -327,6 +352,7 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProvi
 }
 
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -342,6 +368,7 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProvi
     public V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderWorkspaceNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -352,6 +379,7 @@ public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderWorksp
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderWorkspaceNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -363,6 +391,7 @@ public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderWorksp
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderWorkspaceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -377,6 +406,7 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProvi
 }
 
 /// <summary>Reference to a Workspace in operationalinsights to populate workspaceName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderWorkspaceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -388,6 +418,7 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProvi
     public V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderWorkspaceNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderWorkspaceNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -398,6 +429,7 @@ public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderWorksp
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderWorkspaceNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -409,6 +441,7 @@ public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderWorksp
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderWorkspaceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -423,6 +456,7 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProvi
 }
 
 /// <summary>Selector for a Workspace in operationalinsights to populate workspaceName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderWorkspaceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -439,6 +473,7 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProvi
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProvider
 {
     /// <summary>Specifies if the Workspace is using Customer managed key. Defaults to false. Changing this forces a new resource to be created.</summary>
@@ -474,6 +509,7 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProvi
     public V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderWorkspaceNameSelector? WorkspaceNameSelector { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -496,6 +532,7 @@ public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecManagementPolicies
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -506,6 +543,7 @@ public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecProviderConfigRefP
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -517,6 +555,7 @@ public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecProviderConfigRefP
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -531,6 +570,7 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecProviderC
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -542,6 +582,7 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecProviderC
     public V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -552,6 +593,7 @@ public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecPublishConnectionD
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -563,6 +605,7 @@ public enum V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecPublishConnectionD
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -577,6 +620,7 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecPublishCo
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -589,6 +633,7 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecPublishCo
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -605,6 +650,7 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecPublishCo
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -621,6 +667,7 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecPublishCo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -633,6 +680,7 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecWriteConn
 }
 
 /// <summary>SentinelLogAnalyticsWorkspaceOnboardingSpec defines the desired state of SentinelLogAnalyticsWorkspaceOnboarding</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -666,6 +714,7 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingStatusAtProvider
 {
     /// <summary>Specifies if the Workspace is using Customer managed key. Defaults to false. Changing this forces a new resource to be created.</summary>
@@ -690,6 +739,7 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingStatusAtProvi
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -718,6 +768,7 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingStatusConditi
 }
 
 /// <summary>SentinelLogAnalyticsWorkspaceOnboardingStatus defines the observed state of SentinelLogAnalyticsWorkspaceOnboarding.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingStatus
 {
     /// <summary></summary>
@@ -733,8 +784,9 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>SentinelLogAnalyticsWorkspaceOnboarding is the Schema for the SentinelLogAnalyticsWorkspaceOnboardings API. Manages a Security Insights Sentinel Onboarding States.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboarding : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpec>, IStatus<V1beta1SentinelLogAnalyticsWorkspaceOnboardingStatus>
 {
     public const string KubeApiVersion = "v1beta1";

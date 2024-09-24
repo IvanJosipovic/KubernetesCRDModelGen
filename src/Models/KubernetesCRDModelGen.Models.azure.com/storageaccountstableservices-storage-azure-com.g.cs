@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.azure.com;
 /// <summary>Storage version of v1api20230101.CorsRule Specifies a CORS rule for the Blob service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsTableServiceSpecCorsCorsRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -37,6 +38,7 @@ public partial class V1api20230101storageStorageAccountsTableServiceSpecCorsCors
 }
 
 /// <summary>Storage version of v1api20230101.CorsRules Sets the CORS rules. You can include up to five CorsRule elements in the request.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsTableServiceSpecCors
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -49,6 +51,7 @@ public partial class V1api20230101storageStorageAccountsTableServiceSpecCors
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a storage.azure.com/StorageAccount resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsTableServiceSpecOwner
 {
     /// <summary></summary>
@@ -61,6 +64,7 @@ public partial class V1api20230101storageStorageAccountsTableServiceSpecOwner
 }
 
 /// <summary>Storage version of v1api20230101.StorageAccounts_TableService_Spec</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsTableServiceSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -81,6 +85,7 @@ public partial class V1api20230101storageStorageAccountsTableServiceSpec
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsTableServiceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -113,6 +118,7 @@ public partial class V1api20230101storageStorageAccountsTableServiceStatusCondit
 }
 
 /// <summary>Storage version of v1api20230101.CorsRule_STATUS Specifies a CORS rule for the Blob service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsTableServiceStatusCorsCorsRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -141,6 +147,7 @@ public partial class V1api20230101storageStorageAccountsTableServiceStatusCorsCo
 }
 
 /// <summary>Storage version of v1api20230101.CorsRules_STATUS Sets the CORS rules. You can include up to five CorsRule elements in the request.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsTableServiceStatusCors
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -153,6 +160,7 @@ public partial class V1api20230101storageStorageAccountsTableServiceStatusCors
 }
 
 /// <summary>Storage version of v1api20230101.StorageAccounts_TableService_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsTableServiceStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -180,8 +188,9 @@ public partial class V1api20230101storageStorageAccountsTableServiceStatus
     public string? Type { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Storage version of v1api20230101.StorageAccountsTableService Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2023-01-01/table.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/tableServices/default</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1api20230101storageStorageAccountsTableService : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230101storageStorageAccountsTableServiceSpec>, IStatus<V1api20230101storageStorageAccountsTableServiceStatus>
 {
     public const string KubeApiVersion = "v1api20230101storage";

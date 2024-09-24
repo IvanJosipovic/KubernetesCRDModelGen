@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.certmanager.io;
 /// <summary>Reference to the issuer responsible for issuing the certificate. If the issuer is namespace-scoped, it must be in the same namespace as the Certificate. If the issuer is cluster-scoped, it can be used from any namespace.   The `name` field of the reference must always be specified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CertificateRequestSpecIssuerRef
 {
     /// <summary>Group of the resource being referred to.</summary>
@@ -24,6 +25,7 @@ public partial class V1CertificateRequestSpecIssuerRef
     public string Name { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CertificateRequestSpecUsagesEnum
 {
     [EnumMember(Value = "signing"), JsonStringEnumMemberName("signing")]
@@ -98,6 +100,7 @@ public enum V1CertificateRequestSpecUsagesEnum
 }
 
 /// <summary>Specification of the desired state of the CertificateRequest resource. https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CertificateRequestSpec
 {
     /// <summary>Requested 'duration' (i.e. lifetime) of the Certificate. Note that the issuer may choose to ignore the requested duration, just like any other requested attribute.</summary>
@@ -137,6 +140,7 @@ public partial class V1CertificateRequestSpec
     public string? Username { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CertificateRequestStatusConditionsStatusEnum
 {
     [EnumMember(Value = "true"), JsonStringEnumMemberName("true")]
@@ -151,6 +155,7 @@ public enum V1CertificateRequestStatusConditionsStatusEnum
 }
 
 /// <summary>CertificateRequestCondition contains condition information for a CertificateRequest.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CertificateRequestStatusConditions
 {
     /// <summary>LastTransitionTime is the timestamp corresponding to the last status change of this condition.</summary>
@@ -176,6 +181,7 @@ public partial class V1CertificateRequestStatusConditions
 }
 
 /// <summary>Status of the CertificateRequest. This is set and managed automatically. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CertificateRequestStatus
 {
     /// <summary>The PEM encoded X.509 certificate of the signer, also known as the CA (Certificate Authority). This is set on a best-effort basis by different issuers. If not set, the CA is assumed to be unknown/not available.</summary>
@@ -195,8 +201,9 @@ public partial class V1CertificateRequestStatus
     public string? FailureTime { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>A CertificateRequest is used to request a signed certificate from one of the configured issuers.   All fields within the CertificateRequest's `spec` are immutable after creation. A CertificateRequest will either succeed or fail, as denoted by its `Ready` status condition and its `status.failureTime` field.   A CertificateRequest is a one-shot resource, meaning it represents a single point in time request for a certificate and cannot be re-used.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1CertificateRequest : IKubernetesObject<V1ObjectMeta>, ISpec<V1CertificateRequestSpec>, IStatus<V1CertificateRequestStatus>
 {
     public const string KubeApiVersion = "v1";

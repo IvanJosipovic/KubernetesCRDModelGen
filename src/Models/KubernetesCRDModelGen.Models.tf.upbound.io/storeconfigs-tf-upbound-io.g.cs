@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.tf.upbound.io;
 /// <summary>Env is a reference to an environment variable that contains credentials that must be used to connect to the provider.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoreConfigSpecKubernetesAuthEnv
 {
     /// <summary>Name is the name of an environment variable.</summary>
@@ -17,6 +18,7 @@ public partial class V1beta1StoreConfigSpecKubernetesAuthEnv
 }
 
 /// <summary>Fs is a reference to a filesystem location that contains credentials that must be used to connect to the provider.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoreConfigSpecKubernetesAuthFs
 {
     /// <summary>Path is a filesystem path.</summary>
@@ -25,6 +27,7 @@ public partial class V1beta1StoreConfigSpecKubernetesAuthFs
 }
 
 /// <summary>A SecretRef is a reference to a secret key that contains the credentials that must be used to connect to the provider.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoreConfigSpecKubernetesAuthSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -40,6 +43,7 @@ public partial class V1beta1StoreConfigSpecKubernetesAuthSecretRef
     public string Namespace { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1StoreConfigSpecKubernetesAuthSourceEnum
 {
     [EnumMember(Value = "None"), JsonStringEnumMemberName("None")]
@@ -57,6 +61,7 @@ public enum V1beta1StoreConfigSpecKubernetesAuthSourceEnum
 }
 
 /// <summary>Credentials used to connect to the Kubernetes API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoreConfigSpecKubernetesAuth
 {
     /// <summary>Env is a reference to an environment variable that contains credentials that must be used to connect to the provider.</summary>
@@ -78,6 +83,7 @@ public partial class V1beta1StoreConfigSpecKubernetesAuth
 }
 
 /// <summary>Kubernetes configures a Kubernetes secret store. If the "type" is "Kubernetes" but no config provided, in cluster config will be used.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoreConfigSpecKubernetes
 {
     /// <summary>Credentials used to connect to the Kubernetes API.</summary>
@@ -86,6 +92,7 @@ public partial class V1beta1StoreConfigSpecKubernetes
 }
 
 /// <summary>ConfigRef contains store config reference info.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoreConfigSpecPluginConfigRef
 {
     /// <summary>APIVersion of the referenced config.</summary>
@@ -102,6 +109,7 @@ public partial class V1beta1StoreConfigSpecPluginConfigRef
 }
 
 /// <summary>Plugin configures External secret store as a plugin.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoreConfigSpecPlugin
 {
     /// <summary>ConfigRef contains store config reference info.</summary>
@@ -113,6 +121,7 @@ public partial class V1beta1StoreConfigSpecPlugin
     public string? Endpoint { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1StoreConfigSpecTypeEnum
 {
     [EnumMember(Value = "Kubernetes"), JsonStringEnumMemberName("Kubernetes")]
@@ -127,6 +136,7 @@ public enum V1beta1StoreConfigSpecTypeEnum
 }
 
 /// <summary>A StoreConfigSpec defines the desired state of a ProviderConfig.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoreConfigSpec
 {
     /// <summary>DefaultScope used for scoping secrets for "cluster-scoped" resources. If store type is "Kubernetes", this would mean the default namespace to store connection secrets for cluster scoped resources. In case of "Vault", this would be used as the default parent path. Typically, should be set as Crossplane installation namespace.</summary>
@@ -148,6 +158,7 @@ public partial class V1beta1StoreConfigSpec
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoreConfigStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -176,6 +187,7 @@ public partial class V1beta1StoreConfigStatusConditions
 }
 
 /// <summary>A StoreConfigStatus represents the status of a StoreConfig.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoreConfigStatus
 {
     /// <summary>Conditions of the resource.</summary>
@@ -183,8 +195,9 @@ public partial class V1beta1StoreConfigStatus
     public IList<V1beta1StoreConfigStatusConditions>? Conditions { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>A StoreConfig configures how GCP controller should store connection details.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1StoreConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1StoreConfigSpec>, IStatus<V1beta1StoreConfigStatus>
 {
     public const string KubeApiVersion = "v1beta1";

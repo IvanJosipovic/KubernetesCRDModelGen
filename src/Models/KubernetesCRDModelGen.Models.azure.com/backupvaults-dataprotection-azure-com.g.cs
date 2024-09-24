@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataprotection.azure.com;
 /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecIdentityUserAssignedIdentitiesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -29,6 +30,7 @@ public partial class V1api20231101storageBackupVaultSpecIdentityUserAssignedIden
 }
 
 /// <summary>Storage version of v1api20231101.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -41,6 +43,7 @@ public partial class V1api20231101storageBackupVaultSpecIdentityUserAssignedIden
 }
 
 /// <summary>Storage version of v1api20231101.DppIdentityDetails Identity details</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -57,6 +60,7 @@ public partial class V1api20231101storageBackupVaultSpecIdentity
 }
 
 /// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecOperatorSpecConfigMapsPrincipalId
 {
     /// <summary>Key is the key in the ConfigMap being referenced</summary>
@@ -69,6 +73,7 @@ public partial class V1api20231101storageBackupVaultSpecOperatorSpecConfigMapsPr
 }
 
 /// <summary>Storage version of v1api20231101.BackupVaultOperatorConfigMaps</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecOperatorSpecConfigMaps
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -81,6 +86,7 @@ public partial class V1api20231101storageBackupVaultSpecOperatorSpecConfigMaps
 }
 
 /// <summary>Storage version of v1api20231101.BackupVaultOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -93,6 +99,7 @@ public partial class V1api20231101storageBackupVaultSpecOperatorSpec
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecOwner
 {
     /// <summary></summary>
@@ -105,6 +112,7 @@ public partial class V1api20231101storageBackupVaultSpecOwner
 }
 
 /// <summary>Storage version of v1api20231101.CrossRegionRestoreSettings</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecPropertiesFeatureSettingsCrossRegionRestoreSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -117,6 +125,7 @@ public partial class V1api20231101storageBackupVaultSpecPropertiesFeatureSetting
 }
 
 /// <summary>Storage version of v1api20231101.CrossSubscriptionRestoreSettings CrossSubscriptionRestore Settings</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecPropertiesFeatureSettingsCrossSubscriptionRestoreSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -129,6 +138,7 @@ public partial class V1api20231101storageBackupVaultSpecPropertiesFeatureSetting
 }
 
 /// <summary>Storage version of v1api20231101.FeatureSettings Class containing feature settings of vault</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecPropertiesFeatureSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -145,6 +155,7 @@ public partial class V1api20231101storageBackupVaultSpecPropertiesFeatureSetting
 }
 
 /// <summary>Storage version of v1api20231101.AzureMonitorAlertSettings Settings for Azure Monitor based alerts</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecPropertiesMonitoringSettingsAzureMonitorAlertSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -157,6 +168,7 @@ public partial class V1api20231101storageBackupVaultSpecPropertiesMonitoringSett
 }
 
 /// <summary>Storage version of v1api20231101.MonitoringSettings Monitoring Settings</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecPropertiesMonitoringSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -169,6 +181,7 @@ public partial class V1api20231101storageBackupVaultSpecPropertiesMonitoringSett
 }
 
 /// <summary>Storage version of v1api20231101.ImmutabilitySettings Immutability Settings at vault level</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecPropertiesSecuritySettingsImmutabilitySettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -181,6 +194,7 @@ public partial class V1api20231101storageBackupVaultSpecPropertiesSecuritySettin
 }
 
 /// <summary>Storage version of v1api20231101.SoftDeleteSettings Soft delete related settings</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecPropertiesSecuritySettingsSoftDeleteSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -197,6 +211,7 @@ public partial class V1api20231101storageBackupVaultSpecPropertiesSecuritySettin
 }
 
 /// <summary>Storage version of v1api20231101.SecuritySettings Class containing security settings of vault</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecPropertiesSecuritySettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -213,6 +228,7 @@ public partial class V1api20231101storageBackupVaultSpecPropertiesSecuritySettin
 }
 
 /// <summary>Storage version of v1api20231101.StorageSetting Storage setting</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecPropertiesStorageSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -229,6 +245,7 @@ public partial class V1api20231101storageBackupVaultSpecPropertiesStorageSetting
 }
 
 /// <summary>Storage version of v1api20231101.BackupVaultSpec Backup Vault</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -257,6 +274,7 @@ public partial class V1api20231101storageBackupVaultSpecProperties
 }
 
 /// <summary>Storage version of v1api20231101.BackupVault_Spec</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -297,6 +315,7 @@ public partial class V1api20231101storageBackupVaultSpec
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -329,6 +348,7 @@ public partial class V1api20231101storageBackupVaultStatusConditions
 }
 
 /// <summary>Storage version of v1api20231101.UserAssignedIdentity_STATUS User assigned identity properties</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultStatusIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -345,6 +365,7 @@ public partial class V1api20231101storageBackupVaultStatusIdentityUserAssignedId
 }
 
 /// <summary>Storage version of v1api20231101.DppIdentityDetails_STATUS Identity details</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultStatusIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -369,6 +390,7 @@ public partial class V1api20231101storageBackupVaultStatusIdentity
 }
 
 /// <summary>Storage version of v1api20231101.CrossRegionRestoreSettings_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultStatusPropertiesFeatureSettingsCrossRegionRestoreSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -381,6 +403,7 @@ public partial class V1api20231101storageBackupVaultStatusPropertiesFeatureSetti
 }
 
 /// <summary>Storage version of v1api20231101.CrossSubscriptionRestoreSettings_STATUS CrossSubscriptionRestore Settings</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultStatusPropertiesFeatureSettingsCrossSubscriptionRestoreSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -393,6 +416,7 @@ public partial class V1api20231101storageBackupVaultStatusPropertiesFeatureSetti
 }
 
 /// <summary>Storage version of v1api20231101.FeatureSettings_STATUS Class containing feature settings of vault</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultStatusPropertiesFeatureSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -409,6 +433,7 @@ public partial class V1api20231101storageBackupVaultStatusPropertiesFeatureSetti
 }
 
 /// <summary>Storage version of v1api20231101.AzureMonitorAlertSettings_STATUS Settings for Azure Monitor based alerts</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultStatusPropertiesMonitoringSettingsAzureMonitorAlertSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -421,6 +446,7 @@ public partial class V1api20231101storageBackupVaultStatusPropertiesMonitoringSe
 }
 
 /// <summary>Storage version of v1api20231101.MonitoringSettings_STATUS Monitoring Settings</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultStatusPropertiesMonitoringSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -433,6 +459,7 @@ public partial class V1api20231101storageBackupVaultStatusPropertiesMonitoringSe
 }
 
 /// <summary>Storage version of v1api20231101.ResourceMoveDetails_STATUS ResourceMoveDetails will be returned in response to GetResource call from ARM</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultStatusPropertiesResourceMoveDetails
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -461,6 +488,7 @@ public partial class V1api20231101storageBackupVaultStatusPropertiesResourceMove
 }
 
 /// <summary>Storage version of v1api20231101.ImmutabilitySettings_STATUS Immutability Settings at vault level</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultStatusPropertiesSecuritySettingsImmutabilitySettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -473,6 +501,7 @@ public partial class V1api20231101storageBackupVaultStatusPropertiesSecuritySett
 }
 
 /// <summary>Storage version of v1api20231101.SoftDeleteSettings_STATUS Soft delete related settings</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultStatusPropertiesSecuritySettingsSoftDeleteSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -489,6 +518,7 @@ public partial class V1api20231101storageBackupVaultStatusPropertiesSecuritySett
 }
 
 /// <summary>Storage version of v1api20231101.SecuritySettings_STATUS Class containing security settings of vault</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultStatusPropertiesSecuritySettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -505,6 +535,7 @@ public partial class V1api20231101storageBackupVaultStatusPropertiesSecuritySett
 }
 
 /// <summary>Storage version of v1api20231101.StorageSetting_STATUS Storage setting</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultStatusPropertiesStorageSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -521,6 +552,7 @@ public partial class V1api20231101storageBackupVaultStatusPropertiesStorageSetti
 }
 
 /// <summary>Storage version of v1api20231101.BackupVault_STATUS Backup Vault</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultStatusProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -569,6 +601,7 @@ public partial class V1api20231101storageBackupVaultStatusProperties
 }
 
 /// <summary>Storage version of v1api20231101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -601,6 +634,7 @@ public partial class V1api20231101storageBackupVaultStatusSystemData
 }
 
 /// <summary>Storage version of v1api20231101.BackupVaultResource_STATUS Backup Vault Resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -648,8 +682,9 @@ public partial class V1api20231101storageBackupVaultStatus
     public string? Type { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Storage version of v1api20231101.BackupVault Generator information: - Generated from: /dataprotection/resource-manager/Microsoft.DataProtection/stable/2023-11-01/dataprotection.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataProtection/backupVaults/{vaultName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1api20231101storageBackupVault : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20231101storageBackupVaultSpec>, IStatus<V1api20231101storageBackupVaultStatus>
 {
     public const string KubeApiVersion = "v1api20231101storage";

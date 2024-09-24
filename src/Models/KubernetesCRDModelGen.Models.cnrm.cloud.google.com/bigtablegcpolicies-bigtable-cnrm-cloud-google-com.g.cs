@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigtable.cnrm.cloud.google.com;
 /// <summary>The name of the Bigtable instance.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigtableGCPolicySpecInstanceRef
 {
     /// <summary>Allowed value: The `name` field of a `BigtableInstance` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1BigtableGCPolicySpecInstanceRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigtableGCPolicySpecMaxAge
 {
     /// <summary>DEPRECATED. Deprecated in favor of duration. Immutable. Number of days before applying GC policy.</summary>
@@ -37,6 +39,7 @@ public partial class V1beta1BigtableGCPolicySpecMaxAge
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigtableGCPolicySpecMaxVersion
 {
     /// <summary>Immutable. Number of version before applying the GC policy.</summary>
@@ -45,6 +48,7 @@ public partial class V1beta1BigtableGCPolicySpecMaxVersion
 }
 
 /// <summary>The name of the table.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigtableGCPolicySpecTableRef
 {
     /// <summary>Allowed value: The `name` field of a `BigtableTable` resource.</summary>
@@ -61,6 +65,7 @@ public partial class V1beta1BigtableGCPolicySpecTableRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigtableGCPolicySpec
 {
     /// <summary>Immutable. The name of the column family.</summary>
@@ -97,6 +102,7 @@ public partial class V1beta1BigtableGCPolicySpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigtableGCPolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -121,6 +127,7 @@ public partial class V1beta1BigtableGCPolicyStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigtableGCPolicyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -132,8 +139,9 @@ public partial class V1beta1BigtableGCPolicyStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1BigtableGCPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BigtableGCPolicySpec>, IStatus<V1beta1BigtableGCPolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.acme.certmanager.io;
 /// <summary>References a properly configured ACME-type Issuer which should be used to create this Challenge. If the Issuer does not exist, processing will be retried. If the Issuer is not an 'ACME' Issuer, an error will be returned and the Challenge will be marked as failed.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecIssuerRef
 {
     /// <summary>Group of the resource being referred to.</summary>
@@ -25,6 +26,7 @@ public partial class V1ChallengeSpecIssuerRef
 }
 
 /// <summary>A reference to a specific 'key' within a Secret resource. In some instances, `key` is a required field.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverDns01AcmeDNSAccountSecretRef
 {
     /// <summary>The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required.</summary>
@@ -37,6 +39,7 @@ public partial class V1ChallengeSpecSolverDns01AcmeDNSAccountSecretRef
 }
 
 /// <summary>Use the 'ACME DNS' (https://github.com/joohoi/acme-dns) API to manage DNS01 challenge records.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverDns01AcmeDNS
 {
     /// <summary>A reference to a specific 'key' within a Secret resource. In some instances, `key` is a required field.</summary>
@@ -49,6 +52,7 @@ public partial class V1ChallengeSpecSolverDns01AcmeDNS
 }
 
 /// <summary>A reference to a specific 'key' within a Secret resource. In some instances, `key` is a required field.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverDns01AkamaiAccessTokenSecretRef
 {
     /// <summary>The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required.</summary>
@@ -61,6 +65,7 @@ public partial class V1ChallengeSpecSolverDns01AkamaiAccessTokenSecretRef
 }
 
 /// <summary>A reference to a specific 'key' within a Secret resource. In some instances, `key` is a required field.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverDns01AkamaiClientSecretSecretRef
 {
     /// <summary>The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required.</summary>
@@ -73,6 +78,7 @@ public partial class V1ChallengeSpecSolverDns01AkamaiClientSecretSecretRef
 }
 
 /// <summary>A reference to a specific 'key' within a Secret resource. In some instances, `key` is a required field.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverDns01AkamaiClientTokenSecretRef
 {
     /// <summary>The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required.</summary>
@@ -85,6 +91,7 @@ public partial class V1ChallengeSpecSolverDns01AkamaiClientTokenSecretRef
 }
 
 /// <summary>Use the Akamai DNS zone management API to manage DNS01 challenge records.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverDns01Akamai
 {
     /// <summary>A reference to a specific 'key' within a Secret resource. In some instances, `key` is a required field.</summary>
@@ -105,6 +112,7 @@ public partial class V1ChallengeSpecSolverDns01Akamai
 }
 
 /// <summary>Auth: Azure Service Principal: A reference to a Secret containing the password associated with the Service Principal. If set, ClientID and TenantID must also be set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverDns01AzureDNSClientSecretSecretRef
 {
     /// <summary>The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required.</summary>
@@ -116,6 +124,7 @@ public partial class V1ChallengeSpecSolverDns01AzureDNSClientSecretSecretRef
     public string Name { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ChallengeSpecSolverDns01AzureDNSEnvironmentEnum
 {
     [EnumMember(Value = "AzurePublicCloud"), JsonStringEnumMemberName("AzurePublicCloud")]
@@ -133,6 +142,7 @@ public enum V1ChallengeSpecSolverDns01AzureDNSEnvironmentEnum
 }
 
 /// <summary>Auth: Azure Workload Identity or Azure Managed Service Identity: Settings to enable Azure Workload Identity or Azure Managed Service Identity If set, ClientID, ClientSecret and TenantID must not be set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverDns01AzureDNSManagedIdentity
 {
     /// <summary>client ID of the managed identity, can not be used at the same time as resourceID</summary>
@@ -145,6 +155,7 @@ public partial class V1ChallengeSpecSolverDns01AzureDNSManagedIdentity
 }
 
 /// <summary>Use the Microsoft Azure DNS API to manage DNS01 challenge records.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverDns01AzureDNS
 {
     /// <summary>Auth: Azure Service Principal: The ClientID of the Azure Service Principal used to authenticate with Azure DNS. If set, ClientSecret and TenantID must also be set.</summary>
@@ -182,6 +193,7 @@ public partial class V1ChallengeSpecSolverDns01AzureDNS
 }
 
 /// <summary>A reference to a specific 'key' within a Secret resource. In some instances, `key` is a required field.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverDns01CloudDNSServiceAccountSecretRef
 {
     /// <summary>The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required.</summary>
@@ -194,6 +206,7 @@ public partial class V1ChallengeSpecSolverDns01CloudDNSServiceAccountSecretRef
 }
 
 /// <summary>Use the Google Cloud DNS API to manage DNS01 challenge records.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverDns01CloudDNS
 {
     /// <summary>HostedZoneName is an optional field that tells cert-manager in which Cloud DNS zone the challenge record has to be created. If left empty cert-manager will automatically choose a zone.</summary>
@@ -210,6 +223,7 @@ public partial class V1ChallengeSpecSolverDns01CloudDNS
 }
 
 /// <summary>API key to use to authenticate with Cloudflare. Note: using an API token to authenticate is now the recommended method as it allows greater control of permissions.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverDns01CloudflareApiKeySecretRef
 {
     /// <summary>The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required.</summary>
@@ -222,6 +236,7 @@ public partial class V1ChallengeSpecSolverDns01CloudflareApiKeySecretRef
 }
 
 /// <summary>API token used to authenticate with Cloudflare.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverDns01CloudflareApiTokenSecretRef
 {
     /// <summary>The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required.</summary>
@@ -234,6 +249,7 @@ public partial class V1ChallengeSpecSolverDns01CloudflareApiTokenSecretRef
 }
 
 /// <summary>Use the Cloudflare API to manage DNS01 challenge records.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverDns01Cloudflare
 {
     /// <summary>API key to use to authenticate with Cloudflare. Note: using an API token to authenticate is now the recommended method as it allows greater control of permissions.</summary>
@@ -249,6 +265,7 @@ public partial class V1ChallengeSpecSolverDns01Cloudflare
     public string? Email { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ChallengeSpecSolverDns01CnameStrategyEnum
 {
     [EnumMember(Value = "None"), JsonStringEnumMemberName("None")]
@@ -260,6 +277,7 @@ public enum V1ChallengeSpecSolverDns01CnameStrategyEnum
 }
 
 /// <summary>A reference to a specific 'key' within a Secret resource. In some instances, `key` is a required field.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverDns01DigitaloceanTokenSecretRef
 {
     /// <summary>The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required.</summary>
@@ -272,6 +290,7 @@ public partial class V1ChallengeSpecSolverDns01DigitaloceanTokenSecretRef
 }
 
 /// <summary>Use the DigitalOcean DNS API to manage DNS01 challenge records.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverDns01Digitalocean
 {
     /// <summary>A reference to a specific 'key' within a Secret resource. In some instances, `key` is a required field.</summary>
@@ -280,6 +299,7 @@ public partial class V1ChallengeSpecSolverDns01Digitalocean
 }
 
 /// <summary>The name of the secret containing the TSIG value. If ``tsigKeyName`` is defined, this field is required.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverDns01Rfc2136TsigSecretSecretRef
 {
     /// <summary>The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required.</summary>
@@ -292,6 +312,7 @@ public partial class V1ChallengeSpecSolverDns01Rfc2136TsigSecretSecretRef
 }
 
 /// <summary>Use RFC2136 ("Dynamic Updates in the Domain Name System") (https://datatracker.ietf.org/doc/rfc2136/) to manage DNS01 challenge records.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverDns01Rfc2136
 {
     /// <summary>The IP address or hostname of an authoritative DNS server supporting RFC2136 in the form host:port. If the host is an IPv6 address it must be enclosed in square brackets (e.g [2001:db8::1]) ; port is optional. This field is required.</summary>
@@ -312,6 +333,7 @@ public partial class V1ChallengeSpecSolverDns01Rfc2136
 }
 
 /// <summary>The SecretAccessKey is used for authentication. If set, pull the AWS access key ID from a key within a Kubernetes Secret. Cannot be set when AccessKeyID is set. If neither the Access Key nor Key ID are set, we fall-back to using env vars, shared credentials file or AWS Instance metadata, see: https://docs.aws.amazon.com/sdk-for-go/v1/developer-guide/configuring-sdk.html#specifying-credentials</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverDns01Route53AccessKeyIDSecretRef
 {
     /// <summary>The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required.</summary>
@@ -324,6 +346,7 @@ public partial class V1ChallengeSpecSolverDns01Route53AccessKeyIDSecretRef
 }
 
 /// <summary>A reference to a service account that will be used to request a bound token (also known as "projected token"). To use this field, you must configure an RBAC rule to let cert-manager request a token.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverDns01Route53AuthKubernetesServiceAccountRef
 {
     /// <summary>TokenAudiences is an optional list of audiences to include in the token passed to AWS. The default token consisting of the issuer's namespace and name is always included. If unset the audience defaults to `sts.amazonaws.com`.</summary>
@@ -336,6 +359,7 @@ public partial class V1ChallengeSpecSolverDns01Route53AuthKubernetesServiceAccou
 }
 
 /// <summary>Kubernetes authenticates with Route53 using AssumeRoleWithWebIdentity by passing a bound ServiceAccount token.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverDns01Route53AuthKubernetes
 {
     /// <summary>A reference to a service account that will be used to request a bound token (also known as "projected token"). To use this field, you must configure an RBAC rule to let cert-manager request a token.</summary>
@@ -344,6 +368,7 @@ public partial class V1ChallengeSpecSolverDns01Route53AuthKubernetes
 }
 
 /// <summary>Auth configures how cert-manager authenticates.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverDns01Route53Auth
 {
     /// <summary>Kubernetes authenticates with Route53 using AssumeRoleWithWebIdentity by passing a bound ServiceAccount token.</summary>
@@ -352,6 +377,7 @@ public partial class V1ChallengeSpecSolverDns01Route53Auth
 }
 
 /// <summary>The SecretAccessKey is used for authentication. If neither the Access Key nor Key ID are set, we fall-back to using env vars, shared credentials file or AWS Instance metadata, see: https://docs.aws.amazon.com/sdk-for-go/v1/developer-guide/configuring-sdk.html#specifying-credentials</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverDns01Route53SecretAccessKeySecretRef
 {
     /// <summary>The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required.</summary>
@@ -364,6 +390,7 @@ public partial class V1ChallengeSpecSolverDns01Route53SecretAccessKeySecretRef
 }
 
 /// <summary>Use the AWS Route53 API to manage DNS01 challenge records.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverDns01Route53
 {
     /// <summary>The AccessKeyID is used for authentication. Cannot be set when SecretAccessKeyID is set. If neither the Access Key nor Key ID are set, we fall-back to using env vars, shared credentials file or AWS Instance metadata, see: https://docs.aws.amazon.com/sdk-for-go/v1/developer-guide/configuring-sdk.html#specifying-credentials</summary>
@@ -396,6 +423,7 @@ public partial class V1ChallengeSpecSolverDns01Route53
 }
 
 /// <summary>Configure an external webhook based DNS01 challenge solver to manage DNS01 challenge records.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverDns01Webhook
 {
     /// <summary>Additional configuration that should be passed to the webhook apiserver when challenges are processed. This can contain arbitrary JSON data. Secret values should not be specified in this stanza. If secret values are needed (e.g. credentials for a DNS service), you should use a SecretKeySelector to reference a Secret resource. For details on the schema of this field, consult the webhook provider implementation's documentation.</summary>
@@ -412,6 +440,7 @@ public partial class V1ChallengeSpecSolverDns01Webhook
 }
 
 /// <summary>Configures cert-manager to attempt to complete authorizations by performing the DNS01 challenge flow.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverDns01
 {
     /// <summary>Use the 'ACME DNS' (https://github.com/joohoi/acme-dns) API to manage DNS01 challenge records.</summary>
@@ -457,6 +486,7 @@ public partial class V1ChallengeSpecSolverDns01
 }
 
 /// <summary>ParentReference identifies an API object (usually a Gateway) that can be considered a parent of this resource (usually a route). There are two kinds of parent resources with "Core" support:   * Gateway (Gateway conformance profile) * Service (Mesh conformance profile, ClusterIP Services only)   This API may be extended in the future to support additional kinds of parent resources.   The API object must be valid in the cluster; the Group and Kind must be registered in the cluster for this reference to be valid.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01GatewayHTTPRouteParentRefs
 {
     /// <summary>Group is the group of the referent. When unspecified, "gateway.networking.k8s.io" is inferred. To set the core API group (such as for a "Service" kind referent), Group must be explicitly set to "" (empty string).   Support: Core</summary>
@@ -485,6 +515,7 @@ public partial class V1ChallengeSpecSolverHttp01GatewayHTTPRouteParentRefs
 }
 
 /// <summary>The Gateway API is a sig-network community API that models service networking in Kubernetes (https://gateway-api.sigs.k8s.io/). The Gateway solver will create HTTPRoutes with the specified labels in the same namespace as the challenge. This solver is experimental, and fields / behaviour may change in the future.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01GatewayHTTPRoute
 {
     /// <summary>Custom labels that will be applied to HTTPRoutes created by cert-manager while solving HTTP-01 challenges.</summary>
@@ -501,6 +532,7 @@ public partial class V1ChallengeSpecSolverHttp01GatewayHTTPRoute
 }
 
 /// <summary>ObjectMeta overrides for the ingress used to solve HTTP01 challenges. Only the 'labels' and 'annotations' fields may be set. If labels or annotations overlap with in-built values, the values here will override the in-built values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressIngressTemplateMetadata
 {
     /// <summary>Annotations that should be added to the created ACME HTTP01 solver ingress.</summary>
@@ -513,6 +545,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressIngressTemplateMetadata
 }
 
 /// <summary>Optional ingress template used to configure the ACME challenge solver ingress used for HTTP01 challenges.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressIngressTemplate
 {
     /// <summary>ObjectMeta overrides for the ingress used to solve HTTP01 challenges. Only the 'labels' and 'annotations' fields may be set. If labels or annotations overlap with in-built values, the values here will override the in-built values.</summary>
@@ -521,6 +554,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressIngressTemplate
 }
 
 /// <summary>ObjectMeta overrides for the pod used to solve HTTP01 challenges. Only the 'labels' and 'annotations' fields may be set. If labels or annotations overlap with in-built values, the values here will override the in-built values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateMetadata
 {
     /// <summary>Annotations that should be added to the create ACME HTTP01 solver pods.</summary>
@@ -533,6 +567,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateMetadata
 }
 
 /// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchExpressions
 {
     /// <summary>The label key that the selector applies to.</summary>
@@ -549,6 +584,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityNo
 }
 
 /// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchFields
 {
     /// <summary>The label key that the selector applies to.</summary>
@@ -565,6 +601,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityNo
 }
 
 /// <summary>A node selector term, associated with the corresponding weight.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreference
 {
     /// <summary>A list of node selector requirements by node's labels.</summary>
@@ -577,6 +614,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityNo
 }
 
 /// <summary>An empty preferred scheduling term matches all objects with implicit weight 0 (i.e. it's a no-op). A null preferred scheduling term matches no objects (i.e. is also a no-op).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>A node selector term, associated with the corresponding weight.</summary>
@@ -589,6 +627,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityNo
 }
 
 /// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchExpressions
 {
     /// <summary>The label key that the selector applies to.</summary>
@@ -605,6 +644,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityNo
 }
 
 /// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchFields
 {
     /// <summary>The label key that the selector applies to.</summary>
@@ -621,6 +661,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityNo
 }
 
 /// <summary>A null or empty node selector term matches no objects. The requirements of them are ANDed. The TopologySelectorTerm type implements a subset of the NodeSelectorTerm.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTerms
 {
     /// <summary>A list of node selector requirements by node's labels.</summary>
@@ -633,6 +674,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityNo
 }
 
 /// <summary>If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to an update), the system may or may not try to eventually evict the pod from its node.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>Required. A list of node selector terms. The terms are ORed.</summary>
@@ -641,6 +683,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityNo
 }
 
 /// <summary>Describes node affinity scheduling rules for the pod.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityNodeAffinity
 {
     /// <summary>The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node matches the corresponding matchExpressions; the node(s) with the highest sum are the most preferred.</summary>
@@ -653,6 +696,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityNo
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -669,6 +713,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPo
 }
 
 /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -681,6 +726,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPo
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -697,6 +743,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPo
 }
 
 /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -709,6 +756,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPo
 }
 
 /// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm
 {
     /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
@@ -737,6 +785,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPo
 }
 
 /// <summary>The weights of all of the matched WeightedPodAffinityTerm fields are added per-node to find the most preferred node(s)</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
@@ -749,6 +798,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPo
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -765,6 +815,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPo
 }
 
 /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -777,6 +828,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPo
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -793,6 +845,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPo
 }
 
 /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -805,6 +858,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPo
 }
 
 /// <summary>Defines a set of pods (namely those matching the labelSelector relative to the given namespace(s)) that this pod should be co-located (affinity) or not co-located (anti-affinity) with, where co-located is defined as running on a node whose value of the label with key &lt;topologyKey&gt; matches that of any node on which a pod of the set of pods is running</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
@@ -833,6 +887,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPo
 }
 
 /// <summary>Describes pod affinity scheduling rules (e.g. co-locate this pod in the same node, zone, etc. as some other pod(s)).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPodAffinity
 {
     /// <summary>The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred.</summary>
@@ -845,6 +900,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPo
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -861,6 +917,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPo
 }
 
 /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -873,6 +930,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPo
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -889,6 +947,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPo
 }
 
 /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -901,6 +960,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPo
 }
 
 /// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm
 {
     /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
@@ -929,6 +989,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPo
 }
 
 /// <summary>The weights of all of the matched WeightedPodAffinityTerm fields are added per-node to find the most preferred node(s)</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
@@ -941,6 +1002,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPo
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -957,6 +1019,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPo
 }
 
 /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -969,6 +1032,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPo
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -985,6 +1049,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPo
 }
 
 /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -997,6 +1062,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPo
 }
 
 /// <summary>Defines a set of pods (namely those matching the labelSelector relative to the given namespace(s)) that this pod should be co-located (affinity) or not co-located (anti-affinity) with, where co-located is defined as running on a node whose value of the label with key &lt;topologyKey&gt; matches that of any node on which a pod of the set of pods is running</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
@@ -1025,6 +1091,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPo
 }
 
 /// <summary>Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod in the same node, zone, etc. as some other pod(s)).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPodAntiAffinity
 {
     /// <summary>The scheduler will prefer to schedule pods to nodes that satisfy the anti-affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling anti-affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred.</summary>
@@ -1037,6 +1104,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinityPo
 }
 
 /// <summary>If specified, the pod's scheduling constraints</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinity
 {
     /// <summary>Describes node affinity scheduling rules for the pod.</summary>
@@ -1053,6 +1121,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecAffinity
 }
 
 /// <summary>LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecImagePullSecrets
 {
     /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. TODO: Add other useful fields. apiVersion, kind, uid? More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Drop `kubebuilder:default` when controller-gen doesn't need it https://github.com/kubernetes-sigs/kubebuilder/issues/3896.</summary>
@@ -1061,6 +1130,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecImagePullS
 }
 
 /// <summary>The pod this Toleration is attached to tolerates any taint that matches the triple &lt;key,value,effect&gt; using the matching operator &lt;operator&gt;.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecTolerations
 {
     /// <summary>Effect indicates the taint effect to match. Empty means match all taint effects. When specified, allowed values are NoSchedule, PreferNoSchedule and NoExecute.</summary>
@@ -1085,6 +1155,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpecToleration
 }
 
 /// <summary>PodSpec defines overrides for the HTTP01 challenge solver pod. Check ACMEChallengeSolverHTTP01IngressPodSpec to find out currently supported fields. All other fields will be ignored.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpec
 {
     /// <summary>If specified, the pod's scheduling constraints</summary>
@@ -1113,6 +1184,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplateSpec
 }
 
 /// <summary>Optional pod template used to configure the ACME challenge solver pods used for HTTP01 challenges.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01IngressPodTemplate
 {
     /// <summary>ObjectMeta overrides for the pod used to solve HTTP01 challenges. Only the 'labels' and 'annotations' fields may be set. If labels or annotations overlap with in-built values, the values here will override the in-built values.</summary>
@@ -1125,6 +1197,7 @@ public partial class V1ChallengeSpecSolverHttp01IngressPodTemplate
 }
 
 /// <summary>The ingress based HTTP01 challenge solver will solve challenges by creating or modifying Ingress resources in order to route requests for '/.well-known/acme-challenge/XYZ' to 'challenge solver' pods that are provisioned by cert-manager for each Challenge to be completed.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01Ingress
 {
     /// <summary>This field configures the annotation `kubernetes.io/ingress.class` when creating Ingress resources to solve ACME challenges that use this challenge solver. Only one of `class`, `name` or `ingressClassName` may be specified.</summary>
@@ -1153,6 +1226,7 @@ public partial class V1ChallengeSpecSolverHttp01Ingress
 }
 
 /// <summary>Configures cert-manager to attempt to complete authorizations by performing the HTTP01 challenge flow. It is not possible to obtain certificates for wildcard domain names (e.g. `*.example.com`) using the HTTP01 challenge mechanism.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01
 {
     /// <summary>The Gateway API is a sig-network community API that models service networking in Kubernetes (https://gateway-api.sigs.k8s.io/). The Gateway solver will create HTTPRoutes with the specified labels in the same namespace as the challenge. This solver is experimental, and fields / behaviour may change in the future.</summary>
@@ -1165,6 +1239,7 @@ public partial class V1ChallengeSpecSolverHttp01
 }
 
 /// <summary>Selector selects a set of DNSNames on the Certificate resource that should be solved using this challenge solver. If not specified, the solver will be treated as the 'default' solver with the lowest priority, i.e. if any other solver has a more specific match, it will be used instead.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverSelector
 {
     /// <summary>List of DNSNames that this solver will be used to solve. If specified and a match is found, a dnsNames selector will take precedence over a dnsZones selector. If multiple solvers match with the same dnsNames value, the solver with the most matching labels in matchLabels will be selected. If neither has more matches, the solver defined earlier in the list will be selected.</summary>
@@ -1181,6 +1256,7 @@ public partial class V1ChallengeSpecSolverSelector
 }
 
 /// <summary>Contains the domain solving configuration that should be used to solve this challenge resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolver
 {
     /// <summary>Configures cert-manager to attempt to complete authorizations by performing the DNS01 challenge flow.</summary>
@@ -1196,6 +1272,7 @@ public partial class V1ChallengeSpecSolver
     public V1ChallengeSpecSolverSelector? Selector { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ChallengeSpecTypeEnum
 {
     [EnumMember(Value = "HTTP-01"), JsonStringEnumMemberName("HTTP-01")]
@@ -1207,6 +1284,7 @@ public enum V1ChallengeSpecTypeEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpec
 {
     /// <summary>The URL to the ACME Authorization resource that this challenge is a part of.</summary>
@@ -1247,6 +1325,7 @@ public partial class V1ChallengeSpec
     public bool? Wildcard { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ChallengeStatusStateEnum
 {
     [EnumMember(Value = "valid"), JsonStringEnumMemberName("valid")]
@@ -1273,6 +1352,7 @@ public enum V1ChallengeStatusStateEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeStatus
 {
     /// <summary>presented will be set to true if the challenge values for this challenge are currently 'presented'. This *does not* imply the self check is passing. Only that the values have been 'submitted' for the appropriate challenge mechanism (i.e. the DNS01 TXT record has been presented, or the HTTP01 configuration has been configured).</summary>
@@ -1293,8 +1373,9 @@ public partial class V1ChallengeStatus
     public V1ChallengeStatusStateEnum? State { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Challenge is a type to represent a Challenge request with an ACME server</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1Challenge : IKubernetesObject<V1ObjectMeta>, ISpec<V1ChallengeSpec>, IStatus<V1ChallengeStatus>
 {
     public const string KubeApiVersion = "v1";

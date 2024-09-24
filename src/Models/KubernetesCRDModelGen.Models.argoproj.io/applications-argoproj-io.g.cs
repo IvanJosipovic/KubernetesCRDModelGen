@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.argoproj.io;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationInfo
 {
     /// <summary></summary>
@@ -21,6 +22,7 @@ public partial class V1alpha1ApplicationOperationInfo
 }
 
 /// <summary>InitiatedBy contains information about who initiated the operations</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationInitiatedBy
 {
     /// <summary>Automated is set to true if operation was initiated automatically by the application controller.</summary>
@@ -33,6 +35,7 @@ public partial class V1alpha1ApplicationOperationInitiatedBy
 }
 
 /// <summary>Backoff controls how to backoff on subsequent retries of failed syncs</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationRetryBackoff
 {
     /// <summary>Duration is the amount to back off. Default unit is seconds, but could also be a duration (e.g. "2m", "1h")</summary>
@@ -49,6 +52,7 @@ public partial class V1alpha1ApplicationOperationRetryBackoff
 }
 
 /// <summary>Retry controls the strategy to apply if a sync fails</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationRetry
 {
     /// <summary>Backoff controls how to backoff on subsequent retries of failed syncs</summary>
@@ -61,6 +65,7 @@ public partial class V1alpha1ApplicationOperationRetry
 }
 
 /// <summary>SyncOperationResource contains resources to sync.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncResources
 {
     /// <summary></summary>
@@ -81,6 +86,7 @@ public partial class V1alpha1ApplicationOperationSyncResources
 }
 
 /// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -97,6 +103,7 @@ public partial class V1alpha1ApplicationOperationSyncSourceDirectoryJsonnetExtVa
 }
 
 /// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -113,6 +120,7 @@ public partial class V1alpha1ApplicationOperationSyncSourceDirectoryJsonnetTlas
 }
 
 /// <summary>Jsonnet holds options specific to Jsonnet</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSourceDirectoryJsonnet
 {
     /// <summary>ExtVars is a list of Jsonnet External Variables</summary>
@@ -129,6 +137,7 @@ public partial class V1alpha1ApplicationOperationSyncSourceDirectoryJsonnet
 }
 
 /// <summary>Directory holds path/directory specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSourceDirectory
 {
     /// <summary>Exclude contains a glob pattern to match paths against that should be explicitly excluded from being used during manifest generation</summary>
@@ -149,6 +158,7 @@ public partial class V1alpha1ApplicationOperationSyncSourceDirectory
 }
 
 /// <summary>HelmFileParameter is a file parameter that's passed to helm template during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSourceHelmFileParameters
 {
     /// <summary>Name is the name of the Helm parameter</summary>
@@ -161,6 +171,7 @@ public partial class V1alpha1ApplicationOperationSyncSourceHelmFileParameters
 }
 
 /// <summary>HelmParameter is a parameter that's passed to helm template during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSourceHelmParameters
 {
     /// <summary>ForceString determines whether to tell Helm to interpret booleans and numbers as strings</summary>
@@ -177,6 +188,7 @@ public partial class V1alpha1ApplicationOperationSyncSourceHelmParameters
 }
 
 /// <summary>Helm holds helm specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSourceHelm
 {
     /// <summary>FileParameters are file parameters to the helm template</summary>
@@ -221,6 +233,7 @@ public partial class V1alpha1ApplicationOperationSyncSourceHelm
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -253,6 +266,7 @@ public partial class V1alpha1ApplicationOperationSyncSourceKustomizePatchesTarge
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSourceKustomizePatches
 {
     /// <summary></summary>
@@ -273,6 +287,7 @@ public partial class V1alpha1ApplicationOperationSyncSourceKustomizePatches
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSourceKustomizeReplicas
 {
     /// <summary>Number of replicas</summary>
@@ -285,6 +300,7 @@ public partial class V1alpha1ApplicationOperationSyncSourceKustomizeReplicas
 }
 
 /// <summary>Kustomize holds kustomize specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSourceKustomize
 {
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
@@ -345,6 +361,7 @@ public partial class V1alpha1ApplicationOperationSyncSourceKustomize
 }
 
 /// <summary>EnvEntry represents an entry in the application's environment</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSourcePluginEnv
 {
     /// <summary>Name is the name of the variable, usually expressed in uppercase</summary>
@@ -357,6 +374,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcePluginEnv
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSourcePluginParameters
 {
     /// <summary>Array is the value of an array type parameter.</summary>
@@ -377,6 +395,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcePluginParameters
 }
 
 /// <summary>Plugin holds config management plugin specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSourcePlugin
 {
     /// <summary>Env is a list of environment variable entries</summary>
@@ -393,6 +412,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcePlugin
 }
 
 /// <summary>Source overrides the source definition set in the application. This is typically set in a Rollback operation and is nil during a Sync operation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSource
 {
     /// <summary>Chart is a Helm chart name, and must be specified for applications sourced from a Helm repo.</summary>
@@ -433,6 +453,7 @@ public partial class V1alpha1ApplicationOperationSyncSource
 }
 
 /// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -449,6 +470,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcesDirectoryJsonnetExtV
 }
 
 /// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -465,6 +487,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcesDirectoryJsonnetTlas
 }
 
 /// <summary>Jsonnet holds options specific to Jsonnet</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSourcesDirectoryJsonnet
 {
     /// <summary>ExtVars is a list of Jsonnet External Variables</summary>
@@ -481,6 +504,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcesDirectoryJsonnet
 }
 
 /// <summary>Directory holds path/directory specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSourcesDirectory
 {
     /// <summary>Exclude contains a glob pattern to match paths against that should be explicitly excluded from being used during manifest generation</summary>
@@ -501,6 +525,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcesDirectory
 }
 
 /// <summary>HelmFileParameter is a file parameter that's passed to helm template during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSourcesHelmFileParameters
 {
     /// <summary>Name is the name of the Helm parameter</summary>
@@ -513,6 +538,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcesHelmFileParameters
 }
 
 /// <summary>HelmParameter is a parameter that's passed to helm template during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSourcesHelmParameters
 {
     /// <summary>ForceString determines whether to tell Helm to interpret booleans and numbers as strings</summary>
@@ -529,6 +555,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcesHelmParameters
 }
 
 /// <summary>Helm holds helm specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSourcesHelm
 {
     /// <summary>FileParameters are file parameters to the helm template</summary>
@@ -573,6 +600,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcesHelm
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -605,6 +633,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcesKustomizePatchesTarg
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -625,6 +654,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcesKustomizePatches
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSourcesKustomizeReplicas
 {
     /// <summary>Number of replicas</summary>
@@ -637,6 +667,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcesKustomizeReplicas
 }
 
 /// <summary>Kustomize holds kustomize specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSourcesKustomize
 {
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
@@ -697,6 +728,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcesKustomize
 }
 
 /// <summary>EnvEntry represents an entry in the application's environment</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSourcesPluginEnv
 {
     /// <summary>Name is the name of the variable, usually expressed in uppercase</summary>
@@ -709,6 +741,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcesPluginEnv
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSourcesPluginParameters
 {
     /// <summary>Array is the value of an array type parameter.</summary>
@@ -729,6 +762,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcesPluginParameters
 }
 
 /// <summary>Plugin holds config management plugin specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSourcesPlugin
 {
     /// <summary>Env is a list of environment variable entries</summary>
@@ -745,6 +779,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcesPlugin
 }
 
 /// <summary>ApplicationSource contains all required information about the source of an application</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSources
 {
     /// <summary>Chart is a Helm chart name, and must be specified for applications sourced from a Helm repo.</summary>
@@ -785,6 +820,7 @@ public partial class V1alpha1ApplicationOperationSyncSources
 }
 
 /// <summary>Apply will perform a `kubectl apply` to perform the sync.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSyncStrategyApply
 {
     /// <summary>Force indicates whether or not to supply the --force flag to `kubectl apply`. The --force flag deletes and re-create the resource, when PATCH encounters conflict and has retried for 5 times.</summary>
@@ -793,6 +829,7 @@ public partial class V1alpha1ApplicationOperationSyncSyncStrategyApply
 }
 
 /// <summary>Hook will submit any referenced resources to perform the sync. This is the default strategy</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSyncStrategyHook
 {
     /// <summary>Force indicates whether or not to supply the --force flag to `kubectl apply`. The --force flag deletes and re-create the resource, when PATCH encounters conflict and has retried for 5 times.</summary>
@@ -801,6 +838,7 @@ public partial class V1alpha1ApplicationOperationSyncSyncStrategyHook
 }
 
 /// <summary>SyncStrategy describes how to perform the sync</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSyncStrategy
 {
     /// <summary>Apply will perform a `kubectl apply` to perform the sync.</summary>
@@ -813,6 +851,7 @@ public partial class V1alpha1ApplicationOperationSyncSyncStrategy
 }
 
 /// <summary>Sync contains parameters for the operation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSync
 {
     /// <summary>DryRun specifies to perform a `kubectl apply --dry-run` without actually performing the sync</summary>
@@ -857,6 +896,7 @@ public partial class V1alpha1ApplicationOperationSync
 }
 
 /// <summary>Operation contains information about a requested or running operation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperation
 {
     /// <summary>Info is a list of informational items for this operation</summary>
@@ -877,6 +917,7 @@ public partial class V1alpha1ApplicationOperation
 }
 
 /// <summary>Destination is a reference to the target Kubernetes server and namespace</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecDestination
 {
     /// <summary>Name is an alternate way of specifying the target cluster by its symbolic name. This must be set if Server is not set.</summary>
@@ -893,6 +934,7 @@ public partial class V1alpha1ApplicationSpecDestination
 }
 
 /// <summary>ResourceIgnoreDifferences contains resource filter and list of json paths which should be ignored during comparison with live state.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecIgnoreDifferences
 {
     /// <summary></summary>
@@ -925,6 +967,7 @@ public partial class V1alpha1ApplicationSpecIgnoreDifferences
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecInfo
 {
     /// <summary></summary>
@@ -937,6 +980,7 @@ public partial class V1alpha1ApplicationSpecInfo
 }
 
 /// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -953,6 +997,7 @@ public partial class V1alpha1ApplicationSpecSourceDirectoryJsonnetExtVars
 }
 
 /// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -969,6 +1014,7 @@ public partial class V1alpha1ApplicationSpecSourceDirectoryJsonnetTlas
 }
 
 /// <summary>Jsonnet holds options specific to Jsonnet</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSourceDirectoryJsonnet
 {
     /// <summary>ExtVars is a list of Jsonnet External Variables</summary>
@@ -985,6 +1031,7 @@ public partial class V1alpha1ApplicationSpecSourceDirectoryJsonnet
 }
 
 /// <summary>Directory holds path/directory specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSourceDirectory
 {
     /// <summary>Exclude contains a glob pattern to match paths against that should be explicitly excluded from being used during manifest generation</summary>
@@ -1005,6 +1052,7 @@ public partial class V1alpha1ApplicationSpecSourceDirectory
 }
 
 /// <summary>HelmFileParameter is a file parameter that's passed to helm template during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSourceHelmFileParameters
 {
     /// <summary>Name is the name of the Helm parameter</summary>
@@ -1017,6 +1065,7 @@ public partial class V1alpha1ApplicationSpecSourceHelmFileParameters
 }
 
 /// <summary>HelmParameter is a parameter that's passed to helm template during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSourceHelmParameters
 {
     /// <summary>ForceString determines whether to tell Helm to interpret booleans and numbers as strings</summary>
@@ -1033,6 +1082,7 @@ public partial class V1alpha1ApplicationSpecSourceHelmParameters
 }
 
 /// <summary>Helm holds helm specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSourceHelm
 {
     /// <summary>FileParameters are file parameters to the helm template</summary>
@@ -1077,6 +1127,7 @@ public partial class V1alpha1ApplicationSpecSourceHelm
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -1109,6 +1160,7 @@ public partial class V1alpha1ApplicationSpecSourceKustomizePatchesTarget
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSourceKustomizePatches
 {
     /// <summary></summary>
@@ -1129,6 +1181,7 @@ public partial class V1alpha1ApplicationSpecSourceKustomizePatches
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSourceKustomizeReplicas
 {
     /// <summary>Number of replicas</summary>
@@ -1141,6 +1194,7 @@ public partial class V1alpha1ApplicationSpecSourceKustomizeReplicas
 }
 
 /// <summary>Kustomize holds kustomize specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSourceKustomize
 {
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
@@ -1201,6 +1255,7 @@ public partial class V1alpha1ApplicationSpecSourceKustomize
 }
 
 /// <summary>EnvEntry represents an entry in the application's environment</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSourcePluginEnv
 {
     /// <summary>Name is the name of the variable, usually expressed in uppercase</summary>
@@ -1213,6 +1268,7 @@ public partial class V1alpha1ApplicationSpecSourcePluginEnv
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSourcePluginParameters
 {
     /// <summary>Array is the value of an array type parameter.</summary>
@@ -1233,6 +1289,7 @@ public partial class V1alpha1ApplicationSpecSourcePluginParameters
 }
 
 /// <summary>Plugin holds config management plugin specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSourcePlugin
 {
     /// <summary>Env is a list of environment variable entries</summary>
@@ -1249,6 +1306,7 @@ public partial class V1alpha1ApplicationSpecSourcePlugin
 }
 
 /// <summary>Source is a reference to the location of the application's manifests or chart</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSource
 {
     /// <summary>Chart is a Helm chart name, and must be specified for applications sourced from a Helm repo.</summary>
@@ -1289,6 +1347,7 @@ public partial class V1alpha1ApplicationSpecSource
 }
 
 /// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -1305,6 +1364,7 @@ public partial class V1alpha1ApplicationSpecSourcesDirectoryJsonnetExtVars
 }
 
 /// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -1321,6 +1381,7 @@ public partial class V1alpha1ApplicationSpecSourcesDirectoryJsonnetTlas
 }
 
 /// <summary>Jsonnet holds options specific to Jsonnet</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSourcesDirectoryJsonnet
 {
     /// <summary>ExtVars is a list of Jsonnet External Variables</summary>
@@ -1337,6 +1398,7 @@ public partial class V1alpha1ApplicationSpecSourcesDirectoryJsonnet
 }
 
 /// <summary>Directory holds path/directory specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSourcesDirectory
 {
     /// <summary>Exclude contains a glob pattern to match paths against that should be explicitly excluded from being used during manifest generation</summary>
@@ -1357,6 +1419,7 @@ public partial class V1alpha1ApplicationSpecSourcesDirectory
 }
 
 /// <summary>HelmFileParameter is a file parameter that's passed to helm template during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSourcesHelmFileParameters
 {
     /// <summary>Name is the name of the Helm parameter</summary>
@@ -1369,6 +1432,7 @@ public partial class V1alpha1ApplicationSpecSourcesHelmFileParameters
 }
 
 /// <summary>HelmParameter is a parameter that's passed to helm template during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSourcesHelmParameters
 {
     /// <summary>ForceString determines whether to tell Helm to interpret booleans and numbers as strings</summary>
@@ -1385,6 +1449,7 @@ public partial class V1alpha1ApplicationSpecSourcesHelmParameters
 }
 
 /// <summary>Helm holds helm specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSourcesHelm
 {
     /// <summary>FileParameters are file parameters to the helm template</summary>
@@ -1429,6 +1494,7 @@ public partial class V1alpha1ApplicationSpecSourcesHelm
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -1461,6 +1527,7 @@ public partial class V1alpha1ApplicationSpecSourcesKustomizePatchesTarget
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -1481,6 +1548,7 @@ public partial class V1alpha1ApplicationSpecSourcesKustomizePatches
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSourcesKustomizeReplicas
 {
     /// <summary>Number of replicas</summary>
@@ -1493,6 +1561,7 @@ public partial class V1alpha1ApplicationSpecSourcesKustomizeReplicas
 }
 
 /// <summary>Kustomize holds kustomize specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSourcesKustomize
 {
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
@@ -1553,6 +1622,7 @@ public partial class V1alpha1ApplicationSpecSourcesKustomize
 }
 
 /// <summary>EnvEntry represents an entry in the application's environment</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSourcesPluginEnv
 {
     /// <summary>Name is the name of the variable, usually expressed in uppercase</summary>
@@ -1565,6 +1635,7 @@ public partial class V1alpha1ApplicationSpecSourcesPluginEnv
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSourcesPluginParameters
 {
     /// <summary>Array is the value of an array type parameter.</summary>
@@ -1585,6 +1656,7 @@ public partial class V1alpha1ApplicationSpecSourcesPluginParameters
 }
 
 /// <summary>Plugin holds config management plugin specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSourcesPlugin
 {
     /// <summary>Env is a list of environment variable entries</summary>
@@ -1601,6 +1673,7 @@ public partial class V1alpha1ApplicationSpecSourcesPlugin
 }
 
 /// <summary>ApplicationSource contains all required information about the source of an application</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSources
 {
     /// <summary>Chart is a Helm chart name, and must be specified for applications sourced from a Helm repo.</summary>
@@ -1641,6 +1714,7 @@ public partial class V1alpha1ApplicationSpecSources
 }
 
 /// <summary>Automated will keep an application synced to the target revision</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSyncPolicyAutomated
 {
     /// <summary>AllowEmpty allows apps have zero live resources (default: false)</summary>
@@ -1657,6 +1731,7 @@ public partial class V1alpha1ApplicationSpecSyncPolicyAutomated
 }
 
 /// <summary>ManagedNamespaceMetadata controls metadata in the given namespace (if CreateNamespace=true)</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSyncPolicyManagedNamespaceMetadata
 {
     /// <summary></summary>
@@ -1669,6 +1744,7 @@ public partial class V1alpha1ApplicationSpecSyncPolicyManagedNamespaceMetadata
 }
 
 /// <summary>Backoff controls how to backoff on subsequent retries of failed syncs</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSyncPolicyRetryBackoff
 {
     /// <summary>Duration is the amount to back off. Default unit is seconds, but could also be a duration (e.g. "2m", "1h")</summary>
@@ -1685,6 +1761,7 @@ public partial class V1alpha1ApplicationSpecSyncPolicyRetryBackoff
 }
 
 /// <summary>Retry controls failed sync retry behavior</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSyncPolicyRetry
 {
     /// <summary>Backoff controls how to backoff on subsequent retries of failed syncs</summary>
@@ -1697,6 +1774,7 @@ public partial class V1alpha1ApplicationSpecSyncPolicyRetry
 }
 
 /// <summary>SyncPolicy controls when and how a sync will be performed</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSyncPolicy
 {
     /// <summary>Automated will keep an application synced to the target revision</summary>
@@ -1717,6 +1795,7 @@ public partial class V1alpha1ApplicationSpecSyncPolicy
 }
 
 /// <summary>ApplicationSpec represents desired application state. Contains link to repository with application definition and additional parameters link definition revision.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpec
 {
     /// <summary>Destination is a reference to the target Kubernetes server and namespace</summary>
@@ -1753,6 +1832,7 @@ public partial class V1alpha1ApplicationSpec
 }
 
 /// <summary>ApplicationCondition contains details about an application condition, which is usually an error or warning</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusConditions
 {
     /// <summary>LastTransitionTime is the time the condition was last observed</summary>
@@ -1769,6 +1849,7 @@ public partial class V1alpha1ApplicationStatusConditions
 }
 
 /// <summary>Health contains information about the application's current health status</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHealth
 {
     /// <summary>Message is a human-readable informational message describing the health status</summary>
@@ -1781,6 +1862,7 @@ public partial class V1alpha1ApplicationStatusHealth
 }
 
 /// <summary>InitiatedBy contains information about who initiated the operations</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistoryInitiatedBy
 {
     /// <summary>Automated is set to true if operation was initiated automatically by the application controller.</summary>
@@ -1793,6 +1875,7 @@ public partial class V1alpha1ApplicationStatusHistoryInitiatedBy
 }
 
 /// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -1809,6 +1892,7 @@ public partial class V1alpha1ApplicationStatusHistorySourceDirectoryJsonnetExtVa
 }
 
 /// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -1825,6 +1909,7 @@ public partial class V1alpha1ApplicationStatusHistorySourceDirectoryJsonnetTlas
 }
 
 /// <summary>Jsonnet holds options specific to Jsonnet</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySourceDirectoryJsonnet
 {
     /// <summary>ExtVars is a list of Jsonnet External Variables</summary>
@@ -1841,6 +1926,7 @@ public partial class V1alpha1ApplicationStatusHistorySourceDirectoryJsonnet
 }
 
 /// <summary>Directory holds path/directory specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySourceDirectory
 {
     /// <summary>Exclude contains a glob pattern to match paths against that should be explicitly excluded from being used during manifest generation</summary>
@@ -1861,6 +1947,7 @@ public partial class V1alpha1ApplicationStatusHistorySourceDirectory
 }
 
 /// <summary>HelmFileParameter is a file parameter that's passed to helm template during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySourceHelmFileParameters
 {
     /// <summary>Name is the name of the Helm parameter</summary>
@@ -1873,6 +1960,7 @@ public partial class V1alpha1ApplicationStatusHistorySourceHelmFileParameters
 }
 
 /// <summary>HelmParameter is a parameter that's passed to helm template during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySourceHelmParameters
 {
     /// <summary>ForceString determines whether to tell Helm to interpret booleans and numbers as strings</summary>
@@ -1889,6 +1977,7 @@ public partial class V1alpha1ApplicationStatusHistorySourceHelmParameters
 }
 
 /// <summary>Helm holds helm specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySourceHelm
 {
     /// <summary>FileParameters are file parameters to the helm template</summary>
@@ -1933,6 +2022,7 @@ public partial class V1alpha1ApplicationStatusHistorySourceHelm
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -1965,6 +2055,7 @@ public partial class V1alpha1ApplicationStatusHistorySourceKustomizePatchesTarge
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySourceKustomizePatches
 {
     /// <summary></summary>
@@ -1985,6 +2076,7 @@ public partial class V1alpha1ApplicationStatusHistorySourceKustomizePatches
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySourceKustomizeReplicas
 {
     /// <summary>Number of replicas</summary>
@@ -1997,6 +2089,7 @@ public partial class V1alpha1ApplicationStatusHistorySourceKustomizeReplicas
 }
 
 /// <summary>Kustomize holds kustomize specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySourceKustomize
 {
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
@@ -2057,6 +2150,7 @@ public partial class V1alpha1ApplicationStatusHistorySourceKustomize
 }
 
 /// <summary>EnvEntry represents an entry in the application's environment</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySourcePluginEnv
 {
     /// <summary>Name is the name of the variable, usually expressed in uppercase</summary>
@@ -2069,6 +2163,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcePluginEnv
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySourcePluginParameters
 {
     /// <summary>Array is the value of an array type parameter.</summary>
@@ -2089,6 +2184,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcePluginParameters
 }
 
 /// <summary>Plugin holds config management plugin specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySourcePlugin
 {
     /// <summary>Env is a list of environment variable entries</summary>
@@ -2105,6 +2201,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcePlugin
 }
 
 /// <summary>Source is a reference to the application source used for the sync operation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySource
 {
     /// <summary>Chart is a Helm chart name, and must be specified for applications sourced from a Helm repo.</summary>
@@ -2145,6 +2242,7 @@ public partial class V1alpha1ApplicationStatusHistorySource
 }
 
 /// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -2161,6 +2259,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcesDirectoryJsonnetExtV
 }
 
 /// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -2177,6 +2276,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcesDirectoryJsonnetTlas
 }
 
 /// <summary>Jsonnet holds options specific to Jsonnet</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySourcesDirectoryJsonnet
 {
     /// <summary>ExtVars is a list of Jsonnet External Variables</summary>
@@ -2193,6 +2293,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcesDirectoryJsonnet
 }
 
 /// <summary>Directory holds path/directory specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySourcesDirectory
 {
     /// <summary>Exclude contains a glob pattern to match paths against that should be explicitly excluded from being used during manifest generation</summary>
@@ -2213,6 +2314,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcesDirectory
 }
 
 /// <summary>HelmFileParameter is a file parameter that's passed to helm template during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySourcesHelmFileParameters
 {
     /// <summary>Name is the name of the Helm parameter</summary>
@@ -2225,6 +2327,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcesHelmFileParameters
 }
 
 /// <summary>HelmParameter is a parameter that's passed to helm template during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySourcesHelmParameters
 {
     /// <summary>ForceString determines whether to tell Helm to interpret booleans and numbers as strings</summary>
@@ -2241,6 +2344,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcesHelmParameters
 }
 
 /// <summary>Helm holds helm specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySourcesHelm
 {
     /// <summary>FileParameters are file parameters to the helm template</summary>
@@ -2285,6 +2389,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcesHelm
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -2317,6 +2422,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcesKustomizePatchesTarg
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySourcesKustomizePatches
 {
     /// <summary></summary>
@@ -2337,6 +2443,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcesKustomizePatches
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySourcesKustomizeReplicas
 {
     /// <summary>Number of replicas</summary>
@@ -2349,6 +2456,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcesKustomizeReplicas
 }
 
 /// <summary>Kustomize holds kustomize specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySourcesKustomize
 {
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
@@ -2409,6 +2517,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcesKustomize
 }
 
 /// <summary>EnvEntry represents an entry in the application's environment</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySourcesPluginEnv
 {
     /// <summary>Name is the name of the variable, usually expressed in uppercase</summary>
@@ -2421,6 +2530,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcesPluginEnv
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySourcesPluginParameters
 {
     /// <summary>Array is the value of an array type parameter.</summary>
@@ -2441,6 +2551,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcesPluginParameters
 }
 
 /// <summary>Plugin holds config management plugin specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySourcesPlugin
 {
     /// <summary>Env is a list of environment variable entries</summary>
@@ -2457,6 +2568,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcesPlugin
 }
 
 /// <summary>ApplicationSource contains all required information about the source of an application</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySources
 {
     /// <summary>Chart is a Helm chart name, and must be specified for applications sourced from a Helm repo.</summary>
@@ -2497,6 +2609,7 @@ public partial class V1alpha1ApplicationStatusHistorySources
 }
 
 /// <summary>RevisionHistory contains history information about a previous sync</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistory
 {
     /// <summary>DeployStartedAt holds the time the sync operation started</summary>
@@ -2533,6 +2646,7 @@ public partial class V1alpha1ApplicationStatusHistory
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationInfo
 {
     /// <summary></summary>
@@ -2545,6 +2659,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationInfo
 }
 
 /// <summary>InitiatedBy contains information about who initiated the operations</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationInitiatedBy
 {
     /// <summary>Automated is set to true if operation was initiated automatically by the application controller.</summary>
@@ -2557,6 +2672,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationInitiatedBy
 }
 
 /// <summary>Backoff controls how to backoff on subsequent retries of failed syncs</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationRetryBackoff
 {
     /// <summary>Duration is the amount to back off. Default unit is seconds, but could also be a duration (e.g. "2m", "1h")</summary>
@@ -2573,6 +2689,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationRetryBackof
 }
 
 /// <summary>Retry controls the strategy to apply if a sync fails</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationRetry
 {
     /// <summary>Backoff controls how to backoff on subsequent retries of failed syncs</summary>
@@ -2585,6 +2702,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationRetry
 }
 
 /// <summary>SyncOperationResource contains resources to sync.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncResources
 {
     /// <summary></summary>
@@ -2605,6 +2723,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncResourc
 }
 
 /// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -2621,6 +2740,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceD
 }
 
 /// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -2637,6 +2757,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceD
 }
 
 /// <summary>Jsonnet holds options specific to Jsonnet</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceDirectoryJsonnet
 {
     /// <summary>ExtVars is a list of Jsonnet External Variables</summary>
@@ -2653,6 +2774,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceD
 }
 
 /// <summary>Directory holds path/directory specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceDirectory
 {
     /// <summary>Exclude contains a glob pattern to match paths against that should be explicitly excluded from being used during manifest generation</summary>
@@ -2673,6 +2795,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceD
 }
 
 /// <summary>HelmFileParameter is a file parameter that's passed to helm template during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceHelmFileParameters
 {
     /// <summary>Name is the name of the Helm parameter</summary>
@@ -2685,6 +2808,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceH
 }
 
 /// <summary>HelmParameter is a parameter that's passed to helm template during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceHelmParameters
 {
     /// <summary>ForceString determines whether to tell Helm to interpret booleans and numbers as strings</summary>
@@ -2701,6 +2825,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceH
 }
 
 /// <summary>Helm holds helm specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceHelm
 {
     /// <summary>FileParameters are file parameters to the helm template</summary>
@@ -2745,6 +2870,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceH
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -2777,6 +2903,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceK
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceKustomizePatches
 {
     /// <summary></summary>
@@ -2797,6 +2924,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceK
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceKustomizeReplicas
 {
     /// <summary>Number of replicas</summary>
@@ -2809,6 +2937,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceK
 }
 
 /// <summary>Kustomize holds kustomize specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceKustomize
 {
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
@@ -2869,6 +2998,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceK
 }
 
 /// <summary>EnvEntry represents an entry in the application's environment</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcePluginEnv
 {
     /// <summary>Name is the name of the variable, usually expressed in uppercase</summary>
@@ -2881,6 +3011,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcePluginParameters
 {
     /// <summary>Array is the value of an array type parameter.</summary>
@@ -2901,6 +3032,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceP
 }
 
 /// <summary>Plugin holds config management plugin specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcePlugin
 {
     /// <summary>Env is a list of environment variable entries</summary>
@@ -2917,6 +3049,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceP
 }
 
 /// <summary>Source overrides the source definition set in the application. This is typically set in a Rollback operation and is nil during a Sync operation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSource
 {
     /// <summary>Chart is a Helm chart name, and must be specified for applications sourced from a Helm repo.</summary>
@@ -2957,6 +3090,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSource
 }
 
 /// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -2973,6 +3107,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
 }
 
 /// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -2989,6 +3124,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
 }
 
 /// <summary>Jsonnet holds options specific to Jsonnet</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcesDirectoryJsonnet
 {
     /// <summary>ExtVars is a list of Jsonnet External Variables</summary>
@@ -3005,6 +3141,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
 }
 
 /// <summary>Directory holds path/directory specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcesDirectory
 {
     /// <summary>Exclude contains a glob pattern to match paths against that should be explicitly excluded from being used during manifest generation</summary>
@@ -3025,6 +3162,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
 }
 
 /// <summary>HelmFileParameter is a file parameter that's passed to helm template during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcesHelmFileParameters
 {
     /// <summary>Name is the name of the Helm parameter</summary>
@@ -3037,6 +3175,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
 }
 
 /// <summary>HelmParameter is a parameter that's passed to helm template during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcesHelmParameters
 {
     /// <summary>ForceString determines whether to tell Helm to interpret booleans and numbers as strings</summary>
@@ -3053,6 +3192,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
 }
 
 /// <summary>Helm holds helm specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcesHelm
 {
     /// <summary>FileParameters are file parameters to the helm template</summary>
@@ -3097,6 +3237,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -3129,6 +3270,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -3149,6 +3291,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcesKustomizeReplicas
 {
     /// <summary>Number of replicas</summary>
@@ -3161,6 +3304,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
 }
 
 /// <summary>Kustomize holds kustomize specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcesKustomize
 {
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
@@ -3221,6 +3365,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
 }
 
 /// <summary>EnvEntry represents an entry in the application's environment</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcesPluginEnv
 {
     /// <summary>Name is the name of the variable, usually expressed in uppercase</summary>
@@ -3233,6 +3378,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcesPluginParameters
 {
     /// <summary>Array is the value of an array type parameter.</summary>
@@ -3253,6 +3399,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
 }
 
 /// <summary>Plugin holds config management plugin specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcesPlugin
 {
     /// <summary>Env is a list of environment variable entries</summary>
@@ -3269,6 +3416,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
 }
 
 /// <summary>ApplicationSource contains all required information about the source of an application</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
 {
     /// <summary>Chart is a Helm chart name, and must be specified for applications sourced from a Helm repo.</summary>
@@ -3309,6 +3457,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
 }
 
 /// <summary>Apply will perform a `kubectl apply` to perform the sync.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSyncStrategyApply
 {
     /// <summary>Force indicates whether or not to supply the --force flag to `kubectl apply`. The --force flag deletes and re-create the resource, when PATCH encounters conflict and has retried for 5 times.</summary>
@@ -3317,6 +3466,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSyncStr
 }
 
 /// <summary>Hook will submit any referenced resources to perform the sync. This is the default strategy</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSyncStrategyHook
 {
     /// <summary>Force indicates whether or not to supply the --force flag to `kubectl apply`. The --force flag deletes and re-create the resource, when PATCH encounters conflict and has retried for 5 times.</summary>
@@ -3325,6 +3475,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSyncStr
 }
 
 /// <summary>SyncStrategy describes how to perform the sync</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSyncStrategy
 {
     /// <summary>Apply will perform a `kubectl apply` to perform the sync.</summary>
@@ -3337,6 +3488,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSyncStr
 }
 
 /// <summary>Sync contains parameters for the operation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSync
 {
     /// <summary>DryRun specifies to perform a `kubectl apply --dry-run` without actually performing the sync</summary>
@@ -3381,6 +3533,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSync
 }
 
 /// <summary>Operation is the original requested operation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperation
 {
     /// <summary>Info is a list of informational items for this operation</summary>
@@ -3401,6 +3554,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperation
 }
 
 /// <summary>ManagedNamespaceMetadata contains the current sync state of managed namespace metadata</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultManagedNamespaceMetadata
 {
     /// <summary></summary>
@@ -3413,6 +3567,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultManagedNam
 }
 
 /// <summary>ResourceResult holds the operation result details of a specific resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultResources
 {
     /// <summary>Group specifies the API group of the resource</summary>
@@ -3457,6 +3612,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultResources
 }
 
 /// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -3473,6 +3629,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceDire
 }
 
 /// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -3489,6 +3646,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceDire
 }
 
 /// <summary>Jsonnet holds options specific to Jsonnet</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceDirectoryJsonnet
 {
     /// <summary>ExtVars is a list of Jsonnet External Variables</summary>
@@ -3505,6 +3663,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceDire
 }
 
 /// <summary>Directory holds path/directory specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceDirectory
 {
     /// <summary>Exclude contains a glob pattern to match paths against that should be explicitly excluded from being used during manifest generation</summary>
@@ -3525,6 +3684,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceDire
 }
 
 /// <summary>HelmFileParameter is a file parameter that's passed to helm template during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceHelmFileParameters
 {
     /// <summary>Name is the name of the Helm parameter</summary>
@@ -3537,6 +3697,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceHelm
 }
 
 /// <summary>HelmParameter is a parameter that's passed to helm template during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceHelmParameters
 {
     /// <summary>ForceString determines whether to tell Helm to interpret booleans and numbers as strings</summary>
@@ -3553,6 +3714,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceHelm
 }
 
 /// <summary>Helm holds helm specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceHelm
 {
     /// <summary>FileParameters are file parameters to the helm template</summary>
@@ -3597,6 +3759,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceHelm
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -3629,6 +3792,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceKust
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceKustomizePatches
 {
     /// <summary></summary>
@@ -3649,6 +3813,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceKust
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceKustomizeReplicas
 {
     /// <summary>Number of replicas</summary>
@@ -3661,6 +3826,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceKust
 }
 
 /// <summary>Kustomize holds kustomize specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceKustomize
 {
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
@@ -3721,6 +3887,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceKust
 }
 
 /// <summary>EnvEntry represents an entry in the application's environment</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcePluginEnv
 {
     /// <summary>Name is the name of the variable, usually expressed in uppercase</summary>
@@ -3733,6 +3900,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcePlug
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcePluginParameters
 {
     /// <summary>Array is the value of an array type parameter.</summary>
@@ -3753,6 +3921,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcePlug
 }
 
 /// <summary>Plugin holds config management plugin specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcePlugin
 {
     /// <summary>Env is a list of environment variable entries</summary>
@@ -3769,6 +3938,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcePlug
 }
 
 /// <summary>Source records the application source information of the sync, used for comparing auto-sync</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSource
 {
     /// <summary>Chart is a Helm chart name, and must be specified for applications sourced from a Helm repo.</summary>
@@ -3809,6 +3979,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSource
 }
 
 /// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -3825,6 +3996,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesDir
 }
 
 /// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -3841,6 +4013,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesDir
 }
 
 /// <summary>Jsonnet holds options specific to Jsonnet</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesDirectoryJsonnet
 {
     /// <summary>ExtVars is a list of Jsonnet External Variables</summary>
@@ -3857,6 +4030,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesDir
 }
 
 /// <summary>Directory holds path/directory specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesDirectory
 {
     /// <summary>Exclude contains a glob pattern to match paths against that should be explicitly excluded from being used during manifest generation</summary>
@@ -3877,6 +4051,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesDir
 }
 
 /// <summary>HelmFileParameter is a file parameter that's passed to helm template during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesHelmFileParameters
 {
     /// <summary>Name is the name of the Helm parameter</summary>
@@ -3889,6 +4064,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesHel
 }
 
 /// <summary>HelmParameter is a parameter that's passed to helm template during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesHelmParameters
 {
     /// <summary>ForceString determines whether to tell Helm to interpret booleans and numbers as strings</summary>
@@ -3905,6 +4081,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesHel
 }
 
 /// <summary>Helm holds helm specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesHelm
 {
     /// <summary>FileParameters are file parameters to the helm template</summary>
@@ -3949,6 +4126,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesHel
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -3981,6 +4159,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesKus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -4001,6 +4180,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesKus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesKustomizeReplicas
 {
     /// <summary>Number of replicas</summary>
@@ -4013,6 +4193,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesKus
 }
 
 /// <summary>Kustomize holds kustomize specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesKustomize
 {
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
@@ -4073,6 +4254,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesKus
 }
 
 /// <summary>EnvEntry represents an entry in the application's environment</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesPluginEnv
 {
     /// <summary>Name is the name of the variable, usually expressed in uppercase</summary>
@@ -4085,6 +4267,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesPlu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesPluginParameters
 {
     /// <summary>Array is the value of an array type parameter.</summary>
@@ -4105,6 +4288,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesPlu
 }
 
 /// <summary>Plugin holds config management plugin specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesPlugin
 {
     /// <summary>Env is a list of environment variable entries</summary>
@@ -4121,6 +4305,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesPlu
 }
 
 /// <summary>ApplicationSource contains all required information about the source of an application</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSources
 {
     /// <summary>Chart is a Helm chart name, and must be specified for applications sourced from a Helm repo.</summary>
@@ -4161,6 +4346,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSources
 }
 
 /// <summary>SyncResult is the result of a Sync operation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResult
 {
     /// <summary>ManagedNamespaceMetadata contains the current sync state of managed namespace metadata</summary>
@@ -4189,6 +4375,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResult
 }
 
 /// <summary>OperationState contains information about any ongoing operations, such as a sync</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationState
 {
     /// <summary>FinishedAt contains time of operation completion</summary>
@@ -4221,6 +4408,7 @@ public partial class V1alpha1ApplicationStatusOperationState
 }
 
 /// <summary>HealthStatus contains information about the currently observed health state of an application or resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusResourcesHealth
 {
     /// <summary>Message is a human-readable informational message describing the health status</summary>
@@ -4233,6 +4421,7 @@ public partial class V1alpha1ApplicationStatusResourcesHealth
 }
 
 /// <summary>ResourceStatus holds the current sync and health status of a resource TODO: describe members of this type</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusResources
 {
     /// <summary></summary>
@@ -4277,6 +4466,7 @@ public partial class V1alpha1ApplicationStatusResources
 }
 
 /// <summary>Summary contains a list of URLs and container images used by this application</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSummary
 {
     /// <summary>ExternalURLs holds all external URLs of application child resources.</summary>
@@ -4289,6 +4479,7 @@ public partial class V1alpha1ApplicationStatusSummary
 }
 
 /// <summary>Destination is a reference to the application's destination used for comparison</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToDestination
 {
     /// <summary>Name is an alternate way of specifying the target cluster by its symbolic name. This must be set if Server is not set.</summary>
@@ -4305,6 +4496,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToDestination
 }
 
 /// <summary>ResourceIgnoreDifferences contains resource filter and list of json paths which should be ignored during comparison with live state.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToIgnoreDifferences
 {
     /// <summary></summary>
@@ -4337,6 +4529,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToIgnoreDifferences
 }
 
 /// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -4353,6 +4546,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourceDirectoryJsonn
 }
 
 /// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -4369,6 +4563,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourceDirectoryJsonn
 }
 
 /// <summary>Jsonnet holds options specific to Jsonnet</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSourceDirectoryJsonnet
 {
     /// <summary>ExtVars is a list of Jsonnet External Variables</summary>
@@ -4385,6 +4580,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourceDirectoryJsonn
 }
 
 /// <summary>Directory holds path/directory specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSourceDirectory
 {
     /// <summary>Exclude contains a glob pattern to match paths against that should be explicitly excluded from being used during manifest generation</summary>
@@ -4405,6 +4601,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourceDirectory
 }
 
 /// <summary>HelmFileParameter is a file parameter that's passed to helm template during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSourceHelmFileParameters
 {
     /// <summary>Name is the name of the Helm parameter</summary>
@@ -4417,6 +4614,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourceHelmFileParame
 }
 
 /// <summary>HelmParameter is a parameter that's passed to helm template during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSourceHelmParameters
 {
     /// <summary>ForceString determines whether to tell Helm to interpret booleans and numbers as strings</summary>
@@ -4433,6 +4631,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourceHelmParameters
 }
 
 /// <summary>Helm holds helm specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSourceHelm
 {
     /// <summary>FileParameters are file parameters to the helm template</summary>
@@ -4477,6 +4676,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourceHelm
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -4509,6 +4709,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourceKustomizePatch
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSourceKustomizePatches
 {
     /// <summary></summary>
@@ -4529,6 +4730,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourceKustomizePatch
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSourceKustomizeReplicas
 {
     /// <summary>Number of replicas</summary>
@@ -4541,6 +4743,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourceKustomizeRepli
 }
 
 /// <summary>Kustomize holds kustomize specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSourceKustomize
 {
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
@@ -4601,6 +4804,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourceKustomize
 }
 
 /// <summary>EnvEntry represents an entry in the application's environment</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcePluginEnv
 {
     /// <summary>Name is the name of the variable, usually expressed in uppercase</summary>
@@ -4613,6 +4817,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcePluginEnv
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcePluginParameters
 {
     /// <summary>Array is the value of an array type parameter.</summary>
@@ -4633,6 +4838,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcePluginParamete
 }
 
 /// <summary>Plugin holds config management plugin specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcePlugin
 {
     /// <summary>Env is a list of environment variable entries</summary>
@@ -4649,6 +4855,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcePlugin
 }
 
 /// <summary>Source is a reference to the application's source used for comparison</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSource
 {
     /// <summary>Chart is a Helm chart name, and must be specified for applications sourced from a Helm repo.</summary>
@@ -4689,6 +4896,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSource
 }
 
 /// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -4705,6 +4913,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesDirectoryJson
 }
 
 /// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -4721,6 +4930,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesDirectoryJson
 }
 
 /// <summary>Jsonnet holds options specific to Jsonnet</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcesDirectoryJsonnet
 {
     /// <summary>ExtVars is a list of Jsonnet External Variables</summary>
@@ -4737,6 +4947,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesDirectoryJson
 }
 
 /// <summary>Directory holds path/directory specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcesDirectory
 {
     /// <summary>Exclude contains a glob pattern to match paths against that should be explicitly excluded from being used during manifest generation</summary>
@@ -4757,6 +4968,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesDirectory
 }
 
 /// <summary>HelmFileParameter is a file parameter that's passed to helm template during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcesHelmFileParameters
 {
     /// <summary>Name is the name of the Helm parameter</summary>
@@ -4769,6 +4981,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesHelmFileParam
 }
 
 /// <summary>HelmParameter is a parameter that's passed to helm template during manifest generation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcesHelmParameters
 {
     /// <summary>ForceString determines whether to tell Helm to interpret booleans and numbers as strings</summary>
@@ -4785,6 +4998,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesHelmParameter
 }
 
 /// <summary>Helm holds helm specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcesHelm
 {
     /// <summary>FileParameters are file parameters to the helm template</summary>
@@ -4829,6 +5043,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesHelm
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -4861,6 +5076,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesKustomizePatc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -4881,6 +5097,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesKustomizePatc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcesKustomizeReplicas
 {
     /// <summary>Number of replicas</summary>
@@ -4893,6 +5110,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesKustomizeRepl
 }
 
 /// <summary>Kustomize holds kustomize specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcesKustomize
 {
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
@@ -4953,6 +5171,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesKustomize
 }
 
 /// <summary>EnvEntry represents an entry in the application's environment</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcesPluginEnv
 {
     /// <summary>Name is the name of the variable, usually expressed in uppercase</summary>
@@ -4965,6 +5184,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesPluginEnv
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcesPluginParameters
 {
     /// <summary>Array is the value of an array type parameter.</summary>
@@ -4985,6 +5205,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesPluginParamet
 }
 
 /// <summary>Plugin holds config management plugin specific options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcesPlugin
 {
     /// <summary>Env is a list of environment variable entries</summary>
@@ -5001,6 +5222,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesPlugin
 }
 
 /// <summary>ApplicationSource contains all required information about the source of an application</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSources
 {
     /// <summary>Chart is a Helm chart name, and must be specified for applications sourced from a Helm repo.</summary>
@@ -5041,6 +5263,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSources
 }
 
 /// <summary>ComparedTo contains information about what has been compared</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedTo
 {
     /// <summary>Destination is a reference to the application's destination used for comparison</summary>
@@ -5061,6 +5284,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedTo
 }
 
 /// <summary>Sync contains information about the application's current sync status</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSync
 {
     /// <summary>ComparedTo contains information about what has been compared</summary>
@@ -5081,6 +5305,7 @@ public partial class V1alpha1ApplicationStatusSync
 }
 
 /// <summary>ApplicationStatus contains status information for the application</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatus
 {
     /// <summary>Conditions is a list of currently observed application conditions</summary>
@@ -5136,8 +5361,9 @@ public partial class V1alpha1ApplicationStatus
     public V1alpha1ApplicationStatusSync? Sync { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Application is a definition of Application resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1Application : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ApplicationSpec>, IStatus<V1alpha1ApplicationStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

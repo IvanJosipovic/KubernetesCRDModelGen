@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
 /// <summary>Storage version of v1api20200601.ARecord An A record.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storagePrivateDnsZonesCNAMERecordSpecARecords
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -21,6 +22,7 @@ public partial class V1api20200601storagePrivateDnsZonesCNAMERecordSpecARecords
 }
 
 /// <summary>Storage version of v1api20200601.AaaaRecord An AAAA record.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storagePrivateDnsZonesCNAMERecordSpecAaaaRecords
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -33,6 +35,7 @@ public partial class V1api20200601storagePrivateDnsZonesCNAMERecordSpecAaaaRecor
 }
 
 /// <summary>Storage version of v1api20200601.CnameRecord A CNAME record.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storagePrivateDnsZonesCNAMERecordSpecCnameRecord
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -45,6 +48,7 @@ public partial class V1api20200601storagePrivateDnsZonesCNAMERecordSpecCnameReco
 }
 
 /// <summary>Storage version of v1api20200601.MxRecord An MX record.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storagePrivateDnsZonesCNAMERecordSpecMxRecords
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -61,6 +65,7 @@ public partial class V1api20200601storagePrivateDnsZonesCNAMERecordSpecMxRecords
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a network.azure.com/PrivateDnsZone resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storagePrivateDnsZonesCNAMERecordSpecOwner
 {
     /// <summary></summary>
@@ -73,6 +78,7 @@ public partial class V1api20200601storagePrivateDnsZonesCNAMERecordSpecOwner
 }
 
 /// <summary>Storage version of v1api20200601.PtrRecord A PTR record.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storagePrivateDnsZonesCNAMERecordSpecPtrRecords
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -85,6 +91,7 @@ public partial class V1api20200601storagePrivateDnsZonesCNAMERecordSpecPtrRecord
 }
 
 /// <summary>Storage version of v1api20200601.SoaRecord An SOA record.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storagePrivateDnsZonesCNAMERecordSpecSoaRecord
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -121,6 +128,7 @@ public partial class V1api20200601storagePrivateDnsZonesCNAMERecordSpecSoaRecord
 }
 
 /// <summary>Storage version of v1api20200601.SrvRecord An SRV record.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storagePrivateDnsZonesCNAMERecordSpecSrvRecords
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -145,6 +153,7 @@ public partial class V1api20200601storagePrivateDnsZonesCNAMERecordSpecSrvRecord
 }
 
 /// <summary>Storage version of v1api20200601.TxtRecord A TXT record.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storagePrivateDnsZonesCNAMERecordSpecTxtRecords
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -157,6 +166,7 @@ public partial class V1api20200601storagePrivateDnsZonesCNAMERecordSpecTxtRecord
 }
 
 /// <summary>Storage version of v1api20200601.PrivateDnsZones_CNAME_Spec</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storagePrivateDnsZonesCNAMERecordSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -221,6 +231,7 @@ public partial class V1api20200601storagePrivateDnsZonesCNAMERecordSpec
 }
 
 /// <summary>Storage version of v1api20200601.ARecord_STATUS An A record.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storagePrivateDnsZonesCNAMERecordStatusARecords
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -233,6 +244,7 @@ public partial class V1api20200601storagePrivateDnsZonesCNAMERecordStatusARecord
 }
 
 /// <summary>Storage version of v1api20200601.AaaaRecord_STATUS An AAAA record.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storagePrivateDnsZonesCNAMERecordStatusAaaaRecords
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -245,6 +257,7 @@ public partial class V1api20200601storagePrivateDnsZonesCNAMERecordStatusAaaaRec
 }
 
 /// <summary>Storage version of v1api20200601.CnameRecord_STATUS A CNAME record.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storagePrivateDnsZonesCNAMERecordStatusCnameRecord
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -257,6 +270,7 @@ public partial class V1api20200601storagePrivateDnsZonesCNAMERecordStatusCnameRe
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storagePrivateDnsZonesCNAMERecordStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -289,6 +303,7 @@ public partial class V1api20200601storagePrivateDnsZonesCNAMERecordStatusConditi
 }
 
 /// <summary>Storage version of v1api20200601.MxRecord_STATUS An MX record.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storagePrivateDnsZonesCNAMERecordStatusMxRecords
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -305,6 +320,7 @@ public partial class V1api20200601storagePrivateDnsZonesCNAMERecordStatusMxRecor
 }
 
 /// <summary>Storage version of v1api20200601.PtrRecord_STATUS A PTR record.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storagePrivateDnsZonesCNAMERecordStatusPtrRecords
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -317,6 +333,7 @@ public partial class V1api20200601storagePrivateDnsZonesCNAMERecordStatusPtrReco
 }
 
 /// <summary>Storage version of v1api20200601.SoaRecord_STATUS An SOA record.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storagePrivateDnsZonesCNAMERecordStatusSoaRecord
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -353,6 +370,7 @@ public partial class V1api20200601storagePrivateDnsZonesCNAMERecordStatusSoaReco
 }
 
 /// <summary>Storage version of v1api20200601.SrvRecord_STATUS An SRV record.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storagePrivateDnsZonesCNAMERecordStatusSrvRecords
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -377,6 +395,7 @@ public partial class V1api20200601storagePrivateDnsZonesCNAMERecordStatusSrvReco
 }
 
 /// <summary>Storage version of v1api20200601.TxtRecord_STATUS A TXT record.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storagePrivateDnsZonesCNAMERecordStatusTxtRecords
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -389,6 +408,7 @@ public partial class V1api20200601storagePrivateDnsZonesCNAMERecordStatusTxtReco
 }
 
 /// <summary>Storage version of v1api20200601.PrivateDnsZones_CNAME_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storagePrivateDnsZonesCNAMERecordStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -464,8 +484,9 @@ public partial class V1api20200601storagePrivateDnsZonesCNAMERecordStatus
     public string? Type { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Storage version of v1api20200601.PrivateDnsZonesCNAMERecord Generator information: - Generated from: /privatedns/resource-manager/Microsoft.Network/stable/2020-06-01/privatedns.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateZoneName}/CNAME/{relativeRecordSetName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1api20200601storagePrivateDnsZonesCNAMERecord : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20200601storagePrivateDnsZonesCNAMERecordSpec>, IStatus<V1api20200601storagePrivateDnsZonesCNAMERecordStatus>
 {
     public const string KubeApiVersion = "v1api20200601storage";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1NodeGroupSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProviderAutoscalingPolicy
 {
     /// <summary>Maximum size of the node group. Set to a value less than or equal to 100 and greater than or equal to min-nodes.</summary>
@@ -35,6 +37,7 @@ public partial class V1beta1NodeGroupSpecForProviderAutoscalingPolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProviderMaintenanceWindow
 {
     /// <summary>instances.start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.</summary>
@@ -42,6 +45,7 @@ public partial class V1beta1NodeGroupSpecForProviderMaintenanceWindow
     public string? StartTime { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecForProviderNodeTemplateRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -52,6 +56,7 @@ public enum V1beta1NodeGroupSpecForProviderNodeTemplateRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecForProviderNodeTemplateRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -63,6 +68,7 @@ public enum V1beta1NodeGroupSpecForProviderNodeTemplateRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProviderNodeTemplateRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -77,6 +83,7 @@ public partial class V1beta1NodeGroupSpecForProviderNodeTemplateRefPolicy
 }
 
 /// <summary>Reference to a NodeTemplate in compute to populate nodeTemplate.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProviderNodeTemplateRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -88,6 +95,7 @@ public partial class V1beta1NodeGroupSpecForProviderNodeTemplateRef
     public V1beta1NodeGroupSpecForProviderNodeTemplateRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecForProviderNodeTemplateSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -98,6 +106,7 @@ public enum V1beta1NodeGroupSpecForProviderNodeTemplateSelectorPolicyResolutionE
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecForProviderNodeTemplateSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -109,6 +118,7 @@ public enum V1beta1NodeGroupSpecForProviderNodeTemplateSelectorPolicyResolveEnum
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProviderNodeTemplateSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -123,6 +133,7 @@ public partial class V1beta1NodeGroupSpecForProviderNodeTemplateSelectorPolicy
 }
 
 /// <summary>Selector for a NodeTemplate in compute to populate nodeTemplate.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProviderNodeTemplateSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -138,6 +149,7 @@ public partial class V1beta1NodeGroupSpecForProviderNodeTemplateSelector
     public V1beta1NodeGroupSpecForProviderNodeTemplateSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -148,6 +160,7 @@ public enum V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdRefPolicyRes
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -159,6 +172,7 @@ public enum V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdRefPolicyRes
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -173,6 +187,7 @@ public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdRef
 }
 
 /// <summary>Reference to a Project in cloudplatform to populate id.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -184,6 +199,7 @@ public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdRef
     public V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -194,6 +210,7 @@ public enum V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdSelectorPoli
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -205,6 +222,7 @@ public enum V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdSelectorPoli
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -219,6 +237,7 @@ public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdSel
 }
 
 /// <summary>Selector for a Project in cloudplatform to populate id.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -234,6 +253,7 @@ public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdSel
     public V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -244,6 +264,7 @@ public enum V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdRefPo
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -255,6 +276,7 @@ public enum V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdRefPo
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -269,6 +291,7 @@ public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProje
 }
 
 /// <summary>Reference to a Project in cloudplatform to populate projectId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -280,6 +303,7 @@ public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProje
     public V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -290,6 +314,7 @@ public enum V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdSelec
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -301,6 +326,7 @@ public enum V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdSelec
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -315,6 +341,7 @@ public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProje
 }
 
 /// <summary>Selector for a Project in cloudplatform to populate projectId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -331,6 +358,7 @@ public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProje
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMap
 {
     /// <summary>The identifier for this object. Format specified above.</summary>
@@ -359,6 +387,7 @@ public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMap
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProviderShareSettings
 {
     /// <summary>A map of project id and project config. This is only valid when shareType's value is SPECIFIC_PROJECTS. Structure is documented below.</summary>
@@ -371,6 +400,7 @@ public partial class V1beta1NodeGroupSpecForProviderShareSettings
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProvider
 {
     /// <summary>If you use sole-tenant nodes for your workloads, you can use the node group autoscaler to automatically manage the sizes of your node groups. One of initial_size or autoscaling_policy must be configured on resource creation. Structure is documented below.</summary>
@@ -419,6 +449,7 @@ public partial class V1beta1NodeGroupSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProviderAutoscalingPolicy
 {
     /// <summary>Maximum size of the node group. Set to a value less than or equal to 100 and greater than or equal to min-nodes.</summary>
@@ -435,6 +466,7 @@ public partial class V1beta1NodeGroupSpecInitProviderAutoscalingPolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProviderMaintenanceWindow
 {
     /// <summary>instances.start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.</summary>
@@ -442,6 +474,7 @@ public partial class V1beta1NodeGroupSpecInitProviderMaintenanceWindow
     public string? StartTime { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecInitProviderNodeTemplateRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -452,6 +485,7 @@ public enum V1beta1NodeGroupSpecInitProviderNodeTemplateRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecInitProviderNodeTemplateRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -463,6 +497,7 @@ public enum V1beta1NodeGroupSpecInitProviderNodeTemplateRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProviderNodeTemplateRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -477,6 +512,7 @@ public partial class V1beta1NodeGroupSpecInitProviderNodeTemplateRefPolicy
 }
 
 /// <summary>Reference to a NodeTemplate in compute to populate nodeTemplate.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProviderNodeTemplateRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -488,6 +524,7 @@ public partial class V1beta1NodeGroupSpecInitProviderNodeTemplateRef
     public V1beta1NodeGroupSpecInitProviderNodeTemplateRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecInitProviderNodeTemplateSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -498,6 +535,7 @@ public enum V1beta1NodeGroupSpecInitProviderNodeTemplateSelectorPolicyResolution
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecInitProviderNodeTemplateSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -509,6 +547,7 @@ public enum V1beta1NodeGroupSpecInitProviderNodeTemplateSelectorPolicyResolveEnu
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProviderNodeTemplateSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -523,6 +562,7 @@ public partial class V1beta1NodeGroupSpecInitProviderNodeTemplateSelectorPolicy
 }
 
 /// <summary>Selector for a NodeTemplate in compute to populate nodeTemplate.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProviderNodeTemplateSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -538,6 +578,7 @@ public partial class V1beta1NodeGroupSpecInitProviderNodeTemplateSelector
     public V1beta1NodeGroupSpecInitProviderNodeTemplateSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -548,6 +589,7 @@ public enum V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdRefPolicyRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -559,6 +601,7 @@ public enum V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdRefPolicyRe
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -573,6 +616,7 @@ public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdRe
 }
 
 /// <summary>Reference to a Project in cloudplatform to populate id.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -584,6 +628,7 @@ public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdRe
     public V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -594,6 +639,7 @@ public enum V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdSelectorPol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -605,6 +651,7 @@ public enum V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdSelectorPol
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -619,6 +666,7 @@ public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdSe
 }
 
 /// <summary>Selector for a Project in cloudplatform to populate id.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -634,6 +682,7 @@ public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdSe
     public V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -644,6 +693,7 @@ public enum V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdRefP
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -655,6 +705,7 @@ public enum V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdRefP
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -669,6 +720,7 @@ public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProj
 }
 
 /// <summary>Reference to a Project in cloudplatform to populate projectId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -680,6 +732,7 @@ public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProj
     public V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -690,6 +743,7 @@ public enum V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdSele
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -701,6 +755,7 @@ public enum V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdSele
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -715,6 +770,7 @@ public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProj
 }
 
 /// <summary>Selector for a Project in cloudplatform to populate projectId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -731,6 +787,7 @@ public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProj
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMap
 {
     /// <summary>The identifier for this object. Format specified above.</summary>
@@ -759,6 +816,7 @@ public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMap
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProviderShareSettings
 {
     /// <summary>A map of project id and project config. This is only valid when shareType's value is SPECIFIC_PROJECTS. Structure is documented below.</summary>
@@ -771,6 +829,7 @@ public partial class V1beta1NodeGroupSpecInitProviderShareSettings
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProvider
 {
     /// <summary>If you use sole-tenant nodes for your workloads, you can use the node group autoscaler to automatically manage the sizes of your node groups. One of initial_size or autoscaling_policy must be configured on resource creation. Structure is documented below.</summary>
@@ -814,6 +873,7 @@ public partial class V1beta1NodeGroupSpecInitProvider
     public IList<V1beta1NodeGroupSpecInitProviderShareSettings>? ShareSettings { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -836,6 +896,7 @@ public enum V1beta1NodeGroupSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -846,6 +907,7 @@ public enum V1beta1NodeGroupSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -857,6 +919,7 @@ public enum V1beta1NodeGroupSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -871,6 +934,7 @@ public partial class V1beta1NodeGroupSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -882,6 +946,7 @@ public partial class V1beta1NodeGroupSpecProviderConfigRef
     public V1beta1NodeGroupSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -892,6 +957,7 @@ public enum V1beta1NodeGroupSpecPublishConnectionDetailsToConfigRefPolicyResolut
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -903,6 +969,7 @@ public enum V1beta1NodeGroupSpecPublishConnectionDetailsToConfigRefPolicyResolve
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -917,6 +984,7 @@ public partial class V1beta1NodeGroupSpecPublishConnectionDetailsToConfigRefPoli
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -929,6 +997,7 @@ public partial class V1beta1NodeGroupSpecPublishConnectionDetailsToConfigRef
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -945,6 +1014,7 @@ public partial class V1beta1NodeGroupSpecPublishConnectionDetailsToMetadata
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -961,6 +1031,7 @@ public partial class V1beta1NodeGroupSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -973,6 +1044,7 @@ public partial class V1beta1NodeGroupSpecWriteConnectionSecretToRef
 }
 
 /// <summary>NodeGroupSpec defines the desired state of NodeGroup</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1006,6 +1078,7 @@ public partial class V1beta1NodeGroupSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupStatusAtProviderAutoscalingPolicy
 {
     /// <summary>Maximum size of the node group. Set to a value less than or equal to 100 and greater than or equal to min-nodes.</summary>
@@ -1022,6 +1095,7 @@ public partial class V1beta1NodeGroupStatusAtProviderAutoscalingPolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupStatusAtProviderMaintenanceWindow
 {
     /// <summary>instances.start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.</summary>
@@ -1030,6 +1104,7 @@ public partial class V1beta1NodeGroupStatusAtProviderMaintenanceWindow
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupStatusAtProviderShareSettingsProjectMap
 {
     /// <summary>The identifier for this object. Format specified above.</summary>
@@ -1042,6 +1117,7 @@ public partial class V1beta1NodeGroupStatusAtProviderShareSettingsProjectMap
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupStatusAtProviderShareSettings
 {
     /// <summary>A map of project id and project config. This is only valid when shareType's value is SPECIFIC_PROJECTS. Structure is documented below.</summary>
@@ -1054,6 +1130,7 @@ public partial class V1beta1NodeGroupStatusAtProviderShareSettings
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupStatusAtProvider
 {
     /// <summary>If you use sole-tenant nodes for your workloads, you can use the node group autoscaler to automatically manage the sizes of your node groups. One of initial_size or autoscaling_policy must be configured on resource creation. Structure is documented below.</summary>
@@ -1110,6 +1187,7 @@ public partial class V1beta1NodeGroupStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1138,6 +1216,7 @@ public partial class V1beta1NodeGroupStatusConditions
 }
 
 /// <summary>NodeGroupStatus defines the observed state of NodeGroup.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupStatus
 {
     /// <summary></summary>
@@ -1153,8 +1232,9 @@ public partial class V1beta1NodeGroupStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>NodeGroup is the Schema for the NodeGroups API. Represents a NodeGroup resource to manage a group of sole-tenant nodes.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1NodeGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NodeGroupSpec>, IStatus<V1beta1NodeGroupStatus>
 {
     public const string KubeApiVersion = "v1beta1";

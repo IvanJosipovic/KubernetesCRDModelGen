@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dbforpostgresql.azure.com;
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerSpecAdministratorLoginPassword
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -21,6 +22,7 @@ public partial class V1api20221201storageFlexibleServerSpecAdministratorLoginPas
 }
 
 /// <summary>Storage version of v1api20221201.AuthConfig Authentication configuration properties of a server</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerSpecAuthConfig
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -41,6 +43,7 @@ public partial class V1api20221201storageFlexibleServerSpecAuthConfig
 }
 
 /// <summary>Storage version of v1api20221201.Backup Backup properties of a server</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerSpecBackup
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -57,6 +60,7 @@ public partial class V1api20221201storageFlexibleServerSpecBackup
 }
 
 /// <summary>PrimaryUserAssignedIdentityReference: Resource Id for the User assigned identity to be used for data encryption for primary server.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerSpecDataEncryptionPrimaryUserAssignedIdentityReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -77,6 +81,7 @@ public partial class V1api20221201storageFlexibleServerSpecDataEncryptionPrimary
 }
 
 /// <summary>Storage version of v1api20221201.DataEncryption Data encryption properties of a server</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerSpecDataEncryption
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -97,6 +102,7 @@ public partial class V1api20221201storageFlexibleServerSpecDataEncryption
 }
 
 /// <summary>Storage version of v1api20221201.HighAvailability High availability properties of a server</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerSpecHighAvailability
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -113,6 +119,7 @@ public partial class V1api20221201storageFlexibleServerSpecHighAvailability
 }
 
 /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerSpecIdentityUserAssignedIdentitiesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -133,6 +140,7 @@ public partial class V1api20221201storageFlexibleServerSpecIdentityUserAssignedI
 }
 
 /// <summary>Storage version of v1api20221201.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerSpecIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -145,6 +153,7 @@ public partial class V1api20221201storageFlexibleServerSpecIdentityUserAssignedI
 }
 
 /// <summary>Storage version of v1api20221201.UserAssignedIdentity Information describing the identities associated with this application.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerSpecIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -161,6 +170,7 @@ public partial class V1api20221201storageFlexibleServerSpecIdentity
 }
 
 /// <summary>Storage version of v1api20221201.MaintenanceWindow Maintenance window properties of a server.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerSpecMaintenanceWindow
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -185,6 +195,7 @@ public partial class V1api20221201storageFlexibleServerSpecMaintenanceWindow
 }
 
 /// <summary>DelegatedSubnetResourceReference: Delegated subnet arm resource id. This is required to be passed during create, in case we want the server to be VNET injected, i.e. Private access server. During update, pass this only if we want to update the value for Private DNS zone.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerSpecNetworkDelegatedSubnetResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -205,6 +216,7 @@ public partial class V1api20221201storageFlexibleServerSpecNetworkDelegatedSubne
 }
 
 /// <summary>PrivateDnsZoneArmResourceReference: Private dns zone arm resource id. This is required to be passed during create, in case we want the server to be VNET injected, i.e. Private access server. During update, pass this only if we want to update the value for Private DNS zone.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerSpecNetworkPrivateDnsZoneArmResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -225,6 +237,7 @@ public partial class V1api20221201storageFlexibleServerSpecNetworkPrivateDnsZone
 }
 
 /// <summary>Storage version of v1api20221201.Network Network properties of a server.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerSpecNetwork
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -241,6 +254,7 @@ public partial class V1api20221201storageFlexibleServerSpecNetwork
 }
 
 /// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerSpecOperatorSpecConfigMapsFullyQualifiedDomainName
 {
     /// <summary>Key is the key in the ConfigMap being referenced</summary>
@@ -253,6 +267,7 @@ public partial class V1api20221201storageFlexibleServerSpecOperatorSpecConfigMap
 }
 
 /// <summary>Storage version of v1api20221201.FlexibleServerOperatorConfigMaps</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerSpecOperatorSpecConfigMaps
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -265,6 +280,7 @@ public partial class V1api20221201storageFlexibleServerSpecOperatorSpecConfigMap
 }
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerSpecOperatorSpecSecretsFullyQualifiedDomainName
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -277,6 +293,7 @@ public partial class V1api20221201storageFlexibleServerSpecOperatorSpecSecretsFu
 }
 
 /// <summary>Storage version of v1api20221201.FlexibleServerOperatorSecrets</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerSpecOperatorSpecSecrets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -289,6 +306,7 @@ public partial class V1api20221201storageFlexibleServerSpecOperatorSpecSecrets
 }
 
 /// <summary>Storage version of v1api20221201.FlexibleServerOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -305,6 +323,7 @@ public partial class V1api20221201storageFlexibleServerSpecOperatorSpec
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerSpecOwner
 {
     /// <summary></summary>
@@ -317,6 +336,7 @@ public partial class V1api20221201storageFlexibleServerSpecOwner
 }
 
 /// <summary>Storage version of v1api20221201.Sku Sku information related properties of a server.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerSpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -333,6 +353,7 @@ public partial class V1api20221201storageFlexibleServerSpecSku
 }
 
 /// <summary>SourceServerResourceReference: The source server resource ID to restore from. It's required when 'createMode' is 'PointInTimeRestore' or 'GeoRestore' or 'Replica'. This property is returned only for Replica server</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerSpecSourceServerResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -353,6 +374,7 @@ public partial class V1api20221201storageFlexibleServerSpecSourceServerResourceR
 }
 
 /// <summary>Storage version of v1api20221201.Storage Storage properties of a server</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerSpecStorage
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -365,6 +387,7 @@ public partial class V1api20221201storageFlexibleServerSpecStorage
 }
 
 /// <summary>Storage version of v1api20221201.FlexibleServer_Spec</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -465,6 +488,7 @@ public partial class V1api20221201storageFlexibleServerSpec
 }
 
 /// <summary>Storage version of v1api20221201.AuthConfig_STATUS Authentication configuration properties of a server</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerStatusAuthConfig
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -485,6 +509,7 @@ public partial class V1api20221201storageFlexibleServerStatusAuthConfig
 }
 
 /// <summary>Storage version of v1api20221201.Backup_STATUS Backup properties of a server</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerStatusBackup
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -505,6 +530,7 @@ public partial class V1api20221201storageFlexibleServerStatusBackup
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -537,6 +563,7 @@ public partial class V1api20221201storageFlexibleServerStatusConditions
 }
 
 /// <summary>Storage version of v1api20221201.DataEncryption_STATUS Data encryption properties of a server</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerStatusDataEncryption
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -557,6 +584,7 @@ public partial class V1api20221201storageFlexibleServerStatusDataEncryption
 }
 
 /// <summary>Storage version of v1api20221201.HighAvailability_STATUS High availability properties of a server</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerStatusHighAvailability
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -577,6 +605,7 @@ public partial class V1api20221201storageFlexibleServerStatusHighAvailability
 }
 
 /// <summary>Storage version of v1api20221201.UserIdentity_STATUS Describes a single user-assigned identity associated with the application.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerStatusIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -593,6 +622,7 @@ public partial class V1api20221201storageFlexibleServerStatusIdentityUserAssigne
 }
 
 /// <summary>Storage version of v1api20221201.UserAssignedIdentity_STATUS Information describing the identities associated with this application.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerStatusIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -613,6 +643,7 @@ public partial class V1api20221201storageFlexibleServerStatusIdentity
 }
 
 /// <summary>Storage version of v1api20221201.MaintenanceWindow_STATUS Maintenance window properties of a server.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerStatusMaintenanceWindow
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -637,6 +668,7 @@ public partial class V1api20221201storageFlexibleServerStatusMaintenanceWindow
 }
 
 /// <summary>Storage version of v1api20221201.Network_STATUS Network properties of a server.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerStatusNetwork
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -657,6 +689,7 @@ public partial class V1api20221201storageFlexibleServerStatusNetwork
 }
 
 /// <summary>Storage version of v1api20221201.Sku_STATUS Sku information related properties of a server.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -673,6 +706,7 @@ public partial class V1api20221201storageFlexibleServerStatusSku
 }
 
 /// <summary>Storage version of v1api20221201.Storage_STATUS Storage properties of a server</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerStatusStorage
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -685,6 +719,7 @@ public partial class V1api20221201storageFlexibleServerStatusStorage
 }
 
 /// <summary>Storage version of v1api20221201.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -717,6 +752,7 @@ public partial class V1api20221201storageFlexibleServerStatusSystemData
 }
 
 /// <summary>Storage version of v1api20221201.FlexibleServer_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServerStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -832,8 +868,9 @@ public partial class V1api20221201storageFlexibleServerStatus
     public string? Version { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Storage version of v1api20221201.FlexibleServer Generator information: - Generated from: /postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2022-12-01/FlexibleServers.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforPostgreSQL/flexibleServers/{serverName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1api20221201storageFlexibleServer : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20221201storageFlexibleServerSpec>, IStatus<V1api20221201storageFlexibleServerStatus>
 {
     public const string KubeApiVersion = "v1api20221201storage";

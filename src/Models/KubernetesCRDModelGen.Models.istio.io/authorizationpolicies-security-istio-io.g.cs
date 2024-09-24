@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.security.istio.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AuthorizationPolicySpecActionEnum
 {
     [EnumMember(Value = "ALLOW"), JsonStringEnumMemberName("ALLOW")]
@@ -25,6 +26,7 @@ public enum V1beta1AuthorizationPolicySpecActionEnum
 }
 
 /// <summary>Specifies detailed configuration of the CUSTOM action.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizationPolicySpecProvider
 {
     /// <summary>Specifies the name of the extension provider.</summary>
@@ -33,6 +35,7 @@ public partial class V1beta1AuthorizationPolicySpecProvider
 }
 
 /// <summary>Source specifies the source of a request.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizationPolicySpecRulesFromSource
 {
     /// <summary>Optional.</summary>
@@ -77,6 +80,7 @@ public partial class V1beta1AuthorizationPolicySpecRulesFromSource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizationPolicySpecRulesFrom
 {
     /// <summary>Source specifies the source of a request.</summary>
@@ -85,6 +89,7 @@ public partial class V1beta1AuthorizationPolicySpecRulesFrom
 }
 
 /// <summary>Operation specifies the operation of a request.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizationPolicySpecRulesToOperation
 {
     /// <summary>Optional.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1AuthorizationPolicySpecRulesToOperation
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizationPolicySpecRulesTo
 {
     /// <summary>Operation specifies the operation of a request.</summary>
@@ -129,6 +135,7 @@ public partial class V1beta1AuthorizationPolicySpecRulesTo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizationPolicySpecRulesWhen
 {
     /// <summary>The name of an Istio attribute.</summary>
@@ -145,6 +152,7 @@ public partial class V1beta1AuthorizationPolicySpecRulesWhen
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizationPolicySpecRules
 {
     /// <summary>Optional.</summary>
@@ -161,6 +169,7 @@ public partial class V1beta1AuthorizationPolicySpecRules
 }
 
 /// <summary>Optional.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizationPolicySpecSelector
 {
     /// <summary>One or more labels that indicate a specific set of pods/VMs on which a policy should be applied.</summary>
@@ -169,6 +178,7 @@ public partial class V1beta1AuthorizationPolicySpecSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizationPolicySpecTargetRef
 {
     /// <summary>group is the group of the target resource.</summary>
@@ -189,6 +199,7 @@ public partial class V1beta1AuthorizationPolicySpecTargetRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizationPolicySpecTargetRefs
 {
     /// <summary>group is the group of the target resource.</summary>
@@ -209,6 +220,7 @@ public partial class V1beta1AuthorizationPolicySpecTargetRefs
 }
 
 /// <summary>Configuration for access control on workloads. See more details at: https://istio.io/docs/reference/config/security/authorization-policy.html</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizationPolicySpec
 {
     /// <summary>Optional.  Valid Options: ALLOW, DENY, AUDIT, CUSTOM</summary>
@@ -237,8 +249,9 @@ public partial class V1beta1AuthorizationPolicySpec
     public IList<V1beta1AuthorizationPolicySpecTargetRefs>? TargetRefs { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1AuthorizationPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AuthorizationPolicySpec>, IStatus<JsonNode>
 {
     public const string KubeApiVersion = "v1beta1";

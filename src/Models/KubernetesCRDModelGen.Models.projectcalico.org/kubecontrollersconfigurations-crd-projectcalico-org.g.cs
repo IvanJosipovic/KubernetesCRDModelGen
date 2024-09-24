@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
 /// <summary>Namespace enables and configures the namespace controller. Enabled by default, set to nil to disable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationSpecControllersNamespace
 {
     /// <summary>ReconcilerPeriod is the period to perform reconciliation with the Calico datastore. [Default: 5m]</summary>
@@ -17,6 +18,7 @@ public partial class V1KubeControllersConfigurationSpecControllersNamespace
 }
 
 /// <summary>HostEndpoint controls syncing nodes to host endpoints. Disabled by default, set to nil to disable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationSpecControllersNodeHostEndpoint
 {
     /// <summary>AutoCreate enables automatic creation of host endpoints for every node. [Default: Disabled]</summary>
@@ -25,6 +27,7 @@ public partial class V1KubeControllersConfigurationSpecControllersNodeHostEndpoi
 }
 
 /// <summary>Node enables and configures the node controller. Enabled by default, set to nil to disable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationSpecControllersNode
 {
     /// <summary>HostEndpoint controls syncing nodes to host endpoints. Disabled by default, set to nil to disable.</summary>
@@ -45,6 +48,7 @@ public partial class V1KubeControllersConfigurationSpecControllersNode
 }
 
 /// <summary>Policy enables and configures the policy controller. Enabled by default, set to nil to disable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationSpecControllersPolicy
 {
     /// <summary>ReconcilerPeriod is the period to perform reconciliation with the Calico datastore. [Default: 5m]</summary>
@@ -53,6 +57,7 @@ public partial class V1KubeControllersConfigurationSpecControllersPolicy
 }
 
 /// <summary>ServiceAccount enables and configures the service account controller. Enabled by default, set to nil to disable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationSpecControllersServiceAccount
 {
     /// <summary>ReconcilerPeriod is the period to perform reconciliation with the Calico datastore. [Default: 5m]</summary>
@@ -61,6 +66,7 @@ public partial class V1KubeControllersConfigurationSpecControllersServiceAccount
 }
 
 /// <summary>WorkloadEndpoint enables and configures the workload endpoint controller. Enabled by default, set to nil to disable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationSpecControllersWorkloadEndpoint
 {
     /// <summary>ReconcilerPeriod is the period to perform reconciliation with the Calico datastore. [Default: 5m]</summary>
@@ -69,6 +75,7 @@ public partial class V1KubeControllersConfigurationSpecControllersWorkloadEndpoi
 }
 
 /// <summary>Controllers enables and configures individual Kubernetes controllers</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationSpecControllers
 {
     /// <summary>Namespace enables and configures the namespace controller. Enabled by default, set to nil to disable.</summary>
@@ -93,6 +100,7 @@ public partial class V1KubeControllersConfigurationSpecControllers
 }
 
 /// <summary>KubeControllersConfigurationSpec contains the values of the Kubernetes controllers configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationSpec
 {
     /// <summary>Controllers enables and configures individual Kubernetes controllers</summary>
@@ -121,6 +129,7 @@ public partial class V1KubeControllersConfigurationSpec
 }
 
 /// <summary>Namespace enables and configures the namespace controller. Enabled by default, set to nil to disable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationStatusRunningConfigControllersNamespace
 {
     /// <summary>ReconcilerPeriod is the period to perform reconciliation with the Calico datastore. [Default: 5m]</summary>
@@ -129,6 +138,7 @@ public partial class V1KubeControllersConfigurationStatusRunningConfigController
 }
 
 /// <summary>HostEndpoint controls syncing nodes to host endpoints. Disabled by default, set to nil to disable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationStatusRunningConfigControllersNodeHostEndpoint
 {
     /// <summary>AutoCreate enables automatic creation of host endpoints for every node. [Default: Disabled]</summary>
@@ -137,6 +147,7 @@ public partial class V1KubeControllersConfigurationStatusRunningConfigController
 }
 
 /// <summary>Node enables and configures the node controller. Enabled by default, set to nil to disable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationStatusRunningConfigControllersNode
 {
     /// <summary>HostEndpoint controls syncing nodes to host endpoints. Disabled by default, set to nil to disable.</summary>
@@ -157,6 +168,7 @@ public partial class V1KubeControllersConfigurationStatusRunningConfigController
 }
 
 /// <summary>Policy enables and configures the policy controller. Enabled by default, set to nil to disable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationStatusRunningConfigControllersPolicy
 {
     /// <summary>ReconcilerPeriod is the period to perform reconciliation with the Calico datastore. [Default: 5m]</summary>
@@ -165,6 +177,7 @@ public partial class V1KubeControllersConfigurationStatusRunningConfigController
 }
 
 /// <summary>ServiceAccount enables and configures the service account controller. Enabled by default, set to nil to disable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationStatusRunningConfigControllersServiceAccount
 {
     /// <summary>ReconcilerPeriod is the period to perform reconciliation with the Calico datastore. [Default: 5m]</summary>
@@ -173,6 +186,7 @@ public partial class V1KubeControllersConfigurationStatusRunningConfigController
 }
 
 /// <summary>WorkloadEndpoint enables and configures the workload endpoint controller. Enabled by default, set to nil to disable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationStatusRunningConfigControllersWorkloadEndpoint
 {
     /// <summary>ReconcilerPeriod is the period to perform reconciliation with the Calico datastore. [Default: 5m]</summary>
@@ -181,6 +195,7 @@ public partial class V1KubeControllersConfigurationStatusRunningConfigController
 }
 
 /// <summary>Controllers enables and configures individual Kubernetes controllers</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationStatusRunningConfigControllers
 {
     /// <summary>Namespace enables and configures the namespace controller. Enabled by default, set to nil to disable.</summary>
@@ -205,6 +220,7 @@ public partial class V1KubeControllersConfigurationStatusRunningConfigController
 }
 
 /// <summary>RunningConfig contains the effective config that is running in the kube-controllers pod, after merging the API resource with any environment variables.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationStatusRunningConfig
 {
     /// <summary>Controllers enables and configures individual Kubernetes controllers</summary>
@@ -233,6 +249,7 @@ public partial class V1KubeControllersConfigurationStatusRunningConfig
 }
 
 /// <summary>KubeControllersConfigurationStatus represents the status of the configuration. It's useful for admins to be able to see the actual config that was applied, which can be modified by environment variables on the kube-controllers process.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationStatus
 {
     /// <summary>EnvironmentVars contains the environment variables on the kube-controllers that influenced the RunningConfig.</summary>
@@ -244,8 +261,9 @@ public partial class V1KubeControllersConfigurationStatus
     public V1KubeControllersConfigurationStatusRunningConfig? RunningConfig { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1KubeControllersConfiguration : IKubernetesObject<V1ObjectMeta>, ISpec<V1KubeControllersConfigurationSpec>, IStatus<V1KubeControllersConfigurationStatus>
 {
     public const string KubeApiVersion = "v1";

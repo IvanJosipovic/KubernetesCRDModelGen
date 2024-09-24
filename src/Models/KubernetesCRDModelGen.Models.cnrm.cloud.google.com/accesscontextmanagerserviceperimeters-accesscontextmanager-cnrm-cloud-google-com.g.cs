@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.accesscontextmanager.cnrm.cloud.google.com;
 /// <summary>The AccessContextManagerAccessPolicy this AccessContextManagerServicePerimeter lives in.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecAccessPolicyRef
 {
     /// <summary>Allowed value: string of the format `accessPolicies/{{value}}`, where {{value}} is the `name` field of an `AccessContextManagerAccessPolicy` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecAccessPolicy
 }
 
 /// <summary>(Optional) A list of AccessLevel resource names that allow resources within the ServicePerimeter to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel is a syntax error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via GCP calls with request origins within the perimeter. For Service Perimeter Bridge, must be empty.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecAccessLevels
 {
     /// <summary>Allowed value: string of the format `{{parent}}/accessLevels/{{value}}`, where {{value}} is the `name` field of an `AccessContextManagerAccessLevel` resource.</summary>
@@ -41,6 +43,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecAccessLe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecEgressPoliciesEgressFromIdentitiesServiceAccountRef
 {
     /// <summary>Allowed value: string of the format `serviceAccount:{{value}}`, where {{value}} is the `email` field of an `IAMServiceAccount` resource.</summary>
@@ -57,6 +60,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecEgressPo
 }
 
 /// <summary>(Optional) A list of identities that are allowed access through this EgressPolicy. Should be in the format of email address. The email address should represent individual user or service account only.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecEgressPoliciesEgressFromIdentities
 {
     /// <summary></summary>
@@ -69,6 +73,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecEgressPo
 }
 
 /// <summary>Defines conditions on the source of a request causing this 'EgressPolicy' to apply.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecEgressPoliciesEgressFrom
 {
     /// <summary></summary>
@@ -81,6 +86,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecEgressPo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecEgressPoliciesEgressToOperationsMethodSelectors
 {
     /// <summary>Value for 'method' should be a valid method name for the corresponding 'serviceName' in 'ApiOperation'. If '*' used as value for method, then ALL methods and permissions are allowed.</summary>
@@ -93,6 +99,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecEgressPo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecEgressPoliciesEgressToOperations
 {
     /// <summary>API methods or permissions to allow. Method or permission must belong to the service specified by 'serviceName' field. A single MethodSelector entry with '*' specified for the 'method' field will allow all methods AND permissions for the service specified in 'serviceName'.</summary>
@@ -105,6 +112,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecEgressPo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecEgressPoliciesEgressToResourcesProjectRef
 {
     /// <summary>Allowed value: string of the format `projects/{{value}}`, where {{value}} is the `number` field of a `Project` resource.</summary>
@@ -121,6 +129,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecEgressPo
 }
 
 /// <summary>(Optional) A list of resources, currently only projects in the form "projects/{project_number}". A request matches if it contains a resource in this list.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecEgressPoliciesEgressToResources
 {
     /// <summary></summary>
@@ -129,6 +138,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecEgressPo
 }
 
 /// <summary>Defines the conditions on the 'ApiOperation' and destination resources that cause this 'EgressPolicy' to apply.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecEgressPoliciesEgressTo
 {
     /// <summary>A list of external resources that are allowed to be accessed. A request matches if it contains an external resource in this list (Example: s3://bucket/path). Currently '*' is not allowed.</summary>
@@ -145,6 +155,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecEgressPo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecEgressPolicies
 {
     /// <summary>Defines conditions on the source of a request causing this 'EgressPolicy' to apply.</summary>
@@ -157,6 +168,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecEgressPo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecIngressPoliciesIngressFromIdentitiesServiceAccountRef
 {
     /// <summary>Allowed value: string of the format `serviceAccount:{{value}}`, where {{value}} is the `email` field of an `IAMServiceAccount` resource.</summary>
@@ -173,6 +185,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecIngressP
 }
 
 /// <summary>(Optional) A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecIngressPoliciesIngressFromIdentities
 {
     /// <summary></summary>
@@ -185,6 +198,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecIngressP
 }
 
 /// <summary>An AccessLevel resource name that allow resources within the ServicePerimeters to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecIngressPoliciesIngressFromSourcesAccessLevelRef
 {
     /// <summary>Allowed value: string of the format `{{parent}}/accessLevels/{{value}}`, where {{value}} is the `name` field of an `AccessContextManagerAccessLevel` resource.</summary>
@@ -201,6 +215,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecIngressP
 }
 
 /// <summary>(Optional) A Google Cloud resource that is allowed to ingress the perimeter. Requests from these resources will be allowed to access perimeter data. Currently only projects are allowed. Format "projects/{project_number}" The project may be in any Google Cloud organization, not just the organization that the perimeter is defined in.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecIngressPoliciesIngressFromSourcesProjectRef
 {
     /// <summary>Allowed value: string of the format `projects/{{value}}`, where {{value}} is the `number` field of a `Project` resource.</summary>
@@ -217,6 +232,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecIngressP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecIngressPoliciesIngressFromSources
 {
     /// <summary>An AccessLevel resource name that allow resources within the ServicePerimeters to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter.</summary>
@@ -229,6 +245,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecIngressP
 }
 
 /// <summary>Defines the conditions on the source of a request causing this 'IngressPolicy' to apply.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecIngressPoliciesIngressFrom
 {
     /// <summary></summary>
@@ -245,6 +262,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecIngressP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecIngressPoliciesIngressToOperationsMethodSelectors
 {
     /// <summary>Value for method should be a valid method name for the corresponding serviceName in 'ApiOperation'. If '*' used as value for 'method', then ALL methods and permissions are allowed.</summary>
@@ -257,6 +275,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecIngressP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecIngressPoliciesIngressToOperations
 {
     /// <summary>API methods or permissions to allow. Method or permission must belong to the service specified by serviceName field. A single 'MethodSelector' entry with '*' specified for the method field will allow all methods AND permissions for the service specified in 'serviceName'.</summary>
@@ -269,6 +288,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecIngressP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecIngressPoliciesIngressToResourcesProjectRef
 {
     /// <summary>Allowed value: string of the format `projects/{{value}}`, where {{value}} is the `number` field of a `Project` resource.</summary>
@@ -285,6 +305,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecIngressP
 }
 
 /// <summary>A list of resources, currently only projects in the form "projects/{project_number}", protected by this ServicePerimeter that are allowed to be accessed by sources defined in the corresponding IngressFrom. A request matches if it contains a resource in this list.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecIngressPoliciesIngressToResources
 {
     /// <summary></summary>
@@ -293,6 +314,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecIngressP
 }
 
 /// <summary>Defines the conditions on the 'ApiOperation' and request destination that cause this 'IngressPolicy' to apply.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecIngressPoliciesIngressTo
 {
     /// <summary>A list of 'ApiOperations' the sources specified in corresponding 'IngressFrom' are allowed to perform in this 'ServicePerimeter'.</summary>
@@ -305,6 +327,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecIngressP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecIngressPolicies
 {
     /// <summary>Defines the conditions on the source of a request causing this 'IngressPolicy' to apply.</summary>
@@ -317,6 +340,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecIngressP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecResourcesProjectRef
 {
     /// <summary>Allowed value: string of the format `projects/{{value}}`, where {{value}} is the `number` field of a `Project` resource.</summary>
@@ -333,6 +357,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecResource
 }
 
 /// <summary>(Optional) A list of GCP resources that are inside of the service perimeter. Currently only projects are allowed.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecResources
 {
     /// <summary></summary>
@@ -341,6 +366,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecResource
 }
 
 /// <summary>Specifies how APIs are allowed to communicate within the Service Perimeter.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecVpcAccessibleServices
 {
     /// <summary>The list of APIs usable within the Service Perimeter. Must be empty unless 'enableRestriction' is True.</summary>
@@ -353,6 +379,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecSpecVpcAcces
 }
 
 /// <summary>Proposed (or dry run) ServicePerimeter configuration. This configuration allows to specify and test ServicePerimeter configuration without enforcing actual access restrictions. Only allowed to be set when the 'useExplicitDryRunSpec' flag is set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecSpec
 {
     /// <summary></summary>
@@ -381,6 +408,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecSpec
 }
 
 /// <summary>(Optional) A list of AccessLevel resource names that allow resources within the ServicePerimeter to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel is a syntax error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via GCP calls with request origins within the perimeter. For Service Perimeter Bridge, must be empty.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusAccessLevels
 {
     /// <summary>Allowed value: string of the format `{{parent}}/accessLevels/{{value}}`, where {{value}} is the `name` field of an `AccessContextManagerAccessLevel` resource.</summary>
@@ -397,6 +425,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusAccess
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusEgressPoliciesEgressFromIdentitiesServiceAccountRef
 {
     /// <summary>Allowed value: string of the format `serviceAccount:{{value}}`, where {{value}} is the `email` field of an `IAMServiceAccount` resource.</summary>
@@ -413,6 +442,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusEgress
 }
 
 /// <summary>(Optional) A list of identities that are allowed access through this EgressPolicy. Should be in the format of email address. The email address should represent individual user or service account only.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusEgressPoliciesEgressFromIdentities
 {
     /// <summary></summary>
@@ -425,6 +455,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusEgress
 }
 
 /// <summary>Defines conditions on the source of a request causing this 'EgressPolicy' to apply.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusEgressPoliciesEgressFrom
 {
     /// <summary></summary>
@@ -437,6 +468,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusEgress
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusEgressPoliciesEgressToOperationsMethodSelectors
 {
     /// <summary>Value for 'method' should be a valid method name for the corresponding 'serviceName' in 'ApiOperation'. If '*' used as value for method, then ALL methods and permissions are allowed.</summary>
@@ -449,6 +481,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusEgress
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusEgressPoliciesEgressToOperations
 {
     /// <summary>API methods or permissions to allow. Method or permission must belong to the service specified by 'serviceName' field. A single MethodSelector entry with '*' specified for the 'method' field will allow all methods AND permissions for the service specified in 'serviceName'.</summary>
@@ -461,6 +494,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusEgress
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusEgressPoliciesEgressToResourcesProjectRef
 {
     /// <summary>Allowed value: string of the format `projects/{{value}}`, where {{value}} is the `number` field of a `Project` resource.</summary>
@@ -477,6 +511,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusEgress
 }
 
 /// <summary>(Optional) A list of resources, currently only projects in the form "projects/{project_number}". A request matches if it contains a resource in this list.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusEgressPoliciesEgressToResources
 {
     /// <summary></summary>
@@ -485,6 +520,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusEgress
 }
 
 /// <summary>Defines the conditions on the 'ApiOperation' and destination resources that cause this 'EgressPolicy' to apply.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusEgressPoliciesEgressTo
 {
     /// <summary>A list of external resources that are allowed to be accessed. A request matches if it contains an external resource in this list (Example: s3://bucket/path). Currently '*' is not allowed.</summary>
@@ -501,6 +537,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusEgress
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusEgressPolicies
 {
     /// <summary>Defines conditions on the source of a request causing this 'EgressPolicy' to apply.</summary>
@@ -513,6 +550,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusEgress
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusIngressPoliciesIngressFromIdentitiesServiceAccountRef
 {
     /// <summary>Allowed value: string of the format `serviceAccount:{{value}}`, where {{value}} is the `email` field of an `IAMServiceAccount` resource.</summary>
@@ -529,6 +567,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusIngres
 }
 
 /// <summary>(Optional) A list of identities that are allowed access through this EgressPolicy. Should be in the format of email address. The email address should represent individual user or service account only.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusIngressPoliciesIngressFromIdentities
 {
     /// <summary></summary>
@@ -541,6 +580,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusIngres
 }
 
 /// <summary>An AccessLevel resource name that allow resources within the ServicePerimeters to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusIngressPoliciesIngressFromSourcesAccessLevelRef
 {
     /// <summary>Allowed value: string of the format `{{parent}}/accessLevels/{{value}}`, where {{value}} is the `name` field of an `AccessContextManagerAccessLevel` resource.</summary>
@@ -557,6 +597,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusIngres
 }
 
 /// <summary>(Optional) A Google Cloud resource that is allowed to ingress the perimeter. Requests from these resources will be allowed to access perimeter data. Currently only projects are allowed. Format "projects/{project_number}" The project may be in any Google Cloud organization, not just the organization that the perimeter is defined in.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusIngressPoliciesIngressFromSourcesProjectRef
 {
     /// <summary>Allowed value: string of the format `projects/{{value}}`, where {{value}} is the `number` field of a `Project` resource.</summary>
@@ -573,6 +614,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusIngres
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusIngressPoliciesIngressFromSources
 {
     /// <summary>An AccessLevel resource name that allow resources within the ServicePerimeters to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter.</summary>
@@ -585,6 +627,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusIngres
 }
 
 /// <summary>Defines the conditions on the source of a request causing this 'IngressPolicy' to apply.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusIngressPoliciesIngressFrom
 {
     /// <summary></summary>
@@ -601,6 +644,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusIngres
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusIngressPoliciesIngressToOperationsMethodSelectors
 {
     /// <summary>Value for method should be a valid method name for the corresponding serviceName in 'ApiOperation'. If '*' used as value for 'method', then ALL methods and permissions are allowed.</summary>
@@ -613,6 +657,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusIngres
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusIngressPoliciesIngressToOperations
 {
     /// <summary>API methods or permissions to allow. Method or permission must belong to the service specified by serviceName field. A single 'MethodSelector' entry with '*' specified for the method field will allow all methods AND permissions for the service specified in 'serviceName'.</summary>
@@ -625,6 +670,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusIngres
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusIngressPoliciesIngressToResourcesProjectRef
 {
     /// <summary>Allowed value: string of the format `projects/{{value}}`, where {{value}} is the `number` field of a `Project` resource.</summary>
@@ -641,6 +687,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusIngres
 }
 
 /// <summary>A list of resources, currently only projects in the form "projects/{project_number}", protected by this ServicePerimeter that are allowed to be accessed by sources defined in the corresponding IngressFrom. A request matches if it contains a resource in this list.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusIngressPoliciesIngressToResources
 {
     /// <summary></summary>
@@ -649,6 +696,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusIngres
 }
 
 /// <summary>Defines the conditions on the 'ApiOperation' and request destination that cause this 'IngressPolicy' to apply.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusIngressPoliciesIngressTo
 {
     /// <summary>A list of 'ApiOperations' the sources specified in corresponding 'IngressFrom' are allowed to perform in this 'ServicePerimeter'.</summary>
@@ -661,6 +709,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusIngres
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusIngressPolicies
 {
     /// <summary>Defines the conditions on the source of a request causing this 'IngressPolicy' to apply.</summary>
@@ -673,6 +722,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusIngres
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusResourcesProjectRef
 {
     /// <summary>Allowed value: string of the format `projects/{{value}}`, where {{value}} is the `number` field of a `Project` resource.</summary>
@@ -689,6 +739,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusResour
 }
 
 /// <summary>(Optional) A list of GCP resources that are inside of the service perimeter. Currently only projects are allowed.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusResources
 {
     /// <summary></summary>
@@ -697,6 +748,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusResour
 }
 
 /// <summary>Specifies how APIs are allowed to communicate within the Service Perimeter.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusVpcAccessibleServices
 {
     /// <summary>The list of APIs usable within the Service Perimeter. Must be empty unless 'enableRestriction' is True.</summary>
@@ -709,6 +761,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecStatusVpcAcc
 }
 
 /// <summary>ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine perimeter content and boundaries.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpecStatus
 {
     /// <summary></summary>
@@ -737,6 +790,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpecStatus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterSpec
 {
     /// <summary>The AccessContextManagerAccessPolicy this AccessContextManagerServicePerimeter lives in.</summary>
@@ -773,6 +827,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -797,6 +852,7 @@ public partial class V1beta1AccessContextManagerServicePerimeterStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerServicePerimeterStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -816,8 +872,9 @@ public partial class V1beta1AccessContextManagerServicePerimeterStatus
     public string? UpdateTime { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1AccessContextManagerServicePerimeter : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AccessContextManagerServicePerimeterSpec>, IStatus<V1beta1AccessContextManagerServicePerimeterStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary>The network this VPN gateway is accepting traffic for.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetVPNGatewaySpecNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1ComputeTargetVPNGatewaySpecNetworkRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetVPNGatewaySpec
 {
     /// <summary>Immutable. An optional description of this resource.</summary>
@@ -45,6 +47,7 @@ public partial class V1beta1ComputeTargetVPNGatewaySpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetVPNGatewayStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -69,6 +72,7 @@ public partial class V1beta1ComputeTargetVPNGatewayStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetVPNGatewayStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -92,8 +96,9 @@ public partial class V1beta1ComputeTargetVPNGatewayStatus
     public string? SelfLink { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ComputeTargetVPNGateway : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeTargetVPNGatewaySpec>, IStatus<V1beta1ComputeTargetVPNGatewayStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudwatchevents.aws.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1ConnectionSpecDeletionPolicyEnum
 }
 
 /// <summary>Header Value. Created and stored in AWS Secrets Manager.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderAuthParametersApiKeyValueSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -35,6 +37,7 @@ public partial class V1beta1ConnectionSpecForProviderAuthParametersApiKeyValueSe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderAuthParametersApiKey
 {
     /// <summary>Header Name.</summary>
@@ -47,6 +50,7 @@ public partial class V1beta1ConnectionSpecForProviderAuthParametersApiKey
 }
 
 /// <summary>A password for the authorization. Created and stored in AWS Secrets Manager.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderAuthParametersBasicPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -63,6 +67,7 @@ public partial class V1beta1ConnectionSpecForProviderAuthParametersBasicPassword
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderAuthParametersBasic
 {
     /// <summary>A password for the authorization. Created and stored in AWS Secrets Manager.</summary>
@@ -75,6 +80,7 @@ public partial class V1beta1ConnectionSpecForProviderAuthParametersBasic
 }
 
 /// <summary>Header Value. Created and stored in AWS Secrets Manager.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderAuthParametersInvocationHttpParametersBodyValueSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -91,6 +97,7 @@ public partial class V1beta1ConnectionSpecForProviderAuthParametersInvocationHtt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderAuthParametersInvocationHttpParametersBody
 {
     /// <summary>Specified whether the value is secret.</summary>
@@ -107,6 +114,7 @@ public partial class V1beta1ConnectionSpecForProviderAuthParametersInvocationHtt
 }
 
 /// <summary>Header Value. Created and stored in AWS Secrets Manager.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderAuthParametersInvocationHttpParametersHeaderValueSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -123,6 +131,7 @@ public partial class V1beta1ConnectionSpecForProviderAuthParametersInvocationHtt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderAuthParametersInvocationHttpParametersHeader
 {
     /// <summary>Specified whether the value is secret.</summary>
@@ -139,6 +148,7 @@ public partial class V1beta1ConnectionSpecForProviderAuthParametersInvocationHtt
 }
 
 /// <summary>Header Value. Created and stored in AWS Secrets Manager.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderAuthParametersInvocationHttpParametersQueryStringValueSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -155,6 +165,7 @@ public partial class V1beta1ConnectionSpecForProviderAuthParametersInvocationHtt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderAuthParametersInvocationHttpParametersQueryString
 {
     /// <summary>Specified whether the value is secret.</summary>
@@ -171,6 +182,7 @@ public partial class V1beta1ConnectionSpecForProviderAuthParametersInvocationHtt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderAuthParametersInvocationHttpParameters
 {
     /// <summary>Contains additional body string parameters for the connection. You can include up to 100 additional body string parameters per request. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB. Each parameter can contain the following:</summary>
@@ -187,6 +199,7 @@ public partial class V1beta1ConnectionSpecForProviderAuthParametersInvocationHtt
 }
 
 /// <summary>The client secret for the credentials to use for authorization. Created and stored in AWS Secrets Manager.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderAuthParametersOauthClientParametersClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -203,6 +216,7 @@ public partial class V1beta1ConnectionSpecForProviderAuthParametersOauthClientPa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderAuthParametersOauthClientParameters
 {
     /// <summary>The client ID for the credentials to use for authorization. Created and stored in AWS Secrets Manager.</summary>
@@ -215,6 +229,7 @@ public partial class V1beta1ConnectionSpecForProviderAuthParametersOauthClientPa
 }
 
 /// <summary>Header Value. Created and stored in AWS Secrets Manager.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderAuthParametersOauthOauthHttpParametersBodyValueSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -231,6 +246,7 @@ public partial class V1beta1ConnectionSpecForProviderAuthParametersOauthOauthHtt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderAuthParametersOauthOauthHttpParametersBody
 {
     /// <summary>Specified whether the value is secret.</summary>
@@ -247,6 +263,7 @@ public partial class V1beta1ConnectionSpecForProviderAuthParametersOauthOauthHtt
 }
 
 /// <summary>Header Value. Created and stored in AWS Secrets Manager.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderAuthParametersOauthOauthHttpParametersHeaderValueSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -263,6 +280,7 @@ public partial class V1beta1ConnectionSpecForProviderAuthParametersOauthOauthHtt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderAuthParametersOauthOauthHttpParametersHeader
 {
     /// <summary>Specified whether the value is secret.</summary>
@@ -279,6 +297,7 @@ public partial class V1beta1ConnectionSpecForProviderAuthParametersOauthOauthHtt
 }
 
 /// <summary>Header Value. Created and stored in AWS Secrets Manager.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderAuthParametersOauthOauthHttpParametersQueryStringValueSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -295,6 +314,7 @@ public partial class V1beta1ConnectionSpecForProviderAuthParametersOauthOauthHtt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderAuthParametersOauthOauthHttpParametersQueryString
 {
     /// <summary>Specified whether the value is secret.</summary>
@@ -311,6 +331,7 @@ public partial class V1beta1ConnectionSpecForProviderAuthParametersOauthOauthHtt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderAuthParametersOauthOauthHttpParameters
 {
     /// <summary>Contains additional body string parameters for the connection. You can include up to 100 additional body string parameters per request. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB. Each parameter can contain the following:</summary>
@@ -327,6 +348,7 @@ public partial class V1beta1ConnectionSpecForProviderAuthParametersOauthOauthHtt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderAuthParametersOauth
 {
     /// <summary>The URL to the authorization endpoint.</summary>
@@ -347,6 +369,7 @@ public partial class V1beta1ConnectionSpecForProviderAuthParametersOauth
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderAuthParameters
 {
     /// <summary>Parameters used for API_KEY authorization. An API key to include in the header for each authentication request. A maximum of 1 are allowed. Conflicts with basic and oauth. Documented below.</summary>
@@ -367,6 +390,7 @@ public partial class V1beta1ConnectionSpecForProviderAuthParameters
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProvider
 {
     /// <summary>Parameters used for authorization. A maximum of 1 are allowed. Documented below.</summary>
@@ -387,6 +411,7 @@ public partial class V1beta1ConnectionSpecForProvider
 }
 
 /// <summary>Header Value. Created and stored in AWS Secrets Manager.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderAuthParametersApiKeyValueSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -403,6 +428,7 @@ public partial class V1beta1ConnectionSpecInitProviderAuthParametersApiKeyValueS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderAuthParametersApiKey
 {
     /// <summary>Header Name.</summary>
@@ -415,6 +441,7 @@ public partial class V1beta1ConnectionSpecInitProviderAuthParametersApiKey
 }
 
 /// <summary>A password for the authorization. Created and stored in AWS Secrets Manager.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderAuthParametersBasicPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -431,6 +458,7 @@ public partial class V1beta1ConnectionSpecInitProviderAuthParametersBasicPasswor
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderAuthParametersBasic
 {
     /// <summary>A password for the authorization. Created and stored in AWS Secrets Manager.</summary>
@@ -443,6 +471,7 @@ public partial class V1beta1ConnectionSpecInitProviderAuthParametersBasic
 }
 
 /// <summary>Header Value. Created and stored in AWS Secrets Manager.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderAuthParametersInvocationHttpParametersBodyValueSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -459,6 +488,7 @@ public partial class V1beta1ConnectionSpecInitProviderAuthParametersInvocationHt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderAuthParametersInvocationHttpParametersBody
 {
     /// <summary>Specified whether the value is secret.</summary>
@@ -475,6 +505,7 @@ public partial class V1beta1ConnectionSpecInitProviderAuthParametersInvocationHt
 }
 
 /// <summary>Header Value. Created and stored in AWS Secrets Manager.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderAuthParametersInvocationHttpParametersHeaderValueSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -491,6 +522,7 @@ public partial class V1beta1ConnectionSpecInitProviderAuthParametersInvocationHt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderAuthParametersInvocationHttpParametersHeader
 {
     /// <summary>Specified whether the value is secret.</summary>
@@ -507,6 +539,7 @@ public partial class V1beta1ConnectionSpecInitProviderAuthParametersInvocationHt
 }
 
 /// <summary>Header Value. Created and stored in AWS Secrets Manager.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderAuthParametersInvocationHttpParametersQueryStringValueSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -523,6 +556,7 @@ public partial class V1beta1ConnectionSpecInitProviderAuthParametersInvocationHt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderAuthParametersInvocationHttpParametersQueryString
 {
     /// <summary>Specified whether the value is secret.</summary>
@@ -539,6 +573,7 @@ public partial class V1beta1ConnectionSpecInitProviderAuthParametersInvocationHt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderAuthParametersInvocationHttpParameters
 {
     /// <summary>Contains additional body string parameters for the connection. You can include up to 100 additional body string parameters per request. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB. Each parameter can contain the following:</summary>
@@ -555,6 +590,7 @@ public partial class V1beta1ConnectionSpecInitProviderAuthParametersInvocationHt
 }
 
 /// <summary>The client secret for the credentials to use for authorization. Created and stored in AWS Secrets Manager.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderAuthParametersOauthClientParametersClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -571,6 +607,7 @@ public partial class V1beta1ConnectionSpecInitProviderAuthParametersOauthClientP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderAuthParametersOauthClientParameters
 {
     /// <summary>The client ID for the credentials to use for authorization. Created and stored in AWS Secrets Manager.</summary>
@@ -583,6 +620,7 @@ public partial class V1beta1ConnectionSpecInitProviderAuthParametersOauthClientP
 }
 
 /// <summary>Header Value. Created and stored in AWS Secrets Manager.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderAuthParametersOauthOauthHttpParametersBodyValueSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -599,6 +637,7 @@ public partial class V1beta1ConnectionSpecInitProviderAuthParametersOauthOauthHt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderAuthParametersOauthOauthHttpParametersBody
 {
     /// <summary>Specified whether the value is secret.</summary>
@@ -615,6 +654,7 @@ public partial class V1beta1ConnectionSpecInitProviderAuthParametersOauthOauthHt
 }
 
 /// <summary>Header Value. Created and stored in AWS Secrets Manager.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderAuthParametersOauthOauthHttpParametersHeaderValueSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -631,6 +671,7 @@ public partial class V1beta1ConnectionSpecInitProviderAuthParametersOauthOauthHt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderAuthParametersOauthOauthHttpParametersHeader
 {
     /// <summary>Specified whether the value is secret.</summary>
@@ -647,6 +688,7 @@ public partial class V1beta1ConnectionSpecInitProviderAuthParametersOauthOauthHt
 }
 
 /// <summary>Header Value. Created and stored in AWS Secrets Manager.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderAuthParametersOauthOauthHttpParametersQueryStringValueSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -663,6 +705,7 @@ public partial class V1beta1ConnectionSpecInitProviderAuthParametersOauthOauthHt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderAuthParametersOauthOauthHttpParametersQueryString
 {
     /// <summary>Specified whether the value is secret.</summary>
@@ -679,6 +722,7 @@ public partial class V1beta1ConnectionSpecInitProviderAuthParametersOauthOauthHt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderAuthParametersOauthOauthHttpParameters
 {
     /// <summary>Contains additional body string parameters for the connection. You can include up to 100 additional body string parameters per request. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB. Each parameter can contain the following:</summary>
@@ -695,6 +739,7 @@ public partial class V1beta1ConnectionSpecInitProviderAuthParametersOauthOauthHt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderAuthParametersOauth
 {
     /// <summary>The URL to the authorization endpoint.</summary>
@@ -715,6 +760,7 @@ public partial class V1beta1ConnectionSpecInitProviderAuthParametersOauth
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderAuthParameters
 {
     /// <summary>Parameters used for API_KEY authorization. An API key to include in the header for each authentication request. A maximum of 1 are allowed. Conflicts with basic and oauth. Documented below.</summary>
@@ -735,6 +781,7 @@ public partial class V1beta1ConnectionSpecInitProviderAuthParameters
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProvider
 {
     /// <summary>Parameters used for authorization. A maximum of 1 are allowed. Documented below.</summary>
@@ -750,6 +797,7 @@ public partial class V1beta1ConnectionSpecInitProvider
     public string? Description { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -772,6 +820,7 @@ public enum V1beta1ConnectionSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -782,6 +831,7 @@ public enum V1beta1ConnectionSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -793,6 +843,7 @@ public enum V1beta1ConnectionSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -807,6 +858,7 @@ public partial class V1beta1ConnectionSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -818,6 +870,7 @@ public partial class V1beta1ConnectionSpecProviderConfigRef
     public V1beta1ConnectionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -828,6 +881,7 @@ public enum V1beta1ConnectionSpecPublishConnectionDetailsToConfigRefPolicyResolu
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -839,6 +893,7 @@ public enum V1beta1ConnectionSpecPublishConnectionDetailsToConfigRefPolicyResolv
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -853,6 +908,7 @@ public partial class V1beta1ConnectionSpecPublishConnectionDetailsToConfigRefPol
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -865,6 +921,7 @@ public partial class V1beta1ConnectionSpecPublishConnectionDetailsToConfigRef
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -881,6 +938,7 @@ public partial class V1beta1ConnectionSpecPublishConnectionDetailsToMetadata
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -897,6 +955,7 @@ public partial class V1beta1ConnectionSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -909,6 +968,7 @@ public partial class V1beta1ConnectionSpecWriteConnectionSecretToRef
 }
 
 /// <summary>ConnectionSpec defines the desired state of Connection</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -942,6 +1002,7 @@ public partial class V1beta1ConnectionSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionStatusAtProviderAuthParametersApiKey
 {
     /// <summary>Header Name.</summary>
@@ -950,6 +1011,7 @@ public partial class V1beta1ConnectionStatusAtProviderAuthParametersApiKey
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionStatusAtProviderAuthParametersBasic
 {
     /// <summary>A username for the authorization.</summary>
@@ -958,6 +1020,7 @@ public partial class V1beta1ConnectionStatusAtProviderAuthParametersBasic
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionStatusAtProviderAuthParametersInvocationHttpParametersBody
 {
     /// <summary>Specified whether the value is secret.</summary>
@@ -970,6 +1033,7 @@ public partial class V1beta1ConnectionStatusAtProviderAuthParametersInvocationHt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionStatusAtProviderAuthParametersInvocationHttpParametersHeader
 {
     /// <summary>Specified whether the value is secret.</summary>
@@ -982,6 +1046,7 @@ public partial class V1beta1ConnectionStatusAtProviderAuthParametersInvocationHt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionStatusAtProviderAuthParametersInvocationHttpParametersQueryString
 {
     /// <summary>Specified whether the value is secret.</summary>
@@ -994,6 +1059,7 @@ public partial class V1beta1ConnectionStatusAtProviderAuthParametersInvocationHt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionStatusAtProviderAuthParametersInvocationHttpParameters
 {
     /// <summary>Contains additional body string parameters for the connection. You can include up to 100 additional body string parameters per request. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB. Each parameter can contain the following:</summary>
@@ -1010,6 +1076,7 @@ public partial class V1beta1ConnectionStatusAtProviderAuthParametersInvocationHt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionStatusAtProviderAuthParametersOauthClientParameters
 {
     /// <summary>The client ID for the credentials to use for authorization. Created and stored in AWS Secrets Manager.</summary>
@@ -1018,6 +1085,7 @@ public partial class V1beta1ConnectionStatusAtProviderAuthParametersOauthClientP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionStatusAtProviderAuthParametersOauthOauthHttpParametersBody
 {
     /// <summary>Specified whether the value is secret.</summary>
@@ -1030,6 +1098,7 @@ public partial class V1beta1ConnectionStatusAtProviderAuthParametersOauthOauthHt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionStatusAtProviderAuthParametersOauthOauthHttpParametersHeader
 {
     /// <summary>Specified whether the value is secret.</summary>
@@ -1042,6 +1111,7 @@ public partial class V1beta1ConnectionStatusAtProviderAuthParametersOauthOauthHt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionStatusAtProviderAuthParametersOauthOauthHttpParametersQueryString
 {
     /// <summary>Specified whether the value is secret.</summary>
@@ -1054,6 +1124,7 @@ public partial class V1beta1ConnectionStatusAtProviderAuthParametersOauthOauthHt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionStatusAtProviderAuthParametersOauthOauthHttpParameters
 {
     /// <summary>Contains additional body string parameters for the connection. You can include up to 100 additional body string parameters per request. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB. Each parameter can contain the following:</summary>
@@ -1070,6 +1141,7 @@ public partial class V1beta1ConnectionStatusAtProviderAuthParametersOauthOauthHt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionStatusAtProviderAuthParametersOauth
 {
     /// <summary>The URL to the authorization endpoint.</summary>
@@ -1090,6 +1162,7 @@ public partial class V1beta1ConnectionStatusAtProviderAuthParametersOauth
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionStatusAtProviderAuthParameters
 {
     /// <summary>Parameters used for API_KEY authorization. An API key to include in the header for each authentication request. A maximum of 1 are allowed. Conflicts with basic and oauth. Documented below.</summary>
@@ -1110,6 +1183,7 @@ public partial class V1beta1ConnectionStatusAtProviderAuthParameters
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionStatusAtProvider
 {
     /// <summary>The Amazon Resource Name (ARN) of the connection.</summary>
@@ -1138,6 +1212,7 @@ public partial class V1beta1ConnectionStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1166,6 +1241,7 @@ public partial class V1beta1ConnectionStatusConditions
 }
 
 /// <summary>ConnectionStatus defines the observed state of Connection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionStatus
 {
     /// <summary></summary>
@@ -1181,8 +1257,9 @@ public partial class V1beta1ConnectionStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Connection is the Schema for the Connections API. Provides an EventBridge connection resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Connection : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ConnectionSpec>, IStatus<V1beta1ConnectionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

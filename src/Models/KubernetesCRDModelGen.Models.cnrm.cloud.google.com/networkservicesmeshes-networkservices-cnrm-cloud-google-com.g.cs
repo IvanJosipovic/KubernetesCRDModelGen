@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkservices.cnrm.cloud.google.com;
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesMeshSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1NetworkServicesMeshSpecProjectRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesMeshSpec
 {
     /// <summary>Optional. A free-text description of the resource. Max length 1024 characters.</summary>
@@ -49,6 +51,7 @@ public partial class V1beta1NetworkServicesMeshSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesMeshStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -73,6 +76,7 @@ public partial class V1beta1NetworkServicesMeshStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesMeshStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -96,8 +100,9 @@ public partial class V1beta1NetworkServicesMeshStatus
     public string? UpdateTime { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1NetworkServicesMesh : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NetworkServicesMeshSpec>, IStatus<V1beta1NetworkServicesMeshStatus>
 {
     public const string KubeApiVersion = "v1beta1";

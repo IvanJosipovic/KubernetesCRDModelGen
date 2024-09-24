@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.monitoring.gcp.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NotificationChannelSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1NotificationChannelSpecDeletionPolicyEnum
 }
 
 /// <summary>An authorization token for a notification channel. Channel types that support this field include: slack Note: This property is sensitive and will not be displayed in the plan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationChannelSpecForProviderSensitiveLabelsAuthTokenSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -35,6 +37,7 @@ public partial class V1beta1NotificationChannelSpecForProviderSensitiveLabelsAut
 }
 
 /// <summary>An password for a notification channel. Channel types that support this field include: webhook_basicauth Note: This property is sensitive and will not be displayed in the plan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationChannelSpecForProviderSensitiveLabelsPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -51,6 +54,7 @@ public partial class V1beta1NotificationChannelSpecForProviderSensitiveLabelsPas
 }
 
 /// <summary>An servicekey token for a notification channel. Channel types that support this field include: pagerduty Note: This property is sensitive and will not be displayed in the plan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationChannelSpecForProviderSensitiveLabelsServiceKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -67,6 +71,7 @@ public partial class V1beta1NotificationChannelSpecForProviderSensitiveLabelsSer
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationChannelSpecForProviderSensitiveLabels
 {
     /// <summary>An authorization token for a notification channel. Channel types that support this field include: slack Note: This property is sensitive and will not be displayed in the plan.</summary>
@@ -83,6 +88,7 @@ public partial class V1beta1NotificationChannelSpecForProviderSensitiveLabels
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationChannelSpecForProvider
 {
     /// <summary>An optional human-readable description of this notification channel. This description may provide additional details, beyond the display name, for the channel. This may not exceed 1024 Unicode characters.</summary>
@@ -123,6 +129,7 @@ public partial class V1beta1NotificationChannelSpecForProvider
 }
 
 /// <summary>An authorization token for a notification channel. Channel types that support this field include: slack Note: This property is sensitive and will not be displayed in the plan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationChannelSpecInitProviderSensitiveLabelsAuthTokenSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -139,6 +146,7 @@ public partial class V1beta1NotificationChannelSpecInitProviderSensitiveLabelsAu
 }
 
 /// <summary>An password for a notification channel. Channel types that support this field include: webhook_basicauth Note: This property is sensitive and will not be displayed in the plan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationChannelSpecInitProviderSensitiveLabelsPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -155,6 +163,7 @@ public partial class V1beta1NotificationChannelSpecInitProviderSensitiveLabelsPa
 }
 
 /// <summary>An servicekey token for a notification channel. Channel types that support this field include: pagerduty Note: This property is sensitive and will not be displayed in the plan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationChannelSpecInitProviderSensitiveLabelsServiceKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -171,6 +180,7 @@ public partial class V1beta1NotificationChannelSpecInitProviderSensitiveLabelsSe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationChannelSpecInitProviderSensitiveLabels
 {
     /// <summary>An authorization token for a notification channel. Channel types that support this field include: slack Note: This property is sensitive and will not be displayed in the plan.</summary>
@@ -187,6 +197,7 @@ public partial class V1beta1NotificationChannelSpecInitProviderSensitiveLabels
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationChannelSpecInitProvider
 {
     /// <summary>An optional human-readable description of this notification channel. This description may provide additional details, beyond the display name, for the channel. This may not exceed 1024 Unicode characters.</summary>
@@ -226,6 +237,7 @@ public partial class V1beta1NotificationChannelSpecInitProvider
     public IDictionary<string, string>? UserLabels { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NotificationChannelSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -248,6 +260,7 @@ public enum V1beta1NotificationChannelSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NotificationChannelSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -258,6 +271,7 @@ public enum V1beta1NotificationChannelSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NotificationChannelSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -269,6 +283,7 @@ public enum V1beta1NotificationChannelSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationChannelSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -283,6 +298,7 @@ public partial class V1beta1NotificationChannelSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationChannelSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -294,6 +310,7 @@ public partial class V1beta1NotificationChannelSpecProviderConfigRef
     public V1beta1NotificationChannelSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NotificationChannelSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -304,6 +321,7 @@ public enum V1beta1NotificationChannelSpecPublishConnectionDetailsToConfigRefPol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NotificationChannelSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -315,6 +333,7 @@ public enum V1beta1NotificationChannelSpecPublishConnectionDetailsToConfigRefPol
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationChannelSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -329,6 +348,7 @@ public partial class V1beta1NotificationChannelSpecPublishConnectionDetailsToCon
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationChannelSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -341,6 +361,7 @@ public partial class V1beta1NotificationChannelSpecPublishConnectionDetailsToCon
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationChannelSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -357,6 +378,7 @@ public partial class V1beta1NotificationChannelSpecPublishConnectionDetailsToMet
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationChannelSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -373,6 +395,7 @@ public partial class V1beta1NotificationChannelSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationChannelSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -385,6 +408,7 @@ public partial class V1beta1NotificationChannelSpecWriteConnectionSecretToRef
 }
 
 /// <summary>NotificationChannelSpec defines the desired state of NotificationChannel</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationChannelSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -418,6 +442,7 @@ public partial class V1beta1NotificationChannelSpec
 }
 
 /// <summary>An authorization token for a notification channel. Channel types that support this field include: slack Note: This property is sensitive and will not be displayed in the plan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationChannelStatusAtProviderSensitiveLabelsAuthTokenSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -434,6 +459,7 @@ public partial class V1beta1NotificationChannelStatusAtProviderSensitiveLabelsAu
 }
 
 /// <summary>An password for a notification channel. Channel types that support this field include: webhook_basicauth Note: This property is sensitive and will not be displayed in the plan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationChannelStatusAtProviderSensitiveLabelsPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -450,6 +476,7 @@ public partial class V1beta1NotificationChannelStatusAtProviderSensitiveLabelsPa
 }
 
 /// <summary>An servicekey token for a notification channel. Channel types that support this field include: pagerduty Note: This property is sensitive and will not be displayed in the plan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationChannelStatusAtProviderSensitiveLabelsServiceKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -466,6 +493,7 @@ public partial class V1beta1NotificationChannelStatusAtProviderSensitiveLabelsSe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationChannelStatusAtProviderSensitiveLabels
 {
     /// <summary>An authorization token for a notification channel. Channel types that support this field include: slack Note: This property is sensitive and will not be displayed in the plan.</summary>
@@ -482,6 +510,7 @@ public partial class V1beta1NotificationChannelStatusAtProviderSensitiveLabels
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationChannelStatusAtProvider
 {
     /// <summary>An optional human-readable description of this notification channel. This description may provide additional details, beyond the display name, for the channel. This may not exceed 1024 Unicode characters.</summary>
@@ -534,6 +563,7 @@ public partial class V1beta1NotificationChannelStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationChannelStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -562,6 +592,7 @@ public partial class V1beta1NotificationChannelStatusConditions
 }
 
 /// <summary>NotificationChannelStatus defines the observed state of NotificationChannel.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationChannelStatus
 {
     /// <summary></summary>
@@ -577,8 +608,9 @@ public partial class V1beta1NotificationChannelStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>NotificationChannel is the Schema for the NotificationChannels API. A NotificationChannel is a medium through which an alert is delivered when a policy violation is detected.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1NotificationChannel : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NotificationChannelSpec>, IStatus<V1beta1NotificationChannelStatus>
 {
     public const string KubeApiVersion = "v1beta1";

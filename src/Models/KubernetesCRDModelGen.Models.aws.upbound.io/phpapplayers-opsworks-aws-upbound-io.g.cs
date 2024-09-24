@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.opsworks.aws.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PHPAppLayerSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1PHPAppLayerSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecForProviderCloudwatchConfigurationLogStreams
 {
     /// <summary></summary>
@@ -67,6 +69,7 @@ public partial class V1beta1PHPAppLayerSpecForProviderCloudwatchConfigurationLog
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecForProviderCloudwatchConfiguration
 {
     /// <summary></summary>
@@ -78,6 +81,7 @@ public partial class V1beta1PHPAppLayerSpecForProviderCloudwatchConfiguration
     public IList<V1beta1PHPAppLayerSpecForProviderCloudwatchConfigurationLogStreams>? LogStreams { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PHPAppLayerSpecForProviderCustomSecurityGroupIdRefsPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -88,6 +92,7 @@ public enum V1beta1PHPAppLayerSpecForProviderCustomSecurityGroupIdRefsPolicyReso
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PHPAppLayerSpecForProviderCustomSecurityGroupIdRefsPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -99,6 +104,7 @@ public enum V1beta1PHPAppLayerSpecForProviderCustomSecurityGroupIdRefsPolicyReso
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecForProviderCustomSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -113,6 +119,7 @@ public partial class V1beta1PHPAppLayerSpecForProviderCustomSecurityGroupIdRefsP
 }
 
 /// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecForProviderCustomSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -124,6 +131,7 @@ public partial class V1beta1PHPAppLayerSpecForProviderCustomSecurityGroupIdRefs
     public V1beta1PHPAppLayerSpecForProviderCustomSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PHPAppLayerSpecForProviderCustomSecurityGroupIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -134,6 +142,7 @@ public enum V1beta1PHPAppLayerSpecForProviderCustomSecurityGroupIdSelectorPolicy
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PHPAppLayerSpecForProviderCustomSecurityGroupIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -145,6 +154,7 @@ public enum V1beta1PHPAppLayerSpecForProviderCustomSecurityGroupIdSelectorPolicy
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecForProviderCustomSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -159,6 +169,7 @@ public partial class V1beta1PHPAppLayerSpecForProviderCustomSecurityGroupIdSelec
 }
 
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate customSecurityGroupIds.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecForProviderCustomSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -175,6 +186,7 @@ public partial class V1beta1PHPAppLayerSpecForProviderCustomSecurityGroupIdSelec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecForProviderEbsVolume
 {
     /// <summary></summary>
@@ -207,6 +219,7 @@ public partial class V1beta1PHPAppLayerSpecForProviderEbsVolume
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecForProviderLoadBasedAutoScalingDownscaling
 {
     /// <summary></summary>
@@ -239,6 +252,7 @@ public partial class V1beta1PHPAppLayerSpecForProviderLoadBasedAutoScalingDownsc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecForProviderLoadBasedAutoScalingUpscaling
 {
     /// <summary></summary>
@@ -271,6 +285,7 @@ public partial class V1beta1PHPAppLayerSpecForProviderLoadBasedAutoScalingUpscal
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecForProviderLoadBasedAutoScaling
 {
     /// <summary></summary>
@@ -286,6 +301,7 @@ public partial class V1beta1PHPAppLayerSpecForProviderLoadBasedAutoScaling
     public IList<V1beta1PHPAppLayerSpecForProviderLoadBasedAutoScalingUpscaling>? Upscaling { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PHPAppLayerSpecForProviderStackIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -296,6 +312,7 @@ public enum V1beta1PHPAppLayerSpecForProviderStackIdRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PHPAppLayerSpecForProviderStackIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -307,6 +324,7 @@ public enum V1beta1PHPAppLayerSpecForProviderStackIdRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecForProviderStackIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -321,6 +339,7 @@ public partial class V1beta1PHPAppLayerSpecForProviderStackIdRefPolicy
 }
 
 /// <summary>Reference to a Stack in opsworks to populate stackId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecForProviderStackIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -332,6 +351,7 @@ public partial class V1beta1PHPAppLayerSpecForProviderStackIdRef
     public V1beta1PHPAppLayerSpecForProviderStackIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PHPAppLayerSpecForProviderStackIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -342,6 +362,7 @@ public enum V1beta1PHPAppLayerSpecForProviderStackIdSelectorPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PHPAppLayerSpecForProviderStackIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -353,6 +374,7 @@ public enum V1beta1PHPAppLayerSpecForProviderStackIdSelectorPolicyResolveEnum
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecForProviderStackIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -367,6 +389,7 @@ public partial class V1beta1PHPAppLayerSpecForProviderStackIdSelectorPolicy
 }
 
 /// <summary>Selector for a Stack in opsworks to populate stackId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecForProviderStackIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -383,6 +406,7 @@ public partial class V1beta1PHPAppLayerSpecForProviderStackIdSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecForProvider
 {
     /// <summary>Whether to automatically assign an elastic IP address to the layer's instances.</summary>
@@ -495,6 +519,7 @@ public partial class V1beta1PHPAppLayerSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecInitProviderCloudwatchConfigurationLogStreams
 {
     /// <summary></summary>
@@ -543,6 +568,7 @@ public partial class V1beta1PHPAppLayerSpecInitProviderCloudwatchConfigurationLo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecInitProviderCloudwatchConfiguration
 {
     /// <summary></summary>
@@ -554,6 +580,7 @@ public partial class V1beta1PHPAppLayerSpecInitProviderCloudwatchConfiguration
     public IList<V1beta1PHPAppLayerSpecInitProviderCloudwatchConfigurationLogStreams>? LogStreams { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PHPAppLayerSpecInitProviderCustomSecurityGroupIdRefsPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -564,6 +591,7 @@ public enum V1beta1PHPAppLayerSpecInitProviderCustomSecurityGroupIdRefsPolicyRes
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PHPAppLayerSpecInitProviderCustomSecurityGroupIdRefsPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -575,6 +603,7 @@ public enum V1beta1PHPAppLayerSpecInitProviderCustomSecurityGroupIdRefsPolicyRes
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecInitProviderCustomSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -589,6 +618,7 @@ public partial class V1beta1PHPAppLayerSpecInitProviderCustomSecurityGroupIdRefs
 }
 
 /// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecInitProviderCustomSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -600,6 +630,7 @@ public partial class V1beta1PHPAppLayerSpecInitProviderCustomSecurityGroupIdRefs
     public V1beta1PHPAppLayerSpecInitProviderCustomSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PHPAppLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -610,6 +641,7 @@ public enum V1beta1PHPAppLayerSpecInitProviderCustomSecurityGroupIdSelectorPolic
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PHPAppLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -621,6 +653,7 @@ public enum V1beta1PHPAppLayerSpecInitProviderCustomSecurityGroupIdSelectorPolic
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -635,6 +668,7 @@ public partial class V1beta1PHPAppLayerSpecInitProviderCustomSecurityGroupIdSele
 }
 
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate customSecurityGroupIds.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecInitProviderCustomSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -651,6 +685,7 @@ public partial class V1beta1PHPAppLayerSpecInitProviderCustomSecurityGroupIdSele
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecInitProviderEbsVolume
 {
     /// <summary></summary>
@@ -683,6 +718,7 @@ public partial class V1beta1PHPAppLayerSpecInitProviderEbsVolume
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecInitProviderLoadBasedAutoScalingDownscaling
 {
     /// <summary></summary>
@@ -715,6 +751,7 @@ public partial class V1beta1PHPAppLayerSpecInitProviderLoadBasedAutoScalingDowns
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecInitProviderLoadBasedAutoScalingUpscaling
 {
     /// <summary></summary>
@@ -747,6 +784,7 @@ public partial class V1beta1PHPAppLayerSpecInitProviderLoadBasedAutoScalingUpsca
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecInitProviderLoadBasedAutoScaling
 {
     /// <summary></summary>
@@ -762,6 +800,7 @@ public partial class V1beta1PHPAppLayerSpecInitProviderLoadBasedAutoScaling
     public IList<V1beta1PHPAppLayerSpecInitProviderLoadBasedAutoScalingUpscaling>? Upscaling { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PHPAppLayerSpecInitProviderStackIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -772,6 +811,7 @@ public enum V1beta1PHPAppLayerSpecInitProviderStackIdRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PHPAppLayerSpecInitProviderStackIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -783,6 +823,7 @@ public enum V1beta1PHPAppLayerSpecInitProviderStackIdRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecInitProviderStackIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -797,6 +838,7 @@ public partial class V1beta1PHPAppLayerSpecInitProviderStackIdRefPolicy
 }
 
 /// <summary>Reference to a Stack in opsworks to populate stackId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecInitProviderStackIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -808,6 +850,7 @@ public partial class V1beta1PHPAppLayerSpecInitProviderStackIdRef
     public V1beta1PHPAppLayerSpecInitProviderStackIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PHPAppLayerSpecInitProviderStackIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -818,6 +861,7 @@ public enum V1beta1PHPAppLayerSpecInitProviderStackIdSelectorPolicyResolutionEnu
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PHPAppLayerSpecInitProviderStackIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -829,6 +873,7 @@ public enum V1beta1PHPAppLayerSpecInitProviderStackIdSelectorPolicyResolveEnum
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecInitProviderStackIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -843,6 +888,7 @@ public partial class V1beta1PHPAppLayerSpecInitProviderStackIdSelectorPolicy
 }
 
 /// <summary>Selector for a Stack in opsworks to populate stackId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecInitProviderStackIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -859,6 +905,7 @@ public partial class V1beta1PHPAppLayerSpecInitProviderStackIdSelector
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecInitProvider
 {
     /// <summary>Whether to automatically assign an elastic IP address to the layer's instances.</summary>
@@ -970,6 +1017,7 @@ public partial class V1beta1PHPAppLayerSpecInitProvider
     public bool? UseEbsOptimizedInstances { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PHPAppLayerSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -992,6 +1040,7 @@ public enum V1beta1PHPAppLayerSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PHPAppLayerSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1002,6 +1051,7 @@ public enum V1beta1PHPAppLayerSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PHPAppLayerSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1013,6 +1063,7 @@ public enum V1beta1PHPAppLayerSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1027,6 +1078,7 @@ public partial class V1beta1PHPAppLayerSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1038,6 +1090,7 @@ public partial class V1beta1PHPAppLayerSpecProviderConfigRef
     public V1beta1PHPAppLayerSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PHPAppLayerSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1048,6 +1101,7 @@ public enum V1beta1PHPAppLayerSpecPublishConnectionDetailsToConfigRefPolicyResol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PHPAppLayerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1059,6 +1113,7 @@ public enum V1beta1PHPAppLayerSpecPublishConnectionDetailsToConfigRefPolicyResol
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1073,6 +1128,7 @@ public partial class V1beta1PHPAppLayerSpecPublishConnectionDetailsToConfigRefPo
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1085,6 +1141,7 @@ public partial class V1beta1PHPAppLayerSpecPublishConnectionDetailsToConfigRef
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1101,6 +1158,7 @@ public partial class V1beta1PHPAppLayerSpecPublishConnectionDetailsToMetadata
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1117,6 +1175,7 @@ public partial class V1beta1PHPAppLayerSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1129,6 +1188,7 @@ public partial class V1beta1PHPAppLayerSpecWriteConnectionSecretToRef
 }
 
 /// <summary>PHPAppLayerSpec defines the desired state of PHPAppLayer</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1162,6 +1222,7 @@ public partial class V1beta1PHPAppLayerSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerStatusAtProviderCloudwatchConfigurationLogStreams
 {
     /// <summary></summary>
@@ -1210,6 +1271,7 @@ public partial class V1beta1PHPAppLayerStatusAtProviderCloudwatchConfigurationLo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerStatusAtProviderCloudwatchConfiguration
 {
     /// <summary></summary>
@@ -1222,6 +1284,7 @@ public partial class V1beta1PHPAppLayerStatusAtProviderCloudwatchConfiguration
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerStatusAtProviderEbsVolume
 {
     /// <summary></summary>
@@ -1254,6 +1317,7 @@ public partial class V1beta1PHPAppLayerStatusAtProviderEbsVolume
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerStatusAtProviderLoadBasedAutoScalingDownscaling
 {
     /// <summary></summary>
@@ -1286,6 +1350,7 @@ public partial class V1beta1PHPAppLayerStatusAtProviderLoadBasedAutoScalingDowns
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerStatusAtProviderLoadBasedAutoScalingUpscaling
 {
     /// <summary></summary>
@@ -1318,6 +1383,7 @@ public partial class V1beta1PHPAppLayerStatusAtProviderLoadBasedAutoScalingUpsca
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerStatusAtProviderLoadBasedAutoScaling
 {
     /// <summary></summary>
@@ -1334,6 +1400,7 @@ public partial class V1beta1PHPAppLayerStatusAtProviderLoadBasedAutoScaling
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerStatusAtProvider
 {
     /// <summary>The Amazon Resource Name(ARN) of the layer.</summary>
@@ -1442,6 +1509,7 @@ public partial class V1beta1PHPAppLayerStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1470,6 +1538,7 @@ public partial class V1beta1PHPAppLayerStatusConditions
 }
 
 /// <summary>PHPAppLayerStatus defines the observed state of PHPAppLayer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PHPAppLayerStatus
 {
     /// <summary></summary>
@@ -1485,8 +1554,9 @@ public partial class V1beta1PHPAppLayerStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>PHPAppLayer is the Schema for the PHPAppLayers API. Provides an OpsWorks PHP application layer resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1PHPAppLayer : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1PHPAppLayerSpec>, IStatus<V1beta1PHPAppLayerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.pkg.crossplane.io;
 /// <summary>ControllerConfigRef references a ControllerConfig resource that will be used to configure the packaged controller Deployment. Deprecated: Use RuntimeConfigReference instead.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ProviderSpecControllerConfigRef
 {
     /// <summary>Name of the ControllerConfig.</summary>
@@ -17,6 +18,7 @@ public partial class V1ProviderSpecControllerConfigRef
 }
 
 /// <summary>LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ProviderSpecPackagePullSecrets
 {
     /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. TODO: Add other useful fields. apiVersion, kind, uid? More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Drop `kubebuilder:default` when controller-gen doesn't need it https://github.com/kubernetes-sigs/kubebuilder/issues/3896.</summary>
@@ -25,6 +27,7 @@ public partial class V1ProviderSpecPackagePullSecrets
 }
 
 /// <summary>RuntimeConfigRef references a RuntimeConfig resource that will be used to configure the package runtime.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ProviderSpecRuntimeConfigRef
 {
     /// <summary>API version of the referent.</summary>
@@ -41,6 +44,7 @@ public partial class V1ProviderSpecRuntimeConfigRef
 }
 
 /// <summary>ProviderSpec specifies details about a request to install a provider to Crossplane.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ProviderSpec
 {
     /// <summary>Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/</summary>
@@ -85,6 +89,7 @@ public partial class V1ProviderSpec
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ProviderStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -113,6 +118,7 @@ public partial class V1ProviderStatusConditions
 }
 
 /// <summary>ProviderStatus represents the observed state of a Provider.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ProviderStatus
 {
     /// <summary>Conditions of the resource.</summary>
@@ -128,8 +134,9 @@ public partial class V1ProviderStatus
     public string? CurrentRevision { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>A Provider installs an OCI compatible Crossplane package, extending Crossplane with support for new kinds of managed resources.   Read the Crossplane documentation for [more information about Providers](https://docs.crossplane.io/latest/concepts/providers).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1Provider : IKubernetesObject<V1ObjectMeta>, ISpec<V1ProviderSpec>, IStatus<V1ProviderStatus>
 {
     public const string KubeApiVersion = "v1";

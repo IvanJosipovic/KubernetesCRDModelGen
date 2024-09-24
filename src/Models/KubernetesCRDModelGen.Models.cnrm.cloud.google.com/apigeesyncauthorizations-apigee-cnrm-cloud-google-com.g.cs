@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigee.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApigeeSyncAuthorizationSpec
 {
     /// <summary>Array of service accounts to grant access to control plane resources, each specified using the following format: 'serviceAccount:service-account-name'.  The 'service-account-name' is formatted like an email address. For example: my-synchronizer-manager-serviceAccount@my_project_id.iam.gserviceaccount.com  You might specify multiple service accounts, for example, if you have multiple environments and wish to assign a unique service account to each one.  The service accounts must have **Apigee Synchronizer Manager** role. See also [Create service accounts](https://cloud.google.com/apigee/docs/hybrid/v1.8/sa-about#create-the-service-accounts).</summary>
@@ -21,6 +22,7 @@ public partial class V1alpha1ApigeeSyncAuthorizationSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApigeeSyncAuthorizationStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -45,6 +47,7 @@ public partial class V1alpha1ApigeeSyncAuthorizationStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApigeeSyncAuthorizationStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -60,8 +63,9 @@ public partial class V1alpha1ApigeeSyncAuthorizationStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1ApigeeSyncAuthorization : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ApigeeSyncAuthorizationSpec>, IStatus<V1alpha1ApigeeSyncAuthorizationStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

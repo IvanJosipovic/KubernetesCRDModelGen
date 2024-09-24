@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.lambda.aws.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionEventInvokeConfigSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -18,6 +19,7 @@ public enum V1beta1FunctionEventInvokeConfigSpecDeletionPolicyEnum
     Delete
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFailureDestinationRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -28,6 +30,7 @@ public enum V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFa
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFailureDestinationRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -39,6 +42,7 @@ public enum V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFa
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFailureDestinationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -53,6 +57,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
 }
 
 /// <summary>Reference to a Queue in sqs to populate destination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFailureDestinationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -64,6 +69,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
     public V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFailureDestinationRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFailureDestinationSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -74,6 +80,7 @@ public enum V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFa
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFailureDestinationSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -85,6 +92,7 @@ public enum V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFa
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFailureDestinationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -99,6 +107,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
 }
 
 /// <summary>Selector for a Queue in sqs to populate destination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFailureDestinationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -115,6 +124,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFailure
 {
     /// <summary>Amazon Resource Name (ARN) of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.</summary>
@@ -130,6 +140,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
     public V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFailureDestinationSelector? DestinationSelector { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSuccessDestinationRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -140,6 +151,7 @@ public enum V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSu
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSuccessDestinationRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -151,6 +163,7 @@ public enum V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSu
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSuccessDestinationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -165,6 +178,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
 }
 
 /// <summary>Reference to a Topic in sns to populate destination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSuccessDestinationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -176,6 +190,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
     public V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSuccessDestinationRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSuccessDestinationSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -186,6 +201,7 @@ public enum V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSu
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSuccessDestinationSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -197,6 +213,7 @@ public enum V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSu
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSuccessDestinationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -211,6 +228,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
 }
 
 /// <summary>Selector for a Topic in sns to populate destination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSuccessDestinationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -227,6 +245,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSuccess
 {
     /// <summary>Amazon Resource Name (ARN) of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.</summary>
@@ -243,6 +262,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfig
 {
     /// <summary>Configuration block with destination configuration for failed asynchronous invocations. See below for details.</summary>
@@ -255,6 +275,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecForProvider
 {
     /// <summary>Configuration block with destination configuration. See below for details.</summary>
@@ -282,6 +303,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProvider
     public string Region { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnFailureDestinationRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -292,6 +314,7 @@ public enum V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnF
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnFailureDestinationRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -303,6 +326,7 @@ public enum V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnF
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnFailureDestinationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -317,6 +341,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
 }
 
 /// <summary>Reference to a Queue in sqs to populate destination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnFailureDestinationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -328,6 +353,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
     public V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnFailureDestinationRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnFailureDestinationSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -338,6 +364,7 @@ public enum V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnF
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnFailureDestinationSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -349,6 +376,7 @@ public enum V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnF
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnFailureDestinationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -363,6 +391,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
 }
 
 /// <summary>Selector for a Queue in sqs to populate destination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnFailureDestinationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -379,6 +408,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnFailure
 {
     /// <summary>Amazon Resource Name (ARN) of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.</summary>
@@ -394,6 +424,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
     public V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnFailureDestinationSelector? DestinationSelector { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnSuccessDestinationRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -404,6 +435,7 @@ public enum V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnS
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnSuccessDestinationRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -415,6 +447,7 @@ public enum V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnS
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnSuccessDestinationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -429,6 +462,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
 }
 
 /// <summary>Reference to a Topic in sns to populate destination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnSuccessDestinationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -440,6 +474,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
     public V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnSuccessDestinationRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnSuccessDestinationSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -450,6 +485,7 @@ public enum V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnS
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnSuccessDestinationSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -461,6 +497,7 @@ public enum V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnS
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnSuccessDestinationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -475,6 +512,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
 }
 
 /// <summary>Selector for a Topic in sns to populate destination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnSuccessDestinationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -491,6 +529,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnSuccess
 {
     /// <summary>Amazon Resource Name (ARN) of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.</summary>
@@ -507,6 +546,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfig
 {
     /// <summary>Configuration block with destination configuration for failed asynchronous invocations. See below for details.</summary>
@@ -519,6 +559,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProvider
 {
     /// <summary>Configuration block with destination configuration. See below for details.</summary>
@@ -542,6 +583,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProvider
     public string? Qualifier { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionEventInvokeConfigSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -564,6 +606,7 @@ public enum V1beta1FunctionEventInvokeConfigSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionEventInvokeConfigSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -574,6 +617,7 @@ public enum V1beta1FunctionEventInvokeConfigSpecProviderConfigRefPolicyResolutio
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionEventInvokeConfigSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -585,6 +629,7 @@ public enum V1beta1FunctionEventInvokeConfigSpecProviderConfigRefPolicyResolveEn
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -599,6 +644,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -610,6 +656,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecProviderConfigRef
     public V1beta1FunctionEventInvokeConfigSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionEventInvokeConfigSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -620,6 +667,7 @@ public enum V1beta1FunctionEventInvokeConfigSpecPublishConnectionDetailsToConfig
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionEventInvokeConfigSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -631,6 +679,7 @@ public enum V1beta1FunctionEventInvokeConfigSpecPublishConnectionDetailsToConfig
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -645,6 +694,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecPublishConnectionDetail
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -657,6 +707,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecPublishConnectionDetail
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -673,6 +724,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecPublishConnectionDetail
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -689,6 +741,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecPublishConnectionDetail
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -701,6 +754,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecWriteConnectionSecretTo
 }
 
 /// <summary>FunctionEventInvokeConfigSpec defines the desired state of FunctionEventInvokeConfig</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -734,6 +788,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigStatusAtProviderDestinationConfigOnFailure
 {
     /// <summary>Amazon Resource Name (ARN) of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.</summary>
@@ -742,6 +797,7 @@ public partial class V1beta1FunctionEventInvokeConfigStatusAtProviderDestination
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigStatusAtProviderDestinationConfigOnSuccess
 {
     /// <summary>Amazon Resource Name (ARN) of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.</summary>
@@ -750,6 +806,7 @@ public partial class V1beta1FunctionEventInvokeConfigStatusAtProviderDestination
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigStatusAtProviderDestinationConfig
 {
     /// <summary>Configuration block with destination configuration for failed asynchronous invocations. See below for details.</summary>
@@ -762,6 +819,7 @@ public partial class V1beta1FunctionEventInvokeConfigStatusAtProviderDestination
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigStatusAtProvider
 {
     /// <summary>Configuration block with destination configuration. See below for details.</summary>
@@ -790,6 +848,7 @@ public partial class V1beta1FunctionEventInvokeConfigStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -818,6 +877,7 @@ public partial class V1beta1FunctionEventInvokeConfigStatusConditions
 }
 
 /// <summary>FunctionEventInvokeConfigStatus defines the observed state of FunctionEventInvokeConfig.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigStatus
 {
     /// <summary></summary>
@@ -833,8 +893,9 @@ public partial class V1beta1FunctionEventInvokeConfigStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>FunctionEventInvokeConfig is the Schema for the FunctionEventInvokeConfigs API. Manages an asynchronous invocation configuration for a Lambda Function or Alias.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1FunctionEventInvokeConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FunctionEventInvokeConfigSpec>, IStatus<V1beta1FunctionEventInvokeConfigStatus>
 {
     public const string KubeApiVersion = "v1beta1";

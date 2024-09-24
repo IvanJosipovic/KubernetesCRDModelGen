@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apiextensions.crossplane.io;
 /// <summary>CompositeTypeRef specifies the type of composite resource that this composition is compatible with.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecCompositeTypeRef
 {
     /// <summary>APIVersion of the type.</summary>
@@ -21,6 +22,7 @@ public partial class V1CompositionSpecCompositeTypeRef
 }
 
 /// <summary>Ref is a named reference to a single EnvironmentConfig. Either Ref or Selector is required.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecEnvironmentEnvironmentConfigsRef
 {
     /// <summary>The name of the object.</summary>
@@ -28,6 +30,7 @@ public partial class V1CompositionSpecEnvironmentEnvironmentConfigsRef
     public string Name { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecEnvironmentEnvironmentConfigsSelectorMatchLabelsFromFieldPathPolicyEnum
 {
     [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
@@ -38,6 +41,7 @@ public enum V1CompositionSpecEnvironmentEnvironmentConfigsSelectorMatchLabelsFro
     Required
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecEnvironmentEnvironmentConfigsSelectorMatchLabelsTypeEnum
 {
     [EnumMember(Value = "FromCompositeFieldPath"), JsonStringEnumMemberName("FromCompositeFieldPath")]
@@ -49,6 +53,7 @@ public enum V1CompositionSpecEnvironmentEnvironmentConfigsSelectorMatchLabelsTyp
 }
 
 /// <summary>An EnvironmentSourceSelectorLabelMatcher acts like a k8s label selector but can draw the label value from a different path.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecEnvironmentEnvironmentConfigsSelectorMatchLabels
 {
     /// <summary>FromFieldPathPolicy specifies the policy for the valueFromFieldPath. The default is Required, meaning that an error will be returned if the field is not found in the composite resource. Optional means that if the field is not found in the composite resource, that label pair will just be skipped. N.B. other specified label matchers will still be used to retrieve the desired environment config, if any.</summary>
@@ -74,6 +79,7 @@ public partial class V1CompositionSpecEnvironmentEnvironmentConfigsSelectorMatch
     public string? ValueFromFieldPath { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecEnvironmentEnvironmentConfigsSelectorModeEnum
 {
     [EnumMember(Value = "Single"), JsonStringEnumMemberName("Single")]
@@ -85,6 +91,7 @@ public enum V1CompositionSpecEnvironmentEnvironmentConfigsSelectorModeEnum
 }
 
 /// <summary>Selector selects EnvironmentConfig(s) via labels.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecEnvironmentEnvironmentConfigsSelector
 {
     /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
@@ -109,6 +116,7 @@ public partial class V1CompositionSpecEnvironmentEnvironmentConfigsSelector
     public string? SortByFieldPath { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecEnvironmentEnvironmentConfigsTypeEnum
 {
     [EnumMember(Value = "Reference"), JsonStringEnumMemberName("Reference")]
@@ -120,6 +128,7 @@ public enum V1CompositionSpecEnvironmentEnvironmentConfigsTypeEnum
 }
 
 /// <summary>EnvironmentSource selects a EnvironmentConfig resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecEnvironmentEnvironmentConfigs
 {
     /// <summary>Ref is a named reference to a single EnvironmentConfig. Either Ref or Selector is required.</summary>
@@ -136,6 +145,7 @@ public partial class V1CompositionSpecEnvironmentEnvironmentConfigs
     public V1CompositionSpecEnvironmentEnvironmentConfigsTypeEnum? Type { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecEnvironmentPatchesCombineStrategyEnum
 {
     [EnumMember(Value = "string"), JsonStringEnumMemberName("string")]
@@ -144,6 +154,7 @@ public enum V1CompositionSpecEnvironmentPatchesCombineStrategyEnum
 }
 
 /// <summary>String declares that input variables should be combined into a single string, using the relevant settings for formatting purposes.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecEnvironmentPatchesCombineString
 {
     /// <summary>Format the input using a Go format string. See https://golang.org/pkg/fmt/ for details.</summary>
@@ -152,6 +163,7 @@ public partial class V1CompositionSpecEnvironmentPatchesCombineString
 }
 
 /// <summary>A CombineVariable defines the source of a value that is combined with others to form and patch an output value. Currently, this only supports retrieving values from a field path.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecEnvironmentPatchesCombineVariables
 {
     /// <summary>FromFieldPath is the path of the field on the source whose value is to be used as input.</summary>
@@ -160,6 +172,7 @@ public partial class V1CompositionSpecEnvironmentPatchesCombineVariables
 }
 
 /// <summary>Combine is the patch configuration for a CombineFromComposite or CombineToComposite patch.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecEnvironmentPatchesCombine
 {
     /// <summary>Strategy defines the strategy to use to combine the input variable values. Currently only string is supported.</summary>
@@ -176,6 +189,7 @@ public partial class V1CompositionSpecEnvironmentPatchesCombine
     public IList<V1CompositionSpecEnvironmentPatchesCombineVariables> Variables { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecEnvironmentPatchesPolicyFromFieldPathEnum
 {
     [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
@@ -187,6 +201,7 @@ public enum V1CompositionSpecEnvironmentPatchesPolicyFromFieldPathEnum
 }
 
 /// <summary>MergeOptions Specifies merge options on a field path.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecEnvironmentPatchesPolicyMergeOptions
 {
     /// <summary>Specifies that already existing elements in a merged slice should be preserved</summary>
@@ -199,6 +214,7 @@ public partial class V1CompositionSpecEnvironmentPatchesPolicyMergeOptions
 }
 
 /// <summary>Policy configures the specifics of patching behaviour.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecEnvironmentPatchesPolicy
 {
     /// <summary>FromFieldPath specifies how to patch from a field path. The default is 'Optional', which means the patch will be a no-op if the specified fromFieldPath does not exist. Use 'Required' if the patch should fail if the specified path does not exist.</summary>
@@ -211,6 +227,7 @@ public partial class V1CompositionSpecEnvironmentPatchesPolicy
     public V1CompositionSpecEnvironmentPatchesPolicyMergeOptions? MergeOptions { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecEnvironmentPatchesTransformsConvertFormatEnum
 {
     [EnumMember(Value = "none"), JsonStringEnumMemberName("none")]
@@ -224,6 +241,7 @@ public enum V1CompositionSpecEnvironmentPatchesTransformsConvertFormatEnum
     Json
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecEnvironmentPatchesTransformsConvertToTypeEnum
 {
     [EnumMember(Value = "string"), JsonStringEnumMemberName("string")]
@@ -250,6 +268,7 @@ public enum V1CompositionSpecEnvironmentPatchesTransformsConvertToTypeEnum
 }
 
 /// <summary>Convert is used to cast the input into the given output type.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecEnvironmentPatchesTransformsConvert
 {
     /// <summary>The expected input format.   * `quantity` - parses the input as a K8s [`resource.Quantity`](https://pkg.go.dev/k8s.io/apimachinery/pkg/api/resource#Quantity). Only used during `string -&gt; float64` conversions. * `json` - parses the input as a JSON string. Only used during `string -&gt; object` or `string -&gt; list` conversions.   If this property is null, the default conversion is applied.</summary>
@@ -263,6 +282,7 @@ public partial class V1CompositionSpecEnvironmentPatchesTransformsConvert
     public V1CompositionSpecEnvironmentPatchesTransformsConvertToTypeEnum ToType { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecEnvironmentPatchesTransformsMatchFallbackToEnum
 {
     [EnumMember(Value = "Value"), JsonStringEnumMemberName("Value")]
@@ -273,6 +293,7 @@ public enum V1CompositionSpecEnvironmentPatchesTransformsMatchFallbackToEnum
     Input
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecEnvironmentPatchesTransformsMatchPatternsTypeEnum
 {
     [EnumMember(Value = "literal"), JsonStringEnumMemberName("literal")]
@@ -284,6 +305,7 @@ public enum V1CompositionSpecEnvironmentPatchesTransformsMatchPatternsTypeEnum
 }
 
 /// <summary>MatchTransformPattern is a transform that returns the value that matches a pattern.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecEnvironmentPatchesTransformsMatchPatterns
 {
     /// <summary>Literal exactly matches the input string (case sensitive). Is required if `type` is `literal`.</summary>
@@ -305,6 +327,7 @@ public partial class V1CompositionSpecEnvironmentPatchesTransformsMatchPatterns
 }
 
 /// <summary>Match is a more complex version of Map that matches a list of patterns.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecEnvironmentPatchesTransformsMatch
 {
     /// <summary>Determines to what value the transform should fallback if no pattern matches.</summary>
@@ -321,6 +344,7 @@ public partial class V1CompositionSpecEnvironmentPatchesTransformsMatch
     public IList<V1CompositionSpecEnvironmentPatchesTransformsMatchPatterns>? Patterns { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecEnvironmentPatchesTransformsMathTypeEnum
 {
     [EnumMember(Value = "Multiply"), JsonStringEnumMemberName("Multiply")]
@@ -335,6 +359,7 @@ public enum V1CompositionSpecEnvironmentPatchesTransformsMathTypeEnum
 }
 
 /// <summary>Math is used to transform the input via mathematical operations such as multiplication.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecEnvironmentPatchesTransformsMath
 {
     /// <summary>ClampMax makes sure that the value is not bigger than the given value.</summary>
@@ -355,6 +380,7 @@ public partial class V1CompositionSpecEnvironmentPatchesTransformsMath
     public V1CompositionSpecEnvironmentPatchesTransformsMathTypeEnum? Type { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecEnvironmentPatchesTransformsStringConvertEnum
 {
     [EnumMember(Value = "ToUpper"), JsonStringEnumMemberName("ToUpper")]
@@ -387,6 +413,7 @@ public enum V1CompositionSpecEnvironmentPatchesTransformsStringConvertEnum
 }
 
 /// <summary>Join defines parameters to join a slice of values to a string.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecEnvironmentPatchesTransformsStringJoin
 {
     /// <summary>Separator defines the character that should separate the values from each other in the joined string.</summary>
@@ -395,6 +422,7 @@ public partial class V1CompositionSpecEnvironmentPatchesTransformsStringJoin
 }
 
 /// <summary>Extract a match from the input using a regular expression.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecEnvironmentPatchesTransformsStringRegexp
 {
     /// <summary>Group number to match. 0 (the default) matches the entire expression.</summary>
@@ -406,6 +434,7 @@ public partial class V1CompositionSpecEnvironmentPatchesTransformsStringRegexp
     public string Match { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecEnvironmentPatchesTransformsStringTypeEnum
 {
     [EnumMember(Value = "Format"), JsonStringEnumMemberName("Format")]
@@ -429,6 +458,7 @@ public enum V1CompositionSpecEnvironmentPatchesTransformsStringTypeEnum
 }
 
 /// <summary>String is used to transform the input into a string or a different kind of string. Note that the input does not necessarily need to be a string.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecEnvironmentPatchesTransformsString
 {
     /// <summary>Optional conversion method to be specified. `ToUpper` and `ToLower` change the letter case of the input string. `ToBase64` and `FromBase64` perform a base64 conversion based on the input string. `ToJson` converts any input value into its raw JSON representation. `ToSha1`, `ToSha256` and `ToSha512` generate a hash value based on the input converted to JSON. `ToAdler32` generate a addler32 hash based on the input string.</summary>
@@ -458,6 +488,7 @@ public partial class V1CompositionSpecEnvironmentPatchesTransformsString
     public V1CompositionSpecEnvironmentPatchesTransformsStringTypeEnum? Type { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecEnvironmentPatchesTransformsTypeEnum
 {
     [EnumMember(Value = "map"), JsonStringEnumMemberName("map")]
@@ -478,6 +509,7 @@ public enum V1CompositionSpecEnvironmentPatchesTransformsTypeEnum
 }
 
 /// <summary>Transform is a unit of process whose input is transformed into an output with the supplied configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecEnvironmentPatchesTransforms
 {
     /// <summary>Convert is used to cast the input into the given output type.</summary>
@@ -506,6 +538,7 @@ public partial class V1CompositionSpecEnvironmentPatchesTransforms
     public V1CompositionSpecEnvironmentPatchesTransformsTypeEnum Type { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecEnvironmentPatchesTypeEnum
 {
     [EnumMember(Value = "FromCompositeFieldPath"), JsonStringEnumMemberName("FromCompositeFieldPath")]
@@ -523,6 +556,7 @@ public enum V1CompositionSpecEnvironmentPatchesTypeEnum
 }
 
 /// <summary>EnvironmentPatch is a patch for a Composition environment.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecEnvironmentPatches
 {
     /// <summary>Combine is the patch configuration for a CombineFromComposite or CombineToComposite patch.</summary>
@@ -551,6 +585,7 @@ public partial class V1CompositionSpecEnvironmentPatches
     public V1CompositionSpecEnvironmentPatchesTypeEnum? Type { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecEnvironmentPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -561,6 +596,7 @@ public enum V1CompositionSpecEnvironmentPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecEnvironmentPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -572,6 +608,7 @@ public enum V1CompositionSpecEnvironmentPolicyResolveEnum
 }
 
 /// <summary>Policy represents the Resolve and Resolution policies which apply to all EnvironmentSourceReferences in EnvironmentConfigs list.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecEnvironmentPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -586,6 +623,7 @@ public partial class V1CompositionSpecEnvironmentPolicy
 }
 
 /// <summary>Environment configures the environment in which resources are rendered.   THIS IS AN ALPHA FIELD. Do not use it in production. It is not honored unless the relevant Crossplane feature flag is enabled, and may be changed or removed without notice.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecEnvironment
 {
     /// <summary>DefaultData statically defines the initial state of the environment. It has the same schema-less structure as the data field in environment configs. It is overwritten by the selected environment configs.</summary>
@@ -605,6 +643,7 @@ public partial class V1CompositionSpecEnvironment
     public V1CompositionSpecEnvironmentPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecModeEnum
 {
     [EnumMember(Value = "Resources"), JsonStringEnumMemberName("Resources")]
@@ -615,6 +654,7 @@ public enum V1CompositionSpecModeEnum
     Pipeline
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecPatchSetsPatchesCombineStrategyEnum
 {
     [EnumMember(Value = "string"), JsonStringEnumMemberName("string")]
@@ -623,6 +663,7 @@ public enum V1CompositionSpecPatchSetsPatchesCombineStrategyEnum
 }
 
 /// <summary>String declares that input variables should be combined into a single string, using the relevant settings for formatting purposes.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPatchSetsPatchesCombineString
 {
     /// <summary>Format the input using a Go format string. See https://golang.org/pkg/fmt/ for details.</summary>
@@ -631,6 +672,7 @@ public partial class V1CompositionSpecPatchSetsPatchesCombineString
 }
 
 /// <summary>A CombineVariable defines the source of a value that is combined with others to form and patch an output value. Currently, this only supports retrieving values from a field path.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPatchSetsPatchesCombineVariables
 {
     /// <summary>FromFieldPath is the path of the field on the source whose value is to be used as input.</summary>
@@ -639,6 +681,7 @@ public partial class V1CompositionSpecPatchSetsPatchesCombineVariables
 }
 
 /// <summary>Combine is the patch configuration for a CombineFromComposite, CombineFromEnvironment, CombineToComposite or CombineToEnvironment patch.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPatchSetsPatchesCombine
 {
     /// <summary>Strategy defines the strategy to use to combine the input variable values. Currently only string is supported.</summary>
@@ -655,6 +698,7 @@ public partial class V1CompositionSpecPatchSetsPatchesCombine
     public IList<V1CompositionSpecPatchSetsPatchesCombineVariables> Variables { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecPatchSetsPatchesPolicyFromFieldPathEnum
 {
     [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
@@ -666,6 +710,7 @@ public enum V1CompositionSpecPatchSetsPatchesPolicyFromFieldPathEnum
 }
 
 /// <summary>MergeOptions Specifies merge options on a field path.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPatchSetsPatchesPolicyMergeOptions
 {
     /// <summary>Specifies that already existing elements in a merged slice should be preserved</summary>
@@ -678,6 +723,7 @@ public partial class V1CompositionSpecPatchSetsPatchesPolicyMergeOptions
 }
 
 /// <summary>Policy configures the specifics of patching behaviour.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPatchSetsPatchesPolicy
 {
     /// <summary>FromFieldPath specifies how to patch from a field path. The default is 'Optional', which means the patch will be a no-op if the specified fromFieldPath does not exist. Use 'Required' if the patch should fail if the specified path does not exist.</summary>
@@ -690,6 +736,7 @@ public partial class V1CompositionSpecPatchSetsPatchesPolicy
     public V1CompositionSpecPatchSetsPatchesPolicyMergeOptions? MergeOptions { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecPatchSetsPatchesTransformsConvertFormatEnum
 {
     [EnumMember(Value = "none"), JsonStringEnumMemberName("none")]
@@ -703,6 +750,7 @@ public enum V1CompositionSpecPatchSetsPatchesTransformsConvertFormatEnum
     Json
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecPatchSetsPatchesTransformsConvertToTypeEnum
 {
     [EnumMember(Value = "string"), JsonStringEnumMemberName("string")]
@@ -729,6 +777,7 @@ public enum V1CompositionSpecPatchSetsPatchesTransformsConvertToTypeEnum
 }
 
 /// <summary>Convert is used to cast the input into the given output type.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPatchSetsPatchesTransformsConvert
 {
     /// <summary>The expected input format.   * `quantity` - parses the input as a K8s [`resource.Quantity`](https://pkg.go.dev/k8s.io/apimachinery/pkg/api/resource#Quantity). Only used during `string -&gt; float64` conversions. * `json` - parses the input as a JSON string. Only used during `string -&gt; object` or `string -&gt; list` conversions.   If this property is null, the default conversion is applied.</summary>
@@ -742,6 +791,7 @@ public partial class V1CompositionSpecPatchSetsPatchesTransformsConvert
     public V1CompositionSpecPatchSetsPatchesTransformsConvertToTypeEnum ToType { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecPatchSetsPatchesTransformsMatchFallbackToEnum
 {
     [EnumMember(Value = "Value"), JsonStringEnumMemberName("Value")]
@@ -752,6 +802,7 @@ public enum V1CompositionSpecPatchSetsPatchesTransformsMatchFallbackToEnum
     Input
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecPatchSetsPatchesTransformsMatchPatternsTypeEnum
 {
     [EnumMember(Value = "literal"), JsonStringEnumMemberName("literal")]
@@ -763,6 +814,7 @@ public enum V1CompositionSpecPatchSetsPatchesTransformsMatchPatternsTypeEnum
 }
 
 /// <summary>MatchTransformPattern is a transform that returns the value that matches a pattern.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPatchSetsPatchesTransformsMatchPatterns
 {
     /// <summary>Literal exactly matches the input string (case sensitive). Is required if `type` is `literal`.</summary>
@@ -784,6 +836,7 @@ public partial class V1CompositionSpecPatchSetsPatchesTransformsMatchPatterns
 }
 
 /// <summary>Match is a more complex version of Map that matches a list of patterns.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPatchSetsPatchesTransformsMatch
 {
     /// <summary>Determines to what value the transform should fallback if no pattern matches.</summary>
@@ -800,6 +853,7 @@ public partial class V1CompositionSpecPatchSetsPatchesTransformsMatch
     public IList<V1CompositionSpecPatchSetsPatchesTransformsMatchPatterns>? Patterns { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecPatchSetsPatchesTransformsMathTypeEnum
 {
     [EnumMember(Value = "Multiply"), JsonStringEnumMemberName("Multiply")]
@@ -814,6 +868,7 @@ public enum V1CompositionSpecPatchSetsPatchesTransformsMathTypeEnum
 }
 
 /// <summary>Math is used to transform the input via mathematical operations such as multiplication.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPatchSetsPatchesTransformsMath
 {
     /// <summary>ClampMax makes sure that the value is not bigger than the given value.</summary>
@@ -834,6 +889,7 @@ public partial class V1CompositionSpecPatchSetsPatchesTransformsMath
     public V1CompositionSpecPatchSetsPatchesTransformsMathTypeEnum? Type { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecPatchSetsPatchesTransformsStringConvertEnum
 {
     [EnumMember(Value = "ToUpper"), JsonStringEnumMemberName("ToUpper")]
@@ -866,6 +922,7 @@ public enum V1CompositionSpecPatchSetsPatchesTransformsStringConvertEnum
 }
 
 /// <summary>Join defines parameters to join a slice of values to a string.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPatchSetsPatchesTransformsStringJoin
 {
     /// <summary>Separator defines the character that should separate the values from each other in the joined string.</summary>
@@ -874,6 +931,7 @@ public partial class V1CompositionSpecPatchSetsPatchesTransformsStringJoin
 }
 
 /// <summary>Extract a match from the input using a regular expression.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPatchSetsPatchesTransformsStringRegexp
 {
     /// <summary>Group number to match. 0 (the default) matches the entire expression.</summary>
@@ -885,6 +943,7 @@ public partial class V1CompositionSpecPatchSetsPatchesTransformsStringRegexp
     public string Match { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecPatchSetsPatchesTransformsStringTypeEnum
 {
     [EnumMember(Value = "Format"), JsonStringEnumMemberName("Format")]
@@ -908,6 +967,7 @@ public enum V1CompositionSpecPatchSetsPatchesTransformsStringTypeEnum
 }
 
 /// <summary>String is used to transform the input into a string or a different kind of string. Note that the input does not necessarily need to be a string.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPatchSetsPatchesTransformsString
 {
     /// <summary>Optional conversion method to be specified. `ToUpper` and `ToLower` change the letter case of the input string. `ToBase64` and `FromBase64` perform a base64 conversion based on the input string. `ToJson` converts any input value into its raw JSON representation. `ToSha1`, `ToSha256` and `ToSha512` generate a hash value based on the input converted to JSON. `ToAdler32` generate a addler32 hash based on the input string.</summary>
@@ -937,6 +997,7 @@ public partial class V1CompositionSpecPatchSetsPatchesTransformsString
     public V1CompositionSpecPatchSetsPatchesTransformsStringTypeEnum? Type { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecPatchSetsPatchesTransformsTypeEnum
 {
     [EnumMember(Value = "map"), JsonStringEnumMemberName("map")]
@@ -957,6 +1018,7 @@ public enum V1CompositionSpecPatchSetsPatchesTransformsTypeEnum
 }
 
 /// <summary>Transform is a unit of process whose input is transformed into an output with the supplied configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPatchSetsPatchesTransforms
 {
     /// <summary>Convert is used to cast the input into the given output type.</summary>
@@ -985,6 +1047,7 @@ public partial class V1CompositionSpecPatchSetsPatchesTransforms
     public V1CompositionSpecPatchSetsPatchesTransformsTypeEnum Type { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecPatchSetsPatchesTypeEnum
 {
     [EnumMember(Value = "FromCompositeFieldPath"), JsonStringEnumMemberName("FromCompositeFieldPath")]
@@ -1017,6 +1080,7 @@ public enum V1CompositionSpecPatchSetsPatchesTypeEnum
 }
 
 /// <summary>Patch objects are applied between composite and composed resources. Their behaviour depends on the Type selected. The default Type, FromCompositeFieldPath, copies a value from the composite resource to the composed resource, applying any defined transformers.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPatchSetsPatches
 {
     /// <summary>Combine is the patch configuration for a CombineFromComposite, CombineFromEnvironment, CombineToComposite or CombineToEnvironment patch.</summary>
@@ -1050,6 +1114,7 @@ public partial class V1CompositionSpecPatchSetsPatches
 }
 
 /// <summary>A PatchSet is a set of patches that can be reused from all resources within a Composition.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPatchSets
 {
     /// <summary>Name of this PatchSet.</summary>
@@ -1062,6 +1127,7 @@ public partial class V1CompositionSpecPatchSets
 }
 
 /// <summary>A SecretRef is a reference to a secret containing credentials that should be supplied to the function.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPipelineCredentialsSecretRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1073,6 +1139,7 @@ public partial class V1CompositionSpecPipelineCredentialsSecretRef
     public string Namespace { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecPipelineCredentialsSourceEnum
 {
     [EnumMember(Value = "None"), JsonStringEnumMemberName("None")]
@@ -1084,6 +1151,7 @@ public enum V1CompositionSpecPipelineCredentialsSourceEnum
 }
 
 /// <summary>FunctionCredentials are optional credentials that a Composition Function needs to run.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPipelineCredentials
 {
     /// <summary>Name of this set of credentials.</summary>
@@ -1101,6 +1169,7 @@ public partial class V1CompositionSpecPipelineCredentials
 }
 
 /// <summary>FunctionRef is a reference to the Composition Function this step should execute.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPipelineFunctionRef
 {
     /// <summary>Name of the referenced Function.</summary>
@@ -1109,6 +1178,7 @@ public partial class V1CompositionSpecPipelineFunctionRef
 }
 
 /// <summary>A PipelineStep in a Composition Function pipeline.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPipeline
 {
     /// <summary>Credentials are optional credentials that the Composition Function needs.</summary>
@@ -1129,6 +1199,7 @@ public partial class V1CompositionSpecPipeline
 }
 
 /// <summary>PublishConnectionDetailsWithStoreConfig specifies the secret store config with which the connection details of composite resources dynamically provisioned using this composition will be published.   THIS IS AN ALPHA FIELD. Do not use it in production. It is not honored unless the relevant Crossplane feature flag is enabled, and may be changed or removed without notice.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPublishConnectionDetailsWithStoreConfigRef
 {
     /// <summary>Name of the referenced StoreConfig.</summary>
@@ -1136,6 +1207,7 @@ public partial class V1CompositionSpecPublishConnectionDetailsWithStoreConfigRef
     public string Name { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecResourcesConnectionDetailsTypeEnum
 {
     [EnumMember(Value = "FromConnectionSecretKey"), JsonStringEnumMemberName("FromConnectionSecretKey")]
@@ -1150,6 +1222,7 @@ public enum V1CompositionSpecResourcesConnectionDetailsTypeEnum
 }
 
 /// <summary>ConnectionDetail includes the information about the propagation of the connection information from one secret to another.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecResourcesConnectionDetails
 {
     /// <summary>FromConnectionSecretKey is the key that will be used to fetch the value from the composed resource's connection secret.</summary>
@@ -1174,6 +1247,7 @@ public partial class V1CompositionSpecResourcesConnectionDetails
     public string? Value { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecResourcesPatchesCombineStrategyEnum
 {
     [EnumMember(Value = "string"), JsonStringEnumMemberName("string")]
@@ -1182,6 +1256,7 @@ public enum V1CompositionSpecResourcesPatchesCombineStrategyEnum
 }
 
 /// <summary>String declares that input variables should be combined into a single string, using the relevant settings for formatting purposes.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecResourcesPatchesCombineString
 {
     /// <summary>Format the input using a Go format string. See https://golang.org/pkg/fmt/ for details.</summary>
@@ -1190,6 +1265,7 @@ public partial class V1CompositionSpecResourcesPatchesCombineString
 }
 
 /// <summary>A CombineVariable defines the source of a value that is combined with others to form and patch an output value. Currently, this only supports retrieving values from a field path.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecResourcesPatchesCombineVariables
 {
     /// <summary>FromFieldPath is the path of the field on the source whose value is to be used as input.</summary>
@@ -1198,6 +1274,7 @@ public partial class V1CompositionSpecResourcesPatchesCombineVariables
 }
 
 /// <summary>Combine is the patch configuration for a CombineFromComposite, CombineFromEnvironment, CombineToComposite or CombineToEnvironment patch.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecResourcesPatchesCombine
 {
     /// <summary>Strategy defines the strategy to use to combine the input variable values. Currently only string is supported.</summary>
@@ -1214,6 +1291,7 @@ public partial class V1CompositionSpecResourcesPatchesCombine
     public IList<V1CompositionSpecResourcesPatchesCombineVariables> Variables { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecResourcesPatchesPolicyFromFieldPathEnum
 {
     [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
@@ -1225,6 +1303,7 @@ public enum V1CompositionSpecResourcesPatchesPolicyFromFieldPathEnum
 }
 
 /// <summary>MergeOptions Specifies merge options on a field path.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecResourcesPatchesPolicyMergeOptions
 {
     /// <summary>Specifies that already existing elements in a merged slice should be preserved</summary>
@@ -1237,6 +1316,7 @@ public partial class V1CompositionSpecResourcesPatchesPolicyMergeOptions
 }
 
 /// <summary>Policy configures the specifics of patching behaviour.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecResourcesPatchesPolicy
 {
     /// <summary>FromFieldPath specifies how to patch from a field path. The default is 'Optional', which means the patch will be a no-op if the specified fromFieldPath does not exist. Use 'Required' if the patch should fail if the specified path does not exist.</summary>
@@ -1249,6 +1329,7 @@ public partial class V1CompositionSpecResourcesPatchesPolicy
     public V1CompositionSpecResourcesPatchesPolicyMergeOptions? MergeOptions { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecResourcesPatchesTransformsConvertFormatEnum
 {
     [EnumMember(Value = "none"), JsonStringEnumMemberName("none")]
@@ -1262,6 +1343,7 @@ public enum V1CompositionSpecResourcesPatchesTransformsConvertFormatEnum
     Json
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecResourcesPatchesTransformsConvertToTypeEnum
 {
     [EnumMember(Value = "string"), JsonStringEnumMemberName("string")]
@@ -1288,6 +1370,7 @@ public enum V1CompositionSpecResourcesPatchesTransformsConvertToTypeEnum
 }
 
 /// <summary>Convert is used to cast the input into the given output type.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecResourcesPatchesTransformsConvert
 {
     /// <summary>The expected input format.   * `quantity` - parses the input as a K8s [`resource.Quantity`](https://pkg.go.dev/k8s.io/apimachinery/pkg/api/resource#Quantity). Only used during `string -&gt; float64` conversions. * `json` - parses the input as a JSON string. Only used during `string -&gt; object` or `string -&gt; list` conversions.   If this property is null, the default conversion is applied.</summary>
@@ -1301,6 +1384,7 @@ public partial class V1CompositionSpecResourcesPatchesTransformsConvert
     public V1CompositionSpecResourcesPatchesTransformsConvertToTypeEnum ToType { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecResourcesPatchesTransformsMatchFallbackToEnum
 {
     [EnumMember(Value = "Value"), JsonStringEnumMemberName("Value")]
@@ -1311,6 +1395,7 @@ public enum V1CompositionSpecResourcesPatchesTransformsMatchFallbackToEnum
     Input
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecResourcesPatchesTransformsMatchPatternsTypeEnum
 {
     [EnumMember(Value = "literal"), JsonStringEnumMemberName("literal")]
@@ -1322,6 +1407,7 @@ public enum V1CompositionSpecResourcesPatchesTransformsMatchPatternsTypeEnum
 }
 
 /// <summary>MatchTransformPattern is a transform that returns the value that matches a pattern.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecResourcesPatchesTransformsMatchPatterns
 {
     /// <summary>Literal exactly matches the input string (case sensitive). Is required if `type` is `literal`.</summary>
@@ -1343,6 +1429,7 @@ public partial class V1CompositionSpecResourcesPatchesTransformsMatchPatterns
 }
 
 /// <summary>Match is a more complex version of Map that matches a list of patterns.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecResourcesPatchesTransformsMatch
 {
     /// <summary>Determines to what value the transform should fallback if no pattern matches.</summary>
@@ -1359,6 +1446,7 @@ public partial class V1CompositionSpecResourcesPatchesTransformsMatch
     public IList<V1CompositionSpecResourcesPatchesTransformsMatchPatterns>? Patterns { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecResourcesPatchesTransformsMathTypeEnum
 {
     [EnumMember(Value = "Multiply"), JsonStringEnumMemberName("Multiply")]
@@ -1373,6 +1461,7 @@ public enum V1CompositionSpecResourcesPatchesTransformsMathTypeEnum
 }
 
 /// <summary>Math is used to transform the input via mathematical operations such as multiplication.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecResourcesPatchesTransformsMath
 {
     /// <summary>ClampMax makes sure that the value is not bigger than the given value.</summary>
@@ -1393,6 +1482,7 @@ public partial class V1CompositionSpecResourcesPatchesTransformsMath
     public V1CompositionSpecResourcesPatchesTransformsMathTypeEnum? Type { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecResourcesPatchesTransformsStringConvertEnum
 {
     [EnumMember(Value = "ToUpper"), JsonStringEnumMemberName("ToUpper")]
@@ -1425,6 +1515,7 @@ public enum V1CompositionSpecResourcesPatchesTransformsStringConvertEnum
 }
 
 /// <summary>Join defines parameters to join a slice of values to a string.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecResourcesPatchesTransformsStringJoin
 {
     /// <summary>Separator defines the character that should separate the values from each other in the joined string.</summary>
@@ -1433,6 +1524,7 @@ public partial class V1CompositionSpecResourcesPatchesTransformsStringJoin
 }
 
 /// <summary>Extract a match from the input using a regular expression.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecResourcesPatchesTransformsStringRegexp
 {
     /// <summary>Group number to match. 0 (the default) matches the entire expression.</summary>
@@ -1444,6 +1536,7 @@ public partial class V1CompositionSpecResourcesPatchesTransformsStringRegexp
     public string Match { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecResourcesPatchesTransformsStringTypeEnum
 {
     [EnumMember(Value = "Format"), JsonStringEnumMemberName("Format")]
@@ -1467,6 +1560,7 @@ public enum V1CompositionSpecResourcesPatchesTransformsStringTypeEnum
 }
 
 /// <summary>String is used to transform the input into a string or a different kind of string. Note that the input does not necessarily need to be a string.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecResourcesPatchesTransformsString
 {
     /// <summary>Optional conversion method to be specified. `ToUpper` and `ToLower` change the letter case of the input string. `ToBase64` and `FromBase64` perform a base64 conversion based on the input string. `ToJson` converts any input value into its raw JSON representation. `ToSha1`, `ToSha256` and `ToSha512` generate a hash value based on the input converted to JSON. `ToAdler32` generate a addler32 hash based on the input string.</summary>
@@ -1496,6 +1590,7 @@ public partial class V1CompositionSpecResourcesPatchesTransformsString
     public V1CompositionSpecResourcesPatchesTransformsStringTypeEnum? Type { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecResourcesPatchesTransformsTypeEnum
 {
     [EnumMember(Value = "map"), JsonStringEnumMemberName("map")]
@@ -1516,6 +1611,7 @@ public enum V1CompositionSpecResourcesPatchesTransformsTypeEnum
 }
 
 /// <summary>Transform is a unit of process whose input is transformed into an output with the supplied configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecResourcesPatchesTransforms
 {
     /// <summary>Convert is used to cast the input into the given output type.</summary>
@@ -1544,6 +1640,7 @@ public partial class V1CompositionSpecResourcesPatchesTransforms
     public V1CompositionSpecResourcesPatchesTransformsTypeEnum Type { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecResourcesPatchesTypeEnum
 {
     [EnumMember(Value = "FromCompositeFieldPath"), JsonStringEnumMemberName("FromCompositeFieldPath")]
@@ -1576,6 +1673,7 @@ public enum V1CompositionSpecResourcesPatchesTypeEnum
 }
 
 /// <summary>Patch objects are applied between composite and composed resources. Their behaviour depends on the Type selected. The default Type, FromCompositeFieldPath, copies a value from the composite resource to the composed resource, applying any defined transformers.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecResourcesPatches
 {
     /// <summary>Combine is the patch configuration for a CombineFromComposite, CombineFromEnvironment, CombineToComposite or CombineToEnvironment patch.</summary>
@@ -1609,6 +1707,7 @@ public partial class V1CompositionSpecResourcesPatches
 }
 
 /// <summary>MatchCondition specifies the condition you'd like to match if you're using "MatchCondition" type.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecResourcesReadinessChecksMatchCondition
 {
     /// <summary>Status is the status of the condition you'd like to match.</summary>
@@ -1620,6 +1719,7 @@ public partial class V1CompositionSpecResourcesReadinessChecksMatchCondition
     public string Type { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositionSpecResourcesReadinessChecksTypeEnum
 {
     [EnumMember(Value = "MatchString"), JsonStringEnumMemberName("MatchString")]
@@ -1646,6 +1746,7 @@ public enum V1CompositionSpecResourcesReadinessChecksTypeEnum
 }
 
 /// <summary>ReadinessCheck is used to indicate how to tell whether a resource is ready for consumption.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecResourcesReadinessChecks
 {
     /// <summary>FieldPath shows the path of the field whose value will be used.</summary>
@@ -1671,6 +1772,7 @@ public partial class V1CompositionSpecResourcesReadinessChecks
 }
 
 /// <summary>ComposedTemplate is used to provide information about how the composed resource should be processed.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecResources
 {
     /// <summary>Base is the target resource that the patches will be applied on.</summary>
@@ -1695,6 +1797,7 @@ public partial class V1CompositionSpecResources
 }
 
 /// <summary>CompositionSpec specifies desired state of a composition.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpec
 {
     /// <summary>CompositeTypeRef specifies the type of composite resource that this composition is compatible with.</summary>
@@ -1731,8 +1834,9 @@ public partial class V1CompositionSpec
     public string? WriteConnectionSecretsToNamespace { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>A Composition defines a collection of managed resources or functions that Crossplane uses to create and manage new composite resources.   Read the Crossplane documentation for [more information about Compositions](https://docs.crossplane.io/latest/concepts/compositions).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1Composition : IKubernetesObject<V1ObjectMeta>, ISpec<V1CompositionSpec>
 {
     public const string KubeApiVersion = "v1";

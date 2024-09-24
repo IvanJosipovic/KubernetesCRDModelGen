@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.servicedirectory.cnrm.cloud.google.com;
 /// <summary>The ServiceDirectoryNamespace that this service belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceDirectoryServiceSpecNamespaceRef
 {
     /// <summary>Allowed value: The `name` field of a `ServiceDirectoryNamespace` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1ServiceDirectoryServiceSpecNamespaceRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceDirectoryServiceSpec
 {
     /// <summary>The ServiceDirectoryNamespace that this service belongs to.</summary>
@@ -37,6 +39,7 @@ public partial class V1beta1ServiceDirectoryServiceSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceDirectoryServiceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -61,6 +64,7 @@ public partial class V1beta1ServiceDirectoryServiceStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceDirectoryServiceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -76,8 +80,9 @@ public partial class V1beta1ServiceDirectoryServiceStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ServiceDirectoryService : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ServiceDirectoryServiceSpec>, IStatus<V1beta1ServiceDirectoryServiceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

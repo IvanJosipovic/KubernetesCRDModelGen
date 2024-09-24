@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeOrganizationSecurityPolicySpec
 {
     /// <summary>A textual description for the organization security policy.</summary>
@@ -33,6 +34,7 @@ public partial class V1alpha1ComputeOrganizationSecurityPolicySpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeOrganizationSecurityPolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -57,6 +59,7 @@ public partial class V1alpha1ComputeOrganizationSecurityPolicyStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeOrganizationSecurityPolicyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -76,8 +79,9 @@ public partial class V1alpha1ComputeOrganizationSecurityPolicyStatus
     public string? PolicyId { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1ComputeOrganizationSecurityPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputeOrganizationSecurityPolicySpec>, IStatus<V1alpha1ComputeOrganizationSecurityPolicyStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

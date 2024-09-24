@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.synapse.azure.com;
 /// <summary>Storage version of v1api20210601.AutoPauseProperties Auto-pausing properties of a Big Data pool powered by Apache Spark</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolSpecAutoPause
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -25,6 +26,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolSpecAutoPause
 }
 
 /// <summary>Storage version of v1api20210601.AutoScaleProperties Auto-scaling properties of a Big Data pool powered by Apache Spark</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolSpecAutoScale
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -45,6 +47,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolSpecAutoScale
 }
 
 /// <summary>Storage version of v1api20210601.LibraryInfo Library/package information of a Big Data pool powered by Apache Spark</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolSpecCustomLibraries
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -69,6 +72,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolSpecCustomLibrarie
 }
 
 /// <summary>Storage version of v1api20210601.DynamicExecutorAllocation Dynamic Executor Allocation Properties</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolSpecDynamicExecutorAllocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -89,6 +93,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolSpecDynamicExecuto
 }
 
 /// <summary>Storage version of v1api20210601.LibraryRequirements Library requirements for a Big Data pool powered by Apache Spark</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolSpecLibraryRequirements
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -105,6 +110,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolSpecLibraryRequire
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a synapse.azure.com/Workspace resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolSpecOwner
 {
     /// <summary></summary>
@@ -117,6 +123,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolSpecOwner
 }
 
 /// <summary>Storage version of v1api20210601.SparkConfigProperties SparkConfig Properties for a Big Data pool powered by Apache Spark</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolSpecSparkConfigProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -137,6 +144,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolSpecSparkConfigPro
 }
 
 /// <summary>Storage version of v1api20210601.Workspaces_BigDataPool_Spec</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -233,6 +241,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolSpec
 }
 
 /// <summary>Storage version of v1api20210601.AutoPauseProperties_STATUS Auto-pausing properties of a Big Data pool powered by Apache Spark</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolStatusAutoPause
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -249,6 +258,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolStatusAutoPause
 }
 
 /// <summary>Storage version of v1api20210601.AutoScaleProperties_STATUS Auto-scaling properties of a Big Data pool powered by Apache Spark</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolStatusAutoScale
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -269,6 +279,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolStatusAutoScale
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -301,6 +312,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolStatusConditions
 }
 
 /// <summary>Storage version of v1api20210601.LibraryInfo_STATUS Library/package information of a Big Data pool powered by Apache Spark</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolStatusCustomLibraries
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -337,6 +349,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolStatusCustomLibrar
 }
 
 /// <summary>Storage version of v1api20210601.DynamicExecutorAllocation_STATUS Dynamic Executor Allocation Properties</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolStatusDynamicExecutorAllocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -357,6 +370,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolStatusDynamicExecu
 }
 
 /// <summary>Storage version of v1api20210601.LibraryRequirements_STATUS Library requirements for a Big Data pool powered by Apache Spark</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolStatusLibraryRequirements
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -377,6 +391,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolStatusLibraryRequi
 }
 
 /// <summary>Storage version of v1api20210601.SparkConfigProperties_STATUS SparkConfig Properties for a Big Data pool powered by Apache Spark</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolStatusSparkConfigProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -401,6 +416,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolStatusSparkConfigP
 }
 
 /// <summary>Storage version of v1api20210601.Workspaces_BigDataPool_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -508,8 +524,9 @@ public partial class V1api20210601storageWorkspacesBigDataPoolStatus
     public string? Type { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Storage version of v1api20210601.WorkspacesBigDataPool Generator information: - Generated from: /synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/bigDataPool.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}/bigDataPools/{bigDataPoolName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1api20210601storageWorkspacesBigDataPool : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20210601storageWorkspacesBigDataPoolSpec>, IStatus<V1api20210601storageWorkspacesBigDataPoolStatus>
 {
     public const string KubeApiVersion = "v1api20210601storage";

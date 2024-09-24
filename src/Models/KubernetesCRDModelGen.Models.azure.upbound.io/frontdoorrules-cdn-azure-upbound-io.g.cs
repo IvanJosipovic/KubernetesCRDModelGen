@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cdn.azure.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorRuleSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1FrontdoorRuleSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderActionsRequestHeaderAction
 {
     /// <summary>The action to be taken on the specified header_name. Possible values include Append, Overwrite or Delete.</summary>
@@ -35,6 +37,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderActionsRequestHeaderActi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderActionsResponseHeaderAction
 {
     /// <summary>The action to be taken on the specified header_name. Possible values include Append, Overwrite or Delete.</summary>
@@ -50,6 +53,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderActionsResponseHeaderAct
     public string? Value { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorRuleSpecForProviderActionsRouteConfigurationOverrideActionCdnFrontdoorOriginGroupIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -60,6 +64,7 @@ public enum V1beta1FrontdoorRuleSpecForProviderActionsRouteConfigurationOverride
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorRuleSpecForProviderActionsRouteConfigurationOverrideActionCdnFrontdoorOriginGroupIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -71,6 +76,7 @@ public enum V1beta1FrontdoorRuleSpecForProviderActionsRouteConfigurationOverride
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderActionsRouteConfigurationOverrideActionCdnFrontdoorOriginGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -85,6 +91,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderActionsRouteConfiguratio
 }
 
 /// <summary>Reference to a FrontdoorOriginGroup in cdn to populate cdnFrontdoorOriginGroupId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderActionsRouteConfigurationOverrideActionCdnFrontdoorOriginGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -96,6 +103,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderActionsRouteConfiguratio
     public V1beta1FrontdoorRuleSpecForProviderActionsRouteConfigurationOverrideActionCdnFrontdoorOriginGroupIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorRuleSpecForProviderActionsRouteConfigurationOverrideActionCdnFrontdoorOriginGroupIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -106,6 +114,7 @@ public enum V1beta1FrontdoorRuleSpecForProviderActionsRouteConfigurationOverride
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorRuleSpecForProviderActionsRouteConfigurationOverrideActionCdnFrontdoorOriginGroupIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -117,6 +126,7 @@ public enum V1beta1FrontdoorRuleSpecForProviderActionsRouteConfigurationOverride
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderActionsRouteConfigurationOverrideActionCdnFrontdoorOriginGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -131,6 +141,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderActionsRouteConfiguratio
 }
 
 /// <summary>Selector for a FrontdoorOriginGroup in cdn to populate cdnFrontdoorOriginGroupId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderActionsRouteConfigurationOverrideActionCdnFrontdoorOriginGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -147,6 +158,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderActionsRouteConfiguratio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderActionsRouteConfigurationOverrideAction
 {
     /// <summary>HonorOrigin the Front Door will always honor origin response header directive. If the origin directive is missing, Front Door will cache contents anywhere from 1 to 3 days. OverrideAlways the TTL value returned from your Front Door Origin is overwritten with the value specified in the action. This behavior will only be applied if the response is cacheable. OverrideIfOriginMissing if no TTL value gets returned from your Front Door Origin, the rule sets the TTL to the value specified in the action. This behavior will only be applied if the response is cacheable. Disabled the Front Door will not cache the response contents, irrespective of Front Door Origin response directives. Possible values include HonorOrigin, OverrideAlways, OverrideIfOriginMissing or Disabled.</summary>
@@ -187,6 +199,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderActionsRouteConfiguratio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderActionsUrlRedirectAction
 {
     /// <summary>The fragment to use in the redirect. The value must be a string between 0 and 1024 characters in length, leave blank to preserve the incoming fragment. Defaults to "".</summary>
@@ -215,6 +228,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderActionsUrlRedirectAction
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderActionsUrlRewriteAction
 {
     /// <summary>The destination path to use in the rewrite. The destination path overwrites the source pattern.</summary>
@@ -231,6 +245,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderActionsUrlRewriteAction
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderActions
 {
     /// <summary>A request_header_action block as defined below.</summary>
@@ -254,6 +269,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderActions
     public IList<V1beta1FrontdoorRuleSpecForProviderActionsUrlRewriteAction>? UrlRewriteAction { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorRuleSpecForProviderCdnFrontdoorRuleSetIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -264,6 +280,7 @@ public enum V1beta1FrontdoorRuleSpecForProviderCdnFrontdoorRuleSetIdRefPolicyRes
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorRuleSpecForProviderCdnFrontdoorRuleSetIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -275,6 +292,7 @@ public enum V1beta1FrontdoorRuleSpecForProviderCdnFrontdoorRuleSetIdRefPolicyRes
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderCdnFrontdoorRuleSetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -289,6 +307,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderCdnFrontdoorRuleSetIdRef
 }
 
 /// <summary>Reference to a FrontdoorRuleSet in cdn to populate cdnFrontdoorRuleSetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderCdnFrontdoorRuleSetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -300,6 +319,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderCdnFrontdoorRuleSetIdRef
     public V1beta1FrontdoorRuleSpecForProviderCdnFrontdoorRuleSetIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorRuleSpecForProviderCdnFrontdoorRuleSetIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -310,6 +330,7 @@ public enum V1beta1FrontdoorRuleSpecForProviderCdnFrontdoorRuleSetIdSelectorPoli
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorRuleSpecForProviderCdnFrontdoorRuleSetIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -321,6 +342,7 @@ public enum V1beta1FrontdoorRuleSpecForProviderCdnFrontdoorRuleSetIdSelectorPoli
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderCdnFrontdoorRuleSetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -335,6 +357,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderCdnFrontdoorRuleSetIdSel
 }
 
 /// <summary>Selector for a FrontdoorRuleSet in cdn to populate cdnFrontdoorRuleSetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderCdnFrontdoorRuleSetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -351,6 +374,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderCdnFrontdoorRuleSetIdSel
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsClientPortCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -367,6 +391,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsClientPortCond
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsCookiesCondition
 {
     /// <summary>A string value representing the name of the cookie.</summary>
@@ -391,6 +416,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsCookiesConditi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsHostNameCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -411,6 +437,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsHostNameCondit
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsHttpVersionCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -427,6 +454,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsHttpVersionCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsIsDeviceCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -443,6 +471,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsIsDeviceCondit
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsPostArgsCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -467,6 +496,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsPostArgsCondit
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsQueryStringCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -487,6 +517,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsQueryStringCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsRemoteAddressCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -503,6 +534,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsRemoteAddressC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsRequestBodyCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -523,6 +555,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsRequestBodyCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsRequestHeaderCondition
 {
     /// <summary>The name of the header to modify.</summary>
@@ -547,6 +580,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsRequestHeaderC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsRequestMethodCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -563,6 +597,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsRequestMethodC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsRequestSchemeCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -579,6 +614,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsRequestSchemeC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsRequestUriCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -599,6 +635,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsRequestUriCond
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsServerPortCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -615,6 +652,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsServerPortCond
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsSocketAddressCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -631,6 +669,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsSocketAddressC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsSslProtocolCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -647,6 +686,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsSslProtocolCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsUrlFileExtensionCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -667,6 +707,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsUrlFileExtensi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsUrlFilenameCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -687,6 +728,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsUrlFilenameCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsUrlPathCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -707,6 +749,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsUrlPathConditi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditions
 {
     /// <summary>A client_port_condition block as defined below.</summary>
@@ -787,6 +830,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProvider
 {
     /// <summary>An actions block as defined below.</summary>
@@ -819,6 +863,7 @@ public partial class V1beta1FrontdoorRuleSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderActionsRequestHeaderAction
 {
     /// <summary>The action to be taken on the specified header_name. Possible values include Append, Overwrite or Delete.</summary>
@@ -835,6 +880,7 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderActionsRequestHeaderAct
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderActionsResponseHeaderAction
 {
     /// <summary>The action to be taken on the specified header_name. Possible values include Append, Overwrite or Delete.</summary>
@@ -850,6 +896,7 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderActionsResponseHeaderAc
     public string? Value { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorRuleSpecInitProviderActionsRouteConfigurationOverrideActionCdnFrontdoorOriginGroupIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -860,6 +907,7 @@ public enum V1beta1FrontdoorRuleSpecInitProviderActionsRouteConfigurationOverrid
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorRuleSpecInitProviderActionsRouteConfigurationOverrideActionCdnFrontdoorOriginGroupIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -871,6 +919,7 @@ public enum V1beta1FrontdoorRuleSpecInitProviderActionsRouteConfigurationOverrid
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderActionsRouteConfigurationOverrideActionCdnFrontdoorOriginGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -885,6 +934,7 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderActionsRouteConfigurati
 }
 
 /// <summary>Reference to a FrontdoorOriginGroup in cdn to populate cdnFrontdoorOriginGroupId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderActionsRouteConfigurationOverrideActionCdnFrontdoorOriginGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -896,6 +946,7 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderActionsRouteConfigurati
     public V1beta1FrontdoorRuleSpecInitProviderActionsRouteConfigurationOverrideActionCdnFrontdoorOriginGroupIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorRuleSpecInitProviderActionsRouteConfigurationOverrideActionCdnFrontdoorOriginGroupIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -906,6 +957,7 @@ public enum V1beta1FrontdoorRuleSpecInitProviderActionsRouteConfigurationOverrid
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorRuleSpecInitProviderActionsRouteConfigurationOverrideActionCdnFrontdoorOriginGroupIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -917,6 +969,7 @@ public enum V1beta1FrontdoorRuleSpecInitProviderActionsRouteConfigurationOverrid
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderActionsRouteConfigurationOverrideActionCdnFrontdoorOriginGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -931,6 +984,7 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderActionsRouteConfigurati
 }
 
 /// <summary>Selector for a FrontdoorOriginGroup in cdn to populate cdnFrontdoorOriginGroupId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderActionsRouteConfigurationOverrideActionCdnFrontdoorOriginGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -947,6 +1001,7 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderActionsRouteConfigurati
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderActionsRouteConfigurationOverrideAction
 {
     /// <summary>HonorOrigin the Front Door will always honor origin response header directive. If the origin directive is missing, Front Door will cache contents anywhere from 1 to 3 days. OverrideAlways the TTL value returned from your Front Door Origin is overwritten with the value specified in the action. This behavior will only be applied if the response is cacheable. OverrideIfOriginMissing if no TTL value gets returned from your Front Door Origin, the rule sets the TTL to the value specified in the action. This behavior will only be applied if the response is cacheable. Disabled the Front Door will not cache the response contents, irrespective of Front Door Origin response directives. Possible values include HonorOrigin, OverrideAlways, OverrideIfOriginMissing or Disabled.</summary>
@@ -987,6 +1042,7 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderActionsRouteConfigurati
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderActionsUrlRedirectAction
 {
     /// <summary>The fragment to use in the redirect. The value must be a string between 0 and 1024 characters in length, leave blank to preserve the incoming fragment. Defaults to "".</summary>
@@ -1015,6 +1071,7 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderActionsUrlRedirectActio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderActionsUrlRewriteAction
 {
     /// <summary>The destination path to use in the rewrite. The destination path overwrites the source pattern.</summary>
@@ -1031,6 +1088,7 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderActionsUrlRewriteAction
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderActions
 {
     /// <summary>A request_header_action block as defined below.</summary>
@@ -1055,6 +1113,7 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderActions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsClientPortCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -1071,6 +1130,7 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsClientPortCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsCookiesCondition
 {
     /// <summary>A string value representing the name of the cookie.</summary>
@@ -1095,6 +1155,7 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsCookiesCondit
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsHostNameCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -1115,6 +1176,7 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsHostNameCondi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsHttpVersionCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -1131,6 +1193,7 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsHttpVersionCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsIsDeviceCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -1147,6 +1210,7 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsIsDeviceCondi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsPostArgsCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -1171,6 +1235,7 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsPostArgsCondi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsQueryStringCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -1191,6 +1256,7 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsQueryStringCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsRemoteAddressCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -1207,6 +1273,7 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsRemoteAddress
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsRequestBodyCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -1227,6 +1294,7 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsRequestBodyCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsRequestHeaderCondition
 {
     /// <summary>The name of the header to modify.</summary>
@@ -1251,6 +1319,7 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsRequestHeader
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsRequestMethodCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -1267,6 +1336,7 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsRequestMethod
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsRequestSchemeCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -1283,6 +1353,7 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsRequestScheme
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsRequestUriCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -1303,6 +1374,7 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsRequestUriCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsServerPortCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -1319,6 +1391,7 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsServerPortCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsSocketAddressCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -1335,6 +1408,7 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsSocketAddress
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsSslProtocolCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -1351,6 +1425,7 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsSslProtocolCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsUrlFileExtensionCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -1371,6 +1446,7 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsUrlFileExtens
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsUrlFilenameCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -1391,6 +1467,7 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsUrlFilenameCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsUrlPathCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -1411,6 +1488,7 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsUrlPathCondit
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditions
 {
     /// <summary>A client_port_condition block as defined below.</summary>
@@ -1491,6 +1569,7 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditions
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProvider
 {
     /// <summary>An actions block as defined below.</summary>
@@ -1510,6 +1589,7 @@ public partial class V1beta1FrontdoorRuleSpecInitProvider
     public double? Order { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorRuleSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -1532,6 +1612,7 @@ public enum V1beta1FrontdoorRuleSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorRuleSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1542,6 +1623,7 @@ public enum V1beta1FrontdoorRuleSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorRuleSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1553,6 +1635,7 @@ public enum V1beta1FrontdoorRuleSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1567,6 +1650,7 @@ public partial class V1beta1FrontdoorRuleSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1578,6 +1662,7 @@ public partial class V1beta1FrontdoorRuleSpecProviderConfigRef
     public V1beta1FrontdoorRuleSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorRuleSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1588,6 +1673,7 @@ public enum V1beta1FrontdoorRuleSpecPublishConnectionDetailsToConfigRefPolicyRes
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorRuleSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1599,6 +1685,7 @@ public enum V1beta1FrontdoorRuleSpecPublishConnectionDetailsToConfigRefPolicyRes
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1613,6 +1700,7 @@ public partial class V1beta1FrontdoorRuleSpecPublishConnectionDetailsToConfigRef
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1625,6 +1713,7 @@ public partial class V1beta1FrontdoorRuleSpecPublishConnectionDetailsToConfigRef
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1641,6 +1730,7 @@ public partial class V1beta1FrontdoorRuleSpecPublishConnectionDetailsToMetadata
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1657,6 +1747,7 @@ public partial class V1beta1FrontdoorRuleSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1669,6 +1760,7 @@ public partial class V1beta1FrontdoorRuleSpecWriteConnectionSecretToRef
 }
 
 /// <summary>FrontdoorRuleSpec defines the desired state of FrontdoorRule</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1702,6 +1794,7 @@ public partial class V1beta1FrontdoorRuleSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderActionsRequestHeaderAction
 {
     /// <summary>The action to be taken on the specified header_name. Possible values include Append, Overwrite or Delete.</summary>
@@ -1718,6 +1811,7 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderActionsRequestHeaderAct
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderActionsResponseHeaderAction
 {
     /// <summary>The action to be taken on the specified header_name. Possible values include Append, Overwrite or Delete.</summary>
@@ -1734,6 +1828,7 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderActionsResponseHeaderAc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderActionsRouteConfigurationOverrideAction
 {
     /// <summary>HonorOrigin the Front Door will always honor origin response header directive. If the origin directive is missing, Front Door will cache contents anywhere from 1 to 3 days. OverrideAlways the TTL value returned from your Front Door Origin is overwritten with the value specified in the action. This behavior will only be applied if the response is cacheable. OverrideIfOriginMissing if no TTL value gets returned from your Front Door Origin, the rule sets the TTL to the value specified in the action. This behavior will only be applied if the response is cacheable. Disabled the Front Door will not cache the response contents, irrespective of Front Door Origin response directives. Possible values include HonorOrigin, OverrideAlways, OverrideIfOriginMissing or Disabled.</summary>
@@ -1766,6 +1861,7 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderActionsRouteConfigurati
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderActionsUrlRedirectAction
 {
     /// <summary>The fragment to use in the redirect. The value must be a string between 0 and 1024 characters in length, leave blank to preserve the incoming fragment. Defaults to "".</summary>
@@ -1794,6 +1890,7 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderActionsUrlRedirectActio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderActionsUrlRewriteAction
 {
     /// <summary>The destination path to use in the rewrite. The destination path overwrites the source pattern.</summary>
@@ -1810,6 +1907,7 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderActionsUrlRewriteAction
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderActions
 {
     /// <summary>A request_header_action block as defined below.</summary>
@@ -1834,6 +1932,7 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderActions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsClientPortCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -1850,6 +1949,7 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsClientPortCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsCookiesCondition
 {
     /// <summary>A string value representing the name of the cookie.</summary>
@@ -1874,6 +1974,7 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsCookiesCondit
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsHostNameCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -1894,6 +1995,7 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsHostNameCondi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsHttpVersionCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -1910,6 +2012,7 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsHttpVersionCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsIsDeviceCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -1926,6 +2029,7 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsIsDeviceCondi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsPostArgsCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -1950,6 +2054,7 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsPostArgsCondi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsQueryStringCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -1970,6 +2075,7 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsQueryStringCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsRemoteAddressCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -1986,6 +2092,7 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsRemoteAddress
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsRequestBodyCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -2006,6 +2113,7 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsRequestBodyCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsRequestHeaderCondition
 {
     /// <summary>The name of the header to modify.</summary>
@@ -2030,6 +2138,7 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsRequestHeader
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsRequestMethodCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -2046,6 +2155,7 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsRequestMethod
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsRequestSchemeCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -2062,6 +2172,7 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsRequestScheme
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsRequestUriCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -2082,6 +2193,7 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsRequestUriCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsServerPortCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -2098,6 +2210,7 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsServerPortCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsSocketAddressCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -2114,6 +2227,7 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsSocketAddress
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsSslProtocolCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -2130,6 +2244,7 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsSslProtocolCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsUrlFileExtensionCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -2150,6 +2265,7 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsUrlFileExtens
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsUrlFilenameCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -2170,6 +2286,7 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsUrlFilenameCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsUrlPathCondition
 {
     /// <summary>One or more string or integer values(e.g. "1") representing the value of the request path to match. Don't include the leading slash (/). If multiple values are specified, they're evaluated using OR logic.</summary>
@@ -2190,6 +2307,7 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsUrlPathCondit
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditions
 {
     /// <summary>A client_port_condition block as defined below.</summary>
@@ -2270,6 +2388,7 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProvider
 {
     /// <summary>An actions block as defined below.</summary>
@@ -2302,6 +2421,7 @@ public partial class V1beta1FrontdoorRuleStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2330,6 +2450,7 @@ public partial class V1beta1FrontdoorRuleStatusConditions
 }
 
 /// <summary>FrontdoorRuleStatus defines the observed state of FrontdoorRule.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatus
 {
     /// <summary></summary>
@@ -2345,8 +2466,9 @@ public partial class V1beta1FrontdoorRuleStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>FrontdoorRule is the Schema for the FrontdoorRules API. Manages a Front Door (standard/premium) Rule.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1FrontdoorRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FrontdoorRuleSpec>, IStatus<V1beta1FrontdoorRuleStatus>
 {
     public const string KubeApiVersion = "v1beta1";

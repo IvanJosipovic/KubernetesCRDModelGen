@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudfront.aws.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1DistributionSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderCustomErrorResponse
 {
     /// <summary>Minimum amount of time you want HTTP error codes to stay in CloudFront caches before CloudFront queries your origin to see whether the object has been updated.</summary>
@@ -39,6 +41,7 @@ public partial class V1beta1DistributionSpecForProviderCustomErrorResponse
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderDefaultCacheBehaviorForwardedValuesCookies
 {
     /// <summary>Whether you want CloudFront to forward cookies to the origin that is associated with this cache behavior. You can specify all, none or whitelist. If whitelist, you must include the subsequent whitelisted_names.</summary>
@@ -51,6 +54,7 @@ public partial class V1beta1DistributionSpecForProviderDefaultCacheBehaviorForwa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderDefaultCacheBehaviorForwardedValues
 {
     /// <summary>The forwarded values cookies that specifies how CloudFront handles cookies (maximum one).</summary>
@@ -71,6 +75,7 @@ public partial class V1beta1DistributionSpecForProviderDefaultCacheBehaviorForwa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderDefaultCacheBehaviorFunctionAssociation
 {
     /// <summary>Specific event to trigger this function. Valid values: viewer-request, origin-request, viewer-response, origin-response.</summary>
@@ -83,6 +88,7 @@ public partial class V1beta1DistributionSpecForProviderDefaultCacheBehaviorFunct
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderDefaultCacheBehaviorLambdaFunctionAssociation
 {
     /// <summary>Specific event to trigger this function. Valid values: viewer-request, origin-request, viewer-response, origin-response.</summary>
@@ -99,6 +105,7 @@ public partial class V1beta1DistributionSpecForProviderDefaultCacheBehaviorLambd
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderDefaultCacheBehavior
 {
     /// <summary>Controls which HTTP methods CloudFront processes and forwards to your Amazon S3 bucket or your custom origin.</summary>
@@ -179,6 +186,7 @@ public partial class V1beta1DistributionSpecForProviderDefaultCacheBehavior
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderLoggingConfig
 {
     /// <summary>Amazon S3 bucket to store the access logs in, for example, myawslogbucket.s3.amazonaws.com.</summary>
@@ -195,6 +203,7 @@ public partial class V1beta1DistributionSpecForProviderLoggingConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorForwardedValuesCookies
 {
     /// <summary>Whether you want CloudFront to forward cookies to the origin that is associated with this cache behavior. You can specify all, none or whitelist. If whitelist, you must include the subsequent whitelisted_names.</summary>
@@ -207,6 +216,7 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorForwa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorForwardedValues
 {
     /// <summary>The forwarded values cookies that specifies how CloudFront handles cookies (maximum one).</summary>
@@ -226,6 +236,7 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorForwa
     public IList<string>? QueryStringCacheKeys { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssociationFunctionArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -236,6 +247,7 @@ public enum V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssoci
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssociationFunctionArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -247,6 +259,7 @@ public enum V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssoci
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssociationFunctionArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -261,6 +274,7 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunct
 }
 
 /// <summary>Reference to a Function in cloudfront to populate functionArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssociationFunctionArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -272,6 +286,7 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunct
     public V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssociationFunctionArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssociationFunctionArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -282,6 +297,7 @@ public enum V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssoci
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssociationFunctionArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -293,6 +309,7 @@ public enum V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssoci
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssociationFunctionArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -307,6 +324,7 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunct
 }
 
 /// <summary>Selector for a Function in cloudfront to populate functionArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssociationFunctionArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -323,6 +341,7 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunct
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssociation
 {
     /// <summary>Specific event to trigger this function. Valid values: viewer-request, origin-request, viewer-response, origin-response.</summary>
@@ -342,6 +361,7 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunct
     public V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssociationFunctionArnSelector? FunctionArnSelector { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -352,6 +372,7 @@ public enum V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunction
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -363,6 +384,7 @@ public enum V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunction
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -377,6 +399,7 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambd
 }
 
 /// <summary>Reference to a Function in lambda to populate lambdaArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -388,6 +411,7 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambd
     public V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -398,6 +422,7 @@ public enum V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunction
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -409,6 +434,7 @@ public enum V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunction
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -423,6 +449,7 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambd
 }
 
 /// <summary>Selector for a Function in lambda to populate lambdaArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -439,6 +466,7 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambd
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunctionAssociation
 {
     /// <summary>Specific event to trigger this function. Valid values: viewer-request, origin-request, viewer-response, origin-response.</summary>
@@ -463,6 +491,7 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambd
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehavior
 {
     /// <summary>Controls which HTTP methods CloudFront processes and forwards to your Amazon S3 bucket or your custom origin.</summary>
@@ -547,6 +576,7 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehavior
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOriginCustomHeader
 {
     /// <summary></summary>
@@ -559,6 +589,7 @@ public partial class V1beta1DistributionSpecForProviderOriginCustomHeader
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOriginCustomOriginConfig
 {
     /// <summary>HTTP port the custom origin listens on.</summary>
@@ -586,6 +617,7 @@ public partial class V1beta1DistributionSpecForProviderOriginCustomOriginConfig
     public IList<string>? OriginSslProtocols { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecForProviderOriginOriginAccessControlIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -596,6 +628,7 @@ public enum V1beta1DistributionSpecForProviderOriginOriginAccessControlIdRefPoli
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecForProviderOriginOriginAccessControlIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -607,6 +640,7 @@ public enum V1beta1DistributionSpecForProviderOriginOriginAccessControlIdRefPoli
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOriginOriginAccessControlIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -621,6 +655,7 @@ public partial class V1beta1DistributionSpecForProviderOriginOriginAccessControl
 }
 
 /// <summary>Reference to a OriginAccessControl in cloudfront to populate originAccessControlId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOriginOriginAccessControlIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -632,6 +667,7 @@ public partial class V1beta1DistributionSpecForProviderOriginOriginAccessControl
     public V1beta1DistributionSpecForProviderOriginOriginAccessControlIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecForProviderOriginOriginAccessControlIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -642,6 +678,7 @@ public enum V1beta1DistributionSpecForProviderOriginOriginAccessControlIdSelecto
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecForProviderOriginOriginAccessControlIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -653,6 +690,7 @@ public enum V1beta1DistributionSpecForProviderOriginOriginAccessControlIdSelecto
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOriginOriginAccessControlIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -667,6 +705,7 @@ public partial class V1beta1DistributionSpecForProviderOriginOriginAccessControl
 }
 
 /// <summary>Selector for a OriginAccessControl in cloudfront to populate originAccessControlId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOriginOriginAccessControlIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -683,6 +722,7 @@ public partial class V1beta1DistributionSpecForProviderOriginOriginAccessControl
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOriginOriginShield
 {
     /// <summary>Whether the distribution is enabled to accept end user requests for content.</summary>
@@ -694,6 +734,7 @@ public partial class V1beta1DistributionSpecForProviderOriginOriginShield
     public string? OriginShieldRegion { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecForProviderOriginS3OriginConfigOriginAccessIdentityRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -704,6 +745,7 @@ public enum V1beta1DistributionSpecForProviderOriginS3OriginConfigOriginAccessId
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecForProviderOriginS3OriginConfigOriginAccessIdentityRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -715,6 +757,7 @@ public enum V1beta1DistributionSpecForProviderOriginS3OriginConfigOriginAccessId
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOriginS3OriginConfigOriginAccessIdentityRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -729,6 +772,7 @@ public partial class V1beta1DistributionSpecForProviderOriginS3OriginConfigOrigi
 }
 
 /// <summary>Reference to a OriginAccessIdentity in cloudfront to populate originAccessIdentity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOriginS3OriginConfigOriginAccessIdentityRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -740,6 +784,7 @@ public partial class V1beta1DistributionSpecForProviderOriginS3OriginConfigOrigi
     public V1beta1DistributionSpecForProviderOriginS3OriginConfigOriginAccessIdentityRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecForProviderOriginS3OriginConfigOriginAccessIdentitySelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -750,6 +795,7 @@ public enum V1beta1DistributionSpecForProviderOriginS3OriginConfigOriginAccessId
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecForProviderOriginS3OriginConfigOriginAccessIdentitySelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -761,6 +807,7 @@ public enum V1beta1DistributionSpecForProviderOriginS3OriginConfigOriginAccessId
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOriginS3OriginConfigOriginAccessIdentitySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -775,6 +822,7 @@ public partial class V1beta1DistributionSpecForProviderOriginS3OriginConfigOrigi
 }
 
 /// <summary>Selector for a OriginAccessIdentity in cloudfront to populate originAccessIdentity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOriginS3OriginConfigOriginAccessIdentitySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -791,6 +839,7 @@ public partial class V1beta1DistributionSpecForProviderOriginS3OriginConfigOrigi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOriginS3OriginConfig
 {
     /// <summary>The CloudFront origin access identity to associate with the origin.</summary>
@@ -807,6 +856,7 @@ public partial class V1beta1DistributionSpecForProviderOriginS3OriginConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOrigin
 {
     /// <summary>Number of times that CloudFront attempts to connect to the origin. Must be between 1-3. Defaults to 3.</summary>
@@ -859,6 +909,7 @@ public partial class V1beta1DistributionSpecForProviderOrigin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOriginGroupFailoverCriteria
 {
     /// <summary>List of HTTP status codes for the origin group.</summary>
@@ -867,6 +918,7 @@ public partial class V1beta1DistributionSpecForProviderOriginGroupFailoverCriter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOriginGroupMember
 {
     /// <summary>Unique identifier for the origin.</summary>
@@ -875,6 +927,7 @@ public partial class V1beta1DistributionSpecForProviderOriginGroupMember
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOriginGroup
 {
     /// <summary>The failover criteria for when to failover to the secondary origin.</summary>
@@ -891,6 +944,7 @@ public partial class V1beta1DistributionSpecForProviderOriginGroup
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderRestrictionsGeoRestriction
 {
     /// <summary>ISO 3166-1-alpha-2 codes for which you want CloudFront either to distribute your content (whitelist) or not distribute your content (blacklist). If the type is specified as none an empty array can be used.</summary>
@@ -903,6 +957,7 @@ public partial class V1beta1DistributionSpecForProviderRestrictionsGeoRestrictio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderRestrictions
 {
     /// <summary></summary>
@@ -911,6 +966,7 @@ public partial class V1beta1DistributionSpecForProviderRestrictions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderViewerCertificate
 {
     /// <summary>ARN of the AWS Certificate Manager certificate that you wish to use with this distribution. Specify this, cloudfront_default_certificate, or iam_certificate_id.  The ACM certificate must be in  US-EAST-1.</summary>
@@ -935,6 +991,7 @@ public partial class V1beta1DistributionSpecForProviderViewerCertificate
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProvider
 {
     /// <summary>Extra CNAMEs (alternate domain names), if any, for this distribution.</summary>
@@ -1027,6 +1084,7 @@ public partial class V1beta1DistributionSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderCustomErrorResponse
 {
     /// <summary>Minimum amount of time you want HTTP error codes to stay in CloudFront caches before CloudFront queries your origin to see whether the object has been updated.</summary>
@@ -1047,6 +1105,7 @@ public partial class V1beta1DistributionSpecInitProviderCustomErrorResponse
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehaviorForwardedValuesCookies
 {
     /// <summary>Whether you want CloudFront to forward cookies to the origin that is associated with this cache behavior. You can specify all, none or whitelist. If whitelist, you must include the subsequent whitelisted_names.</summary>
@@ -1059,6 +1118,7 @@ public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehaviorForw
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehaviorForwardedValues
 {
     /// <summary>The forwarded values cookies that specifies how CloudFront handles cookies (maximum one).</summary>
@@ -1079,6 +1139,7 @@ public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehaviorForw
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehaviorFunctionAssociation
 {
     /// <summary>Specific event to trigger this function. Valid values: viewer-request, origin-request, viewer-response, origin-response.</summary>
@@ -1091,6 +1152,7 @@ public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehaviorFunc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehaviorLambdaFunctionAssociation
 {
     /// <summary>Specific event to trigger this function. Valid values: viewer-request, origin-request, viewer-response, origin-response.</summary>
@@ -1107,6 +1169,7 @@ public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehaviorLamb
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehavior
 {
     /// <summary>Controls which HTTP methods CloudFront processes and forwards to your Amazon S3 bucket or your custom origin.</summary>
@@ -1187,6 +1250,7 @@ public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehavior
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderLoggingConfig
 {
     /// <summary>Amazon S3 bucket to store the access logs in, for example, myawslogbucket.s3.amazonaws.com.</summary>
@@ -1203,6 +1267,7 @@ public partial class V1beta1DistributionSpecInitProviderLoggingConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorForwardedValuesCookies
 {
     /// <summary>Whether you want CloudFront to forward cookies to the origin that is associated with this cache behavior. You can specify all, none or whitelist. If whitelist, you must include the subsequent whitelisted_names.</summary>
@@ -1215,6 +1280,7 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorForw
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorForwardedValues
 {
     /// <summary>The forwarded values cookies that specifies how CloudFront handles cookies (maximum one).</summary>
@@ -1234,6 +1300,7 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorForw
     public IList<string>? QueryStringCacheKeys { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssociationFunctionArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1244,6 +1311,7 @@ public enum V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssoc
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssociationFunctionArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1255,6 +1323,7 @@ public enum V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssoc
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssociationFunctionArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1269,6 +1338,7 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunc
 }
 
 /// <summary>Reference to a Function in cloudfront to populate functionArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssociationFunctionArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1280,6 +1350,7 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunc
     public V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssociationFunctionArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssociationFunctionArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1290,6 +1361,7 @@ public enum V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssoc
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssociationFunctionArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1301,6 +1373,7 @@ public enum V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssoc
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssociationFunctionArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1315,6 +1388,7 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunc
 }
 
 /// <summary>Selector for a Function in cloudfront to populate functionArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssociationFunctionArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1331,6 +1405,7 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssociation
 {
     /// <summary>Specific event to trigger this function. Valid values: viewer-request, origin-request, viewer-response, origin-response.</summary>
@@ -1350,6 +1425,7 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunc
     public V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssociationFunctionArnSelector? FunctionArnSelector { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1360,6 +1436,7 @@ public enum V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctio
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1371,6 +1448,7 @@ public enum V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctio
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1385,6 +1463,7 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLamb
 }
 
 /// <summary>Reference to a Function in lambda to populate lambdaArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1396,6 +1475,7 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLamb
     public V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1406,6 +1486,7 @@ public enum V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctio
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1417,6 +1498,7 @@ public enum V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctio
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1431,6 +1513,7 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLamb
 }
 
 /// <summary>Selector for a Function in lambda to populate lambdaArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1447,6 +1530,7 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLamb
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctionAssociation
 {
     /// <summary>Specific event to trigger this function. Valid values: viewer-request, origin-request, viewer-response, origin-response.</summary>
@@ -1471,6 +1555,7 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLamb
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehavior
 {
     /// <summary>Controls which HTTP methods CloudFront processes and forwards to your Amazon S3 bucket or your custom origin.</summary>
@@ -1555,6 +1640,7 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehavior
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOriginCustomHeader
 {
     /// <summary></summary>
@@ -1567,6 +1653,7 @@ public partial class V1beta1DistributionSpecInitProviderOriginCustomHeader
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOriginCustomOriginConfig
 {
     /// <summary>HTTP port the custom origin listens on.</summary>
@@ -1594,6 +1681,7 @@ public partial class V1beta1DistributionSpecInitProviderOriginCustomOriginConfig
     public IList<string>? OriginSslProtocols { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecInitProviderOriginOriginAccessControlIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1604,6 +1692,7 @@ public enum V1beta1DistributionSpecInitProviderOriginOriginAccessControlIdRefPol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecInitProviderOriginOriginAccessControlIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1615,6 +1704,7 @@ public enum V1beta1DistributionSpecInitProviderOriginOriginAccessControlIdRefPol
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOriginOriginAccessControlIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1629,6 +1719,7 @@ public partial class V1beta1DistributionSpecInitProviderOriginOriginAccessContro
 }
 
 /// <summary>Reference to a OriginAccessControl in cloudfront to populate originAccessControlId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOriginOriginAccessControlIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1640,6 +1731,7 @@ public partial class V1beta1DistributionSpecInitProviderOriginOriginAccessContro
     public V1beta1DistributionSpecInitProviderOriginOriginAccessControlIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecInitProviderOriginOriginAccessControlIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1650,6 +1742,7 @@ public enum V1beta1DistributionSpecInitProviderOriginOriginAccessControlIdSelect
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecInitProviderOriginOriginAccessControlIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1661,6 +1754,7 @@ public enum V1beta1DistributionSpecInitProviderOriginOriginAccessControlIdSelect
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOriginOriginAccessControlIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1675,6 +1769,7 @@ public partial class V1beta1DistributionSpecInitProviderOriginOriginAccessContro
 }
 
 /// <summary>Selector for a OriginAccessControl in cloudfront to populate originAccessControlId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOriginOriginAccessControlIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1691,6 +1786,7 @@ public partial class V1beta1DistributionSpecInitProviderOriginOriginAccessContro
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOriginOriginShield
 {
     /// <summary>Whether the distribution is enabled to accept end user requests for content.</summary>
@@ -1702,6 +1798,7 @@ public partial class V1beta1DistributionSpecInitProviderOriginOriginShield
     public string? OriginShieldRegion { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecInitProviderOriginS3OriginConfigOriginAccessIdentityRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1712,6 +1809,7 @@ public enum V1beta1DistributionSpecInitProviderOriginS3OriginConfigOriginAccessI
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecInitProviderOriginS3OriginConfigOriginAccessIdentityRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1723,6 +1821,7 @@ public enum V1beta1DistributionSpecInitProviderOriginS3OriginConfigOriginAccessI
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOriginS3OriginConfigOriginAccessIdentityRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1737,6 +1836,7 @@ public partial class V1beta1DistributionSpecInitProviderOriginS3OriginConfigOrig
 }
 
 /// <summary>Reference to a OriginAccessIdentity in cloudfront to populate originAccessIdentity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOriginS3OriginConfigOriginAccessIdentityRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1748,6 +1848,7 @@ public partial class V1beta1DistributionSpecInitProviderOriginS3OriginConfigOrig
     public V1beta1DistributionSpecInitProviderOriginS3OriginConfigOriginAccessIdentityRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecInitProviderOriginS3OriginConfigOriginAccessIdentitySelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1758,6 +1859,7 @@ public enum V1beta1DistributionSpecInitProviderOriginS3OriginConfigOriginAccessI
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecInitProviderOriginS3OriginConfigOriginAccessIdentitySelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1769,6 +1871,7 @@ public enum V1beta1DistributionSpecInitProviderOriginS3OriginConfigOriginAccessI
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOriginS3OriginConfigOriginAccessIdentitySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1783,6 +1886,7 @@ public partial class V1beta1DistributionSpecInitProviderOriginS3OriginConfigOrig
 }
 
 /// <summary>Selector for a OriginAccessIdentity in cloudfront to populate originAccessIdentity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOriginS3OriginConfigOriginAccessIdentitySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1799,6 +1903,7 @@ public partial class V1beta1DistributionSpecInitProviderOriginS3OriginConfigOrig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOriginS3OriginConfig
 {
     /// <summary>The CloudFront origin access identity to associate with the origin.</summary>
@@ -1815,6 +1920,7 @@ public partial class V1beta1DistributionSpecInitProviderOriginS3OriginConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOrigin
 {
     /// <summary>Number of times that CloudFront attempts to connect to the origin. Must be between 1-3. Defaults to 3.</summary>
@@ -1867,6 +1973,7 @@ public partial class V1beta1DistributionSpecInitProviderOrigin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOriginGroupFailoverCriteria
 {
     /// <summary>List of HTTP status codes for the origin group.</summary>
@@ -1875,6 +1982,7 @@ public partial class V1beta1DistributionSpecInitProviderOriginGroupFailoverCrite
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOriginGroupMember
 {
     /// <summary>Unique identifier for the origin.</summary>
@@ -1883,6 +1991,7 @@ public partial class V1beta1DistributionSpecInitProviderOriginGroupMember
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOriginGroup
 {
     /// <summary>The failover criteria for when to failover to the secondary origin.</summary>
@@ -1899,6 +2008,7 @@ public partial class V1beta1DistributionSpecInitProviderOriginGroup
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderRestrictionsGeoRestriction
 {
     /// <summary>ISO 3166-1-alpha-2 codes for which you want CloudFront either to distribute your content (whitelist) or not distribute your content (blacklist). If the type is specified as none an empty array can be used.</summary>
@@ -1911,6 +2021,7 @@ public partial class V1beta1DistributionSpecInitProviderRestrictionsGeoRestricti
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderRestrictions
 {
     /// <summary></summary>
@@ -1919,6 +2030,7 @@ public partial class V1beta1DistributionSpecInitProviderRestrictions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderViewerCertificate
 {
     /// <summary>ARN of the AWS Certificate Manager certificate that you wish to use with this distribution. Specify this, cloudfront_default_certificate, or iam_certificate_id.  The ACM certificate must be in  US-EAST-1.</summary>
@@ -1943,6 +2055,7 @@ public partial class V1beta1DistributionSpecInitProviderViewerCertificate
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProvider
 {
     /// <summary>Extra CNAMEs (alternate domain names), if any, for this distribution.</summary>
@@ -2030,6 +2143,7 @@ public partial class V1beta1DistributionSpecInitProvider
     public string? WebAclId { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -2052,6 +2166,7 @@ public enum V1beta1DistributionSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2062,6 +2177,7 @@ public enum V1beta1DistributionSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2073,6 +2189,7 @@ public enum V1beta1DistributionSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2087,6 +2204,7 @@ public partial class V1beta1DistributionSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2098,6 +2216,7 @@ public partial class V1beta1DistributionSpecProviderConfigRef
     public V1beta1DistributionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2108,6 +2227,7 @@ public enum V1beta1DistributionSpecPublishConnectionDetailsToConfigRefPolicyReso
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2119,6 +2239,7 @@ public enum V1beta1DistributionSpecPublishConnectionDetailsToConfigRefPolicyReso
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2133,6 +2254,7 @@ public partial class V1beta1DistributionSpecPublishConnectionDetailsToConfigRefP
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2145,6 +2267,7 @@ public partial class V1beta1DistributionSpecPublishConnectionDetailsToConfigRef
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -2161,6 +2284,7 @@ public partial class V1beta1DistributionSpecPublishConnectionDetailsToMetadata
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -2177,6 +2301,7 @@ public partial class V1beta1DistributionSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -2189,6 +2314,7 @@ public partial class V1beta1DistributionSpecWriteConnectionSecretToRef
 }
 
 /// <summary>DistributionSpec defines the desired state of Distribution</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -2222,6 +2348,7 @@ public partial class V1beta1DistributionSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderCustomErrorResponse
 {
     /// <summary>Minimum amount of time you want HTTP error codes to stay in CloudFront caches before CloudFront queries your origin to see whether the object has been updated.</summary>
@@ -2242,6 +2369,7 @@ public partial class V1beta1DistributionStatusAtProviderCustomErrorResponse
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehaviorForwardedValuesCookies
 {
     /// <summary>Whether you want CloudFront to forward cookies to the origin that is associated with this cache behavior. You can specify all, none or whitelist. If whitelist, you must include the subsequent whitelisted_names.</summary>
@@ -2254,6 +2382,7 @@ public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehaviorForw
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehaviorForwardedValues
 {
     /// <summary>The forwarded values cookies that specifies how CloudFront handles cookies (maximum one).</summary>
@@ -2274,6 +2403,7 @@ public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehaviorForw
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehaviorFunctionAssociation
 {
     /// <summary>Specific event to trigger this function. Valid values: viewer-request, origin-request, viewer-response, origin-response.</summary>
@@ -2286,6 +2416,7 @@ public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehaviorFunc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehaviorLambdaFunctionAssociation
 {
     /// <summary>Specific event to trigger this function. Valid values: viewer-request, origin-request, viewer-response, origin-response.</summary>
@@ -2302,6 +2433,7 @@ public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehaviorLamb
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehavior
 {
     /// <summary>Controls which HTTP methods CloudFront processes and forwards to your Amazon S3 bucket or your custom origin.</summary>
@@ -2382,6 +2514,7 @@ public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehavior
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderLoggingConfig
 {
     /// <summary>Amazon S3 bucket to store the access logs in, for example, myawslogbucket.s3.amazonaws.com.</summary>
@@ -2398,6 +2531,7 @@ public partial class V1beta1DistributionStatusAtProviderLoggingConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehaviorForwardedValuesCookies
 {
     /// <summary>Whether you want CloudFront to forward cookies to the origin that is associated with this cache behavior. You can specify all, none or whitelist. If whitelist, you must include the subsequent whitelisted_names.</summary>
@@ -2410,6 +2544,7 @@ public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehaviorForw
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehaviorForwardedValues
 {
     /// <summary>The forwarded values cookies that specifies how CloudFront handles cookies (maximum one).</summary>
@@ -2430,6 +2565,7 @@ public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehaviorForw
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehaviorFunctionAssociation
 {
     /// <summary>Specific event to trigger this function. Valid values: viewer-request, origin-request, viewer-response, origin-response.</summary>
@@ -2442,6 +2578,7 @@ public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehaviorFunc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehaviorLambdaFunctionAssociation
 {
     /// <summary>Specific event to trigger this function. Valid values: viewer-request, origin-request, viewer-response, origin-response.</summary>
@@ -2458,6 +2595,7 @@ public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehaviorLamb
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehavior
 {
     /// <summary>Controls which HTTP methods CloudFront processes and forwards to your Amazon S3 bucket or your custom origin.</summary>
@@ -2542,6 +2680,7 @@ public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehavior
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderOriginCustomHeader
 {
     /// <summary></summary>
@@ -2554,6 +2693,7 @@ public partial class V1beta1DistributionStatusAtProviderOriginCustomHeader
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderOriginCustomOriginConfig
 {
     /// <summary>HTTP port the custom origin listens on.</summary>
@@ -2582,6 +2722,7 @@ public partial class V1beta1DistributionStatusAtProviderOriginCustomOriginConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderOriginOriginShield
 {
     /// <summary>Whether the distribution is enabled to accept end user requests for content.</summary>
@@ -2594,6 +2735,7 @@ public partial class V1beta1DistributionStatusAtProviderOriginOriginShield
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderOriginS3OriginConfig
 {
     /// <summary>The CloudFront origin access identity to associate with the origin.</summary>
@@ -2602,6 +2744,7 @@ public partial class V1beta1DistributionStatusAtProviderOriginS3OriginConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderOrigin
 {
     /// <summary>Number of times that CloudFront attempts to connect to the origin. Must be between 1-3. Defaults to 3.</summary>
@@ -2646,6 +2789,7 @@ public partial class V1beta1DistributionStatusAtProviderOrigin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderOriginGroupFailoverCriteria
 {
     /// <summary>List of HTTP status codes for the origin group.</summary>
@@ -2654,6 +2798,7 @@ public partial class V1beta1DistributionStatusAtProviderOriginGroupFailoverCrite
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderOriginGroupMember
 {
     /// <summary>Unique identifier for the origin.</summary>
@@ -2662,6 +2807,7 @@ public partial class V1beta1DistributionStatusAtProviderOriginGroupMember
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderOriginGroup
 {
     /// <summary>The failover criteria for when to failover to the secondary origin.</summary>
@@ -2678,6 +2824,7 @@ public partial class V1beta1DistributionStatusAtProviderOriginGroup
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderRestrictionsGeoRestriction
 {
     /// <summary>ISO 3166-1-alpha-2 codes for which you want CloudFront either to distribute your content (whitelist) or not distribute your content (blacklist). If the type is specified as none an empty array can be used.</summary>
@@ -2690,6 +2837,7 @@ public partial class V1beta1DistributionStatusAtProviderRestrictionsGeoRestricti
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderRestrictions
 {
     /// <summary></summary>
@@ -2698,6 +2846,7 @@ public partial class V1beta1DistributionStatusAtProviderRestrictions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderTrustedKeyGroupsItems
 {
     /// <summary>ID of the key group that contains the public keys.</summary>
@@ -2710,6 +2859,7 @@ public partial class V1beta1DistributionStatusAtProviderTrustedKeyGroupsItems
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderTrustedKeyGroups
 {
     /// <summary>Whether the distribution is enabled to accept end user requests for content.</summary>
@@ -2722,6 +2872,7 @@ public partial class V1beta1DistributionStatusAtProviderTrustedKeyGroups
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderTrustedSignersItems
 {
     /// <summary>AWS account ID or self</summary>
@@ -2734,6 +2885,7 @@ public partial class V1beta1DistributionStatusAtProviderTrustedSignersItems
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderTrustedSigners
 {
     /// <summary>Whether the distribution is enabled to accept end user requests for content.</summary>
@@ -2746,6 +2898,7 @@ public partial class V1beta1DistributionStatusAtProviderTrustedSigners
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderViewerCertificate
 {
     /// <summary>ARN of the AWS Certificate Manager certificate that you wish to use with this distribution. Specify this, cloudfront_default_certificate, or iam_certificate_id.  The ACM certificate must be in  US-EAST-1.</summary>
@@ -2770,6 +2923,7 @@ public partial class V1beta1DistributionStatusAtProviderViewerCertificate
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProvider
 {
     /// <summary>Extra CNAMEs (alternate domain names), if any, for this distribution.</summary>
@@ -2906,6 +3060,7 @@ public partial class V1beta1DistributionStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2934,6 +3089,7 @@ public partial class V1beta1DistributionStatusConditions
 }
 
 /// <summary>DistributionStatus defines the observed state of Distribution.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatus
 {
     /// <summary></summary>
@@ -2949,8 +3105,9 @@ public partial class V1beta1DistributionStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Distribution is the Schema for the Distributions API. Provides a CloudFront web distribution resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Distribution : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DistributionSpec>, IStatus<V1beta1DistributionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

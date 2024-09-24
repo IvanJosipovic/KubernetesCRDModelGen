@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.conditionalaccess.azuread.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AccessPolicySpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1AccessPolicySpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProviderConditionsApplications
 {
     /// <summary>A list of application IDs explicitly excluded from the policy. Can also be set to Office365.</summary>
@@ -35,6 +37,7 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsApplications
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProviderConditionsClientApplications
 {
     /// <summary>A list of service principal IDs explicitly excluded in the policy.</summary>
@@ -47,6 +50,7 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsClientApplicati
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProviderConditionsDevicesFilter
 {
     /// <summary>Whether to include in, or exclude from, matching devices from the policy. Supported values are include or exclude.</summary>
@@ -59,6 +63,7 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsDevicesFilter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProviderConditionsDevices
 {
     /// <summary>A filter block as described below.</summary>
@@ -67,6 +72,7 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsDevices
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProviderConditionsLocations
 {
     /// <summary>A list of location IDs excluded from scope of policy. Can also be set to AllTrusted.</summary>
@@ -79,6 +85,7 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsLocations
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProviderConditionsPlatforms
 {
     /// <summary>A list of platforms explicitly excluded from the policy. Possible values are: all, android, iOS, linux, macOS, windows, windowsPhone or unknownFutureValue.</summary>
@@ -91,6 +98,7 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsPlatforms
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProviderConditionsUsersExcludedGuestsOrExternalUsersExternalTenants
 {
     /// <summary>A list tenant IDs. Can only be specified if membership_kind is enumerated.</summary>
@@ -103,6 +111,7 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsUsersExcludedGu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProviderConditionsUsersExcludedGuestsOrExternalUsers
 {
     /// <summary>An external_tenants block as documented below, which specifies external tenants in a policy scope.</summary>
@@ -115,6 +124,7 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsUsersExcludedGu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProviderConditionsUsersIncludedGuestsOrExternalUsersExternalTenants
 {
     /// <summary>A list tenant IDs. Can only be specified if membership_kind is enumerated.</summary>
@@ -127,6 +137,7 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsUsersIncludedGu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProviderConditionsUsersIncludedGuestsOrExternalUsers
 {
     /// <summary>An external_tenants block as documented below, which specifies external tenants in a policy scope.</summary>
@@ -139,6 +150,7 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsUsersIncludedGu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProviderConditionsUsers
 {
     /// <summary>A list of group IDs excluded from scope of policy.</summary>
@@ -175,6 +187,7 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsUsers
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProviderConditions
 {
     /// <summary>An applications block as documented below, which specifies applications and user actions included in and excluded from the policy.</summary>
@@ -219,6 +232,7 @@ public partial class V1beta1AccessPolicySpecForProviderConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProviderGrantControls
 {
     /// <summary>ID of an Authentication Strength Policy to use in this policy.</summary>
@@ -243,6 +257,7 @@ public partial class V1beta1AccessPolicySpecForProviderGrantControls
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProviderSessionControls
 {
     /// <summary>Whether application enforced restrictions are enabled. Defaults to false.</summary>
@@ -279,6 +294,7 @@ public partial class V1beta1AccessPolicySpecForProviderSessionControls
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProvider
 {
     /// <summary>A conditions block as documented below, which specifies the rules that must be met for the policy to apply.</summary>
@@ -303,6 +319,7 @@ public partial class V1beta1AccessPolicySpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProviderConditionsApplications
 {
     /// <summary>A list of application IDs explicitly excluded from the policy. Can also be set to Office365.</summary>
@@ -319,6 +336,7 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsApplications
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProviderConditionsClientApplications
 {
     /// <summary>A list of service principal IDs explicitly excluded in the policy.</summary>
@@ -331,6 +349,7 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsClientApplicat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProviderConditionsDevicesFilter
 {
     /// <summary>Whether to include in, or exclude from, matching devices from the policy. Supported values are include or exclude.</summary>
@@ -343,6 +362,7 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsDevicesFilter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProviderConditionsDevices
 {
     /// <summary>A filter block as described below.</summary>
@@ -351,6 +371,7 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsDevices
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProviderConditionsLocations
 {
     /// <summary>A list of location IDs excluded from scope of policy. Can also be set to AllTrusted.</summary>
@@ -363,6 +384,7 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsLocations
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProviderConditionsPlatforms
 {
     /// <summary>A list of platforms explicitly excluded from the policy. Possible values are: all, android, iOS, linux, macOS, windows, windowsPhone or unknownFutureValue.</summary>
@@ -375,6 +397,7 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsPlatforms
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProviderConditionsUsersExcludedGuestsOrExternalUsersExternalTenants
 {
     /// <summary>A list tenant IDs. Can only be specified if membership_kind is enumerated.</summary>
@@ -387,6 +410,7 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsUsersExcludedG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProviderConditionsUsersExcludedGuestsOrExternalUsers
 {
     /// <summary>An external_tenants block as documented below, which specifies external tenants in a policy scope.</summary>
@@ -399,6 +423,7 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsUsersExcludedG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProviderConditionsUsersIncludedGuestsOrExternalUsersExternalTenants
 {
     /// <summary>A list tenant IDs. Can only be specified if membership_kind is enumerated.</summary>
@@ -411,6 +436,7 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsUsersIncludedG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProviderConditionsUsersIncludedGuestsOrExternalUsers
 {
     /// <summary>An external_tenants block as documented below, which specifies external tenants in a policy scope.</summary>
@@ -423,6 +449,7 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsUsersIncludedG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProviderConditionsUsers
 {
     /// <summary>A list of group IDs excluded from scope of policy.</summary>
@@ -459,6 +486,7 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsUsers
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProviderConditions
 {
     /// <summary>An applications block as documented below, which specifies applications and user actions included in and excluded from the policy.</summary>
@@ -503,6 +531,7 @@ public partial class V1beta1AccessPolicySpecInitProviderConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProviderGrantControls
 {
     /// <summary>ID of an Authentication Strength Policy to use in this policy.</summary>
@@ -527,6 +556,7 @@ public partial class V1beta1AccessPolicySpecInitProviderGrantControls
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProviderSessionControls
 {
     /// <summary>Whether application enforced restrictions are enabled. Defaults to false.</summary>
@@ -563,6 +593,7 @@ public partial class V1beta1AccessPolicySpecInitProviderSessionControls
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProvider
 {
     /// <summary>A conditions block as documented below, which specifies the rules that must be met for the policy to apply.</summary>
@@ -586,6 +617,7 @@ public partial class V1beta1AccessPolicySpecInitProvider
     public string? State { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AccessPolicySpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -608,6 +640,7 @@ public enum V1beta1AccessPolicySpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AccessPolicySpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -618,6 +651,7 @@ public enum V1beta1AccessPolicySpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AccessPolicySpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -629,6 +663,7 @@ public enum V1beta1AccessPolicySpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -643,6 +678,7 @@ public partial class V1beta1AccessPolicySpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -654,6 +690,7 @@ public partial class V1beta1AccessPolicySpecProviderConfigRef
     public V1beta1AccessPolicySpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AccessPolicySpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -664,6 +701,7 @@ public enum V1beta1AccessPolicySpecPublishConnectionDetailsToConfigRefPolicyReso
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AccessPolicySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -675,6 +713,7 @@ public enum V1beta1AccessPolicySpecPublishConnectionDetailsToConfigRefPolicyReso
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -689,6 +728,7 @@ public partial class V1beta1AccessPolicySpecPublishConnectionDetailsToConfigRefP
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -701,6 +741,7 @@ public partial class V1beta1AccessPolicySpecPublishConnectionDetailsToConfigRef
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -717,6 +758,7 @@ public partial class V1beta1AccessPolicySpecPublishConnectionDetailsToMetadata
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -733,6 +775,7 @@ public partial class V1beta1AccessPolicySpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -745,6 +788,7 @@ public partial class V1beta1AccessPolicySpecWriteConnectionSecretToRef
 }
 
 /// <summary>AccessPolicySpec defines the desired state of AccessPolicy</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -778,6 +822,7 @@ public partial class V1beta1AccessPolicySpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsApplications
 {
     /// <summary>A list of application IDs explicitly excluded from the policy. Can also be set to Office365.</summary>
@@ -794,6 +839,7 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsApplications
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsClientApplications
 {
     /// <summary>A list of service principal IDs explicitly excluded in the policy.</summary>
@@ -806,6 +852,7 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsClientApplicat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsDevicesFilter
 {
     /// <summary>Whether to include in, or exclude from, matching devices from the policy. Supported values are include or exclude.</summary>
@@ -818,6 +865,7 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsDevicesFilter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsDevices
 {
     /// <summary>A filter block as described below.</summary>
@@ -826,6 +874,7 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsDevices
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsLocations
 {
     /// <summary>A list of location IDs excluded from scope of policy. Can also be set to AllTrusted.</summary>
@@ -838,6 +887,7 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsLocations
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsPlatforms
 {
     /// <summary>A list of platforms explicitly excluded from the policy. Possible values are: all, android, iOS, linux, macOS, windows, windowsPhone or unknownFutureValue.</summary>
@@ -850,6 +900,7 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsPlatforms
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsUsersExcludedGuestsOrExternalUsersExternalTenants
 {
     /// <summary>A list tenant IDs. Can only be specified if membership_kind is enumerated.</summary>
@@ -862,6 +913,7 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsUsersExcludedG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsUsersExcludedGuestsOrExternalUsers
 {
     /// <summary>An external_tenants block as documented below, which specifies external tenants in a policy scope.</summary>
@@ -874,6 +926,7 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsUsersExcludedG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsUsersIncludedGuestsOrExternalUsersExternalTenants
 {
     /// <summary>A list tenant IDs. Can only be specified if membership_kind is enumerated.</summary>
@@ -886,6 +939,7 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsUsersIncludedG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsUsersIncludedGuestsOrExternalUsers
 {
     /// <summary>An external_tenants block as documented below, which specifies external tenants in a policy scope.</summary>
@@ -898,6 +952,7 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsUsersIncludedG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsUsers
 {
     /// <summary>A list of group IDs excluded from scope of policy.</summary>
@@ -934,6 +989,7 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsUsers
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusAtProviderConditions
 {
     /// <summary>An applications block as documented below, which specifies applications and user actions included in and excluded from the policy.</summary>
@@ -978,6 +1034,7 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusAtProviderGrantControls
 {
     /// <summary>ID of an Authentication Strength Policy to use in this policy.</summary>
@@ -1002,6 +1059,7 @@ public partial class V1beta1AccessPolicyStatusAtProviderGrantControls
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusAtProviderSessionControls
 {
     /// <summary>Whether application enforced restrictions are enabled. Defaults to false.</summary>
@@ -1038,6 +1096,7 @@ public partial class V1beta1AccessPolicyStatusAtProviderSessionControls
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusAtProvider
 {
     /// <summary>A conditions block as documented below, which specifies the rules that must be met for the policy to apply.</summary>
@@ -1066,6 +1125,7 @@ public partial class V1beta1AccessPolicyStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1094,6 +1154,7 @@ public partial class V1beta1AccessPolicyStatusConditions
 }
 
 /// <summary>AccessPolicyStatus defines the observed state of AccessPolicy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatus
 {
     /// <summary></summary>
@@ -1109,8 +1170,9 @@ public partial class V1beta1AccessPolicyStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>AccessPolicy is the Schema for the AccessPolicys API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1AccessPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AccessPolicySpec>, IStatus<V1beta1AccessPolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.traefik.io;
 /// <summary>Certificate holds a secret name for the TLSStore resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TLSStoreSpecCertificates
 {
     /// <summary>SecretName is the name of the referenced Kubernetes Secret to specify the certificate details.</summary>
@@ -17,6 +18,7 @@ public partial class V1alpha1TLSStoreSpecCertificates
 }
 
 /// <summary>DefaultCertificate defines the default certificate configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TLSStoreSpecDefaultCertificate
 {
     /// <summary>SecretName is the name of the referenced Kubernetes Secret to specify the certificate details.</summary>
@@ -25,6 +27,7 @@ public partial class V1alpha1TLSStoreSpecDefaultCertificate
 }
 
 /// <summary>Domain is the domain definition for the DefaultCertificate.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TLSStoreSpecDefaultGeneratedCertDomain
 {
     /// <summary>Main defines the main domain name.</summary>
@@ -37,6 +40,7 @@ public partial class V1alpha1TLSStoreSpecDefaultGeneratedCertDomain
 }
 
 /// <summary>DefaultGeneratedCert defines the default generated certificate configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TLSStoreSpecDefaultGeneratedCert
 {
     /// <summary>Domain is the domain definition for the DefaultCertificate.</summary>
@@ -49,6 +53,7 @@ public partial class V1alpha1TLSStoreSpecDefaultGeneratedCert
 }
 
 /// <summary>TLSStoreSpec defines the desired state of a TLSStore.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TLSStoreSpec
 {
     /// <summary>Certificates is a list of secret names, each secret holding a key/certificate pair to add to the store.</summary>
@@ -64,8 +69,9 @@ public partial class V1alpha1TLSStoreSpec
     public V1alpha1TLSStoreSpecDefaultGeneratedCert? DefaultGeneratedCert { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>TLSStore is the CRD implementation of a Traefik TLS Store. For the time being, only the TLSStore named default is supported. This means that you cannot have two stores that are named default in different Kubernetes namespaces. More info: https://doc.traefik.io/traefik/v3.1/https/tls/#certificates-stores</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1TLSStore : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1TLSStoreSpec>
 {
     public const string KubeApiVersion = "v1alpha1";

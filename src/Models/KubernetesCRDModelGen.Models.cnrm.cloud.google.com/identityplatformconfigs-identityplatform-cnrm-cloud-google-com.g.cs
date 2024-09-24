@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.identityplatform.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecBlockingFunctionsTriggersFunctionUriRef
 {
     /// <summary>HTTP URI trigger for the Cloud Function.  Allowed value: The `httpsTrigger.url` field of a `CloudFunctionsFunction` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1IdentityPlatformConfigSpecBlockingFunctionsTriggersF
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecBlockingFunctionsTriggers
 {
     /// <summary></summary>
@@ -37,6 +39,7 @@ public partial class V1beta1IdentityPlatformConfigSpecBlockingFunctionsTriggers
 }
 
 /// <summary>Configuration related to blocking functions.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecBlockingFunctions
 {
     /// <summary>Map of Trigger to event type. Key should be one of the supported event types: "beforeCreate", "beforeSignIn"</summary>
@@ -45,6 +48,7 @@ public partial class V1beta1IdentityPlatformConfigSpecBlockingFunctions
 }
 
 /// <summary>Configuration related to restricting a user's ability to affect their account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecClientPermissions
 {
     /// <summary>When true, end users cannot delete their account on the associated project through any of our API methods</summary>
@@ -57,6 +61,7 @@ public partial class V1beta1IdentityPlatformConfigSpecClientPermissions
 }
 
 /// <summary>Options related to how clients making requests on behalf of a project should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecClient
 {
     /// <summary>Configuration related to restricting a user's ability to affect their account.</summary>
@@ -65,6 +70,7 @@ public partial class V1beta1IdentityPlatformConfigSpecClient
 }
 
 /// <summary>Configuration for this project's multi-factor authentication, including whether it is active and what factors can be used for the second factor</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecMfa
 {
     /// <summary>Whether MultiFactor Authentication has been enabled for this project. Possible values: STATE_UNSPECIFIED, DISABLED, ENABLED, MANDATORY</summary>
@@ -73,6 +79,7 @@ public partial class V1beta1IdentityPlatformConfigSpecMfa
 }
 
 /// <summary>Configuration for logging requests made to this project to Stackdriver Logging</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecMonitoringRequestLogging
 {
     /// <summary>Whether logging is enabled for this project or not.</summary>
@@ -81,6 +88,7 @@ public partial class V1beta1IdentityPlatformConfigSpecMonitoringRequestLogging
 }
 
 /// <summary>Configuration related to monitoring project activity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecMonitoring
 {
     /// <summary>Configuration for logging requests made to this project to Stackdriver Logging</summary>
@@ -89,6 +97,7 @@ public partial class V1beta1IdentityPlatformConfigSpecMonitoring
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecMultiTenantDefaultTenantLocationRef
 {
     /// <summary>The default cloud parent org or folder that the tenant project should be created under. The parent resource name should be in the format of "&lt;type&gt;/&lt;number&gt;", such as "folders/123" or "organizations/456". If the value is not set, the tenant will be created under the same organization or folder as the agent project.  Allowed values: * The Google Cloud resource name of a `Folder` resource (format: `folders/{{name}}`). * The Google Cloud resource name of a Google Cloud Organization (format: `organizations/{{name}}`).</summary>
@@ -109,6 +118,7 @@ public partial class V1beta1IdentityPlatformConfigSpecMultiTenantDefaultTenantLo
 }
 
 /// <summary>Configuration related to multi-tenant functionality.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecMultiTenant
 {
     /// <summary>Whether this project can have tenants or not.</summary>
@@ -121,6 +131,7 @@ public partial class V1beta1IdentityPlatformConfigSpecMultiTenant
 }
 
 /// <summary>Email template for change email</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailChangeEmailTemplate
 {
     /// <summary>Immutable. Email body</summary>
@@ -149,6 +160,7 @@ public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailChang
 }
 
 /// <summary>Information of custom domain DNS verification.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailDnsInfo
 {
     /// <summary>Whether to use custom domain.</summary>
@@ -157,6 +169,7 @@ public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailDnsIn
 }
 
 /// <summary>Email template for reset password</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailResetPasswordTemplate
 {
     /// <summary>Email body</summary>
@@ -185,6 +198,7 @@ public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailReset
 }
 
 /// <summary>Email template for reverting second factor addition emails</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailRevertSecondFactorAdditionTemplate
 {
     /// <summary>Immutable. Email body</summary>
@@ -213,6 +227,7 @@ public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailRever
 }
 
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailSmtpPasswordValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -225,6 +240,7 @@ public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailSmtpP
 }
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailSmtpPasswordValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -233,6 +249,7 @@ public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailSmtpP
 }
 
 /// <summary>SMTP relay password</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailSmtpPassword
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -245,6 +262,7 @@ public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailSmtpP
 }
 
 /// <summary>Use a custom SMTP relay</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailSmtp
 {
     /// <summary>SMTP relay host</summary>
@@ -273,6 +291,7 @@ public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailSmtp
 }
 
 /// <summary>Email template for verify email</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailVerifyEmailTemplate
 {
     /// <summary>Immutable. Email body</summary>
@@ -301,6 +320,7 @@ public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailVerif
 }
 
 /// <summary>Options for email sending.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmail
 {
     /// <summary>action url in email template.</summary>
@@ -337,6 +357,7 @@ public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmail
 }
 
 /// <summary>Options for SMS sending.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecNotificationSendSms
 {
     /// <summary>Whether to use the accept_language header for SMS.</summary>
@@ -345,6 +366,7 @@ public partial class V1beta1IdentityPlatformConfigSpecNotificationSendSms
 }
 
 /// <summary>Configuration related to sending notifications to users.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecNotification
 {
     /// <summary>Default locale used for email and SMS in IETF BCP 47 format.</summary>
@@ -361,6 +383,7 @@ public partial class V1beta1IdentityPlatformConfigSpecNotification
 }
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecProjectRef
 {
     /// <summary>The project of the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -377,6 +400,7 @@ public partial class V1beta1IdentityPlatformConfigSpecProjectRef
 }
 
 /// <summary>Quota for the Signup endpoint, if overwritten. Signup quota is measured in sign ups per project per hour per IP.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecQuotaSignUpQuotaConfig
 {
     /// <summary>Corresponds to the 'refill_token_count' field in QuotaServer config</summary>
@@ -393,6 +417,7 @@ public partial class V1beta1IdentityPlatformConfigSpecQuotaSignUpQuotaConfig
 }
 
 /// <summary>Configuration related to quotas.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecQuota
 {
     /// <summary>Quota for the Signup endpoint, if overwritten. Signup quota is measured in sign ups per project per hour per IP.</summary>
@@ -401,6 +426,7 @@ public partial class V1beta1IdentityPlatformConfigSpecQuota
 }
 
 /// <summary>Configuration options related to authenticating an anonymous user.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecSignInAnonymous
 {
     /// <summary>Whether anonymous user auth is enabled for the project or not.</summary>
@@ -409,6 +435,7 @@ public partial class V1beta1IdentityPlatformConfigSpecSignInAnonymous
 }
 
 /// <summary>Configuration options related to authenticating a user by their email address.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecSignInEmail
 {
     /// <summary>Whether email auth is enabled for the project or not.</summary>
@@ -421,6 +448,7 @@ public partial class V1beta1IdentityPlatformConfigSpecSignInEmail
 }
 
 /// <summary>Configuration options related to authenticated a user by their phone number.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecSignInPhoneNumber
 {
     /// <summary>Whether phone number auth is enabled for the project or not.</summary>
@@ -433,6 +461,7 @@ public partial class V1beta1IdentityPlatformConfigSpecSignInPhoneNumber
 }
 
 /// <summary>Configuration related to local sign in methods.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecSignIn
 {
     /// <summary>Whether to allow more than one account to have the same email.</summary>
@@ -453,6 +482,7 @@ public partial class V1beta1IdentityPlatformConfigSpecSignIn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpec
 {
     /// <summary>List of domains authorized for OAuth redirects</summary>
@@ -497,6 +527,7 @@ public partial class V1beta1IdentityPlatformConfigSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigStatusClient
 {
     /// <summary>Output only. API key that can be used when making requests for this project.</summary>
@@ -509,6 +540,7 @@ public partial class V1beta1IdentityPlatformConfigStatusClient
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -533,6 +565,7 @@ public partial class V1beta1IdentityPlatformConfigStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigStatusNotificationSendEmailChangeEmailTemplate
 {
     /// <summary>Output only. Whether the body or subject of the email is customized.</summary>
@@ -541,6 +574,7 @@ public partial class V1beta1IdentityPlatformConfigStatusNotificationSendEmailCha
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigStatusNotificationSendEmailDnsInfo
 {
     /// <summary>Output only. The applied verified custom domain.</summary>
@@ -561,6 +595,7 @@ public partial class V1beta1IdentityPlatformConfigStatusNotificationSendEmailDns
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigStatusNotificationSendEmailResetPasswordTemplate
 {
     /// <summary>Output only. Whether the body or subject of the email is customized.</summary>
@@ -569,6 +604,7 @@ public partial class V1beta1IdentityPlatformConfigStatusNotificationSendEmailRes
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigStatusNotificationSendEmailRevertSecondFactorAdditionTemplate
 {
     /// <summary>Output only. Whether the body or subject of the email is customized.</summary>
@@ -577,6 +613,7 @@ public partial class V1beta1IdentityPlatformConfigStatusNotificationSendEmailRev
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigStatusNotificationSendEmailVerifyEmailTemplate
 {
     /// <summary>Output only. Whether the body or subject of the email is customized.</summary>
@@ -585,6 +622,7 @@ public partial class V1beta1IdentityPlatformConfigStatusNotificationSendEmailVer
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigStatusNotificationSendEmail
 {
     /// <summary></summary>
@@ -609,6 +647,7 @@ public partial class V1beta1IdentityPlatformConfigStatusNotificationSendEmail
 }
 
 /// <summary>Output only. The template to use when sending an SMS.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigStatusNotificationSendSmsSmsTemplate
 {
     /// <summary>Output only. The SMS's content. Can contain the following placeholders which will be replaced with the appropriate values: %APP_NAME% - For Android or iOS apps, the app's display name. For web apps, the domain hosting the application. %LOGIN_CODE% - The OOB code being sent in the SMS.</summary>
@@ -617,6 +656,7 @@ public partial class V1beta1IdentityPlatformConfigStatusNotificationSendSmsSmsTe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigStatusNotificationSendSms
 {
     /// <summary>Output only. The template to use when sending an SMS.</summary>
@@ -625,6 +665,7 @@ public partial class V1beta1IdentityPlatformConfigStatusNotificationSendSms
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigStatusNotification
 {
     /// <summary></summary>
@@ -637,6 +678,7 @@ public partial class V1beta1IdentityPlatformConfigStatusNotification
 }
 
 /// <summary>Output only. Hash config information.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigStatusSignInEmailHashConfig
 {
     /// <summary>Output only. Different password hash algorithms used in Identity Toolkit. Possible values: HASH_ALGORITHM_UNSPECIFIED, HMAC_SHA256, HMAC_SHA1, HMAC_MD5, SCRYPT, PBKDF_SHA1, MD5, HMAC_SHA512, SHA1, BCRYPT, PBKDF2_SHA256, SHA256, SHA512, STANDARD_SCRYPT</summary>
@@ -661,6 +703,7 @@ public partial class V1beta1IdentityPlatformConfigStatusSignInEmailHashConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigStatusSignInEmail
 {
     /// <summary>Output only. Hash config information.</summary>
@@ -669,6 +712,7 @@ public partial class V1beta1IdentityPlatformConfigStatusSignInEmail
 }
 
 /// <summary>Output only. Hash config information.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigStatusSignInHashConfig
 {
     /// <summary>Output only. Different password hash algorithms used in Identity Toolkit. Possible values: HASH_ALGORITHM_UNSPECIFIED, HMAC_SHA256, HMAC_SHA1, HMAC_MD5, SCRYPT, PBKDF_SHA1, MD5, HMAC_SHA512, SHA1, BCRYPT, PBKDF2_SHA256, SHA256, SHA512, STANDARD_SCRYPT</summary>
@@ -693,6 +737,7 @@ public partial class V1beta1IdentityPlatformConfigStatusSignInHashConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigStatusSignIn
 {
     /// <summary></summary>
@@ -705,6 +750,7 @@ public partial class V1beta1IdentityPlatformConfigStatusSignIn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigStatus
 {
     /// <summary></summary>
@@ -732,8 +778,9 @@ public partial class V1beta1IdentityPlatformConfigStatus
     public string? Subtype { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1IdentityPlatformConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IdentityPlatformConfigSpec>, IStatus<V1beta1IdentityPlatformConfigStatus>
 {
     public const string KubeApiVersion = "v1beta1";

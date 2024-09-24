@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.privateca.cnrm.cloud.google.com;
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthoritySpecCaPoolRef
 {
     /// <summary>The caPool for the resource  Allowed value: The Google Cloud resource name of a `PrivateCACAPool` resource (format: `projects/{{project}}/locations/{{location}}/caPools/{{name}}`).</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecCaPoolRef
 }
 
 /// <summary>Immutable. Required. Contains distinguished name fields such as the common name, location and organization.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthoritySpecConfigSubjectConfigSubject
 {
     /// <summary>Immutable. The "common name" of the subject.</summary>
@@ -61,6 +63,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecConfigSubjectConfig
 }
 
 /// <summary>Immutable. Required. The OID for this X.509 extension.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthoritySpecConfigSubjectConfigSubjectAltNameCustomSansObjectId
 {
     /// <summary>Immutable. Required. The parts of an OID path. The most significant parts of the path come first.</summary>
@@ -69,6 +72,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecConfigSubjectConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthoritySpecConfigSubjectConfigSubjectAltNameCustomSans
 {
     /// <summary>Immutable. Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).</summary>
@@ -85,6 +89,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecConfigSubjectConfig
 }
 
 /// <summary>Immutable. Optional. The subject alternative name fields.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthoritySpecConfigSubjectConfigSubjectAltName
 {
     /// <summary>Immutable. Contains additional subject alternative name values.</summary>
@@ -109,6 +114,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecConfigSubjectConfig
 }
 
 /// <summary>Immutable. Required. Specifies some of the values in a certificate that are related to the subject.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthoritySpecConfigSubjectConfig
 {
     /// <summary>Immutable. Required. Contains distinguished name fields such as the common name, location and organization.</summary>
@@ -121,6 +127,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecConfigSubjectConfig
 }
 
 /// <summary>Immutable. Required. The OID for this X.509 extension.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigAdditionalExtensionsObjectId
 {
     /// <summary>Immutable. Required. The parts of an OID path. The most significant parts of the path come first.</summary>
@@ -129,6 +136,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigAdd
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigAdditionalExtensions
 {
     /// <summary>Immutable. Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).</summary>
@@ -145,6 +153,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigAdd
 }
 
 /// <summary>Immutable. Optional. Describes options in this X509Parameters that are relevant in a CA certificate.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigCaOptions
 {
     /// <summary>Immutable. Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.</summary>
@@ -161,6 +170,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigCaO
 }
 
 /// <summary>Immutable. Describes high-level ways in which a key may be used.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigKeyUsageBaseKeyUsage
 {
     /// <summary>Immutable. The key may be used to sign certificates.</summary>
@@ -201,6 +211,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigKey
 }
 
 /// <summary>Immutable. Detailed scenarios in which a key may be used.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigKeyUsageExtendedKeyUsage
 {
     /// <summary>Immutable. Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.</summary>
@@ -229,6 +240,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigKey
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigKeyUsageUnknownExtendedKeyUsages
 {
     /// <summary>Immutable. Required. The parts of an OID path. The most significant parts of the path come first.</summary>
@@ -237,6 +249,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigKey
 }
 
 /// <summary>Immutable. Optional. Indicates the intended use for keys that correspond to a certificate.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigKeyUsage
 {
     /// <summary>Immutable. Describes high-level ways in which a key may be used.</summary>
@@ -253,6 +266,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigKey
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigPolicyIds
 {
     /// <summary>Immutable. Required. The parts of an OID path. The most significant parts of the path come first.</summary>
@@ -261,6 +275,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigPol
 }
 
 /// <summary>Immutable. Required. Describes how some of the technical X.509 fields in a certificate should be populated.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509Config
 {
     /// <summary>Immutable. Optional. Describes custom X.509 extensions.</summary>
@@ -281,6 +296,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509Config
 }
 
 /// <summary>Immutable. Required. Immutable. The config used to create a self-signed X.509 certificate or CSR.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthoritySpecConfig
 {
     /// <summary>Immutable. Required. Specifies some of the values in a certificate that are related to the subject.</summary>
@@ -293,6 +309,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecConfig
 }
 
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthoritySpecGcsBucketRef
 {
     /// <summary>Immutable. The name of a Cloud Storage bucket where this CertificateAuthority will publish content, such as the CA certificate and CRLs. This must be a bucket name, without any prefixes (such as `gs://`) or suffixes (such as `.googleapis.com`). For example, to use a bucket named `my-bucket`, you would simply specify `my-bucket`. If not specified, a managed bucket will be created.  Allowed value: The Google Cloud resource name of a `StorageBucket` resource (format: `{{name}}`).</summary>
@@ -309,6 +326,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecGcsBucketRef
 }
 
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthoritySpecKeySpecCloudKmsKeyVersionRef
 {
     /// <summary>The resource name for an existing Cloud KMS CryptoKeyVersion in the format `projects/*/locations/*/keyRings/*/cryptoKeys/*/cryptoKeyVersions/*`. This option enables full flexibility in the key's capabilities and properties.</summary>
@@ -325,6 +343,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecKeySpecCloudKmsKeyV
 }
 
 /// <summary>Immutable. Required. Immutable. Used when issuing certificates for this CertificateAuthority. If this CertificateAuthority is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA certificate. Otherwise, it is used to sign a CSR.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthoritySpecKeySpec
 {
     /// <summary>Immutable. The algorithm to use for creating a managed Cloud KMS key for a for a simplified experience. All managed keys will be have their ProtectionLevel as `HSM`. Possible values: RSA_PSS_2048_SHA256, RSA_PSS_3072_SHA256, RSA_PSS_4096_SHA256, RSA_PKCS1_2048_SHA256, RSA_PKCS1_3072_SHA256, RSA_PKCS1_4096_SHA256, EC_P256_SHA256, EC_P384_SHA384</summary>
@@ -337,6 +356,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecKeySpec
 }
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthoritySpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -353,6 +373,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecProjectRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthoritySpec
 {
     /// <summary>Immutable.</summary>
@@ -393,6 +414,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpec
 }
 
 /// <summary>Output only. URLs for accessing content published by this CA, such as the CA certificate and CRLs.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthorityStatusAccessUrls
 {
     /// <summary>The URL where this CertificateAuthority's CA certificate is published. This will only be set for CAs that have been activated.</summary>
@@ -405,6 +427,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusAccessUrls
 }
 
 /// <summary>Identifies the subject_key_id of the parent certificate, per https://tools.ietf.org/html/rfc5280#section-4.2.1.1</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsAuthorityKeyId
 {
     /// <summary>Optional. The value of this KeyId encoded in lowercase hexadecimal. This is most likely the 160 bit SHA-1 hash of the public key.</summary>
@@ -413,6 +436,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
 }
 
 /// <summary>The hash of the x.509 certificate.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsCertFingerprint
 {
     /// <summary>The SHA 256 hash, encoded in hexadecimal, of the DER x509 certificate.</summary>
@@ -421,6 +445,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
 }
 
 /// <summary>The public key that corresponds to an issued certificate.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsPublicKey
 {
     /// <summary>Required. The format of the public key. Possible values: PEM</summary>
@@ -433,6 +458,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
 }
 
 /// <summary>Contains distinguished name fields such as the common name, location and organization.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsSubjectDescriptionSubject
 {
     /// <summary>The "common name" of the subject.</summary>
@@ -469,6 +495,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
 }
 
 /// <summary>Required. The OID for this X.509 extension.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsSubjectDescriptionSubjectAltNameCustomSansObjectId
 {
     /// <summary>Required. The parts of an OID path. The most significant parts of the path come first.</summary>
@@ -477,6 +504,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsSubjectDescriptionSubjectAltNameCustomSans
 {
     /// <summary>Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).</summary>
@@ -493,6 +521,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
 }
 
 /// <summary>The subject alternative name fields.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsSubjectDescriptionSubjectAltName
 {
     /// <summary>Contains additional subject alternative name values.</summary>
@@ -517,6 +546,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
 }
 
 /// <summary>Describes some of the values in a certificate that are related to the subject and lifetime.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsSubjectDescription
 {
     /// <summary>The serial number encoded in lowercase hexadecimal.</summary>
@@ -545,6 +575,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
 }
 
 /// <summary>Provides a means of identifiying certificates that contain a particular public key, per https://tools.ietf.org/html/rfc5280#section-4.2.1.2.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsSubjectKeyId
 {
     /// <summary>Optional. The value of this KeyId encoded in lowercase hexadecimal. This is most likely the 160 bit SHA-1 hash of the public key.</summary>
@@ -553,6 +584,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
 }
 
 /// <summary>Required. The OID for this X.509 extension.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsX509DescriptionAdditionalExtensionsObjectId
 {
     /// <summary>Required. The parts of an OID path. The most significant parts of the path come first.</summary>
@@ -561,6 +593,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsX509DescriptionAdditionalExtensions
 {
     /// <summary>Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).</summary>
@@ -577,6 +610,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
 }
 
 /// <summary>Optional. Describes options in this X509Parameters that are relevant in a CA certificate.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsX509DescriptionCaOptions
 {
     /// <summary>Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.</summary>
@@ -589,6 +623,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
 }
 
 /// <summary>Describes high-level ways in which a key may be used.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsX509DescriptionKeyUsageBaseKeyUsage
 {
     /// <summary>The key may be used to sign certificates.</summary>
@@ -629,6 +664,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
 }
 
 /// <summary>Detailed scenarios in which a key may be used.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsX509DescriptionKeyUsageExtendedKeyUsage
 {
     /// <summary>Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.</summary>
@@ -657,6 +693,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsX509DescriptionKeyUsageUnknownExtendedKeyUsages
 {
     /// <summary>Required. The parts of an OID path. The most significant parts of the path come first.</summary>
@@ -665,6 +702,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
 }
 
 /// <summary>Optional. Indicates the intended use for keys that correspond to a certificate.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsX509DescriptionKeyUsage
 {
     /// <summary>Describes high-level ways in which a key may be used.</summary>
@@ -681,6 +719,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsX509DescriptionPolicyIds
 {
     /// <summary>Required. The parts of an OID path. The most significant parts of the path come first.</summary>
@@ -689,6 +728,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
 }
 
 /// <summary>Describes some of the technical X.509 fields in a certificate.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsX509Description
 {
     /// <summary>Optional. Describes custom X.509 extensions.</summary>
@@ -713,6 +753,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptions
 {
     /// <summary>Describes lists of issuer CA certificate URLs that appear in the "Authority Information Access" extension in the certificate.</summary>
@@ -749,6 +790,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthorityStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -773,6 +815,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusConditions
 }
 
 /// <summary>Optional. The public key that corresponds to this config. This is, for example, used when issuing Certificates, but not when creating a self-signed CertificateAuthority or CertificateAuthority CSR.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthorityStatusConfigPublicKey
 {
     /// <summary>Required. The format of the public key. Possible values: PEM</summary>
@@ -785,6 +828,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusConfigPublicKey
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthorityStatusConfigX509Config
 {
     /// <summary>Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the "Authority Information Access" extension in the certificate.</summary>
@@ -793,6 +837,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusConfigX509Config
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthorityStatusConfig
 {
     /// <summary>Optional. The public key that corresponds to this config. This is, for example, used when issuing Certificates, but not when creating a self-signed CertificateAuthority or CertificateAuthority CSR.</summary>
@@ -805,6 +850,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusConfig
 }
 
 /// <summary>Required. Contains the PEM certificate chain for the issuers of this CertificateAuthority, but not pem certificate for this CA itself.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthorityStatusSubordinateConfigPemIssuerChain
 {
     /// <summary>Required. Expected to be in leaf-to-root order according to RFC 5246.</summary>
@@ -813,6 +859,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusSubordinateConfig
 }
 
 /// <summary>Optional. If this is a subordinate CertificateAuthority, this field will be set with the subordinate configuration, which describes its issuers. This may be updated, but this CertificateAuthority must continue to validate.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthorityStatusSubordinateConfig
 {
     /// <summary>Required. This can refer to a CertificateAuthority in the same project that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.</summary>
@@ -825,6 +872,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusSubordinateConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthorityStatus
 {
     /// <summary>Output only. URLs for accessing content published by this CA, such as the CA certificate and CRLs.</summary>
@@ -880,8 +928,9 @@ public partial class V1beta1PrivateCACertificateAuthorityStatus
     public string? UpdateTime { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1PrivateCACertificateAuthority : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1PrivateCACertificateAuthoritySpec>, IStatus<V1beta1PrivateCACertificateAuthorityStatus>
 {
     public const string KubeApiVersion = "v1beta1";

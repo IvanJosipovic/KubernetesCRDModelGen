@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.devices.azure.com;
 /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecIdentityUserAssignedIdentitiesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -29,6 +30,7 @@ public partial class V1api20210702storageIotHubSpecIdentityUserAssignedIdentitie
 }
 
 /// <summary>Storage version of v1api20210702.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -41,6 +43,7 @@ public partial class V1api20210702storageIotHubSpecIdentityUserAssignedIdentitie
 }
 
 /// <summary>Storage version of v1api20210702.ArmIdentity</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -57,6 +60,7 @@ public partial class V1api20210702storageIotHubSpecIdentity
 }
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecOperatorSpecSecretsDevicePrimaryKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -69,6 +73,7 @@ public partial class V1api20210702storageIotHubSpecOperatorSpecSecretsDevicePrim
 }
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecOperatorSpecSecretsDeviceSecondaryKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -81,6 +86,7 @@ public partial class V1api20210702storageIotHubSpecOperatorSpecSecretsDeviceSeco
 }
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecOperatorSpecSecretsIotHubOwnerPrimaryKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -93,6 +99,7 @@ public partial class V1api20210702storageIotHubSpecOperatorSpecSecretsIotHubOwne
 }
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecOperatorSpecSecretsIotHubOwnerSecondaryKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -105,6 +112,7 @@ public partial class V1api20210702storageIotHubSpecOperatorSpecSecretsIotHubOwne
 }
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecOperatorSpecSecretsRegistryReadPrimaryKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -117,6 +125,7 @@ public partial class V1api20210702storageIotHubSpecOperatorSpecSecretsRegistryRe
 }
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecOperatorSpecSecretsRegistryReadSecondaryKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -129,6 +138,7 @@ public partial class V1api20210702storageIotHubSpecOperatorSpecSecretsRegistryRe
 }
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecOperatorSpecSecretsRegistryReadWritePrimaryKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -141,6 +151,7 @@ public partial class V1api20210702storageIotHubSpecOperatorSpecSecretsRegistryRe
 }
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecOperatorSpecSecretsRegistryReadWriteSecondaryKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -153,6 +164,7 @@ public partial class V1api20210702storageIotHubSpecOperatorSpecSecretsRegistryRe
 }
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecOperatorSpecSecretsServicePrimaryKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -165,6 +177,7 @@ public partial class V1api20210702storageIotHubSpecOperatorSpecSecretsServicePri
 }
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecOperatorSpecSecretsServiceSecondaryKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -177,6 +190,7 @@ public partial class V1api20210702storageIotHubSpecOperatorSpecSecretsServiceSec
 }
 
 /// <summary>Storage version of v1api20210702.IotHubOperatorSecrets</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecOperatorSpecSecrets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -225,6 +239,7 @@ public partial class V1api20210702storageIotHubSpecOperatorSpecSecrets
 }
 
 /// <summary>Storage version of v1api20210702.IotHubOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -237,6 +252,7 @@ public partial class V1api20210702storageIotHubSpecOperatorSpec
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecOwner
 {
     /// <summary></summary>
@@ -249,6 +265,7 @@ public partial class V1api20210702storageIotHubSpecOwner
 }
 
 /// <summary>Storage version of v1api20210702.SharedAccessSignatureAuthorizationRule The properties of an IoT hub shared access policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesAuthorizationPolicies
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -265,6 +282,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesAuthorizationPolici
 }
 
 /// <summary>Storage version of v1api20210702.FeedbackProperties The properties of the feedback queue for cloud-to-device messages.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesCloudToDeviceFeedback
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -285,6 +303,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesCloudToDeviceFeedba
 }
 
 /// <summary>Storage version of v1api20210702.CloudToDeviceProperties The IoT hub cloud-to-device messaging properties.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesCloudToDevice
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -305,6 +324,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesCloudToDevice
 }
 
 /// <summary>Storage version of v1api20210702.EventHubProperties The properties of the provisioned Event Hub-compatible endpoint used by the IoT hub.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesEventHubEndpoints
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -321,6 +341,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesEventHubEndpoints
 }
 
 /// <summary>Storage version of v1api20210702.IpFilterRule The IP filter rules for the IoT hub.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesIpFilterRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -341,6 +362,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesIpFilterRules
 }
 
 /// <summary>Storage version of v1api20210702.MessagingEndpointProperties The properties of the messaging endpoints used by this IoT hub.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesMessagingEndpoints
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -361,6 +383,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesMessagingEndpoints
 }
 
 /// <summary>Storage version of v1api20210702.NetworkRuleSetIpRule IP Rule to be applied as part of Network Rule Set</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesNetworkRuleSetsIpRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -381,6 +404,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesNetworkRuleSetsIpRu
 }
 
 /// <summary>Storage version of v1api20210702.NetworkRuleSetProperties Network Rule Set Properties of IotHub</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesNetworkRuleSets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -401,6 +425,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesNetworkRuleSets
 }
 
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsEventHubsConnectionString
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -413,6 +438,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsEve
 }
 
 /// <summary>Storage version of v1api20210702.ManagedIdentity The properties of the Managed identity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsEventHubsIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -425,6 +451,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsEve
 }
 
 /// <summary>Reference: Id of the event hub endpoint</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsEventHubsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -445,6 +472,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsEve
 }
 
 /// <summary>Storage version of v1api20210702.RoutingEventHubProperties The properties related to an event hub endpoint.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsEventHubs
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -489,6 +517,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsEve
 }
 
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsServiceBusQueuesConnectionString
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -501,6 +530,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsSer
 }
 
 /// <summary>Storage version of v1api20210702.ManagedIdentity The properties of the Managed identity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsServiceBusQueuesIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -513,6 +543,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsSer
 }
 
 /// <summary>Reference: Id of the service bus queue endpoint</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsServiceBusQueuesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -533,6 +564,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsSer
 }
 
 /// <summary>Storage version of v1api20210702.RoutingServiceBusQueueEndpointProperties The properties related to service bus queue endpoint types.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsServiceBusQueues
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -577,6 +609,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsSer
 }
 
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsServiceBusTopicsConnectionString
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -589,6 +622,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsSer
 }
 
 /// <summary>Storage version of v1api20210702.ManagedIdentity The properties of the Managed identity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsServiceBusTopicsIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -601,6 +635,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsSer
 }
 
 /// <summary>Reference: Id of the service bus topic endpoint</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsServiceBusTopicsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -621,6 +656,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsSer
 }
 
 /// <summary>Storage version of v1api20210702.RoutingServiceBusTopicEndpointProperties The properties related to service bus topic endpoint types.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsServiceBusTopics
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -665,6 +701,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsSer
 }
 
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsStorageContainersConnectionString
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -677,6 +714,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsSto
 }
 
 /// <summary>Storage version of v1api20210702.ManagedIdentity The properties of the Managed identity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsStorageContainersIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -689,6 +727,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsSto
 }
 
 /// <summary>Reference: Id of the storage container endpoint</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsStorageContainersReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -709,6 +748,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsSto
 }
 
 /// <summary>Storage version of v1api20210702.RoutingStorageContainerProperties The properties related to a storage container endpoint.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsStorageContainers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -769,6 +809,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsSto
 }
 
 /// <summary>Storage version of v1api20210702.RoutingEndpoints The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpoints
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -793,6 +834,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpoints
 }
 
 /// <summary>Storage version of v1api20210702.EnrichmentProperties The properties of an enrichment that your IoT hub applies to messages delivered to endpoints.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesRoutingEnrichments
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -813,6 +855,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesRoutingEnrichments
 }
 
 /// <summary>Storage version of v1api20210702.FallbackRouteProperties The properties of the fallback route. IoT Hub uses these properties when it routes messages to the fallback endpoint.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesRoutingFallbackRoute
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -841,6 +884,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesRoutingFallbackRout
 }
 
 /// <summary>Storage version of v1api20210702.RouteProperties The properties of a routing rule that your IoT hub uses to route messages to endpoints.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesRoutingRoutes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -869,6 +913,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesRoutingRoutes
 }
 
 /// <summary>Storage version of v1api20210702.RoutingProperties The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesRouting
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -893,6 +938,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesRouting
 }
 
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesStorageEndpointsConnectionString
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -905,6 +951,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesStorageEndpointsCon
 }
 
 /// <summary>Storage version of v1api20210702.ManagedIdentity The properties of the Managed identity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesStorageEndpointsIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -917,6 +964,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesStorageEndpointsIde
 }
 
 /// <summary>Storage version of v1api20210702.StorageEndpointProperties The properties of the Azure Storage endpoint for file upload.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesStorageEndpoints
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -945,6 +993,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesStorageEndpoints
 }
 
 /// <summary>Storage version of v1api20210702.IotHubProperties The properties of an IoT hub.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1029,6 +1078,7 @@ public partial class V1api20210702storageIotHubSpecProperties
 }
 
 /// <summary>Storage version of v1api20210702.IotHubSkuInfo Information about the SKU of the IoT hub.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1045,6 +1095,7 @@ public partial class V1api20210702storageIotHubSpecSku
 }
 
 /// <summary>Storage version of v1api20210702.IotHub_Spec</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1089,6 +1140,7 @@ public partial class V1api20210702storageIotHubSpec
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -1121,6 +1173,7 @@ public partial class V1api20210702storageIotHubStatusConditions
 }
 
 /// <summary>Storage version of v1api20210702.ArmUserIdentity_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatusIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1137,6 +1190,7 @@ public partial class V1api20210702storageIotHubStatusIdentityUserAssignedIdentit
 }
 
 /// <summary>Storage version of v1api20210702.ArmIdentity_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatusIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1161,6 +1215,7 @@ public partial class V1api20210702storageIotHubStatusIdentity
 }
 
 /// <summary>Storage version of v1api20210702.SharedAccessSignatureAuthorizationRule_STATUS The properties of an IoT hub shared access policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatusPropertiesAuthorizationPolicies
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1177,6 +1232,7 @@ public partial class V1api20210702storageIotHubStatusPropertiesAuthorizationPoli
 }
 
 /// <summary>Storage version of v1api20210702.FeedbackProperties_STATUS The properties of the feedback queue for cloud-to-device messages.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatusPropertiesCloudToDeviceFeedback
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1197,6 +1253,7 @@ public partial class V1api20210702storageIotHubStatusPropertiesCloudToDeviceFeed
 }
 
 /// <summary>Storage version of v1api20210702.CloudToDeviceProperties_STATUS The IoT hub cloud-to-device messaging properties.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatusPropertiesCloudToDevice
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1217,6 +1274,7 @@ public partial class V1api20210702storageIotHubStatusPropertiesCloudToDevice
 }
 
 /// <summary>Storage version of v1api20210702.EventHubProperties_STATUS The properties of the provisioned Event Hub-compatible endpoint used by the IoT hub.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatusPropertiesEventHubEndpoints
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1245,6 +1303,7 @@ public partial class V1api20210702storageIotHubStatusPropertiesEventHubEndpoints
 }
 
 /// <summary>Storage version of v1api20210702.IpFilterRule_STATUS The IP filter rules for the IoT hub.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatusPropertiesIpFilterRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1265,6 +1324,7 @@ public partial class V1api20210702storageIotHubStatusPropertiesIpFilterRules
 }
 
 /// <summary>Storage version of v1api20210702.IotHubLocationDescription_STATUS Public representation of one of the locations where a resource is provisioned.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatusPropertiesLocations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1281,6 +1341,7 @@ public partial class V1api20210702storageIotHubStatusPropertiesLocations
 }
 
 /// <summary>Storage version of v1api20210702.MessagingEndpointProperties_STATUS The properties of the messaging endpoints used by this IoT hub.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatusPropertiesMessagingEndpoints
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1301,6 +1362,7 @@ public partial class V1api20210702storageIotHubStatusPropertiesMessagingEndpoint
 }
 
 /// <summary>Storage version of v1api20210702.NetworkRuleSetIpRule_STATUS IP Rule to be applied as part of Network Rule Set</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatusPropertiesNetworkRuleSetsIpRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1321,6 +1383,7 @@ public partial class V1api20210702storageIotHubStatusPropertiesNetworkRuleSetsIp
 }
 
 /// <summary>Storage version of v1api20210702.NetworkRuleSetProperties_STATUS Network Rule Set Properties of IotHub</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatusPropertiesNetworkRuleSets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1341,6 +1404,7 @@ public partial class V1api20210702storageIotHubStatusPropertiesNetworkRuleSets
 }
 
 /// <summary>Storage version of v1api20210702.PrivateEndpointConnection_STATUS The private endpoint connection of an IotHub</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatusPropertiesPrivateEndpointConnections
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1353,6 +1417,7 @@ public partial class V1api20210702storageIotHubStatusPropertiesPrivateEndpointCo
 }
 
 /// <summary>Storage version of v1api20210702.ManagedIdentity_STATUS The properties of the Managed identity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatusPropertiesRoutingEndpointsEventHubsIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1365,6 +1430,7 @@ public partial class V1api20210702storageIotHubStatusPropertiesRoutingEndpointsE
 }
 
 /// <summary>Storage version of v1api20210702.RoutingEventHubProperties_STATUS The properties related to an event hub endpoint.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatusPropertiesRoutingEndpointsEventHubs
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1405,6 +1471,7 @@ public partial class V1api20210702storageIotHubStatusPropertiesRoutingEndpointsE
 }
 
 /// <summary>Storage version of v1api20210702.ManagedIdentity_STATUS The properties of the Managed identity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatusPropertiesRoutingEndpointsServiceBusQueuesIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1417,6 +1484,7 @@ public partial class V1api20210702storageIotHubStatusPropertiesRoutingEndpointsS
 }
 
 /// <summary>Storage version of v1api20210702.RoutingServiceBusQueueEndpointProperties_STATUS The properties related to service bus queue endpoint types.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatusPropertiesRoutingEndpointsServiceBusQueues
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1457,6 +1525,7 @@ public partial class V1api20210702storageIotHubStatusPropertiesRoutingEndpointsS
 }
 
 /// <summary>Storage version of v1api20210702.ManagedIdentity_STATUS The properties of the Managed identity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatusPropertiesRoutingEndpointsServiceBusTopicsIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1469,6 +1538,7 @@ public partial class V1api20210702storageIotHubStatusPropertiesRoutingEndpointsS
 }
 
 /// <summary>Storage version of v1api20210702.RoutingServiceBusTopicEndpointProperties_STATUS The properties related to service bus topic endpoint types.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatusPropertiesRoutingEndpointsServiceBusTopics
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1509,6 +1579,7 @@ public partial class V1api20210702storageIotHubStatusPropertiesRoutingEndpointsS
 }
 
 /// <summary>Storage version of v1api20210702.ManagedIdentity_STATUS The properties of the Managed identity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatusPropertiesRoutingEndpointsStorageContainersIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1521,6 +1592,7 @@ public partial class V1api20210702storageIotHubStatusPropertiesRoutingEndpointsS
 }
 
 /// <summary>Storage version of v1api20210702.RoutingStorageContainerProperties_STATUS The properties related to a storage container endpoint.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatusPropertiesRoutingEndpointsStorageContainers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1577,6 +1649,7 @@ public partial class V1api20210702storageIotHubStatusPropertiesRoutingEndpointsS
 }
 
 /// <summary>Storage version of v1api20210702.RoutingEndpoints_STATUS The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatusPropertiesRoutingEndpoints
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1601,6 +1674,7 @@ public partial class V1api20210702storageIotHubStatusPropertiesRoutingEndpoints
 }
 
 /// <summary>Storage version of v1api20210702.EnrichmentProperties_STATUS The properties of an enrichment that your IoT hub applies to messages delivered to endpoints.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatusPropertiesRoutingEnrichments
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1621,6 +1695,7 @@ public partial class V1api20210702storageIotHubStatusPropertiesRoutingEnrichment
 }
 
 /// <summary>Storage version of v1api20210702.FallbackRouteProperties_STATUS The properties of the fallback route. IoT Hub uses these properties when it routes messages to the fallback endpoint.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatusPropertiesRoutingFallbackRoute
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1649,6 +1724,7 @@ public partial class V1api20210702storageIotHubStatusPropertiesRoutingFallbackRo
 }
 
 /// <summary>Storage version of v1api20210702.RouteProperties_STATUS The properties of a routing rule that your IoT hub uses to route messages to endpoints.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatusPropertiesRoutingRoutes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1677,6 +1753,7 @@ public partial class V1api20210702storageIotHubStatusPropertiesRoutingRoutes
 }
 
 /// <summary>Storage version of v1api20210702.RoutingProperties_STATUS The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatusPropertiesRouting
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1701,6 +1778,7 @@ public partial class V1api20210702storageIotHubStatusPropertiesRouting
 }
 
 /// <summary>Storage version of v1api20210702.ManagedIdentity_STATUS The properties of the Managed identity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatusPropertiesStorageEndpointsIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1713,6 +1791,7 @@ public partial class V1api20210702storageIotHubStatusPropertiesStorageEndpointsI
 }
 
 /// <summary>Storage version of v1api20210702.StorageEndpointProperties_STATUS The properties of the Azure Storage endpoint for file upload.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatusPropertiesStorageEndpoints
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1737,6 +1816,7 @@ public partial class V1api20210702storageIotHubStatusPropertiesStorageEndpoints
 }
 
 /// <summary>Storage version of v1api20210702.IotHubProperties_STATUS The properties of an IoT hub.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatusProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1841,6 +1921,7 @@ public partial class V1api20210702storageIotHubStatusProperties
 }
 
 /// <summary>Storage version of v1api20210702.IotHubSkuInfo_STATUS Information about the SKU of the IoT hub.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1861,6 +1942,7 @@ public partial class V1api20210702storageIotHubStatusSku
 }
 
 /// <summary>Storage version of v1api20210702.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1893,6 +1975,7 @@ public partial class V1api20210702storageIotHubStatusSystemData
 }
 
 /// <summary>Storage version of v1api20210702.IotHub_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1944,8 +2027,9 @@ public partial class V1api20210702storageIotHubStatus
     public string? Type { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Storage version of v1api20210702.IotHub Generator information: - Generated from: /iothub/resource-manager/Microsoft.Devices/stable/2021-07-02/iothub.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1api20210702storageIotHub : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20210702storageIotHubSpec>, IStatus<V1api20210702storageIotHubStatus>
 {
     public const string KubeApiVersion = "v1api20210702storage";

@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dialogflow.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowEntityTypeSpecEntities
 {
     /// <summary>A collection of value synonyms. For example, if the entity type is vegetable, and value is scallions, a synonym could be green onions. For KIND_LIST entity types: * This collection must contain exactly one synonym equal to value.</summary>
@@ -21,6 +22,7 @@ public partial class V1alpha1DialogflowEntityTypeSpecEntities
 }
 
 /// <summary>The project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowEntityTypeSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -37,6 +39,7 @@ public partial class V1alpha1DialogflowEntityTypeSpecProjectRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowEntityTypeSpec
 {
     /// <summary>The name of this entity type to be displayed on the console.</summary>
@@ -65,6 +68,7 @@ public partial class V1alpha1DialogflowEntityTypeSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowEntityTypeStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -89,6 +93,7 @@ public partial class V1alpha1DialogflowEntityTypeStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowEntityTypeStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -104,8 +109,9 @@ public partial class V1alpha1DialogflowEntityTypeStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1DialogflowEntityType : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DialogflowEntityTypeSpec>, IStatus<V1alpha1DialogflowEntityTypeStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

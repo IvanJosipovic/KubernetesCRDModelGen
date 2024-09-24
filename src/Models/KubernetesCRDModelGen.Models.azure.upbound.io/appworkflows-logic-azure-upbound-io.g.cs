@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.logic.azure.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AppWorkflowSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1AppWorkflowSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecForProviderAccessControlAction
 {
     /// <summary>A list of the allowed caller IP address ranges.</summary>
@@ -27,6 +29,7 @@ public partial class V1beta1AppWorkflowSpecForProviderAccessControlAction
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecForProviderAccessControlContent
 {
     /// <summary>A list of the allowed caller IP address ranges.</summary>
@@ -35,6 +38,7 @@ public partial class V1beta1AppWorkflowSpecForProviderAccessControlContent
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecForProviderAccessControlTriggerOpenAuthenticationPolicyClaim
 {
     /// <summary>The OAuth policy name for the Logic App Workflow.</summary>
@@ -47,6 +51,7 @@ public partial class V1beta1AppWorkflowSpecForProviderAccessControlTriggerOpenAu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecForProviderAccessControlTriggerOpenAuthenticationPolicy
 {
     /// <summary>A claim block as defined below.</summary>
@@ -59,6 +64,7 @@ public partial class V1beta1AppWorkflowSpecForProviderAccessControlTriggerOpenAu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecForProviderAccessControlTrigger
 {
     /// <summary>A list of the allowed caller IP address ranges.</summary>
@@ -71,6 +77,7 @@ public partial class V1beta1AppWorkflowSpecForProviderAccessControlTrigger
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecForProviderAccessControlWorkflowManagement
 {
     /// <summary>A list of the allowed caller IP address ranges.</summary>
@@ -79,6 +86,7 @@ public partial class V1beta1AppWorkflowSpecForProviderAccessControlWorkflowManag
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecForProviderAccessControl
 {
     /// <summary>A action block as defined below.</summary>
@@ -99,6 +107,7 @@ public partial class V1beta1AppWorkflowSpecForProviderAccessControl
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecForProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Logic App Workflow.</summary>
@@ -110,6 +119,7 @@ public partial class V1beta1AppWorkflowSpecForProviderIdentity
     public string? Type { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AppWorkflowSpecForProviderResourceGroupNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -120,6 +130,7 @@ public enum V1beta1AppWorkflowSpecForProviderResourceGroupNameRefPolicyResolutio
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AppWorkflowSpecForProviderResourceGroupNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -131,6 +142,7 @@ public enum V1beta1AppWorkflowSpecForProviderResourceGroupNameRefPolicyResolveEn
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -145,6 +157,7 @@ public partial class V1beta1AppWorkflowSpecForProviderResourceGroupNameRefPolicy
 }
 
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -156,6 +169,7 @@ public partial class V1beta1AppWorkflowSpecForProviderResourceGroupNameRef
     public V1beta1AppWorkflowSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AppWorkflowSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -166,6 +180,7 @@ public enum V1beta1AppWorkflowSpecForProviderResourceGroupNameSelectorPolicyReso
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AppWorkflowSpecForProviderResourceGroupNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -177,6 +192,7 @@ public enum V1beta1AppWorkflowSpecForProviderResourceGroupNameSelectorPolicyReso
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -191,6 +207,7 @@ public partial class V1beta1AppWorkflowSpecForProviderResourceGroupNameSelectorP
 }
 
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -207,6 +224,7 @@ public partial class V1beta1AppWorkflowSpecForProviderResourceGroupNameSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecForProvider
 {
     /// <summary>A access_control block as defined below.</summary>
@@ -267,6 +285,7 @@ public partial class V1beta1AppWorkflowSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecInitProviderAccessControlAction
 {
     /// <summary>A list of the allowed caller IP address ranges.</summary>
@@ -275,6 +294,7 @@ public partial class V1beta1AppWorkflowSpecInitProviderAccessControlAction
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecInitProviderAccessControlContent
 {
     /// <summary>A list of the allowed caller IP address ranges.</summary>
@@ -283,6 +303,7 @@ public partial class V1beta1AppWorkflowSpecInitProviderAccessControlContent
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecInitProviderAccessControlTriggerOpenAuthenticationPolicyClaim
 {
     /// <summary>The OAuth policy name for the Logic App Workflow.</summary>
@@ -295,6 +316,7 @@ public partial class V1beta1AppWorkflowSpecInitProviderAccessControlTriggerOpenA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecInitProviderAccessControlTriggerOpenAuthenticationPolicy
 {
     /// <summary>A claim block as defined below.</summary>
@@ -307,6 +329,7 @@ public partial class V1beta1AppWorkflowSpecInitProviderAccessControlTriggerOpenA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecInitProviderAccessControlTrigger
 {
     /// <summary>A list of the allowed caller IP address ranges.</summary>
@@ -319,6 +342,7 @@ public partial class V1beta1AppWorkflowSpecInitProviderAccessControlTrigger
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecInitProviderAccessControlWorkflowManagement
 {
     /// <summary>A list of the allowed caller IP address ranges.</summary>
@@ -327,6 +351,7 @@ public partial class V1beta1AppWorkflowSpecInitProviderAccessControlWorkflowMana
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecInitProviderAccessControl
 {
     /// <summary>A action block as defined below.</summary>
@@ -347,6 +372,7 @@ public partial class V1beta1AppWorkflowSpecInitProviderAccessControl
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecInitProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Logic App Workflow.</summary>
@@ -359,6 +385,7 @@ public partial class V1beta1AppWorkflowSpecInitProviderIdentity
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecInitProvider
 {
     /// <summary>A access_control block as defined below.</summary>
@@ -406,6 +433,7 @@ public partial class V1beta1AppWorkflowSpecInitProvider
     public string? WorkflowVersion { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AppWorkflowSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -428,6 +456,7 @@ public enum V1beta1AppWorkflowSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AppWorkflowSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -438,6 +467,7 @@ public enum V1beta1AppWorkflowSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AppWorkflowSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -449,6 +479,7 @@ public enum V1beta1AppWorkflowSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -463,6 +494,7 @@ public partial class V1beta1AppWorkflowSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -474,6 +506,7 @@ public partial class V1beta1AppWorkflowSpecProviderConfigRef
     public V1beta1AppWorkflowSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AppWorkflowSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -484,6 +517,7 @@ public enum V1beta1AppWorkflowSpecPublishConnectionDetailsToConfigRefPolicyResol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AppWorkflowSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -495,6 +529,7 @@ public enum V1beta1AppWorkflowSpecPublishConnectionDetailsToConfigRefPolicyResol
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -509,6 +544,7 @@ public partial class V1beta1AppWorkflowSpecPublishConnectionDetailsToConfigRefPo
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -521,6 +557,7 @@ public partial class V1beta1AppWorkflowSpecPublishConnectionDetailsToConfigRef
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -537,6 +574,7 @@ public partial class V1beta1AppWorkflowSpecPublishConnectionDetailsToMetadata
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -553,6 +591,7 @@ public partial class V1beta1AppWorkflowSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -565,6 +604,7 @@ public partial class V1beta1AppWorkflowSpecWriteConnectionSecretToRef
 }
 
 /// <summary>AppWorkflowSpec defines the desired state of AppWorkflow</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -598,6 +638,7 @@ public partial class V1beta1AppWorkflowSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowStatusAtProviderAccessControlAction
 {
     /// <summary>A list of the allowed caller IP address ranges.</summary>
@@ -606,6 +647,7 @@ public partial class V1beta1AppWorkflowStatusAtProviderAccessControlAction
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowStatusAtProviderAccessControlContent
 {
     /// <summary>A list of the allowed caller IP address ranges.</summary>
@@ -614,6 +656,7 @@ public partial class V1beta1AppWorkflowStatusAtProviderAccessControlContent
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowStatusAtProviderAccessControlTriggerOpenAuthenticationPolicyClaim
 {
     /// <summary>The OAuth policy name for the Logic App Workflow.</summary>
@@ -626,6 +669,7 @@ public partial class V1beta1AppWorkflowStatusAtProviderAccessControlTriggerOpenA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowStatusAtProviderAccessControlTriggerOpenAuthenticationPolicy
 {
     /// <summary>A claim block as defined below.</summary>
@@ -638,6 +682,7 @@ public partial class V1beta1AppWorkflowStatusAtProviderAccessControlTriggerOpenA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowStatusAtProviderAccessControlTrigger
 {
     /// <summary>A list of the allowed caller IP address ranges.</summary>
@@ -650,6 +695,7 @@ public partial class V1beta1AppWorkflowStatusAtProviderAccessControlTrigger
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowStatusAtProviderAccessControlWorkflowManagement
 {
     /// <summary>A list of the allowed caller IP address ranges.</summary>
@@ -658,6 +704,7 @@ public partial class V1beta1AppWorkflowStatusAtProviderAccessControlWorkflowMana
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowStatusAtProviderAccessControl
 {
     /// <summary>A action block as defined below.</summary>
@@ -678,6 +725,7 @@ public partial class V1beta1AppWorkflowStatusAtProviderAccessControl
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowStatusAtProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Logic App Workflow.</summary>
@@ -698,6 +746,7 @@ public partial class V1beta1AppWorkflowStatusAtProviderIdentity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowStatusAtProvider
 {
     /// <summary>A access_control block as defined below.</summary>
@@ -774,6 +823,7 @@ public partial class V1beta1AppWorkflowStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -802,6 +852,7 @@ public partial class V1beta1AppWorkflowStatusConditions
 }
 
 /// <summary>AppWorkflowStatus defines the observed state of AppWorkflow.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowStatus
 {
     /// <summary></summary>
@@ -817,8 +868,9 @@ public partial class V1beta1AppWorkflowStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>AppWorkflow is the Schema for the AppWorkflows API. Manages a Logic App Workflow.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1AppWorkflow : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AppWorkflowSpec>, IStatus<V1beta1AppWorkflowStatus>
 {
     public const string KubeApiVersion = "v1beta1";

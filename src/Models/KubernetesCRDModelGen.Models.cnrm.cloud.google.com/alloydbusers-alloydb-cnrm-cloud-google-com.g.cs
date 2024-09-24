@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.alloydb.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlloyDBUserSpecClusterRef
 {
     /// <summary>Allowed value: The `name` field of an `AlloyDBCluster` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1AlloyDBUserSpecClusterRef
 }
 
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlloyDBUserSpecPasswordValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -37,6 +39,7 @@ public partial class V1beta1AlloyDBUserSpecPasswordValueFromSecretKeyRef
 }
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlloyDBUserSpecPasswordValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -45,6 +48,7 @@ public partial class V1beta1AlloyDBUserSpecPasswordValueFrom
 }
 
 /// <summary>Password for this database user.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlloyDBUserSpecPassword
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -57,6 +61,7 @@ public partial class V1beta1AlloyDBUserSpecPassword
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlloyDBUserSpec
 {
     /// <summary></summary>
@@ -81,6 +86,7 @@ public partial class V1beta1AlloyDBUserSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlloyDBUserStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -105,6 +111,7 @@ public partial class V1beta1AlloyDBUserStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlloyDBUserStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -120,8 +127,9 @@ public partial class V1beta1AlloyDBUserStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1AlloyDBUser : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AlloyDBUserSpec>, IStatus<V1beta1AlloyDBUserStatus>
 {
     public const string KubeApiVersion = "v1beta1";

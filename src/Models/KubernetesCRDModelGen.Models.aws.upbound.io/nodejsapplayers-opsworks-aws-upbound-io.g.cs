@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.opsworks.aws.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeJSAppLayerSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1NodeJSAppLayerSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecForProviderCloudwatchConfigurationLogStreams
 {
     /// <summary></summary>
@@ -67,6 +69,7 @@ public partial class V1beta1NodeJSAppLayerSpecForProviderCloudwatchConfiguration
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecForProviderCloudwatchConfiguration
 {
     /// <summary></summary>
@@ -78,6 +81,7 @@ public partial class V1beta1NodeJSAppLayerSpecForProviderCloudwatchConfiguration
     public IList<V1beta1NodeJSAppLayerSpecForProviderCloudwatchConfigurationLogStreams>? LogStreams { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeJSAppLayerSpecForProviderCustomSecurityGroupIdRefsPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -88,6 +92,7 @@ public enum V1beta1NodeJSAppLayerSpecForProviderCustomSecurityGroupIdRefsPolicyR
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeJSAppLayerSpecForProviderCustomSecurityGroupIdRefsPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -99,6 +104,7 @@ public enum V1beta1NodeJSAppLayerSpecForProviderCustomSecurityGroupIdRefsPolicyR
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecForProviderCustomSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -113,6 +119,7 @@ public partial class V1beta1NodeJSAppLayerSpecForProviderCustomSecurityGroupIdRe
 }
 
 /// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecForProviderCustomSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -124,6 +131,7 @@ public partial class V1beta1NodeJSAppLayerSpecForProviderCustomSecurityGroupIdRe
     public V1beta1NodeJSAppLayerSpecForProviderCustomSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeJSAppLayerSpecForProviderCustomSecurityGroupIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -134,6 +142,7 @@ public enum V1beta1NodeJSAppLayerSpecForProviderCustomSecurityGroupIdSelectorPol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeJSAppLayerSpecForProviderCustomSecurityGroupIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -145,6 +154,7 @@ public enum V1beta1NodeJSAppLayerSpecForProviderCustomSecurityGroupIdSelectorPol
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecForProviderCustomSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -159,6 +169,7 @@ public partial class V1beta1NodeJSAppLayerSpecForProviderCustomSecurityGroupIdSe
 }
 
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate customSecurityGroupIds.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecForProviderCustomSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -175,6 +186,7 @@ public partial class V1beta1NodeJSAppLayerSpecForProviderCustomSecurityGroupIdSe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecForProviderEbsVolume
 {
     /// <summary></summary>
@@ -207,6 +219,7 @@ public partial class V1beta1NodeJSAppLayerSpecForProviderEbsVolume
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecForProviderLoadBasedAutoScalingDownscaling
 {
     /// <summary></summary>
@@ -239,6 +252,7 @@ public partial class V1beta1NodeJSAppLayerSpecForProviderLoadBasedAutoScalingDow
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecForProviderLoadBasedAutoScalingUpscaling
 {
     /// <summary></summary>
@@ -271,6 +285,7 @@ public partial class V1beta1NodeJSAppLayerSpecForProviderLoadBasedAutoScalingUps
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecForProviderLoadBasedAutoScaling
 {
     /// <summary></summary>
@@ -286,6 +301,7 @@ public partial class V1beta1NodeJSAppLayerSpecForProviderLoadBasedAutoScaling
     public IList<V1beta1NodeJSAppLayerSpecForProviderLoadBasedAutoScalingUpscaling>? Upscaling { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeJSAppLayerSpecForProviderStackIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -296,6 +312,7 @@ public enum V1beta1NodeJSAppLayerSpecForProviderStackIdRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeJSAppLayerSpecForProviderStackIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -307,6 +324,7 @@ public enum V1beta1NodeJSAppLayerSpecForProviderStackIdRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecForProviderStackIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -321,6 +339,7 @@ public partial class V1beta1NodeJSAppLayerSpecForProviderStackIdRefPolicy
 }
 
 /// <summary>Reference to a Stack in opsworks to populate stackId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecForProviderStackIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -332,6 +351,7 @@ public partial class V1beta1NodeJSAppLayerSpecForProviderStackIdRef
     public V1beta1NodeJSAppLayerSpecForProviderStackIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeJSAppLayerSpecForProviderStackIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -342,6 +362,7 @@ public enum V1beta1NodeJSAppLayerSpecForProviderStackIdSelectorPolicyResolutionE
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeJSAppLayerSpecForProviderStackIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -353,6 +374,7 @@ public enum V1beta1NodeJSAppLayerSpecForProviderStackIdSelectorPolicyResolveEnum
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecForProviderStackIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -367,6 +389,7 @@ public partial class V1beta1NodeJSAppLayerSpecForProviderStackIdSelectorPolicy
 }
 
 /// <summary>Selector for a Stack in opsworks to populate stackId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecForProviderStackIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -383,6 +406,7 @@ public partial class V1beta1NodeJSAppLayerSpecForProviderStackIdSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecForProvider
 {
     /// <summary>Whether to automatically assign an elastic IP address to the layer's instances.</summary>
@@ -499,6 +523,7 @@ public partial class V1beta1NodeJSAppLayerSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecInitProviderCloudwatchConfigurationLogStreams
 {
     /// <summary></summary>
@@ -547,6 +572,7 @@ public partial class V1beta1NodeJSAppLayerSpecInitProviderCloudwatchConfiguratio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecInitProviderCloudwatchConfiguration
 {
     /// <summary></summary>
@@ -558,6 +584,7 @@ public partial class V1beta1NodeJSAppLayerSpecInitProviderCloudwatchConfiguratio
     public IList<V1beta1NodeJSAppLayerSpecInitProviderCloudwatchConfigurationLogStreams>? LogStreams { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeJSAppLayerSpecInitProviderCustomSecurityGroupIdRefsPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -568,6 +595,7 @@ public enum V1beta1NodeJSAppLayerSpecInitProviderCustomSecurityGroupIdRefsPolicy
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeJSAppLayerSpecInitProviderCustomSecurityGroupIdRefsPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -579,6 +607,7 @@ public enum V1beta1NodeJSAppLayerSpecInitProviderCustomSecurityGroupIdRefsPolicy
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecInitProviderCustomSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -593,6 +622,7 @@ public partial class V1beta1NodeJSAppLayerSpecInitProviderCustomSecurityGroupIdR
 }
 
 /// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecInitProviderCustomSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -604,6 +634,7 @@ public partial class V1beta1NodeJSAppLayerSpecInitProviderCustomSecurityGroupIdR
     public V1beta1NodeJSAppLayerSpecInitProviderCustomSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeJSAppLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -614,6 +645,7 @@ public enum V1beta1NodeJSAppLayerSpecInitProviderCustomSecurityGroupIdSelectorPo
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeJSAppLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -625,6 +657,7 @@ public enum V1beta1NodeJSAppLayerSpecInitProviderCustomSecurityGroupIdSelectorPo
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -639,6 +672,7 @@ public partial class V1beta1NodeJSAppLayerSpecInitProviderCustomSecurityGroupIdS
 }
 
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate customSecurityGroupIds.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecInitProviderCustomSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -655,6 +689,7 @@ public partial class V1beta1NodeJSAppLayerSpecInitProviderCustomSecurityGroupIdS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecInitProviderEbsVolume
 {
     /// <summary></summary>
@@ -687,6 +722,7 @@ public partial class V1beta1NodeJSAppLayerSpecInitProviderEbsVolume
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecInitProviderLoadBasedAutoScalingDownscaling
 {
     /// <summary></summary>
@@ -719,6 +755,7 @@ public partial class V1beta1NodeJSAppLayerSpecInitProviderLoadBasedAutoScalingDo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecInitProviderLoadBasedAutoScalingUpscaling
 {
     /// <summary></summary>
@@ -751,6 +788,7 @@ public partial class V1beta1NodeJSAppLayerSpecInitProviderLoadBasedAutoScalingUp
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecInitProviderLoadBasedAutoScaling
 {
     /// <summary></summary>
@@ -766,6 +804,7 @@ public partial class V1beta1NodeJSAppLayerSpecInitProviderLoadBasedAutoScaling
     public IList<V1beta1NodeJSAppLayerSpecInitProviderLoadBasedAutoScalingUpscaling>? Upscaling { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeJSAppLayerSpecInitProviderStackIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -776,6 +815,7 @@ public enum V1beta1NodeJSAppLayerSpecInitProviderStackIdRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeJSAppLayerSpecInitProviderStackIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -787,6 +827,7 @@ public enum V1beta1NodeJSAppLayerSpecInitProviderStackIdRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecInitProviderStackIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -801,6 +842,7 @@ public partial class V1beta1NodeJSAppLayerSpecInitProviderStackIdRefPolicy
 }
 
 /// <summary>Reference to a Stack in opsworks to populate stackId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecInitProviderStackIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -812,6 +854,7 @@ public partial class V1beta1NodeJSAppLayerSpecInitProviderStackIdRef
     public V1beta1NodeJSAppLayerSpecInitProviderStackIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeJSAppLayerSpecInitProviderStackIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -822,6 +865,7 @@ public enum V1beta1NodeJSAppLayerSpecInitProviderStackIdSelectorPolicyResolution
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeJSAppLayerSpecInitProviderStackIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -833,6 +877,7 @@ public enum V1beta1NodeJSAppLayerSpecInitProviderStackIdSelectorPolicyResolveEnu
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecInitProviderStackIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -847,6 +892,7 @@ public partial class V1beta1NodeJSAppLayerSpecInitProviderStackIdSelectorPolicy
 }
 
 /// <summary>Selector for a Stack in opsworks to populate stackId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecInitProviderStackIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -863,6 +909,7 @@ public partial class V1beta1NodeJSAppLayerSpecInitProviderStackIdSelector
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecInitProvider
 {
     /// <summary>Whether to automatically assign an elastic IP address to the layer's instances.</summary>
@@ -978,6 +1025,7 @@ public partial class V1beta1NodeJSAppLayerSpecInitProvider
     public bool? UseEbsOptimizedInstances { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeJSAppLayerSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -1000,6 +1048,7 @@ public enum V1beta1NodeJSAppLayerSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeJSAppLayerSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1010,6 +1059,7 @@ public enum V1beta1NodeJSAppLayerSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeJSAppLayerSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1021,6 +1071,7 @@ public enum V1beta1NodeJSAppLayerSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1035,6 +1086,7 @@ public partial class V1beta1NodeJSAppLayerSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1046,6 +1098,7 @@ public partial class V1beta1NodeJSAppLayerSpecProviderConfigRef
     public V1beta1NodeJSAppLayerSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeJSAppLayerSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1056,6 +1109,7 @@ public enum V1beta1NodeJSAppLayerSpecPublishConnectionDetailsToConfigRefPolicyRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeJSAppLayerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1067,6 +1121,7 @@ public enum V1beta1NodeJSAppLayerSpecPublishConnectionDetailsToConfigRefPolicyRe
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1081,6 +1136,7 @@ public partial class V1beta1NodeJSAppLayerSpecPublishConnectionDetailsToConfigRe
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1093,6 +1149,7 @@ public partial class V1beta1NodeJSAppLayerSpecPublishConnectionDetailsToConfigRe
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1109,6 +1166,7 @@ public partial class V1beta1NodeJSAppLayerSpecPublishConnectionDetailsToMetadata
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1125,6 +1183,7 @@ public partial class V1beta1NodeJSAppLayerSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1137,6 +1196,7 @@ public partial class V1beta1NodeJSAppLayerSpecWriteConnectionSecretToRef
 }
 
 /// <summary>NodeJSAppLayerSpec defines the desired state of NodeJSAppLayer</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1170,6 +1230,7 @@ public partial class V1beta1NodeJSAppLayerSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerStatusAtProviderCloudwatchConfigurationLogStreams
 {
     /// <summary></summary>
@@ -1218,6 +1279,7 @@ public partial class V1beta1NodeJSAppLayerStatusAtProviderCloudwatchConfiguratio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerStatusAtProviderCloudwatchConfiguration
 {
     /// <summary></summary>
@@ -1230,6 +1292,7 @@ public partial class V1beta1NodeJSAppLayerStatusAtProviderCloudwatchConfiguratio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerStatusAtProviderEbsVolume
 {
     /// <summary></summary>
@@ -1262,6 +1325,7 @@ public partial class V1beta1NodeJSAppLayerStatusAtProviderEbsVolume
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerStatusAtProviderLoadBasedAutoScalingDownscaling
 {
     /// <summary></summary>
@@ -1294,6 +1358,7 @@ public partial class V1beta1NodeJSAppLayerStatusAtProviderLoadBasedAutoScalingDo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerStatusAtProviderLoadBasedAutoScalingUpscaling
 {
     /// <summary></summary>
@@ -1326,6 +1391,7 @@ public partial class V1beta1NodeJSAppLayerStatusAtProviderLoadBasedAutoScalingUp
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerStatusAtProviderLoadBasedAutoScaling
 {
     /// <summary></summary>
@@ -1342,6 +1408,7 @@ public partial class V1beta1NodeJSAppLayerStatusAtProviderLoadBasedAutoScaling
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerStatusAtProvider
 {
     /// <summary>The Amazon Resource Name(ARN) of the layer.</summary>
@@ -1454,6 +1521,7 @@ public partial class V1beta1NodeJSAppLayerStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1482,6 +1550,7 @@ public partial class V1beta1NodeJSAppLayerStatusConditions
 }
 
 /// <summary>NodeJSAppLayerStatus defines the observed state of NodeJSAppLayer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeJSAppLayerStatus
 {
     /// <summary></summary>
@@ -1497,8 +1566,9 @@ public partial class V1beta1NodeJSAppLayerStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>NodeJSAppLayer is the Schema for the NodeJSAppLayers API. Provides an OpsWorks NodeJS application layer resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1NodeJSAppLayer : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NodeJSAppLayerSpec>, IStatus<V1beta1NodeJSAppLayerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

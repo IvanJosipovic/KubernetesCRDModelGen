@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.healthcare.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareConsentStoreSpec
 {
     /// <summary>Immutable. Identifies the dataset addressed by this request. Must be in the format 'projects/{project}/locations/{location}/datasets/{dataset}'.</summary>
@@ -29,6 +30,7 @@ public partial class V1alpha1HealthcareConsentStoreSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareConsentStoreStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -53,6 +55,7 @@ public partial class V1alpha1HealthcareConsentStoreStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareConsentStoreStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -64,8 +67,9 @@ public partial class V1alpha1HealthcareConsentStoreStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1HealthcareConsentStore : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1HealthcareConsentStoreSpec>, IStatus<V1alpha1HealthcareConsentStoreStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

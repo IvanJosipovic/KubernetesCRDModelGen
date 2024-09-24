@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a network.azure.com/VirtualNetwork resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworksVirtualNetworkPeeringSpecOwner
 {
     /// <summary></summary>
@@ -21,6 +22,7 @@ public partial class V1api20201101storageVirtualNetworksVirtualNetworkPeeringSpe
 }
 
 /// <summary>Storage version of v1api20201101.AddressSpace AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworksVirtualNetworkPeeringSpecRemoteAddressSpace
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -33,6 +35,7 @@ public partial class V1api20201101storageVirtualNetworksVirtualNetworkPeeringSpe
 }
 
 /// <summary>Storage version of v1api20201101.VirtualNetworkBgpCommunities Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworksVirtualNetworkPeeringSpecRemoteBgpCommunities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -45,6 +48,7 @@ public partial class V1api20201101storageVirtualNetworksVirtualNetworkPeeringSpe
 }
 
 /// <summary>Reference: Resource ID.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworksVirtualNetworkPeeringSpecRemoteVirtualNetworkReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -65,6 +69,7 @@ public partial class V1api20201101storageVirtualNetworksVirtualNetworkPeeringSpe
 }
 
 /// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworksVirtualNetworkPeeringSpecRemoteVirtualNetwork
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -77,6 +82,7 @@ public partial class V1api20201101storageVirtualNetworksVirtualNetworkPeeringSpe
 }
 
 /// <summary>Storage version of v1api20201101.VirtualNetworks_VirtualNetworkPeering_Spec</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworksVirtualNetworkPeeringSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -133,6 +139,7 @@ public partial class V1api20201101storageVirtualNetworksVirtualNetworkPeeringSpe
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworksVirtualNetworkPeeringStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -165,6 +172,7 @@ public partial class V1api20201101storageVirtualNetworksVirtualNetworkPeeringSta
 }
 
 /// <summary>Storage version of v1api20201101.AddressSpace_STATUS AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworksVirtualNetworkPeeringStatusRemoteAddressSpace
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -177,6 +185,7 @@ public partial class V1api20201101storageVirtualNetworksVirtualNetworkPeeringSta
 }
 
 /// <summary>Storage version of v1api20201101.VirtualNetworkBgpCommunities_STATUS Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworksVirtualNetworkPeeringStatusRemoteBgpCommunities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -193,6 +202,7 @@ public partial class V1api20201101storageVirtualNetworksVirtualNetworkPeeringSta
 }
 
 /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworksVirtualNetworkPeeringStatusRemoteVirtualNetwork
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -205,6 +215,7 @@ public partial class V1api20201101storageVirtualNetworksVirtualNetworkPeeringSta
 }
 
 /// <summary>Storage version of v1api20201101.VirtualNetworks_VirtualNetworkPeering_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworksVirtualNetworkPeeringStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -276,8 +287,9 @@ public partial class V1api20201101storageVirtualNetworksVirtualNetworkPeeringSta
     public bool? UseRemoteGateways { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Storage version of v1api20201101.VirtualNetworksVirtualNetworkPeering Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/virtualNetwork.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/virtualNetworkPeerings/{virtualNetworkPeeringName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1api20201101storageVirtualNetworksVirtualNetworkPeering : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20201101storageVirtualNetworksVirtualNetworkPeeringSpec>, IStatus<V1api20201101storageVirtualNetworksVirtualNetworkPeeringStatus>
 {
     public const string KubeApiVersion = "v1api20201101storage";

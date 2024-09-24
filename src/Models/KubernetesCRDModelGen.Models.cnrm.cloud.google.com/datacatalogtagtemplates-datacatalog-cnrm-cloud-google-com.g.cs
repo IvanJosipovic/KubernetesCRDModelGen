@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datacatalog.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogTagTemplateSpecFieldsTypeEnumTypeAllowedValues
 {
     /// <summary>The display name of the enum value.</summary>
@@ -17,6 +18,7 @@ public partial class V1alpha1DataCatalogTagTemplateSpecFieldsTypeEnumTypeAllowed
 }
 
 /// <summary>Represents an enum type.  Exactly one of 'primitive_type' or 'enum_type' must be set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogTagTemplateSpecFieldsTypeEnumType
 {
     /// <summary>The set of allowed values for this enum. The display names of the values must be case-insensitively unique within this set. Currently, enum values can only be added to the list of allowed values. Deletion and renaming of enum values are not supported. Can have up to 500 allowed values.</summary>
@@ -25,6 +27,7 @@ public partial class V1alpha1DataCatalogTagTemplateSpecFieldsTypeEnumType
 }
 
 /// <summary>The type of value this tag field can contain.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogTagTemplateSpecFieldsType
 {
     /// <summary>Represents an enum type.  Exactly one of 'primitive_type' or 'enum_type' must be set.</summary>
@@ -37,6 +40,7 @@ public partial class V1alpha1DataCatalogTagTemplateSpecFieldsType
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogTagTemplateSpecFields
 {
     /// <summary>A description for this field.</summary>
@@ -69,6 +73,7 @@ public partial class V1alpha1DataCatalogTagTemplateSpecFields
 }
 
 /// <summary>The project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogTagTemplateSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -85,6 +90,7 @@ public partial class V1alpha1DataCatalogTagTemplateSpecProjectRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogTagTemplateSpec
 {
     /// <summary>The display name for this template.</summary>
@@ -117,6 +123,7 @@ public partial class V1alpha1DataCatalogTagTemplateSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogTagTemplateStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -141,6 +148,7 @@ public partial class V1alpha1DataCatalogTagTemplateStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogTagTemplateStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -156,8 +164,9 @@ public partial class V1alpha1DataCatalogTagTemplateStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1DataCatalogTagTemplate : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DataCatalogTagTemplateSpec>, IStatus<V1alpha1DataCatalogTagTemplateStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

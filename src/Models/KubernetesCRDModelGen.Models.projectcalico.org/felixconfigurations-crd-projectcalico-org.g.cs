@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1FelixConfigurationSpecAwsSrcDstCheckEnum
 {
     [EnumMember(Value = "DoNothing"), JsonStringEnumMemberName("DoNothing")]
@@ -21,6 +22,7 @@ public enum V1FelixConfigurationSpecAwsSrcDstCheckEnum
     Disable
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1FelixConfigurationSpecBpfConnectTimeLoadBalancingEnum
 {
     [EnumMember(Value = "TCP"), JsonStringEnumMemberName("TCP")]
@@ -34,6 +36,7 @@ public enum V1FelixConfigurationSpecBpfConnectTimeLoadBalancingEnum
     Disabled
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1FelixConfigurationSpecBpfHostNetworkedNATWithoutCTLBEnum
 {
     [EnumMember(Value = "Enabled"), JsonStringEnumMemberName("Enabled")]
@@ -45,6 +48,7 @@ public enum V1FelixConfigurationSpecBpfHostNetworkedNATWithoutCTLBEnum
 }
 
 /// <summary>ProtoPort is combination of protocol, port, and CIDR. Protocol and port must be specified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1FelixConfigurationSpecFailsafeInboundHostPorts
 {
     /// <summary></summary>
@@ -61,6 +65,7 @@ public partial class V1FelixConfigurationSpecFailsafeInboundHostPorts
 }
 
 /// <summary>ProtoPort is combination of protocol, port, and CIDR. Protocol and port must be specified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1FelixConfigurationSpecFailsafeOutboundHostPorts
 {
     /// <summary></summary>
@@ -76,6 +81,7 @@ public partial class V1FelixConfigurationSpecFailsafeOutboundHostPorts
     public string Protocol { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1FelixConfigurationSpecFloatingIPsEnum
 {
     [EnumMember(Value = "Enabled"), JsonStringEnumMemberName("Enabled")]
@@ -87,6 +93,7 @@ public enum V1FelixConfigurationSpecFloatingIPsEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1FelixConfigurationSpecHealthTimeoutOverrides
 {
     /// <summary></summary>
@@ -99,6 +106,7 @@ public partial class V1FelixConfigurationSpecHealthTimeoutOverrides
 }
 
 /// <summary>Deprecated in favor of RouteTableRanges. Calico programs additional Linux route tables for various purposes. RouteTableRange specifies the indices of the route tables that Calico should use.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1FelixConfigurationSpecRouteTableRange
 {
     /// <summary></summary>
@@ -111,6 +119,7 @@ public partial class V1FelixConfigurationSpecRouteTableRange
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1FelixConfigurationSpecRouteTableRanges
 {
     /// <summary></summary>
@@ -122,6 +131,7 @@ public partial class V1FelixConfigurationSpecRouteTableRanges
     public int Min { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1FelixConfigurationSpecWindowsManageFirewallRulesEnum
 {
     [EnumMember(Value = "Enabled"), JsonStringEnumMemberName("Enabled")]
@@ -133,6 +143,7 @@ public enum V1FelixConfigurationSpecWindowsManageFirewallRulesEnum
 }
 
 /// <summary>FelixConfigurationSpec contains the values of the Felix configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1FelixConfigurationSpec
 {
     /// <summary>AllowIPIPPacketsFromWorkloads controls whether Felix will add a rule to drop IPIP encapsulated traffic from workloads [Default: false]</summary>
@@ -725,8 +736,9 @@ public partial class V1FelixConfigurationSpec
     public string? XdpRefreshInterval { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Felix Configuration contains the configuration for Felix.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1FelixConfiguration : IKubernetesObject<V1ObjectMeta>, ISpec<V1FelixConfigurationSpec>
 {
     public const string KubeApiVersion = "v1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.recoveryservices.azure.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupPolicyVMWorkloadSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1BackupPolicyVMWorkloadSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderProtectionPolicyBackup
 {
     /// <summary>The backup frequency for the VM Workload Backup Policy. Possible values are Daily and Weekly.</summary>
@@ -39,6 +41,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderProtectionPolic
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderProtectionPolicyRetentionDaily
 {
     /// <summary>The count that is used to count retention duration with duration type Days. Possible values are between 7 and 35.</summary>
@@ -47,6 +50,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderProtectionPolic
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderProtectionPolicyRetentionMonthly
 {
     /// <summary>The count that is used to count retention duration with duration type Days. Possible values are between 7 and 35.</summary>
@@ -71,6 +75,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderProtectionPolic
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderProtectionPolicyRetentionWeekly
 {
     /// <summary>The count that is used to count retention duration with duration type Days. Possible values are between 7 and 35.</summary>
@@ -83,6 +88,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderProtectionPolic
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderProtectionPolicyRetentionYearly
 {
     /// <summary>The count that is used to count retention duration with duration type Days. Possible values are between 7 and 35.</summary>
@@ -111,6 +117,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderProtectionPolic
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderProtectionPolicySimpleRetention
 {
     /// <summary>The count that is used to count retention duration with duration type Days. Possible values are between 7 and 35.</summary>
@@ -119,6 +126,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderProtectionPolic
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderProtectionPolicy
 {
     /// <summary>A backup block as defined below.</summary>
@@ -150,6 +158,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderProtectionPolic
     public IList<V1beta1BackupPolicyVMWorkloadSpecForProviderProtectionPolicySimpleRetention>? SimpleRetention { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupPolicyVMWorkloadSpecForProviderRecoveryVaultNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -160,6 +169,7 @@ public enum V1beta1BackupPolicyVMWorkloadSpecForProviderRecoveryVaultNameRefPoli
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupPolicyVMWorkloadSpecForProviderRecoveryVaultNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -171,6 +181,7 @@ public enum V1beta1BackupPolicyVMWorkloadSpecForProviderRecoveryVaultNameRefPoli
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderRecoveryVaultNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -185,6 +196,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderRecoveryVaultNa
 }
 
 /// <summary>Reference to a Vault in recoveryservices to populate recoveryVaultName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderRecoveryVaultNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -196,6 +208,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderRecoveryVaultNa
     public V1beta1BackupPolicyVMWorkloadSpecForProviderRecoveryVaultNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupPolicyVMWorkloadSpecForProviderRecoveryVaultNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -206,6 +219,7 @@ public enum V1beta1BackupPolicyVMWorkloadSpecForProviderRecoveryVaultNameSelecto
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupPolicyVMWorkloadSpecForProviderRecoveryVaultNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -217,6 +231,7 @@ public enum V1beta1BackupPolicyVMWorkloadSpecForProviderRecoveryVaultNameSelecto
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderRecoveryVaultNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -231,6 +246,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderRecoveryVaultNa
 }
 
 /// <summary>Selector for a Vault in recoveryservices to populate recoveryVaultName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderRecoveryVaultNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -246,6 +262,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderRecoveryVaultNa
     public V1beta1BackupPolicyVMWorkloadSpecForProviderRecoveryVaultNameSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupPolicyVMWorkloadSpecForProviderResourceGroupNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -256,6 +273,7 @@ public enum V1beta1BackupPolicyVMWorkloadSpecForProviderResourceGroupNameRefPoli
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupPolicyVMWorkloadSpecForProviderResourceGroupNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -267,6 +285,7 @@ public enum V1beta1BackupPolicyVMWorkloadSpecForProviderResourceGroupNameRefPoli
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -281,6 +300,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderResourceGroupNa
 }
 
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -292,6 +312,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderResourceGroupNa
     public V1beta1BackupPolicyVMWorkloadSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupPolicyVMWorkloadSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -302,6 +323,7 @@ public enum V1beta1BackupPolicyVMWorkloadSpecForProviderResourceGroupNameSelecto
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupPolicyVMWorkloadSpecForProviderResourceGroupNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -313,6 +335,7 @@ public enum V1beta1BackupPolicyVMWorkloadSpecForProviderResourceGroupNameSelecto
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -327,6 +350,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderResourceGroupNa
 }
 
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -343,6 +367,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderResourceGroupNa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderSettings
 {
     /// <summary>The compression setting for the VM Workload Backup Policy. Defaults to false.</summary>
@@ -355,6 +380,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderSettings
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProvider
 {
     /// <summary>One or more protection_policy blocks as defined below.</summary>
@@ -395,6 +421,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecInitProviderProtectionPolicyBackup
 {
     /// <summary>The backup frequency for the VM Workload Backup Policy. Possible values are Daily and Weekly.</summary>
@@ -415,6 +442,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecInitProviderProtectionPoli
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecInitProviderProtectionPolicyRetentionDaily
 {
     /// <summary>The count that is used to count retention duration with duration type Days. Possible values are between 7 and 35.</summary>
@@ -423,6 +451,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecInitProviderProtectionPoli
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecInitProviderProtectionPolicyRetentionMonthly
 {
     /// <summary>The count that is used to count retention duration with duration type Days. Possible values are between 7 and 35.</summary>
@@ -447,6 +476,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecInitProviderProtectionPoli
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecInitProviderProtectionPolicyRetentionWeekly
 {
     /// <summary>The count that is used to count retention duration with duration type Days. Possible values are between 7 and 35.</summary>
@@ -459,6 +489,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecInitProviderProtectionPoli
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecInitProviderProtectionPolicyRetentionYearly
 {
     /// <summary>The count that is used to count retention duration with duration type Days. Possible values are between 7 and 35.</summary>
@@ -487,6 +518,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecInitProviderProtectionPoli
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecInitProviderProtectionPolicySimpleRetention
 {
     /// <summary>The count that is used to count retention duration with duration type Days. Possible values are between 7 and 35.</summary>
@@ -495,6 +527,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecInitProviderProtectionPoli
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecInitProviderProtectionPolicy
 {
     /// <summary>A backup block as defined below.</summary>
@@ -527,6 +560,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecInitProviderProtectionPoli
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecInitProviderSettings
 {
     /// <summary>The compression setting for the VM Workload Backup Policy. Defaults to false.</summary>
@@ -539,6 +573,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecInitProviderSettings
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecInitProvider
 {
     /// <summary>One or more protection_policy blocks as defined below.</summary>
@@ -554,6 +589,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecInitProvider
     public string? WorkloadType { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupPolicyVMWorkloadSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -576,6 +612,7 @@ public enum V1beta1BackupPolicyVMWorkloadSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupPolicyVMWorkloadSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -586,6 +623,7 @@ public enum V1beta1BackupPolicyVMWorkloadSpecProviderConfigRefPolicyResolutionEn
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupPolicyVMWorkloadSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -597,6 +635,7 @@ public enum V1beta1BackupPolicyVMWorkloadSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -611,6 +650,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -622,6 +662,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecProviderConfigRef
     public V1beta1BackupPolicyVMWorkloadSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupPolicyVMWorkloadSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -632,6 +673,7 @@ public enum V1beta1BackupPolicyVMWorkloadSpecPublishConnectionDetailsToConfigRef
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupPolicyVMWorkloadSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -643,6 +685,7 @@ public enum V1beta1BackupPolicyVMWorkloadSpecPublishConnectionDetailsToConfigRef
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -657,6 +700,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecPublishConnectionDetailsTo
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -669,6 +713,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecPublishConnectionDetailsTo
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -685,6 +730,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecPublishConnectionDetailsTo
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -701,6 +747,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -713,6 +760,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecWriteConnectionSecretToRef
 }
 
 /// <summary>BackupPolicyVMWorkloadSpec defines the desired state of BackupPolicyVMWorkload</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -746,6 +794,7 @@ public partial class V1beta1BackupPolicyVMWorkloadSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadStatusAtProviderProtectionPolicyBackup
 {
     /// <summary>The backup frequency for the VM Workload Backup Policy. Possible values are Daily and Weekly.</summary>
@@ -766,6 +815,7 @@ public partial class V1beta1BackupPolicyVMWorkloadStatusAtProviderProtectionPoli
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadStatusAtProviderProtectionPolicyRetentionDaily
 {
     /// <summary>The count that is used to count retention duration with duration type Days. Possible values are between 7 and 35.</summary>
@@ -774,6 +824,7 @@ public partial class V1beta1BackupPolicyVMWorkloadStatusAtProviderProtectionPoli
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadStatusAtProviderProtectionPolicyRetentionMonthly
 {
     /// <summary>The count that is used to count retention duration with duration type Days. Possible values are between 7 and 35.</summary>
@@ -798,6 +849,7 @@ public partial class V1beta1BackupPolicyVMWorkloadStatusAtProviderProtectionPoli
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadStatusAtProviderProtectionPolicyRetentionWeekly
 {
     /// <summary>The count that is used to count retention duration with duration type Days. Possible values are between 7 and 35.</summary>
@@ -810,6 +862,7 @@ public partial class V1beta1BackupPolicyVMWorkloadStatusAtProviderProtectionPoli
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadStatusAtProviderProtectionPolicyRetentionYearly
 {
     /// <summary>The count that is used to count retention duration with duration type Days. Possible values are between 7 and 35.</summary>
@@ -838,6 +891,7 @@ public partial class V1beta1BackupPolicyVMWorkloadStatusAtProviderProtectionPoli
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadStatusAtProviderProtectionPolicySimpleRetention
 {
     /// <summary>The count that is used to count retention duration with duration type Days. Possible values are between 7 and 35.</summary>
@@ -846,6 +900,7 @@ public partial class V1beta1BackupPolicyVMWorkloadStatusAtProviderProtectionPoli
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadStatusAtProviderProtectionPolicy
 {
     /// <summary>A backup block as defined below.</summary>
@@ -878,6 +933,7 @@ public partial class V1beta1BackupPolicyVMWorkloadStatusAtProviderProtectionPoli
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadStatusAtProviderSettings
 {
     /// <summary>The compression setting for the VM Workload Backup Policy. Defaults to false.</summary>
@@ -890,6 +946,7 @@ public partial class V1beta1BackupPolicyVMWorkloadStatusAtProviderSettings
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadStatusAtProvider
 {
     /// <summary>The ID of the Azure VM Workload Backup Policy.</summary>
@@ -918,6 +975,7 @@ public partial class V1beta1BackupPolicyVMWorkloadStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -946,6 +1004,7 @@ public partial class V1beta1BackupPolicyVMWorkloadStatusConditions
 }
 
 /// <summary>BackupPolicyVMWorkloadStatus defines the observed state of BackupPolicyVMWorkload.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadStatus
 {
     /// <summary></summary>
@@ -961,8 +1020,9 @@ public partial class V1beta1BackupPolicyVMWorkloadStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>BackupPolicyVMWorkload is the Schema for the BackupPolicyVMWorkloads API. Manages an Azure VM Workload Backup Policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1BackupPolicyVMWorkload : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BackupPolicyVMWorkloadSpec>, IStatus<V1beta1BackupPolicyVMWorkloadStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dialogflow.cnrm.cloud.google.com;
 /// <summary>The project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowIntentSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1alpha1DialogflowIntentSpecProjectRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowIntentSpec
 {
     /// <summary>The name of the action associated with the intent. Note: The action name must not contain whitespaces.</summary>
@@ -81,6 +83,7 @@ public partial class V1alpha1DialogflowIntentSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowIntentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -105,6 +108,7 @@ public partial class V1alpha1DialogflowIntentStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowIntentStatusFollowupIntentInfo
 {
     /// <summary>The unique identifier of the followup intent. Format: projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;.</summary>
@@ -117,6 +121,7 @@ public partial class V1alpha1DialogflowIntentStatusFollowupIntentInfo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowIntentStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -140,8 +145,9 @@ public partial class V1alpha1DialogflowIntentStatus
     public string? RootFollowupIntentName { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1DialogflowIntent : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DialogflowIntentSpec>, IStatus<V1alpha1DialogflowIntentStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

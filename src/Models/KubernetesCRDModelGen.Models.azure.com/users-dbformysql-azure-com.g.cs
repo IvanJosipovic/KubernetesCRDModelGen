@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dbformysql.azure.com;
 /// <summary>AADUser contains details for creating an AAD user.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1UserSpecAadUser
 {
     /// <summary>Alias is the short name associated with the user. This is required if the AzureName is longer than 32 characters. Note that Alias denotes the name used to manage the SQL user in MySQL, NOT the name used to log in to the SQL server. When logging in to the SQL server and prompted to provider the username, supply the AzureName.</summary>
@@ -21,6 +22,7 @@ public partial class V1UserSpecAadUser
 }
 
 /// <summary>Password is the password to use for the user</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1UserSpecLocalUserPassword
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -33,6 +35,7 @@ public partial class V1UserSpecLocalUserPassword
 }
 
 /// <summary>ServerAdminPassword is a reference to a secret containing the servers administrator password. If specified, the operator uses the ServerAdminUsername and ServerAdminPassword to log into the server as a local administrator. If NOT specified, the operator uses its identity to log into the server. The operator can only successfully log into the server if its identity is the administrator of the server or if its identity is a member of a group which is the administrator of the server. If the administrator is a group, the ServerAdminUsername should be the group name, not the actual username of the identity to log in with. For example if the administrator group is "admin-group" and identity "my-identity" is a member of that group, the ServerAdminUsername should be "admin-group"</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1UserSpecLocalUserServerAdminPassword
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -45,6 +48,7 @@ public partial class V1UserSpecLocalUserServerAdminPassword
 }
 
 /// <summary>LocalUser contains details for creating a standard (non-aad) MySQL User</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1UserSpecLocalUser
 {
     /// <summary>Password is the password to use for the user</summary>
@@ -61,6 +65,7 @@ public partial class V1UserSpecLocalUser
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a dbformysql.azure.com/FlexibleServer resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1UserSpecOwner
 {
     /// <summary>This is the name of the Kubernetes resource to reference.</summary>
@@ -69,6 +74,7 @@ public partial class V1UserSpecOwner
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1UserSpec
 {
     /// <summary>AADUser contains details for creating an AAD user.</summary>
@@ -101,6 +107,7 @@ public partial class V1UserSpec
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1UserStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -133,6 +140,7 @@ public partial class V1UserStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1UserStatus
 {
     /// <summary>Conditions: The observed state of the resource</summary>
@@ -140,8 +148,9 @@ public partial class V1UserStatus
     public IList<V1UserStatusConditions>? Conditions { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>User is a MySQL user</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1User : IKubernetesObject<V1ObjectMeta>, ISpec<V1UserSpec>, IStatus<V1UserStatus>
 {
     public const string KubeApiVersion = "v1";

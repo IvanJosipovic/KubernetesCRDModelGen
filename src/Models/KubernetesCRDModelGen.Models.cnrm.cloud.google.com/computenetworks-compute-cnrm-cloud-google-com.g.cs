@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNetworkSpec
 {
     /// <summary>Immutable. When set to 'true', the network is created in "auto subnet mode" and it will create a subnet for each region automatically across the '10.128.0.0/9' address range.  When set to 'false', the network is created in "custom subnet mode" so the user can explicitly connect subnetwork resources.</summary>
@@ -49,6 +50,7 @@ public partial class V1beta1ComputeNetworkSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNetworkStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -73,6 +75,7 @@ public partial class V1beta1ComputeNetworkStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNetworkStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -92,8 +95,9 @@ public partial class V1beta1ComputeNetworkStatus
     public string? SelfLink { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ComputeNetwork : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeNetworkSpec>, IStatus<V1beta1ComputeNetworkStatus>
 {
     public const string KubeApiVersion = "v1beta1";

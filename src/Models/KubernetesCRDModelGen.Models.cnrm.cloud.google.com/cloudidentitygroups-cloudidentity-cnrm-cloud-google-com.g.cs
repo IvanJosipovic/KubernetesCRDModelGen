@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudidentity.cnrm.cloud.google.com;
 /// <summary>Immutable. EntityKey of the Group.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudIdentityGroupSpecGroupKey
 {
     /// <summary>Immutable. The ID of the entity.  For Google-managed entities, the id must be the email address of an existing group or user.  For external-identity-mapped entities, the id must be a string conforming to the Identity Source's requirements.  Must be unique within a namespace.</summary>
@@ -21,6 +22,7 @@ public partial class V1beta1CloudIdentityGroupSpecGroupKey
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudIdentityGroupSpec
 {
     /// <summary>An extended description to help users determine the purpose of a Group. Must not be longer than 4,096 characters.</summary>
@@ -53,6 +55,7 @@ public partial class V1beta1CloudIdentityGroupSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudIdentityGroupStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -77,6 +80,7 @@ public partial class V1beta1CloudIdentityGroupStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudIdentityGroupStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -100,8 +104,9 @@ public partial class V1beta1CloudIdentityGroupStatus
     public string? UpdateTime { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1CloudIdentityGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CloudIdentityGroupSpec>, IStatus<V1beta1CloudIdentityGroupStatus>
 {
     public const string KubeApiVersion = "v1beta1";

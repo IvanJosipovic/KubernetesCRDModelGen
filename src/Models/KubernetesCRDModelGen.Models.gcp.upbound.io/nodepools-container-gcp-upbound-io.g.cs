@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.container.gcp.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodePoolSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1NodePoolSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderAutoscaling
 {
     /// <summary>Location policy specifies the algorithm used when scaling-up the node pool. Location policy is supported only in 1.24.1+ clusters.</summary>
@@ -42,6 +44,7 @@ public partial class V1beta1NodePoolSpecForProviderAutoscaling
     public double? TotalMinNodeCount { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodePoolSpecForProviderClusterRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -52,6 +55,7 @@ public enum V1beta1NodePoolSpecForProviderClusterRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodePoolSpecForProviderClusterRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -63,6 +67,7 @@ public enum V1beta1NodePoolSpecForProviderClusterRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderClusterRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -77,6 +82,7 @@ public partial class V1beta1NodePoolSpecForProviderClusterRefPolicy
 }
 
 /// <summary>Reference to a Cluster in container to populate cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderClusterRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -88,6 +94,7 @@ public partial class V1beta1NodePoolSpecForProviderClusterRef
     public V1beta1NodePoolSpecForProviderClusterRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodePoolSpecForProviderClusterSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -98,6 +105,7 @@ public enum V1beta1NodePoolSpecForProviderClusterSelectorPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodePoolSpecForProviderClusterSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -109,6 +117,7 @@ public enum V1beta1NodePoolSpecForProviderClusterSelectorPolicyResolveEnum
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderClusterSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -123,6 +132,7 @@ public partial class V1beta1NodePoolSpecForProviderClusterSelectorPolicy
 }
 
 /// <summary>Selector for a Cluster in container to populate cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderClusterSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -139,6 +149,7 @@ public partial class V1beta1NodePoolSpecForProviderClusterSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderManagement
 {
     /// <summary>Whether the nodes will be automatically repaired. Enabled by default.</summary>
@@ -151,6 +162,7 @@ public partial class V1beta1NodePoolSpecForProviderManagement
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNetworkConfigNetworkPerformanceConfig
 {
     /// <summary></summary>
@@ -159,6 +171,7 @@ public partial class V1beta1NodePoolSpecForProviderNetworkConfigNetworkPerforman
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNetworkConfigPodCidrOverprovisionConfig
 {
     /// <summary></summary>
@@ -167,6 +180,7 @@ public partial class V1beta1NodePoolSpecForProviderNetworkConfigPodCidrOverprovi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNetworkConfig
 {
     /// <summary>Whether to create a new range for pod IPs in this node pool. Defaults are provided for pod_range and pod_ipv4_cidr_block if they are not specified.</summary>
@@ -195,6 +209,7 @@ public partial class V1beta1NodePoolSpecForProviderNetworkConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfigAdvancedMachineFeatures
 {
     /// <summary></summary>
@@ -207,6 +222,7 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigAdvancedMachineFeat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfigConfidentialNodes
 {
     /// <summary>Makes nodes obtainable through the ProvisioningRequest API exclusively.</summary>
@@ -215,6 +231,7 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigConfidentialNodes
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigGcpSecretManagerCertificateConfig
 {
     /// <summary></summary>
@@ -223,6 +240,7 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigContainerdConfigPri
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig
 {
     /// <summary></summary>
@@ -235,6 +253,7 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigContainerdConfigPri
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfigContainerdConfigPrivateRegistryAccessConfig
 {
     /// <summary></summary>
@@ -247,6 +266,7 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigContainerdConfigPri
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfigContainerdConfig
 {
     /// <summary></summary>
@@ -255,6 +275,7 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigContainerdConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfigEphemeralStorageLocalSsdConfig
 {
     /// <summary></summary>
@@ -263,6 +284,7 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigEphemeralStorageLoc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfigFastSocket
 {
     /// <summary>Makes nodes obtainable through the ProvisioningRequest API exclusively.</summary>
@@ -271,6 +293,7 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigFastSocket
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfigGcfsConfig
 {
     /// <summary>Makes nodes obtainable through the ProvisioningRequest API exclusively.</summary>
@@ -279,6 +302,7 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigGcfsConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfigGuestAcceleratorGpuDriverInstallationConfig
 {
     /// <summary>The Kubernetes version for the nodes in this pool. Note that if this field and auto_upgrade are both specified, they will fight each other for what the node version should be, so setting both is highly discouraged.</summary>
@@ -287,6 +311,7 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigGuestAcceleratorGpu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfigGuestAcceleratorGpuSharingConfig
 {
     /// <summary></summary>
@@ -299,6 +324,7 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigGuestAcceleratorGpu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfigGuestAccelerator
 {
     /// <summary></summary>
@@ -323,6 +349,7 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigGuestAccelerator
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfigGvnic
 {
     /// <summary>Makes nodes obtainable through the ProvisioningRequest API exclusively.</summary>
@@ -331,6 +358,7 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigGvnic
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfigHostMaintenancePolicy
 {
     /// <summary></summary>
@@ -339,6 +367,7 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigHostMaintenancePoli
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfigKubeletConfig
 {
     /// <summary></summary>
@@ -359,6 +388,7 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigKubeletConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfigLinuxNodeConfig
 {
     /// <summary></summary>
@@ -371,6 +401,7 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigLinuxNodeConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfigLocalNvmeSsdBlockConfig
 {
     /// <summary></summary>
@@ -379,6 +410,7 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigLocalNvmeSsdBlockCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfigReservationAffinity
 {
     /// <summary></summary>
@@ -395,6 +427,7 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigReservationAffinity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfigSecondaryBootDisks
 {
     /// <summary></summary>
@@ -406,6 +439,7 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigSecondaryBootDisks
     public string? Mode { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodePoolSpecForProviderNodeConfigServiceAccountRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -416,6 +450,7 @@ public enum V1beta1NodePoolSpecForProviderNodeConfigServiceAccountRefPolicyResol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodePoolSpecForProviderNodeConfigServiceAccountRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -427,6 +462,7 @@ public enum V1beta1NodePoolSpecForProviderNodeConfigServiceAccountRefPolicyResol
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfigServiceAccountRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -441,6 +477,7 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigServiceAccountRefPo
 }
 
 /// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfigServiceAccountRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -452,6 +489,7 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigServiceAccountRef
     public V1beta1NodePoolSpecForProviderNodeConfigServiceAccountRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodePoolSpecForProviderNodeConfigServiceAccountSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -462,6 +500,7 @@ public enum V1beta1NodePoolSpecForProviderNodeConfigServiceAccountSelectorPolicy
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodePoolSpecForProviderNodeConfigServiceAccountSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -473,6 +512,7 @@ public enum V1beta1NodePoolSpecForProviderNodeConfigServiceAccountSelectorPolicy
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfigServiceAccountSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -487,6 +527,7 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigServiceAccountSelec
 }
 
 /// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfigServiceAccountSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -503,6 +544,7 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigServiceAccountSelec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfigShieldedInstanceConfig
 {
     /// <summary></summary>
@@ -515,6 +557,7 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigShieldedInstanceCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfigSoleTenantConfigNodeAffinity
 {
     /// <summary></summary>
@@ -531,6 +574,7 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigSoleTenantConfigNod
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfigSoleTenantConfig
 {
     /// <summary></summary>
@@ -539,6 +583,7 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigSoleTenantConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfigTaint
 {
     /// <summary></summary>
@@ -555,6 +600,7 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigTaint
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfigWorkloadMetadataConfig
 {
     /// <summary></summary>
@@ -563,6 +609,7 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigWorkloadMetadataCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfig
 {
     /// <summary></summary>
@@ -727,6 +774,7 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderPlacementPolicy
 {
     /// <summary>If set, refers to the name of a custom resource policy supplied by the user. The resource policy must be in the same project and region as the node pool. If not found, InvalidArgument error is returned.</summary>
@@ -743,6 +791,7 @@ public partial class V1beta1NodePoolSpecForProviderPlacementPolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderQueuedProvisioning
 {
     /// <summary>Makes nodes obtainable through the ProvisioningRequest API exclusively.</summary>
@@ -751,6 +800,7 @@ public partial class V1beta1NodePoolSpecForProviderQueuedProvisioning
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy
 {
     /// <summary>Number of blue nodes to drain in a batch.</summary>
@@ -767,6 +817,7 @@ public partial class V1beta1NodePoolSpecForProviderUpgradeSettingsBlueGreenSetti
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderUpgradeSettingsBlueGreenSettings
 {
     /// <summary>Time needed after draining the entire blue pool. After this period, the blue pool will be cleaned up.</summary>
@@ -779,6 +830,7 @@ public partial class V1beta1NodePoolSpecForProviderUpgradeSettingsBlueGreenSetti
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderUpgradeSettings
 {
     /// <summary>The settings to adjust blue green upgrades. Structure is documented below</summary>
@@ -799,6 +851,7 @@ public partial class V1beta1NodePoolSpecForProviderUpgradeSettings
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProvider
 {
     /// <summary>Configuration required by cluster autoscaler to adjust the size of the node pool to the current cluster usage. Structure is documented below.</summary>
@@ -871,6 +924,7 @@ public partial class V1beta1NodePoolSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderAutoscaling
 {
     /// <summary>Location policy specifies the algorithm used when scaling-up the node pool. Location policy is supported only in 1.24.1+ clusters.</summary>
@@ -895,6 +949,7 @@ public partial class V1beta1NodePoolSpecInitProviderAutoscaling
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderManagement
 {
     /// <summary>Whether the nodes will be automatically repaired. Enabled by default.</summary>
@@ -907,6 +962,7 @@ public partial class V1beta1NodePoolSpecInitProviderManagement
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNetworkConfigNetworkPerformanceConfig
 {
     /// <summary></summary>
@@ -915,6 +971,7 @@ public partial class V1beta1NodePoolSpecInitProviderNetworkConfigNetworkPerforma
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNetworkConfigPodCidrOverprovisionConfig
 {
     /// <summary></summary>
@@ -923,6 +980,7 @@ public partial class V1beta1NodePoolSpecInitProviderNetworkConfigPodCidrOverprov
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNetworkConfig
 {
     /// <summary>Whether to create a new range for pod IPs in this node pool. Defaults are provided for pod_range and pod_ipv4_cidr_block if they are not specified.</summary>
@@ -951,6 +1009,7 @@ public partial class V1beta1NodePoolSpecInitProviderNetworkConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigAdvancedMachineFeatures
 {
     /// <summary></summary>
@@ -963,6 +1022,7 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigAdvancedMachineFea
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigConfidentialNodes
 {
     /// <summary>Makes nodes obtainable through the ProvisioningRequest API exclusively.</summary>
@@ -971,6 +1031,7 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigConfidentialNodes
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigGcpSecretManagerCertificateConfig
 {
     /// <summary></summary>
@@ -979,6 +1040,7 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigContainerdConfigPr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig
 {
     /// <summary></summary>
@@ -991,6 +1053,7 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigContainerdConfigPr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigContainerdConfigPrivateRegistryAccessConfig
 {
     /// <summary></summary>
@@ -1003,6 +1066,7 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigContainerdConfigPr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigContainerdConfig
 {
     /// <summary></summary>
@@ -1011,6 +1075,7 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigContainerdConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigEphemeralStorageLocalSsdConfig
 {
     /// <summary></summary>
@@ -1019,6 +1084,7 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigEphemeralStorageLo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigFastSocket
 {
     /// <summary>Makes nodes obtainable through the ProvisioningRequest API exclusively.</summary>
@@ -1027,6 +1093,7 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigFastSocket
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigGcfsConfig
 {
     /// <summary>Makes nodes obtainable through the ProvisioningRequest API exclusively.</summary>
@@ -1035,6 +1102,7 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigGcfsConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigGuestAcceleratorGpuDriverInstallationConfig
 {
     /// <summary>The Kubernetes version for the nodes in this pool. Note that if this field and auto_upgrade are both specified, they will fight each other for what the node version should be, so setting both is highly discouraged.</summary>
@@ -1043,6 +1111,7 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigGuestAcceleratorGp
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigGuestAcceleratorGpuSharingConfig
 {
     /// <summary></summary>
@@ -1055,6 +1124,7 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigGuestAcceleratorGp
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigGuestAccelerator
 {
     /// <summary></summary>
@@ -1079,6 +1149,7 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigGuestAccelerator
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigGvnic
 {
     /// <summary>Makes nodes obtainable through the ProvisioningRequest API exclusively.</summary>
@@ -1087,6 +1158,7 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigGvnic
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigHostMaintenancePolicy
 {
     /// <summary></summary>
@@ -1095,6 +1167,7 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigHostMaintenancePol
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigKubeletConfig
 {
     /// <summary></summary>
@@ -1115,6 +1188,7 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigKubeletConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigLinuxNodeConfig
 {
     /// <summary></summary>
@@ -1127,6 +1201,7 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigLinuxNodeConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigLocalNvmeSsdBlockConfig
 {
     /// <summary></summary>
@@ -1135,6 +1210,7 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigLocalNvmeSsdBlockC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigReservationAffinity
 {
     /// <summary></summary>
@@ -1151,6 +1227,7 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigReservationAffinit
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigSecondaryBootDisks
 {
     /// <summary></summary>
@@ -1162,6 +1239,7 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigSecondaryBootDisks
     public string? Mode { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodePoolSpecInitProviderNodeConfigServiceAccountRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1172,6 +1250,7 @@ public enum V1beta1NodePoolSpecInitProviderNodeConfigServiceAccountRefPolicyReso
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodePoolSpecInitProviderNodeConfigServiceAccountRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1183,6 +1262,7 @@ public enum V1beta1NodePoolSpecInitProviderNodeConfigServiceAccountRefPolicyReso
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigServiceAccountRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1197,6 +1277,7 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigServiceAccountRefP
 }
 
 /// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigServiceAccountRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1208,6 +1289,7 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigServiceAccountRef
     public V1beta1NodePoolSpecInitProviderNodeConfigServiceAccountRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodePoolSpecInitProviderNodeConfigServiceAccountSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1218,6 +1300,7 @@ public enum V1beta1NodePoolSpecInitProviderNodeConfigServiceAccountSelectorPolic
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodePoolSpecInitProviderNodeConfigServiceAccountSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1229,6 +1312,7 @@ public enum V1beta1NodePoolSpecInitProviderNodeConfigServiceAccountSelectorPolic
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigServiceAccountSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1243,6 +1327,7 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigServiceAccountSele
 }
 
 /// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigServiceAccountSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1259,6 +1344,7 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigServiceAccountSele
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigShieldedInstanceConfig
 {
     /// <summary></summary>
@@ -1271,6 +1357,7 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigShieldedInstanceCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigSoleTenantConfigNodeAffinity
 {
     /// <summary></summary>
@@ -1287,6 +1374,7 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigSoleTenantConfigNo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigSoleTenantConfig
 {
     /// <summary></summary>
@@ -1295,6 +1383,7 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigSoleTenantConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigTaint
 {
     /// <summary></summary>
@@ -1311,6 +1400,7 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigTaint
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigWorkloadMetadataConfig
 {
     /// <summary></summary>
@@ -1319,6 +1409,7 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigWorkloadMetadataCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfig
 {
     /// <summary></summary>
@@ -1483,6 +1574,7 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderPlacementPolicy
 {
     /// <summary>If set, refers to the name of a custom resource policy supplied by the user. The resource policy must be in the same project and region as the node pool. If not found, InvalidArgument error is returned.</summary>
@@ -1499,6 +1591,7 @@ public partial class V1beta1NodePoolSpecInitProviderPlacementPolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderQueuedProvisioning
 {
     /// <summary>Makes nodes obtainable through the ProvisioningRequest API exclusively.</summary>
@@ -1507,6 +1600,7 @@ public partial class V1beta1NodePoolSpecInitProviderQueuedProvisioning
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy
 {
     /// <summary>Number of blue nodes to drain in a batch.</summary>
@@ -1523,6 +1617,7 @@ public partial class V1beta1NodePoolSpecInitProviderUpgradeSettingsBlueGreenSett
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderUpgradeSettingsBlueGreenSettings
 {
     /// <summary>Time needed after draining the entire blue pool. After this period, the blue pool will be cleaned up.</summary>
@@ -1535,6 +1630,7 @@ public partial class V1beta1NodePoolSpecInitProviderUpgradeSettingsBlueGreenSett
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderUpgradeSettings
 {
     /// <summary>The settings to adjust blue green upgrades. Structure is documented below</summary>
@@ -1555,6 +1651,7 @@ public partial class V1beta1NodePoolSpecInitProviderUpgradeSettings
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProvider
 {
     /// <summary>Configuration required by cluster autoscaler to adjust the size of the node pool to the current cluster usage. Structure is documented below.</summary>
@@ -1610,6 +1707,7 @@ public partial class V1beta1NodePoolSpecInitProvider
     public string? Version { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodePoolSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -1632,6 +1730,7 @@ public enum V1beta1NodePoolSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodePoolSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1642,6 +1741,7 @@ public enum V1beta1NodePoolSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodePoolSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1653,6 +1753,7 @@ public enum V1beta1NodePoolSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1667,6 +1768,7 @@ public partial class V1beta1NodePoolSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1678,6 +1780,7 @@ public partial class V1beta1NodePoolSpecProviderConfigRef
     public V1beta1NodePoolSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodePoolSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1688,6 +1791,7 @@ public enum V1beta1NodePoolSpecPublishConnectionDetailsToConfigRefPolicyResoluti
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodePoolSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1699,6 +1803,7 @@ public enum V1beta1NodePoolSpecPublishConnectionDetailsToConfigRefPolicyResolveE
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1713,6 +1818,7 @@ public partial class V1beta1NodePoolSpecPublishConnectionDetailsToConfigRefPolic
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1725,6 +1831,7 @@ public partial class V1beta1NodePoolSpecPublishConnectionDetailsToConfigRef
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1741,6 +1848,7 @@ public partial class V1beta1NodePoolSpecPublishConnectionDetailsToMetadata
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1757,6 +1865,7 @@ public partial class V1beta1NodePoolSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1769,6 +1878,7 @@ public partial class V1beta1NodePoolSpecWriteConnectionSecretToRef
 }
 
 /// <summary>NodePoolSpec defines the desired state of NodePool</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1802,6 +1912,7 @@ public partial class V1beta1NodePoolSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderAutoscaling
 {
     /// <summary>Location policy specifies the algorithm used when scaling-up the node pool. Location policy is supported only in 1.24.1+ clusters.</summary>
@@ -1826,6 +1937,7 @@ public partial class V1beta1NodePoolStatusAtProviderAutoscaling
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderManagement
 {
     /// <summary>Whether the nodes will be automatically repaired. Enabled by default.</summary>
@@ -1838,6 +1950,7 @@ public partial class V1beta1NodePoolStatusAtProviderManagement
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNetworkConfigNetworkPerformanceConfig
 {
     /// <summary></summary>
@@ -1846,6 +1959,7 @@ public partial class V1beta1NodePoolStatusAtProviderNetworkConfigNetworkPerforma
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNetworkConfigPodCidrOverprovisionConfig
 {
     /// <summary></summary>
@@ -1854,6 +1968,7 @@ public partial class V1beta1NodePoolStatusAtProviderNetworkConfigPodCidrOverprov
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNetworkConfig
 {
     /// <summary>Whether to create a new range for pod IPs in this node pool. Defaults are provided for pod_range and pod_ipv4_cidr_block if they are not specified.</summary>
@@ -1882,6 +1997,7 @@ public partial class V1beta1NodePoolStatusAtProviderNetworkConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNodeConfigAdvancedMachineFeatures
 {
     /// <summary></summary>
@@ -1894,6 +2010,7 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigAdvancedMachineFea
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNodeConfigConfidentialNodes
 {
     /// <summary>Makes nodes obtainable through the ProvisioningRequest API exclusively.</summary>
@@ -1902,6 +2019,7 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigConfidentialNodes
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigGcpSecretManagerCertificateConfig
 {
     /// <summary></summary>
@@ -1910,6 +2028,7 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigContainerdConfigPr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig
 {
     /// <summary></summary>
@@ -1922,6 +2041,7 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigContainerdConfigPr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNodeConfigContainerdConfigPrivateRegistryAccessConfig
 {
     /// <summary></summary>
@@ -1934,6 +2054,7 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigContainerdConfigPr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNodeConfigContainerdConfig
 {
     /// <summary></summary>
@@ -1942,6 +2063,7 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigContainerdConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNodeConfigEffectiveTaints
 {
     /// <summary></summary>
@@ -1958,6 +2080,7 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigEffectiveTaints
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNodeConfigEphemeralStorageLocalSsdConfig
 {
     /// <summary></summary>
@@ -1966,6 +2089,7 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigEphemeralStorageLo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNodeConfigFastSocket
 {
     /// <summary>Makes nodes obtainable through the ProvisioningRequest API exclusively.</summary>
@@ -1974,6 +2098,7 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigFastSocket
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNodeConfigGcfsConfig
 {
     /// <summary>Makes nodes obtainable through the ProvisioningRequest API exclusively.</summary>
@@ -1982,6 +2107,7 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigGcfsConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNodeConfigGuestAcceleratorGpuDriverInstallationConfig
 {
     /// <summary>The Kubernetes version for the nodes in this pool. Note that if this field and auto_upgrade are both specified, they will fight each other for what the node version should be, so setting both is highly discouraged.</summary>
@@ -1990,6 +2116,7 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigGuestAcceleratorGp
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNodeConfigGuestAcceleratorGpuSharingConfig
 {
     /// <summary></summary>
@@ -2002,6 +2129,7 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigGuestAcceleratorGp
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNodeConfigGuestAccelerator
 {
     /// <summary></summary>
@@ -2026,6 +2154,7 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigGuestAccelerator
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNodeConfigGvnic
 {
     /// <summary>Makes nodes obtainable through the ProvisioningRequest API exclusively.</summary>
@@ -2034,6 +2163,7 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigGvnic
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNodeConfigHostMaintenancePolicy
 {
     /// <summary></summary>
@@ -2042,6 +2172,7 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigHostMaintenancePol
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNodeConfigKubeletConfig
 {
     /// <summary></summary>
@@ -2062,6 +2193,7 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigKubeletConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNodeConfigLinuxNodeConfig
 {
     /// <summary></summary>
@@ -2074,6 +2206,7 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigLinuxNodeConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNodeConfigLocalNvmeSsdBlockConfig
 {
     /// <summary></summary>
@@ -2082,6 +2215,7 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigLocalNvmeSsdBlockC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNodeConfigReservationAffinity
 {
     /// <summary></summary>
@@ -2098,6 +2232,7 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigReservationAffinit
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNodeConfigSecondaryBootDisks
 {
     /// <summary></summary>
@@ -2110,6 +2245,7 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigSecondaryBootDisks
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNodeConfigShieldedInstanceConfig
 {
     /// <summary></summary>
@@ -2122,6 +2258,7 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigShieldedInstanceCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNodeConfigSoleTenantConfigNodeAffinity
 {
     /// <summary></summary>
@@ -2138,6 +2275,7 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigSoleTenantConfigNo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNodeConfigSoleTenantConfig
 {
     /// <summary></summary>
@@ -2146,6 +2284,7 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigSoleTenantConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNodeConfigTaint
 {
     /// <summary></summary>
@@ -2162,6 +2301,7 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigTaint
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNodeConfigWorkloadMetadataConfig
 {
     /// <summary></summary>
@@ -2170,6 +2310,7 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigWorkloadMetadataCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNodeConfig
 {
     /// <summary></summary>
@@ -2330,6 +2471,7 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderPlacementPolicy
 {
     /// <summary>If set, refers to the name of a custom resource policy supplied by the user. The resource policy must be in the same project and region as the node pool. If not found, InvalidArgument error is returned.</summary>
@@ -2346,6 +2488,7 @@ public partial class V1beta1NodePoolStatusAtProviderPlacementPolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderQueuedProvisioning
 {
     /// <summary>Makes nodes obtainable through the ProvisioningRequest API exclusively.</summary>
@@ -2354,6 +2497,7 @@ public partial class V1beta1NodePoolStatusAtProviderQueuedProvisioning
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy
 {
     /// <summary>Number of blue nodes to drain in a batch.</summary>
@@ -2370,6 +2514,7 @@ public partial class V1beta1NodePoolStatusAtProviderUpgradeSettingsBlueGreenSett
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderUpgradeSettingsBlueGreenSettings
 {
     /// <summary>Time needed after draining the entire blue pool. After this period, the blue pool will be cleaned up.</summary>
@@ -2382,6 +2527,7 @@ public partial class V1beta1NodePoolStatusAtProviderUpgradeSettingsBlueGreenSett
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderUpgradeSettings
 {
     /// <summary>The settings to adjust blue green upgrades. Structure is documented below</summary>
@@ -2402,6 +2548,7 @@ public partial class V1beta1NodePoolStatusAtProviderUpgradeSettings
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProvider
 {
     /// <summary>Configuration required by cluster autoscaler to adjust the size of the node pool to the current cluster usage. Structure is documented below.</summary>
@@ -2482,6 +2629,7 @@ public partial class V1beta1NodePoolStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2510,6 +2658,7 @@ public partial class V1beta1NodePoolStatusConditions
 }
 
 /// <summary>NodePoolStatus defines the observed state of NodePool.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatus
 {
     /// <summary></summary>
@@ -2525,8 +2674,9 @@ public partial class V1beta1NodePoolStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>NodePool is the Schema for the NodePools API. Manages a GKE NodePool resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1NodePool : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NodePoolSpec>, IStatus<V1beta1NodePoolStatus>
 {
     public const string KubeApiVersion = "v1beta1";

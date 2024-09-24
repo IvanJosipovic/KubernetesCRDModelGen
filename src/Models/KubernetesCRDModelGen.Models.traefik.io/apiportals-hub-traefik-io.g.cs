@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.hub.traefik.io;
 /// <summary>UI holds the UI customization options.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIPortalSpecUi
 {
     /// <summary>LogoURL is the public URL of the logo.</summary>
@@ -17,6 +18,7 @@ public partial class V1alpha1APIPortalSpecUi
 }
 
 /// <summary>The desired behavior of this APIPortal.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIPortalSpec
 {
     /// <summary>Description of the APIPortal.</summary>
@@ -37,6 +39,7 @@ public partial class V1alpha1APIPortalSpec
 }
 
 /// <summary>OIDC is the OIDC configuration for accessing the exposed APIPortal WebUI.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIPortalStatusOidc
 {
     /// <summary>ClientID is the OIDC ClientID for accessing the exposed APIPortal WebUI.</summary>
@@ -89,6 +92,7 @@ public partial class V1alpha1APIPortalStatusOidc
 }
 
 /// <summary>The current status of this APIPortal.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIPortalStatus
 {
     /// <summary>Hash is a hash representing the APIPortal.</summary>
@@ -108,8 +112,9 @@ public partial class V1alpha1APIPortalStatus
     public string? Version { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>APIPortal defines a developer portal for accessing the documentation of APIs.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1APIPortal : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1APIPortalSpec>, IStatus<V1alpha1APIPortalStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

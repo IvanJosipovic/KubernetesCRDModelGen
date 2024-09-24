@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appsync.aws.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasourceSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -18,6 +19,7 @@ public enum V1beta1DatasourceSpecDeletionPolicyEnum
     Delete
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasourceSpecForProviderApiIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -28,6 +30,7 @@ public enum V1beta1DatasourceSpecForProviderApiIdRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasourceSpecForProviderApiIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -39,6 +42,7 @@ public enum V1beta1DatasourceSpecForProviderApiIdRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecForProviderApiIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -53,6 +57,7 @@ public partial class V1beta1DatasourceSpecForProviderApiIdRefPolicy
 }
 
 /// <summary>Reference to a GraphQLAPI in appsync to populate apiId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecForProviderApiIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -64,6 +69,7 @@ public partial class V1beta1DatasourceSpecForProviderApiIdRef
     public V1beta1DatasourceSpecForProviderApiIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasourceSpecForProviderApiIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -74,6 +80,7 @@ public enum V1beta1DatasourceSpecForProviderApiIdSelectorPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasourceSpecForProviderApiIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -85,6 +92,7 @@ public enum V1beta1DatasourceSpecForProviderApiIdSelectorPolicyResolveEnum
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecForProviderApiIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -99,6 +107,7 @@ public partial class V1beta1DatasourceSpecForProviderApiIdSelectorPolicy
 }
 
 /// <summary>Selector for a GraphQLAPI in appsync to populate apiId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecForProviderApiIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -115,6 +124,7 @@ public partial class V1beta1DatasourceSpecForProviderApiIdSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecForProviderDynamodbConfigDeltaSyncConfig
 {
     /// <summary>The number of minutes that an Item is stored in the data source.</summary>
@@ -130,6 +140,7 @@ public partial class V1beta1DatasourceSpecForProviderDynamodbConfigDeltaSyncConf
     public double? DeltaSyncTableTtl { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasourceSpecForProviderDynamodbConfigTableNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -140,6 +151,7 @@ public enum V1beta1DatasourceSpecForProviderDynamodbConfigTableNameRefPolicyReso
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasourceSpecForProviderDynamodbConfigTableNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -151,6 +163,7 @@ public enum V1beta1DatasourceSpecForProviderDynamodbConfigTableNameRefPolicyReso
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecForProviderDynamodbConfigTableNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -165,6 +178,7 @@ public partial class V1beta1DatasourceSpecForProviderDynamodbConfigTableNameRefP
 }
 
 /// <summary>Reference to a Table in dynamodb to populate tableName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecForProviderDynamodbConfigTableNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -176,6 +190,7 @@ public partial class V1beta1DatasourceSpecForProviderDynamodbConfigTableNameRef
     public V1beta1DatasourceSpecForProviderDynamodbConfigTableNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasourceSpecForProviderDynamodbConfigTableNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -186,6 +201,7 @@ public enum V1beta1DatasourceSpecForProviderDynamodbConfigTableNameSelectorPolic
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasourceSpecForProviderDynamodbConfigTableNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -197,6 +213,7 @@ public enum V1beta1DatasourceSpecForProviderDynamodbConfigTableNameSelectorPolic
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecForProviderDynamodbConfigTableNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -211,6 +228,7 @@ public partial class V1beta1DatasourceSpecForProviderDynamodbConfigTableNameSele
 }
 
 /// <summary>Selector for a Table in dynamodb to populate tableName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecForProviderDynamodbConfigTableNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -227,6 +245,7 @@ public partial class V1beta1DatasourceSpecForProviderDynamodbConfigTableNameSele
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecForProviderDynamodbConfig
 {
     /// <summary>The DeltaSyncConfig for a versioned data source. See Delta Sync Config</summary>
@@ -259,6 +278,7 @@ public partial class V1beta1DatasourceSpecForProviderDynamodbConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecForProviderElasticsearchConfig
 {
     /// <summary>HTTP endpoint of the Elasticsearch domain.</summary>
@@ -271,6 +291,7 @@ public partial class V1beta1DatasourceSpecForProviderElasticsearchConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecForProviderEventBridgeConfig
 {
     /// <summary>ARN for the EventBridge bus.</summary>
@@ -279,6 +300,7 @@ public partial class V1beta1DatasourceSpecForProviderEventBridgeConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecForProviderHttpConfigAuthorizationConfigAwsIamConfig
 {
     /// <summary>Signing Amazon Web Services Region for IAM authorization.</summary>
@@ -291,6 +313,7 @@ public partial class V1beta1DatasourceSpecForProviderHttpConfigAuthorizationConf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecForProviderHttpConfigAuthorizationConfig
 {
     /// <summary>Authorization type that the HTTP endpoint requires. Default values is AWS_IAM.</summary>
@@ -303,6 +326,7 @@ public partial class V1beta1DatasourceSpecForProviderHttpConfigAuthorizationConf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecForProviderHttpConfig
 {
     /// <summary>Authorization configuration in case the HTTP endpoint requires authorization. See Authorization Config.</summary>
@@ -315,6 +339,7 @@ public partial class V1beta1DatasourceSpecForProviderHttpConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecForProviderLambdaConfig
 {
     /// <summary>ARN for the Lambda function.</summary>
@@ -323,6 +348,7 @@ public partial class V1beta1DatasourceSpecForProviderLambdaConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecForProviderOpensearchserviceConfig
 {
     /// <summary>HTTP endpoint of the Elasticsearch domain.</summary>
@@ -335,6 +361,7 @@ public partial class V1beta1DatasourceSpecForProviderOpensearchserviceConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecForProviderRelationalDatabaseConfigHttpEndpointConfig
 {
     /// <summary>AWS secret store ARN for database credentials.</summary>
@@ -359,6 +386,7 @@ public partial class V1beta1DatasourceSpecForProviderRelationalDatabaseConfigHtt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecForProviderRelationalDatabaseConfig
 {
     /// <summary>Amazon RDS HTTP endpoint configuration. See HTTP Endpoint Config.</summary>
@@ -370,6 +398,7 @@ public partial class V1beta1DatasourceSpecForProviderRelationalDatabaseConfig
     public string? SourceType { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasourceSpecForProviderServiceRoleArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -380,6 +409,7 @@ public enum V1beta1DatasourceSpecForProviderServiceRoleArnRefPolicyResolutionEnu
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasourceSpecForProviderServiceRoleArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -391,6 +421,7 @@ public enum V1beta1DatasourceSpecForProviderServiceRoleArnRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecForProviderServiceRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -405,6 +436,7 @@ public partial class V1beta1DatasourceSpecForProviderServiceRoleArnRefPolicy
 }
 
 /// <summary>Reference to a Role in iam to populate serviceRoleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecForProviderServiceRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -416,6 +448,7 @@ public partial class V1beta1DatasourceSpecForProviderServiceRoleArnRef
     public V1beta1DatasourceSpecForProviderServiceRoleArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasourceSpecForProviderServiceRoleArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -426,6 +459,7 @@ public enum V1beta1DatasourceSpecForProviderServiceRoleArnSelectorPolicyResoluti
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasourceSpecForProviderServiceRoleArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -437,6 +471,7 @@ public enum V1beta1DatasourceSpecForProviderServiceRoleArnSelectorPolicyResolveE
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecForProviderServiceRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -451,6 +486,7 @@ public partial class V1beta1DatasourceSpecForProviderServiceRoleArnSelectorPolic
 }
 
 /// <summary>Selector for a Role in iam to populate serviceRoleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecForProviderServiceRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -467,6 +503,7 @@ public partial class V1beta1DatasourceSpecForProviderServiceRoleArnSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecForProvider
 {
     /// <summary>API ID for the GraphQL API for the data source.</summary>
@@ -535,6 +572,7 @@ public partial class V1beta1DatasourceSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecInitProviderDynamodbConfigDeltaSyncConfig
 {
     /// <summary>The number of minutes that an Item is stored in the data source.</summary>
@@ -550,6 +588,7 @@ public partial class V1beta1DatasourceSpecInitProviderDynamodbConfigDeltaSyncCon
     public double? DeltaSyncTableTtl { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasourceSpecInitProviderDynamodbConfigTableNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -560,6 +599,7 @@ public enum V1beta1DatasourceSpecInitProviderDynamodbConfigTableNameRefPolicyRes
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasourceSpecInitProviderDynamodbConfigTableNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -571,6 +611,7 @@ public enum V1beta1DatasourceSpecInitProviderDynamodbConfigTableNameRefPolicyRes
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecInitProviderDynamodbConfigTableNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -585,6 +626,7 @@ public partial class V1beta1DatasourceSpecInitProviderDynamodbConfigTableNameRef
 }
 
 /// <summary>Reference to a Table in dynamodb to populate tableName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecInitProviderDynamodbConfigTableNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -596,6 +638,7 @@ public partial class V1beta1DatasourceSpecInitProviderDynamodbConfigTableNameRef
     public V1beta1DatasourceSpecInitProviderDynamodbConfigTableNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasourceSpecInitProviderDynamodbConfigTableNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -606,6 +649,7 @@ public enum V1beta1DatasourceSpecInitProviderDynamodbConfigTableNameSelectorPoli
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasourceSpecInitProviderDynamodbConfigTableNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -617,6 +661,7 @@ public enum V1beta1DatasourceSpecInitProviderDynamodbConfigTableNameSelectorPoli
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecInitProviderDynamodbConfigTableNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -631,6 +676,7 @@ public partial class V1beta1DatasourceSpecInitProviderDynamodbConfigTableNameSel
 }
 
 /// <summary>Selector for a Table in dynamodb to populate tableName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecInitProviderDynamodbConfigTableNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -647,6 +693,7 @@ public partial class V1beta1DatasourceSpecInitProviderDynamodbConfigTableNameSel
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecInitProviderDynamodbConfig
 {
     /// <summary>The DeltaSyncConfig for a versioned data source. See Delta Sync Config</summary>
@@ -675,6 +722,7 @@ public partial class V1beta1DatasourceSpecInitProviderDynamodbConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecInitProviderElasticsearchConfig
 {
     /// <summary>HTTP endpoint of the Elasticsearch domain.</summary>
@@ -683,6 +731,7 @@ public partial class V1beta1DatasourceSpecInitProviderElasticsearchConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecInitProviderEventBridgeConfig
 {
     /// <summary>ARN for the EventBridge bus.</summary>
@@ -691,6 +740,7 @@ public partial class V1beta1DatasourceSpecInitProviderEventBridgeConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecInitProviderHttpConfigAuthorizationConfigAwsIamConfig
 {
     /// <summary>Signing Amazon Web Services Region for IAM authorization.</summary>
@@ -703,6 +753,7 @@ public partial class V1beta1DatasourceSpecInitProviderHttpConfigAuthorizationCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecInitProviderHttpConfigAuthorizationConfig
 {
     /// <summary>Authorization type that the HTTP endpoint requires. Default values is AWS_IAM.</summary>
@@ -715,6 +766,7 @@ public partial class V1beta1DatasourceSpecInitProviderHttpConfigAuthorizationCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecInitProviderHttpConfig
 {
     /// <summary>Authorization configuration in case the HTTP endpoint requires authorization. See Authorization Config.</summary>
@@ -727,6 +779,7 @@ public partial class V1beta1DatasourceSpecInitProviderHttpConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecInitProviderLambdaConfig
 {
     /// <summary>ARN for the Lambda function.</summary>
@@ -735,6 +788,7 @@ public partial class V1beta1DatasourceSpecInitProviderLambdaConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecInitProviderOpensearchserviceConfig
 {
     /// <summary>HTTP endpoint of the Elasticsearch domain.</summary>
@@ -743,6 +797,7 @@ public partial class V1beta1DatasourceSpecInitProviderOpensearchserviceConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecInitProviderRelationalDatabaseConfigHttpEndpointConfig
 {
     /// <summary>AWS secret store ARN for database credentials.</summary>
@@ -763,6 +818,7 @@ public partial class V1beta1DatasourceSpecInitProviderRelationalDatabaseConfigHt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecInitProviderRelationalDatabaseConfig
 {
     /// <summary>Amazon RDS HTTP endpoint configuration. See HTTP Endpoint Config.</summary>
@@ -774,6 +830,7 @@ public partial class V1beta1DatasourceSpecInitProviderRelationalDatabaseConfig
     public string? SourceType { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasourceSpecInitProviderServiceRoleArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -784,6 +841,7 @@ public enum V1beta1DatasourceSpecInitProviderServiceRoleArnRefPolicyResolutionEn
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasourceSpecInitProviderServiceRoleArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -795,6 +853,7 @@ public enum V1beta1DatasourceSpecInitProviderServiceRoleArnRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecInitProviderServiceRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -809,6 +868,7 @@ public partial class V1beta1DatasourceSpecInitProviderServiceRoleArnRefPolicy
 }
 
 /// <summary>Reference to a Role in iam to populate serviceRoleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecInitProviderServiceRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -820,6 +880,7 @@ public partial class V1beta1DatasourceSpecInitProviderServiceRoleArnRef
     public V1beta1DatasourceSpecInitProviderServiceRoleArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasourceSpecInitProviderServiceRoleArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -830,6 +891,7 @@ public enum V1beta1DatasourceSpecInitProviderServiceRoleArnSelectorPolicyResolut
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasourceSpecInitProviderServiceRoleArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -841,6 +903,7 @@ public enum V1beta1DatasourceSpecInitProviderServiceRoleArnSelectorPolicyResolve
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecInitProviderServiceRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -855,6 +918,7 @@ public partial class V1beta1DatasourceSpecInitProviderServiceRoleArnSelectorPoli
 }
 
 /// <summary>Selector for a Role in iam to populate serviceRoleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecInitProviderServiceRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -871,6 +935,7 @@ public partial class V1beta1DatasourceSpecInitProviderServiceRoleArnSelector
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecInitProvider
 {
     /// <summary>Description of the data source.</summary>
@@ -922,6 +987,7 @@ public partial class V1beta1DatasourceSpecInitProvider
     public string? Type { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasourceSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -944,6 +1010,7 @@ public enum V1beta1DatasourceSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasourceSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -954,6 +1021,7 @@ public enum V1beta1DatasourceSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasourceSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -965,6 +1033,7 @@ public enum V1beta1DatasourceSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -979,6 +1048,7 @@ public partial class V1beta1DatasourceSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -990,6 +1060,7 @@ public partial class V1beta1DatasourceSpecProviderConfigRef
     public V1beta1DatasourceSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasourceSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1000,6 +1071,7 @@ public enum V1beta1DatasourceSpecPublishConnectionDetailsToConfigRefPolicyResolu
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasourceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1011,6 +1083,7 @@ public enum V1beta1DatasourceSpecPublishConnectionDetailsToConfigRefPolicyResolv
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1025,6 +1098,7 @@ public partial class V1beta1DatasourceSpecPublishConnectionDetailsToConfigRefPol
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1037,6 +1111,7 @@ public partial class V1beta1DatasourceSpecPublishConnectionDetailsToConfigRef
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1053,6 +1128,7 @@ public partial class V1beta1DatasourceSpecPublishConnectionDetailsToMetadata
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1069,6 +1145,7 @@ public partial class V1beta1DatasourceSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1081,6 +1158,7 @@ public partial class V1beta1DatasourceSpecWriteConnectionSecretToRef
 }
 
 /// <summary>DatasourceSpec defines the desired state of Datasource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1114,6 +1192,7 @@ public partial class V1beta1DatasourceSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceStatusAtProviderDynamodbConfigDeltaSyncConfig
 {
     /// <summary>The number of minutes that an Item is stored in the data source.</summary>
@@ -1130,6 +1209,7 @@ public partial class V1beta1DatasourceStatusAtProviderDynamodbConfigDeltaSyncCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceStatusAtProviderDynamodbConfig
 {
     /// <summary>The DeltaSyncConfig for a versioned data source. See Delta Sync Config</summary>
@@ -1154,6 +1234,7 @@ public partial class V1beta1DatasourceStatusAtProviderDynamodbConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceStatusAtProviderElasticsearchConfig
 {
     /// <summary>HTTP endpoint of the Elasticsearch domain.</summary>
@@ -1166,6 +1247,7 @@ public partial class V1beta1DatasourceStatusAtProviderElasticsearchConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceStatusAtProviderEventBridgeConfig
 {
     /// <summary>ARN for the EventBridge bus.</summary>
@@ -1174,6 +1256,7 @@ public partial class V1beta1DatasourceStatusAtProviderEventBridgeConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceStatusAtProviderHttpConfigAuthorizationConfigAwsIamConfig
 {
     /// <summary>Signing Amazon Web Services Region for IAM authorization.</summary>
@@ -1186,6 +1269,7 @@ public partial class V1beta1DatasourceStatusAtProviderHttpConfigAuthorizationCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceStatusAtProviderHttpConfigAuthorizationConfig
 {
     /// <summary>Authorization type that the HTTP endpoint requires. Default values is AWS_IAM.</summary>
@@ -1198,6 +1282,7 @@ public partial class V1beta1DatasourceStatusAtProviderHttpConfigAuthorizationCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceStatusAtProviderHttpConfig
 {
     /// <summary>Authorization configuration in case the HTTP endpoint requires authorization. See Authorization Config.</summary>
@@ -1210,6 +1295,7 @@ public partial class V1beta1DatasourceStatusAtProviderHttpConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceStatusAtProviderLambdaConfig
 {
     /// <summary>ARN for the Lambda function.</summary>
@@ -1218,6 +1304,7 @@ public partial class V1beta1DatasourceStatusAtProviderLambdaConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceStatusAtProviderOpensearchserviceConfig
 {
     /// <summary>HTTP endpoint of the Elasticsearch domain.</summary>
@@ -1230,6 +1317,7 @@ public partial class V1beta1DatasourceStatusAtProviderOpensearchserviceConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceStatusAtProviderRelationalDatabaseConfigHttpEndpointConfig
 {
     /// <summary>AWS secret store ARN for database credentials.</summary>
@@ -1254,6 +1342,7 @@ public partial class V1beta1DatasourceStatusAtProviderRelationalDatabaseConfigHt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceStatusAtProviderRelationalDatabaseConfig
 {
     /// <summary>Amazon RDS HTTP endpoint configuration. See HTTP Endpoint Config.</summary>
@@ -1266,6 +1355,7 @@ public partial class V1beta1DatasourceStatusAtProviderRelationalDatabaseConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceStatusAtProvider
 {
     /// <summary>API ID for the GraphQL API for the data source.</summary>
@@ -1322,6 +1412,7 @@ public partial class V1beta1DatasourceStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1350,6 +1441,7 @@ public partial class V1beta1DatasourceStatusConditions
 }
 
 /// <summary>DatasourceStatus defines the observed state of Datasource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceStatus
 {
     /// <summary></summary>
@@ -1365,8 +1457,9 @@ public partial class V1beta1DatasourceStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Datasource is the Schema for the Datasources API. Provides an AppSync Data Source.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Datasource : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DatasourceSpec>, IStatus<V1beta1DatasourceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

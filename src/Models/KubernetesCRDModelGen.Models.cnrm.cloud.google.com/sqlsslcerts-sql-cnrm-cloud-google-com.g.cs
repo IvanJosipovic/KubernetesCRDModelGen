@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.cnrm.cloud.google.com;
 /// <summary>The Cloud SQL instance.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLSSLCertSpecInstanceRef
 {
     /// <summary>Allowed value: The `name` field of a `SQLInstance` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1SQLSSLCertSpecInstanceRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLSSLCertSpec
 {
     /// <summary>Immutable. The common name to be used in the certificate to identify the client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be created.</summary>
@@ -41,6 +43,7 @@ public partial class V1beta1SQLSSLCertSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLSSLCertStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -65,6 +68,7 @@ public partial class V1beta1SQLSSLCertStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLSSLCertStatus
 {
     /// <summary>The actual certificate data for this client certificate.</summary>
@@ -104,8 +108,9 @@ public partial class V1beta1SQLSSLCertStatus
     public string? Sha1Fingerprint { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1SQLSSLCert : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SQLSSLCertSpec>, IStatus<V1beta1SQLSSLCertStatus>
 {
     public const string KubeApiVersion = "v1beta1";

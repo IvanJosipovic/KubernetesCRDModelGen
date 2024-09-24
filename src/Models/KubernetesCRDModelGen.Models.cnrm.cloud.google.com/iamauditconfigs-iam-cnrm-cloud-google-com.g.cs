@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iam.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMAuditConfigSpecAuditLogConfigs
 {
     /// <summary>Identities that do not cause logging for this type of permission. The format is the same as that for 'members' in IAMPolicy/IAMPolicyMember.</summary>
@@ -21,6 +22,7 @@ public partial class V1beta1IAMAuditConfigSpecAuditLogConfigs
 }
 
 /// <summary>Immutable. Required. The GCP resource to set the IAMAuditConfig on (e.g. project).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMAuditConfigSpecResourceRef
 {
     /// <summary></summary>
@@ -45,6 +47,7 @@ public partial class V1beta1IAMAuditConfigSpecResourceRef
 }
 
 /// <summary>IAMAuditConfigSpec defines the desired state of IAMAuditConfig.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMAuditConfigSpec
 {
     /// <summary>Required. The configuration for logging of each type of permission.</summary>
@@ -61,6 +64,7 @@ public partial class V1beta1IAMAuditConfigSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMAuditConfigStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -85,6 +89,7 @@ public partial class V1beta1IAMAuditConfigStatusConditions
 }
 
 /// <summary>IAMAuditConfigStatus defines the observed state of IAMAuditConfig.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMAuditConfigStatus
 {
     /// <summary>Conditions represent the latest available observations of the IAMAuditConfig's current state.</summary>
@@ -96,8 +101,9 @@ public partial class V1beta1IAMAuditConfigStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>IAMAuditConfig is the schema for the IAM audit logging API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1IAMAuditConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IAMAuditConfigSpec>, IStatus<V1beta1IAMAuditConfigStatus>
 {
     public const string KubeApiVersion = "v1beta1";

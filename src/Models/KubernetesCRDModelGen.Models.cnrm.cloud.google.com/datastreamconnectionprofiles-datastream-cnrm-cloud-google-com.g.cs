@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datastream.cnrm.cloud.google.com;
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecForwardSshConnectivityPasswordValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -21,6 +22,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecForwardSshConnectivi
 }
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecForwardSshConnectivityPasswordValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -29,6 +31,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecForwardSshConnectivi
 }
 
 /// <summary>Immutable. SSH password.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecForwardSshConnectivityPassword
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -41,6 +44,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecForwardSshConnectivi
 }
 
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecForwardSshConnectivityPrivateKeyValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -53,6 +57,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecForwardSshConnectivi
 }
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecForwardSshConnectivityPrivateKeyValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -61,6 +66,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecForwardSshConnectivi
 }
 
 /// <summary>Immutable. SSH private key.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecForwardSshConnectivityPrivateKey
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -73,6 +79,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecForwardSshConnectivi
 }
 
 /// <summary>Forward SSH tunnel connectivity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecForwardSshConnectivity
 {
     /// <summary>Hostname for the SSH tunnel.</summary>
@@ -97,6 +104,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecForwardSshConnectivi
 }
 
 /// <summary>Cloud Storage bucket profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecGcsProfile
 {
     /// <summary>The Cloud Storage bucket name.</summary>
@@ -109,6 +117,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecGcsProfile
 }
 
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfilePasswordValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -121,6 +130,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfilePassword
 }
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfilePasswordValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -129,6 +139,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfilePassword
 }
 
 /// <summary>Password for the MySQL connection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfilePassword
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -141,6 +152,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfilePassword
 }
 
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfigCaCertificateValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -153,6 +165,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfi
 }
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfigCaCertificateValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -161,6 +174,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfi
 }
 
 /// <summary>Immutable. PEM-encoded certificate of the CA that signed the source database server's certificate.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfigCaCertificate
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -173,6 +187,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfi
 }
 
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfigClientCertificateValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -185,6 +200,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfi
 }
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfigClientCertificateValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -193,6 +209,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfi
 }
 
 /// <summary>Immutable. PEM-encoded certificate that will be used by the replica to authenticate against the source database server. If this field is used then the 'clientKey' and the 'caCertificate' fields are mandatory.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfigClientCertificate
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -205,6 +222,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfi
 }
 
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfigClientKeyValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -217,6 +235,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfi
 }
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfigClientKeyValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -225,6 +244,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfi
 }
 
 /// <summary>Immutable. PEM-encoded private key associated with the Client Certificate. If this field is used then the 'client_certificate' and the 'ca_certificate' fields are mandatory.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfigClientKey
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -237,6 +257,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfi
 }
 
 /// <summary>SSL configuration for the MySQL connection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfig
 {
     /// <summary>Immutable. PEM-encoded certificate of the CA that signed the source database server's certificate.</summary>
@@ -265,6 +286,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfi
 }
 
 /// <summary>MySQL database profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfile
 {
     /// <summary>Hostname for the MySQL connection.</summary>
@@ -289,6 +311,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfile
 }
 
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfilePasswordValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -301,6 +324,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfilePasswor
 }
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfilePasswordValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -309,6 +333,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfilePasswor
 }
 
 /// <summary>Password for the Oracle connection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfilePassword
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -321,6 +346,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfilePasswor
 }
 
 /// <summary>Oracle database profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfile
 {
     /// <summary>Connection string attributes.</summary>
@@ -349,6 +375,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfile
 }
 
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecPostgresqlProfilePasswordValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -361,6 +388,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecPostgresqlProfilePas
 }
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecPostgresqlProfilePasswordValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -369,6 +397,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecPostgresqlProfilePas
 }
 
 /// <summary>Password for the PostgreSQL connection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecPostgresqlProfilePassword
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -381,6 +410,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecPostgresqlProfilePas
 }
 
 /// <summary>PostgreSQL database profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecPostgresqlProfile
 {
     /// <summary>Database for the PostgreSQL connection.</summary>
@@ -405,6 +435,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecPostgresqlProfile
 }
 
 /// <summary>Private connectivity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecPrivateConnectivity
 {
     /// <summary>A reference to a private connection resource. Format: 'projects/{project}/locations/{location}/privateConnections/{name}'.</summary>
@@ -413,6 +444,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecPrivateConnectivity
 }
 
 /// <summary>The project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -429,6 +461,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecProjectRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpec
 {
     /// <summary>BigQuery warehouse profile.</summary>
@@ -477,6 +510,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -501,6 +535,7 @@ public partial class V1alpha1DatastreamConnectionProfileStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -516,8 +551,9 @@ public partial class V1alpha1DatastreamConnectionProfileStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1DatastreamConnectionProfile : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DatastreamConnectionProfileSpec>, IStatus<V1alpha1DatastreamConnectionProfileStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

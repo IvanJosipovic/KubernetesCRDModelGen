@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.directconnect.aws.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -18,6 +19,7 @@ public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecDeletionPolicyEnum
     Delete
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVirtualInterfaceIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -28,6 +30,7 @@ public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVirtualIn
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVirtualInterfaceIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -39,6 +42,7 @@ public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVirtualIn
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVirtualInterfaceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -53,6 +57,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProvider
 }
 
 /// <summary>Reference to a HostedPrivateVirtualInterface in directconnect to populate virtualInterfaceId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVirtualInterfaceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -64,6 +69,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProvider
     public V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVirtualInterfaceIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVirtualInterfaceIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -74,6 +80,7 @@ public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVirtualIn
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVirtualInterfaceIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -85,6 +92,7 @@ public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVirtualIn
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVirtualInterfaceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -99,6 +107,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProvider
 }
 
 /// <summary>Selector for a HostedPrivateVirtualInterface in directconnect to populate virtualInterfaceId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVirtualInterfaceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -114,6 +123,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProvider
     public V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVirtualInterfaceIdSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVpnGatewayIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -124,6 +134,7 @@ public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVpnGatewa
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVpnGatewayIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -135,6 +146,7 @@ public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVpnGatewa
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVpnGatewayIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -149,6 +161,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProvider
 }
 
 /// <summary>Reference to a VPNGateway in ec2 to populate vpnGatewayId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVpnGatewayIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -160,6 +173,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProvider
     public V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVpnGatewayIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVpnGatewayIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -170,6 +184,7 @@ public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVpnGatewa
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVpnGatewayIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -181,6 +196,7 @@ public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVpnGatewa
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVpnGatewayIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -195,6 +211,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProvider
 }
 
 /// <summary>Selector for a VPNGateway in ec2 to populate vpnGatewayId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVpnGatewayIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -211,6 +228,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProvider
 {
     /// <summary>The ID of the Direct Connect gateway to which to connect the virtual interface.</summary>
@@ -250,6 +268,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProvider
     public V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVpnGatewayIdSelector? VpnGatewayIdSelector { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVirtualInterfaceIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -260,6 +279,7 @@ public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVirtualI
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVirtualInterfaceIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -271,6 +291,7 @@ public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVirtualI
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVirtualInterfaceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -285,6 +306,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProvide
 }
 
 /// <summary>Reference to a HostedPrivateVirtualInterface in directconnect to populate virtualInterfaceId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVirtualInterfaceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -296,6 +318,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProvide
     public V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVirtualInterfaceIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVirtualInterfaceIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -306,6 +329,7 @@ public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVirtualI
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVirtualInterfaceIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -317,6 +341,7 @@ public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVirtualI
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVirtualInterfaceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -331,6 +356,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProvide
 }
 
 /// <summary>Selector for a HostedPrivateVirtualInterface in directconnect to populate virtualInterfaceId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVirtualInterfaceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -346,6 +372,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProvide
     public V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVirtualInterfaceIdSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVpnGatewayIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -356,6 +383,7 @@ public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVpnGatew
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVpnGatewayIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -367,6 +395,7 @@ public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVpnGatew
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVpnGatewayIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -381,6 +410,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProvide
 }
 
 /// <summary>Reference to a VPNGateway in ec2 to populate vpnGatewayId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVpnGatewayIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -392,6 +422,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProvide
     public V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVpnGatewayIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVpnGatewayIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -402,6 +433,7 @@ public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVpnGatew
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVpnGatewayIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -413,6 +445,7 @@ public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVpnGatew
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVpnGatewayIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -427,6 +460,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProvide
 }
 
 /// <summary>Selector for a VPNGateway in ec2 to populate vpnGatewayId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVpnGatewayIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -443,6 +477,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProvide
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProvider
 {
     /// <summary>The ID of the Direct Connect gateway to which to connect the virtual interface.</summary>
@@ -478,6 +513,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProvide
     public V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVpnGatewayIdSelector? VpnGatewayIdSelector { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -500,6 +536,7 @@ public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecManagementPoliciesEn
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -510,6 +547,7 @@ public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecProviderConfigRefPol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -521,6 +559,7 @@ public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecProviderConfigRefPol
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -535,6 +574,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecProviderCon
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -546,6 +586,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecProviderCon
     public V1beta1HostedPrivateVirtualInterfaceAccepterSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -556,6 +597,7 @@ public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecPublishConnectionDet
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -567,6 +609,7 @@ public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecPublishConnectionDet
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -581,6 +624,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecPublishConn
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -593,6 +637,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecPublishConn
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -609,6 +654,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecPublishConn
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -625,6 +671,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecPublishConn
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -637,6 +684,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecWriteConnec
 }
 
 /// <summary>HostedPrivateVirtualInterfaceAccepterSpec defines the desired state of HostedPrivateVirtualInterfaceAccepter</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -670,6 +718,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterStatusAtProvider
 {
     /// <summary>The ARN of the virtual interface.</summary>
@@ -702,6 +751,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterStatusAtProvide
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -730,6 +780,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterStatusCondition
 }
 
 /// <summary>HostedPrivateVirtualInterfaceAccepterStatus defines the observed state of HostedPrivateVirtualInterfaceAccepter.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterStatus
 {
     /// <summary></summary>
@@ -745,8 +796,9 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>HostedPrivateVirtualInterfaceAccepter is the Schema for the HostedPrivateVirtualInterfaceAccepters API. Provides a resource to manage the accepter's side of a Direct Connect hosted private virtual interface.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepter : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1HostedPrivateVirtualInterfaceAccepterSpec>, IStatus<V1beta1HostedPrivateVirtualInterfaceAccepterStatus>
 {
     public const string KubeApiVersion = "v1beta1";

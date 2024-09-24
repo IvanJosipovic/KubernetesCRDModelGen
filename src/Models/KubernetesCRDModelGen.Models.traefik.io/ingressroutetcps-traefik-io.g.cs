@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.traefik.io;
 /// <summary>ObjectReference is a generic reference to a Traefik resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteTCPSpecRoutesMiddlewares
 {
     /// <summary>Name defines the name of the referenced Traefik resource.</summary>
@@ -21,6 +22,7 @@ public partial class V1alpha1IngressRouteTCPSpecRoutesMiddlewares
 }
 
 /// <summary>ProxyProtocol defines the PROXY protocol configuration. More info: https://doc.traefik.io/traefik/v3.1/routing/services/#proxy-protocol</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteTCPSpecRoutesServicesProxyProtocol
 {
     /// <summary>Version defines the PROXY Protocol version to use.</summary>
@@ -29,6 +31,7 @@ public partial class V1alpha1IngressRouteTCPSpecRoutesServicesProxyProtocol
 }
 
 /// <summary>ServiceTCP defines an upstream TCP service to proxy traffic to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteTCPSpecRoutesServices
 {
     /// <summary>Name defines the name of the referenced Kubernetes Service.</summary>
@@ -73,6 +76,7 @@ public partial class V1alpha1IngressRouteTCPSpecRoutesServices
 }
 
 /// <summary>RouteTCP holds the TCP route configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteTCPSpecRoutes
 {
     /// <summary>Match defines the router's rule. More info: https://doc.traefik.io/traefik/v3.1/routing/routers/#rule_1</summary>
@@ -97,6 +101,7 @@ public partial class V1alpha1IngressRouteTCPSpecRoutes
 }
 
 /// <summary>Domain holds a domain name with SANs.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteTCPSpecTlsDomains
 {
     /// <summary>Main defines the main domain name.</summary>
@@ -109,6 +114,7 @@ public partial class V1alpha1IngressRouteTCPSpecTlsDomains
 }
 
 /// <summary>Options defines the reference to a TLSOption, that specifies the parameters of the TLS connection. If not defined, the `default` TLSOption is used. More info: https://doc.traefik.io/traefik/v3.1/https/tls/#tls-options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteTCPSpecTlsOptions
 {
     /// <summary>Name defines the name of the referenced Traefik resource.</summary>
@@ -121,6 +127,7 @@ public partial class V1alpha1IngressRouteTCPSpecTlsOptions
 }
 
 /// <summary>Store defines the reference to the TLSStore, that will be used to store certificates. Please note that only `default` TLSStore can be used.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteTCPSpecTlsStore
 {
     /// <summary>Name defines the name of the referenced Traefik resource.</summary>
@@ -133,6 +140,7 @@ public partial class V1alpha1IngressRouteTCPSpecTlsStore
 }
 
 /// <summary>TLS defines the TLS configuration on a layer 4 / TCP Route. More info: https://doc.traefik.io/traefik/v3.1/routing/routers/#tls_1</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteTCPSpecTls
 {
     /// <summary>CertResolver defines the name of the certificate resolver to use. Cert resolvers have to be configured in the static configuration. More info: https://doc.traefik.io/traefik/v3.1/https/acme/#certificate-resolvers</summary>
@@ -161,6 +169,7 @@ public partial class V1alpha1IngressRouteTCPSpecTls
 }
 
 /// <summary>IngressRouteTCPSpec defines the desired state of IngressRouteTCP.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteTCPSpec
 {
     /// <summary>EntryPoints defines the list of entry point names to bind to. Entry points have to be configured in the static configuration. More info: https://doc.traefik.io/traefik/v3.1/routing/entrypoints/ Default: all.</summary>
@@ -176,8 +185,9 @@ public partial class V1alpha1IngressRouteTCPSpec
     public V1alpha1IngressRouteTCPSpecTls? Tls { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>IngressRouteTCP is the CRD implementation of a Traefik TCP Router.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1IngressRouteTCP : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1IngressRouteTCPSpec>
 {
     public const string KubeApiVersion = "v1alpha1";

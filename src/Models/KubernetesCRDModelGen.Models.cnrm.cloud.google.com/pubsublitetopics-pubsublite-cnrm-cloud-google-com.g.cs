@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.pubsublite.cnrm.cloud.google.com;
 /// <summary>The capacity configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PubSubLiteTopicSpecPartitionConfigCapacity
 {
     /// <summary>Subscribe throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 16.</summary>
@@ -21,6 +22,7 @@ public partial class V1alpha1PubSubLiteTopicSpecPartitionConfigCapacity
 }
 
 /// <summary>The settings for this topic's partitions.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PubSubLiteTopicSpecPartitionConfig
 {
     /// <summary>The capacity configuration.</summary>
@@ -33,6 +35,7 @@ public partial class V1alpha1PubSubLiteTopicSpecPartitionConfig
 }
 
 /// <summary>The project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PubSubLiteTopicSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -49,6 +52,7 @@ public partial class V1alpha1PubSubLiteTopicSpecProjectRef
 }
 
 /// <summary>The settings for this topic's Reservation usage.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PubSubLiteTopicSpecReservationConfig
 {
     /// <summary>The Reservation to use for this topic's throughput capacity.</summary>
@@ -57,6 +61,7 @@ public partial class V1alpha1PubSubLiteTopicSpecReservationConfig
 }
 
 /// <summary>The settings for a topic's message retention.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PubSubLiteTopicSpecRetentionConfig
 {
     /// <summary>The provisioned storage, in bytes, per partition. If the number of bytes stored in any of the topic's partitions grows beyond this value, older messages will be dropped to make room for newer ones, regardless of the value of period.</summary>
@@ -69,6 +74,7 @@ public partial class V1alpha1PubSubLiteTopicSpecRetentionConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PubSubLiteTopicSpec
 {
     /// <summary>The settings for this topic's partitions.</summary>
@@ -101,6 +107,7 @@ public partial class V1alpha1PubSubLiteTopicSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PubSubLiteTopicStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -125,6 +132,7 @@ public partial class V1alpha1PubSubLiteTopicStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PubSubLiteTopicStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -136,8 +144,9 @@ public partial class V1alpha1PubSubLiteTopicStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1PubSubLiteTopic : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1PubSubLiteTopicSpec>, IStatus<V1alpha1PubSubLiteTopicStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

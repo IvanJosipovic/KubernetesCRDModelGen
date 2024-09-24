@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkEndpointSpecInstanceRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeInstance` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1alpha1ComputeNetworkEndpointSpecInstanceRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkEndpointSpecNetworkEndpointGroupRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeNetworkEndpointGroup` resource.</summary>
@@ -41,6 +43,7 @@ public partial class V1alpha1ComputeNetworkEndpointSpecNetworkEndpointGroupRef
 }
 
 /// <summary>The project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkEndpointSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -57,6 +60,7 @@ public partial class V1alpha1ComputeNetworkEndpointSpecProjectRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkEndpointSpec
 {
     /// <summary></summary>
@@ -85,6 +89,7 @@ public partial class V1alpha1ComputeNetworkEndpointSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkEndpointStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -109,6 +114,7 @@ public partial class V1alpha1ComputeNetworkEndpointStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkEndpointStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -120,8 +126,9 @@ public partial class V1alpha1ComputeNetworkEndpointStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1ComputeNetworkEndpoint : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputeNetworkEndpointSpec>, IStatus<V1alpha1ComputeNetworkEndpointStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

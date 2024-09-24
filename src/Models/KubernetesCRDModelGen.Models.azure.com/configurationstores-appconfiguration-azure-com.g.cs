@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appconfiguration.azure.com;
 /// <summary>Storage version of v1api20220501.KeyVaultProperties Settings concerning key vault encryption for a configuration store.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageConfigurationStoreSpecEncryptionKeyVaultProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -25,6 +26,7 @@ public partial class V1api20220501storageConfigurationStoreSpecEncryptionKeyVaul
 }
 
 /// <summary>Storage version of v1api20220501.EncryptionProperties The encryption settings for a configuration store.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageConfigurationStoreSpecEncryption
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -37,6 +39,7 @@ public partial class V1api20220501storageConfigurationStoreSpecEncryption
 }
 
 /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageConfigurationStoreSpecIdentityUserAssignedIdentitiesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -57,6 +60,7 @@ public partial class V1api20220501storageConfigurationStoreSpecIdentityUserAssig
 }
 
 /// <summary>Storage version of v1api20220501.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageConfigurationStoreSpecIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -69,6 +73,7 @@ public partial class V1api20220501storageConfigurationStoreSpecIdentityUserAssig
 }
 
 /// <summary>Storage version of v1api20220501.ResourceIdentity An identity that can be associated with a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageConfigurationStoreSpecIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -85,6 +90,7 @@ public partial class V1api20220501storageConfigurationStoreSpecIdentity
 }
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecretsPrimaryConnectionString
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -97,6 +103,7 @@ public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecre
 }
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecretsPrimaryKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -109,6 +116,7 @@ public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecre
 }
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecretsPrimaryKeyID
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -121,6 +129,7 @@ public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecre
 }
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecretsPrimaryReadOnlyConnectionString
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -133,6 +142,7 @@ public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecre
 }
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecretsPrimaryReadOnlyKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -145,6 +155,7 @@ public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecre
 }
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecretsPrimaryReadOnlyKeyID
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -157,6 +168,7 @@ public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecre
 }
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecretsSecondaryConnectionString
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -169,6 +181,7 @@ public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecre
 }
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecretsSecondaryKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -181,6 +194,7 @@ public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecre
 }
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecretsSecondaryKeyID
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -193,6 +207,7 @@ public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecre
 }
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecretsSecondaryReadOnlyConnectionString
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -205,6 +220,7 @@ public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecre
 }
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecretsSecondaryReadOnlyKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -217,6 +233,7 @@ public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecre
 }
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecretsSecondaryReadOnlyKeyID
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -229,6 +246,7 @@ public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecre
 }
 
 /// <summary>Storage version of v1api20220501.ConfigurationStoreOperatorSecrets</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecrets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -285,6 +303,7 @@ public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecre
 }
 
 /// <summary>Storage version of v1api20220501.ConfigurationStoreOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageConfigurationStoreSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -297,6 +316,7 @@ public partial class V1api20220501storageConfigurationStoreSpecOperatorSpec
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageConfigurationStoreSpecOwner
 {
     /// <summary></summary>
@@ -309,6 +329,7 @@ public partial class V1api20220501storageConfigurationStoreSpecOwner
 }
 
 /// <summary>Storage version of v1api20220501.Sku Describes a configuration store SKU.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageConfigurationStoreSpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -321,6 +342,7 @@ public partial class V1api20220501storageConfigurationStoreSpecSku
 }
 
 /// <summary>Storage version of v1api20220501.SystemData Metadata pertaining to creation and last modification of the resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageConfigurationStoreSpecSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -353,6 +375,7 @@ public partial class V1api20220501storageConfigurationStoreSpecSystemData
 }
 
 /// <summary>Storage version of v1api20220501.ConfigurationStore_Spec</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageConfigurationStoreSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -421,6 +444,7 @@ public partial class V1api20220501storageConfigurationStoreSpec
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageConfigurationStoreStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -453,6 +477,7 @@ public partial class V1api20220501storageConfigurationStoreStatusConditions
 }
 
 /// <summary>Storage version of v1api20220501.KeyVaultProperties_STATUS Settings concerning key vault encryption for a configuration store.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageConfigurationStoreStatusEncryptionKeyVaultProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -469,6 +494,7 @@ public partial class V1api20220501storageConfigurationStoreStatusEncryptionKeyVa
 }
 
 /// <summary>Storage version of v1api20220501.EncryptionProperties_STATUS The encryption settings for a configuration store.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageConfigurationStoreStatusEncryption
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -481,6 +507,7 @@ public partial class V1api20220501storageConfigurationStoreStatusEncryption
 }
 
 /// <summary>Storage version of v1api20220501.UserIdentity_STATUS A resource identity that is managed by the user of the service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageConfigurationStoreStatusIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -497,6 +524,7 @@ public partial class V1api20220501storageConfigurationStoreStatusIdentityUserAss
 }
 
 /// <summary>Storage version of v1api20220501.ResourceIdentity_STATUS An identity that can be associated with a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageConfigurationStoreStatusIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -521,6 +549,7 @@ public partial class V1api20220501storageConfigurationStoreStatusIdentity
 }
 
 /// <summary>Storage version of v1api20220501.PrivateEndpointConnectionReference_STATUS A reference to a related private endpoint connection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageConfigurationStoreStatusPrivateEndpointConnections
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -533,6 +562,7 @@ public partial class V1api20220501storageConfigurationStoreStatusPrivateEndpoint
 }
 
 /// <summary>Storage version of v1api20220501.Sku_STATUS Describes a configuration store SKU.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageConfigurationStoreStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -545,6 +575,7 @@ public partial class V1api20220501storageConfigurationStoreStatusSku
 }
 
 /// <summary>Storage version of v1api20220501.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageConfigurationStoreStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -577,6 +608,7 @@ public partial class V1api20220501storageConfigurationStoreStatusSystemData
 }
 
 /// <summary>Storage version of v1api20220501.ConfigurationStore_STATUS The configuration store along with all resource properties. The Configuration Store will have all information to begin utilizing it.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageConfigurationStoreStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -660,8 +692,9 @@ public partial class V1api20220501storageConfigurationStoreStatus
     public string? Type { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Storage version of v1api20220501.ConfigurationStore Generator information: - Generated from: /appconfiguration/resource-manager/Microsoft.AppConfiguration/stable/2022-05-01/appconfiguration.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AppConfiguration/configurationStores/{configStoreName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1api20220501storageConfigurationStore : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220501storageConfigurationStoreSpec>, IStatus<V1api20220501storageConfigurationStoreStatus>
 {
     public const string KubeApiVersion = "v1api20220501storage";

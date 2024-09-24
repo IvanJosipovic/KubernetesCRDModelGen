@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.healthcare.cnrm.cloud.google.com;
 /// <summary>A nested object resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareDICOMStoreSpecNotificationConfig
 {
     /// <summary>The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client. PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message. It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a project. service-PROJECT_NUMBER@gcp-sa-healthcare.iam.gserviceaccount.com must have publisher permissions on the given Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.</summary>
@@ -17,6 +18,7 @@ public partial class V1alpha1HealthcareDICOMStoreSpecNotificationConfig
 }
 
 /// <summary>BigQueryDestination to include a fully qualified BigQuery table URI where DICOM instance metadata will be streamed.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareDICOMStoreSpecStreamConfigsBigqueryDestination
 {
     /// <summary>a fully qualified BigQuery table URI where DICOM instance metadata will be streamed.</summary>
@@ -25,6 +27,7 @@ public partial class V1alpha1HealthcareDICOMStoreSpecStreamConfigsBigqueryDestin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareDICOMStoreSpecStreamConfigs
 {
     /// <summary>BigQueryDestination to include a fully qualified BigQuery table URI where DICOM instance metadata will be streamed.</summary>
@@ -33,6 +36,7 @@ public partial class V1alpha1HealthcareDICOMStoreSpecStreamConfigs
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareDICOMStoreSpec
 {
     /// <summary>Immutable. Identifies the dataset addressed by this request. Must be in the format 'projects/{project}/locations/{location}/datasets/{dataset}'.</summary>
@@ -53,6 +57,7 @@ public partial class V1alpha1HealthcareDICOMStoreSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareDICOMStoreStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -77,6 +82,7 @@ public partial class V1alpha1HealthcareDICOMStoreStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareDICOMStoreStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -92,8 +98,9 @@ public partial class V1alpha1HealthcareDICOMStoreStatus
     public string? SelfLink { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1HealthcareDICOMStore : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1HealthcareDICOMStoreSpec>, IStatus<V1alpha1HealthcareDICOMStoreStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

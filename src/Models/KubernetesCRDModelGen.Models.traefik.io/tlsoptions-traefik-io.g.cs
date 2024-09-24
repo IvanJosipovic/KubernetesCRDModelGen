@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.traefik.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1TLSOptionSpecClientAuthClientAuthTypeEnum
 {
     [EnumMember(Value = "NoClientCert"), JsonStringEnumMemberName("NoClientCert")]
@@ -28,6 +29,7 @@ public enum V1alpha1TLSOptionSpecClientAuthClientAuthTypeEnum
 }
 
 /// <summary>ClientAuth defines the server's policy for TLS Client Authentication.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TLSOptionSpecClientAuth
 {
     /// <summary>ClientAuthType defines the client authentication type to apply.</summary>
@@ -41,6 +43,7 @@ public partial class V1alpha1TLSOptionSpecClientAuth
 }
 
 /// <summary>TLSOptionSpec defines the desired state of a TLSOption.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TLSOptionSpec
 {
     /// <summary>ALPNProtocols defines the list of supported application level protocols for the TLS handshake, in order of preference. More info: https://doc.traefik.io/traefik/v3.1/https/tls/#alpn-protocols</summary>
@@ -76,8 +79,9 @@ public partial class V1alpha1TLSOptionSpec
     public bool? SniStrict { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>TLSOption is the CRD implementation of a Traefik TLS Option, allowing to configure some parameters of the TLS connection. More info: https://doc.traefik.io/traefik/v3.1/https/tls/#tls-options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1TLSOption : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1TLSOptionSpec>
 {
     public const string KubeApiVersion = "v1alpha1";

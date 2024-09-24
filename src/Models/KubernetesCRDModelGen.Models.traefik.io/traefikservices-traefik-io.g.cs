@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.traefik.io;
 /// <summary>Healthcheck defines health checks for ExternalName services.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecMirroringHealthCheck
 {
     /// <summary>FollowRedirects defines whether redirects should be followed during the health check calls. Default: true</summary>
@@ -56,6 +57,7 @@ public partial class V1alpha1TraefikServiceSpecMirroringHealthCheck
     public IntstrIntOrString? Timeout { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1TraefikServiceSpecMirroringKindEnum
 {
     [EnumMember(Value = "Service"), JsonStringEnumMemberName("Service")]
@@ -67,6 +69,7 @@ public enum V1alpha1TraefikServiceSpecMirroringKindEnum
 }
 
 /// <summary>Healthcheck defines health checks for ExternalName services.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecMirroringMirrorsHealthCheck
 {
     /// <summary>FollowRedirects defines whether redirects should be followed during the health check calls. Default: true</summary>
@@ -114,6 +117,7 @@ public partial class V1alpha1TraefikServiceSpecMirroringMirrorsHealthCheck
     public IntstrIntOrString? Timeout { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1TraefikServiceSpecMirroringMirrorsKindEnum
 {
     [EnumMember(Value = "Service"), JsonStringEnumMemberName("Service")]
@@ -125,6 +129,7 @@ public enum V1alpha1TraefikServiceSpecMirroringMirrorsKindEnum
 }
 
 /// <summary>ResponseForwarding defines how Traefik forwards the response from the upstream Kubernetes Service to the client.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecMirroringMirrorsResponseForwarding
 {
     /// <summary>FlushInterval defines the interval, in milliseconds, in between flushes to the client while copying the response body. A negative value means to flush immediately after each write to the client. This configuration is ignored when ReverseProxy recognizes a response as a streaming response; for such responses, writes are flushed to the client immediately. Default: 100ms</summary>
@@ -133,6 +138,7 @@ public partial class V1alpha1TraefikServiceSpecMirroringMirrorsResponseForwardin
 }
 
 /// <summary>Cookie defines the sticky cookie configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecMirroringMirrorsStickyCookie
 {
     /// <summary>HTTPOnly defines whether the cookie can be accessed by client-side APIs, such as JavaScript.</summary>
@@ -157,6 +163,7 @@ public partial class V1alpha1TraefikServiceSpecMirroringMirrorsStickyCookie
 }
 
 /// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.1/routing/services/#sticky-sessions</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecMirroringMirrorsSticky
 {
     /// <summary>Cookie defines the sticky cookie configuration.</summary>
@@ -165,6 +172,7 @@ public partial class V1alpha1TraefikServiceSpecMirroringMirrorsSticky
 }
 
 /// <summary>MirrorService holds the mirror configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecMirroringMirrors
 {
     /// <summary>Healthcheck defines health checks for ExternalName services.</summary>
@@ -230,6 +238,7 @@ public partial class V1alpha1TraefikServiceSpecMirroringMirrors
 }
 
 /// <summary>ResponseForwarding defines how Traefik forwards the response from the upstream Kubernetes Service to the client.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecMirroringResponseForwarding
 {
     /// <summary>FlushInterval defines the interval, in milliseconds, in between flushes to the client while copying the response body. A negative value means to flush immediately after each write to the client. This configuration is ignored when ReverseProxy recognizes a response as a streaming response; for such responses, writes are flushed to the client immediately. Default: 100ms</summary>
@@ -238,6 +247,7 @@ public partial class V1alpha1TraefikServiceSpecMirroringResponseForwarding
 }
 
 /// <summary>Cookie defines the sticky cookie configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecMirroringStickyCookie
 {
     /// <summary>HTTPOnly defines whether the cookie can be accessed by client-side APIs, such as JavaScript.</summary>
@@ -262,6 +272,7 @@ public partial class V1alpha1TraefikServiceSpecMirroringStickyCookie
 }
 
 /// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.1/routing/services/#sticky-sessions</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecMirroringSticky
 {
     /// <summary>Cookie defines the sticky cookie configuration.</summary>
@@ -270,6 +281,7 @@ public partial class V1alpha1TraefikServiceSpecMirroringSticky
 }
 
 /// <summary>Mirroring defines the Mirroring service configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecMirroring
 {
     /// <summary>Healthcheck defines health checks for ExternalName services.</summary>
@@ -339,6 +351,7 @@ public partial class V1alpha1TraefikServiceSpecMirroring
 }
 
 /// <summary>Healthcheck defines health checks for ExternalName services.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecWeightedServicesHealthCheck
 {
     /// <summary>FollowRedirects defines whether redirects should be followed during the health check calls. Default: true</summary>
@@ -386,6 +399,7 @@ public partial class V1alpha1TraefikServiceSpecWeightedServicesHealthCheck
     public IntstrIntOrString? Timeout { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1TraefikServiceSpecWeightedServicesKindEnum
 {
     [EnumMember(Value = "Service"), JsonStringEnumMemberName("Service")]
@@ -397,6 +411,7 @@ public enum V1alpha1TraefikServiceSpecWeightedServicesKindEnum
 }
 
 /// <summary>ResponseForwarding defines how Traefik forwards the response from the upstream Kubernetes Service to the client.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecWeightedServicesResponseForwarding
 {
     /// <summary>FlushInterval defines the interval, in milliseconds, in between flushes to the client while copying the response body. A negative value means to flush immediately after each write to the client. This configuration is ignored when ReverseProxy recognizes a response as a streaming response; for such responses, writes are flushed to the client immediately. Default: 100ms</summary>
@@ -405,6 +420,7 @@ public partial class V1alpha1TraefikServiceSpecWeightedServicesResponseForwardin
 }
 
 /// <summary>Cookie defines the sticky cookie configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecWeightedServicesStickyCookie
 {
     /// <summary>HTTPOnly defines whether the cookie can be accessed by client-side APIs, such as JavaScript.</summary>
@@ -429,6 +445,7 @@ public partial class V1alpha1TraefikServiceSpecWeightedServicesStickyCookie
 }
 
 /// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.1/routing/services/#sticky-sessions</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecWeightedServicesSticky
 {
     /// <summary>Cookie defines the sticky cookie configuration.</summary>
@@ -437,6 +454,7 @@ public partial class V1alpha1TraefikServiceSpecWeightedServicesSticky
 }
 
 /// <summary>Service defines an upstream HTTP service to proxy traffic to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecWeightedServices
 {
     /// <summary>Healthcheck defines health checks for ExternalName services.</summary>
@@ -498,6 +516,7 @@ public partial class V1alpha1TraefikServiceSpecWeightedServices
 }
 
 /// <summary>Cookie defines the sticky cookie configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecWeightedStickyCookie
 {
     /// <summary>HTTPOnly defines whether the cookie can be accessed by client-side APIs, such as JavaScript.</summary>
@@ -522,6 +541,7 @@ public partial class V1alpha1TraefikServiceSpecWeightedStickyCookie
 }
 
 /// <summary>Sticky defines whether sticky sessions are enabled. More info: https://doc.traefik.io/traefik/v3.1/routing/providers/kubernetes-crd/#stickiness-and-load-balancing</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecWeightedSticky
 {
     /// <summary>Cookie defines the sticky cookie configuration.</summary>
@@ -530,6 +550,7 @@ public partial class V1alpha1TraefikServiceSpecWeightedSticky
 }
 
 /// <summary>Weighted defines the Weighted Round Robin configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecWeighted
 {
     /// <summary>Services defines the list of Kubernetes Service and/or TraefikService to load-balance, with weight.</summary>
@@ -542,6 +563,7 @@ public partial class V1alpha1TraefikServiceSpecWeighted
 }
 
 /// <summary>TraefikServiceSpec defines the desired state of a TraefikService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpec
 {
     /// <summary>Mirroring defines the Mirroring service configuration.</summary>
@@ -553,8 +575,9 @@ public partial class V1alpha1TraefikServiceSpec
     public V1alpha1TraefikServiceSpecWeighted? Weighted { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>TraefikService is the CRD implementation of a Traefik Service. TraefikService object allows to: - Apply weight to Services on load-balancing - Mirror traffic on services More info: https://doc.traefik.io/traefik/v3.1/routing/providers/kubernetes-crd/#kind-traefikservice</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1TraefikService : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1TraefikServiceSpec>
 {
     public const string KubeApiVersion = "v1alpha1";

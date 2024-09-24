@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.lexmodels.aws.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IntentSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1IntentSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderConclusionStatementMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -35,6 +37,7 @@ public partial class V1beta1IntentSpecForProviderConclusionStatementMessage
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderConclusionStatement
 {
     /// <summary>A set of messages, each of which provides a message string and its type. You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes are documented under message. Must contain between 1 and 15 messages.</summary>
@@ -47,6 +50,7 @@ public partial class V1beta1IntentSpecForProviderConclusionStatement
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderConfirmationPromptMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -63,6 +67,7 @@ public partial class V1beta1IntentSpecForProviderConfirmationPromptMessage
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderConfirmationPrompt
 {
     /// <summary>The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).</summary>
@@ -79,6 +84,7 @@ public partial class V1beta1IntentSpecForProviderConfirmationPrompt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderDialogCodeHook
 {
     /// <summary>The version of the request-response that you want Amazon Lex to use to invoke your Lambda function. For more information, see Using Lambda Functions. Must be less than or equal to 5 characters in length.</summary>
@@ -91,6 +97,7 @@ public partial class V1beta1IntentSpecForProviderDialogCodeHook
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderFollowUpPromptPromptMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -107,6 +114,7 @@ public partial class V1beta1IntentSpecForProviderFollowUpPromptPromptMessage
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderFollowUpPromptPrompt
 {
     /// <summary>The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).</summary>
@@ -123,6 +131,7 @@ public partial class V1beta1IntentSpecForProviderFollowUpPromptPrompt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderFollowUpPromptRejectionStatementMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -139,6 +148,7 @@ public partial class V1beta1IntentSpecForProviderFollowUpPromptRejectionStatemen
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderFollowUpPromptRejectionStatement
 {
     /// <summary>A set of messages, each of which provides a message string and its type. You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes are documented under message. Must contain between 1 and 15 messages.</summary>
@@ -151,6 +161,7 @@ public partial class V1beta1IntentSpecForProviderFollowUpPromptRejectionStatemen
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderFollowUpPrompt
 {
     /// <summary>Prompts for information from the user. Attributes are documented under prompt.</summary>
@@ -163,6 +174,7 @@ public partial class V1beta1IntentSpecForProviderFollowUpPrompt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderFulfillmentActivityCodeHook
 {
     /// <summary>The version of the request-response that you want Amazon Lex to use to invoke your Lambda function. For more information, see Using Lambda Functions. Must be less than or equal to 5 characters in length.</summary>
@@ -175,6 +187,7 @@ public partial class V1beta1IntentSpecForProviderFulfillmentActivityCodeHook
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderFulfillmentActivity
 {
     /// <summary>A description of the Lambda function that is run to fulfill the intent. Required if type is CodeHook. Attributes are documented under code_hook.</summary>
@@ -187,6 +200,7 @@ public partial class V1beta1IntentSpecForProviderFulfillmentActivity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderRejectionStatementMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -203,6 +217,7 @@ public partial class V1beta1IntentSpecForProviderRejectionStatementMessage
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderRejectionStatement
 {
     /// <summary>A set of messages, each of which provides a message string and its type. You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes are documented under message. Must contain between 1 and 15 messages.</summary>
@@ -215,6 +230,7 @@ public partial class V1beta1IntentSpecForProviderRejectionStatement
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderSlotValueElicitationPromptMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -231,6 +247,7 @@ public partial class V1beta1IntentSpecForProviderSlotValueElicitationPromptMessa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderSlotValueElicitationPrompt
 {
     /// <summary>The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).</summary>
@@ -247,6 +264,7 @@ public partial class V1beta1IntentSpecForProviderSlotValueElicitationPrompt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderSlot
 {
     /// <summary>A description of the bot. Must be less than or equal to 200 characters in length.</summary>
@@ -287,6 +305,7 @@ public partial class V1beta1IntentSpecForProviderSlot
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProvider
 {
     /// <summary>The statement that you want Amazon Lex to convey to the user after the intent is successfully fulfilled by the Lambda function. This element is relevant only if you provide a Lambda function in the fulfillment_activity. If you return the intent to the client application, you can't specify this element. The follow_up_prompt and conclusion_statement are mutually exclusive. You can specify only one. Attributes are documented under statement.</summary>
@@ -339,6 +358,7 @@ public partial class V1beta1IntentSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderConclusionStatementMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -355,6 +375,7 @@ public partial class V1beta1IntentSpecInitProviderConclusionStatementMessage
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderConclusionStatement
 {
     /// <summary>A set of messages, each of which provides a message string and its type. You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes are documented under message. Must contain between 1 and 15 messages.</summary>
@@ -367,6 +388,7 @@ public partial class V1beta1IntentSpecInitProviderConclusionStatement
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderConfirmationPromptMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -383,6 +405,7 @@ public partial class V1beta1IntentSpecInitProviderConfirmationPromptMessage
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderConfirmationPrompt
 {
     /// <summary>The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).</summary>
@@ -399,6 +422,7 @@ public partial class V1beta1IntentSpecInitProviderConfirmationPrompt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderDialogCodeHook
 {
     /// <summary>The version of the request-response that you want Amazon Lex to use to invoke your Lambda function. For more information, see Using Lambda Functions. Must be less than or equal to 5 characters in length.</summary>
@@ -411,6 +435,7 @@ public partial class V1beta1IntentSpecInitProviderDialogCodeHook
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderFollowUpPromptPromptMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -427,6 +452,7 @@ public partial class V1beta1IntentSpecInitProviderFollowUpPromptPromptMessage
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderFollowUpPromptPrompt
 {
     /// <summary>The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).</summary>
@@ -443,6 +469,7 @@ public partial class V1beta1IntentSpecInitProviderFollowUpPromptPrompt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderFollowUpPromptRejectionStatementMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -459,6 +486,7 @@ public partial class V1beta1IntentSpecInitProviderFollowUpPromptRejectionStateme
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderFollowUpPromptRejectionStatement
 {
     /// <summary>A set of messages, each of which provides a message string and its type. You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes are documented under message. Must contain between 1 and 15 messages.</summary>
@@ -471,6 +499,7 @@ public partial class V1beta1IntentSpecInitProviderFollowUpPromptRejectionStateme
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderFollowUpPrompt
 {
     /// <summary>Prompts for information from the user. Attributes are documented under prompt.</summary>
@@ -483,6 +512,7 @@ public partial class V1beta1IntentSpecInitProviderFollowUpPrompt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderFulfillmentActivityCodeHook
 {
     /// <summary>The version of the request-response that you want Amazon Lex to use to invoke your Lambda function. For more information, see Using Lambda Functions. Must be less than or equal to 5 characters in length.</summary>
@@ -495,6 +525,7 @@ public partial class V1beta1IntentSpecInitProviderFulfillmentActivityCodeHook
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderFulfillmentActivity
 {
     /// <summary>A description of the Lambda function that is run to fulfill the intent. Required if type is CodeHook. Attributes are documented under code_hook.</summary>
@@ -507,6 +538,7 @@ public partial class V1beta1IntentSpecInitProviderFulfillmentActivity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderRejectionStatementMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -523,6 +555,7 @@ public partial class V1beta1IntentSpecInitProviderRejectionStatementMessage
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderRejectionStatement
 {
     /// <summary>A set of messages, each of which provides a message string and its type. You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes are documented under message. Must contain between 1 and 15 messages.</summary>
@@ -535,6 +568,7 @@ public partial class V1beta1IntentSpecInitProviderRejectionStatement
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderSlotValueElicitationPromptMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -551,6 +585,7 @@ public partial class V1beta1IntentSpecInitProviderSlotValueElicitationPromptMess
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderSlotValueElicitationPrompt
 {
     /// <summary>The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).</summary>
@@ -567,6 +602,7 @@ public partial class V1beta1IntentSpecInitProviderSlotValueElicitationPrompt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderSlot
 {
     /// <summary>A description of the bot. Must be less than or equal to 200 characters in length.</summary>
@@ -607,6 +643,7 @@ public partial class V1beta1IntentSpecInitProviderSlot
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProvider
 {
     /// <summary>The statement that you want Amazon Lex to convey to the user after the intent is successfully fulfilled by the Lambda function. This element is relevant only if you provide a Lambda function in the fulfillment_activity. If you return the intent to the client application, you can't specify this element. The follow_up_prompt and conclusion_statement are mutually exclusive. You can specify only one. Attributes are documented under statement.</summary>
@@ -654,6 +691,7 @@ public partial class V1beta1IntentSpecInitProvider
     public IList<V1beta1IntentSpecInitProviderSlot>? Slot { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IntentSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -676,6 +714,7 @@ public enum V1beta1IntentSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IntentSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -686,6 +725,7 @@ public enum V1beta1IntentSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IntentSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -697,6 +737,7 @@ public enum V1beta1IntentSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -711,6 +752,7 @@ public partial class V1beta1IntentSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -722,6 +764,7 @@ public partial class V1beta1IntentSpecProviderConfigRef
     public V1beta1IntentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IntentSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -732,6 +775,7 @@ public enum V1beta1IntentSpecPublishConnectionDetailsToConfigRefPolicyResolution
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IntentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -743,6 +787,7 @@ public enum V1beta1IntentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnu
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -757,6 +802,7 @@ public partial class V1beta1IntentSpecPublishConnectionDetailsToConfigRefPolicy
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -769,6 +815,7 @@ public partial class V1beta1IntentSpecPublishConnectionDetailsToConfigRef
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -785,6 +832,7 @@ public partial class V1beta1IntentSpecPublishConnectionDetailsToMetadata
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -801,6 +849,7 @@ public partial class V1beta1IntentSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -813,6 +862,7 @@ public partial class V1beta1IntentSpecWriteConnectionSecretToRef
 }
 
 /// <summary>IntentSpec defines the desired state of Intent</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -846,6 +896,7 @@ public partial class V1beta1IntentSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderConclusionStatementMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -862,6 +913,7 @@ public partial class V1beta1IntentStatusAtProviderConclusionStatementMessage
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderConclusionStatement
 {
     /// <summary>A set of messages, each of which provides a message string and its type. You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes are documented under message. Must contain between 1 and 15 messages.</summary>
@@ -874,6 +926,7 @@ public partial class V1beta1IntentStatusAtProviderConclusionStatement
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderConfirmationPromptMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -890,6 +943,7 @@ public partial class V1beta1IntentStatusAtProviderConfirmationPromptMessage
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderConfirmationPrompt
 {
     /// <summary>The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).</summary>
@@ -906,6 +960,7 @@ public partial class V1beta1IntentStatusAtProviderConfirmationPrompt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderDialogCodeHook
 {
     /// <summary>The version of the request-response that you want Amazon Lex to use to invoke your Lambda function. For more information, see Using Lambda Functions. Must be less than or equal to 5 characters in length.</summary>
@@ -918,6 +973,7 @@ public partial class V1beta1IntentStatusAtProviderDialogCodeHook
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderFollowUpPromptPromptMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -934,6 +990,7 @@ public partial class V1beta1IntentStatusAtProviderFollowUpPromptPromptMessage
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderFollowUpPromptPrompt
 {
     /// <summary>The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).</summary>
@@ -950,6 +1007,7 @@ public partial class V1beta1IntentStatusAtProviderFollowUpPromptPrompt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderFollowUpPromptRejectionStatementMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -966,6 +1024,7 @@ public partial class V1beta1IntentStatusAtProviderFollowUpPromptRejectionStateme
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderFollowUpPromptRejectionStatement
 {
     /// <summary>A set of messages, each of which provides a message string and its type. You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes are documented under message. Must contain between 1 and 15 messages.</summary>
@@ -978,6 +1037,7 @@ public partial class V1beta1IntentStatusAtProviderFollowUpPromptRejectionStateme
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderFollowUpPrompt
 {
     /// <summary>Prompts for information from the user. Attributes are documented under prompt.</summary>
@@ -990,6 +1050,7 @@ public partial class V1beta1IntentStatusAtProviderFollowUpPrompt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderFulfillmentActivityCodeHook
 {
     /// <summary>The version of the request-response that you want Amazon Lex to use to invoke your Lambda function. For more information, see Using Lambda Functions. Must be less than or equal to 5 characters in length.</summary>
@@ -1002,6 +1063,7 @@ public partial class V1beta1IntentStatusAtProviderFulfillmentActivityCodeHook
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderFulfillmentActivity
 {
     /// <summary>A description of the Lambda function that is run to fulfill the intent. Required if type is CodeHook. Attributes are documented under code_hook.</summary>
@@ -1014,6 +1076,7 @@ public partial class V1beta1IntentStatusAtProviderFulfillmentActivity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderRejectionStatementMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -1030,6 +1093,7 @@ public partial class V1beta1IntentStatusAtProviderRejectionStatementMessage
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderRejectionStatement
 {
     /// <summary>A set of messages, each of which provides a message string and its type. You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes are documented under message. Must contain between 1 and 15 messages.</summary>
@@ -1042,6 +1106,7 @@ public partial class V1beta1IntentStatusAtProviderRejectionStatement
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderSlotValueElicitationPromptMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -1058,6 +1123,7 @@ public partial class V1beta1IntentStatusAtProviderSlotValueElicitationPromptMess
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderSlotValueElicitationPrompt
 {
     /// <summary>The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).</summary>
@@ -1074,6 +1140,7 @@ public partial class V1beta1IntentStatusAtProviderSlotValueElicitationPrompt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderSlot
 {
     /// <summary>A description of the bot. Must be less than or equal to 200 characters in length.</summary>
@@ -1114,6 +1181,7 @@ public partial class V1beta1IntentStatusAtProviderSlot
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProvider
 {
     /// <summary>The ARN of the Lex intent.</summary>
@@ -1186,6 +1254,7 @@ public partial class V1beta1IntentStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1214,6 +1283,7 @@ public partial class V1beta1IntentStatusConditions
 }
 
 /// <summary>IntentStatus defines the observed state of Intent.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatus
 {
     /// <summary></summary>
@@ -1229,8 +1299,9 @@ public partial class V1beta1IntentStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Intent is the Schema for the Intents API. Provides an Amazon Lex intent resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Intent : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IntentSpec>, IStatus<V1beta1IntentStatus>
 {
     public const string KubeApiVersion = "v1beta1";

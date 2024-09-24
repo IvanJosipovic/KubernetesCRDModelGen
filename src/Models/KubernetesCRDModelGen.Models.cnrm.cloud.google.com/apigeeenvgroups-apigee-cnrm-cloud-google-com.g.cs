@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigee.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApigeeEnvgroupSpec
 {
     /// <summary>Hostnames of the environment group.</summary>
@@ -25,6 +26,7 @@ public partial class V1alpha1ApigeeEnvgroupSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApigeeEnvgroupStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -49,6 +51,7 @@ public partial class V1alpha1ApigeeEnvgroupStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApigeeEnvgroupStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -60,8 +63,9 @@ public partial class V1alpha1ApigeeEnvgroupStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1ApigeeEnvgroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ApigeeEnvgroupSpec>, IStatus<V1alpha1ApigeeEnvgroupStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

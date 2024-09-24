@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datalossprevention.gcp.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InspectTemplateSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1InspectTemplateSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInfoTypesDictionaryCloudStoragePath
 {
     /// <summary>A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt</summary>
@@ -27,6 +29,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInfoTypesDictionaryWordList
 {
     /// <summary>Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits.</summary>
@@ -35,6 +38,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInfoTypesDictionary
 {
     /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted. Structure is documented below.</summary>
@@ -47,6 +51,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInfoTypesInfoTypeSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -55,6 +60,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInfoTypesInfoType
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -71,6 +77,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInfoTypesRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -83,6 +90,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -91,6 +99,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInfoTypesStoredType
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -99,11 +108,13 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInfoTypesSurrogateType
 {
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInfoTypes
 {
     /// <summary>Dictionary which defines the rule. Structure is documented below.</summary>
@@ -140,6 +151,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -148,6 +160,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigInfoTypes
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigInfoTypes
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -164,6 +177,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigInfoTypes
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -172,6 +186,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigLimitsMax
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigLimitsMaxFindingsPerInfoTypeInfoType
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -188,6 +203,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigLimitsMax
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigLimitsMaxFindingsPerInfoType
 {
     /// <summary>Type of information the findings limit applies to. Only one limit per infoType should be provided. If InfoTypeLimit does not have an infoType, the DLP API applies the limit against all infoTypes that are found but not specified in another InfoTypeLimit. Structure is documented below.</summary>
@@ -200,6 +216,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigLimitsMax
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigLimits
 {
     /// <summary>Configuration of findings limit given for specified infoTypes. Structure is documented below.</summary>
@@ -216,6 +233,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigLimits
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -224,6 +242,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetIn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetInfoTypes
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -240,6 +259,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetIn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath
 {
     /// <summary>A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt</summary>
@@ -248,6 +268,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesExclusionRuleDictionaryWordList
 {
     /// <summary>Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits.</summary>
@@ -256,6 +277,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesExclusionRuleDictionary
 {
     /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted. Structure is documented below.</summary>
@@ -268,6 +290,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordHotwordRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -280,6 +303,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximity
 {
     /// <summary>Number of characters after the finding to consider. Either this or window_before must be specified</summary>
@@ -292,6 +316,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesExclusionRuleExcludeByHotword
 {
     /// <summary>Regular expression pattern defining what qualifies as a hotword. Structure is documented below.</summary>
@@ -304,6 +329,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -312,6 +338,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -328,6 +355,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes
 {
     /// <summary>List of infoTypes this rule set is applied to. Structure is documented below.</summary>
@@ -336,6 +364,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesExclusionRuleRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -348,6 +377,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesExclusionRule
 {
     /// <summary>Dictionary which defines the rule. Structure is documented below.</summary>
@@ -372,6 +402,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesHotwordRuleHotwordRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -384,6 +415,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment
 {
     /// <summary>Set the likelihood of a finding to a fixed value. Either this or relative_likelihood can be set. Possible values are: VERY_UNLIKELY, UNLIKELY, POSSIBLE, LIKELY, VERY_LIKELY.</summary>
@@ -396,6 +428,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesHotwordRuleProximity
 {
     /// <summary>Number of characters after the finding to consider. Either this or window_before must be specified</summary>
@@ -408,6 +441,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesHotwordRule
 {
     /// <summary>Regular expression pattern defining what qualifies as a hotword. Structure is documented below.</summary>
@@ -424,6 +458,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRules
 {
     /// <summary>The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results. Structure is documented below.</summary>
@@ -436,6 +471,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSet
 {
     /// <summary>List of infoTypes this rule set is applied to. Structure is documented below.</summary>
@@ -448,6 +484,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSet
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfig
 {
     /// <summary>List of options defining data content to scan. If empty, text, images, and other content will be included. Each value may be one of: CONTENT_TEXT, CONTENT_IMAGE.</summary>
@@ -484,6 +521,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecForProvider
 {
     /// <summary>A description of the inspect template.</summary>
@@ -508,6 +546,7 @@ public partial class V1beta1InspectTemplateSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomInfoTypesDictionaryCloudStoragePath
 {
     /// <summary>A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt</summary>
@@ -516,6 +555,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomIn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomInfoTypesDictionaryWordList
 {
     /// <summary>Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits.</summary>
@@ -524,6 +564,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomIn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomInfoTypesDictionary
 {
     /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted. Structure is documented below.</summary>
@@ -536,6 +577,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomIn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomInfoTypesInfoTypeSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -544,6 +586,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomIn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomInfoTypesInfoType
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -560,6 +603,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomIn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomInfoTypesRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -572,6 +616,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomIn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -580,6 +625,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomIn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomInfoTypesStoredType
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -588,11 +634,13 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomIn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomInfoTypesSurrogateType
 {
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomInfoTypes
 {
     /// <summary>Dictionary which defines the rule. Structure is documented below.</summary>
@@ -629,6 +677,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomIn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -637,6 +686,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigInfoType
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigInfoTypes
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -653,6 +703,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigInfoType
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -661,6 +712,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigLimitsMa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigLimitsMaxFindingsPerInfoTypeInfoType
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -677,6 +729,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigLimitsMa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigLimitsMaxFindingsPerInfoType
 {
     /// <summary>Type of information the findings limit applies to. Only one limit per infoType should be provided. If InfoTypeLimit does not have an infoType, the DLP API applies the limit against all infoTypes that are found but not specified in another InfoTypeLimit. Structure is documented below.</summary>
@@ -689,6 +742,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigLimitsMa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigLimits
 {
     /// <summary>Configuration of findings limit given for specified infoTypes. Structure is documented below.</summary>
@@ -705,6 +759,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigLimits
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -713,6 +768,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetI
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetInfoTypes
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -729,6 +785,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetI
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath
 {
     /// <summary>A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt</summary>
@@ -737,6 +794,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesExclusionRuleDictionaryWordList
 {
     /// <summary>Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits.</summary>
@@ -745,6 +803,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesExclusionRuleDictionary
 {
     /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted. Structure is documented below.</summary>
@@ -757,6 +816,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordHotwordRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -769,6 +829,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximity
 {
     /// <summary>Number of characters after the finding to consider. Either this or window_before must be specified</summary>
@@ -781,6 +842,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesExclusionRuleExcludeByHotword
 {
     /// <summary>Regular expression pattern defining what qualifies as a hotword. Structure is documented below.</summary>
@@ -793,6 +855,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -801,6 +864,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -817,6 +881,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes
 {
     /// <summary>List of infoTypes this rule set is applied to. Structure is documented below.</summary>
@@ -825,6 +890,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesExclusionRuleRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -837,6 +903,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesExclusionRule
 {
     /// <summary>Dictionary which defines the rule. Structure is documented below.</summary>
@@ -861,6 +928,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesHotwordRuleHotwordRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -873,6 +941,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment
 {
     /// <summary>Set the likelihood of a finding to a fixed value. Either this or relative_likelihood can be set. Possible values are: VERY_UNLIKELY, UNLIKELY, POSSIBLE, LIKELY, VERY_LIKELY.</summary>
@@ -885,6 +954,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesHotwordRuleProximity
 {
     /// <summary>Number of characters after the finding to consider. Either this or window_before must be specified</summary>
@@ -897,6 +967,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesHotwordRule
 {
     /// <summary>Regular expression pattern defining what qualifies as a hotword. Structure is documented below.</summary>
@@ -913,6 +984,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRules
 {
     /// <summary>The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results. Structure is documented below.</summary>
@@ -925,6 +997,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSet
 {
     /// <summary>List of infoTypes this rule set is applied to. Structure is documented below.</summary>
@@ -937,6 +1010,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSet
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfig
 {
     /// <summary>List of options defining data content to scan. If empty, text, images, and other content will be included. Each value may be one of: CONTENT_TEXT, CONTENT_IMAGE.</summary>
@@ -973,6 +1047,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfig
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecInitProvider
 {
     /// <summary>A description of the inspect template.</summary>
@@ -996,6 +1071,7 @@ public partial class V1beta1InspectTemplateSpecInitProvider
     public string? TemplateId { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InspectTemplateSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -1018,6 +1094,7 @@ public enum V1beta1InspectTemplateSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InspectTemplateSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1028,6 +1105,7 @@ public enum V1beta1InspectTemplateSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InspectTemplateSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1039,6 +1117,7 @@ public enum V1beta1InspectTemplateSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1053,6 +1132,7 @@ public partial class V1beta1InspectTemplateSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1064,6 +1144,7 @@ public partial class V1beta1InspectTemplateSpecProviderConfigRef
     public V1beta1InspectTemplateSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InspectTemplateSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1074,6 +1155,7 @@ public enum V1beta1InspectTemplateSpecPublishConnectionDetailsToConfigRefPolicyR
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InspectTemplateSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1085,6 +1167,7 @@ public enum V1beta1InspectTemplateSpecPublishConnectionDetailsToConfigRefPolicyR
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1099,6 +1182,7 @@ public partial class V1beta1InspectTemplateSpecPublishConnectionDetailsToConfigR
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1111,6 +1195,7 @@ public partial class V1beta1InspectTemplateSpecPublishConnectionDetailsToConfigR
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1127,6 +1212,7 @@ public partial class V1beta1InspectTemplateSpecPublishConnectionDetailsToMetadat
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1143,6 +1229,7 @@ public partial class V1beta1InspectTemplateSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1155,6 +1242,7 @@ public partial class V1beta1InspectTemplateSpecWriteConnectionSecretToRef
 }
 
 /// <summary>InspectTemplateSpec defines the desired state of InspectTemplate</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1188,6 +1276,7 @@ public partial class V1beta1InspectTemplateSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomInfoTypesDictionaryCloudStoragePath
 {
     /// <summary>A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt</summary>
@@ -1196,6 +1285,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomIn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomInfoTypesDictionaryWordList
 {
     /// <summary>Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits.</summary>
@@ -1204,6 +1294,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomIn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomInfoTypesDictionary
 {
     /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted. Structure is documented below.</summary>
@@ -1216,6 +1307,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomIn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomInfoTypesInfoTypeSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -1224,6 +1316,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomIn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomInfoTypesInfoType
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -1240,6 +1333,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomIn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomInfoTypesRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -1252,6 +1346,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomIn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -1260,6 +1355,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomIn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomInfoTypesStoredType
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -1268,11 +1364,13 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomIn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomInfoTypesSurrogateType
 {
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomInfoTypes
 {
     /// <summary>Dictionary which defines the rule. Structure is documented below.</summary>
@@ -1309,6 +1407,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomIn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -1317,6 +1416,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigInfoType
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigInfoTypes
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -1333,6 +1433,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigInfoType
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -1341,6 +1442,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigLimitsMa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigLimitsMaxFindingsPerInfoTypeInfoType
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -1357,6 +1459,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigLimitsMa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigLimitsMaxFindingsPerInfoType
 {
     /// <summary>Type of information the findings limit applies to. Only one limit per infoType should be provided. If InfoTypeLimit does not have an infoType, the DLP API applies the limit against all infoTypes that are found but not specified in another InfoTypeLimit. Structure is documented below.</summary>
@@ -1369,6 +1472,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigLimitsMa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigLimits
 {
     /// <summary>Configuration of findings limit given for specified infoTypes. Structure is documented below.</summary>
@@ -1385,6 +1489,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigLimits
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -1393,6 +1498,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetI
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetInfoTypes
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -1409,6 +1515,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetI
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath
 {
     /// <summary>A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt</summary>
@@ -1417,6 +1524,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesExclusionRuleDictionaryWordList
 {
     /// <summary>Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits.</summary>
@@ -1425,6 +1533,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesExclusionRuleDictionary
 {
     /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted. Structure is documented below.</summary>
@@ -1437,6 +1546,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordHotwordRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -1449,6 +1559,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximity
 {
     /// <summary>Number of characters after the finding to consider. Either this or window_before must be specified</summary>
@@ -1461,6 +1572,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesExclusionRuleExcludeByHotword
 {
     /// <summary>Regular expression pattern defining what qualifies as a hotword. Structure is documented below.</summary>
@@ -1473,6 +1585,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -1481,6 +1594,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -1497,6 +1611,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes
 {
     /// <summary>List of infoTypes this rule set is applied to. Structure is documented below.</summary>
@@ -1505,6 +1620,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesExclusionRuleRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -1517,6 +1633,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesExclusionRule
 {
     /// <summary>Dictionary which defines the rule. Structure is documented below.</summary>
@@ -1541,6 +1658,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesHotwordRuleHotwordRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -1553,6 +1671,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment
 {
     /// <summary>Set the likelihood of a finding to a fixed value. Either this or relative_likelihood can be set. Possible values are: VERY_UNLIKELY, UNLIKELY, POSSIBLE, LIKELY, VERY_LIKELY.</summary>
@@ -1565,6 +1684,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesHotwordRuleProximity
 {
     /// <summary>Number of characters after the finding to consider. Either this or window_before must be specified</summary>
@@ -1577,6 +1697,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesHotwordRule
 {
     /// <summary>Regular expression pattern defining what qualifies as a hotword. Structure is documented below.</summary>
@@ -1593,6 +1714,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRules
 {
     /// <summary>The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results. Structure is documented below.</summary>
@@ -1605,6 +1727,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSet
 {
     /// <summary>List of infoTypes this rule set is applied to. Structure is documented below.</summary>
@@ -1617,6 +1740,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSet
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfig
 {
     /// <summary>List of options defining data content to scan. If empty, text, images, and other content will be included. Each value may be one of: CONTENT_TEXT, CONTENT_IMAGE.</summary>
@@ -1653,6 +1777,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusAtProvider
 {
     /// <summary>A description of the inspect template.</summary>
@@ -1685,6 +1810,7 @@ public partial class V1beta1InspectTemplateStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1713,6 +1839,7 @@ public partial class V1beta1InspectTemplateStatusConditions
 }
 
 /// <summary>InspectTemplateStatus defines the observed state of InspectTemplate.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InspectTemplateStatus
 {
     /// <summary></summary>
@@ -1728,8 +1855,9 @@ public partial class V1beta1InspectTemplateStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>InspectTemplate is the Schema for the InspectTemplates API. An inspect job template.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1InspectTemplate : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1InspectTemplateSpec>, IStatus<V1beta1InspectTemplateStatus>
 {
     public const string KubeApiVersion = "v1beta1";

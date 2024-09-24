@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.eventing.knative.dev;
 /// <summary>Ref contains a direct reference to a resource which is allowed to send events to the target.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EventPolicySpecFromRef
 {
     /// <summary>API version of the referent.</summary>
@@ -29,6 +30,7 @@ public partial class V1alpha1EventPolicySpecFromRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EventPolicySpecFrom
 {
     /// <summary>Ref contains a direct reference to a resource which is allowed to send events to the target.</summary>
@@ -41,6 +43,7 @@ public partial class V1alpha1EventPolicySpecFrom
 }
 
 /// <summary>Ref contains the direct reference to a target</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EventPolicySpecToRef
 {
     /// <summary>API version of the referent.</summary>
@@ -57,6 +60,7 @@ public partial class V1alpha1EventPolicySpecToRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EventPolicySpecToSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -73,6 +77,7 @@ public partial class V1alpha1EventPolicySpecToSelectorMatchExpressions
 }
 
 /// <summary>Selector contains a selector to group targets</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EventPolicySpecToSelector
 {
     /// <summary>APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources</summary>
@@ -93,6 +98,7 @@ public partial class V1alpha1EventPolicySpecToSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EventPolicySpecTo
 {
     /// <summary>Ref contains the direct reference to a target</summary>
@@ -105,6 +111,7 @@ public partial class V1alpha1EventPolicySpecTo
 }
 
 /// <summary>Spec defines the desired state of the EventPolicy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EventPolicySpec
 {
     /// <summary>From is the list of sources or oidc identities, which are allowed to send events to the targets (.spec.to).</summary>
@@ -117,6 +124,7 @@ public partial class V1alpha1EventPolicySpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EventPolicyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
@@ -145,6 +153,7 @@ public partial class V1alpha1EventPolicyStatusConditions
 }
 
 /// <summary>Status represents the current state of the EventPolicy. This data may be out of date.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EventPolicyStatus
 {
     /// <summary>Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.</summary>
@@ -164,8 +173,9 @@ public partial class V1alpha1EventPolicyStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1EventPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1EventPolicySpec>, IStatus<V1alpha1EventPolicyStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.tags.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TagsLocationTagBindingSpecParentRef
 {
     /// <summary>Allowed value: string of the format `//cloudresourcemanager.googleapis.com/projects/{{value}}`, where {{value}} is the `number` field of a `Project` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1alpha1TagsLocationTagBindingSpecParentRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TagsLocationTagBindingSpecTagValueRef
 {
     /// <summary>Allowed value: string of the format `tagValues/{{value}}`, where {{value}} is the `name` field of a `TagsTagValue` resource.</summary>
@@ -41,6 +43,7 @@ public partial class V1alpha1TagsLocationTagBindingSpecTagValueRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TagsLocationTagBindingSpec
 {
     /// <summary>Immutable. The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The default value is US.</summary>
@@ -61,6 +64,7 @@ public partial class V1alpha1TagsLocationTagBindingSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TagsLocationTagBindingStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -85,6 +89,7 @@ public partial class V1alpha1TagsLocationTagBindingStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TagsLocationTagBindingStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -100,8 +105,9 @@ public partial class V1alpha1TagsLocationTagBindingStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1TagsLocationTagBinding : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1TagsLocationTagBindingSpec>, IStatus<V1alpha1TagsLocationTagBindingStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.artifactregistry.cnrm.cloud.google.com;
 /// <summary>Policy condition for matching versions.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArtifactRegistryRepositorySpecCleanupPoliciesCondition
 {
     /// <summary>Match versions newer than a duration.</summary>
@@ -37,6 +38,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecCleanupPoliciesConditi
 }
 
 /// <summary>Policy condition for retaining a minimum number of versions. May only be specified with a Keep action.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArtifactRegistryRepositorySpecCleanupPoliciesMostRecentVersions
 {
     /// <summary>Minimum number of versions to keep.</summary>
@@ -49,6 +51,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecCleanupPoliciesMostRec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArtifactRegistryRepositorySpecCleanupPolicies
 {
     /// <summary>Policy action. Possible values: ["DELETE", "KEEP"].</summary>
@@ -69,6 +72,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecCleanupPolicies
 }
 
 /// <summary>Docker repository config contains repository level configuration for the repositories of docker type.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArtifactRegistryRepositorySpecDockerConfig
 {
     /// <summary>The repository which enabled this flag prevents all tags from being modified, moved or deleted. This does not prevent tags from being created.</summary>
@@ -77,6 +81,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecDockerConfig
 }
 
 /// <summary>The customer managed encryption key that’s used to encrypt the contents of the Repository.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArtifactRegistryRepositorySpecKmsKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
@@ -93,6 +98,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecKmsKeyRef
 }
 
 /// <summary>MavenRepositoryConfig is maven related repository details. Provides additional configuration details for repositories of the maven format type.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArtifactRegistryRepositorySpecMavenConfig
 {
     /// <summary>Immutable. The repository with this flag will allow publishing the same snapshot versions.</summary>
@@ -105,6 +111,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecMavenConfig
 }
 
 /// <summary>Immutable. Specific settings for a Docker remote repository.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfigDockerRepository
 {
     /// <summary>Immutable. Address of the remote repository. Default value: "DOCKER_HUB" Possible values: ["DOCKER_HUB"].</summary>
@@ -113,6 +120,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfig
 }
 
 /// <summary>Immutable. Specific settings for a Maven remote repository.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfigMavenRepository
 {
     /// <summary>Immutable. Address of the remote repository. Default value: "MAVEN_CENTRAL" Possible values: ["MAVEN_CENTRAL"].</summary>
@@ -121,6 +129,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfig
 }
 
 /// <summary>Immutable. Specific settings for an Npm remote repository.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfigNpmRepository
 {
     /// <summary>Immutable. Address of the remote repository. Default value: "NPMJS" Possible values: ["NPMJS"].</summary>
@@ -129,6 +138,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfig
 }
 
 /// <summary>Immutable. Specific settings for a Python remote repository.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfigPythonRepository
 {
     /// <summary>Immutable. Address of the remote repository. Default value: "PYPI" Possible values: ["PYPI"].</summary>
@@ -137,6 +147,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfig
 }
 
 /// <summary>Immutable. Configuration specific for a Remote Repository.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfig
 {
     /// <summary>Immutable. The description of the remote source.</summary>
@@ -161,6 +172,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfig
 }
 
 /// <summary>A reference to the repository resource, for example: "projects/p1/locations/us-central1/repositories/repo1".</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArtifactRegistryRepositorySpecVirtualRepositoryConfigUpstreamPoliciesRepositoryRef
 {
     /// <summary>Allowed value: string of the format `projects/{{project}}/locations/{{location}}/repositories/{{value}}`, where {{value}} is the `name` field of an `ArtifactRegistryRepository` resource.</summary>
@@ -177,6 +189,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecVirtualRepositoryConfi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArtifactRegistryRepositorySpecVirtualRepositoryConfigUpstreamPolicies
 {
     /// <summary>The user-provided ID of the upstream policy.</summary>
@@ -193,6 +206,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecVirtualRepositoryConfi
 }
 
 /// <summary>Configuration specific for a Virtual Repository.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArtifactRegistryRepositorySpecVirtualRepositoryConfig
 {
     /// <summary>Policies that configure the upstream artifacts distributed by the Virtual Repository. Upstream policies cannot be set on a standard repository.</summary>
@@ -201,6 +215,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecVirtualRepositoryConfi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArtifactRegistryRepositorySpec
 {
     /// <summary>Cleanup policies for this repository. Cleanup policies indicate when certain package versions can be automatically deleted. Map keys are policy IDs supplied by users during policy creation. They must unique within a repository and be under 128 characters in length.</summary>
@@ -253,6 +268,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArtifactRegistryRepositoryStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -277,6 +293,7 @@ public partial class V1beta1ArtifactRegistryRepositoryStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArtifactRegistryRepositoryStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -300,8 +317,9 @@ public partial class V1beta1ArtifactRegistryRepositoryStatus
     public string? UpdateTime { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ArtifactRegistryRepository : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ArtifactRegistryRepositorySpec>, IStatus<V1beta1ArtifactRegistryRepositoryStatus>
 {
     public const string KubeApiVersion = "v1beta1";

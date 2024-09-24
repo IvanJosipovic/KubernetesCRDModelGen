@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.security.istio.io;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RequestAuthenticationSpecJwtRulesFromHeaders
 {
     /// <summary>The HTTP header name.</summary>
@@ -21,6 +22,7 @@ public partial class V1beta1RequestAuthenticationSpecJwtRulesFromHeaders
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RequestAuthenticationSpecJwtRulesOutputClaimToHeaders
 {
     /// <summary>The name of the claim to be copied from.</summary>
@@ -33,6 +35,7 @@ public partial class V1beta1RequestAuthenticationSpecJwtRulesOutputClaimToHeader
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RequestAuthenticationSpecJwtRules
 {
     /// <summary>The list of JWT [audiences](https://tools.ietf.org/html/rfc7519#section-4.1.3) that are allowed to access.</summary>
@@ -85,6 +88,7 @@ public partial class V1beta1RequestAuthenticationSpecJwtRules
 }
 
 /// <summary>Optional.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RequestAuthenticationSpecSelector
 {
     /// <summary>One or more labels that indicate a specific set of pods/VMs on which a policy should be applied.</summary>
@@ -93,6 +97,7 @@ public partial class V1beta1RequestAuthenticationSpecSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RequestAuthenticationSpecTargetRef
 {
     /// <summary>group is the group of the target resource.</summary>
@@ -113,6 +118,7 @@ public partial class V1beta1RequestAuthenticationSpecTargetRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RequestAuthenticationSpecTargetRefs
 {
     /// <summary>group is the group of the target resource.</summary>
@@ -133,6 +139,7 @@ public partial class V1beta1RequestAuthenticationSpecTargetRefs
 }
 
 /// <summary>Request authentication configuration for workloads. See more details at: https://istio.io/docs/reference/config/security/request_authentication.html</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RequestAuthenticationSpec
 {
     /// <summary>Define the list of JWTs that can be validated at the selected workloads' proxy.</summary>
@@ -152,8 +159,9 @@ public partial class V1beta1RequestAuthenticationSpec
     public IList<V1beta1RequestAuthenticationSpecTargetRefs>? TargetRefs { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1RequestAuthentication : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RequestAuthenticationSpec>, IStatus<JsonNode>
 {
     public const string KubeApiVersion = "v1beta1";

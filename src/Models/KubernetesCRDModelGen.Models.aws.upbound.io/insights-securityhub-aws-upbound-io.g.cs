@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.securityhub.aws.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InsightSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1InsightSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersAwsAccountId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -31,6 +33,7 @@ public partial class V1beta1InsightSpecForProviderFiltersAwsAccountId
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersCompanyName
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -43,6 +46,7 @@ public partial class V1beta1InsightSpecForProviderFiltersCompanyName
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersComplianceStatus
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -55,6 +59,7 @@ public partial class V1beta1InsightSpecForProviderFiltersComplianceStatus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersConfidence
 {
     /// <summary>The equal-to condition to be applied to a single field when querying for findings, provided as a String.</summary>
@@ -71,6 +76,7 @@ public partial class V1beta1InsightSpecForProviderFiltersConfidence
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersCreatedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -83,6 +89,7 @@ public partial class V1beta1InsightSpecForProviderFiltersCreatedAtDateRange
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersCreatedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -99,6 +106,7 @@ public partial class V1beta1InsightSpecForProviderFiltersCreatedAt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersCriticality
 {
     /// <summary>The equal-to condition to be applied to a single field when querying for findings, provided as a String.</summary>
@@ -115,6 +123,7 @@ public partial class V1beta1InsightSpecForProviderFiltersCriticality
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersDescription
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -127,6 +136,7 @@ public partial class V1beta1InsightSpecForProviderFiltersDescription
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersFindingProviderFieldsConfidence
 {
     /// <summary>The equal-to condition to be applied to a single field when querying for findings, provided as a String.</summary>
@@ -143,6 +153,7 @@ public partial class V1beta1InsightSpecForProviderFiltersFindingProviderFieldsCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersFindingProviderFieldsCriticality
 {
     /// <summary>The equal-to condition to be applied to a single field when querying for findings, provided as a String.</summary>
@@ -159,6 +170,7 @@ public partial class V1beta1InsightSpecForProviderFiltersFindingProviderFieldsCr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersFindingProviderFieldsRelatedFindingsId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -171,6 +183,7 @@ public partial class V1beta1InsightSpecForProviderFiltersFindingProviderFieldsRe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersFindingProviderFieldsRelatedFindingsProductArn
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -183,6 +196,7 @@ public partial class V1beta1InsightSpecForProviderFiltersFindingProviderFieldsRe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersFindingProviderFieldsSeverityLabel
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -195,6 +209,7 @@ public partial class V1beta1InsightSpecForProviderFiltersFindingProviderFieldsSe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersFindingProviderFieldsSeverityOriginal
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -207,6 +222,7 @@ public partial class V1beta1InsightSpecForProviderFiltersFindingProviderFieldsSe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersFindingProviderFieldsTypes
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -219,6 +235,7 @@ public partial class V1beta1InsightSpecForProviderFiltersFindingProviderFieldsTy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersFirstObservedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -231,6 +248,7 @@ public partial class V1beta1InsightSpecForProviderFiltersFirstObservedAtDateRang
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersFirstObservedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -247,6 +265,7 @@ public partial class V1beta1InsightSpecForProviderFiltersFirstObservedAt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersGeneratorId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -259,6 +278,7 @@ public partial class V1beta1InsightSpecForProviderFiltersGeneratorId
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -271,6 +291,7 @@ public partial class V1beta1InsightSpecForProviderFiltersId
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersKeyword
 {
     /// <summary>A value for the keyword.</summary>
@@ -279,6 +300,7 @@ public partial class V1beta1InsightSpecForProviderFiltersKeyword
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersLastObservedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -291,6 +313,7 @@ public partial class V1beta1InsightSpecForProviderFiltersLastObservedAtDateRange
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersLastObservedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -307,6 +330,7 @@ public partial class V1beta1InsightSpecForProviderFiltersLastObservedAt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersMalwareName
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -319,6 +343,7 @@ public partial class V1beta1InsightSpecForProviderFiltersMalwareName
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersMalwarePath
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -331,6 +356,7 @@ public partial class V1beta1InsightSpecForProviderFiltersMalwarePath
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersMalwareState
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -343,6 +369,7 @@ public partial class V1beta1InsightSpecForProviderFiltersMalwareState
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersMalwareType
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -355,6 +382,7 @@ public partial class V1beta1InsightSpecForProviderFiltersMalwareType
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersNetworkDestinationDomain
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -367,6 +395,7 @@ public partial class V1beta1InsightSpecForProviderFiltersNetworkDestinationDomai
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersNetworkDestinationIpv4
 {
     /// <summary>A finding's CIDR value.</summary>
@@ -375,6 +404,7 @@ public partial class V1beta1InsightSpecForProviderFiltersNetworkDestinationIpv4
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersNetworkDestinationIpv6
 {
     /// <summary>A finding's CIDR value.</summary>
@@ -383,6 +413,7 @@ public partial class V1beta1InsightSpecForProviderFiltersNetworkDestinationIpv6
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersNetworkDestinationPort
 {
     /// <summary>The equal-to condition to be applied to a single field when querying for findings, provided as a String.</summary>
@@ -399,6 +430,7 @@ public partial class V1beta1InsightSpecForProviderFiltersNetworkDestinationPort
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersNetworkDirection
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -411,6 +443,7 @@ public partial class V1beta1InsightSpecForProviderFiltersNetworkDirection
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersNetworkProtocol
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -423,6 +456,7 @@ public partial class V1beta1InsightSpecForProviderFiltersNetworkProtocol
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersNetworkSourceDomain
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -435,6 +469,7 @@ public partial class V1beta1InsightSpecForProviderFiltersNetworkSourceDomain
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersNetworkSourceIpv4
 {
     /// <summary>A finding's CIDR value.</summary>
@@ -443,6 +478,7 @@ public partial class V1beta1InsightSpecForProviderFiltersNetworkSourceIpv4
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersNetworkSourceIpv6
 {
     /// <summary>A finding's CIDR value.</summary>
@@ -451,6 +487,7 @@ public partial class V1beta1InsightSpecForProviderFiltersNetworkSourceIpv6
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersNetworkSourceMac
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -463,6 +500,7 @@ public partial class V1beta1InsightSpecForProviderFiltersNetworkSourceMac
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersNetworkSourcePort
 {
     /// <summary>The equal-to condition to be applied to a single field when querying for findings, provided as a String.</summary>
@@ -479,6 +517,7 @@ public partial class V1beta1InsightSpecForProviderFiltersNetworkSourcePort
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersNoteText
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -491,6 +530,7 @@ public partial class V1beta1InsightSpecForProviderFiltersNoteText
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersNoteUpdatedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -503,6 +543,7 @@ public partial class V1beta1InsightSpecForProviderFiltersNoteUpdatedAtDateRange
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersNoteUpdatedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -519,6 +560,7 @@ public partial class V1beta1InsightSpecForProviderFiltersNoteUpdatedAt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersNoteUpdatedBy
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -531,6 +573,7 @@ public partial class V1beta1InsightSpecForProviderFiltersNoteUpdatedBy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersProcessLaunchedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -543,6 +586,7 @@ public partial class V1beta1InsightSpecForProviderFiltersProcessLaunchedAtDateRa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersProcessLaunchedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -559,6 +603,7 @@ public partial class V1beta1InsightSpecForProviderFiltersProcessLaunchedAt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersProcessName
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -571,6 +616,7 @@ public partial class V1beta1InsightSpecForProviderFiltersProcessName
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersProcessParentPid
 {
     /// <summary>The equal-to condition to be applied to a single field when querying for findings, provided as a String.</summary>
@@ -587,6 +633,7 @@ public partial class V1beta1InsightSpecForProviderFiltersProcessParentPid
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersProcessPath
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -599,6 +646,7 @@ public partial class V1beta1InsightSpecForProviderFiltersProcessPath
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersProcessPid
 {
     /// <summary>The equal-to condition to be applied to a single field when querying for findings, provided as a String.</summary>
@@ -615,6 +663,7 @@ public partial class V1beta1InsightSpecForProviderFiltersProcessPid
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersProcessTerminatedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -627,6 +676,7 @@ public partial class V1beta1InsightSpecForProviderFiltersProcessTerminatedAtDate
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersProcessTerminatedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -643,6 +693,7 @@ public partial class V1beta1InsightSpecForProviderFiltersProcessTerminatedAt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersProductArn
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -655,6 +706,7 @@ public partial class V1beta1InsightSpecForProviderFiltersProductArn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersProductFields
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -671,6 +723,7 @@ public partial class V1beta1InsightSpecForProviderFiltersProductFields
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersProductName
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -683,6 +736,7 @@ public partial class V1beta1InsightSpecForProviderFiltersProductName
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersRecommendationText
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -695,6 +749,7 @@ public partial class V1beta1InsightSpecForProviderFiltersRecommendationText
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersRecordState
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -707,6 +762,7 @@ public partial class V1beta1InsightSpecForProviderFiltersRecordState
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersRelatedFindingsId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -719,6 +775,7 @@ public partial class V1beta1InsightSpecForProviderFiltersRelatedFindingsId
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersRelatedFindingsProductArn
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -731,6 +788,7 @@ public partial class V1beta1InsightSpecForProviderFiltersRelatedFindingsProductA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceIamInstanceProfileArn
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -743,6 +801,7 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceI
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceImageId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -755,6 +814,7 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceI
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceIpv4Addresses
 {
     /// <summary>A finding's CIDR value.</summary>
@@ -763,6 +823,7 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceI
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceIpv6Addresses
 {
     /// <summary>A finding's CIDR value.</summary>
@@ -771,6 +832,7 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceI
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceKeyName
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -783,6 +845,7 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceK
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceLaunchedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -795,6 +858,7 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceL
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceLaunchedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -811,6 +875,7 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceL
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceSubnetId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -823,6 +888,7 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceType
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -835,6 +901,7 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceT
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceVpcId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -847,6 +914,7 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceV
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceAwsIamAccessKeyCreatedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -859,6 +927,7 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceAwsIamAccessKey
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceAwsIamAccessKeyCreatedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -875,6 +944,7 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceAwsIamAccessKey
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceAwsIamAccessKeyStatus
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -887,6 +957,7 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceAwsIamAccessKey
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceAwsIamAccessKeyUserName
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -899,6 +970,7 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceAwsIamAccessKey
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceAwsS3BucketOwnerId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -911,6 +983,7 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceAwsS3BucketOwne
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceAwsS3BucketOwnerName
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -923,6 +996,7 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceAwsS3BucketOwne
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceContainerImageId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -935,6 +1009,7 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceContainerImageI
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceContainerImageName
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -947,6 +1022,7 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceContainerImageN
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceContainerLaunchedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -959,6 +1035,7 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceContainerLaunch
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceContainerLaunchedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -975,6 +1052,7 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceContainerLaunch
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceContainerName
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -987,6 +1065,7 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceContainerName
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceDetailsOther
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1003,6 +1082,7 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceDetailsOther
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1015,6 +1095,7 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceId
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourcePartition
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1027,6 +1108,7 @@ public partial class V1beta1InsightSpecForProviderFiltersResourcePartition
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceRegion
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1039,6 +1121,7 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceRegion
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceTags
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1055,6 +1138,7 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceTags
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceType
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1067,6 +1151,7 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceType
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersSeverityLabel
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1079,6 +1164,7 @@ public partial class V1beta1InsightSpecForProviderFiltersSeverityLabel
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersSourceUrl
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1091,6 +1177,7 @@ public partial class V1beta1InsightSpecForProviderFiltersSourceUrl
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersThreatIntelIndicatorCategory
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1103,6 +1190,7 @@ public partial class V1beta1InsightSpecForProviderFiltersThreatIntelIndicatorCat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersThreatIntelIndicatorLastObservedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -1115,6 +1203,7 @@ public partial class V1beta1InsightSpecForProviderFiltersThreatIntelIndicatorLas
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersThreatIntelIndicatorLastObservedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -1131,6 +1220,7 @@ public partial class V1beta1InsightSpecForProviderFiltersThreatIntelIndicatorLas
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersThreatIntelIndicatorSource
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1143,6 +1233,7 @@ public partial class V1beta1InsightSpecForProviderFiltersThreatIntelIndicatorSou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersThreatIntelIndicatorSourceUrl
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1155,6 +1246,7 @@ public partial class V1beta1InsightSpecForProviderFiltersThreatIntelIndicatorSou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersThreatIntelIndicatorType
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1167,6 +1259,7 @@ public partial class V1beta1InsightSpecForProviderFiltersThreatIntelIndicatorTyp
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersThreatIntelIndicatorValue
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1179,6 +1272,7 @@ public partial class V1beta1InsightSpecForProviderFiltersThreatIntelIndicatorVal
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersTitle
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1191,6 +1285,7 @@ public partial class V1beta1InsightSpecForProviderFiltersTitle
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersType
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1203,6 +1298,7 @@ public partial class V1beta1InsightSpecForProviderFiltersType
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersUpdatedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -1215,6 +1311,7 @@ public partial class V1beta1InsightSpecForProviderFiltersUpdatedAtDateRange
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersUpdatedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -1231,6 +1328,7 @@ public partial class V1beta1InsightSpecForProviderFiltersUpdatedAt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersUserDefinedValues
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1247,6 +1345,7 @@ public partial class V1beta1InsightSpecForProviderFiltersUserDefinedValues
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersVerificationState
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1259,6 +1358,7 @@ public partial class V1beta1InsightSpecForProviderFiltersVerificationState
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersWorkflowStatus
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1271,6 +1371,7 @@ public partial class V1beta1InsightSpecForProviderFiltersWorkflowStatus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFilters
 {
     /// <summary>AWS account ID that a finding is generated in. See String_Filter below for more details.</summary>
@@ -1627,6 +1728,7 @@ public partial class V1beta1InsightSpecForProviderFilters
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProvider
 {
     /// <summary>A configuration block including one or more (up to 10 distinct) attributes used to filter the findings included in the insight. The insight only includes findings that match criteria defined in the filters. See filters below for more details.</summary>
@@ -1647,6 +1749,7 @@ public partial class V1beta1InsightSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersAwsAccountId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1659,6 +1762,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersAwsAccountId
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersCompanyName
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1671,6 +1775,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersCompanyName
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersComplianceStatus
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1683,6 +1788,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersComplianceStatus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersConfidence
 {
     /// <summary>The equal-to condition to be applied to a single field when querying for findings, provided as a String.</summary>
@@ -1699,6 +1805,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersConfidence
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersCreatedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -1711,6 +1818,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersCreatedAtDateRange
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersCreatedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -1727,6 +1835,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersCreatedAt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersCriticality
 {
     /// <summary>The equal-to condition to be applied to a single field when querying for findings, provided as a String.</summary>
@@ -1743,6 +1852,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersCriticality
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersDescription
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1755,6 +1865,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersDescription
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersFindingProviderFieldsConfidence
 {
     /// <summary>The equal-to condition to be applied to a single field when querying for findings, provided as a String.</summary>
@@ -1771,6 +1882,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersFindingProviderFieldsC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersFindingProviderFieldsCriticality
 {
     /// <summary>The equal-to condition to be applied to a single field when querying for findings, provided as a String.</summary>
@@ -1787,6 +1899,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersFindingProviderFieldsC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersFindingProviderFieldsRelatedFindingsId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1799,6 +1912,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersFindingProviderFieldsR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersFindingProviderFieldsRelatedFindingsProductArn
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1811,6 +1925,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersFindingProviderFieldsR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersFindingProviderFieldsSeverityLabel
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1823,6 +1938,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersFindingProviderFieldsS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersFindingProviderFieldsSeverityOriginal
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1835,6 +1951,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersFindingProviderFieldsS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersFindingProviderFieldsTypes
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1847,6 +1964,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersFindingProviderFieldsT
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersFirstObservedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -1859,6 +1977,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersFirstObservedAtDateRan
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersFirstObservedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -1875,6 +1994,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersFirstObservedAt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersGeneratorId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1887,6 +2007,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersGeneratorId
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1899,6 +2020,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersId
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersKeyword
 {
     /// <summary>A value for the keyword.</summary>
@@ -1907,6 +2029,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersKeyword
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersLastObservedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -1919,6 +2042,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersLastObservedAtDateRang
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersLastObservedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -1935,6 +2059,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersLastObservedAt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersMalwareName
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1947,6 +2072,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersMalwareName
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersMalwarePath
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1959,6 +2085,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersMalwarePath
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersMalwareState
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1971,6 +2098,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersMalwareState
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersMalwareType
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1983,6 +2111,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersMalwareType
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersNetworkDestinationDomain
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -1995,6 +2124,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersNetworkDestinationDoma
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersNetworkDestinationIpv4
 {
     /// <summary>A finding's CIDR value.</summary>
@@ -2003,6 +2133,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersNetworkDestinationIpv4
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersNetworkDestinationIpv6
 {
     /// <summary>A finding's CIDR value.</summary>
@@ -2011,6 +2142,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersNetworkDestinationIpv6
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersNetworkDestinationPort
 {
     /// <summary>The equal-to condition to be applied to a single field when querying for findings, provided as a String.</summary>
@@ -2027,6 +2159,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersNetworkDestinationPort
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersNetworkDirection
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2039,6 +2172,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersNetworkDirection
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersNetworkProtocol
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2051,6 +2185,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersNetworkProtocol
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersNetworkSourceDomain
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2063,6 +2198,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersNetworkSourceDomain
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersNetworkSourceIpv4
 {
     /// <summary>A finding's CIDR value.</summary>
@@ -2071,6 +2207,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersNetworkSourceIpv4
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersNetworkSourceIpv6
 {
     /// <summary>A finding's CIDR value.</summary>
@@ -2079,6 +2216,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersNetworkSourceIpv6
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersNetworkSourceMac
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2091,6 +2229,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersNetworkSourceMac
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersNetworkSourcePort
 {
     /// <summary>The equal-to condition to be applied to a single field when querying for findings, provided as a String.</summary>
@@ -2107,6 +2246,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersNetworkSourcePort
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersNoteText
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2119,6 +2259,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersNoteText
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersNoteUpdatedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -2131,6 +2272,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersNoteUpdatedAtDateRange
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersNoteUpdatedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -2147,6 +2289,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersNoteUpdatedAt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersNoteUpdatedBy
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2159,6 +2302,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersNoteUpdatedBy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersProcessLaunchedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -2171,6 +2315,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersProcessLaunchedAtDateR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersProcessLaunchedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -2187,6 +2332,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersProcessLaunchedAt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersProcessName
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2199,6 +2345,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersProcessName
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersProcessParentPid
 {
     /// <summary>The equal-to condition to be applied to a single field when querying for findings, provided as a String.</summary>
@@ -2215,6 +2362,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersProcessParentPid
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersProcessPath
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2227,6 +2375,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersProcessPath
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersProcessPid
 {
     /// <summary>The equal-to condition to be applied to a single field when querying for findings, provided as a String.</summary>
@@ -2243,6 +2392,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersProcessPid
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersProcessTerminatedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -2255,6 +2405,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersProcessTerminatedAtDat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersProcessTerminatedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -2271,6 +2422,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersProcessTerminatedAt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersProductArn
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2283,6 +2435,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersProductArn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersProductFields
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2299,6 +2452,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersProductFields
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersProductName
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2311,6 +2465,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersProductName
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersRecommendationText
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2323,6 +2478,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersRecommendationText
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersRecordState
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2335,6 +2491,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersRecordState
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersRelatedFindingsId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2347,6 +2504,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersRelatedFindingsId
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersRelatedFindingsProductArn
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2359,6 +2517,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersRelatedFindingsProduct
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2InstanceIamInstanceProfileArn
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2371,6 +2530,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2Instance
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2InstanceImageId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2383,6 +2543,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2Instance
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2InstanceIpv4Addresses
 {
     /// <summary>A finding's CIDR value.</summary>
@@ -2391,6 +2552,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2Instance
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2InstanceIpv6Addresses
 {
     /// <summary>A finding's CIDR value.</summary>
@@ -2399,6 +2561,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2Instance
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2InstanceKeyName
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2411,6 +2574,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2Instance
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2InstanceLaunchedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -2423,6 +2587,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2Instance
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2InstanceLaunchedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -2439,6 +2604,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2Instance
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2InstanceSubnetId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2451,6 +2617,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2Instance
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2InstanceType
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2463,6 +2630,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2Instance
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2InstanceVpcId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2475,6 +2643,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2Instance
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsIamAccessKeyCreatedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -2487,6 +2656,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsIamAccessKe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsIamAccessKeyCreatedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -2503,6 +2673,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsIamAccessKe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsIamAccessKeyStatus
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2515,6 +2686,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsIamAccessKe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsIamAccessKeyUserName
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2527,6 +2699,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsIamAccessKe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsS3BucketOwnerId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2539,6 +2712,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsS3BucketOwn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsS3BucketOwnerName
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2551,6 +2725,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsS3BucketOwn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceContainerImageId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2563,6 +2738,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceContainerImage
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceContainerImageName
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2575,6 +2751,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceContainerImage
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceContainerLaunchedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -2587,6 +2764,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceContainerLaunc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceContainerLaunchedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -2603,6 +2781,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceContainerLaunc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceContainerName
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2615,6 +2794,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceContainerName
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceDetailsOther
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2631,6 +2811,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceDetailsOther
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2643,6 +2824,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceId
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourcePartition
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2655,6 +2837,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourcePartition
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceRegion
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2667,6 +2850,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceRegion
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceTags
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2683,6 +2867,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceTags
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceType
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2695,6 +2880,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceType
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersSeverityLabel
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2707,6 +2893,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersSeverityLabel
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersSourceUrl
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2719,6 +2906,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersSourceUrl
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersThreatIntelIndicatorCategory
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2731,6 +2919,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersThreatIntelIndicatorCa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersThreatIntelIndicatorLastObservedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -2743,6 +2932,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersThreatIntelIndicatorLa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersThreatIntelIndicatorLastObservedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -2759,6 +2949,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersThreatIntelIndicatorLa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersThreatIntelIndicatorSource
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2771,6 +2962,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersThreatIntelIndicatorSo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersThreatIntelIndicatorSourceUrl
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2783,6 +2975,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersThreatIntelIndicatorSo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersThreatIntelIndicatorType
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2795,6 +2988,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersThreatIntelIndicatorTy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersThreatIntelIndicatorValue
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2807,6 +3001,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersThreatIntelIndicatorVa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersTitle
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2819,6 +3014,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersTitle
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersType
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2831,6 +3027,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersType
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersUpdatedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -2843,6 +3040,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersUpdatedAtDateRange
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersUpdatedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -2859,6 +3057,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersUpdatedAt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersUserDefinedValues
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2875,6 +3074,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersUserDefinedValues
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersVerificationState
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2887,6 +3087,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersVerificationState
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersWorkflowStatus
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -2899,6 +3100,7 @@ public partial class V1beta1InsightSpecInitProviderFiltersWorkflowStatus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFilters
 {
     /// <summary>AWS account ID that a finding is generated in. See String_Filter below for more details.</summary>
@@ -3255,6 +3457,7 @@ public partial class V1beta1InsightSpecInitProviderFilters
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProvider
 {
     /// <summary>A configuration block including one or more (up to 10 distinct) attributes used to filter the findings included in the insight. The insight only includes findings that match criteria defined in the filters. See filters below for more details.</summary>
@@ -3270,6 +3473,7 @@ public partial class V1beta1InsightSpecInitProvider
     public string? Name { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InsightSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -3292,6 +3496,7 @@ public enum V1beta1InsightSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InsightSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -3302,6 +3507,7 @@ public enum V1beta1InsightSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InsightSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -3313,6 +3519,7 @@ public enum V1beta1InsightSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3327,6 +3534,7 @@ public partial class V1beta1InsightSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3338,6 +3546,7 @@ public partial class V1beta1InsightSpecProviderConfigRef
     public V1beta1InsightSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InsightSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -3348,6 +3557,7 @@ public enum V1beta1InsightSpecPublishConnectionDetailsToConfigRefPolicyResolutio
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InsightSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -3359,6 +3569,7 @@ public enum V1beta1InsightSpecPublishConnectionDetailsToConfigRefPolicyResolveEn
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3373,6 +3584,7 @@ public partial class V1beta1InsightSpecPublishConnectionDetailsToConfigRefPolicy
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3385,6 +3597,7 @@ public partial class V1beta1InsightSpecPublishConnectionDetailsToConfigRef
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -3401,6 +3614,7 @@ public partial class V1beta1InsightSpecPublishConnectionDetailsToMetadata
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -3417,6 +3631,7 @@ public partial class V1beta1InsightSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -3429,6 +3644,7 @@ public partial class V1beta1InsightSpecWriteConnectionSecretToRef
 }
 
 /// <summary>InsightSpec defines the desired state of Insight</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -3462,6 +3678,7 @@ public partial class V1beta1InsightSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersAwsAccountId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -3474,6 +3691,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersAwsAccountId
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersCompanyName
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -3486,6 +3704,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersCompanyName
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersComplianceStatus
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -3498,6 +3717,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersComplianceStatus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersConfidence
 {
     /// <summary>The equal-to condition to be applied to a single field when querying for findings, provided as a String.</summary>
@@ -3514,6 +3734,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersConfidence
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersCreatedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -3526,6 +3747,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersCreatedAtDateRange
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersCreatedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -3542,6 +3764,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersCreatedAt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersCriticality
 {
     /// <summary>The equal-to condition to be applied to a single field when querying for findings, provided as a String.</summary>
@@ -3558,6 +3781,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersCriticality
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersDescription
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -3570,6 +3794,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersDescription
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersFindingProviderFieldsConfidence
 {
     /// <summary>The equal-to condition to be applied to a single field when querying for findings, provided as a String.</summary>
@@ -3586,6 +3811,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersFindingProviderFieldsC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersFindingProviderFieldsCriticality
 {
     /// <summary>The equal-to condition to be applied to a single field when querying for findings, provided as a String.</summary>
@@ -3602,6 +3828,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersFindingProviderFieldsC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersFindingProviderFieldsRelatedFindingsId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -3614,6 +3841,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersFindingProviderFieldsR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersFindingProviderFieldsRelatedFindingsProductArn
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -3626,6 +3854,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersFindingProviderFieldsR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersFindingProviderFieldsSeverityLabel
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -3638,6 +3867,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersFindingProviderFieldsS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersFindingProviderFieldsSeverityOriginal
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -3650,6 +3880,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersFindingProviderFieldsS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersFindingProviderFieldsTypes
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -3662,6 +3893,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersFindingProviderFieldsT
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersFirstObservedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -3674,6 +3906,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersFirstObservedAtDateRan
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersFirstObservedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -3690,6 +3923,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersFirstObservedAt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersGeneratorId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -3702,6 +3936,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersGeneratorId
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -3714,6 +3949,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersId
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersKeyword
 {
     /// <summary>A value for the keyword.</summary>
@@ -3722,6 +3958,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersKeyword
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersLastObservedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -3734,6 +3971,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersLastObservedAtDateRang
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersLastObservedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -3750,6 +3988,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersLastObservedAt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersMalwareName
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -3762,6 +4001,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersMalwareName
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersMalwarePath
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -3774,6 +4014,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersMalwarePath
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersMalwareState
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -3786,6 +4027,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersMalwareState
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersMalwareType
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -3798,6 +4040,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersMalwareType
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersNetworkDestinationDomain
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -3810,6 +4053,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersNetworkDestinationDoma
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersNetworkDestinationIpv4
 {
     /// <summary>A finding's CIDR value.</summary>
@@ -3818,6 +4062,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersNetworkDestinationIpv4
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersNetworkDestinationIpv6
 {
     /// <summary>A finding's CIDR value.</summary>
@@ -3826,6 +4071,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersNetworkDestinationIpv6
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersNetworkDestinationPort
 {
     /// <summary>The equal-to condition to be applied to a single field when querying for findings, provided as a String.</summary>
@@ -3842,6 +4088,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersNetworkDestinationPort
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersNetworkDirection
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -3854,6 +4101,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersNetworkDirection
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersNetworkProtocol
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -3866,6 +4114,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersNetworkProtocol
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersNetworkSourceDomain
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -3878,6 +4127,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersNetworkSourceDomain
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersNetworkSourceIpv4
 {
     /// <summary>A finding's CIDR value.</summary>
@@ -3886,6 +4136,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersNetworkSourceIpv4
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersNetworkSourceIpv6
 {
     /// <summary>A finding's CIDR value.</summary>
@@ -3894,6 +4145,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersNetworkSourceIpv6
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersNetworkSourceMac
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -3906,6 +4158,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersNetworkSourceMac
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersNetworkSourcePort
 {
     /// <summary>The equal-to condition to be applied to a single field when querying for findings, provided as a String.</summary>
@@ -3922,6 +4175,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersNetworkSourcePort
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersNoteText
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -3934,6 +4188,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersNoteText
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersNoteUpdatedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -3946,6 +4201,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersNoteUpdatedAtDateRange
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersNoteUpdatedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -3962,6 +4218,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersNoteUpdatedAt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersNoteUpdatedBy
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -3974,6 +4231,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersNoteUpdatedBy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersProcessLaunchedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -3986,6 +4244,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersProcessLaunchedAtDateR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersProcessLaunchedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -4002,6 +4261,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersProcessLaunchedAt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersProcessName
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4014,6 +4274,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersProcessName
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersProcessParentPid
 {
     /// <summary>The equal-to condition to be applied to a single field when querying for findings, provided as a String.</summary>
@@ -4030,6 +4291,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersProcessParentPid
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersProcessPath
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4042,6 +4304,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersProcessPath
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersProcessPid
 {
     /// <summary>The equal-to condition to be applied to a single field when querying for findings, provided as a String.</summary>
@@ -4058,6 +4321,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersProcessPid
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersProcessTerminatedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -4070,6 +4334,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersProcessTerminatedAtDat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersProcessTerminatedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -4086,6 +4351,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersProcessTerminatedAt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersProductArn
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4098,6 +4364,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersProductArn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersProductFields
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4114,6 +4381,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersProductFields
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersProductName
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4126,6 +4394,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersProductName
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersRecommendationText
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4138,6 +4407,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersRecommendationText
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersRecordState
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4150,6 +4420,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersRecordState
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersRelatedFindingsId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4162,6 +4433,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersRelatedFindingsId
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersRelatedFindingsProductArn
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4174,6 +4446,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersRelatedFindingsProduct
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2InstanceIamInstanceProfileArn
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4186,6 +4459,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2Instance
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2InstanceImageId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4198,6 +4472,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2Instance
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2InstanceIpv4Addresses
 {
     /// <summary>A finding's CIDR value.</summary>
@@ -4206,6 +4481,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2Instance
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2InstanceIpv6Addresses
 {
     /// <summary>A finding's CIDR value.</summary>
@@ -4214,6 +4490,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2Instance
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2InstanceKeyName
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4226,6 +4503,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2Instance
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2InstanceLaunchedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -4238,6 +4516,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2Instance
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2InstanceLaunchedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -4254,6 +4533,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2Instance
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2InstanceSubnetId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4266,6 +4546,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2Instance
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2InstanceType
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4278,6 +4559,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2Instance
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2InstanceVpcId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4290,6 +4572,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2Instance
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsIamAccessKeyCreatedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -4302,6 +4585,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsIamAccessKe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsIamAccessKeyCreatedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -4318,6 +4602,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsIamAccessKe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsIamAccessKeyStatus
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4330,6 +4615,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsIamAccessKe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsIamAccessKeyUserName
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4342,6 +4628,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsIamAccessKe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsS3BucketOwnerId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4354,6 +4641,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsS3BucketOwn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsS3BucketOwnerName
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4366,6 +4654,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsS3BucketOwn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceContainerImageId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4378,6 +4667,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceContainerImage
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceContainerImageName
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4390,6 +4680,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceContainerImage
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceContainerLaunchedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -4402,6 +4693,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceContainerLaunc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceContainerLaunchedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -4418,6 +4710,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceContainerLaunc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceContainerName
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4430,6 +4723,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceContainerName
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceDetailsOther
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4446,6 +4740,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceDetailsOther
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceId
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4458,6 +4753,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceId
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourcePartition
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4470,6 +4766,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourcePartition
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceRegion
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4482,6 +4779,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceRegion
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceTags
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4498,6 +4796,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceTags
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceType
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4510,6 +4809,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceType
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersSeverityLabel
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4522,6 +4822,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersSeverityLabel
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersSourceUrl
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4534,6 +4835,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersSourceUrl
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersThreatIntelIndicatorCategory
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4546,6 +4848,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersThreatIntelIndicatorCa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersThreatIntelIndicatorLastObservedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -4558,6 +4861,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersThreatIntelIndicatorLa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersThreatIntelIndicatorLastObservedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -4574,6 +4878,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersThreatIntelIndicatorLa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersThreatIntelIndicatorSource
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4586,6 +4891,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersThreatIntelIndicatorSo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersThreatIntelIndicatorSourceUrl
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4598,6 +4904,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersThreatIntelIndicatorSo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersThreatIntelIndicatorType
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4610,6 +4917,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersThreatIntelIndicatorTy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersThreatIntelIndicatorValue
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4622,6 +4930,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersThreatIntelIndicatorVa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersTitle
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4634,6 +4943,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersTitle
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersType
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4646,6 +4956,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersType
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersUpdatedAtDateRange
 {
     /// <summary>A date range unit for the date filter. Valid values: DAYS.</summary>
@@ -4658,6 +4969,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersUpdatedAtDateRange
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersUpdatedAt
 {
     /// <summary>A configuration block of the date range for the date filter. See date_range below for more details.</summary>
@@ -4674,6 +4986,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersUpdatedAt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersUserDefinedValues
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4690,6 +5003,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersUserDefinedValues
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersVerificationState
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4702,6 +5016,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersVerificationState
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersWorkflowStatus
 {
     /// <summary>The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.</summary>
@@ -4714,6 +5029,7 @@ public partial class V1beta1InsightStatusAtProviderFiltersWorkflowStatus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFilters
 {
     /// <summary>AWS account ID that a finding is generated in. See String_Filter below for more details.</summary>
@@ -5070,6 +5386,7 @@ public partial class V1beta1InsightStatusAtProviderFilters
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProvider
 {
     /// <summary>ARN of the insight.</summary>
@@ -5094,6 +5411,7 @@ public partial class V1beta1InsightStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -5122,6 +5440,7 @@ public partial class V1beta1InsightStatusConditions
 }
 
 /// <summary>InsightStatus defines the observed state of Insight.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatus
 {
     /// <summary></summary>
@@ -5137,8 +5456,9 @@ public partial class V1beta1InsightStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Insight is the Schema for the Insights API. Provides a Security Hub custom insight resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Insight : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1InsightSpec>, IStatus<V1beta1InsightStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.documentdb.azure.com;
 /// <summary>Storage version of v1api20231115.AnalyticalStorageConfiguration Analytical storage specific properties.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpecAnalyticalStorageConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -21,6 +22,7 @@ public partial class V1api20231115storageDatabaseAccountSpecAnalyticalStorageCon
 }
 
 /// <summary>Storage version of v1api20231115.ApiProperties</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpecApiProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -33,6 +35,7 @@ public partial class V1api20231115storageDatabaseAccountSpecApiProperties
 }
 
 /// <summary>Storage version of v1api20231115.ContinuousModeProperties Configuration values for periodic mode backup</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpecBackupPolicyContinuousContinuousModeProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -45,6 +48,7 @@ public partial class V1api20231115storageDatabaseAccountSpecBackupPolicyContinuo
 }
 
 /// <summary>Storage version of v1api20231115.BackupPolicyMigrationState The object representing the state of the migration between the backup policies.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpecBackupPolicyContinuousMigrationState
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -65,6 +69,7 @@ public partial class V1api20231115storageDatabaseAccountSpecBackupPolicyContinuo
 }
 
 /// <summary>Storage version of v1api20231115.ContinuousModeBackupPolicy</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpecBackupPolicyContinuous
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -85,6 +90,7 @@ public partial class V1api20231115storageDatabaseAccountSpecBackupPolicyContinuo
 }
 
 /// <summary>Storage version of v1api20231115.BackupPolicyMigrationState The object representing the state of the migration between the backup policies.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpecBackupPolicyPeriodicMigrationState
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -105,6 +111,7 @@ public partial class V1api20231115storageDatabaseAccountSpecBackupPolicyPeriodic
 }
 
 /// <summary>Storage version of v1api20231115.PeriodicModeProperties Configuration values for periodic mode backup</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpecBackupPolicyPeriodicPeriodicModeProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -125,6 +132,7 @@ public partial class V1api20231115storageDatabaseAccountSpecBackupPolicyPeriodic
 }
 
 /// <summary>Storage version of v1api20231115.PeriodicModeBackupPolicy</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpecBackupPolicyPeriodic
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -145,6 +153,7 @@ public partial class V1api20231115storageDatabaseAccountSpecBackupPolicyPeriodic
 }
 
 /// <summary>Storage version of v1api20231115.BackupPolicy</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpecBackupPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -161,6 +170,7 @@ public partial class V1api20231115storageDatabaseAccountSpecBackupPolicy
 }
 
 /// <summary>Storage version of v1api20231115.Capability Cosmos DB capability object</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpecCapabilities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -173,6 +183,7 @@ public partial class V1api20231115storageDatabaseAccountSpecCapabilities
 }
 
 /// <summary>Storage version of v1api20231115.Capacity The object that represents all properties related to capacity enforcement on an account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpecCapacity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -185,6 +196,7 @@ public partial class V1api20231115storageDatabaseAccountSpecCapacity
 }
 
 /// <summary>Storage version of v1api20231115.ConsistencyPolicy The consistency policy for the Cosmos DB database account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpecConsistencyPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -205,6 +217,7 @@ public partial class V1api20231115storageDatabaseAccountSpecConsistencyPolicy
 }
 
 /// <summary>Storage version of v1api20231115.CorsPolicy The CORS policy for the Cosmos DB database account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpecCors
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -233,6 +246,7 @@ public partial class V1api20231115storageDatabaseAccountSpecCors
 }
 
 /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpecIdentityUserAssignedIdentitiesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -253,6 +267,7 @@ public partial class V1api20231115storageDatabaseAccountSpecIdentityUserAssigned
 }
 
 /// <summary>Storage version of v1api20231115.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpecIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -265,6 +280,7 @@ public partial class V1api20231115storageDatabaseAccountSpecIdentityUserAssigned
 }
 
 /// <summary>Storage version of v1api20231115.ManagedServiceIdentity Identity for the resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpecIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -281,6 +297,7 @@ public partial class V1api20231115storageDatabaseAccountSpecIdentity
 }
 
 /// <summary>Storage version of v1api20231115.IpAddressOrRange IpAddressOrRange object</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpecIpRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -293,6 +310,7 @@ public partial class V1api20231115storageDatabaseAccountSpecIpRules
 }
 
 /// <summary>Storage version of v1api20231115.Location A region in which the Azure Cosmos DB database account is deployed.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpecLocations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -313,6 +331,7 @@ public partial class V1api20231115storageDatabaseAccountSpecLocations
 }
 
 /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpecNetworkAclBypassResourceReferences
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -333,6 +352,7 @@ public partial class V1api20231115storageDatabaseAccountSpecNetworkAclBypassReso
 }
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpecOperatorSpecSecretsDocumentEndpoint
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -345,6 +365,7 @@ public partial class V1api20231115storageDatabaseAccountSpecOperatorSpecSecretsD
 }
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpecOperatorSpecSecretsPrimaryMasterKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -357,6 +378,7 @@ public partial class V1api20231115storageDatabaseAccountSpecOperatorSpecSecretsP
 }
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpecOperatorSpecSecretsPrimaryReadonlyMasterKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -369,6 +391,7 @@ public partial class V1api20231115storageDatabaseAccountSpecOperatorSpecSecretsP
 }
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpecOperatorSpecSecretsSecondaryMasterKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -381,6 +404,7 @@ public partial class V1api20231115storageDatabaseAccountSpecOperatorSpecSecretsS
 }
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpecOperatorSpecSecretsSecondaryReadonlyMasterKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -393,6 +417,7 @@ public partial class V1api20231115storageDatabaseAccountSpecOperatorSpecSecretsS
 }
 
 /// <summary>Storage version of v1api20231115.DatabaseAccountOperatorSecrets</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpecOperatorSpecSecrets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -421,6 +446,7 @@ public partial class V1api20231115storageDatabaseAccountSpecOperatorSpecSecrets
 }
 
 /// <summary>Storage version of v1api20231115.DatabaseAccountOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -433,6 +459,7 @@ public partial class V1api20231115storageDatabaseAccountSpecOperatorSpec
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpecOwner
 {
     /// <summary></summary>
@@ -445,6 +472,7 @@ public partial class V1api20231115storageDatabaseAccountSpecOwner
 }
 
 /// <summary>Storage version of v1api20231115.DatabaseRestoreResource Specific Databases to restore.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpecRestoreParametersDatabasesToRestore
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -461,6 +489,7 @@ public partial class V1api20231115storageDatabaseAccountSpecRestoreParametersDat
 }
 
 /// <summary>Storage version of v1api20231115.GremlinDatabaseRestoreResource Specific Gremlin Databases to restore.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpecRestoreParametersGremlinDatabasesToRestore
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -477,6 +506,7 @@ public partial class V1api20231115storageDatabaseAccountSpecRestoreParametersGre
 }
 
 /// <summary>Storage version of v1api20231115.RestoreParameters Parameters to indicate the information about the restore.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpecRestoreParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -509,6 +539,7 @@ public partial class V1api20231115storageDatabaseAccountSpecRestoreParameters
 }
 
 /// <summary>Reference: Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpecVirtualNetworkRulesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -529,6 +560,7 @@ public partial class V1api20231115storageDatabaseAccountSpecVirtualNetworkRulesR
 }
 
 /// <summary>Storage version of v1api20231115.VirtualNetworkRule Virtual Network ACL Rule object</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpecVirtualNetworkRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -545,6 +577,7 @@ public partial class V1api20231115storageDatabaseAccountSpecVirtualNetworkRules
 }
 
 /// <summary>Storage version of v1api20231115.DatabaseAccount_Spec</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -709,6 +742,7 @@ public partial class V1api20231115storageDatabaseAccountSpec
 }
 
 /// <summary>Storage version of v1api20231115.AnalyticalStorageConfiguration_STATUS Analytical storage specific properties.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatusAnalyticalStorageConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -721,6 +755,7 @@ public partial class V1api20231115storageDatabaseAccountStatusAnalyticalStorageC
 }
 
 /// <summary>Storage version of v1api20231115.ApiProperties_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatusApiProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -733,6 +768,7 @@ public partial class V1api20231115storageDatabaseAccountStatusApiProperties
 }
 
 /// <summary>Storage version of v1api20231115.ContinuousModeProperties_STATUS Configuration values for periodic mode backup</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatusBackupPolicyContinuousContinuousModeProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -745,6 +781,7 @@ public partial class V1api20231115storageDatabaseAccountStatusBackupPolicyContin
 }
 
 /// <summary>Storage version of v1api20231115.BackupPolicyMigrationState_STATUS The object representing the state of the migration between the backup policies.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatusBackupPolicyContinuousMigrationState
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -765,6 +802,7 @@ public partial class V1api20231115storageDatabaseAccountStatusBackupPolicyContin
 }
 
 /// <summary>Storage version of v1api20231115.ContinuousModeBackupPolicy_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatusBackupPolicyContinuous
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -785,6 +823,7 @@ public partial class V1api20231115storageDatabaseAccountStatusBackupPolicyContin
 }
 
 /// <summary>Storage version of v1api20231115.BackupPolicyMigrationState_STATUS The object representing the state of the migration between the backup policies.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatusBackupPolicyPeriodicMigrationState
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -805,6 +844,7 @@ public partial class V1api20231115storageDatabaseAccountStatusBackupPolicyPeriod
 }
 
 /// <summary>Storage version of v1api20231115.PeriodicModeProperties_STATUS Configuration values for periodic mode backup</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatusBackupPolicyPeriodicPeriodicModeProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -825,6 +865,7 @@ public partial class V1api20231115storageDatabaseAccountStatusBackupPolicyPeriod
 }
 
 /// <summary>Storage version of v1api20231115.PeriodicModeBackupPolicy_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatusBackupPolicyPeriodic
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -845,6 +886,7 @@ public partial class V1api20231115storageDatabaseAccountStatusBackupPolicyPeriod
 }
 
 /// <summary>Storage version of v1api20231115.BackupPolicy_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatusBackupPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -861,6 +903,7 @@ public partial class V1api20231115storageDatabaseAccountStatusBackupPolicy
 }
 
 /// <summary>Storage version of v1api20231115.Capability_STATUS Cosmos DB capability object</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatusCapabilities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -873,6 +916,7 @@ public partial class V1api20231115storageDatabaseAccountStatusCapabilities
 }
 
 /// <summary>Storage version of v1api20231115.Capacity_STATUS The object that represents all properties related to capacity enforcement on an account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatusCapacity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -885,6 +929,7 @@ public partial class V1api20231115storageDatabaseAccountStatusCapacity
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -917,6 +962,7 @@ public partial class V1api20231115storageDatabaseAccountStatusConditions
 }
 
 /// <summary>Storage version of v1api20231115.ConsistencyPolicy_STATUS The consistency policy for the Cosmos DB database account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatusConsistencyPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -937,6 +983,7 @@ public partial class V1api20231115storageDatabaseAccountStatusConsistencyPolicy
 }
 
 /// <summary>Storage version of v1api20231115.CorsPolicy_STATUS The CORS policy for the Cosmos DB database account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatusCors
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -965,6 +1012,7 @@ public partial class V1api20231115storageDatabaseAccountStatusCors
 }
 
 /// <summary>Storage version of v1api20231115.FailoverPolicy_STATUS The failover policy for a given region of a database account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatusFailoverPolicies
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -985,6 +1033,7 @@ public partial class V1api20231115storageDatabaseAccountStatusFailoverPolicies
 }
 
 /// <summary>Storage version of v1api20231115.ManagedServiceIdentity_UserAssignedIdentities_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatusIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1001,6 +1050,7 @@ public partial class V1api20231115storageDatabaseAccountStatusIdentityUserAssign
 }
 
 /// <summary>Storage version of v1api20231115.ManagedServiceIdentity_STATUS Identity for the resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatusIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1025,6 +1075,7 @@ public partial class V1api20231115storageDatabaseAccountStatusIdentity
 }
 
 /// <summary>Storage version of v1api20231115.IpAddressOrRange_STATUS IpAddressOrRange object</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatusIpRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1037,6 +1088,7 @@ public partial class V1api20231115storageDatabaseAccountStatusIpRules
 }
 
 /// <summary>Storage version of v1api20231115.AccountKeyMetadata_STATUS The metadata related to an access key for a given database account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatusKeysMetadataPrimaryMasterKey
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1049,6 +1101,7 @@ public partial class V1api20231115storageDatabaseAccountStatusKeysMetadataPrimar
 }
 
 /// <summary>Storage version of v1api20231115.AccountKeyMetadata_STATUS The metadata related to an access key for a given database account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatusKeysMetadataPrimaryReadonlyMasterKey
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1061,6 +1114,7 @@ public partial class V1api20231115storageDatabaseAccountStatusKeysMetadataPrimar
 }
 
 /// <summary>Storage version of v1api20231115.AccountKeyMetadata_STATUS The metadata related to an access key for a given database account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatusKeysMetadataSecondaryMasterKey
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1073,6 +1127,7 @@ public partial class V1api20231115storageDatabaseAccountStatusKeysMetadataSecond
 }
 
 /// <summary>Storage version of v1api20231115.AccountKeyMetadata_STATUS The metadata related to an access key for a given database account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatusKeysMetadataSecondaryReadonlyMasterKey
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1085,6 +1140,7 @@ public partial class V1api20231115storageDatabaseAccountStatusKeysMetadataSecond
 }
 
 /// <summary>Storage version of v1api20231115.DatabaseAccountKeysMetadata_STATUS The metadata related to each access key for the given Cosmos DB database account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatusKeysMetadata
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1109,6 +1165,7 @@ public partial class V1api20231115storageDatabaseAccountStatusKeysMetadata
 }
 
 /// <summary>Storage version of v1api20231115.Location_STATUS A region in which the Azure Cosmos DB database account is deployed.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatusLocations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1141,6 +1198,7 @@ public partial class V1api20231115storageDatabaseAccountStatusLocations
 }
 
 /// <summary>Storage version of v1api20231115.PrivateEndpointConnection_STATUS A private endpoint connection</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatusPrivateEndpointConnections
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1153,6 +1211,7 @@ public partial class V1api20231115storageDatabaseAccountStatusPrivateEndpointCon
 }
 
 /// <summary>Storage version of v1api20231115.Location_STATUS A region in which the Azure Cosmos DB database account is deployed.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatusReadLocations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1185,6 +1244,7 @@ public partial class V1api20231115storageDatabaseAccountStatusReadLocations
 }
 
 /// <summary>Storage version of v1api20231115.DatabaseRestoreResource_STATUS Specific Databases to restore.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatusRestoreParametersDatabasesToRestore
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1201,6 +1261,7 @@ public partial class V1api20231115storageDatabaseAccountStatusRestoreParametersD
 }
 
 /// <summary>Storage version of v1api20231115.GremlinDatabaseRestoreResource_STATUS Specific Gremlin Databases to restore.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatusRestoreParametersGremlinDatabasesToRestore
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1217,6 +1278,7 @@ public partial class V1api20231115storageDatabaseAccountStatusRestoreParametersG
 }
 
 /// <summary>Storage version of v1api20231115.RestoreParameters_STATUS Parameters to indicate the information about the restore.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatusRestoreParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1249,6 +1311,7 @@ public partial class V1api20231115storageDatabaseAccountStatusRestoreParameters
 }
 
 /// <summary>Storage version of v1api20231115.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1281,6 +1344,7 @@ public partial class V1api20231115storageDatabaseAccountStatusSystemData
 }
 
 /// <summary>Storage version of v1api20231115.VirtualNetworkRule_STATUS Virtual Network ACL Rule object</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatusVirtualNetworkRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1297,6 +1361,7 @@ public partial class V1api20231115storageDatabaseAccountStatusVirtualNetworkRule
 }
 
 /// <summary>Storage version of v1api20231115.Location_STATUS A region in which the Azure Cosmos DB database account is deployed.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatusWriteLocations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1329,6 +1394,7 @@ public partial class V1api20231115storageDatabaseAccountStatusWriteLocations
 }
 
 /// <summary>Storage version of v1api20231115.DatabaseAccount_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageDatabaseAccountStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1528,8 +1594,9 @@ public partial class V1api20231115storageDatabaseAccountStatus
     public IList<V1api20231115storageDatabaseAccountStatusWriteLocations>? WriteLocations { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Storage version of v1api20231115.DatabaseAccount Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2023-11-15/cosmos-db.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1api20231115storageDatabaseAccount : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20231115storageDatabaseAccountSpec>, IStatus<V1api20231115storageDatabaseAccountStatus>
 {
     public const string KubeApiVersion = "v1api20231115storage";

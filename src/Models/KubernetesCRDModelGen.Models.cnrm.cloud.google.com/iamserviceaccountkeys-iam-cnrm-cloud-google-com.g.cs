@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iam.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMServiceAccountKeySpecServiceAccountRef
 {
     /// <summary>Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1IAMServiceAccountKeySpecServiceAccountRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMServiceAccountKeySpec
 {
     /// <summary>Immutable. The algorithm used to generate the key, used only on create. KEY_ALG_RSA_2048 is the default algorithm. Valid values are: "KEY_ALG_RSA_1024", "KEY_ALG_RSA_2048".</summary>
@@ -49,6 +51,7 @@ public partial class V1beta1IAMServiceAccountKeySpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMServiceAccountKeyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -73,6 +76,7 @@ public partial class V1beta1IAMServiceAccountKeyStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMServiceAccountKeyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -104,8 +108,9 @@ public partial class V1beta1IAMServiceAccountKeyStatus
     public string? ValidBefore { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1IAMServiceAccountKey : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IAMServiceAccountKeySpec>, IStatus<V1beta1IAMServiceAccountKeyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.argoproj.io;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecAnalysis
 {
     /// <summary></summary>
@@ -21,6 +22,7 @@ public partial class V1alpha1RolloutSpecAnalysis
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecRollbackWindow
 {
     /// <summary></summary>
@@ -29,6 +31,7 @@ public partial class V1alpha1RolloutSpecRollbackWindow
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -45,6 +48,7 @@ public partial class V1alpha1RolloutSpecSelectorMatchExpressions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecSelector
 {
     /// <summary></summary>
@@ -57,6 +61,7 @@ public partial class V1alpha1RolloutSpecSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyBlueGreenActiveMetadata
 {
     /// <summary></summary>
@@ -69,6 +74,7 @@ public partial class V1alpha1RolloutSpecStrategyBlueGreenActiveMetadata
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyBlueGreenAntiAffinityPreferredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary></summary>
@@ -77,11 +83,13 @@ public partial class V1alpha1RolloutSpecStrategyBlueGreenAntiAffinityPreferredDu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyBlueGreenAntiAffinityRequiredDuringSchedulingIgnoredDuringExecution
 {
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyBlueGreenAntiAffinity
 {
     /// <summary></summary>
@@ -94,6 +102,7 @@ public partial class V1alpha1RolloutSpecStrategyBlueGreenAntiAffinity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyBlueGreenPostPromotionAnalysisAnalysisRunMetadata
 {
     /// <summary></summary>
@@ -106,6 +115,7 @@ public partial class V1alpha1RolloutSpecStrategyBlueGreenPostPromotionAnalysisAn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyBlueGreenPostPromotionAnalysisArgsValueFromFieldRef
 {
     /// <summary></summary>
@@ -114,6 +124,7 @@ public partial class V1alpha1RolloutSpecStrategyBlueGreenPostPromotionAnalysisAr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyBlueGreenPostPromotionAnalysisArgsValueFrom
 {
     /// <summary></summary>
@@ -126,6 +137,7 @@ public partial class V1alpha1RolloutSpecStrategyBlueGreenPostPromotionAnalysisAr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyBlueGreenPostPromotionAnalysisArgs
 {
     /// <summary></summary>
@@ -142,6 +154,7 @@ public partial class V1alpha1RolloutSpecStrategyBlueGreenPostPromotionAnalysisAr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyBlueGreenPostPromotionAnalysisDryRun
 {
     /// <summary></summary>
@@ -150,6 +163,7 @@ public partial class V1alpha1RolloutSpecStrategyBlueGreenPostPromotionAnalysisDr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyBlueGreenPostPromotionAnalysisMeasurementRetention
 {
     /// <summary></summary>
@@ -162,6 +176,7 @@ public partial class V1alpha1RolloutSpecStrategyBlueGreenPostPromotionAnalysisMe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyBlueGreenPostPromotionAnalysisTemplates
 {
     /// <summary></summary>
@@ -174,6 +189,7 @@ public partial class V1alpha1RolloutSpecStrategyBlueGreenPostPromotionAnalysisTe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyBlueGreenPostPromotionAnalysis
 {
     /// <summary></summary>
@@ -198,6 +214,7 @@ public partial class V1alpha1RolloutSpecStrategyBlueGreenPostPromotionAnalysis
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyBlueGreenPrePromotionAnalysisAnalysisRunMetadata
 {
     /// <summary></summary>
@@ -210,6 +227,7 @@ public partial class V1alpha1RolloutSpecStrategyBlueGreenPrePromotionAnalysisAna
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyBlueGreenPrePromotionAnalysisArgsValueFromFieldRef
 {
     /// <summary></summary>
@@ -218,6 +236,7 @@ public partial class V1alpha1RolloutSpecStrategyBlueGreenPrePromotionAnalysisArg
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyBlueGreenPrePromotionAnalysisArgsValueFrom
 {
     /// <summary></summary>
@@ -230,6 +249,7 @@ public partial class V1alpha1RolloutSpecStrategyBlueGreenPrePromotionAnalysisArg
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyBlueGreenPrePromotionAnalysisArgs
 {
     /// <summary></summary>
@@ -246,6 +266,7 @@ public partial class V1alpha1RolloutSpecStrategyBlueGreenPrePromotionAnalysisArg
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyBlueGreenPrePromotionAnalysisDryRun
 {
     /// <summary></summary>
@@ -254,6 +275,7 @@ public partial class V1alpha1RolloutSpecStrategyBlueGreenPrePromotionAnalysisDry
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyBlueGreenPrePromotionAnalysisMeasurementRetention
 {
     /// <summary></summary>
@@ -266,6 +288,7 @@ public partial class V1alpha1RolloutSpecStrategyBlueGreenPrePromotionAnalysisMea
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyBlueGreenPrePromotionAnalysisTemplates
 {
     /// <summary></summary>
@@ -278,6 +301,7 @@ public partial class V1alpha1RolloutSpecStrategyBlueGreenPrePromotionAnalysisTem
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyBlueGreenPrePromotionAnalysis
 {
     /// <summary></summary>
@@ -302,6 +326,7 @@ public partial class V1alpha1RolloutSpecStrategyBlueGreenPrePromotionAnalysis
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyBlueGreenPreviewMetadata
 {
     /// <summary></summary>
@@ -314,6 +339,7 @@ public partial class V1alpha1RolloutSpecStrategyBlueGreenPreviewMetadata
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyBlueGreen
 {
     /// <summary></summary>
@@ -374,6 +400,7 @@ public partial class V1alpha1RolloutSpecStrategyBlueGreen
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryAnalysisAnalysisRunMetadata
 {
     /// <summary></summary>
@@ -386,6 +413,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryAnalysisAnalysisRunMetadat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryAnalysisArgsValueFromFieldRef
 {
     /// <summary></summary>
@@ -394,6 +422,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryAnalysisArgsValueFromField
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryAnalysisArgsValueFrom
 {
     /// <summary></summary>
@@ -406,6 +435,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryAnalysisArgsValueFrom
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryAnalysisArgs
 {
     /// <summary></summary>
@@ -422,6 +452,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryAnalysisArgs
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryAnalysisDryRun
 {
     /// <summary></summary>
@@ -430,6 +461,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryAnalysisDryRun
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryAnalysisMeasurementRetention
 {
     /// <summary></summary>
@@ -442,6 +474,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryAnalysisMeasurementRetenti
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryAnalysisTemplates
 {
     /// <summary></summary>
@@ -454,6 +487,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryAnalysisTemplates
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryAnalysis
 {
     /// <summary></summary>
@@ -482,6 +516,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryAnalysis
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryAntiAffinityPreferredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary></summary>
@@ -490,11 +525,13 @@ public partial class V1alpha1RolloutSpecStrategyCanaryAntiAffinityPreferredDurin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryAntiAffinityRequiredDuringSchedulingIgnoredDuringExecution
 {
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryAntiAffinity
 {
     /// <summary></summary>
@@ -507,6 +544,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryAntiAffinity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryCanaryMetadata
 {
     /// <summary></summary>
@@ -519,6 +557,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryCanaryMetadata
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryPingPong
 {
     /// <summary></summary>
@@ -531,6 +570,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryPingPong
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryStableMetadata
 {
     /// <summary></summary>
@@ -543,6 +583,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryStableMetadata
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryStepsAnalysisAnalysisRunMetadata
 {
     /// <summary></summary>
@@ -555,6 +596,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryStepsAnalysisAnalysisRunMe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryStepsAnalysisArgsValueFromFieldRef
 {
     /// <summary></summary>
@@ -563,6 +605,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryStepsAnalysisArgsValueFrom
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryStepsAnalysisArgsValueFrom
 {
     /// <summary></summary>
@@ -575,6 +618,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryStepsAnalysisArgsValueFrom
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryStepsAnalysisArgs
 {
     /// <summary></summary>
@@ -591,6 +635,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryStepsAnalysisArgs
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryStepsAnalysisDryRun
 {
     /// <summary></summary>
@@ -599,6 +644,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryStepsAnalysisDryRun
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryStepsAnalysisMeasurementRetention
 {
     /// <summary></summary>
@@ -611,6 +657,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryStepsAnalysisMeasurementRe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryStepsAnalysisTemplates
 {
     /// <summary></summary>
@@ -623,6 +670,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryStepsAnalysisTemplates
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryStepsAnalysis
 {
     /// <summary></summary>
@@ -647,6 +695,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryStepsAnalysis
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryStepsExperimentAnalysesArgsValueFromFieldRef
 {
     /// <summary></summary>
@@ -655,6 +704,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryStepsExperimentAnalysesArg
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryStepsExperimentAnalysesArgsValueFrom
 {
     /// <summary></summary>
@@ -667,6 +717,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryStepsExperimentAnalysesArg
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryStepsExperimentAnalysesArgs
 {
     /// <summary></summary>
@@ -683,6 +734,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryStepsExperimentAnalysesArg
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryStepsExperimentAnalyses
 {
     /// <summary></summary>
@@ -707,6 +759,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryStepsExperimentAnalyses
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryStepsExperimentAnalysisRunMetadata
 {
     /// <summary></summary>
@@ -719,6 +772,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryStepsExperimentAnalysisRun
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryStepsExperimentDryRun
 {
     /// <summary></summary>
@@ -727,6 +781,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryStepsExperimentDryRun
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryStepsExperimentTemplatesMetadata
 {
     /// <summary></summary>
@@ -739,6 +794,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryStepsExperimentTemplatesMe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryStepsExperimentTemplatesSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -755,6 +811,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryStepsExperimentTemplatesSe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryStepsExperimentTemplatesSelector
 {
     /// <summary></summary>
@@ -767,6 +824,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryStepsExperimentTemplatesSe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryStepsExperimentTemplatesService
 {
     /// <summary></summary>
@@ -775,6 +833,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryStepsExperimentTemplatesSe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryStepsExperimentTemplates
 {
     /// <summary></summary>
@@ -807,6 +866,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryStepsExperimentTemplates
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryStepsExperiment
 {
     /// <summary></summary>
@@ -831,6 +891,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryStepsExperiment
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryStepsPause
 {
     /// <summary></summary>
@@ -839,6 +900,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryStepsPause
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryStepsSetCanaryScale
 {
     /// <summary></summary>
@@ -855,6 +917,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryStepsSetCanaryScale
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryStepsSetHeaderRouteMatchHeaderValue
 {
     /// <summary></summary>
@@ -871,6 +934,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryStepsSetHeaderRouteMatchHe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryStepsSetHeaderRouteMatch
 {
     /// <summary></summary>
@@ -883,6 +947,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryStepsSetHeaderRouteMatch
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryStepsSetHeaderRoute
 {
     /// <summary></summary>
@@ -895,6 +960,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryStepsSetHeaderRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryStepsSetMirrorRouteMatchHeaders
 {
     /// <summary></summary>
@@ -911,6 +977,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryStepsSetMirrorRouteMatchHe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryStepsSetMirrorRouteMatchMethod
 {
     /// <summary></summary>
@@ -927,6 +994,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryStepsSetMirrorRouteMatchMe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryStepsSetMirrorRouteMatchPath
 {
     /// <summary></summary>
@@ -943,6 +1011,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryStepsSetMirrorRouteMatchPa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryStepsSetMirrorRouteMatch
 {
     /// <summary></summary>
@@ -959,6 +1028,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryStepsSetMirrorRouteMatch
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryStepsSetMirrorRoute
 {
     /// <summary></summary>
@@ -975,6 +1045,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryStepsSetMirrorRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanarySteps
 {
     /// <summary></summary>
@@ -1007,6 +1078,7 @@ public partial class V1alpha1RolloutSpecStrategyCanarySteps
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingAlbStickinessConfig
 {
     /// <summary></summary>
@@ -1019,6 +1091,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingAlbStickines
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingAlb
 {
     /// <summary></summary>
@@ -1047,6 +1120,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingAlb
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingAmbassador
 {
     /// <summary></summary>
@@ -1055,6 +1129,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingAmbassador
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingApisixRoute
 {
     /// <summary></summary>
@@ -1067,6 +1142,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingApisixRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingApisix
 {
     /// <summary></summary>
@@ -1075,6 +1151,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingApisix
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingAppMeshVirtualNodeGroupCanaryVirtualNodeRef
 {
     /// <summary></summary>
@@ -1083,6 +1160,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingAppMeshVirtu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingAppMeshVirtualNodeGroupStableVirtualNodeRef
 {
     /// <summary></summary>
@@ -1091,6 +1169,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingAppMeshVirtu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingAppMeshVirtualNodeGroup
 {
     /// <summary></summary>
@@ -1103,6 +1182,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingAppMeshVirtu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingAppMeshVirtualService
 {
     /// <summary></summary>
@@ -1115,6 +1195,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingAppMeshVirtu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingAppMesh
 {
     /// <summary></summary>
@@ -1127,6 +1208,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingAppMesh
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingIstioDestinationRule
 {
     /// <summary></summary>
@@ -1143,6 +1225,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingIstioDestina
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingIstioVirtualServiceTcpRoutes
 {
     /// <summary></summary>
@@ -1151,6 +1234,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingIstioVirtual
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingIstioVirtualServiceTlsRoutes
 {
     /// <summary></summary>
@@ -1163,6 +1247,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingIstioVirtual
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingIstioVirtualService
 {
     /// <summary></summary>
@@ -1183,6 +1268,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingIstioVirtual
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingIstioVirtualServicesTcpRoutes
 {
     /// <summary></summary>
@@ -1191,6 +1277,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingIstioVirtual
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingIstioVirtualServicesTlsRoutes
 {
     /// <summary></summary>
@@ -1203,6 +1290,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingIstioVirtual
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingIstioVirtualServices
 {
     /// <summary></summary>
@@ -1223,6 +1311,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingIstioVirtual
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingIstio
 {
     /// <summary></summary>
@@ -1239,6 +1328,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingIstio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingManagedRoutes
 {
     /// <summary></summary>
@@ -1247,6 +1337,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingManagedRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingNginx
 {
     /// <summary></summary>
@@ -1267,6 +1358,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingNginx
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingSmi
 {
     /// <summary></summary>
@@ -1279,6 +1371,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingSmi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingTraefik
 {
     /// <summary></summary>
@@ -1287,6 +1380,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingTraefik
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRouting
 {
     /// <summary></summary>
@@ -1335,6 +1429,7 @@ public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRouting
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanary
 {
     /// <summary></summary>
@@ -1403,6 +1498,7 @@ public partial class V1alpha1RolloutSpecStrategyCanary
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategy
 {
     /// <summary></summary>
@@ -1415,6 +1511,7 @@ public partial class V1alpha1RolloutSpecStrategy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateMetadata
 {
     /// <summary></summary>
@@ -1427,6 +1524,7 @@ public partial class V1alpha1RolloutSpecTemplateMetadata
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchExpressions
 {
     /// <summary></summary>
@@ -1443,6 +1541,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityNodeAffinityPreferre
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchFields
 {
     /// <summary></summary>
@@ -1459,6 +1558,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityNodeAffinityPreferre
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreference
 {
     /// <summary></summary>
@@ -1471,6 +1571,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityNodeAffinityPreferre
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary></summary>
@@ -1483,6 +1584,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityNodeAffinityPreferre
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchExpressions
 {
     /// <summary></summary>
@@ -1499,6 +1601,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityNodeAffinityRequired
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchFields
 {
     /// <summary></summary>
@@ -1515,6 +1618,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityNodeAffinityRequired
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTerms
 {
     /// <summary></summary>
@@ -1527,6 +1631,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityNodeAffinityRequired
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary></summary>
@@ -1535,6 +1640,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityNodeAffinityRequired
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityNodeAffinity
 {
     /// <summary></summary>
@@ -1547,6 +1653,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityNodeAffinity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -1563,6 +1670,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAffinityPreferred
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector
 {
     /// <summary></summary>
@@ -1575,6 +1683,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAffinityPreferred
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -1591,6 +1700,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAffinityPreferred
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector
 {
     /// <summary></summary>
@@ -1603,6 +1713,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAffinityPreferred
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm
 {
     /// <summary></summary>
@@ -1631,6 +1742,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAffinityPreferred
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary></summary>
@@ -1643,6 +1755,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAffinityPreferred
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -1659,6 +1772,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAffinityRequiredD
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector
 {
     /// <summary></summary>
@@ -1671,6 +1785,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAffinityRequiredD
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -1687,6 +1802,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAffinityRequiredD
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector
 {
     /// <summary></summary>
@@ -1699,6 +1815,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAffinityRequiredD
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary></summary>
@@ -1727,6 +1844,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAffinityRequiredD
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAffinity
 {
     /// <summary></summary>
@@ -1739,6 +1857,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAffinity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -1755,6 +1874,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAntiAffinityPrefe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector
 {
     /// <summary></summary>
@@ -1767,6 +1887,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAntiAffinityPrefe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -1783,6 +1904,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAntiAffinityPrefe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector
 {
     /// <summary></summary>
@@ -1795,6 +1917,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAntiAffinityPrefe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm
 {
     /// <summary></summary>
@@ -1823,6 +1946,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAntiAffinityPrefe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary></summary>
@@ -1835,6 +1959,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAntiAffinityPrefe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -1851,6 +1976,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAntiAffinityRequi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector
 {
     /// <summary></summary>
@@ -1863,6 +1989,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAntiAffinityRequi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -1879,6 +2006,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAntiAffinityRequi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector
 {
     /// <summary></summary>
@@ -1891,6 +2019,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAntiAffinityRequi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary></summary>
@@ -1919,6 +2048,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAntiAffinityRequi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAntiAffinity
 {
     /// <summary></summary>
@@ -1931,6 +2061,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinityPodAntiAffinity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecAffinity
 {
     /// <summary></summary>
@@ -1947,6 +2078,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecAffinity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersEnvValueFromConfigMapKeyRef
 {
     /// <summary></summary>
@@ -1963,6 +2095,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersEnvValueFromConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersEnvValueFromFieldRef
 {
     /// <summary></summary>
@@ -1975,6 +2108,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersEnvValueFromFieldR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersEnvValueFromResourceFieldRef
 {
     /// <summary></summary>
@@ -1991,6 +2125,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersEnvValueFromResour
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersEnvValueFromSecretKeyRef
 {
     /// <summary></summary>
@@ -2007,6 +2142,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersEnvValueFromSecret
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersEnvValueFrom
 {
     /// <summary></summary>
@@ -2027,6 +2163,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersEnvValueFrom
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersEnv
 {
     /// <summary></summary>
@@ -2043,6 +2180,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersEnv
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersEnvFromConfigMapRef
 {
     /// <summary></summary>
@@ -2055,6 +2193,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersEnvFromConfigMapRe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersEnvFromSecretRef
 {
     /// <summary></summary>
@@ -2067,6 +2206,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersEnvFromSecretRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersEnvFrom
 {
     /// <summary></summary>
@@ -2083,6 +2223,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersEnvFrom
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersLifecyclePostStartExec
 {
     /// <summary></summary>
@@ -2091,6 +2232,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersLifecyclePostStart
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersLifecyclePostStartHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -2103,6 +2245,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersLifecyclePostStart
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersLifecyclePostStartHttpGet
 {
     /// <summary></summary>
@@ -2127,6 +2270,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersLifecyclePostStart
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersLifecyclePostStartSleep
 {
     /// <summary></summary>
@@ -2135,6 +2279,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersLifecyclePostStart
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersLifecyclePostStartTcpSocket
 {
     /// <summary></summary>
@@ -2147,6 +2292,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersLifecyclePostStart
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersLifecyclePostStart
 {
     /// <summary></summary>
@@ -2167,6 +2313,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersLifecyclePostStart
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersLifecyclePreStopExec
 {
     /// <summary></summary>
@@ -2175,6 +2322,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersLifecyclePreStopEx
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersLifecyclePreStopHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -2187,6 +2335,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersLifecyclePreStopHt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersLifecyclePreStopHttpGet
 {
     /// <summary></summary>
@@ -2211,6 +2360,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersLifecyclePreStopHt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersLifecyclePreStopSleep
 {
     /// <summary></summary>
@@ -2219,6 +2369,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersLifecyclePreStopSl
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersLifecyclePreStopTcpSocket
 {
     /// <summary></summary>
@@ -2231,6 +2382,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersLifecyclePreStopTc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersLifecyclePreStop
 {
     /// <summary></summary>
@@ -2251,6 +2403,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersLifecyclePreStop
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersLifecycle
 {
     /// <summary></summary>
@@ -2263,6 +2416,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersLifecycle
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersLivenessProbeExec
 {
     /// <summary></summary>
@@ -2271,6 +2425,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersLivenessProbeExec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersLivenessProbeGrpc
 {
     /// <summary></summary>
@@ -2283,6 +2438,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersLivenessProbeGrpc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersLivenessProbeHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -2295,6 +2451,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersLivenessProbeHttpG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersLivenessProbeHttpGet
 {
     /// <summary></summary>
@@ -2319,6 +2476,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersLivenessProbeHttpG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersLivenessProbeTcpSocket
 {
     /// <summary></summary>
@@ -2331,6 +2489,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersLivenessProbeTcpSo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersLivenessProbe
 {
     /// <summary></summary>
@@ -2375,6 +2534,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersLivenessProbe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersPorts
 {
     /// <summary></summary>
@@ -2399,6 +2559,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersPorts
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersReadinessProbeExec
 {
     /// <summary></summary>
@@ -2407,6 +2568,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersReadinessProbeExec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersReadinessProbeGrpc
 {
     /// <summary></summary>
@@ -2419,6 +2581,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersReadinessProbeGrpc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersReadinessProbeHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -2431,6 +2594,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersReadinessProbeHttp
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersReadinessProbeHttpGet
 {
     /// <summary></summary>
@@ -2455,6 +2619,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersReadinessProbeHttp
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersReadinessProbeTcpSocket
 {
     /// <summary></summary>
@@ -2467,6 +2632,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersReadinessProbeTcpS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersReadinessProbe
 {
     /// <summary></summary>
@@ -2511,6 +2677,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersReadinessProbe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersResizePolicy
 {
     /// <summary></summary>
@@ -2523,6 +2690,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersResizePolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersResourcesClaims
 {
     /// <summary></summary>
@@ -2531,6 +2699,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersResourcesClaims
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersResources
 {
     /// <summary></summary>
@@ -2547,6 +2716,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersResources
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersSecurityContextCapabilities
 {
     /// <summary></summary>
@@ -2559,6 +2729,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersSecurityContextCap
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersSecurityContextSeLinuxOptions
 {
     /// <summary></summary>
@@ -2579,6 +2750,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersSecurityContextSeL
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersSecurityContextSeccompProfile
 {
     /// <summary></summary>
@@ -2591,6 +2763,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersSecurityContextSec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersSecurityContextWindowsOptions
 {
     /// <summary></summary>
@@ -2611,6 +2784,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersSecurityContextWin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersSecurityContext
 {
     /// <summary></summary>
@@ -2659,6 +2833,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersSecurityContext
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersStartupProbeExec
 {
     /// <summary></summary>
@@ -2667,6 +2842,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersStartupProbeExec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersStartupProbeGrpc
 {
     /// <summary></summary>
@@ -2679,6 +2855,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersStartupProbeGrpc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersStartupProbeHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -2691,6 +2868,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersStartupProbeHttpGe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersStartupProbeHttpGet
 {
     /// <summary></summary>
@@ -2715,6 +2893,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersStartupProbeHttpGe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersStartupProbeTcpSocket
 {
     /// <summary></summary>
@@ -2727,6 +2906,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersStartupProbeTcpSoc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersStartupProbe
 {
     /// <summary></summary>
@@ -2771,6 +2951,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersStartupProbe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersVolumeDevices
 {
     /// <summary></summary>
@@ -2783,6 +2964,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersVolumeDevices
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainersVolumeMounts
 {
     /// <summary></summary>
@@ -2811,6 +2993,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersVolumeMounts
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecContainers
 {
     /// <summary></summary>
@@ -2911,6 +3094,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainers
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecDnsConfigOptions
 {
     /// <summary></summary>
@@ -2923,6 +3107,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecDnsConfigOptions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecDnsConfig
 {
     /// <summary></summary>
@@ -2939,6 +3124,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecDnsConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersEnvValueFromConfigMapKeyRef
 {
     /// <summary></summary>
@@ -2955,6 +3141,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersEnvValueF
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersEnvValueFromFieldRef
 {
     /// <summary></summary>
@@ -2967,6 +3154,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersEnvValueF
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersEnvValueFromResourceFieldRef
 {
     /// <summary></summary>
@@ -2983,6 +3171,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersEnvValueF
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersEnvValueFromSecretKeyRef
 {
     /// <summary></summary>
@@ -2999,6 +3188,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersEnvValueF
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersEnvValueFrom
 {
     /// <summary></summary>
@@ -3019,6 +3209,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersEnvValueF
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersEnv
 {
     /// <summary></summary>
@@ -3035,6 +3226,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersEnv
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersEnvFromConfigMapRef
 {
     /// <summary></summary>
@@ -3047,6 +3239,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersEnvFromCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersEnvFromSecretRef
 {
     /// <summary></summary>
@@ -3059,6 +3252,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersEnvFromSe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersEnvFrom
 {
     /// <summary></summary>
@@ -3075,6 +3269,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersEnvFrom
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLifecyclePostStartExec
 {
     /// <summary></summary>
@@ -3083,6 +3278,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLifecycle
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLifecyclePostStartHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -3095,6 +3291,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLifecycle
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLifecyclePostStartHttpGet
 {
     /// <summary></summary>
@@ -3119,6 +3316,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLifecycle
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLifecyclePostStartSleep
 {
     /// <summary></summary>
@@ -3127,6 +3325,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLifecycle
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLifecyclePostStartTcpSocket
 {
     /// <summary></summary>
@@ -3139,6 +3338,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLifecycle
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLifecyclePostStart
 {
     /// <summary></summary>
@@ -3159,6 +3359,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLifecycle
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLifecyclePreStopExec
 {
     /// <summary></summary>
@@ -3167,6 +3368,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLifecycle
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLifecyclePreStopHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -3179,6 +3381,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLifecycle
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLifecyclePreStopHttpGet
 {
     /// <summary></summary>
@@ -3203,6 +3406,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLifecycle
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLifecyclePreStopSleep
 {
     /// <summary></summary>
@@ -3211,6 +3415,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLifecycle
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLifecyclePreStopTcpSocket
 {
     /// <summary></summary>
@@ -3223,6 +3428,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLifecycle
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLifecyclePreStop
 {
     /// <summary></summary>
@@ -3243,6 +3449,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLifecycle
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLifecycle
 {
     /// <summary></summary>
@@ -3255,6 +3462,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLifecycle
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLivenessProbeExec
 {
     /// <summary></summary>
@@ -3263,6 +3471,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLivenessP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLivenessProbeGrpc
 {
     /// <summary></summary>
@@ -3275,6 +3484,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLivenessP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLivenessProbeHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -3287,6 +3497,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLivenessP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLivenessProbeHttpGet
 {
     /// <summary></summary>
@@ -3311,6 +3522,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLivenessP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLivenessProbeTcpSocket
 {
     /// <summary></summary>
@@ -3323,6 +3535,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLivenessP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLivenessProbe
 {
     /// <summary></summary>
@@ -3367,6 +3580,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLivenessP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersPorts
 {
     /// <summary></summary>
@@ -3391,6 +3605,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersPorts
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersReadinessProbeExec
 {
     /// <summary></summary>
@@ -3399,6 +3614,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersReadiness
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersReadinessProbeGrpc
 {
     /// <summary></summary>
@@ -3411,6 +3627,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersReadiness
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersReadinessProbeHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -3423,6 +3640,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersReadiness
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersReadinessProbeHttpGet
 {
     /// <summary></summary>
@@ -3447,6 +3665,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersReadiness
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersReadinessProbeTcpSocket
 {
     /// <summary></summary>
@@ -3459,6 +3678,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersReadiness
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersReadinessProbe
 {
     /// <summary></summary>
@@ -3503,6 +3723,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersReadiness
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersResizePolicy
 {
     /// <summary></summary>
@@ -3515,6 +3736,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersResizePol
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersResourcesClaims
 {
     /// <summary></summary>
@@ -3523,6 +3745,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersResources
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersResources
 {
     /// <summary></summary>
@@ -3539,6 +3762,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersResources
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersSecurityContextCapabilities
 {
     /// <summary></summary>
@@ -3551,6 +3775,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersSecurityC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersSecurityContextSeLinuxOptions
 {
     /// <summary></summary>
@@ -3571,6 +3796,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersSecurityC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersSecurityContextSeccompProfile
 {
     /// <summary></summary>
@@ -3583,6 +3809,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersSecurityC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersSecurityContextWindowsOptions
 {
     /// <summary></summary>
@@ -3603,6 +3830,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersSecurityC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersSecurityContext
 {
     /// <summary></summary>
@@ -3651,6 +3879,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersSecurityC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersStartupProbeExec
 {
     /// <summary></summary>
@@ -3659,6 +3888,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersStartupPr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersStartupProbeGrpc
 {
     /// <summary></summary>
@@ -3671,6 +3901,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersStartupPr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersStartupProbeHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -3683,6 +3914,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersStartupPr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersStartupProbeHttpGet
 {
     /// <summary></summary>
@@ -3707,6 +3939,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersStartupPr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersStartupProbeTcpSocket
 {
     /// <summary></summary>
@@ -3719,6 +3952,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersStartupPr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersStartupProbe
 {
     /// <summary></summary>
@@ -3763,6 +3997,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersStartupPr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersVolumeDevices
 {
     /// <summary></summary>
@@ -3775,6 +4010,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersVolumeDev
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersVolumeMounts
 {
     /// <summary></summary>
@@ -3803,6 +4039,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersVolumeMou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainers
 {
     /// <summary></summary>
@@ -3907,6 +4144,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainers
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecHostAliases
 {
     /// <summary></summary>
@@ -3919,6 +4157,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecHostAliases
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecImagePullSecrets
 {
     /// <summary></summary>
@@ -3927,6 +4166,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecImagePullSecrets
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersEnvValueFromConfigMapKeyRef
 {
     /// <summary></summary>
@@ -3943,6 +4183,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersEnvValueFromCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersEnvValueFromFieldRef
 {
     /// <summary></summary>
@@ -3955,6 +4196,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersEnvValueFromFi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersEnvValueFromResourceFieldRef
 {
     /// <summary></summary>
@@ -3971,6 +4213,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersEnvValueFromRe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersEnvValueFromSecretKeyRef
 {
     /// <summary></summary>
@@ -3987,6 +4230,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersEnvValueFromSe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersEnvValueFrom
 {
     /// <summary></summary>
@@ -4007,6 +4251,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersEnvValueFrom
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersEnv
 {
     /// <summary></summary>
@@ -4023,6 +4268,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersEnv
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersEnvFromConfigMapRef
 {
     /// <summary></summary>
@@ -4035,6 +4281,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersEnvFromConfigM
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersEnvFromSecretRef
 {
     /// <summary></summary>
@@ -4047,6 +4294,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersEnvFromSecretR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersEnvFrom
 {
     /// <summary></summary>
@@ -4063,6 +4311,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersEnvFrom
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLifecyclePostStartExec
 {
     /// <summary></summary>
@@ -4071,6 +4320,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLifecyclePostS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLifecyclePostStartHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -4083,6 +4333,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLifecyclePostS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLifecyclePostStartHttpGet
 {
     /// <summary></summary>
@@ -4107,6 +4358,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLifecyclePostS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLifecyclePostStartSleep
 {
     /// <summary></summary>
@@ -4115,6 +4367,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLifecyclePostS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLifecyclePostStartTcpSocket
 {
     /// <summary></summary>
@@ -4127,6 +4380,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLifecyclePostS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLifecyclePostStart
 {
     /// <summary></summary>
@@ -4147,6 +4401,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLifecyclePostS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLifecyclePreStopExec
 {
     /// <summary></summary>
@@ -4155,6 +4410,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLifecyclePreSt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLifecyclePreStopHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -4167,6 +4423,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLifecyclePreSt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLifecyclePreStopHttpGet
 {
     /// <summary></summary>
@@ -4191,6 +4448,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLifecyclePreSt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLifecyclePreStopSleep
 {
     /// <summary></summary>
@@ -4199,6 +4457,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLifecyclePreSt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLifecyclePreStopTcpSocket
 {
     /// <summary></summary>
@@ -4211,6 +4470,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLifecyclePreSt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLifecyclePreStop
 {
     /// <summary></summary>
@@ -4231,6 +4491,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLifecyclePreSt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLifecycle
 {
     /// <summary></summary>
@@ -4243,6 +4504,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLifecycle
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLivenessProbeExec
 {
     /// <summary></summary>
@@ -4251,6 +4513,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLivenessProbeE
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLivenessProbeGrpc
 {
     /// <summary></summary>
@@ -4263,6 +4526,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLivenessProbeG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLivenessProbeHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -4275,6 +4539,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLivenessProbeH
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLivenessProbeHttpGet
 {
     /// <summary></summary>
@@ -4299,6 +4564,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLivenessProbeH
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLivenessProbeTcpSocket
 {
     /// <summary></summary>
@@ -4311,6 +4577,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLivenessProbeT
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLivenessProbe
 {
     /// <summary></summary>
@@ -4355,6 +4622,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLivenessProbe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersPorts
 {
     /// <summary></summary>
@@ -4379,6 +4647,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersPorts
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersReadinessProbeExec
 {
     /// <summary></summary>
@@ -4387,6 +4656,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersReadinessProbe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersReadinessProbeGrpc
 {
     /// <summary></summary>
@@ -4399,6 +4669,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersReadinessProbe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersReadinessProbeHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -4411,6 +4682,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersReadinessProbe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersReadinessProbeHttpGet
 {
     /// <summary></summary>
@@ -4435,6 +4707,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersReadinessProbe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersReadinessProbeTcpSocket
 {
     /// <summary></summary>
@@ -4447,6 +4720,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersReadinessProbe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersReadinessProbe
 {
     /// <summary></summary>
@@ -4491,6 +4765,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersReadinessProbe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersResizePolicy
 {
     /// <summary></summary>
@@ -4503,6 +4778,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersResizePolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersResourcesClaims
 {
     /// <summary></summary>
@@ -4511,6 +4787,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersResourcesClaim
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersResources
 {
     /// <summary></summary>
@@ -4527,6 +4804,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersResources
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersSecurityContextCapabilities
 {
     /// <summary></summary>
@@ -4539,6 +4817,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersSecurityContex
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersSecurityContextSeLinuxOptions
 {
     /// <summary></summary>
@@ -4559,6 +4838,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersSecurityContex
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersSecurityContextSeccompProfile
 {
     /// <summary></summary>
@@ -4571,6 +4851,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersSecurityContex
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersSecurityContextWindowsOptions
 {
     /// <summary></summary>
@@ -4591,6 +4872,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersSecurityContex
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersSecurityContext
 {
     /// <summary></summary>
@@ -4639,6 +4921,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersSecurityContex
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersStartupProbeExec
 {
     /// <summary></summary>
@@ -4647,6 +4930,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersStartupProbeEx
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersStartupProbeGrpc
 {
     /// <summary></summary>
@@ -4659,6 +4943,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersStartupProbeGr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersStartupProbeHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -4671,6 +4956,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersStartupProbeHt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersStartupProbeHttpGet
 {
     /// <summary></summary>
@@ -4695,6 +4981,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersStartupProbeHt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersStartupProbeTcpSocket
 {
     /// <summary></summary>
@@ -4707,6 +4994,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersStartupProbeTc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersStartupProbe
 {
     /// <summary></summary>
@@ -4751,6 +5039,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersStartupProbe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersVolumeDevices
 {
     /// <summary></summary>
@@ -4763,6 +5052,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersVolumeDevices
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainersVolumeMounts
 {
     /// <summary></summary>
@@ -4791,6 +5081,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersVolumeMounts
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecInitContainers
 {
     /// <summary></summary>
@@ -4891,6 +5182,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainers
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecOs
 {
     /// <summary></summary>
@@ -4899,6 +5191,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecOs
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecReadinessGates
 {
     /// <summary></summary>
@@ -4907,6 +5200,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecReadinessGates
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecResourceClaimsSource
 {
     /// <summary></summary>
@@ -4919,6 +5213,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecResourceClaimsSource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecResourceClaims
 {
     /// <summary></summary>
@@ -4931,6 +5226,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecResourceClaims
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecSchedulingGates
 {
     /// <summary></summary>
@@ -4939,6 +5235,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecSchedulingGates
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecSecurityContextSeLinuxOptions
 {
     /// <summary></summary>
@@ -4959,6 +5256,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecSecurityContextSeLinuxOption
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecSecurityContextSeccompProfile
 {
     /// <summary></summary>
@@ -4971,6 +5269,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecSecurityContextSeccompProfil
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecSecurityContextSysctls
 {
     /// <summary></summary>
@@ -4983,6 +5282,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecSecurityContextSysctls
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecSecurityContextWindowsOptions
 {
     /// <summary></summary>
@@ -5003,6 +5303,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecSecurityContextWindowsOption
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecSecurityContext
 {
     /// <summary></summary>
@@ -5047,6 +5348,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecSecurityContext
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecTolerations
 {
     /// <summary></summary>
@@ -5071,6 +5373,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecTolerations
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecTopologySpreadConstraintsLabelSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -5087,6 +5390,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecTopologySpreadConstraintsLab
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecTopologySpreadConstraintsLabelSelector
 {
     /// <summary></summary>
@@ -5099,6 +5403,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecTopologySpreadConstraintsLab
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpecTopologySpreadConstraints
 {
     /// <summary></summary>
@@ -5135,6 +5440,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecTopologySpreadConstraints
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplateSpec
 {
     /// <summary></summary>
@@ -5295,6 +5601,7 @@ public partial class V1alpha1RolloutSpecTemplateSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecTemplate
 {
     /// <summary></summary>
@@ -5307,6 +5614,7 @@ public partial class V1alpha1RolloutSpecTemplate
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecWorkloadRef
 {
     /// <summary></summary>
@@ -5327,6 +5635,7 @@ public partial class V1alpha1RolloutSpecWorkloadRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpec
 {
     /// <summary></summary>
@@ -5383,6 +5692,7 @@ public partial class V1alpha1RolloutSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutStatusAlbCanaryTargetGroup
 {
     /// <summary></summary>
@@ -5399,6 +5709,7 @@ public partial class V1alpha1RolloutStatusAlbCanaryTargetGroup
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutStatusAlbLoadBalancer
 {
     /// <summary></summary>
@@ -5415,6 +5726,7 @@ public partial class V1alpha1RolloutStatusAlbLoadBalancer
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutStatusAlbStableTargetGroup
 {
     /// <summary></summary>
@@ -5431,6 +5743,7 @@ public partial class V1alpha1RolloutStatusAlbStableTargetGroup
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutStatusAlb
 {
     /// <summary></summary>
@@ -5451,6 +5764,7 @@ public partial class V1alpha1RolloutStatusAlb
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutStatusAlbsCanaryTargetGroup
 {
     /// <summary></summary>
@@ -5467,6 +5781,7 @@ public partial class V1alpha1RolloutStatusAlbsCanaryTargetGroup
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutStatusAlbsLoadBalancer
 {
     /// <summary></summary>
@@ -5483,6 +5798,7 @@ public partial class V1alpha1RolloutStatusAlbsLoadBalancer
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutStatusAlbsStableTargetGroup
 {
     /// <summary></summary>
@@ -5499,6 +5815,7 @@ public partial class V1alpha1RolloutStatusAlbsStableTargetGroup
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutStatusAlbs
 {
     /// <summary></summary>
@@ -5519,6 +5836,7 @@ public partial class V1alpha1RolloutStatusAlbs
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutStatusBlueGreenPostPromotionAnalysisRunStatus
 {
     /// <summary></summary>
@@ -5535,6 +5853,7 @@ public partial class V1alpha1RolloutStatusBlueGreenPostPromotionAnalysisRunStatu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutStatusBlueGreenPrePromotionAnalysisRunStatus
 {
     /// <summary></summary>
@@ -5551,6 +5870,7 @@ public partial class V1alpha1RolloutStatusBlueGreenPrePromotionAnalysisRunStatus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutStatusBlueGreen
 {
     /// <summary></summary>
@@ -5575,6 +5895,7 @@ public partial class V1alpha1RolloutStatusBlueGreen
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutStatusCanaryCurrentBackgroundAnalysisRunStatus
 {
     /// <summary></summary>
@@ -5591,6 +5912,7 @@ public partial class V1alpha1RolloutStatusCanaryCurrentBackgroundAnalysisRunStat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutStatusCanaryCurrentStepAnalysisRunStatus
 {
     /// <summary></summary>
@@ -5607,6 +5929,7 @@ public partial class V1alpha1RolloutStatusCanaryCurrentStepAnalysisRunStatus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutStatusCanaryWeightsAdditional
 {
     /// <summary></summary>
@@ -5623,6 +5946,7 @@ public partial class V1alpha1RolloutStatusCanaryWeightsAdditional
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutStatusCanaryWeightsCanary
 {
     /// <summary></summary>
@@ -5639,6 +5963,7 @@ public partial class V1alpha1RolloutStatusCanaryWeightsCanary
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutStatusCanaryWeightsStable
 {
     /// <summary></summary>
@@ -5655,6 +5980,7 @@ public partial class V1alpha1RolloutStatusCanaryWeightsStable
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutStatusCanaryWeights
 {
     /// <summary></summary>
@@ -5675,6 +6001,7 @@ public partial class V1alpha1RolloutStatusCanaryWeights
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutStatusCanary
 {
     /// <summary></summary>
@@ -5699,6 +6026,7 @@ public partial class V1alpha1RolloutStatusCanary
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutStatusConditions
 {
     /// <summary></summary>
@@ -5727,6 +6055,7 @@ public partial class V1alpha1RolloutStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutStatusPauseConditions
 {
     /// <summary></summary>
@@ -5739,6 +6068,7 @@ public partial class V1alpha1RolloutStatusPauseConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutStatus
 {
     /// <summary></summary>
@@ -5846,8 +6176,9 @@ public partial class V1alpha1RolloutStatus
     public string? WorkloadObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1Rollout : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1RolloutSpec>, IStatus<V1alpha1RolloutStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

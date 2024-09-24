@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.pipes.aws.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1PipeSpecDeletionPolicyEnum
 }
 
 /// <summary>Contains the HTTP parameters to use when the target is a API Gateway REST endpoint or EventBridge ApiDestination. If you specify an API Gateway REST API or EventBridge ApiDestination as a target, you can use this parameter to specify headers, path parameters, and query string keys/values as part of your target invoking request. If you're using ApiDestinations, the corresponding Connection can also have these values configured. In case of any conflicting keys, values from the Connection take precedence. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderEnrichmentParametersHttpParameters
 {
     /// <summary>Key-value mapping of the headers that need to be sent as part of request invoking the API Gateway REST API or EventBridge ApiDestination.</summary>
@@ -35,6 +37,7 @@ public partial class V1beta1PipeSpecForProviderEnrichmentParametersHttpParameter
 }
 
 /// <summary>Parameters to configure enrichment for your pipe. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderEnrichmentParameters
 {
     /// <summary>Contains the HTTP parameters to use when the target is a API Gateway REST endpoint or EventBridge ApiDestination. If you specify an API Gateway REST API or EventBridge ApiDestination as a target, you can use this parameter to specify headers, path parameters, and query string keys/values as part of your target invoking request. If you're using ApiDestinations, the corresponding Connection can also have these values configured. In case of any conflicting keys, values from the Connection take precedence. Detailed below.</summary>
@@ -46,6 +49,7 @@ public partial class V1beta1PipeSpecForProviderEnrichmentParameters
     public string? InputTemplate { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecForProviderEnrichmentRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -56,6 +60,7 @@ public enum V1beta1PipeSpecForProviderEnrichmentRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecForProviderEnrichmentRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -67,6 +72,7 @@ public enum V1beta1PipeSpecForProviderEnrichmentRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderEnrichmentRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -81,6 +87,7 @@ public partial class V1beta1PipeSpecForProviderEnrichmentRefPolicy
 }
 
 /// <summary>Reference to a APIDestination in cloudwatchevents to populate enrichment.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderEnrichmentRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -92,6 +99,7 @@ public partial class V1beta1PipeSpecForProviderEnrichmentRef
     public V1beta1PipeSpecForProviderEnrichmentRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecForProviderEnrichmentSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -102,6 +110,7 @@ public enum V1beta1PipeSpecForProviderEnrichmentSelectorPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecForProviderEnrichmentSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -113,6 +122,7 @@ public enum V1beta1PipeSpecForProviderEnrichmentSelectorPolicyResolveEnum
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderEnrichmentSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -127,6 +137,7 @@ public partial class V1beta1PipeSpecForProviderEnrichmentSelectorPolicy
 }
 
 /// <summary>Selector for a APIDestination in cloudwatchevents to populate enrichment.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderEnrichmentSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -143,6 +154,7 @@ public partial class V1beta1PipeSpecForProviderEnrichmentSelector
 }
 
 /// <summary>Amazon CloudWatch Logs logging configuration settings for the pipe. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderLogConfigurationCloudwatchLogsLogDestination
 {
     /// <summary>Amazon Web Services Resource Name (ARN) for the CloudWatch log group to which EventBridge sends the log records.</summary>
@@ -151,6 +163,7 @@ public partial class V1beta1PipeSpecForProviderLogConfigurationCloudwatchLogsLog
 }
 
 /// <summary>Amazon Kinesis Data Firehose logging configuration settings for the pipe. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderLogConfigurationFirehoseLogDestination
 {
     /// <summary>Amazon Resource Name (ARN) of the Kinesis Data Firehose delivery stream to which EventBridge delivers the pipe log records.</summary>
@@ -159,6 +172,7 @@ public partial class V1beta1PipeSpecForProviderLogConfigurationFirehoseLogDestin
 }
 
 /// <summary>Amazon S3 logging configuration settings for the pipe. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderLogConfigurationS3LogDestination
 {
     /// <summary>Name of the Amazon S3 bucket to which EventBridge delivers the log records for the pipe.</summary>
@@ -179,6 +193,7 @@ public partial class V1beta1PipeSpecForProviderLogConfigurationS3LogDestination
 }
 
 /// <summary>Logging configuration settings for the pipe. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderLogConfiguration
 {
     /// <summary>Amazon CloudWatch Logs logging configuration settings for the pipe. Detailed below.</summary>
@@ -198,6 +213,7 @@ public partial class V1beta1PipeSpecForProviderLogConfiguration
     public V1beta1PipeSpecForProviderLogConfigurationS3LogDestination? S3LogDestination { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecForProviderRoleArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -208,6 +224,7 @@ public enum V1beta1PipeSpecForProviderRoleArnRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecForProviderRoleArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -219,6 +236,7 @@ public enum V1beta1PipeSpecForProviderRoleArnRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -233,6 +251,7 @@ public partial class V1beta1PipeSpecForProviderRoleArnRefPolicy
 }
 
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -244,6 +263,7 @@ public partial class V1beta1PipeSpecForProviderRoleArnRef
     public V1beta1PipeSpecForProviderRoleArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecForProviderRoleArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -254,6 +274,7 @@ public enum V1beta1PipeSpecForProviderRoleArnSelectorPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecForProviderRoleArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -265,6 +286,7 @@ public enum V1beta1PipeSpecForProviderRoleArnSelectorPolicyResolveEnum
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +301,7 @@ public partial class V1beta1PipeSpecForProviderRoleArnSelectorPolicy
 }
 
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -295,6 +318,7 @@ public partial class V1beta1PipeSpecForProviderRoleArnSelector
 }
 
 /// <summary>The credentials needed to access the resource. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderSourceParametersActivemqBrokerParametersCredentials
 {
     /// <summary>The ARN of the Secrets Manager secret containing the basic auth credentials.</summary>
@@ -303,6 +327,7 @@ public partial class V1beta1PipeSpecForProviderSourceParametersActivemqBrokerPar
 }
 
 /// <summary>The parameters for using an Active MQ broker as a source. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderSourceParametersActivemqBrokerParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -323,6 +348,7 @@ public partial class V1beta1PipeSpecForProviderSourceParametersActivemqBrokerPar
 }
 
 /// <summary>Define the target queue to send dead-letter queue events to. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderSourceParametersDynamodbStreamParametersDeadLetterConfig
 {
     /// <summary>The ARN of the Amazon SQS queue specified as the target for the dead-letter queue.</summary>
@@ -331,6 +357,7 @@ public partial class V1beta1PipeSpecForProviderSourceParametersDynamodbStreamPar
 }
 
 /// <summary>The parameters for using a DynamoDB stream as a source.  Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderSourceParametersDynamodbStreamParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -367,6 +394,7 @@ public partial class V1beta1PipeSpecForProviderSourceParametersDynamodbStreamPar
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderSourceParametersFilterCriteriaFilter
 {
     /// <summary>The event pattern. At most 4096 characters.</summary>
@@ -375,6 +403,7 @@ public partial class V1beta1PipeSpecForProviderSourceParametersFilterCriteriaFil
 }
 
 /// <summary>The collection of event patterns used to filter events. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderSourceParametersFilterCriteria
 {
     /// <summary>An array of up to 5 event patterns. Detailed below.</summary>
@@ -383,6 +412,7 @@ public partial class V1beta1PipeSpecForProviderSourceParametersFilterCriteria
 }
 
 /// <summary>Define the target queue to send dead-letter queue events to. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderSourceParametersKinesisStreamParametersDeadLetterConfig
 {
     /// <summary>The ARN of the Amazon SQS queue specified as the target for the dead-letter queue.</summary>
@@ -391,6 +421,7 @@ public partial class V1beta1PipeSpecForProviderSourceParametersKinesisStreamPara
 }
 
 /// <summary>The parameters for using a Kinesis stream as a source. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderSourceParametersKinesisStreamParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -431,6 +462,7 @@ public partial class V1beta1PipeSpecForProviderSourceParametersKinesisStreamPara
 }
 
 /// <summary>The credentials needed to access the resource. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderSourceParametersManagedStreamingKafkaParametersCredentials
 {
     /// <summary>The ARN of the Secrets Manager secret containing the credentials.</summary>
@@ -443,6 +475,7 @@ public partial class V1beta1PipeSpecForProviderSourceParametersManagedStreamingK
 }
 
 /// <summary>The parameters for using an MSK stream as a source. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderSourceParametersManagedStreamingKafkaParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -471,6 +504,7 @@ public partial class V1beta1PipeSpecForProviderSourceParametersManagedStreamingK
 }
 
 /// <summary>The credentials needed to access the resource. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderSourceParametersRabbitmqBrokerParametersCredentials
 {
     /// <summary>The ARN of the Secrets Manager secret containing the credentials.</summary>
@@ -479,6 +513,7 @@ public partial class V1beta1PipeSpecForProviderSourceParametersRabbitmqBrokerPar
 }
 
 /// <summary>The parameters for using a Rabbit MQ broker as a source. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderSourceParametersRabbitmqBrokerParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -503,6 +538,7 @@ public partial class V1beta1PipeSpecForProviderSourceParametersRabbitmqBrokerPar
 }
 
 /// <summary>The credentials needed to access the resource. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderSourceParametersSelfManagedKafkaParametersCredentials
 {
     /// <summary>The ARN of the Secrets Manager secret containing the credentials.</summary>
@@ -523,6 +559,7 @@ public partial class V1beta1PipeSpecForProviderSourceParametersSelfManagedKafkaP
 }
 
 /// <summary>This structure specifies the VPC subnets and security groups for the stream, and whether a public IP address is to be used. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderSourceParametersSelfManagedKafkaParametersVpc
 {
     /// <summary>List of security groups associated with the stream. These security groups must all be in the same VPC. You can specify as many as five security groups. If you do not specify a security group, the default security group for the VPC is used.</summary>
@@ -535,6 +572,7 @@ public partial class V1beta1PipeSpecForProviderSourceParametersSelfManagedKafkaP
 }
 
 /// <summary>The parameters for using a self-managed Apache Kafka stream as a source. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderSourceParametersSelfManagedKafkaParameters
 {
     /// <summary>An array of server URLs. Maximum number of 2 items, each of maximum length 300.</summary>
@@ -575,6 +613,7 @@ public partial class V1beta1PipeSpecForProviderSourceParametersSelfManagedKafkaP
 }
 
 /// <summary>The parameters for using a Amazon SQS stream as a source. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderSourceParametersSqsQueueParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -587,6 +626,7 @@ public partial class V1beta1PipeSpecForProviderSourceParametersSqsQueueParameter
 }
 
 /// <summary>Parameters to configure a source for the pipe. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderSourceParameters
 {
     /// <summary>The parameters for using an Active MQ broker as a source. Detailed below.</summary>
@@ -622,6 +662,7 @@ public partial class V1beta1PipeSpecForProviderSourceParameters
     public V1beta1PipeSpecForProviderSourceParametersSqsQueueParameters? SqsQueueParameters { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecForProviderSourceRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -632,6 +673,7 @@ public enum V1beta1PipeSpecForProviderSourceRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecForProviderSourceRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -643,6 +685,7 @@ public enum V1beta1PipeSpecForProviderSourceRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderSourceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -657,6 +700,7 @@ public partial class V1beta1PipeSpecForProviderSourceRefPolicy
 }
 
 /// <summary>Reference to a Queue in sqs to populate source.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderSourceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -668,6 +712,7 @@ public partial class V1beta1PipeSpecForProviderSourceRef
     public V1beta1PipeSpecForProviderSourceRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecForProviderSourceSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -678,6 +723,7 @@ public enum V1beta1PipeSpecForProviderSourceSelectorPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecForProviderSourceSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -689,6 +735,7 @@ public enum V1beta1PipeSpecForProviderSourceSelectorPolicyResolveEnum
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderSourceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -703,6 +750,7 @@ public partial class V1beta1PipeSpecForProviderSourceSelectorPolicy
 }
 
 /// <summary>Selector for a Queue in sqs to populate source.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderSourceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -719,6 +767,7 @@ public partial class V1beta1PipeSpecForProviderSourceSelector
 }
 
 /// <summary>The array properties for the submitted job, such as the size of the array. The array size can be between 2 and 10,000. If you specify array properties for a job, it becomes an array job. This parameter is used only if the target is an AWS Batch job. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetParametersBatchJobParametersArrayProperties
 {
     /// <summary>The size of the array, if this is an array batch job. Minimum value of 2. Maximum value of 10,000.</summary>
@@ -727,6 +776,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersBatchJobParameter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetParametersBatchJobParametersContainerOverridesEnvironment
 {
     /// <summary>The name of the key-value pair. For environment variables, this is the name of the environment variable.</summary>
@@ -739,6 +789,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersBatchJobParameter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetParametersBatchJobParametersContainerOverridesResourceRequirement
 {
     /// <summary>The type of resource to assign to a container. The supported resources include GPU, MEMORY, and VCPU.</summary>
@@ -751,6 +802,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersBatchJobParameter
 }
 
 /// <summary>The overrides that are sent to a container. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetParametersBatchJobParametersContainerOverrides
 {
     /// <summary>List of commands to send to the container that overrides the default command from the Docker image or the task definition.</summary>
@@ -771,6 +823,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersBatchJobParameter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetParametersBatchJobParametersDependsOn
 {
     /// <summary>The job ID of the AWS Batch job that's associated with this dependency.</summary>
@@ -783,6 +836,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersBatchJobParameter
 }
 
 /// <summary>The retry strategy to use for failed jobs. When a retry strategy is specified here, it overrides the retry strategy defined in the job definition. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetParametersBatchJobParametersRetryStrategy
 {
     /// <summary>The number of times to move a job to the RUNNABLE status. If the value of attempts is greater than one, the job is retried on failure the same number of attempts as the value. Maximum value of 10.</summary>
@@ -791,6 +845,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersBatchJobParameter
 }
 
 /// <summary>The parameters for using an AWS Batch job as a target. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetParametersBatchJobParameters
 {
     /// <summary>The array properties for the submitted job, such as the size of the array. The array size can be between 2 and 10,000. If you specify array properties for a job, it becomes an array job. This parameter is used only if the target is an AWS Batch job. Detailed below.</summary>
@@ -823,6 +878,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersBatchJobParameter
 }
 
 /// <summary>The parameters for using an CloudWatch Logs log stream as a target. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetParametersCloudwatchLogsParameters
 {
     /// <summary>The name of the log stream.</summary>
@@ -835,6 +891,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersCloudwatchLogsPar
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParametersCapacityProviderStrategy
 {
     /// <summary>The base value designates how many tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined. If no value is specified, the default value of 0 is used. Maximum value of 100,000.</summary>
@@ -851,6 +908,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParameters
 }
 
 /// <summary>Use this structure to specify the VPC subnets and security groups for the task, and whether a public IP address is to be used. This structure is relevant only for ECS tasks that use the awsvpc network mode. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParametersNetworkConfigurationAwsVpcConfiguration
 {
     /// <summary>Specifies whether the task's elastic network interface receives a public IP address. You can specify ENABLED only when LaunchType in EcsParameters is set to FARGATE. Valid Values: ENABLED, DISABLED.</summary>
@@ -867,6 +925,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParameters
 }
 
 /// <summary>Use this structure if the Amazon ECS task uses the awsvpc network mode. This structure specifies the VPC subnets and security groups associated with the task, and whether a public IP address is to be used. This structure is required if LaunchType is FARGATE because the awsvpc mode is required for Fargate tasks. If you specify NetworkConfiguration when the target ECS task does not use the awsvpc network mode, the task fails. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParametersNetworkConfiguration
 {
     /// <summary>Use this structure to specify the VPC subnets and security groups for the task, and whether a public IP address is to be used. This structure is relevant only for ECS tasks that use the awsvpc network mode. Detailed below.</summary>
@@ -875,6 +934,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParameters
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParametersOverridesContainerOverrideEnvironment
 {
     /// <summary>The name of the key-value pair. For environment variables, this is the name of the environment variable.</summary>
@@ -887,6 +947,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParameters
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParametersOverridesContainerOverrideEnvironmentFile
 {
     /// <summary>The file type to use. The only supported value is s3.</summary>
@@ -899,6 +960,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParameters
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParametersOverridesContainerOverrideResourceRequirement
 {
     /// <summary>The type of resource to assign to a container. The supported values are GPU or InferenceAccelerator.</summary>
@@ -911,6 +973,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParameters
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParametersOverridesContainerOverride
 {
     /// <summary>List of commands to send to the container that overrides the default command from the Docker image or the task definition. You must also specify a container name.</summary>
@@ -947,6 +1010,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParameters
 }
 
 /// <summary>The ephemeral storage setting override for the task.  Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParametersOverridesEphemeralStorage
 {
     /// <summary>The total amount, in GiB, of ephemeral storage to set for the task. The minimum supported value is 21 GiB and the maximum supported value is 200 GiB.</summary>
@@ -955,6 +1019,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParameters
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParametersOverridesInferenceAcceleratorOverride
 {
     /// <summary>The Elastic Inference accelerator device name to override for the task. This parameter must match a deviceName specified in the task definition.</summary>
@@ -967,6 +1032,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParameters
 }
 
 /// <summary>The overrides that are associated with a task. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParametersOverrides
 {
     /// <summary>One or more container overrides that are sent to a task. Detailed below.</summary>
@@ -999,6 +1065,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParameters
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParametersPlacementConstraint
 {
     /// <summary>A cluster query language expression to apply to the constraint. You cannot specify an expression if the constraint type is distinctInstance. Maximum length of 2,000.</summary>
@@ -1011,6 +1078,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParameters
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParametersPlacementStrategy
 {
     /// <summary>The field to apply the placement strategy against. For the spread placement strategy, valid values are instanceId (or host, which has the same effect), or any platform or custom attribute that is applied to a container instance, such as attribute:ecs.availability-zone. For the binpack placement strategy, valid values are cpu and memory. For the random placement strategy, this field is not used. Maximum length of 255.</summary>
@@ -1023,6 +1091,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParameters
 }
 
 /// <summary>The parameters for using an Amazon ECS task as a target. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParameters
 {
     /// <summary>List of capacity provider strategies to use for the task. If a capacityProviderStrategy is specified, the launchType parameter must be omitted. If no capacityProviderStrategy or launchType is specified, the defaultCapacityProviderStrategy for the cluster is used. Detailed below.</summary>
@@ -1087,6 +1156,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParameters
 }
 
 /// <summary>The parameters for using an EventBridge event bus as a target. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetParametersEventbridgeEventBusParameters
 {
     /// <summary>A free-form string, with a maximum of 128 characters, used to decide what fields to expect in the event detail.</summary>
@@ -1111,6 +1181,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersEventbridgeEventB
 }
 
 /// <summary>These are custom parameter to be used when the target is an API Gateway REST APIs or EventBridge ApiDestinations. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetParametersHttpParameters
 {
     /// <summary>Key-value mapping of the headers that need to be sent as part of request invoking the API Gateway REST API or EventBridge ApiDestination. Detailed below.</summary>
@@ -1127,6 +1198,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersHttpParameters
 }
 
 /// <summary>The parameters for using a Kinesis stream as a source. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetParametersKinesisStreamParameters
 {
     /// <summary>Determines which shard in the stream the data record is assigned to. Partition keys are Unicode strings with a maximum length limit of 256 characters for each key. Amazon Kinesis Data Streams uses the partition key as input to a hash function that maps the partition key and associated data to a specific shard. Specifically, an MD5 hash function is used to map partition keys to 128-bit integer values and to map associated data records to shards. As a result of this hashing mechanism, all data records with the same partition key map to the same shard within the stream.</summary>
@@ -1135,6 +1207,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersKinesisStreamPara
 }
 
 /// <summary>The parameters for using a Lambda function as a target. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetParametersLambdaFunctionParameters
 {
     /// <summary>Specify whether to invoke the function synchronously or asynchronously. Valid Values: REQUEST_RESPONSE, FIRE_AND_FORGET.</summary>
@@ -1143,6 +1216,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersLambdaFunctionPar
 }
 
 /// <summary>These are custom parameters to be used when the target is a Amazon Redshift cluster to invoke the Amazon Redshift Data API BatchExecuteStatement. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetParametersRedshiftDataParameters
 {
     /// <summary>The name of the database. Required when authenticating using temporary credentials.</summary>
@@ -1171,6 +1245,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersRedshiftDataParam
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetParametersSagemakerPipelineParametersPipelineParameter
 {
     /// <summary>The name of the container that receives the override. This parameter is required if any override is specified.</summary>
@@ -1183,6 +1258,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersSagemakerPipeline
 }
 
 /// <summary>The parameters for using a SageMaker pipeline as a target. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetParametersSagemakerPipelineParameters
 {
     /// <summary>List of Parameter names and values for SageMaker Model Building Pipeline execution. Detailed below.</summary>
@@ -1191,6 +1267,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersSagemakerPipeline
 }
 
 /// <summary>The parameters for using a Amazon SQS stream as a target. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetParametersSqsQueueParameters
 {
     /// <summary>This parameter applies only to FIFO (first-in-first-out) queues. The token used for deduplication of sent messages.</summary>
@@ -1203,6 +1280,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersSqsQueueParameter
 }
 
 /// <summary>The parameters for using a Step Functions state machine as a target. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetParametersStepFunctionStateMachineParameters
 {
     /// <summary>Specify whether to invoke the function synchronously or asynchronously. Valid Values: REQUEST_RESPONSE, FIRE_AND_FORGET.</summary>
@@ -1211,6 +1289,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersStepFunctionState
 }
 
 /// <summary>Parameters to configure a target for your pipe. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetParameters
 {
     /// <summary>The parameters for using an AWS Batch job as a target. Detailed below.</summary>
@@ -1262,6 +1341,7 @@ public partial class V1beta1PipeSpecForProviderTargetParameters
     public V1beta1PipeSpecForProviderTargetParametersStepFunctionStateMachineParameters? StepFunctionStateMachineParameters { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecForProviderTargetRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1272,6 +1352,7 @@ public enum V1beta1PipeSpecForProviderTargetRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecForProviderTargetRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1283,6 +1364,7 @@ public enum V1beta1PipeSpecForProviderTargetRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1297,6 +1379,7 @@ public partial class V1beta1PipeSpecForProviderTargetRefPolicy
 }
 
 /// <summary>Reference to a Queue in sqs to populate target.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1308,6 +1391,7 @@ public partial class V1beta1PipeSpecForProviderTargetRef
     public V1beta1PipeSpecForProviderTargetRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecForProviderTargetSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1318,6 +1402,7 @@ public enum V1beta1PipeSpecForProviderTargetSelectorPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecForProviderTargetSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1329,6 +1414,7 @@ public enum V1beta1PipeSpecForProviderTargetSelectorPolicyResolveEnum
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1343,6 +1429,7 @@ public partial class V1beta1PipeSpecForProviderTargetSelectorPolicy
 }
 
 /// <summary>Selector for a Queue in sqs to populate target.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1359,6 +1446,7 @@ public partial class V1beta1PipeSpecForProviderTargetSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProvider
 {
     /// <summary>A description of the pipe. At most 512 characters.</summary>
@@ -1443,6 +1531,7 @@ public partial class V1beta1PipeSpecForProvider
 }
 
 /// <summary>Contains the HTTP parameters to use when the target is a API Gateway REST endpoint or EventBridge ApiDestination. If you specify an API Gateway REST API or EventBridge ApiDestination as a target, you can use this parameter to specify headers, path parameters, and query string keys/values as part of your target invoking request. If you're using ApiDestinations, the corresponding Connection can also have these values configured. In case of any conflicting keys, values from the Connection take precedence. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderEnrichmentParametersHttpParameters
 {
     /// <summary>Key-value mapping of the headers that need to be sent as part of request invoking the API Gateway REST API or EventBridge ApiDestination.</summary>
@@ -1459,6 +1548,7 @@ public partial class V1beta1PipeSpecInitProviderEnrichmentParametersHttpParamete
 }
 
 /// <summary>Parameters to configure enrichment for your pipe. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderEnrichmentParameters
 {
     /// <summary>Contains the HTTP parameters to use when the target is a API Gateway REST endpoint or EventBridge ApiDestination. If you specify an API Gateway REST API or EventBridge ApiDestination as a target, you can use this parameter to specify headers, path parameters, and query string keys/values as part of your target invoking request. If you're using ApiDestinations, the corresponding Connection can also have these values configured. In case of any conflicting keys, values from the Connection take precedence. Detailed below.</summary>
@@ -1470,6 +1560,7 @@ public partial class V1beta1PipeSpecInitProviderEnrichmentParameters
     public string? InputTemplate { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecInitProviderEnrichmentRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1480,6 +1571,7 @@ public enum V1beta1PipeSpecInitProviderEnrichmentRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecInitProviderEnrichmentRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1491,6 +1583,7 @@ public enum V1beta1PipeSpecInitProviderEnrichmentRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderEnrichmentRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1505,6 +1598,7 @@ public partial class V1beta1PipeSpecInitProviderEnrichmentRefPolicy
 }
 
 /// <summary>Reference to a APIDestination in cloudwatchevents to populate enrichment.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderEnrichmentRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1516,6 +1610,7 @@ public partial class V1beta1PipeSpecInitProviderEnrichmentRef
     public V1beta1PipeSpecInitProviderEnrichmentRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecInitProviderEnrichmentSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1526,6 +1621,7 @@ public enum V1beta1PipeSpecInitProviderEnrichmentSelectorPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecInitProviderEnrichmentSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1537,6 +1633,7 @@ public enum V1beta1PipeSpecInitProviderEnrichmentSelectorPolicyResolveEnum
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderEnrichmentSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1551,6 +1648,7 @@ public partial class V1beta1PipeSpecInitProviderEnrichmentSelectorPolicy
 }
 
 /// <summary>Selector for a APIDestination in cloudwatchevents to populate enrichment.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderEnrichmentSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1567,6 +1665,7 @@ public partial class V1beta1PipeSpecInitProviderEnrichmentSelector
 }
 
 /// <summary>Amazon CloudWatch Logs logging configuration settings for the pipe. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderLogConfigurationCloudwatchLogsLogDestination
 {
     /// <summary>Amazon Web Services Resource Name (ARN) for the CloudWatch log group to which EventBridge sends the log records.</summary>
@@ -1575,6 +1674,7 @@ public partial class V1beta1PipeSpecInitProviderLogConfigurationCloudwatchLogsLo
 }
 
 /// <summary>Amazon Kinesis Data Firehose logging configuration settings for the pipe. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderLogConfigurationFirehoseLogDestination
 {
     /// <summary>Amazon Resource Name (ARN) of the Kinesis Data Firehose delivery stream to which EventBridge delivers the pipe log records.</summary>
@@ -1583,6 +1683,7 @@ public partial class V1beta1PipeSpecInitProviderLogConfigurationFirehoseLogDesti
 }
 
 /// <summary>Amazon S3 logging configuration settings for the pipe. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderLogConfigurationS3LogDestination
 {
     /// <summary>Name of the Amazon S3 bucket to which EventBridge delivers the log records for the pipe.</summary>
@@ -1603,6 +1704,7 @@ public partial class V1beta1PipeSpecInitProviderLogConfigurationS3LogDestination
 }
 
 /// <summary>Logging configuration settings for the pipe. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderLogConfiguration
 {
     /// <summary>Amazon CloudWatch Logs logging configuration settings for the pipe. Detailed below.</summary>
@@ -1622,6 +1724,7 @@ public partial class V1beta1PipeSpecInitProviderLogConfiguration
     public V1beta1PipeSpecInitProviderLogConfigurationS3LogDestination? S3LogDestination { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecInitProviderRoleArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1632,6 +1735,7 @@ public enum V1beta1PipeSpecInitProviderRoleArnRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecInitProviderRoleArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1643,6 +1747,7 @@ public enum V1beta1PipeSpecInitProviderRoleArnRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1657,6 +1762,7 @@ public partial class V1beta1PipeSpecInitProviderRoleArnRefPolicy
 }
 
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1668,6 +1774,7 @@ public partial class V1beta1PipeSpecInitProviderRoleArnRef
     public V1beta1PipeSpecInitProviderRoleArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecInitProviderRoleArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1678,6 +1785,7 @@ public enum V1beta1PipeSpecInitProviderRoleArnSelectorPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecInitProviderRoleArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1689,6 +1797,7 @@ public enum V1beta1PipeSpecInitProviderRoleArnSelectorPolicyResolveEnum
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1703,6 +1812,7 @@ public partial class V1beta1PipeSpecInitProviderRoleArnSelectorPolicy
 }
 
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1719,6 +1829,7 @@ public partial class V1beta1PipeSpecInitProviderRoleArnSelector
 }
 
 /// <summary>The credentials needed to access the resource. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderSourceParametersActivemqBrokerParametersCredentials
 {
     /// <summary>The ARN of the Secrets Manager secret containing the basic auth credentials.</summary>
@@ -1727,6 +1838,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParametersActivemqBrokerPa
 }
 
 /// <summary>The parameters for using an Active MQ broker as a source. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderSourceParametersActivemqBrokerParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -1747,6 +1859,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParametersActivemqBrokerPa
 }
 
 /// <summary>Define the target queue to send dead-letter queue events to. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderSourceParametersDynamodbStreamParametersDeadLetterConfig
 {
     /// <summary>The ARN of the Amazon SQS queue specified as the target for the dead-letter queue.</summary>
@@ -1755,6 +1868,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParametersDynamodbStreamPa
 }
 
 /// <summary>The parameters for using a DynamoDB stream as a source.  Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderSourceParametersDynamodbStreamParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -1791,6 +1905,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParametersDynamodbStreamPa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderSourceParametersFilterCriteriaFilter
 {
     /// <summary>The event pattern. At most 4096 characters.</summary>
@@ -1799,6 +1914,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParametersFilterCriteriaFi
 }
 
 /// <summary>The collection of event patterns used to filter events. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderSourceParametersFilterCriteria
 {
     /// <summary>An array of up to 5 event patterns. Detailed below.</summary>
@@ -1807,6 +1923,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParametersFilterCriteria
 }
 
 /// <summary>Define the target queue to send dead-letter queue events to. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderSourceParametersKinesisStreamParametersDeadLetterConfig
 {
     /// <summary>The ARN of the Amazon SQS queue specified as the target for the dead-letter queue.</summary>
@@ -1815,6 +1932,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParametersKinesisStreamPar
 }
 
 /// <summary>The parameters for using a Kinesis stream as a source. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderSourceParametersKinesisStreamParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -1855,6 +1973,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParametersKinesisStreamPar
 }
 
 /// <summary>The credentials needed to access the resource. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderSourceParametersManagedStreamingKafkaParametersCredentials
 {
     /// <summary>The ARN of the Secrets Manager secret containing the credentials.</summary>
@@ -1867,6 +1986,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParametersManagedStreaming
 }
 
 /// <summary>The parameters for using an MSK stream as a source. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderSourceParametersManagedStreamingKafkaParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -1895,6 +2015,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParametersManagedStreaming
 }
 
 /// <summary>The credentials needed to access the resource. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderSourceParametersRabbitmqBrokerParametersCredentials
 {
     /// <summary>The ARN of the Secrets Manager secret containing the credentials.</summary>
@@ -1903,6 +2024,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParametersRabbitmqBrokerPa
 }
 
 /// <summary>The parameters for using a Rabbit MQ broker as a source. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderSourceParametersRabbitmqBrokerParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -1927,6 +2049,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParametersRabbitmqBrokerPa
 }
 
 /// <summary>The credentials needed to access the resource. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderSourceParametersSelfManagedKafkaParametersCredentials
 {
     /// <summary>The ARN of the Secrets Manager secret containing the credentials.</summary>
@@ -1947,6 +2070,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParametersSelfManagedKafka
 }
 
 /// <summary>This structure specifies the VPC subnets and security groups for the stream, and whether a public IP address is to be used. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderSourceParametersSelfManagedKafkaParametersVpc
 {
     /// <summary>List of security groups associated with the stream. These security groups must all be in the same VPC. You can specify as many as five security groups. If you do not specify a security group, the default security group for the VPC is used.</summary>
@@ -1959,6 +2083,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParametersSelfManagedKafka
 }
 
 /// <summary>The parameters for using a self-managed Apache Kafka stream as a source. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderSourceParametersSelfManagedKafkaParameters
 {
     /// <summary>An array of server URLs. Maximum number of 2 items, each of maximum length 300.</summary>
@@ -1999,6 +2124,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParametersSelfManagedKafka
 }
 
 /// <summary>The parameters for using a Amazon SQS stream as a source. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderSourceParametersSqsQueueParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -2011,6 +2137,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParametersSqsQueueParamete
 }
 
 /// <summary>Parameters to configure a source for the pipe. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderSourceParameters
 {
     /// <summary>The parameters for using an Active MQ broker as a source. Detailed below.</summary>
@@ -2046,6 +2173,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParameters
     public V1beta1PipeSpecInitProviderSourceParametersSqsQueueParameters? SqsQueueParameters { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecInitProviderSourceRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2056,6 +2184,7 @@ public enum V1beta1PipeSpecInitProviderSourceRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecInitProviderSourceRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2067,6 +2196,7 @@ public enum V1beta1PipeSpecInitProviderSourceRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderSourceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2081,6 +2211,7 @@ public partial class V1beta1PipeSpecInitProviderSourceRefPolicy
 }
 
 /// <summary>Reference to a Queue in sqs to populate source.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderSourceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2092,6 +2223,7 @@ public partial class V1beta1PipeSpecInitProviderSourceRef
     public V1beta1PipeSpecInitProviderSourceRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecInitProviderSourceSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2102,6 +2234,7 @@ public enum V1beta1PipeSpecInitProviderSourceSelectorPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecInitProviderSourceSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2113,6 +2246,7 @@ public enum V1beta1PipeSpecInitProviderSourceSelectorPolicyResolveEnum
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderSourceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2127,6 +2261,7 @@ public partial class V1beta1PipeSpecInitProviderSourceSelectorPolicy
 }
 
 /// <summary>Selector for a Queue in sqs to populate source.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderSourceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2143,6 +2278,7 @@ public partial class V1beta1PipeSpecInitProviderSourceSelector
 }
 
 /// <summary>The array properties for the submitted job, such as the size of the array. The array size can be between 2 and 10,000. If you specify array properties for a job, it becomes an array job. This parameter is used only if the target is an AWS Batch job. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetParametersBatchJobParametersArrayProperties
 {
     /// <summary>The size of the array, if this is an array batch job. Minimum value of 2. Maximum value of 10,000.</summary>
@@ -2151,6 +2287,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersBatchJobParamete
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetParametersBatchJobParametersContainerOverridesEnvironment
 {
     /// <summary>The name of the key-value pair. For environment variables, this is the name of the environment variable.</summary>
@@ -2163,6 +2300,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersBatchJobParamete
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetParametersBatchJobParametersContainerOverridesResourceRequirement
 {
     /// <summary>The type of resource to assign to a container. The supported resources include GPU, MEMORY, and VCPU.</summary>
@@ -2175,6 +2313,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersBatchJobParamete
 }
 
 /// <summary>The overrides that are sent to a container. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetParametersBatchJobParametersContainerOverrides
 {
     /// <summary>List of commands to send to the container that overrides the default command from the Docker image or the task definition.</summary>
@@ -2195,6 +2334,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersBatchJobParamete
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetParametersBatchJobParametersDependsOn
 {
     /// <summary>The job ID of the AWS Batch job that's associated with this dependency.</summary>
@@ -2207,6 +2347,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersBatchJobParamete
 }
 
 /// <summary>The retry strategy to use for failed jobs. When a retry strategy is specified here, it overrides the retry strategy defined in the job definition. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetParametersBatchJobParametersRetryStrategy
 {
     /// <summary>The number of times to move a job to the RUNNABLE status. If the value of attempts is greater than one, the job is retried on failure the same number of attempts as the value. Maximum value of 10.</summary>
@@ -2215,6 +2356,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersBatchJobParamete
 }
 
 /// <summary>The parameters for using an AWS Batch job as a target. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetParametersBatchJobParameters
 {
     /// <summary>The array properties for the submitted job, such as the size of the array. The array size can be between 2 and 10,000. If you specify array properties for a job, it becomes an array job. This parameter is used only if the target is an AWS Batch job. Detailed below.</summary>
@@ -2247,6 +2389,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersBatchJobParamete
 }
 
 /// <summary>The parameters for using an CloudWatch Logs log stream as a target. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetParametersCloudwatchLogsParameters
 {
     /// <summary>The name of the log stream.</summary>
@@ -2259,6 +2402,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersCloudwatchLogsPa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParametersCapacityProviderStrategy
 {
     /// <summary>The base value designates how many tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined. If no value is specified, the default value of 0 is used. Maximum value of 100,000.</summary>
@@ -2275,6 +2419,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParameter
 }
 
 /// <summary>Use this structure to specify the VPC subnets and security groups for the task, and whether a public IP address is to be used. This structure is relevant only for ECS tasks that use the awsvpc network mode. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParametersNetworkConfigurationAwsVpcConfiguration
 {
     /// <summary>Specifies whether the task's elastic network interface receives a public IP address. You can specify ENABLED only when LaunchType in EcsParameters is set to FARGATE. Valid Values: ENABLED, DISABLED.</summary>
@@ -2291,6 +2436,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParameter
 }
 
 /// <summary>Use this structure if the Amazon ECS task uses the awsvpc network mode. This structure specifies the VPC subnets and security groups associated with the task, and whether a public IP address is to be used. This structure is required if LaunchType is FARGATE because the awsvpc mode is required for Fargate tasks. If you specify NetworkConfiguration when the target ECS task does not use the awsvpc network mode, the task fails. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParametersNetworkConfiguration
 {
     /// <summary>Use this structure to specify the VPC subnets and security groups for the task, and whether a public IP address is to be used. This structure is relevant only for ECS tasks that use the awsvpc network mode. Detailed below.</summary>
@@ -2299,6 +2445,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParameter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParametersOverridesContainerOverrideEnvironment
 {
     /// <summary>The name of the key-value pair. For environment variables, this is the name of the environment variable.</summary>
@@ -2311,6 +2458,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParameter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParametersOverridesContainerOverrideEnvironmentFile
 {
     /// <summary>The file type to use. The only supported value is s3.</summary>
@@ -2323,6 +2471,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParameter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParametersOverridesContainerOverrideResourceRequirement
 {
     /// <summary>The type of resource to assign to a container. The supported values are GPU or InferenceAccelerator.</summary>
@@ -2335,6 +2484,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParameter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParametersOverridesContainerOverride
 {
     /// <summary>List of commands to send to the container that overrides the default command from the Docker image or the task definition. You must also specify a container name.</summary>
@@ -2371,6 +2521,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParameter
 }
 
 /// <summary>The ephemeral storage setting override for the task.  Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParametersOverridesEphemeralStorage
 {
     /// <summary>The total amount, in GiB, of ephemeral storage to set for the task. The minimum supported value is 21 GiB and the maximum supported value is 200 GiB.</summary>
@@ -2379,6 +2530,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParameter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParametersOverridesInferenceAcceleratorOverride
 {
     /// <summary>The Elastic Inference accelerator device name to override for the task. This parameter must match a deviceName specified in the task definition.</summary>
@@ -2391,6 +2543,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParameter
 }
 
 /// <summary>The overrides that are associated with a task. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParametersOverrides
 {
     /// <summary>One or more container overrides that are sent to a task. Detailed below.</summary>
@@ -2423,6 +2576,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParameter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParametersPlacementConstraint
 {
     /// <summary>A cluster query language expression to apply to the constraint. You cannot specify an expression if the constraint type is distinctInstance. Maximum length of 2,000.</summary>
@@ -2435,6 +2589,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParameter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParametersPlacementStrategy
 {
     /// <summary>The field to apply the placement strategy against. For the spread placement strategy, valid values are instanceId (or host, which has the same effect), or any platform or custom attribute that is applied to a container instance, such as attribute:ecs.availability-zone. For the binpack placement strategy, valid values are cpu and memory. For the random placement strategy, this field is not used. Maximum length of 255.</summary>
@@ -2447,6 +2602,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParameter
 }
 
 /// <summary>The parameters for using an Amazon ECS task as a target. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParameters
 {
     /// <summary>List of capacity provider strategies to use for the task. If a capacityProviderStrategy is specified, the launchType parameter must be omitted. If no capacityProviderStrategy or launchType is specified, the defaultCapacityProviderStrategy for the cluster is used. Detailed below.</summary>
@@ -2511,6 +2667,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParameter
 }
 
 /// <summary>The parameters for using an EventBridge event bus as a target. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetParametersEventbridgeEventBusParameters
 {
     /// <summary>A free-form string, with a maximum of 128 characters, used to decide what fields to expect in the event detail.</summary>
@@ -2535,6 +2692,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersEventbridgeEvent
 }
 
 /// <summary>These are custom parameter to be used when the target is an API Gateway REST APIs or EventBridge ApiDestinations. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetParametersHttpParameters
 {
     /// <summary>Key-value mapping of the headers that need to be sent as part of request invoking the API Gateway REST API or EventBridge ApiDestination. Detailed below.</summary>
@@ -2551,6 +2709,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersHttpParameters
 }
 
 /// <summary>The parameters for using a Kinesis stream as a source. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetParametersKinesisStreamParameters
 {
     /// <summary>Determines which shard in the stream the data record is assigned to. Partition keys are Unicode strings with a maximum length limit of 256 characters for each key. Amazon Kinesis Data Streams uses the partition key as input to a hash function that maps the partition key and associated data to a specific shard. Specifically, an MD5 hash function is used to map partition keys to 128-bit integer values and to map associated data records to shards. As a result of this hashing mechanism, all data records with the same partition key map to the same shard within the stream.</summary>
@@ -2559,6 +2718,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersKinesisStreamPar
 }
 
 /// <summary>The parameters for using a Lambda function as a target. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetParametersLambdaFunctionParameters
 {
     /// <summary>Specify whether to invoke the function synchronously or asynchronously. Valid Values: REQUEST_RESPONSE, FIRE_AND_FORGET.</summary>
@@ -2567,6 +2727,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersLambdaFunctionPa
 }
 
 /// <summary>These are custom parameters to be used when the target is a Amazon Redshift cluster to invoke the Amazon Redshift Data API BatchExecuteStatement. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetParametersRedshiftDataParameters
 {
     /// <summary>The name of the database. Required when authenticating using temporary credentials.</summary>
@@ -2595,6 +2756,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersRedshiftDataPara
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetParametersSagemakerPipelineParametersPipelineParameter
 {
     /// <summary>The name of the container that receives the override. This parameter is required if any override is specified.</summary>
@@ -2607,6 +2769,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersSagemakerPipelin
 }
 
 /// <summary>The parameters for using a SageMaker pipeline as a target. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetParametersSagemakerPipelineParameters
 {
     /// <summary>List of Parameter names and values for SageMaker Model Building Pipeline execution. Detailed below.</summary>
@@ -2615,6 +2778,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersSagemakerPipelin
 }
 
 /// <summary>The parameters for using a Amazon SQS stream as a target. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetParametersSqsQueueParameters
 {
     /// <summary>This parameter applies only to FIFO (first-in-first-out) queues. The token used for deduplication of sent messages.</summary>
@@ -2627,6 +2791,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersSqsQueueParamete
 }
 
 /// <summary>The parameters for using a Step Functions state machine as a target. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetParametersStepFunctionStateMachineParameters
 {
     /// <summary>Specify whether to invoke the function synchronously or asynchronously. Valid Values: REQUEST_RESPONSE, FIRE_AND_FORGET.</summary>
@@ -2635,6 +2800,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersStepFunctionStat
 }
 
 /// <summary>Parameters to configure a target for your pipe. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetParameters
 {
     /// <summary>The parameters for using an AWS Batch job as a target. Detailed below.</summary>
@@ -2686,6 +2852,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParameters
     public V1beta1PipeSpecInitProviderTargetParametersStepFunctionStateMachineParameters? StepFunctionStateMachineParameters { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecInitProviderTargetRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2696,6 +2863,7 @@ public enum V1beta1PipeSpecInitProviderTargetRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecInitProviderTargetRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2707,6 +2875,7 @@ public enum V1beta1PipeSpecInitProviderTargetRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2721,6 +2890,7 @@ public partial class V1beta1PipeSpecInitProviderTargetRefPolicy
 }
 
 /// <summary>Reference to a Queue in sqs to populate target.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2732,6 +2902,7 @@ public partial class V1beta1PipeSpecInitProviderTargetRef
     public V1beta1PipeSpecInitProviderTargetRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecInitProviderTargetSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2742,6 +2913,7 @@ public enum V1beta1PipeSpecInitProviderTargetSelectorPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecInitProviderTargetSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2753,6 +2925,7 @@ public enum V1beta1PipeSpecInitProviderTargetSelectorPolicyResolveEnum
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2767,6 +2940,7 @@ public partial class V1beta1PipeSpecInitProviderTargetSelectorPolicy
 }
 
 /// <summary>Selector for a Queue in sqs to populate target.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2783,6 +2957,7 @@ public partial class V1beta1PipeSpecInitProviderTargetSelector
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProvider
 {
     /// <summary>A description of the pipe. At most 512 characters.</summary>
@@ -2862,6 +3037,7 @@ public partial class V1beta1PipeSpecInitProvider
     public V1beta1PipeSpecInitProviderTargetSelector? TargetSelector { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -2884,6 +3060,7 @@ public enum V1beta1PipeSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2894,6 +3071,7 @@ public enum V1beta1PipeSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2905,6 +3083,7 @@ public enum V1beta1PipeSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2919,6 +3098,7 @@ public partial class V1beta1PipeSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2930,6 +3110,7 @@ public partial class V1beta1PipeSpecProviderConfigRef
     public V1beta1PipeSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2940,6 +3121,7 @@ public enum V1beta1PipeSpecPublishConnectionDetailsToConfigRefPolicyResolutionEn
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PipeSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2951,6 +3133,7 @@ public enum V1beta1PipeSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2965,6 +3148,7 @@ public partial class V1beta1PipeSpecPublishConnectionDetailsToConfigRefPolicy
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2977,6 +3161,7 @@ public partial class V1beta1PipeSpecPublishConnectionDetailsToConfigRef
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -2993,6 +3178,7 @@ public partial class V1beta1PipeSpecPublishConnectionDetailsToMetadata
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -3009,6 +3195,7 @@ public partial class V1beta1PipeSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -3021,6 +3208,7 @@ public partial class V1beta1PipeSpecWriteConnectionSecretToRef
 }
 
 /// <summary>PipeSpec defines the desired state of Pipe</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -3054,6 +3242,7 @@ public partial class V1beta1PipeSpec
 }
 
 /// <summary>Contains the HTTP parameters to use when the target is a API Gateway REST endpoint or EventBridge ApiDestination. If you specify an API Gateway REST API or EventBridge ApiDestination as a target, you can use this parameter to specify headers, path parameters, and query string keys/values as part of your target invoking request. If you're using ApiDestinations, the corresponding Connection can also have these values configured. In case of any conflicting keys, values from the Connection take precedence. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderEnrichmentParametersHttpParameters
 {
     /// <summary>Key-value mapping of the headers that need to be sent as part of request invoking the API Gateway REST API or EventBridge ApiDestination.</summary>
@@ -3070,6 +3259,7 @@ public partial class V1beta1PipeStatusAtProviderEnrichmentParametersHttpParamete
 }
 
 /// <summary>Parameters to configure enrichment for your pipe. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderEnrichmentParameters
 {
     /// <summary>Contains the HTTP parameters to use when the target is a API Gateway REST endpoint or EventBridge ApiDestination. If you specify an API Gateway REST API or EventBridge ApiDestination as a target, you can use this parameter to specify headers, path parameters, and query string keys/values as part of your target invoking request. If you're using ApiDestinations, the corresponding Connection can also have these values configured. In case of any conflicting keys, values from the Connection take precedence. Detailed below.</summary>
@@ -3082,6 +3272,7 @@ public partial class V1beta1PipeStatusAtProviderEnrichmentParameters
 }
 
 /// <summary>Amazon CloudWatch Logs logging configuration settings for the pipe. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderLogConfigurationCloudwatchLogsLogDestination
 {
     /// <summary>Amazon Web Services Resource Name (ARN) for the CloudWatch log group to which EventBridge sends the log records.</summary>
@@ -3090,6 +3281,7 @@ public partial class V1beta1PipeStatusAtProviderLogConfigurationCloudwatchLogsLo
 }
 
 /// <summary>Amazon Kinesis Data Firehose logging configuration settings for the pipe. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderLogConfigurationFirehoseLogDestination
 {
     /// <summary>Amazon Resource Name (ARN) of the Kinesis Data Firehose delivery stream to which EventBridge delivers the pipe log records.</summary>
@@ -3098,6 +3290,7 @@ public partial class V1beta1PipeStatusAtProviderLogConfigurationFirehoseLogDesti
 }
 
 /// <summary>Amazon S3 logging configuration settings for the pipe. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderLogConfigurationS3LogDestination
 {
     /// <summary>Name of the Amazon S3 bucket to which EventBridge delivers the log records for the pipe.</summary>
@@ -3118,6 +3311,7 @@ public partial class V1beta1PipeStatusAtProviderLogConfigurationS3LogDestination
 }
 
 /// <summary>Logging configuration settings for the pipe. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderLogConfiguration
 {
     /// <summary>Amazon CloudWatch Logs logging configuration settings for the pipe. Detailed below.</summary>
@@ -3138,6 +3332,7 @@ public partial class V1beta1PipeStatusAtProviderLogConfiguration
 }
 
 /// <summary>The credentials needed to access the resource. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderSourceParametersActivemqBrokerParametersCredentials
 {
     /// <summary>The ARN of the Secrets Manager secret containing the basic auth credentials.</summary>
@@ -3146,6 +3341,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParametersActivemqBrokerPa
 }
 
 /// <summary>The parameters for using an Active MQ broker as a source. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderSourceParametersActivemqBrokerParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -3166,6 +3362,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParametersActivemqBrokerPa
 }
 
 /// <summary>Define the target queue to send dead-letter queue events to. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderSourceParametersDynamodbStreamParametersDeadLetterConfig
 {
     /// <summary>The ARN of the Amazon SQS queue specified as the target for the dead-letter queue.</summary>
@@ -3174,6 +3371,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParametersDynamodbStreamPa
 }
 
 /// <summary>The parameters for using a DynamoDB stream as a source.  Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderSourceParametersDynamodbStreamParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -3210,6 +3408,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParametersDynamodbStreamPa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderSourceParametersFilterCriteriaFilter
 {
     /// <summary>The event pattern. At most 4096 characters.</summary>
@@ -3218,6 +3417,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParametersFilterCriteriaFi
 }
 
 /// <summary>The collection of event patterns used to filter events. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderSourceParametersFilterCriteria
 {
     /// <summary>An array of up to 5 event patterns. Detailed below.</summary>
@@ -3226,6 +3426,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParametersFilterCriteria
 }
 
 /// <summary>Define the target queue to send dead-letter queue events to. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderSourceParametersKinesisStreamParametersDeadLetterConfig
 {
     /// <summary>The ARN of the Amazon SQS queue specified as the target for the dead-letter queue.</summary>
@@ -3234,6 +3435,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParametersKinesisStreamPar
 }
 
 /// <summary>The parameters for using a Kinesis stream as a source. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderSourceParametersKinesisStreamParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -3274,6 +3476,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParametersKinesisStreamPar
 }
 
 /// <summary>The credentials needed to access the resource. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderSourceParametersManagedStreamingKafkaParametersCredentials
 {
     /// <summary>The ARN of the Secrets Manager secret containing the credentials.</summary>
@@ -3286,6 +3489,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParametersManagedStreaming
 }
 
 /// <summary>The parameters for using an MSK stream as a source. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderSourceParametersManagedStreamingKafkaParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -3314,6 +3518,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParametersManagedStreaming
 }
 
 /// <summary>The credentials needed to access the resource. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderSourceParametersRabbitmqBrokerParametersCredentials
 {
     /// <summary>The ARN of the Secrets Manager secret containing the credentials.</summary>
@@ -3322,6 +3527,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParametersRabbitmqBrokerPa
 }
 
 /// <summary>The parameters for using a Rabbit MQ broker as a source. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderSourceParametersRabbitmqBrokerParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -3346,6 +3552,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParametersRabbitmqBrokerPa
 }
 
 /// <summary>The credentials needed to access the resource. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderSourceParametersSelfManagedKafkaParametersCredentials
 {
     /// <summary>The ARN of the Secrets Manager secret containing the credentials.</summary>
@@ -3366,6 +3573,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParametersSelfManagedKafka
 }
 
 /// <summary>This structure specifies the VPC subnets and security groups for the stream, and whether a public IP address is to be used. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderSourceParametersSelfManagedKafkaParametersVpc
 {
     /// <summary>List of security groups associated with the stream. These security groups must all be in the same VPC. You can specify as many as five security groups. If you do not specify a security group, the default security group for the VPC is used.</summary>
@@ -3378,6 +3586,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParametersSelfManagedKafka
 }
 
 /// <summary>The parameters for using a self-managed Apache Kafka stream as a source. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderSourceParametersSelfManagedKafkaParameters
 {
     /// <summary>An array of server URLs. Maximum number of 2 items, each of maximum length 300.</summary>
@@ -3418,6 +3627,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParametersSelfManagedKafka
 }
 
 /// <summary>The parameters for using a Amazon SQS stream as a source. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderSourceParametersSqsQueueParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -3430,6 +3640,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParametersSqsQueueParamete
 }
 
 /// <summary>Parameters to configure a source for the pipe. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderSourceParameters
 {
     /// <summary>The parameters for using an Active MQ broker as a source. Detailed below.</summary>
@@ -3466,6 +3677,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParameters
 }
 
 /// <summary>The array properties for the submitted job, such as the size of the array. The array size can be between 2 and 10,000. If you specify array properties for a job, it becomes an array job. This parameter is used only if the target is an AWS Batch job. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderTargetParametersBatchJobParametersArrayProperties
 {
     /// <summary>The size of the array, if this is an array batch job. Minimum value of 2. Maximum value of 10,000.</summary>
@@ -3474,6 +3686,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersBatchJobParamete
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderTargetParametersBatchJobParametersContainerOverridesEnvironment
 {
     /// <summary>The name of the key-value pair. For environment variables, this is the name of the environment variable.</summary>
@@ -3486,6 +3699,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersBatchJobParamete
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderTargetParametersBatchJobParametersContainerOverridesResourceRequirement
 {
     /// <summary>The type of resource to assign to a container. The supported resources include GPU, MEMORY, and VCPU.</summary>
@@ -3498,6 +3712,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersBatchJobParamete
 }
 
 /// <summary>The overrides that are sent to a container. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderTargetParametersBatchJobParametersContainerOverrides
 {
     /// <summary>List of commands to send to the container that overrides the default command from the Docker image or the task definition.</summary>
@@ -3518,6 +3733,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersBatchJobParamete
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderTargetParametersBatchJobParametersDependsOn
 {
     /// <summary>The job ID of the AWS Batch job that's associated with this dependency.</summary>
@@ -3530,6 +3746,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersBatchJobParamete
 }
 
 /// <summary>The retry strategy to use for failed jobs. When a retry strategy is specified here, it overrides the retry strategy defined in the job definition. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderTargetParametersBatchJobParametersRetryStrategy
 {
     /// <summary>The number of times to move a job to the RUNNABLE status. If the value of attempts is greater than one, the job is retried on failure the same number of attempts as the value. Maximum value of 10.</summary>
@@ -3538,6 +3755,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersBatchJobParamete
 }
 
 /// <summary>The parameters for using an AWS Batch job as a target. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderTargetParametersBatchJobParameters
 {
     /// <summary>The array properties for the submitted job, such as the size of the array. The array size can be between 2 and 10,000. If you specify array properties for a job, it becomes an array job. This parameter is used only if the target is an AWS Batch job. Detailed below.</summary>
@@ -3570,6 +3788,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersBatchJobParamete
 }
 
 /// <summary>The parameters for using an CloudWatch Logs log stream as a target. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderTargetParametersCloudwatchLogsParameters
 {
     /// <summary>The name of the log stream.</summary>
@@ -3582,6 +3801,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersCloudwatchLogsPa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParametersCapacityProviderStrategy
 {
     /// <summary>The base value designates how many tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined. If no value is specified, the default value of 0 is used. Maximum value of 100,000.</summary>
@@ -3598,6 +3818,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParameter
 }
 
 /// <summary>Use this structure to specify the VPC subnets and security groups for the task, and whether a public IP address is to be used. This structure is relevant only for ECS tasks that use the awsvpc network mode. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParametersNetworkConfigurationAwsVpcConfiguration
 {
     /// <summary>Specifies whether the task's elastic network interface receives a public IP address. You can specify ENABLED only when LaunchType in EcsParameters is set to FARGATE. Valid Values: ENABLED, DISABLED.</summary>
@@ -3614,6 +3835,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParameter
 }
 
 /// <summary>Use this structure if the Amazon ECS task uses the awsvpc network mode. This structure specifies the VPC subnets and security groups associated with the task, and whether a public IP address is to be used. This structure is required if LaunchType is FARGATE because the awsvpc mode is required for Fargate tasks. If you specify NetworkConfiguration when the target ECS task does not use the awsvpc network mode, the task fails. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParametersNetworkConfiguration
 {
     /// <summary>Use this structure to specify the VPC subnets and security groups for the task, and whether a public IP address is to be used. This structure is relevant only for ECS tasks that use the awsvpc network mode. Detailed below.</summary>
@@ -3622,6 +3844,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParameter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParametersOverridesContainerOverrideEnvironment
 {
     /// <summary>The name of the key-value pair. For environment variables, this is the name of the environment variable.</summary>
@@ -3634,6 +3857,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParameter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParametersOverridesContainerOverrideEnvironmentFile
 {
     /// <summary>The file type to use. The only supported value is s3.</summary>
@@ -3646,6 +3870,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParameter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParametersOverridesContainerOverrideResourceRequirement
 {
     /// <summary>The type of resource to assign to a container. The supported values are GPU or InferenceAccelerator.</summary>
@@ -3658,6 +3883,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParameter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParametersOverridesContainerOverride
 {
     /// <summary>List of commands to send to the container that overrides the default command from the Docker image or the task definition. You must also specify a container name.</summary>
@@ -3694,6 +3920,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParameter
 }
 
 /// <summary>The ephemeral storage setting override for the task.  Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParametersOverridesEphemeralStorage
 {
     /// <summary>The total amount, in GiB, of ephemeral storage to set for the task. The minimum supported value is 21 GiB and the maximum supported value is 200 GiB.</summary>
@@ -3702,6 +3929,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParameter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParametersOverridesInferenceAcceleratorOverride
 {
     /// <summary>The Elastic Inference accelerator device name to override for the task. This parameter must match a deviceName specified in the task definition.</summary>
@@ -3714,6 +3942,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParameter
 }
 
 /// <summary>The overrides that are associated with a task. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParametersOverrides
 {
     /// <summary>One or more container overrides that are sent to a task. Detailed below.</summary>
@@ -3746,6 +3975,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParameter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParametersPlacementConstraint
 {
     /// <summary>A cluster query language expression to apply to the constraint. You cannot specify an expression if the constraint type is distinctInstance. Maximum length of 2,000.</summary>
@@ -3758,6 +3988,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParameter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParametersPlacementStrategy
 {
     /// <summary>The field to apply the placement strategy against. For the spread placement strategy, valid values are instanceId (or host, which has the same effect), or any platform or custom attribute that is applied to a container instance, such as attribute:ecs.availability-zone. For the binpack placement strategy, valid values are cpu and memory. For the random placement strategy, this field is not used. Maximum length of 255.</summary>
@@ -3770,6 +4001,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParameter
 }
 
 /// <summary>The parameters for using an Amazon ECS task as a target. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParameters
 {
     /// <summary>List of capacity provider strategies to use for the task. If a capacityProviderStrategy is specified, the launchType parameter must be omitted. If no capacityProviderStrategy or launchType is specified, the defaultCapacityProviderStrategy for the cluster is used. Detailed below.</summary>
@@ -3834,6 +4066,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParameter
 }
 
 /// <summary>The parameters for using an EventBridge event bus as a target. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderTargetParametersEventbridgeEventBusParameters
 {
     /// <summary>A free-form string, with a maximum of 128 characters, used to decide what fields to expect in the event detail.</summary>
@@ -3858,6 +4091,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersEventbridgeEvent
 }
 
 /// <summary>These are custom parameter to be used when the target is an API Gateway REST APIs or EventBridge ApiDestinations. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderTargetParametersHttpParameters
 {
     /// <summary>Key-value mapping of the headers that need to be sent as part of request invoking the API Gateway REST API or EventBridge ApiDestination. Detailed below.</summary>
@@ -3874,6 +4108,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersHttpParameters
 }
 
 /// <summary>The parameters for using a Kinesis stream as a source. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderTargetParametersKinesisStreamParameters
 {
     /// <summary>Determines which shard in the stream the data record is assigned to. Partition keys are Unicode strings with a maximum length limit of 256 characters for each key. Amazon Kinesis Data Streams uses the partition key as input to a hash function that maps the partition key and associated data to a specific shard. Specifically, an MD5 hash function is used to map partition keys to 128-bit integer values and to map associated data records to shards. As a result of this hashing mechanism, all data records with the same partition key map to the same shard within the stream.</summary>
@@ -3882,6 +4117,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersKinesisStreamPar
 }
 
 /// <summary>The parameters for using a Lambda function as a target. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderTargetParametersLambdaFunctionParameters
 {
     /// <summary>Specify whether to invoke the function synchronously or asynchronously. Valid Values: REQUEST_RESPONSE, FIRE_AND_FORGET.</summary>
@@ -3890,6 +4126,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersLambdaFunctionPa
 }
 
 /// <summary>These are custom parameters to be used when the target is a Amazon Redshift cluster to invoke the Amazon Redshift Data API BatchExecuteStatement. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderTargetParametersRedshiftDataParameters
 {
     /// <summary>The name of the database. Required when authenticating using temporary credentials.</summary>
@@ -3918,6 +4155,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersRedshiftDataPara
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderTargetParametersSagemakerPipelineParametersPipelineParameter
 {
     /// <summary>The name of the container that receives the override. This parameter is required if any override is specified.</summary>
@@ -3930,6 +4168,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersSagemakerPipelin
 }
 
 /// <summary>The parameters for using a SageMaker pipeline as a target. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderTargetParametersSagemakerPipelineParameters
 {
     /// <summary>List of Parameter names and values for SageMaker Model Building Pipeline execution. Detailed below.</summary>
@@ -3938,6 +4177,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersSagemakerPipelin
 }
 
 /// <summary>The parameters for using a Amazon SQS stream as a target. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderTargetParametersSqsQueueParameters
 {
     /// <summary>This parameter applies only to FIFO (first-in-first-out) queues. The token used for deduplication of sent messages.</summary>
@@ -3950,6 +4190,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersSqsQueueParamete
 }
 
 /// <summary>The parameters for using a Step Functions state machine as a target. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderTargetParametersStepFunctionStateMachineParameters
 {
     /// <summary>Specify whether to invoke the function synchronously or asynchronously. Valid Values: REQUEST_RESPONSE, FIRE_AND_FORGET.</summary>
@@ -3958,6 +4199,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersStepFunctionStat
 }
 
 /// <summary>Parameters to configure a target for your pipe. Detailed below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderTargetParameters
 {
     /// <summary>The parameters for using an AWS Batch job as a target. Detailed below.</summary>
@@ -4010,6 +4252,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParameters
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProvider
 {
     /// <summary>ARN of this pipe.</summary>
@@ -4070,6 +4313,7 @@ public partial class V1beta1PipeStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -4098,6 +4342,7 @@ public partial class V1beta1PipeStatusConditions
 }
 
 /// <summary>PipeStatus defines the observed state of Pipe.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatus
 {
     /// <summary></summary>
@@ -4113,8 +4358,9 @@ public partial class V1beta1PipeStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Pipe is the Schema for the Pipes API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Pipe : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1PipeSpec>, IStatus<V1beta1PipeStatus>
 {
     public const string KubeApiVersion = "v1beta1";

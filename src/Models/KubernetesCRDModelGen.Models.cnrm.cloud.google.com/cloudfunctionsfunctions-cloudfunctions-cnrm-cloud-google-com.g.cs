@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudfunctions.cnrm.cloud.google.com;
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudFunctionsFunctionSpecEventTriggerResourceRef
 {
     /// <summary>Required. The resource(s) from which to observe events, for example, `projects/_/buckets/myBucket`.  Not all syntactically correct values are accepted by all services. For example:  1. The authorization model must support it. Google Cloud Functions    only allows EventTriggers to be deployed that observe resources in the    same project as the `Function`. 2. The resource type must match the pattern expected for an    `event_type`. For example, an `EventTrigger` that has an    `event_type` of "google.pubsub.topic.publish" should have a resource    that matches Google Cloud Pub/Sub topics.  Additionally, some services may support short names when creating an `EventTrigger`. These will always be returned in the normalized "long" format.  See each *service's* documentation for supported formats.  Allowed values: * The Google Cloud resource name of a `StorageBucket` resource (format: `{{name}}`). * The Google Cloud resource name of a `PubSubTopic` resource (format: `projects/{{project}}/topics/{{name}}`).</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1CloudFunctionsFunctionSpecEventTriggerResourceRef
 }
 
 /// <summary>Immutable. A source that fires events in response to a condition in another service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudFunctionsFunctionSpecEventTrigger
 {
     /// <summary>Immutable. Required. The type of event to observe. For example: `providers/cloud.storage/eventTypes/object.change` and `providers/cloud.pubsub/eventTypes/topic.publish`.  Event types match pattern `providers/*/eventTypes/*.*`. The pattern contains:  1. namespace: For example, `cloud.storage` and    `google.firebase.analytics`. 2. resource type: The type of resource on which event occurs. For    example, the Google Cloud Storage API includes the type `object`. 3. action: The action that generates the event. For example, action for    a Google Cloud Storage Object is 'change'. These parts are lower case.</summary>
@@ -49,6 +51,7 @@ public partial class V1beta1CloudFunctionsFunctionSpecEventTrigger
 }
 
 /// <summary>Immutable. An HTTPS endpoint type of source that can be triggered via URL.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudFunctionsFunctionSpecHttpsTrigger
 {
     /// <summary>Immutable. Both HTTP and HTTPS requests with URLs that match the handler succeed without redirects. The application can examine the request to determine which protocol was used and respond accordingly. Possible values: SECURITY_LEVEL_UNSPECIFIED, SECURE_ALWAYS, SECURE_OPTIONAL</summary>
@@ -57,6 +60,7 @@ public partial class V1beta1CloudFunctionsFunctionSpecHttpsTrigger
 }
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudFunctionsFunctionSpecProjectRef
 {
     /// <summary>The project id of the function.  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -73,6 +77,7 @@ public partial class V1beta1CloudFunctionsFunctionSpecProjectRef
 }
 
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudFunctionsFunctionSpecServiceAccountRef
 {
     /// <summary>The email of the function's service account. If empty, defaults to `{project_id}@appspot.gserviceaccount.com`.  Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
@@ -89,6 +94,7 @@ public partial class V1beta1CloudFunctionsFunctionSpecServiceAccountRef
 }
 
 /// <summary>Immutable. Represents parameters related to source repository where a function is hosted.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudFunctionsFunctionSpecSourceRepository
 {
     /// <summary>Immutable. The URL pointing to the hosted repository where the function is defined. There are supported Cloud Source Repository URLs in the following formats:  To refer to a specific commit: `https://source.developers.google.com/projects/*/repos/*/revisions/*/paths/*` To refer to a moveable alias (branch): `https://source.developers.google.com/projects/*/repos/*/moveable-aliases/*/paths/*` In particular, to refer to HEAD use `master` moveable alias. To refer to a specific fixed alias (tag): `https://source.developers.google.com/projects/*/repos/*/fixed-aliases/*/paths/*`  You may omit `paths/*` if you want to use the main directory.</summary>
@@ -97,6 +103,7 @@ public partial class V1beta1CloudFunctionsFunctionSpecSourceRepository
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudFunctionsFunctionSpecVpcConnectorRef
 {
     /// <summary>The VPC Network Connector that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network connector resource. The format of this field is `projects/*/locations/*/connectors/*`  Allowed value: The Google Cloud resource name of a `VPCAccessConnector` resource (format: `projects/{{project}}/locations/{{location}}/connectors/{{name}}`).</summary>
@@ -113,6 +120,7 @@ public partial class V1beta1CloudFunctionsFunctionSpecVpcConnectorRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudFunctionsFunctionSpec
 {
     /// <summary>Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, and 2048MB.</summary>
@@ -189,6 +197,7 @@ public partial class V1beta1CloudFunctionsFunctionSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudFunctionsFunctionStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -213,6 +222,7 @@ public partial class V1beta1CloudFunctionsFunctionStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudFunctionsFunctionStatusHttpsTrigger
 {
     /// <summary>Output only. The deployed url for the function.</summary>
@@ -221,6 +231,7 @@ public partial class V1beta1CloudFunctionsFunctionStatusHttpsTrigger
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudFunctionsFunctionStatusSourceRepository
 {
     /// <summary>Output only. The URL pointing to the hosted repository where the function were defined at the time of deployment. It always points to a specific commit in the format described above.</summary>
@@ -229,6 +240,7 @@ public partial class V1beta1CloudFunctionsFunctionStatusSourceRepository
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudFunctionsFunctionStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -260,8 +272,9 @@ public partial class V1beta1CloudFunctionsFunctionStatus
     public long? VersionId { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1CloudFunctionsFunction : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CloudFunctionsFunctionSpec>, IStatus<V1beta1CloudFunctionsFunctionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

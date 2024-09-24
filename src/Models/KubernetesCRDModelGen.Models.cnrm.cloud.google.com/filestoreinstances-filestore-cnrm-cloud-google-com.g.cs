@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.filestore.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilestoreInstanceSpecFileSharesNfsExportOptions
 {
     /// <summary>Either READ_ONLY, for allowing only read requests on the exported directory, or READ_WRITE, for allowing both read and write requests. The default is READ_WRITE. Possible values: ACCESS_MODE_UNSPECIFIED, READ_ONLY, READ_WRITE</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1FilestoreInstanceSpecFileSharesNfsExportOptions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilestoreInstanceSpecFileSharesSourceBackupRef
 {
     /// <summary>The resource name of the backup, in the format `projects/{project_number}/locations/{location_id}/backups/{backup_id}`, that this file share has been restored from.  Allowed value: The Google Cloud resource name of a `FilestoreBackup` resource (format: `projects/{{project}}/locations/{{location}}/backups/{{name}}`).</summary>
@@ -49,6 +51,7 @@ public partial class V1beta1FilestoreInstanceSpecFileSharesSourceBackupRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilestoreInstanceSpecFileShares
 {
     /// <summary>File share capacity in gigabytes (GB). Cloud Filestore defines 1 GB as 1024^3 bytes.</summary>
@@ -69,6 +72,7 @@ public partial class V1beta1FilestoreInstanceSpecFileShares
 }
 
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilestoreInstanceSpecNetworksNetworkRef
 {
     /// <summary>The name of the Google Compute Engine [VPC network](https://cloud.google.com/vpc/docs/vpc) to which the instance is connected.  Allowed value: The Google Cloud resource name of a `ComputeNetwork` resource (format: `projects/{{project}}/global/networks/{{name}}`).</summary>
@@ -85,6 +89,7 @@ public partial class V1beta1FilestoreInstanceSpecNetworksNetworkRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilestoreInstanceSpecNetworks
 {
     /// <summary>Immutable. Output only. IPv4 addresses in the format `{octet1}.{octet2}.{octet3}.{octet4}` or IPv6 addresses in the format `{block1}:{block2}:{block3}:{block4}:{block5}:{block6}:{block7}:{block8}`.</summary>
@@ -105,6 +110,7 @@ public partial class V1beta1FilestoreInstanceSpecNetworks
 }
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilestoreInstanceSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -121,6 +127,7 @@ public partial class V1beta1FilestoreInstanceSpecProjectRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilestoreInstanceSpec
 {
     /// <summary>The description of the instance (2048 characters or less).</summary>
@@ -153,6 +160,7 @@ public partial class V1beta1FilestoreInstanceSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilestoreInstanceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -177,6 +185,7 @@ public partial class V1beta1FilestoreInstanceStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilestoreInstanceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -204,8 +213,9 @@ public partial class V1beta1FilestoreInstanceStatus
     public string? StatusMessage { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1FilestoreInstance : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FilestoreInstanceSpec>, IStatus<V1beta1FilestoreInstanceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

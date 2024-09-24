@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.elbv2.aws.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LBListenerSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1LBListenerSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionAuthenticateCognito
 {
     /// <summary>Query parameters to include in the redirect request to the authorization endpoint. Max: 10. Detailed below.</summary>
@@ -55,6 +57,7 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionAuthenticateCo
 }
 
 /// <summary>OAuth 2.0 client secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionAuthenticateOidcClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -71,6 +74,7 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionAuthenticateOi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionAuthenticateOidc
 {
     /// <summary>Query parameters to include in the redirect request to the authorization endpoint. Max: 10.</summary>
@@ -119,6 +123,7 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionAuthenticateOi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionFixedResponse
 {
     /// <summary>Content type. Valid values are text/plain, text/css, text/html, application/javascript and application/json.</summary>
@@ -135,6 +140,7 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionFixedResponse
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionForwardStickiness
 {
     /// <summary>Time period, in seconds, during which requests from a client should be routed to the same target group. The range is 1-604800 seconds (7 days).</summary>
@@ -146,6 +152,7 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionForwardStickin
     public bool? Enabled { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LBListenerSpecForProviderDefaultActionForwardTargetGroupArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -156,6 +163,7 @@ public enum V1beta1LBListenerSpecForProviderDefaultActionForwardTargetGroupArnRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LBListenerSpecForProviderDefaultActionForwardTargetGroupArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -167,6 +175,7 @@ public enum V1beta1LBListenerSpecForProviderDefaultActionForwardTargetGroupArnRe
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionForwardTargetGroupArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -181,6 +190,7 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionForwardTargetG
 }
 
 /// <summary>Reference to a LBTargetGroup in elbv2 to populate arn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionForwardTargetGroupArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -192,6 +202,7 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionForwardTargetG
     public V1beta1LBListenerSpecForProviderDefaultActionForwardTargetGroupArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LBListenerSpecForProviderDefaultActionForwardTargetGroupArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -202,6 +213,7 @@ public enum V1beta1LBListenerSpecForProviderDefaultActionForwardTargetGroupArnSe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LBListenerSpecForProviderDefaultActionForwardTargetGroupArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -213,6 +225,7 @@ public enum V1beta1LBListenerSpecForProviderDefaultActionForwardTargetGroupArnSe
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionForwardTargetGroupArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -227,6 +240,7 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionForwardTargetG
 }
 
 /// <summary>Selector for a LBTargetGroup in elbv2 to populate arn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionForwardTargetGroupArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -243,6 +257,7 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionForwardTargetG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionForwardTargetGroup
 {
     /// <summary>ARN of the target group.</summary>
@@ -263,6 +278,7 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionForwardTargetG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionForward
 {
     /// <summary>Configuration block for target group stickiness for the rule. Detailed below.</summary>
@@ -275,6 +291,7 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionForward
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionRedirect
 {
     /// <summary>Hostname. This component is not percent-encoded. The hostname can contain #{host}. Defaults to #{host}.</summary>
@@ -302,6 +319,7 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionRedirect
     public string? StatusCode { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LBListenerSpecForProviderDefaultActionTargetGroupArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -312,6 +330,7 @@ public enum V1beta1LBListenerSpecForProviderDefaultActionTargetGroupArnRefPolicy
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LBListenerSpecForProviderDefaultActionTargetGroupArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -323,6 +342,7 @@ public enum V1beta1LBListenerSpecForProviderDefaultActionTargetGroupArnRefPolicy
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionTargetGroupArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -337,6 +357,7 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionTargetGroupArn
 }
 
 /// <summary>Reference to a LBTargetGroup in elbv2 to populate targetGroupArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionTargetGroupArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -348,6 +369,7 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionTargetGroupArn
     public V1beta1LBListenerSpecForProviderDefaultActionTargetGroupArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LBListenerSpecForProviderDefaultActionTargetGroupArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -358,6 +380,7 @@ public enum V1beta1LBListenerSpecForProviderDefaultActionTargetGroupArnSelectorP
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LBListenerSpecForProviderDefaultActionTargetGroupArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -369,6 +392,7 @@ public enum V1beta1LBListenerSpecForProviderDefaultActionTargetGroupArnSelectorP
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionTargetGroupArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -383,6 +407,7 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionTargetGroupArn
 }
 
 /// <summary>Selector for a LBTargetGroup in elbv2 to populate targetGroupArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionTargetGroupArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -399,6 +424,7 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionTargetGroupArn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultAction
 {
     /// <summary>Configuration block for using Amazon Cognito to authenticate users. Specify only when type is authenticate-cognito. Detailed below.</summary>
@@ -442,6 +468,7 @@ public partial class V1beta1LBListenerSpecForProviderDefaultAction
     public string? Type { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LBListenerSpecForProviderLoadBalancerArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -452,6 +479,7 @@ public enum V1beta1LBListenerSpecForProviderLoadBalancerArnRefPolicyResolutionEn
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LBListenerSpecForProviderLoadBalancerArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -463,6 +491,7 @@ public enum V1beta1LBListenerSpecForProviderLoadBalancerArnRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderLoadBalancerArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -477,6 +506,7 @@ public partial class V1beta1LBListenerSpecForProviderLoadBalancerArnRefPolicy
 }
 
 /// <summary>Reference to a LB in elbv2 to populate loadBalancerArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderLoadBalancerArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -488,6 +518,7 @@ public partial class V1beta1LBListenerSpecForProviderLoadBalancerArnRef
     public V1beta1LBListenerSpecForProviderLoadBalancerArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LBListenerSpecForProviderLoadBalancerArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -498,6 +529,7 @@ public enum V1beta1LBListenerSpecForProviderLoadBalancerArnSelectorPolicyResolut
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LBListenerSpecForProviderLoadBalancerArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -509,6 +541,7 @@ public enum V1beta1LBListenerSpecForProviderLoadBalancerArnSelectorPolicyResolve
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderLoadBalancerArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -523,6 +556,7 @@ public partial class V1beta1LBListenerSpecForProviderLoadBalancerArnSelectorPoli
 }
 
 /// <summary>Selector for a LB in elbv2 to populate loadBalancerArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderLoadBalancerArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -539,6 +573,7 @@ public partial class V1beta1LBListenerSpecForProviderLoadBalancerArnSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderMutualAuthentication
 {
     /// <summary>Whether client certificate expiry is ignored. Default is false.</summary>
@@ -555,6 +590,7 @@ public partial class V1beta1LBListenerSpecForProviderMutualAuthentication
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProvider
 {
     /// <summary>Name of the Application-Layer Protocol Negotiation (ALPN) policy. Can be set if protocol is TLS. Valid values are HTTP1Only, HTTP2Only, HTTP2Optional, HTTP2Preferred, and None.</summary>
@@ -607,6 +643,7 @@ public partial class V1beta1LBListenerSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionAuthenticateCognito
 {
     /// <summary>Query parameters to include in the redirect request to the authorization endpoint. Max: 10. Detailed below.</summary>
@@ -643,6 +680,7 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionAuthenticateC
 }
 
 /// <summary>OAuth 2.0 client secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionAuthenticateOidcClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -659,6 +697,7 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionAuthenticateO
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionAuthenticateOidc
 {
     /// <summary>Query parameters to include in the redirect request to the authorization endpoint. Max: 10.</summary>
@@ -707,6 +746,7 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionAuthenticateO
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionFixedResponse
 {
     /// <summary>Content type. Valid values are text/plain, text/css, text/html, application/javascript and application/json.</summary>
@@ -723,6 +763,7 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionFixedResponse
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionForwardStickiness
 {
     /// <summary>Time period, in seconds, during which requests from a client should be routed to the same target group. The range is 1-604800 seconds (7 days).</summary>
@@ -734,6 +775,7 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionForwardSticki
     public bool? Enabled { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LBListenerSpecInitProviderDefaultActionForwardTargetGroupArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -744,6 +786,7 @@ public enum V1beta1LBListenerSpecInitProviderDefaultActionForwardTargetGroupArnR
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LBListenerSpecInitProviderDefaultActionForwardTargetGroupArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -755,6 +798,7 @@ public enum V1beta1LBListenerSpecInitProviderDefaultActionForwardTargetGroupArnR
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionForwardTargetGroupArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -769,6 +813,7 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionForwardTarget
 }
 
 /// <summary>Reference to a LBTargetGroup in elbv2 to populate arn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionForwardTargetGroupArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -780,6 +825,7 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionForwardTarget
     public V1beta1LBListenerSpecInitProviderDefaultActionForwardTargetGroupArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LBListenerSpecInitProviderDefaultActionForwardTargetGroupArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -790,6 +836,7 @@ public enum V1beta1LBListenerSpecInitProviderDefaultActionForwardTargetGroupArnS
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LBListenerSpecInitProviderDefaultActionForwardTargetGroupArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -801,6 +848,7 @@ public enum V1beta1LBListenerSpecInitProviderDefaultActionForwardTargetGroupArnS
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionForwardTargetGroupArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -815,6 +863,7 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionForwardTarget
 }
 
 /// <summary>Selector for a LBTargetGroup in elbv2 to populate arn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionForwardTargetGroupArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -831,6 +880,7 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionForwardTarget
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionForwardTargetGroup
 {
     /// <summary>ARN of the target group.</summary>
@@ -851,6 +901,7 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionForwardTarget
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionForward
 {
     /// <summary>Configuration block for target group stickiness for the rule. Detailed below.</summary>
@@ -863,6 +914,7 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionForward
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionRedirect
 {
     /// <summary>Hostname. This component is not percent-encoded. The hostname can contain #{host}. Defaults to #{host}.</summary>
@@ -890,6 +942,7 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionRedirect
     public string? StatusCode { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LBListenerSpecInitProviderDefaultActionTargetGroupArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -900,6 +953,7 @@ public enum V1beta1LBListenerSpecInitProviderDefaultActionTargetGroupArnRefPolic
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LBListenerSpecInitProviderDefaultActionTargetGroupArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -911,6 +965,7 @@ public enum V1beta1LBListenerSpecInitProviderDefaultActionTargetGroupArnRefPolic
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionTargetGroupArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -925,6 +980,7 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionTargetGroupAr
 }
 
 /// <summary>Reference to a LBTargetGroup in elbv2 to populate targetGroupArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionTargetGroupArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -936,6 +992,7 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionTargetGroupAr
     public V1beta1LBListenerSpecInitProviderDefaultActionTargetGroupArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LBListenerSpecInitProviderDefaultActionTargetGroupArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -946,6 +1003,7 @@ public enum V1beta1LBListenerSpecInitProviderDefaultActionTargetGroupArnSelector
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LBListenerSpecInitProviderDefaultActionTargetGroupArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -957,6 +1015,7 @@ public enum V1beta1LBListenerSpecInitProviderDefaultActionTargetGroupArnSelector
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionTargetGroupArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -971,6 +1030,7 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionTargetGroupAr
 }
 
 /// <summary>Selector for a LBTargetGroup in elbv2 to populate targetGroupArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionTargetGroupArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -987,6 +1047,7 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionTargetGroupAr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultAction
 {
     /// <summary>Configuration block for using Amazon Cognito to authenticate users. Specify only when type is authenticate-cognito. Detailed below.</summary>
@@ -1030,6 +1091,7 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultAction
     public string? Type { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LBListenerSpecInitProviderLoadBalancerArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1040,6 +1102,7 @@ public enum V1beta1LBListenerSpecInitProviderLoadBalancerArnRefPolicyResolutionE
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LBListenerSpecInitProviderLoadBalancerArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1051,6 +1114,7 @@ public enum V1beta1LBListenerSpecInitProviderLoadBalancerArnRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderLoadBalancerArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1065,6 +1129,7 @@ public partial class V1beta1LBListenerSpecInitProviderLoadBalancerArnRefPolicy
 }
 
 /// <summary>Reference to a LB in elbv2 to populate loadBalancerArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderLoadBalancerArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1076,6 +1141,7 @@ public partial class V1beta1LBListenerSpecInitProviderLoadBalancerArnRef
     public V1beta1LBListenerSpecInitProviderLoadBalancerArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LBListenerSpecInitProviderLoadBalancerArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1086,6 +1152,7 @@ public enum V1beta1LBListenerSpecInitProviderLoadBalancerArnSelectorPolicyResolu
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LBListenerSpecInitProviderLoadBalancerArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1097,6 +1164,7 @@ public enum V1beta1LBListenerSpecInitProviderLoadBalancerArnSelectorPolicyResolv
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderLoadBalancerArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1111,6 +1179,7 @@ public partial class V1beta1LBListenerSpecInitProviderLoadBalancerArnSelectorPol
 }
 
 /// <summary>Selector for a LB in elbv2 to populate loadBalancerArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderLoadBalancerArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1127,6 +1196,7 @@ public partial class V1beta1LBListenerSpecInitProviderLoadBalancerArnSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderMutualAuthentication
 {
     /// <summary>Whether client certificate expiry is ignored. Default is false.</summary>
@@ -1143,6 +1213,7 @@ public partial class V1beta1LBListenerSpecInitProviderMutualAuthentication
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProvider
 {
     /// <summary>Name of the Application-Layer Protocol Negotiation (ALPN) policy. Can be set if protocol is TLS. Valid values are HTTP1Only, HTTP2Only, HTTP2Optional, HTTP2Preferred, and None.</summary>
@@ -1190,6 +1261,7 @@ public partial class V1beta1LBListenerSpecInitProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LBListenerSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -1212,6 +1284,7 @@ public enum V1beta1LBListenerSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LBListenerSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1222,6 +1295,7 @@ public enum V1beta1LBListenerSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LBListenerSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1233,6 +1307,7 @@ public enum V1beta1LBListenerSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1247,6 +1322,7 @@ public partial class V1beta1LBListenerSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1258,6 +1334,7 @@ public partial class V1beta1LBListenerSpecProviderConfigRef
     public V1beta1LBListenerSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LBListenerSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1268,6 +1345,7 @@ public enum V1beta1LBListenerSpecPublishConnectionDetailsToConfigRefPolicyResolu
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LBListenerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1279,6 +1357,7 @@ public enum V1beta1LBListenerSpecPublishConnectionDetailsToConfigRefPolicyResolv
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1293,6 +1372,7 @@ public partial class V1beta1LBListenerSpecPublishConnectionDetailsToConfigRefPol
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1305,6 +1385,7 @@ public partial class V1beta1LBListenerSpecPublishConnectionDetailsToConfigRef
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1321,6 +1402,7 @@ public partial class V1beta1LBListenerSpecPublishConnectionDetailsToMetadata
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1337,6 +1419,7 @@ public partial class V1beta1LBListenerSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1349,6 +1432,7 @@ public partial class V1beta1LBListenerSpecWriteConnectionSecretToRef
 }
 
 /// <summary>LBListenerSpec defines the desired state of LBListener</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1382,6 +1466,7 @@ public partial class V1beta1LBListenerSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerStatusAtProviderDefaultActionAuthenticateCognito
 {
     /// <summary>Query parameters to include in the redirect request to the authorization endpoint. Max: 10. Detailed below.</summary>
@@ -1418,6 +1503,7 @@ public partial class V1beta1LBListenerStatusAtProviderDefaultActionAuthenticateC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerStatusAtProviderDefaultActionAuthenticateOidc
 {
     /// <summary>Query parameters to include in the redirect request to the authorization endpoint. Max: 10.</summary>
@@ -1462,6 +1548,7 @@ public partial class V1beta1LBListenerStatusAtProviderDefaultActionAuthenticateO
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerStatusAtProviderDefaultActionFixedResponse
 {
     /// <summary>Content type. Valid values are text/plain, text/css, text/html, application/javascript and application/json.</summary>
@@ -1478,6 +1565,7 @@ public partial class V1beta1LBListenerStatusAtProviderDefaultActionFixedResponse
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerStatusAtProviderDefaultActionForwardStickiness
 {
     /// <summary>Time period, in seconds, during which requests from a client should be routed to the same target group. The range is 1-604800 seconds (7 days).</summary>
@@ -1490,6 +1578,7 @@ public partial class V1beta1LBListenerStatusAtProviderDefaultActionForwardSticki
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerStatusAtProviderDefaultActionForwardTargetGroup
 {
     /// <summary>ARN of the target group.</summary>
@@ -1502,6 +1591,7 @@ public partial class V1beta1LBListenerStatusAtProviderDefaultActionForwardTarget
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerStatusAtProviderDefaultActionForward
 {
     /// <summary>Configuration block for target group stickiness for the rule. Detailed below.</summary>
@@ -1514,6 +1604,7 @@ public partial class V1beta1LBListenerStatusAtProviderDefaultActionForward
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerStatusAtProviderDefaultActionRedirect
 {
     /// <summary>Hostname. This component is not percent-encoded. The hostname can contain #{host}. Defaults to #{host}.</summary>
@@ -1542,6 +1633,7 @@ public partial class V1beta1LBListenerStatusAtProviderDefaultActionRedirect
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerStatusAtProviderDefaultAction
 {
     /// <summary>Configuration block for using Amazon Cognito to authenticate users. Specify only when type is authenticate-cognito. Detailed below.</summary>
@@ -1578,6 +1670,7 @@ public partial class V1beta1LBListenerStatusAtProviderDefaultAction
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerStatusAtProviderMutualAuthentication
 {
     /// <summary>Whether client certificate expiry is ignored. Default is false.</summary>
@@ -1594,6 +1687,7 @@ public partial class V1beta1LBListenerStatusAtProviderMutualAuthentication
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerStatusAtProvider
 {
     /// <summary>Name of the Application-Layer Protocol Negotiation (ALPN) policy. Can be set if protocol is TLS. Valid values are HTTP1Only, HTTP2Only, HTTP2Optional, HTTP2Preferred, and None.</summary>
@@ -1646,6 +1740,7 @@ public partial class V1beta1LBListenerStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1674,6 +1769,7 @@ public partial class V1beta1LBListenerStatusConditions
 }
 
 /// <summary>LBListenerStatus defines the observed state of LBListener.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerStatus
 {
     /// <summary></summary>
@@ -1689,8 +1785,9 @@ public partial class V1beta1LBListenerStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>LBListener is the Schema for the LBListeners API. Provides a Load Balancer Listener resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1LBListener : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LBListenerSpec>, IStatus<V1beta1LBListenerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

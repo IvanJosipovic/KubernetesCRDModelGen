@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1WebApplicationFirewallPolicySpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1WebApplicationFirewallPolicySpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecForProviderCustomRulesMatchConditionsMatchVariables
 {
     /// <summary>Specifies which elements in the collection this rule applies to.</summary>
@@ -31,6 +33,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecForProviderCustomRul
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecForProviderCustomRulesMatchConditions
 {
     /// <summary>A list of match values. This is Required when the operator is not Any.</summary>
@@ -55,6 +58,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecForProviderCustomRul
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecForProviderCustomRules
 {
     /// <summary>Type of action. Possible values are Allow, Block and Log.</summary>
@@ -95,6 +99,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecForProviderCustomRul
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecForProviderManagedRulesExclusionExcludedRuleSetRuleGroup
 {
     /// <summary>One or more Rule IDs for exclusion.</summary>
@@ -107,6 +112,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecForProviderManagedRu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecForProviderManagedRulesExclusionExcludedRuleSet
 {
     /// <summary>One or more rule_group block defined below.</summary>
@@ -123,6 +129,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecForProviderManagedRu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecForProviderManagedRulesExclusion
 {
     /// <summary>One or more excluded_rule_set block defined below.</summary>
@@ -143,6 +150,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecForProviderManagedRu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecForProviderManagedRulesManagedRuleSetRuleGroupOverrideRule
 {
     /// <summary>Describes the override action to be applied when rule matches. Possible values are Allow, AnomalyScoring, Block and Log.</summary>
@@ -159,6 +167,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecForProviderManagedRu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecForProviderManagedRulesManagedRuleSetRuleGroupOverride
 {
     /// <summary></summary>
@@ -175,6 +184,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecForProviderManagedRu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecForProviderManagedRulesManagedRuleSet
 {
     /// <summary>One or more rule_group_override block defined below.</summary>
@@ -191,6 +201,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecForProviderManagedRu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecForProviderManagedRules
 {
     /// <summary>One or more exclusion block defined below.</summary>
@@ -203,6 +214,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecForProviderManagedRu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecForProviderPolicySettingsLogScrubbingRule
 {
     /// <summary>Whether this rule is enabled. Defaults to true.</summary>
@@ -223,6 +235,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecForProviderPolicySet
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecForProviderPolicySettingsLogScrubbing
 {
     /// <summary>Whether this rule is enabled. Defaults to true.</summary>
@@ -235,6 +248,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecForProviderPolicySet
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecForProviderPolicySettings
 {
     /// <summary>Describes if the policy is in enabled state or disabled state. Defaults to true.</summary>
@@ -266,6 +280,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecForProviderPolicySet
     public double? RequestBodyInspectLimitInKb { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1WebApplicationFirewallPolicySpecForProviderResourceGroupNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -276,6 +291,7 @@ public enum V1beta1WebApplicationFirewallPolicySpecForProviderResourceGroupNameR
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1WebApplicationFirewallPolicySpecForProviderResourceGroupNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -287,6 +303,7 @@ public enum V1beta1WebApplicationFirewallPolicySpecForProviderResourceGroupNameR
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -301,6 +318,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecForProviderResourceG
 }
 
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -312,6 +330,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecForProviderResourceG
     public V1beta1WebApplicationFirewallPolicySpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1WebApplicationFirewallPolicySpecForProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -322,6 +341,7 @@ public enum V1beta1WebApplicationFirewallPolicySpecForProviderResourceGroupNameS
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1WebApplicationFirewallPolicySpecForProviderResourceGroupNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -333,6 +353,7 @@ public enum V1beta1WebApplicationFirewallPolicySpecForProviderResourceGroupNameS
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -347,6 +368,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecForProviderResourceG
 }
 
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -363,6 +385,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecForProviderResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecForProvider
 {
     /// <summary>One or more custom_rules blocks as defined below.</summary>
@@ -399,6 +422,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderCustomRulesMatchConditionsMatchVariables
 {
     /// <summary>Specifies which elements in the collection this rule applies to.</summary>
@@ -411,6 +435,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderCustomRu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderCustomRulesMatchConditions
 {
     /// <summary>A list of match values. This is Required when the operator is not Any.</summary>
@@ -435,6 +460,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderCustomRu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderCustomRules
 {
     /// <summary>Type of action. Possible values are Allow, Block and Log.</summary>
@@ -475,6 +501,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderCustomRu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderManagedRulesExclusionExcludedRuleSetRuleGroup
 {
     /// <summary>One or more Rule IDs for exclusion.</summary>
@@ -487,6 +514,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderManagedR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderManagedRulesExclusionExcludedRuleSet
 {
     /// <summary>One or more rule_group block defined below.</summary>
@@ -503,6 +531,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderManagedR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderManagedRulesExclusion
 {
     /// <summary>One or more excluded_rule_set block defined below.</summary>
@@ -523,6 +552,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderManagedR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderManagedRulesManagedRuleSetRuleGroupOverrideRule
 {
     /// <summary>Describes the override action to be applied when rule matches. Possible values are Allow, AnomalyScoring, Block and Log.</summary>
@@ -539,6 +569,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderManagedR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderManagedRulesManagedRuleSetRuleGroupOverride
 {
     /// <summary></summary>
@@ -555,6 +586,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderManagedR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderManagedRulesManagedRuleSet
 {
     /// <summary>One or more rule_group_override block defined below.</summary>
@@ -571,6 +603,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderManagedR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderManagedRules
 {
     /// <summary>One or more exclusion block defined below.</summary>
@@ -583,6 +616,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderManagedR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderPolicySettingsLogScrubbingRule
 {
     /// <summary>Whether this rule is enabled. Defaults to true.</summary>
@@ -603,6 +637,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderPolicySe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderPolicySettingsLogScrubbing
 {
     /// <summary>Whether this rule is enabled. Defaults to true.</summary>
@@ -615,6 +650,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderPolicySe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderPolicySettings
 {
     /// <summary>Describes if the policy is in enabled state or disabled state. Defaults to true.</summary>
@@ -647,6 +683,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderPolicySe
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecInitProvider
 {
     /// <summary>One or more custom_rules blocks as defined below.</summary>
@@ -670,6 +707,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecInitProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1WebApplicationFirewallPolicySpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -692,6 +730,7 @@ public enum V1beta1WebApplicationFirewallPolicySpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1WebApplicationFirewallPolicySpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -702,6 +741,7 @@ public enum V1beta1WebApplicationFirewallPolicySpecProviderConfigRefPolicyResolu
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1WebApplicationFirewallPolicySpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -713,6 +753,7 @@ public enum V1beta1WebApplicationFirewallPolicySpecProviderConfigRefPolicyResolv
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -727,6 +768,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecProviderConfigRefPol
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -738,6 +780,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecProviderConfigRef
     public V1beta1WebApplicationFirewallPolicySpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1WebApplicationFirewallPolicySpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -748,6 +791,7 @@ public enum V1beta1WebApplicationFirewallPolicySpecPublishConnectionDetailsToCon
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1WebApplicationFirewallPolicySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -759,6 +803,7 @@ public enum V1beta1WebApplicationFirewallPolicySpecPublishConnectionDetailsToCon
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -773,6 +818,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecPublishConnectionDet
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -785,6 +831,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecPublishConnectionDet
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -801,6 +848,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecPublishConnectionDet
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -817,6 +865,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecPublishConnectionDet
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -829,6 +878,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecWriteConnectionSecre
 }
 
 /// <summary>WebApplicationFirewallPolicySpec defines the desired state of WebApplicationFirewallPolicy</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -862,6 +912,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderCustomRulesMatchConditionsMatchVariables
 {
     /// <summary>Specifies which elements in the collection this rule applies to.</summary>
@@ -874,6 +925,7 @@ public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderCustomRu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderCustomRulesMatchConditions
 {
     /// <summary>A list of match values. This is Required when the operator is not Any.</summary>
@@ -898,6 +950,7 @@ public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderCustomRu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderCustomRules
 {
     /// <summary>Type of action. Possible values are Allow, Block and Log.</summary>
@@ -938,6 +991,7 @@ public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderCustomRu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderManagedRulesExclusionExcludedRuleSetRuleGroup
 {
     /// <summary>One or more Rule IDs for exclusion.</summary>
@@ -950,6 +1004,7 @@ public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderManagedR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderManagedRulesExclusionExcludedRuleSet
 {
     /// <summary>One or more rule_group block defined below.</summary>
@@ -966,6 +1021,7 @@ public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderManagedR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderManagedRulesExclusion
 {
     /// <summary>One or more excluded_rule_set block defined below.</summary>
@@ -986,6 +1042,7 @@ public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderManagedR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderManagedRulesManagedRuleSetRuleGroupOverrideRule
 {
     /// <summary>Describes the override action to be applied when rule matches. Possible values are Allow, AnomalyScoring, Block and Log.</summary>
@@ -1002,6 +1059,7 @@ public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderManagedR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderManagedRulesManagedRuleSetRuleGroupOverride
 {
     /// <summary></summary>
@@ -1018,6 +1076,7 @@ public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderManagedR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderManagedRulesManagedRuleSet
 {
     /// <summary>One or more rule_group_override block defined below.</summary>
@@ -1034,6 +1093,7 @@ public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderManagedR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderManagedRules
 {
     /// <summary>One or more exclusion block defined below.</summary>
@@ -1046,6 +1106,7 @@ public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderManagedR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderPolicySettingsLogScrubbingRule
 {
     /// <summary>Whether this rule is enabled. Defaults to true.</summary>
@@ -1066,6 +1127,7 @@ public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderPolicySe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderPolicySettingsLogScrubbing
 {
     /// <summary>Whether this rule is enabled. Defaults to true.</summary>
@@ -1078,6 +1140,7 @@ public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderPolicySe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderPolicySettings
 {
     /// <summary>Describes if the policy is in enabled state or disabled state. Defaults to true.</summary>
@@ -1110,6 +1173,7 @@ public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderPolicySe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicyStatusAtProvider
 {
     /// <summary>One or more custom_rules blocks as defined below.</summary>
@@ -1150,6 +1214,7 @@ public partial class V1beta1WebApplicationFirewallPolicyStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1178,6 +1243,7 @@ public partial class V1beta1WebApplicationFirewallPolicyStatusConditions
 }
 
 /// <summary>WebApplicationFirewallPolicyStatus defines the observed state of WebApplicationFirewallPolicy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicyStatus
 {
     /// <summary></summary>
@@ -1193,8 +1259,9 @@ public partial class V1beta1WebApplicationFirewallPolicyStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>WebApplicationFirewallPolicy is the Schema for the WebApplicationFirewallPolicys API. Manages a Azure Web Application Firewall Policy instance.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1WebApplicationFirewallPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1WebApplicationFirewallPolicySpec>, IStatus<V1beta1WebApplicationFirewallPolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

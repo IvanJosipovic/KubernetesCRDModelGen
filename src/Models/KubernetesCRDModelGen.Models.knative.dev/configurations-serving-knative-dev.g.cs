@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.serving.knative.dev;
 /// <summary>Selects a key of a ConfigMap.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersEnvValueFromConfigMapKeyRef
 {
     /// <summary>The key to select.</summary>
@@ -25,6 +26,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersEnvValueFromConfig
 }
 
 /// <summary>Selects a key of a secret in the pod's namespace</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersEnvValueFromSecretKeyRef
 {
     /// <summary>The key of the secret to select from.  Must be a valid secret key.</summary>
@@ -41,6 +43,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersEnvValueFromSecret
 }
 
 /// <summary>Source for the environment variable's value. Cannot be used if value is not empty.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersEnvValueFrom
 {
     /// <summary>Selects a key of a ConfigMap.</summary>
@@ -61,6 +64,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersEnvValueFrom
 }
 
 /// <summary>EnvVar represents an environment variable present in a Container.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersEnv
 {
     /// <summary>Name of the environment variable. Must be a C_IDENTIFIER.</summary>
@@ -77,6 +81,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersEnv
 }
 
 /// <summary>The ConfigMap to select from</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersEnvFromConfigMapRef
 {
     /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
@@ -89,6 +94,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersEnvFromConfigMapRe
 }
 
 /// <summary>The Secret to select from</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersEnvFromSecretRef
 {
     /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
@@ -101,6 +107,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersEnvFromSecretRef
 }
 
 /// <summary>EnvFromSource represents the source of a set of ConfigMaps</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersEnvFrom
 {
     /// <summary>The ConfigMap to select from</summary>
@@ -117,6 +124,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersEnvFrom
 }
 
 /// <summary>Exec specifies the action to take.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersLivenessProbeExec
 {
     /// <summary>Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.</summary>
@@ -125,6 +133,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersLivenessProbeExec
 }
 
 /// <summary>GRPC specifies an action involving a GRPC port.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersLivenessProbeGrpc
 {
     /// <summary>Port number of the gRPC service. Number must be in the range 1 to 65535.</summary>
@@ -137,6 +146,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersLivenessProbeGrpc
 }
 
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersLivenessProbeHttpGetHttpHeaders
 {
     /// <summary>The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header.</summary>
@@ -149,6 +159,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersLivenessProbeHttpG
 }
 
 /// <summary>HTTPGet specifies the http request to perform.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersLivenessProbeHttpGet
 {
     /// <summary>Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.</summary>
@@ -173,6 +184,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersLivenessProbeHttpG
 }
 
 /// <summary>TCPSocket specifies an action involving a TCP port.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersLivenessProbeTcpSocket
 {
     /// <summary>Optional: Host name to connect to, defaults to the pod IP.</summary>
@@ -185,6 +197,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersLivenessProbeTcpSo
 }
 
 /// <summary>Periodic probe of container liveness. Container will be restarted if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersLivenessProbe
 {
     /// <summary>Exec specifies the action to take.</summary>
@@ -225,6 +238,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersLivenessProbe
 }
 
 /// <summary>ContainerPort represents a network port in a single container.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersPorts
 {
     /// <summary>Number of port to expose on the pod's IP address. This must be a valid port number, 0 &lt; x &lt; 65536.</summary>
@@ -241,6 +255,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersPorts
 }
 
 /// <summary>Exec specifies the action to take.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersReadinessProbeExec
 {
     /// <summary>Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.</summary>
@@ -249,6 +264,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersReadinessProbeExec
 }
 
 /// <summary>GRPC specifies an action involving a GRPC port.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersReadinessProbeGrpc
 {
     /// <summary>Port number of the gRPC service. Number must be in the range 1 to 65535.</summary>
@@ -261,6 +277,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersReadinessProbeGrpc
 }
 
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersReadinessProbeHttpGetHttpHeaders
 {
     /// <summary>The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header.</summary>
@@ -273,6 +290,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersReadinessProbeHttp
 }
 
 /// <summary>HTTPGet specifies the http request to perform.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersReadinessProbeHttpGet
 {
     /// <summary>Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.</summary>
@@ -297,6 +315,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersReadinessProbeHttp
 }
 
 /// <summary>TCPSocket specifies an action involving a TCP port.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersReadinessProbeTcpSocket
 {
     /// <summary>Optional: Host name to connect to, defaults to the pod IP.</summary>
@@ -309,6 +328,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersReadinessProbeTcpS
 }
 
 /// <summary>Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersReadinessProbe
 {
     /// <summary>Exec specifies the action to take.</summary>
@@ -349,6 +369,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersReadinessProbe
 }
 
 /// <summary>ResourceClaim references one entry in PodSpec.ResourceClaims.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersResourcesClaims
 {
     /// <summary>Name must match the name of one entry in pod.spec.resourceClaims of the Pod where this field is used. It makes that resource available inside a container.</summary>
@@ -357,6 +378,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersResourcesClaims
 }
 
 /// <summary>Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersResources
 {
     /// <summary>Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container.   This is an alpha field and requires enabling the DynamicResourceAllocation feature gate.   This field is immutable. It can only be set for containers.</summary>
@@ -373,6 +395,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersResources
 }
 
 /// <summary>The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime. Note that this field cannot be set when spec.os.name is windows.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersSecurityContextCapabilities
 {
     /// <summary>This is accessible behind a feature flag - kubernetes.containerspec-addcapabilities</summary>
@@ -385,6 +408,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersSecurityContextCap
 }
 
 /// <summary>The seccomp options to use by this container. If seccomp options are provided at both the pod &amp; container level, the container options override the pod options. Note that this field cannot be set when spec.os.name is windows.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersSecurityContextSeccompProfile
 {
     /// <summary>localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must be set if type is "Localhost". Must NOT be set for any other type.</summary>
@@ -397,6 +421,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersSecurityContextSec
 }
 
 /// <summary>SecurityContext defines the security options the container should be run with. If set, the fields of SecurityContext override the equivalent fields of PodSecurityContext. More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersSecurityContext
 {
     /// <summary>AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process. This bool directly controls if the no_new_privs flag will be set on the container process. AllowPrivilegeEscalation is true always when the container is: 1) run as Privileged 2) has CAP_SYS_ADMIN Note that this field cannot be set when spec.os.name is windows.</summary>
@@ -429,6 +454,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersSecurityContext
 }
 
 /// <summary>Exec specifies the action to take.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersStartupProbeExec
 {
     /// <summary>Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.</summary>
@@ -437,6 +463,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersStartupProbeExec
 }
 
 /// <summary>GRPC specifies an action involving a GRPC port.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersStartupProbeGrpc
 {
     /// <summary>Port number of the gRPC service. Number must be in the range 1 to 65535.</summary>
@@ -449,6 +476,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersStartupProbeGrpc
 }
 
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersStartupProbeHttpGetHttpHeaders
 {
     /// <summary>The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header.</summary>
@@ -461,6 +489,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersStartupProbeHttpGe
 }
 
 /// <summary>HTTPGet specifies the http request to perform.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersStartupProbeHttpGet
 {
     /// <summary>Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.</summary>
@@ -485,6 +514,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersStartupProbeHttpGe
 }
 
 /// <summary>TCPSocket specifies an action involving a TCP port.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersStartupProbeTcpSocket
 {
     /// <summary>Optional: Host name to connect to, defaults to the pod IP.</summary>
@@ -497,6 +527,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersStartupProbeTcpSoc
 }
 
 /// <summary>StartupProbe indicates that the Pod has successfully initialized. If specified, no other probes are executed until this completes successfully. If this probe fails, the Pod will be restarted, just as if the livenessProbe failed. This can be used to provide different probe parameters at the beginning of a Pod's lifecycle, when it might take a long time to load data or warm a cache, than during steady-state operation. This cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersStartupProbe
 {
     /// <summary>Exec specifies the action to take.</summary>
@@ -537,6 +568,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersStartupProbe
 }
 
 /// <summary>VolumeMount describes a mounting of a Volume within a container.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersVolumeMounts
 {
     /// <summary>Path within the container at which the volume should be mounted.  Must not contain ':'.</summary>
@@ -557,6 +589,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersVolumeMounts
 }
 
 /// <summary>A single application container that you want to run within a pod.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainers
 {
     /// <summary>Arguments to the entrypoint. The container image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell</summary>
@@ -629,6 +662,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainers
 }
 
 /// <summary>LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecImagePullSecrets
 {
     /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
@@ -637,6 +671,7 @@ public partial class V1ConfigurationSpecTemplateSpecImagePullSecrets
 }
 
 /// <summary>Maps a string key to a path within a volume.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecVolumesConfigMapItems
 {
     /// <summary>key is the key to project.</summary>
@@ -653,6 +688,7 @@ public partial class V1ConfigurationSpecTemplateSpecVolumesConfigMapItems
 }
 
 /// <summary>configMap represents a configMap that should populate this volume</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecVolumesConfigMap
 {
     /// <summary>defaultMode is optional: mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.</summary>
@@ -673,6 +709,7 @@ public partial class V1ConfigurationSpecTemplateSpecVolumesConfigMap
 }
 
 /// <summary>Maps a string key to a path within a volume.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecVolumesProjectedSourcesConfigMapItems
 {
     /// <summary>key is the key to project.</summary>
@@ -689,6 +726,7 @@ public partial class V1ConfigurationSpecTemplateSpecVolumesProjectedSourcesConfi
 }
 
 /// <summary>configMap information about the configMap data to project</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecVolumesProjectedSourcesConfigMap
 {
     /// <summary>items if unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'.</summary>
@@ -705,6 +743,7 @@ public partial class V1ConfigurationSpecTemplateSpecVolumesProjectedSourcesConfi
 }
 
 /// <summary>Required: Selects a field of the pod: only annotations, labels, name and namespace are supported.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecVolumesProjectedSourcesDownwardAPIItemsFieldRef
 {
     /// <summary>Version of the schema the FieldPath is written in terms of, defaults to "v1".</summary>
@@ -717,6 +756,7 @@ public partial class V1ConfigurationSpecTemplateSpecVolumesProjectedSourcesDownw
 }
 
 /// <summary>Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, requests.cpu and requests.memory) are currently supported.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecVolumesProjectedSourcesDownwardAPIItemsResourceFieldRef
 {
     /// <summary>Container name: required for volumes, optional for env vars</summary>
@@ -733,6 +773,7 @@ public partial class V1ConfigurationSpecTemplateSpecVolumesProjectedSourcesDownw
 }
 
 /// <summary>DownwardAPIVolumeFile represents information to create the file containing the pod field</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecVolumesProjectedSourcesDownwardAPIItems
 {
     /// <summary>Required: Selects a field of the pod: only annotations, labels, name and namespace are supported.</summary>
@@ -753,6 +794,7 @@ public partial class V1ConfigurationSpecTemplateSpecVolumesProjectedSourcesDownw
 }
 
 /// <summary>downwardAPI information about the downwardAPI data to project</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecVolumesProjectedSourcesDownwardAPI
 {
     /// <summary>Items is a list of DownwardAPIVolume file</summary>
@@ -761,6 +803,7 @@ public partial class V1ConfigurationSpecTemplateSpecVolumesProjectedSourcesDownw
 }
 
 /// <summary>Maps a string key to a path within a volume.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecVolumesProjectedSourcesSecretItems
 {
     /// <summary>key is the key to project.</summary>
@@ -777,6 +820,7 @@ public partial class V1ConfigurationSpecTemplateSpecVolumesProjectedSourcesSecre
 }
 
 /// <summary>secret information about the secret data to project</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecVolumesProjectedSourcesSecret
 {
     /// <summary>items if unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'.</summary>
@@ -793,6 +837,7 @@ public partial class V1ConfigurationSpecTemplateSpecVolumesProjectedSourcesSecre
 }
 
 /// <summary>serviceAccountToken is information about the serviceAccountToken data to project</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecVolumesProjectedSourcesServiceAccountToken
 {
     /// <summary>audience is the intended audience of the token. A recipient of a token must identify itself with an identifier specified in the audience of the token, and otherwise should reject the token. The audience defaults to the identifier of the apiserver.</summary>
@@ -809,6 +854,7 @@ public partial class V1ConfigurationSpecTemplateSpecVolumesProjectedSourcesServi
 }
 
 /// <summary>Projection that may be projected along with other supported volume types</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecVolumesProjectedSources
 {
     /// <summary>configMap information about the configMap data to project</summary>
@@ -829,6 +875,7 @@ public partial class V1ConfigurationSpecTemplateSpecVolumesProjectedSources
 }
 
 /// <summary>projected items for all in one resources secrets, configmaps, and downward API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecVolumesProjected
 {
     /// <summary>defaultMode are the mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.</summary>
@@ -841,6 +888,7 @@ public partial class V1ConfigurationSpecTemplateSpecVolumesProjected
 }
 
 /// <summary>Maps a string key to a path within a volume.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecVolumesSecretItems
 {
     /// <summary>key is the key to project.</summary>
@@ -857,6 +905,7 @@ public partial class V1ConfigurationSpecTemplateSpecVolumesSecretItems
 }
 
 /// <summary>secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecVolumesSecret
 {
     /// <summary>defaultMode is Optional: mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.</summary>
@@ -877,6 +926,7 @@ public partial class V1ConfigurationSpecTemplateSpecVolumesSecret
 }
 
 /// <summary>Volume represents a named volume in a pod that may be accessed by any container in the pod.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecVolumes
 {
     /// <summary>configMap represents a configMap that should populate this volume</summary>
@@ -905,6 +955,7 @@ public partial class V1ConfigurationSpecTemplateSpecVolumes
 }
 
 /// <summary>RevisionSpec holds the desired state of the Revision (from the client).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpec
 {
     /// <summary>This is accessible behind a feature flag - kubernetes.podspec-affinity</summary>
@@ -1001,6 +1052,7 @@ public partial class V1ConfigurationSpecTemplateSpec
 }
 
 /// <summary>Template holds the latest specification for the Revision to be stamped out.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplate
 {
     /// <summary></summary>
@@ -1013,6 +1065,7 @@ public partial class V1ConfigurationSpecTemplate
 }
 
 /// <summary>ConfigurationSpec holds the desired state of the Configuration (from the client).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpec
 {
     /// <summary>Template holds the latest specification for the Revision to be stamped out.</summary>
@@ -1021,6 +1074,7 @@ public partial class V1ConfigurationSpec
 }
 
 /// <summary>Condition defines a readiness condition for a Knative resource. See: https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#typical-status-properties</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
@@ -1049,6 +1103,7 @@ public partial class V1ConfigurationStatusConditions
 }
 
 /// <summary>ConfigurationStatus communicates the observed state of the Configuration (from the controller).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationStatus
 {
     /// <summary>Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.</summary>
@@ -1072,8 +1127,9 @@ public partial class V1ConfigurationStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Configuration represents the "floating HEAD" of a linear history of Revisions. Users create new Revisions by updating the Configuration's spec. The "latest created" revision's name is available under status, as is the "latest ready" revision's name. See also: https://github.com/knative/serving/blob/main/docs/spec/overview.md#configuration</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1Configuration : IKubernetesObject<V1ObjectMeta>, ISpec<V1ConfigurationSpec>, IStatus<V1ConfigurationStatus>
 {
     public const string KubeApiVersion = "v1";

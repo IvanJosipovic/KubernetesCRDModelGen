@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
 /// <summary>CalicoNodeStatusSpec contains the specification for a CalicoNodeStatus resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CalicoNodeStatusSpec
 {
     /// <summary>Classes declares the types of information to monitor for this calico/node, and allows for selective status reporting about certain subsets of information.</summary>
@@ -25,6 +26,7 @@ public partial class V1CalicoNodeStatusSpec
 }
 
 /// <summary>BIRDV4 represents the latest observed status of bird4.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CalicoNodeStatusStatusAgentBirdV4
 {
     /// <summary>LastBootTime holds the value of lastBootTime from bird.ctl output.</summary>
@@ -49,6 +51,7 @@ public partial class V1CalicoNodeStatusStatusAgentBirdV4
 }
 
 /// <summary>BIRDV6 represents the latest observed status of bird6.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CalicoNodeStatusStatusAgentBirdV6
 {
     /// <summary>LastBootTime holds the value of lastBootTime from bird.ctl output.</summary>
@@ -73,6 +76,7 @@ public partial class V1CalicoNodeStatusStatusAgentBirdV6
 }
 
 /// <summary>Agent holds agent status on the node.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CalicoNodeStatusStatusAgent
 {
     /// <summary>BIRDV4 represents the latest observed status of bird4.</summary>
@@ -85,6 +89,7 @@ public partial class V1CalicoNodeStatusStatusAgent
 }
 
 /// <summary>CalicoNodePeer contains the status of BGP peers on the node.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CalicoNodeStatusStatusBgpPeersV4
 {
     /// <summary>IP address of the peer whose condition we are reporting.</summary>
@@ -105,6 +110,7 @@ public partial class V1CalicoNodeStatusStatusBgpPeersV4
 }
 
 /// <summary>CalicoNodePeer contains the status of BGP peers on the node.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CalicoNodeStatusStatusBgpPeersV6
 {
     /// <summary>IP address of the peer whose condition we are reporting.</summary>
@@ -125,6 +131,7 @@ public partial class V1CalicoNodeStatusStatusBgpPeersV6
 }
 
 /// <summary>BGP holds node BGP status.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CalicoNodeStatusStatusBgp
 {
     /// <summary>The total number of IPv4 established bgp sessions.</summary>
@@ -153,6 +160,7 @@ public partial class V1CalicoNodeStatusStatusBgp
 }
 
 /// <summary>LearnedFrom contains information regarding where this route originated.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CalicoNodeStatusStatusRoutesRoutesV4LearnedFrom
 {
     /// <summary>If sourceType is NodeMesh or BGPPeer, IP address of the router that sent us this route.</summary>
@@ -165,6 +173,7 @@ public partial class V1CalicoNodeStatusStatusRoutesRoutesV4LearnedFrom
 }
 
 /// <summary>CalicoNodeRoute contains the status of BGP routes on the node.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CalicoNodeStatusStatusRoutesRoutesV4
 {
     /// <summary>Destination of the route.</summary>
@@ -189,6 +198,7 @@ public partial class V1CalicoNodeStatusStatusRoutesRoutesV4
 }
 
 /// <summary>LearnedFrom contains information regarding where this route originated.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CalicoNodeStatusStatusRoutesRoutesV6LearnedFrom
 {
     /// <summary>If sourceType is NodeMesh or BGPPeer, IP address of the router that sent us this route.</summary>
@@ -201,6 +211,7 @@ public partial class V1CalicoNodeStatusStatusRoutesRoutesV6LearnedFrom
 }
 
 /// <summary>CalicoNodeRoute contains the status of BGP routes on the node.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CalicoNodeStatusStatusRoutesRoutesV6
 {
     /// <summary>Destination of the route.</summary>
@@ -225,6 +236,7 @@ public partial class V1CalicoNodeStatusStatusRoutesRoutesV6
 }
 
 /// <summary>Routes reports routes known to the Calico BGP daemon on the node.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CalicoNodeStatusStatusRoutes
 {
     /// <summary>RoutesV4 represents IPv4 routes on the node.</summary>
@@ -237,6 +249,7 @@ public partial class V1CalicoNodeStatusStatusRoutes
 }
 
 /// <summary>CalicoNodeStatusStatus defines the observed state of CalicoNodeStatus. No validation needed for status since it is updated by Calico.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CalicoNodeStatusStatus
 {
     /// <summary>Agent holds agent status on the node.</summary>
@@ -256,8 +269,9 @@ public partial class V1CalicoNodeStatusStatus
     public V1CalicoNodeStatusStatusRoutes? Routes { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1CalicoNodeStatus : IKubernetesObject<V1ObjectMeta>, ISpec<V1CalicoNodeStatusSpec>, IStatus<V1CalicoNodeStatusStatus>
 {
     public const string KubeApiVersion = "v1";

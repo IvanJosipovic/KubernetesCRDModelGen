@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.notebooks.cnrm.cloud.google.com;
 /// <summary>Use a container image to start the notebook instance.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotebooksEnvironmentSpecContainerImage
 {
     /// <summary>The path to the container image repository. For example: gcr.io/{project_id}/{imageName}.</summary>
@@ -21,6 +22,7 @@ public partial class V1alpha1NotebooksEnvironmentSpecContainerImage
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotebooksEnvironmentSpecLocationRef
 {
     /// <summary>Allowed value: The `name` field of a `NotebooksLocation` resource.</summary>
@@ -37,6 +39,7 @@ public partial class V1alpha1NotebooksEnvironmentSpecLocationRef
 }
 
 /// <summary>The project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotebooksEnvironmentSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -53,6 +56,7 @@ public partial class V1alpha1NotebooksEnvironmentSpecProjectRef
 }
 
 /// <summary>Use a Compute Engine VM image to start the notebook instance.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotebooksEnvironmentSpecVmImage
 {
     /// <summary>Use this VM image family to find the image; the newest image in this family will be used.</summary>
@@ -69,6 +73,7 @@ public partial class V1alpha1NotebooksEnvironmentSpecVmImage
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotebooksEnvironmentSpec
 {
     /// <summary>Use a container image to start the notebook instance.</summary>
@@ -105,6 +110,7 @@ public partial class V1alpha1NotebooksEnvironmentSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotebooksEnvironmentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -129,6 +135,7 @@ public partial class V1alpha1NotebooksEnvironmentStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotebooksEnvironmentStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -144,8 +151,9 @@ public partial class V1alpha1NotebooksEnvironmentStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1NotebooksEnvironment : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1NotebooksEnvironmentSpec>, IStatus<V1alpha1NotebooksEnvironmentStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

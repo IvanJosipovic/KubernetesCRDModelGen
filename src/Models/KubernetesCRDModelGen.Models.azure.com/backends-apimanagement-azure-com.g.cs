@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apimanagement.azure.com;
 /// <summary>Storage version of v1api20220801.BackendAuthorizationHeaderCredentials Authorization header information.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendSpecCredentialsAuthorization
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -25,6 +26,7 @@ public partial class V1api20220801storageBackendSpecCredentialsAuthorization
 }
 
 /// <summary>Storage version of v1api20220801.BackendCredentialsContract Details of the Credentials used to connect to Backend.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendSpecCredentials
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -53,6 +55,7 @@ public partial class V1api20220801storageBackendSpecCredentials
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a apimanagement.azure.com/Service resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendSpecOwner
 {
     /// <summary></summary>
@@ -65,6 +68,7 @@ public partial class V1api20220801storageBackendSpecOwner
 }
 
 /// <summary>Storage version of v1api20220801.X509CertificateName Properties of server X509Names.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendSpecPropertiesServiceFabricClusterServerX509Names
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -81,6 +85,7 @@ public partial class V1api20220801storageBackendSpecPropertiesServiceFabricClust
 }
 
 /// <summary>Storage version of v1api20220801.BackendServiceFabricClusterProperties Properties of the Service Fabric Type Backend.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendSpecPropertiesServiceFabricCluster
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -113,6 +118,7 @@ public partial class V1api20220801storageBackendSpecPropertiesServiceFabricClust
 }
 
 /// <summary>Storage version of v1api20220801.BackendProperties Properties specific to the Backend Type.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendSpecProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -125,6 +131,7 @@ public partial class V1api20220801storageBackendSpecProperties
 }
 
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendSpecProxyPassword
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -137,6 +144,7 @@ public partial class V1api20220801storageBackendSpecProxyPassword
 }
 
 /// <summary>Storage version of v1api20220801.BackendProxyContract Details of the Backend WebProxy Server to use in the Request to Backend.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendSpecProxy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -157,6 +165,7 @@ public partial class V1api20220801storageBackendSpecProxy
 }
 
 /// <summary>ResourceReference: Management Uri of the Resource in External System. This URL can be the Arm Resource Id of Logic Apps, Function Apps or API Apps.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendSpecResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -177,6 +186,7 @@ public partial class V1api20220801storageBackendSpecResourceReference
 }
 
 /// <summary>Storage version of v1api20220801.BackendTlsProperties Properties controlling TLS Certificate Validation.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendSpecTls
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -193,6 +203,7 @@ public partial class V1api20220801storageBackendSpecTls
 }
 
 /// <summary>Storage version of v1api20220801.Service_Backend_Spec</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -249,6 +260,7 @@ public partial class V1api20220801storageBackendSpec
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -281,6 +293,7 @@ public partial class V1api20220801storageBackendStatusConditions
 }
 
 /// <summary>Storage version of v1api20220801.BackendAuthorizationHeaderCredentials_STATUS Authorization header information.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendStatusCredentialsAuthorization
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -297,6 +310,7 @@ public partial class V1api20220801storageBackendStatusCredentialsAuthorization
 }
 
 /// <summary>Storage version of v1api20220801.BackendCredentialsContract_STATUS Details of the Credentials used to connect to Backend.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendStatusCredentials
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -325,6 +339,7 @@ public partial class V1api20220801storageBackendStatusCredentials
 }
 
 /// <summary>Storage version of v1api20220801.X509CertificateName_STATUS Properties of server X509Names.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendStatusPropertiesServiceFabricClusterServerX509Names
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -341,6 +356,7 @@ public partial class V1api20220801storageBackendStatusPropertiesServiceFabricClu
 }
 
 /// <summary>Storage version of v1api20220801.BackendServiceFabricClusterProperties_STATUS Properties of the Service Fabric Type Backend.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendStatusPropertiesServiceFabricCluster
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -373,6 +389,7 @@ public partial class V1api20220801storageBackendStatusPropertiesServiceFabricClu
 }
 
 /// <summary>Storage version of v1api20220801.BackendProperties_STATUS Properties specific to the Backend Type.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendStatusProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -385,6 +402,7 @@ public partial class V1api20220801storageBackendStatusProperties
 }
 
 /// <summary>Storage version of v1api20220801.BackendProxyContract_STATUS Details of the Backend WebProxy Server to use in the Request to Backend.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendStatusProxy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -401,6 +419,7 @@ public partial class V1api20220801storageBackendStatusProxy
 }
 
 /// <summary>Storage version of v1api20220801.BackendTlsProperties_STATUS Properties controlling TLS Certificate Validation.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendStatusTls
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -417,6 +436,7 @@ public partial class V1api20220801storageBackendStatusTls
 }
 
 /// <summary>Storage version of v1api20220801.Service_Backend_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -476,8 +496,9 @@ public partial class V1api20220801storageBackendStatus
     public string? Url { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Storage version of v1api20220801.Backend Generator information: - Generated from: /apimanagement/resource-manager/Microsoft.ApiManagement/stable/2022-08-01/apimbackends.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/backends/{backendId}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1api20220801storageBackend : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220801storageBackendSpec>, IStatus<V1api20220801storageBackendStatus>
 {
     public const string KubeApiVersion = "v1api20220801storage";

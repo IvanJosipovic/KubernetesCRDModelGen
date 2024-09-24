@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kms.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KMSKeyRingSpec
 {
     /// <summary>Immutable. The location for the KeyRing. A full list of valid locations can be found by running 'gcloud kms locations list'.</summary>
@@ -21,6 +22,7 @@ public partial class V1beta1KMSKeyRingSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KMSKeyRingStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -45,6 +47,7 @@ public partial class V1beta1KMSKeyRingStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KMSKeyRingStatus
 {
     /// <summary>Conditions represent the latest available observations of the KMSKeyRing's current state.</summary>
@@ -60,8 +63,9 @@ public partial class V1beta1KMSKeyRingStatus
     public string? SelfLink { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>KMSKeyRing represents a KMS KeyRing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1KMSKeyRing : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1KMSKeyRingSpec>, IStatus<V1beta1KMSKeyRingStatus>
 {
     public const string KubeApiVersion = "v1beta1";

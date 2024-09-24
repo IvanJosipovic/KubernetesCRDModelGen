@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudfunctions2.cnrm.cloud.google.com;
 /// <summary>If provided, get the source from this location in a Cloud Source Repository.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudFunctions2FunctionSpecBuildConfigSourceRepoSource
 {
     /// <summary>Regex matching branches to build.</summary>
@@ -41,6 +42,7 @@ public partial class V1alpha1CloudFunctions2FunctionSpecBuildConfigSourceRepoSou
 }
 
 /// <summary>If provided, get the source from this location in Google Cloud Storage.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudFunctions2FunctionSpecBuildConfigSourceStorageSource
 {
     /// <summary>Google Cloud Storage bucket containing the source.</summary>
@@ -57,6 +59,7 @@ public partial class V1alpha1CloudFunctions2FunctionSpecBuildConfigSourceStorage
 }
 
 /// <summary>The location of the function source code.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudFunctions2FunctionSpecBuildConfigSource
 {
     /// <summary>If provided, get the source from this location in a Cloud Source Repository.</summary>
@@ -69,6 +72,7 @@ public partial class V1alpha1CloudFunctions2FunctionSpecBuildConfigSource
 }
 
 /// <summary>Describes the Build step of the function that builds a container from the given source.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudFunctions2FunctionSpecBuildConfig
 {
     /// <summary>The Cloud Build name of the latest successful deployment of the function.</summary>
@@ -101,6 +105,7 @@ public partial class V1alpha1CloudFunctions2FunctionSpecBuildConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudFunctions2FunctionSpecEventTriggerEventFilters
 {
     /// <summary>'Required. The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. Use the 'gcloud eventarc providers describe' command to learn more about events and their attributes. Do not filter for the 'type' attribute here, as this is already achieved by the resource's 'event_type' attribute.</summary>
@@ -117,6 +122,7 @@ public partial class V1alpha1CloudFunctions2FunctionSpecEventTriggerEventFilters
 }
 
 /// <summary>An Eventarc trigger managed by Google Cloud Functions that fires events in response to a condition in another service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudFunctions2FunctionSpecEventTrigger
 {
     /// <summary>Criteria used to filter events.</summary>
@@ -149,6 +155,7 @@ public partial class V1alpha1CloudFunctions2FunctionSpecEventTrigger
 }
 
 /// <summary>The project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudFunctions2FunctionSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -165,6 +172,7 @@ public partial class V1alpha1CloudFunctions2FunctionSpecProjectRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudFunctions2FunctionSpecServiceConfigSecretEnvironmentVariables
 {
     /// <summary>Name of the environment variable.</summary>
@@ -185,6 +193,7 @@ public partial class V1alpha1CloudFunctions2FunctionSpecServiceConfigSecretEnvir
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudFunctions2FunctionSpecServiceConfigSecretVolumesVersions
 {
     /// <summary>Relative path of the file under the mount path where the secret value for this version will be fetched and made available. For example, setting the mountPath as '/etc/secrets' and path as secret_foo would mount the secret value file at /etc/secrets/secret_foo.</summary>
@@ -197,6 +206,7 @@ public partial class V1alpha1CloudFunctions2FunctionSpecServiceConfigSecretVolum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudFunctions2FunctionSpecServiceConfigSecretVolumes
 {
     /// <summary>The path within the container to mount the secret volume. For example, setting the mountPath as /etc/secrets would mount the secret value files under the /etc/secrets directory. This directory will also be completely shadowed and unavailable to mount any other secrets. Recommended mount path: /etc/secrets.</summary>
@@ -217,6 +227,7 @@ public partial class V1alpha1CloudFunctions2FunctionSpecServiceConfigSecretVolum
 }
 
 /// <summary>Describes the Service being deployed.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudFunctions2FunctionSpecServiceConfig
 {
     /// <summary>Whether 100% of traffic is routed to the latest revision. Defaults to true.</summary>
@@ -289,6 +300,7 @@ public partial class V1alpha1CloudFunctions2FunctionSpecServiceConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudFunctions2FunctionSpec
 {
     /// <summary>Describes the Build step of the function that builds a container from the given source.</summary>
@@ -325,6 +337,7 @@ public partial class V1alpha1CloudFunctions2FunctionSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudFunctions2FunctionStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -349,6 +362,7 @@ public partial class V1alpha1CloudFunctions2FunctionStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudFunctions2FunctionStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -376,8 +390,9 @@ public partial class V1alpha1CloudFunctions2FunctionStatus
     public string? Url { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1CloudFunctions2Function : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1CloudFunctions2FunctionSpec>, IStatus<V1alpha1CloudFunctions2FunctionStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gcp.upbound.io;
 /// <summary>Env is a reference to an environment variable that contains credentials that must be used to connect to the provider.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentialsEnv
 {
     /// <summary>Name is the name of an environment variable.</summary>
@@ -17,6 +18,7 @@ public partial class V1beta1ProviderConfigSpecCredentialsEnv
 }
 
 /// <summary>Fs is a reference to a filesystem location that contains credentials that must be used to connect to the provider.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentialsFs
 {
     /// <summary>Path is a filesystem path.</summary>
@@ -25,6 +27,7 @@ public partial class V1beta1ProviderConfigSpecCredentialsFs
 }
 
 /// <summary>Use GCP service account impersonation for authentication.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentialsImpersonateServiceAccount
 {
     /// <summary>GCP service account email address</summary>
@@ -33,6 +36,7 @@ public partial class V1beta1ProviderConfigSpecCredentialsImpersonateServiceAccou
 }
 
 /// <summary>A SecretRef is a reference to a secret key that contains the credentials that must be used to connect to the provider.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentialsSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -48,6 +52,7 @@ public partial class V1beta1ProviderConfigSpecCredentialsSecretRef
     public string Namespace { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ProviderConfigSpecCredentialsSourceEnum
 {
     [EnumMember(Value = "None"), JsonStringEnumMemberName("None")]
@@ -77,6 +82,7 @@ public enum V1beta1ProviderConfigSpecCredentialsSourceEnum
 }
 
 /// <summary>Federation is the configuration for federated identity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentialsUpboundFederation
 {
     /// <summary>ProviderID is the fully-qualified identifier for the identity provider on GCP. The format is `projects/&lt;project-id&gt;/locations/global/workloadIdentityPools/&lt;identity-pool&gt;/providers/&lt;identity-provider&gt;`.</summary>
@@ -89,6 +95,7 @@ public partial class V1beta1ProviderConfigSpecCredentialsUpboundFederation
 }
 
 /// <summary>Upbound defines the options for authenticating using Upbound as an identity provider.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentialsUpbound
 {
     /// <summary>Federation is the configuration for federated identity.</summary>
@@ -97,6 +104,7 @@ public partial class V1beta1ProviderConfigSpecCredentialsUpbound
 }
 
 /// <summary>Credentials required to authenticate to this provider.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentials
 {
     /// <summary>Env is a reference to an environment variable that contains credentials that must be used to connect to the provider.</summary>
@@ -126,6 +134,7 @@ public partial class V1beta1ProviderConfigSpecCredentials
 }
 
 /// <summary>A ProviderConfigSpec defines the desired state of a ProviderConfig.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpec
 {
     /// <summary>Credentials required to authenticate to this provider.</summary>
@@ -138,6 +147,7 @@ public partial class V1beta1ProviderConfigSpec
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -166,6 +176,7 @@ public partial class V1beta1ProviderConfigStatusConditions
 }
 
 /// <summary>A ProviderConfigStatus reflects the observed state of a ProviderConfig.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigStatus
 {
     /// <summary>Conditions of the resource.</summary>
@@ -177,8 +188,9 @@ public partial class V1beta1ProviderConfigStatus
     public long? Users { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>A ProviderConfig configures a GCP provider.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ProviderConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ProviderConfigSpec>, IStatus<V1beta1ProviderConfigStatus>
 {
     public const string KubeApiVersion = "v1beta1";

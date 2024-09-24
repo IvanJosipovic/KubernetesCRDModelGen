@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.identityplatform.gcp.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TenantDefaultSupportedIdPConfigSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1TenantDefaultSupportedIdPConfigSpecDeletionPolicyEnum
 }
 
 /// <summary>OAuth client ID</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecForProviderClientIdSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -35,6 +37,7 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecForProviderClient
 }
 
 /// <summary>OAuth client secret</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecForProviderClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -50,6 +53,7 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecForProviderClient
     public string Namespace { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TenantDefaultSupportedIdPConfigSpecForProviderTenantRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -60,6 +64,7 @@ public enum V1beta1TenantDefaultSupportedIdPConfigSpecForProviderTenantRefPolicy
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TenantDefaultSupportedIdPConfigSpecForProviderTenantRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -71,6 +76,7 @@ public enum V1beta1TenantDefaultSupportedIdPConfigSpecForProviderTenantRefPolicy
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecForProviderTenantRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -85,6 +91,7 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecForProviderTenant
 }
 
 /// <summary>Reference to a Tenant in identityplatform to populate tenant.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecForProviderTenantRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -96,6 +103,7 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecForProviderTenant
     public V1beta1TenantDefaultSupportedIdPConfigSpecForProviderTenantRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TenantDefaultSupportedIdPConfigSpecForProviderTenantSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -106,6 +114,7 @@ public enum V1beta1TenantDefaultSupportedIdPConfigSpecForProviderTenantSelectorP
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TenantDefaultSupportedIdPConfigSpecForProviderTenantSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -117,6 +126,7 @@ public enum V1beta1TenantDefaultSupportedIdPConfigSpecForProviderTenantSelectorP
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecForProviderTenantSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -131,6 +141,7 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecForProviderTenant
 }
 
 /// <summary>Selector for a Tenant in identityplatform to populate tenant.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecForProviderTenantSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -147,6 +158,7 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecForProviderTenant
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecForProvider
 {
     /// <summary>OAuth client ID</summary>
@@ -183,6 +195,7 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecForProvider
 }
 
 /// <summary>OAuth client ID</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderClientIdSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -199,6 +212,7 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderClien
 }
 
 /// <summary>OAuth client secret</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -214,6 +228,7 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderClien
     public string Namespace { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderTenantRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -224,6 +239,7 @@ public enum V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderTenantRefPolic
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderTenantRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -235,6 +251,7 @@ public enum V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderTenantRefPolic
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderTenantRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -249,6 +266,7 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderTenan
 }
 
 /// <summary>Reference to a Tenant in identityplatform to populate tenant.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderTenantRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -260,6 +278,7 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderTenan
     public V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderTenantRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderTenantSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -270,6 +289,7 @@ public enum V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderTenantSelector
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderTenantSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -281,6 +301,7 @@ public enum V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderTenantSelector
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderTenantSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -295,6 +316,7 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderTenan
 }
 
 /// <summary>Selector for a Tenant in identityplatform to populate tenant.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderTenantSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -311,6 +333,7 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderTenan
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecInitProvider
 {
     /// <summary>OAuth client ID</summary>
@@ -346,6 +369,7 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecInitProvider
     public V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderTenantSelector? TenantSelector { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TenantDefaultSupportedIdPConfigSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -368,6 +392,7 @@ public enum V1beta1TenantDefaultSupportedIdPConfigSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TenantDefaultSupportedIdPConfigSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -378,6 +403,7 @@ public enum V1beta1TenantDefaultSupportedIdPConfigSpecProviderConfigRefPolicyRes
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TenantDefaultSupportedIdPConfigSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -389,6 +415,7 @@ public enum V1beta1TenantDefaultSupportedIdPConfigSpecProviderConfigRefPolicyRes
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -403,6 +430,7 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecProviderConfigRef
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -414,6 +442,7 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecProviderConfigRef
     public V1beta1TenantDefaultSupportedIdPConfigSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TenantDefaultSupportedIdPConfigSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -424,6 +453,7 @@ public enum V1beta1TenantDefaultSupportedIdPConfigSpecPublishConnectionDetailsTo
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TenantDefaultSupportedIdPConfigSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -435,6 +465,7 @@ public enum V1beta1TenantDefaultSupportedIdPConfigSpecPublishConnectionDetailsTo
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -449,6 +480,7 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecPublishConnection
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -461,6 +493,7 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecPublishConnection
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -477,6 +510,7 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecPublishConnection
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -493,6 +527,7 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecPublishConnection
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -505,6 +540,7 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecWriteConnectionSe
 }
 
 /// <summary>TenantDefaultSupportedIdPConfigSpec defines the desired state of TenantDefaultSupportedIdPConfig</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -538,6 +574,7 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigStatusAtProvider
 {
     /// <summary>If this IDP allows the user to sign in</summary>
@@ -566,6 +603,7 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -594,6 +632,7 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigStatusConditions
 }
 
 /// <summary>TenantDefaultSupportedIdPConfigStatus defines the observed state of TenantDefaultSupportedIdPConfig.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigStatus
 {
     /// <summary></summary>
@@ -609,8 +648,9 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>TenantDefaultSupportedIdPConfig is the Schema for the TenantDefaultSupportedIdPConfigs API. Configurations options for the tenant for authenticating with a the standard set of Identity Toolkit-trusted IDPs.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1TenantDefaultSupportedIdPConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TenantDefaultSupportedIdPConfigSpec>, IStatus<V1beta1TenantDefaultSupportedIdPConfigStatus>
 {
     public const string KubeApiVersion = "v1beta1";

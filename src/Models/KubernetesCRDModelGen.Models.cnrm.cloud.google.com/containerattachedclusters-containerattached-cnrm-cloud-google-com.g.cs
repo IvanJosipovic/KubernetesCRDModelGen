@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerattached.cnrm.cloud.google.com;
 /// <summary>Configuration related to the cluster RBAC settings.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpecAuthorization
 {
     /// <summary>Users that can perform operations as a cluster admin. A managed ClusterRoleBinding will be created to grant the 'cluster-admin' ClusterRole to the users. Up to ten admin users can be provided.  For more info on RBAC, see https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles.</summary>
@@ -17,6 +18,7 @@ public partial class V1beta1ContainerAttachedClusterSpecAuthorization
 }
 
 /// <summary>Binary Authorization configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpecBinaryAuthorization
 {
     /// <summary>Configure Binary Authorization evaluation mode. Possible values: ["DISABLED", "PROJECT_SINGLETON_POLICY_ENFORCE"].</summary>
@@ -25,6 +27,7 @@ public partial class V1beta1ContainerAttachedClusterSpecBinaryAuthorization
 }
 
 /// <summary>The number of the Fleet host project where this cluster will be registered.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpecFleetProjectRef
 {
     /// <summary>Allowed value: string of the format `projects/{{value}}`, where {{value}} is the `number` field of a `Project` resource.</summary>
@@ -41,6 +44,7 @@ public partial class V1beta1ContainerAttachedClusterSpecFleetProjectRef
 }
 
 /// <summary>Fleet configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpecFleet
 {
     /// <summary>The name of the managed Hub Membership resource associated to this cluster. Membership names are formatted as projects/&lt;project-number&gt;/locations/global/membership/&lt;cluster-id&gt;.</summary>
@@ -53,6 +57,7 @@ public partial class V1beta1ContainerAttachedClusterSpecFleet
 }
 
 /// <summary>The configuration of the logging components.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpecLoggingConfigComponentConfig
 {
     /// <summary>The components to be enabled. Possible values: ["SYSTEM_COMPONENTS", "WORKLOADS"].</summary>
@@ -61,6 +66,7 @@ public partial class V1beta1ContainerAttachedClusterSpecLoggingConfigComponentCo
 }
 
 /// <summary>Logging configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpecLoggingConfig
 {
     /// <summary>The configuration of the logging components.</summary>
@@ -69,6 +75,7 @@ public partial class V1beta1ContainerAttachedClusterSpecLoggingConfig
 }
 
 /// <summary>Enable Google Cloud Managed Service for Prometheus in the cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpecMonitoringConfigManagedPrometheusConfig
 {
     /// <summary>Enable Managed Collection.</summary>
@@ -77,6 +84,7 @@ public partial class V1beta1ContainerAttachedClusterSpecMonitoringConfigManagedP
 }
 
 /// <summary>Monitoring configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpecMonitoringConfig
 {
     /// <summary>Enable Google Cloud Managed Service for Prometheus in the cluster.</summary>
@@ -85,6 +93,7 @@ public partial class V1beta1ContainerAttachedClusterSpecMonitoringConfig
 }
 
 /// <summary>OIDC discovery information of the target cluster.  Kubernetes Service Account (KSA) tokens are JWT tokens signed by the cluster API server. This fields indicates how GCP services validate KSA tokens in order to allow system workloads (such as GKE Connect and telemetry agents) to authenticate back to GCP.  Both clusters with public and private issuer URLs are supported. Clusters with public issuers only need to specify the 'issuer_url' field while clusters with private issuers need to provide both 'issuer_url' and 'jwks'.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpecOidcConfig
 {
     /// <summary>Immutable. A JSON Web Token (JWT) issuer URI. 'issuer' must start with 'https://'.</summary>
@@ -97,6 +106,7 @@ public partial class V1beta1ContainerAttachedClusterSpecOidcConfig
 }
 
 /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -113,6 +123,7 @@ public partial class V1beta1ContainerAttachedClusterSpecProjectRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpec
 {
     /// <summary>Optional. Annotations on the cluster. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Key can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.</summary>
@@ -173,6 +184,7 @@ public partial class V1beta1ContainerAttachedClusterSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -197,6 +209,7 @@ public partial class V1beta1ContainerAttachedClusterStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterStatusErrors
 {
     /// <summary>Human-friendly description of the error.</summary>
@@ -205,6 +218,7 @@ public partial class V1beta1ContainerAttachedClusterStatusErrors
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterStatusWorkloadIdentityConfig
 {
     /// <summary>The ID of the OIDC Identity Provider (IdP) associated to the Workload Identity Pool.</summary>
@@ -221,6 +235,7 @@ public partial class V1beta1ContainerAttachedClusterStatusWorkloadIdentityConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterStatus
 {
     /// <summary>Output only. The region where this cluster runs.  For EKS clusters, this is an AWS region. For AKS clusters, this is an Azure region.</summary>
@@ -268,8 +283,9 @@ public partial class V1beta1ContainerAttachedClusterStatus
     public IList<V1beta1ContainerAttachedClusterStatusWorkloadIdentityConfig>? WorkloadIdentityConfig { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ContainerAttachedCluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ContainerAttachedClusterSpec>, IStatus<V1beta1ContainerAttachedClusterStatus>
 {
     public const string KubeApiVersion = "v1beta1";

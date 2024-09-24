@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kubevirt.io;
 /// <summary>CA configuration CA certs are kept in the CA bundle as long as they are valid</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecCertificateRotateStrategySelfSignedCa
 {
     /// <summary>The requested 'duration' (i.e. lifetime) of the Certificate.</summary>
@@ -21,6 +22,7 @@ public partial class V1KubeVirtSpecCertificateRotateStrategySelfSignedCa
 }
 
 /// <summary>Server configuration Certs are rotated and discarded</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecCertificateRotateStrategySelfSignedServer
 {
     /// <summary>The requested 'duration' (i.e. lifetime) of the Certificate.</summary>
@@ -33,6 +35,7 @@ public partial class V1KubeVirtSpecCertificateRotateStrategySelfSignedServer
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecCertificateRotateStrategySelfSigned
 {
     /// <summary>CA configuration CA certs are kept in the CA bundle as long as they are valid</summary>
@@ -57,6 +60,7 @@ public partial class V1KubeVirtSpecCertificateRotateStrategySelfSigned
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecCertificateRotateStrategy
 {
     /// <summary></summary>
@@ -65,6 +69,7 @@ public partial class V1KubeVirtSpecCertificateRotateStrategy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationApiConfigurationRestClientRateLimiterTokenBucketRateLimiter
 {
     /// <summary>Maximum burst for throttle. If it's zero, the component default will be used</summary>
@@ -77,6 +82,7 @@ public partial class V1KubeVirtSpecConfigurationApiConfigurationRestClientRateLi
 }
 
 /// <summary>RateLimiter allows selecting and configuring different rate limiters for the k8s client.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationApiConfigurationRestClientRateLimiter
 {
     /// <summary></summary>
@@ -85,6 +91,7 @@ public partial class V1KubeVirtSpecConfigurationApiConfigurationRestClientRateLi
 }
 
 /// <summary>RestClient can be used to tune certain aspects of the k8s client in use.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationApiConfigurationRestClient
 {
     /// <summary>RateLimiter allows selecting and configuring different rate limiters for the k8s client.</summary>
@@ -93,6 +100,7 @@ public partial class V1KubeVirtSpecConfigurationApiConfigurationRestClient
 }
 
 /// <summary>ReloadableComponentConfiguration holds all generic k8s configuration options which can be reloaded by components without requiring a restart.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationApiConfiguration
 {
     /// <summary>RestClient can be used to tune certain aspects of the k8s client in use.</summary>
@@ -101,6 +109,7 @@ public partial class V1KubeVirtSpecConfigurationApiConfiguration
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationArchitectureConfigurationAmd64
 {
     /// <summary></summary>
@@ -117,6 +126,7 @@ public partial class V1KubeVirtSpecConfigurationArchitectureConfigurationAmd64
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationArchitectureConfigurationArm64
 {
     /// <summary></summary>
@@ -133,6 +143,7 @@ public partial class V1KubeVirtSpecConfigurationArchitectureConfigurationArm64
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationArchitectureConfigurationPpc64le
 {
     /// <summary></summary>
@@ -149,6 +160,7 @@ public partial class V1KubeVirtSpecConfigurationArchitectureConfigurationPpc64le
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationArchitectureConfiguration
 {
     /// <summary></summary>
@@ -169,6 +181,7 @@ public partial class V1KubeVirtSpecConfigurationArchitectureConfiguration
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationAutoCPULimitNamespaceLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -185,6 +198,7 @@ public partial class V1KubeVirtSpecConfigurationAutoCPULimitNamespaceLabelSelect
 }
 
 /// <summary>When set, AutoCPULimitNamespaceLabelSelector will set a CPU limit on virt-launcher for VMIs running inside namespaces that match the label selector. The CPU limit will equal the number of requested vCPUs. This setting does not apply to VMIs with dedicated CPUs.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationAutoCPULimitNamespaceLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -197,6 +211,7 @@ public partial class V1KubeVirtSpecConfigurationAutoCPULimitNamespaceLabelSelect
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationControllerConfigurationRestClientRateLimiterTokenBucketRateLimiter
 {
     /// <summary>Maximum burst for throttle. If it's zero, the component default will be used</summary>
@@ -209,6 +224,7 @@ public partial class V1KubeVirtSpecConfigurationControllerConfigurationRestClien
 }
 
 /// <summary>RateLimiter allows selecting and configuring different rate limiters for the k8s client.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationControllerConfigurationRestClientRateLimiter
 {
     /// <summary></summary>
@@ -217,6 +233,7 @@ public partial class V1KubeVirtSpecConfigurationControllerConfigurationRestClien
 }
 
 /// <summary>RestClient can be used to tune certain aspects of the k8s client in use.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationControllerConfigurationRestClient
 {
     /// <summary>RateLimiter allows selecting and configuring different rate limiters for the k8s client.</summary>
@@ -225,6 +242,7 @@ public partial class V1KubeVirtSpecConfigurationControllerConfigurationRestClien
 }
 
 /// <summary>ReloadableComponentConfiguration holds all generic k8s configuration options which can be reloaded by components without requiring a restart.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationControllerConfiguration
 {
     /// <summary>RestClient can be used to tune certain aspects of the k8s client in use.</summary>
@@ -233,6 +251,7 @@ public partial class V1KubeVirtSpecConfigurationControllerConfiguration
 }
 
 /// <summary>DiskVerification holds container disks verification limits</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationDeveloperConfigurationDiskVerification
 {
     /// <summary></summary>
@@ -241,6 +260,7 @@ public partial class V1KubeVirtSpecConfigurationDeveloperConfigurationDiskVerifi
 }
 
 /// <summary>LogVerbosity sets log verbosity level of  various components</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationDeveloperConfigurationLogVerbosity
 {
     /// <summary>NodeVerbosity represents a map of nodes with a specific verbosity level</summary>
@@ -269,6 +289,7 @@ public partial class V1KubeVirtSpecConfigurationDeveloperConfigurationLogVerbosi
 }
 
 /// <summary>DeveloperConfiguration holds developer options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationDeveloperConfiguration
 {
     /// <summary>For each requested virtual CPU, CPUAllocationRatio defines how much physical CPU to request per VMI from the hosting node. The value is in fraction of a CPU thread (or core on non-hyperthreaded nodes). For example, a value of 1 means 1 physical CPU thread per VMI CPU thread. A value of 100 would be 1% of a physical thread allocated for each requested VMI thread. This option has no effect on VMIs that request dedicated CPUs. More information at: https://kubevirt.io/user-guide/operations/node_overcommit/#node-cpu-allocation-ratio Defaults to 10</summary>
@@ -313,6 +334,7 @@ public partial class V1KubeVirtSpecConfigurationDeveloperConfiguration
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationHandlerConfigurationRestClientRateLimiterTokenBucketRateLimiter
 {
     /// <summary>Maximum burst for throttle. If it's zero, the component default will be used</summary>
@@ -325,6 +347,7 @@ public partial class V1KubeVirtSpecConfigurationHandlerConfigurationRestClientRa
 }
 
 /// <summary>RateLimiter allows selecting and configuring different rate limiters for the k8s client.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationHandlerConfigurationRestClientRateLimiter
 {
     /// <summary></summary>
@@ -333,6 +356,7 @@ public partial class V1KubeVirtSpecConfigurationHandlerConfigurationRestClientRa
 }
 
 /// <summary>RestClient can be used to tune certain aspects of the k8s client in use.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationHandlerConfigurationRestClient
 {
     /// <summary>RateLimiter allows selecting and configuring different rate limiters for the k8s client.</summary>
@@ -341,6 +365,7 @@ public partial class V1KubeVirtSpecConfigurationHandlerConfigurationRestClient
 }
 
 /// <summary>ReloadableComponentConfiguration holds all generic k8s configuration options which can be reloaded by components without requiring a restart.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationHandlerConfiguration
 {
     /// <summary>RestClient can be used to tune certain aspects of the k8s client in use.</summary>
@@ -349,6 +374,7 @@ public partial class V1KubeVirtSpecConfigurationHandlerConfiguration
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationKsmConfigurationNodeLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -365,6 +391,7 @@ public partial class V1KubeVirtSpecConfigurationKsmConfigurationNodeLabelSelecto
 }
 
 /// <summary>NodeLabelSelector is a selector that filters in which nodes the KSM will be enabled. Empty NodeLabelSelector will enable ksm for every node.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationKsmConfigurationNodeLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -377,6 +404,7 @@ public partial class V1KubeVirtSpecConfigurationKsmConfigurationNodeLabelSelecto
 }
 
 /// <summary>KSMConfiguration holds the information regarding the enabling the KSM in the nodes (if available).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationKsmConfiguration
 {
     /// <summary>NodeLabelSelector is a selector that filters in which nodes the KSM will be enabled. Empty NodeLabelSelector will enable ksm for every node.</summary>
@@ -385,6 +413,7 @@ public partial class V1KubeVirtSpecConfigurationKsmConfiguration
 }
 
 /// <summary>LiveUpdateConfiguration holds defaults for live update features</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationLiveUpdateConfiguration
 {
     /// <summary>MaxCpuSockets holds the maximum amount of sockets that can be hotplugged</summary>
@@ -401,6 +430,7 @@ public partial class V1KubeVirtSpecConfigurationLiveUpdateConfiguration
 }
 
 /// <summary>NodeMediatedDeviceTypesConfig holds information about MDEV types to be defined in a specific node that matches the NodeSelector field.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationMediatedDevicesConfigurationNodeMediatedDeviceTypes
 {
     /// <summary></summary>
@@ -417,6 +447,7 @@ public partial class V1KubeVirtSpecConfigurationMediatedDevicesConfigurationNode
 }
 
 /// <summary>MediatedDevicesConfiguration holds information about MDEV types to be defined, if available</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationMediatedDevicesConfiguration
 {
     /// <summary></summary>
@@ -433,6 +464,7 @@ public partial class V1KubeVirtSpecConfigurationMediatedDevicesConfiguration
 }
 
 /// <summary>MigrationConfiguration holds migration options. Can be overridden for specific groups of VMs though migration policies. Visit https://kubevirt.io/user-guide/operations/migration_policies/ for more information.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationMigrations
 {
     /// <summary>AllowAutoConverge allows the platform to compromise performance/availability of VMIs to guarantee successful VMI live migrations. Defaults to false</summary>
@@ -485,6 +517,7 @@ public partial class V1KubeVirtSpecConfigurationMigrations
 }
 
 /// <summary>ResourceClaim references one entry in PodSpec.ResourceClaims.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationNetworkBindingComputeResourceOverheadClaims
 {
     /// <summary>Name must match the name of one entry in pod.spec.resourceClaims of the Pod where this field is used. It makes that resource available inside a container.</summary>
@@ -493,6 +526,7 @@ public partial class V1KubeVirtSpecConfigurationNetworkBindingComputeResourceOve
 }
 
 /// <summary>ComputeResourceOverhead specifies the resource overhead that should be added to the compute container when using the binding. version: v1alphav1</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationNetworkBindingComputeResourceOverhead
 {
     /// <summary>Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container.   This is an alpha field and requires enabling the DynamicResourceAllocation feature gate.   This field is immutable. It can only be set for containers.</summary>
@@ -509,6 +543,7 @@ public partial class V1KubeVirtSpecConfigurationNetworkBindingComputeResourceOve
 }
 
 /// <summary>Migration means the VM using the plugin can be safely migrated version: 1alphav1</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationNetworkBindingMigration
 {
     /// <summary>Method defines a pre-defined migration methodology version: 1alphav1</summary>
@@ -517,6 +552,7 @@ public partial class V1KubeVirtSpecConfigurationNetworkBindingMigration
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationNetworkBinding
 {
     /// <summary>ComputeResourceOverhead specifies the resource overhead that should be added to the compute container when using the binding. version: v1alphav1</summary>
@@ -545,6 +581,7 @@ public partial class V1KubeVirtSpecConfigurationNetworkBinding
 }
 
 /// <summary>NetworkConfiguration holds network options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationNetwork
 {
     /// <summary></summary>
@@ -565,6 +602,7 @@ public partial class V1KubeVirtSpecConfigurationNetwork
 }
 
 /// <summary>MediatedHostDevice represents a host mediated device allowed for passthrough</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationPermittedHostDevicesMediatedDevices
 {
     /// <summary></summary>
@@ -581,6 +619,7 @@ public partial class V1KubeVirtSpecConfigurationPermittedHostDevicesMediatedDevi
 }
 
 /// <summary>PciHostDevice represents a host PCI device allowed for passthrough</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationPermittedHostDevicesPciHostDevices
 {
     /// <summary>If true, KubeVirt will leave the allocation and monitoring to an external device plugin</summary>
@@ -597,6 +636,7 @@ public partial class V1KubeVirtSpecConfigurationPermittedHostDevicesPciHostDevic
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationPermittedHostDevicesUsbSelectors
 {
     /// <summary></summary>
@@ -609,6 +649,7 @@ public partial class V1KubeVirtSpecConfigurationPermittedHostDevicesUsbSelectors
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationPermittedHostDevicesUsb
 {
     /// <summary>If true, KubeVirt will leave the allocation and monitoring to an external device plugin</summary>
@@ -625,6 +666,7 @@ public partial class V1KubeVirtSpecConfigurationPermittedHostDevicesUsb
 }
 
 /// <summary>PermittedHostDevices holds information about devices allowed for passthrough</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationPermittedHostDevices
 {
     /// <summary></summary>
@@ -641,6 +683,7 @@ public partial class V1KubeVirtSpecConfigurationPermittedHostDevices
 }
 
 /// <summary>CustomProfile allows to request arbitrary profile for virt-launcher</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationSeccompConfigurationVirtualMachineInstanceProfileCustomProfile
 {
     /// <summary></summary>
@@ -653,6 +696,7 @@ public partial class V1KubeVirtSpecConfigurationSeccompConfigurationVirtualMachi
 }
 
 /// <summary>VirtualMachineInstanceProfile defines what profile should be used with virt-launcher. Defaults to none</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationSeccompConfigurationVirtualMachineInstanceProfile
 {
     /// <summary>CustomProfile allows to request arbitrary profile for virt-launcher</summary>
@@ -661,6 +705,7 @@ public partial class V1KubeVirtSpecConfigurationSeccompConfigurationVirtualMachi
 }
 
 /// <summary>SeccompConfiguration holds Seccomp configuration for Kubevirt components</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationSeccompConfiguration
 {
     /// <summary>VirtualMachineInstanceProfile defines what profile should be used with virt-launcher. Defaults to none</summary>
@@ -669,6 +714,7 @@ public partial class V1KubeVirtSpecConfigurationSeccompConfiguration
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationSmbios
 {
     /// <summary></summary>
@@ -693,6 +739,7 @@ public partial class V1KubeVirtSpecConfigurationSmbios
 }
 
 /// <summary>ResourceClaim references one entry in PodSpec.ResourceClaims.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationSupportContainerResourcesResourcesClaims
 {
     /// <summary>Name must match the name of one entry in pod.spec.resourceClaims of the Pod where this field is used. It makes that resource available inside a container.</summary>
@@ -701,6 +748,7 @@ public partial class V1KubeVirtSpecConfigurationSupportContainerResourcesResourc
 }
 
 /// <summary>ResourceRequirements describes the compute resource requirements.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationSupportContainerResourcesResources
 {
     /// <summary>Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container.   This is an alpha field and requires enabling the DynamicResourceAllocation feature gate.   This field is immutable. It can only be set for containers.</summary>
@@ -717,6 +765,7 @@ public partial class V1KubeVirtSpecConfigurationSupportContainerResourcesResourc
 }
 
 /// <summary>SupportContainerResources are used to specify the cpu/memory request and limits for the containers that support various features of Virtual Machines. These containers are usually idle and don't require a lot of memory or cpu.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationSupportContainerResources
 {
     /// <summary>ResourceRequirements describes the compute resource requirements.</summary>
@@ -728,6 +777,7 @@ public partial class V1KubeVirtSpecConfigurationSupportContainerResources
     public string Type { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1KubeVirtSpecConfigurationTlsConfigurationMinTLSVersionEnum
 {
     [EnumMember(Value = "VersionTLS10"), JsonStringEnumMemberName("VersionTLS10")]
@@ -745,6 +795,7 @@ public enum V1KubeVirtSpecConfigurationTlsConfigurationMinTLSVersionEnum
 }
 
 /// <summary>TLSConfiguration holds TLS options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationTlsConfiguration
 {
     /// <summary></summary>
@@ -758,16 +809,19 @@ public partial class V1KubeVirtSpecConfigurationTlsConfiguration
 }
 
 /// <summary>DisableFreePageReporting disable the free page reporting of memory balloon device https://libvirt.org/formatdomain.html#memory-balloon-device. This will have effect only if AutoattachMemBalloon is not false and the vmi is not requesting any high performance feature (dedicatedCPU/realtime/hugePages), in which free page reporting is always disabled.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationVirtualMachineOptionsDisableFreePageReporting
 {
 }
 
 /// <summary>DisableSerialConsoleLog disables logging the auto-attached default serial console. If not set, serial console logs will be written to a file and then streamed from a container named 'guest-console-log'. The value can be individually overridden for each VM, not relevant if AutoattachSerialConsole is disabled.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationVirtualMachineOptionsDisableSerialConsoleLog
 {
 }
 
 /// <summary>VirtualMachineOptions holds the cluster level information regarding the virtual machine.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationVirtualMachineOptions
 {
     /// <summary>DisableFreePageReporting disable the free page reporting of memory balloon device https://libvirt.org/formatdomain.html#memory-balloon-device. This will have effect only if AutoattachMemBalloon is not false and the vmi is not requesting any high performance feature (dedicatedCPU/realtime/hugePages), in which free page reporting is always disabled.</summary>
@@ -779,6 +833,7 @@ public partial class V1KubeVirtSpecConfigurationVirtualMachineOptions
     public V1KubeVirtSpecConfigurationVirtualMachineOptionsDisableSerialConsoleLog? DisableSerialConsoleLog { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1KubeVirtSpecConfigurationVmRolloutStrategyEnum
 {
     [EnumMember(Value = "Stage"), JsonStringEnumMemberName("Stage")]
@@ -790,6 +845,7 @@ public enum V1KubeVirtSpecConfigurationVmRolloutStrategyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationWebhookConfigurationRestClientRateLimiterTokenBucketRateLimiter
 {
     /// <summary>Maximum burst for throttle. If it's zero, the component default will be used</summary>
@@ -802,6 +858,7 @@ public partial class V1KubeVirtSpecConfigurationWebhookConfigurationRestClientRa
 }
 
 /// <summary>RateLimiter allows selecting and configuring different rate limiters for the k8s client.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationWebhookConfigurationRestClientRateLimiter
 {
     /// <summary></summary>
@@ -810,6 +867,7 @@ public partial class V1KubeVirtSpecConfigurationWebhookConfigurationRestClientRa
 }
 
 /// <summary>RestClient can be used to tune certain aspects of the k8s client in use.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationWebhookConfigurationRestClient
 {
     /// <summary>RateLimiter allows selecting and configuring different rate limiters for the k8s client.</summary>
@@ -818,6 +876,7 @@ public partial class V1KubeVirtSpecConfigurationWebhookConfigurationRestClient
 }
 
 /// <summary>ReloadableComponentConfiguration holds all generic k8s configuration options which can be reloaded by components without requiring a restart.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationWebhookConfiguration
 {
     /// <summary>RestClient can be used to tune certain aspects of the k8s client in use.</summary>
@@ -826,6 +885,7 @@ public partial class V1KubeVirtSpecConfigurationWebhookConfiguration
 }
 
 /// <summary>holds kubevirt configurations. same as the virt-configMap</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfiguration
 {
     /// <summary>AdditionalGuestMemoryOverheadRatio can be used to increase the virtualization infrastructure overhead. This is useful, since the calculation of this overhead is not accurate and cannot be entirely known in advance. The ratio that is being set determines by which factor to increase the overhead calculated by Kubevirt. A higher ratio means that the VMs would be less compromised by node pressures, but would mean that fewer VMs could be scheduled to a node. If not set, the default is 1.</summary>
@@ -971,6 +1031,7 @@ public partial class V1KubeVirtSpecConfiguration
 }
 
 /// <summary>Configure the value used for deployment and daemonset resources</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecCustomizeComponentsFlags
 {
     /// <summary></summary>
@@ -987,6 +1048,7 @@ public partial class V1KubeVirtSpecCustomizeComponentsFlags
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecCustomizeComponentsPatches
 {
     /// <summary></summary>
@@ -1007,6 +1069,7 @@ public partial class V1KubeVirtSpecCustomizeComponentsPatches
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecCustomizeComponents
 {
     /// <summary>Configure the value used for deployment and daemonset resources</summary>
@@ -1019,6 +1082,7 @@ public partial class V1KubeVirtSpecCustomizeComponents
 }
 
 /// <summary>LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecImagePullSecrets
 {
     /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
@@ -1027,6 +1091,7 @@ public partial class V1KubeVirtSpecImagePullSecrets
 }
 
 /// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchExpressions
 {
     /// <summary>The label key that the selector applies to.</summary>
@@ -1043,6 +1108,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityPreferr
 }
 
 /// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchFields
 {
     /// <summary>The label key that the selector applies to.</summary>
@@ -1059,6 +1125,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityPreferr
 }
 
 /// <summary>A node selector term, associated with the corresponding weight.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreference
 {
     /// <summary>A list of node selector requirements by node's labels.</summary>
@@ -1071,6 +1138,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityPreferr
 }
 
 /// <summary>An empty preferred scheduling term matches all objects with implicit weight 0 (i.e. it's a no-op). A null preferred scheduling term matches no objects (i.e. is also a no-op).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>A node selector term, associated with the corresponding weight.</summary>
@@ -1083,6 +1151,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityPreferr
 }
 
 /// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchExpressions
 {
     /// <summary>The label key that the selector applies to.</summary>
@@ -1099,6 +1168,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityRequire
 }
 
 /// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchFields
 {
     /// <summary>The label key that the selector applies to.</summary>
@@ -1115,6 +1185,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityRequire
 }
 
 /// <summary>A null or empty node selector term matches no objects. The requirements of them are ANDed. The TopologySelectorTerm type implements a subset of the NodeSelectorTerm.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTerms
 {
     /// <summary>A list of node selector requirements by node's labels.</summary>
@@ -1127,6 +1198,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityRequire
 }
 
 /// <summary>If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to an update), the system may or may not try to eventually evict the pod from its node.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>Required. A list of node selector terms. The terms are ORed.</summary>
@@ -1135,6 +1207,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityRequire
 }
 
 /// <summary>Describes node affinity scheduling rules for the pod.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinity
 {
     /// <summary>The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node matches the corresponding matchExpressions; the node(s) with the highest sum are the most preferred.</summary>
@@ -1147,6 +1220,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinity
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -1163,6 +1237,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferre
 }
 
 /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -1175,6 +1250,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferre
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -1191,6 +1267,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferre
 }
 
 /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -1203,6 +1280,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferre
 }
 
 /// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm
 {
     /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
@@ -1231,6 +1309,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferre
 }
 
 /// <summary>The weights of all of the matched WeightedPodAffinityTerm fields are added per-node to find the most preferred node(s)</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
@@ -1243,6 +1322,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferre
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -1259,6 +1339,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequired
 }
 
 /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -1271,6 +1352,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequired
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -1287,6 +1369,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequired
 }
 
 /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -1299,6 +1382,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequired
 }
 
 /// <summary>Defines a set of pods (namely those matching the labelSelector relative to the given namespace(s)) that this pod should be co-located (affinity) or not co-located (anti-affinity) with, where co-located is defined as running on a node whose value of the label with key &lt;topologyKey&gt; matches that of any node on which a pod of the set of pods is running</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
@@ -1327,6 +1411,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequired
 }
 
 /// <summary>Describes pod affinity scheduling rules (e.g. co-locate this pod in the same node, zone, etc. as some other pod(s)).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinity
 {
     /// <summary>The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred.</summary>
@@ -1339,6 +1424,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinity
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -1355,6 +1441,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPref
 }
 
 /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -1367,6 +1454,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPref
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -1383,6 +1471,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPref
 }
 
 /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -1395,6 +1484,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPref
 }
 
 /// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm
 {
     /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
@@ -1423,6 +1513,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPref
 }
 
 /// <summary>The weights of all of the matched WeightedPodAffinityTerm fields are added per-node to find the most preferred node(s)</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
@@ -1435,6 +1526,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPref
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -1451,6 +1543,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequ
 }
 
 /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -1463,6 +1556,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequ
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -1479,6 +1573,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequ
 }
 
 /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -1491,6 +1586,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequ
 }
 
 /// <summary>Defines a set of pods (namely those matching the labelSelector relative to the given namespace(s)) that this pod should be co-located (affinity) or not co-located (anti-affinity) with, where co-located is defined as running on a node whose value of the label with key &lt;topologyKey&gt; matches that of any node on which a pod of the set of pods is running</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
@@ -1519,6 +1615,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequ
 }
 
 /// <summary>Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod in the same node, zone, etc. as some other pod(s)).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinity
 {
     /// <summary>The scheduler will prefer to schedule pods to nodes that satisfy the anti-affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling anti-affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred.</summary>
@@ -1531,6 +1628,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinity
 }
 
 /// <summary>affinity enables pod affinity/anti-affinity placement expanding the types of constraints that can be expressed with nodeSelector. affinity is going to be applied to the relevant kind of pods in parallel with nodeSelector See https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementAffinity
 {
     /// <summary>Describes node affinity scheduling rules for the pod.</summary>
@@ -1547,6 +1645,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinity
 }
 
 /// <summary>The pod this Toleration is attached to tolerates any taint that matches the triple &lt;key,value,effect&gt; using the matching operator &lt;operator&gt;.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacementTolerations
 {
     /// <summary>Effect indicates the taint effect to match. Empty means match all taint effects. When specified, allowed values are NoSchedule, PreferNoSchedule and NoExecute.</summary>
@@ -1571,6 +1670,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementTolerations
 }
 
 /// <summary>nodePlacement describes scheduling configuration for specific KubeVirt components</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfraNodePlacement
 {
     /// <summary>affinity enables pod affinity/anti-affinity placement expanding the types of constraints that can be expressed with nodeSelector. affinity is going to be applied to the relevant kind of pods in parallel with nodeSelector See https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity</summary>
@@ -1587,6 +1687,7 @@ public partial class V1KubeVirtSpecInfraNodePlacement
 }
 
 /// <summary>selectors and tolerations that should apply to KubeVirt infrastructure components</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecInfra
 {
     /// <summary>nodePlacement describes scheduling configuration for specific KubeVirt components</summary>
@@ -1599,6 +1700,7 @@ public partial class V1KubeVirtSpecInfra
 }
 
 /// <summary>WorkloadUpdateStrategy defines at the cluster level how to handle automated workload updates</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadUpdateStrategy
 {
     /// <summary>BatchEvictionInterval Represents the interval to wait before issuing the next batch of shutdowns   Defaults to 1 minute</summary>
@@ -1615,6 +1717,7 @@ public partial class V1KubeVirtSpecWorkloadUpdateStrategy
 }
 
 /// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchExpressions
 {
     /// <summary>The label key that the selector applies to.</summary>
@@ -1631,6 +1734,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityPre
 }
 
 /// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchFields
 {
     /// <summary>The label key that the selector applies to.</summary>
@@ -1647,6 +1751,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityPre
 }
 
 /// <summary>A node selector term, associated with the corresponding weight.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreference
 {
     /// <summary>A list of node selector requirements by node's labels.</summary>
@@ -1659,6 +1764,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityPre
 }
 
 /// <summary>An empty preferred scheduling term matches all objects with implicit weight 0 (i.e. it's a no-op). A null preferred scheduling term matches no objects (i.e. is also a no-op).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>A node selector term, associated with the corresponding weight.</summary>
@@ -1671,6 +1777,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityPre
 }
 
 /// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchExpressions
 {
     /// <summary>The label key that the selector applies to.</summary>
@@ -1687,6 +1794,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityReq
 }
 
 /// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchFields
 {
     /// <summary>The label key that the selector applies to.</summary>
@@ -1703,6 +1811,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityReq
 }
 
 /// <summary>A null or empty node selector term matches no objects. The requirements of them are ANDed. The TopologySelectorTerm type implements a subset of the NodeSelectorTerm.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTerms
 {
     /// <summary>A list of node selector requirements by node's labels.</summary>
@@ -1715,6 +1824,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityReq
 }
 
 /// <summary>If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to an update), the system may or may not try to eventually evict the pod from its node.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>Required. A list of node selector terms. The terms are ORed.</summary>
@@ -1723,6 +1833,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityReq
 }
 
 /// <summary>Describes node affinity scheduling rules for the pod.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinity
 {
     /// <summary>The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node matches the corresponding matchExpressions; the node(s) with the highest sum are the most preferred.</summary>
@@ -1735,6 +1846,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinity
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -1751,6 +1863,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPref
 }
 
 /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -1763,6 +1876,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPref
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -1779,6 +1893,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPref
 }
 
 /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -1791,6 +1906,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPref
 }
 
 /// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm
 {
     /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
@@ -1819,6 +1935,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPref
 }
 
 /// <summary>The weights of all of the matched WeightedPodAffinityTerm fields are added per-node to find the most preferred node(s)</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
@@ -1831,6 +1948,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPref
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -1847,6 +1965,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequ
 }
 
 /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -1859,6 +1978,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequ
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -1875,6 +1995,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequ
 }
 
 /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -1887,6 +2008,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequ
 }
 
 /// <summary>Defines a set of pods (namely those matching the labelSelector relative to the given namespace(s)) that this pod should be co-located (affinity) or not co-located (anti-affinity) with, where co-located is defined as running on a node whose value of the label with key &lt;topologyKey&gt; matches that of any node on which a pod of the set of pods is running</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
@@ -1915,6 +2037,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequ
 }
 
 /// <summary>Describes pod affinity scheduling rules (e.g. co-locate this pod in the same node, zone, etc. as some other pod(s)).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinity
 {
     /// <summary>The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred.</summary>
@@ -1927,6 +2050,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinity
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -1943,6 +2067,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinity
 }
 
 /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -1955,6 +2080,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinity
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -1971,6 +2097,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinity
 }
 
 /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -1983,6 +2110,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinity
 }
 
 /// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm
 {
     /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
@@ -2011,6 +2139,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinity
 }
 
 /// <summary>The weights of all of the matched WeightedPodAffinityTerm fields are added per-node to find the most preferred node(s)</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
@@ -2023,6 +2152,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinity
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -2039,6 +2169,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinity
 }
 
 /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -2051,6 +2182,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinity
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -2067,6 +2199,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinity
 }
 
 /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -2079,6 +2212,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinity
 }
 
 /// <summary>Defines a set of pods (namely those matching the labelSelector relative to the given namespace(s)) that this pod should be co-located (affinity) or not co-located (anti-affinity) with, where co-located is defined as running on a node whose value of the label with key &lt;topologyKey&gt; matches that of any node on which a pod of the set of pods is running</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
@@ -2107,6 +2241,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinity
 }
 
 /// <summary>Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod in the same node, zone, etc. as some other pod(s)).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinity
 {
     /// <summary>The scheduler will prefer to schedule pods to nodes that satisfy the anti-affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling anti-affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred.</summary>
@@ -2119,6 +2254,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinity
 }
 
 /// <summary>affinity enables pod affinity/anti-affinity placement expanding the types of constraints that can be expressed with nodeSelector. affinity is going to be applied to the relevant kind of pods in parallel with nodeSelector See https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinity
 {
     /// <summary>Describes node affinity scheduling rules for the pod.</summary>
@@ -2135,6 +2271,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinity
 }
 
 /// <summary>The pod this Toleration is attached to tolerates any taint that matches the triple &lt;key,value,effect&gt; using the matching operator &lt;operator&gt;.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacementTolerations
 {
     /// <summary>Effect indicates the taint effect to match. Empty means match all taint effects. When specified, allowed values are NoSchedule, PreferNoSchedule and NoExecute.</summary>
@@ -2159,6 +2296,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementTolerations
 }
 
 /// <summary>nodePlacement describes scheduling configuration for specific KubeVirt components</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadsNodePlacement
 {
     /// <summary>affinity enables pod affinity/anti-affinity placement expanding the types of constraints that can be expressed with nodeSelector. affinity is going to be applied to the relevant kind of pods in parallel with nodeSelector See https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity</summary>
@@ -2175,6 +2313,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacement
 }
 
 /// <summary>selectors and tolerations that should apply to KubeVirt workloads</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloads
 {
     /// <summary>nodePlacement describes scheduling configuration for specific KubeVirt components</summary>
@@ -2187,6 +2326,7 @@ public partial class V1KubeVirtSpecWorkloads
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpec
 {
     /// <summary></summary>
@@ -2259,6 +2399,7 @@ public partial class V1KubeVirtSpec
 }
 
 /// <summary>KubeVirtCondition represents a condition of a KubeVirt deployment</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtStatusConditions
 {
     /// <summary></summary>
@@ -2287,6 +2428,7 @@ public partial class V1KubeVirtStatusConditions
 }
 
 /// <summary>GenerationStatus keeps track of the generation for a given resource so that decisions about forced updates can be made.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtStatusGenerations
 {
     /// <summary>group is the group of the thing you're tracking</summary>
@@ -2315,6 +2457,7 @@ public partial class V1KubeVirtStatusGenerations
 }
 
 /// <summary>KubeVirtStatus represents information pertaining to a KubeVirt deployment.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtStatus
 {
     /// <summary></summary>
@@ -2378,8 +2521,9 @@ public partial class V1KubeVirtStatus
     public string? TargetKubeVirtVersion { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>KubeVirt represents the object deploying all KubeVirt resources</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1KubeVirt : IKubernetesObject<V1ObjectMeta>, ISpec<V1KubeVirtSpec>, IStatus<V1KubeVirtStatus>
 {
     public const string KubeApiVersion = "v1";

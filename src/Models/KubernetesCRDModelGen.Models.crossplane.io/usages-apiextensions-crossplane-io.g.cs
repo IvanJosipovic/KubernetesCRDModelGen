@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apiextensions.crossplane.io;
 /// <summary>Reference to the resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1UsageSpecByResourceRef
 {
     /// <summary>Name of the referent.</summary>
@@ -17,6 +18,7 @@ public partial class V1alpha1UsageSpecByResourceRef
 }
 
 /// <summary>Selector to the resource. This field will be ignored if ResourceRef is set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1UsageSpecByResourceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -29,6 +31,7 @@ public partial class V1alpha1UsageSpecByResourceSelector
 }
 
 /// <summary>By is the resource that is "using the other resource".</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1UsageSpecBy
 {
     /// <summary>API version of the referent.</summary>
@@ -49,6 +52,7 @@ public partial class V1alpha1UsageSpecBy
 }
 
 /// <summary>Reference to the resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1UsageSpecOfResourceRef
 {
     /// <summary>Name of the referent.</summary>
@@ -57,6 +61,7 @@ public partial class V1alpha1UsageSpecOfResourceRef
 }
 
 /// <summary>Selector to the resource. This field will be ignored if ResourceRef is set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1UsageSpecOfResourceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -69,6 +74,7 @@ public partial class V1alpha1UsageSpecOfResourceSelector
 }
 
 /// <summary>Of is the resource that is "being used".</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1UsageSpecOf
 {
     /// <summary>API version of the referent.</summary>
@@ -89,6 +95,7 @@ public partial class V1alpha1UsageSpecOf
 }
 
 /// <summary>UsageSpec defines the desired state of Usage.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1UsageSpec
 {
     /// <summary>By is the resource that is "using the other resource".</summary>
@@ -109,6 +116,7 @@ public partial class V1alpha1UsageSpec
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1UsageStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -137,6 +145,7 @@ public partial class V1alpha1UsageStatusConditions
 }
 
 /// <summary>UsageStatus defines the observed state of Usage.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1UsageStatus
 {
     /// <summary>Conditions of the resource.</summary>
@@ -144,8 +153,9 @@ public partial class V1alpha1UsageStatus
     public IList<V1alpha1UsageStatusConditions>? Conditions { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>A Usage defines a deletion blocking relationship between two resources.   Usages prevent accidental deletion of a single resource or deletion of resources with dependent resources.   Read the Crossplane documentation for [more information about Compositions](https://docs.crossplane.io/latest/concepts/usages).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1Usage : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1UsageSpec>, IStatus<V1alpha1UsageStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

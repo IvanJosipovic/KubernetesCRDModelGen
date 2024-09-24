@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.beyondcorp.cnrm.cloud.google.com;
 /// <summary>ServiceAccount represents a GCP service account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BeyondCorpAppConnectorSpecPrincipalInfoServiceAccount
 {
     /// <summary>Email address of the service account.</summary>
@@ -17,6 +18,7 @@ public partial class V1alpha1BeyondCorpAppConnectorSpecPrincipalInfoServiceAccou
 }
 
 /// <summary>Principal information about the Identity of the AppConnector.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BeyondCorpAppConnectorSpecPrincipalInfo
 {
     /// <summary>ServiceAccount represents a GCP service account.</summary>
@@ -25,6 +27,7 @@ public partial class V1alpha1BeyondCorpAppConnectorSpecPrincipalInfo
 }
 
 /// <summary>The project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BeyondCorpAppConnectorSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -41,6 +44,7 @@ public partial class V1alpha1BeyondCorpAppConnectorSpecProjectRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BeyondCorpAppConnectorSpec
 {
     /// <summary>An arbitrary user-provided name for the AppConnector.</summary>
@@ -65,6 +69,7 @@ public partial class V1alpha1BeyondCorpAppConnectorSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BeyondCorpAppConnectorStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -89,6 +94,7 @@ public partial class V1alpha1BeyondCorpAppConnectorStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BeyondCorpAppConnectorStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -104,8 +110,9 @@ public partial class V1alpha1BeyondCorpAppConnectorStatus
     public string? State { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1BeyondCorpAppConnector : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1BeyondCorpAppConnectorSpec>, IStatus<V1alpha1BeyondCorpAppConnectorStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

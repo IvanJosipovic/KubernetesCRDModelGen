@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iap.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPBrandSpec
 {
     /// <summary>Immutable. Application name displayed on OAuth consent screen.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1IAPBrandSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPBrandStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -49,6 +51,7 @@ public partial class V1beta1IAPBrandStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPBrandStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -64,8 +67,9 @@ public partial class V1beta1IAPBrandStatus
     public bool? OrgInternalOnly { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1IAPBrand : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IAPBrandSpec>, IStatus<V1beta1IAPBrandStatus>
 {
     public const string KubeApiVersion = "v1beta1";

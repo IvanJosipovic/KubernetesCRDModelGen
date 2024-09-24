@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary>A reference to the ComputeBackendService resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetTCPProxySpecBackendServiceRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeBackendService` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1ComputeTargetTCPProxySpecBackendServiceRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetTCPProxySpec
 {
     /// <summary>A reference to the ComputeBackendService resource.</summary>
@@ -49,6 +51,7 @@ public partial class V1beta1ComputeTargetTCPProxySpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetTCPProxyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -73,6 +76,7 @@ public partial class V1beta1ComputeTargetTCPProxyStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetTCPProxyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -96,8 +100,9 @@ public partial class V1beta1ComputeTargetTCPProxyStatus
     public string? SelfLink { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ComputeTargetTCPProxy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeTargetTCPProxySpec>, IStatus<V1beta1ComputeTargetTCPProxyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

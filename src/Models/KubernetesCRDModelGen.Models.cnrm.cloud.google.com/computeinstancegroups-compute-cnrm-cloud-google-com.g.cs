@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupSpecInstances
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeInstance` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1ComputeInstanceGroupSpecInstances
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupSpecNamedPort
 {
     /// <summary>The name which the port will be mapped to.</summary>
@@ -37,6 +39,7 @@ public partial class V1beta1ComputeInstanceGroupSpecNamedPort
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupSpecNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -53,6 +56,7 @@ public partial class V1beta1ComputeInstanceGroupSpecNetworkRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupSpec
 {
     /// <summary>Immutable. An optional textual description of the instance group.</summary>
@@ -81,6 +85,7 @@ public partial class V1beta1ComputeInstanceGroupSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -105,6 +110,7 @@ public partial class V1beta1ComputeInstanceGroupStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -124,8 +130,9 @@ public partial class V1beta1ComputeInstanceGroupStatus
     public int? Size { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ComputeInstanceGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeInstanceGroupSpec>, IStatus<V1beta1ComputeInstanceGroupStatus>
 {
     public const string KubeApiVersion = "v1beta1";

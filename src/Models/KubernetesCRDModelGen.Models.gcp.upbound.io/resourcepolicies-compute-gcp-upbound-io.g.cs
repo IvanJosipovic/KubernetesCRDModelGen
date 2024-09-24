@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ResourcePolicySpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1ResourcePolicySpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderDiskConsistencyGroupPolicy
 {
     /// <summary>Enable disk consistency on the resource policy.</summary>
@@ -27,6 +29,7 @@ public partial class V1beta1ResourcePolicySpecForProviderDiskConsistencyGroupPol
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderGroupPlacementPolicy
 {
     /// <summary>The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network</summary>
@@ -43,6 +46,7 @@ public partial class V1beta1ResourcePolicySpecForProviderGroupPlacementPolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderInstanceSchedulePolicyVmStartSchedule
 {
     /// <summary>Specifies the frequency for the operation, using the unix-cron format.</summary>
@@ -51,6 +55,7 @@ public partial class V1beta1ResourcePolicySpecForProviderInstanceSchedulePolicyV
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderInstanceSchedulePolicyVmStopSchedule
 {
     /// <summary>Specifies the frequency for the operation, using the unix-cron format.</summary>
@@ -59,6 +64,7 @@ public partial class V1beta1ResourcePolicySpecForProviderInstanceSchedulePolicyV
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderInstanceSchedulePolicy
 {
     /// <summary>The expiration time of the schedule. The timestamp is an RFC3339 string.</summary>
@@ -83,6 +89,7 @@ public partial class V1beta1ResourcePolicySpecForProviderInstanceSchedulePolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyRetentionPolicy
 {
     /// <summary>Maximum age of the snapshot that is allowed to be kept.</summary>
@@ -95,6 +102,7 @@ public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyScheduleDailySchedule
 {
     /// <summary>Defines a schedule with units measured in days. The value determines how many days pass between the start of each cycle. Days in cycle for snapshot schedule policy must be 1.</summary>
@@ -107,6 +115,7 @@ public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyScheduleHourlySchedule
 {
     /// <summary>The number of hours between snapshots.</summary>
@@ -119,6 +128,7 @@ public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks
 {
     /// <summary>The day of the week to create the snapshot. e.g. MONDAY Possible values are: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.</summary>
@@ -131,6 +141,7 @@ public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyScheduleWeeklySchedule
 {
     /// <summary>May contain up to seven (one for each day of the week) snapshot times. Structure is documented below.</summary>
@@ -139,6 +150,7 @@ public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicySchedule
 {
     /// <summary>The policy will execute every nth day at the specified time. Structure is documented below.</summary>
@@ -155,6 +167,7 @@ public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicySnapshotProperties
 {
     /// <summary>Creates the new snapshot in the snapshot chain labeled with the specified name. The chain name must be 1-63 characters long and comply with RFC1035.</summary>
@@ -175,6 +188,7 @@ public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicy
 {
     /// <summary>Retention policy applied to snapshots created by this resource policy. Structure is documented below.</summary>
@@ -191,6 +205,7 @@ public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProvider
 {
     /// <summary>An optional description of this resource. Provide this property when you create the resource.</summary>
@@ -223,6 +238,7 @@ public partial class V1beta1ResourcePolicySpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderDiskConsistencyGroupPolicy
 {
     /// <summary>Enable disk consistency on the resource policy.</summary>
@@ -231,6 +247,7 @@ public partial class V1beta1ResourcePolicySpecInitProviderDiskConsistencyGroupPo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderGroupPlacementPolicy
 {
     /// <summary>The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network</summary>
@@ -247,6 +264,7 @@ public partial class V1beta1ResourcePolicySpecInitProviderGroupPlacementPolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderInstanceSchedulePolicyVmStartSchedule
 {
     /// <summary>Specifies the frequency for the operation, using the unix-cron format.</summary>
@@ -255,6 +273,7 @@ public partial class V1beta1ResourcePolicySpecInitProviderInstanceSchedulePolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderInstanceSchedulePolicyVmStopSchedule
 {
     /// <summary>Specifies the frequency for the operation, using the unix-cron format.</summary>
@@ -263,6 +282,7 @@ public partial class V1beta1ResourcePolicySpecInitProviderInstanceSchedulePolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderInstanceSchedulePolicy
 {
     /// <summary>The expiration time of the schedule. The timestamp is an RFC3339 string.</summary>
@@ -287,6 +307,7 @@ public partial class V1beta1ResourcePolicySpecInitProviderInstanceSchedulePolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicyRetentionPolicy
 {
     /// <summary>Maximum age of the snapshot that is allowed to be kept.</summary>
@@ -299,6 +320,7 @@ public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicyScheduleDailySchedule
 {
     /// <summary>Defines a schedule with units measured in days. The value determines how many days pass between the start of each cycle. Days in cycle for snapshot schedule policy must be 1.</summary>
@@ -311,6 +333,7 @@ public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicyScheduleHourlySchedule
 {
     /// <summary>The number of hours between snapshots.</summary>
@@ -323,6 +346,7 @@ public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks
 {
     /// <summary>The day of the week to create the snapshot. e.g. MONDAY Possible values are: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.</summary>
@@ -335,6 +359,7 @@ public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicyScheduleWeeklySchedule
 {
     /// <summary>May contain up to seven (one for each day of the week) snapshot times. Structure is documented below.</summary>
@@ -343,6 +368,7 @@ public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicySchedule
 {
     /// <summary>The policy will execute every nth day at the specified time. Structure is documented below.</summary>
@@ -359,6 +385,7 @@ public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicySnapshotProperties
 {
     /// <summary>Creates the new snapshot in the snapshot chain labeled with the specified name. The chain name must be 1-63 characters long and comply with RFC1035.</summary>
@@ -379,6 +406,7 @@ public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicy
 {
     /// <summary>Retention policy applied to snapshots created by this resource policy. Structure is documented below.</summary>
@@ -395,6 +423,7 @@ public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicy
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProvider
 {
     /// <summary>An optional description of this resource. Provide this property when you create the resource.</summary>
@@ -422,6 +451,7 @@ public partial class V1beta1ResourcePolicySpecInitProvider
     public IList<V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicy>? SnapshotSchedulePolicy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ResourcePolicySpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -444,6 +474,7 @@ public enum V1beta1ResourcePolicySpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ResourcePolicySpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -454,6 +485,7 @@ public enum V1beta1ResourcePolicySpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ResourcePolicySpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -465,6 +497,7 @@ public enum V1beta1ResourcePolicySpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -479,6 +512,7 @@ public partial class V1beta1ResourcePolicySpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -490,6 +524,7 @@ public partial class V1beta1ResourcePolicySpecProviderConfigRef
     public V1beta1ResourcePolicySpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ResourcePolicySpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -500,6 +535,7 @@ public enum V1beta1ResourcePolicySpecPublishConnectionDetailsToConfigRefPolicyRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ResourcePolicySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -511,6 +547,7 @@ public enum V1beta1ResourcePolicySpecPublishConnectionDetailsToConfigRefPolicyRe
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -525,6 +562,7 @@ public partial class V1beta1ResourcePolicySpecPublishConnectionDetailsToConfigRe
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -537,6 +575,7 @@ public partial class V1beta1ResourcePolicySpecPublishConnectionDetailsToConfigRe
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -553,6 +592,7 @@ public partial class V1beta1ResourcePolicySpecPublishConnectionDetailsToMetadata
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -569,6 +609,7 @@ public partial class V1beta1ResourcePolicySpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -581,6 +622,7 @@ public partial class V1beta1ResourcePolicySpecWriteConnectionSecretToRef
 }
 
 /// <summary>ResourcePolicySpec defines the desired state of ResourcePolicy</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -614,6 +656,7 @@ public partial class V1beta1ResourcePolicySpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderDiskConsistencyGroupPolicy
 {
     /// <summary>Enable disk consistency on the resource policy.</summary>
@@ -622,6 +665,7 @@ public partial class V1beta1ResourcePolicyStatusAtProviderDiskConsistencyGroupPo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderGroupPlacementPolicy
 {
     /// <summary>The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network</summary>
@@ -638,6 +682,7 @@ public partial class V1beta1ResourcePolicyStatusAtProviderGroupPlacementPolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderInstanceSchedulePolicyVmStartSchedule
 {
     /// <summary>Specifies the frequency for the operation, using the unix-cron format.</summary>
@@ -646,6 +691,7 @@ public partial class V1beta1ResourcePolicyStatusAtProviderInstanceSchedulePolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderInstanceSchedulePolicyVmStopSchedule
 {
     /// <summary>Specifies the frequency for the operation, using the unix-cron format.</summary>
@@ -654,6 +700,7 @@ public partial class V1beta1ResourcePolicyStatusAtProviderInstanceSchedulePolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderInstanceSchedulePolicy
 {
     /// <summary>The expiration time of the schedule. The timestamp is an RFC3339 string.</summary>
@@ -678,6 +725,7 @@ public partial class V1beta1ResourcePolicyStatusAtProviderInstanceSchedulePolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicyRetentionPolicy
 {
     /// <summary>Maximum age of the snapshot that is allowed to be kept.</summary>
@@ -690,6 +738,7 @@ public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicyScheduleDailySchedule
 {
     /// <summary>Defines a schedule with units measured in days. The value determines how many days pass between the start of each cycle. Days in cycle for snapshot schedule policy must be 1.</summary>
@@ -702,6 +751,7 @@ public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicyScheduleHourlySchedule
 {
     /// <summary>The number of hours between snapshots.</summary>
@@ -714,6 +764,7 @@ public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks
 {
     /// <summary>The day of the week to create the snapshot. e.g. MONDAY Possible values are: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.</summary>
@@ -726,6 +777,7 @@ public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicyScheduleWeeklySchedule
 {
     /// <summary>May contain up to seven (one for each day of the week) snapshot times. Structure is documented below.</summary>
@@ -734,6 +786,7 @@ public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicySchedule
 {
     /// <summary>The policy will execute every nth day at the specified time. Structure is documented below.</summary>
@@ -750,6 +803,7 @@ public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicySnapshotProperties
 {
     /// <summary>Creates the new snapshot in the snapshot chain labeled with the specified name. The chain name must be 1-63 characters long and comply with RFC1035.</summary>
@@ -770,6 +824,7 @@ public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicy
 {
     /// <summary>Retention policy applied to snapshots created by this resource policy. Structure is documented below.</summary>
@@ -786,6 +841,7 @@ public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProvider
 {
     /// <summary>An optional description of this resource. Provide this property when you create the resource.</summary>
@@ -826,6 +882,7 @@ public partial class V1beta1ResourcePolicyStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -854,6 +911,7 @@ public partial class V1beta1ResourcePolicyStatusConditions
 }
 
 /// <summary>ResourcePolicyStatus defines the observed state of ResourcePolicy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatus
 {
     /// <summary></summary>
@@ -869,8 +927,9 @@ public partial class V1beta1ResourcePolicyStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>ResourcePolicy is the Schema for the ResourcePolicys API. A policy that can be attached to a resource to specify or schedule actions on that resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ResourcePolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ResourcePolicySpec>, IStatus<V1beta1ResourcePolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

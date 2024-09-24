@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.consumption.azure.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BudgetResourceGroupSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1BudgetResourceGroupSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecForProviderFilterDimension
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -35,6 +37,7 @@ public partial class V1beta1BudgetResourceGroupSpecForProviderFilterDimension
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecForProviderFilterNotDimension
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -51,6 +54,7 @@ public partial class V1beta1BudgetResourceGroupSpecForProviderFilterNotDimension
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecForProviderFilterNotTag
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -67,6 +71,7 @@ public partial class V1beta1BudgetResourceGroupSpecForProviderFilterNotTag
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecForProviderFilterNot
 {
     /// <summary>One dimension block as defined below to filter the budget on. Conflicts with tag.</summary>
@@ -79,6 +84,7 @@ public partial class V1beta1BudgetResourceGroupSpecForProviderFilterNot
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecForProviderFilterTag
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -95,6 +101,7 @@ public partial class V1beta1BudgetResourceGroupSpecForProviderFilterTag
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecForProviderFilter
 {
     /// <summary>One or more dimension blocks as defined below to filter the budget on.</summary>
@@ -111,6 +118,7 @@ public partial class V1beta1BudgetResourceGroupSpecForProviderFilter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecForProviderNotification
 {
     /// <summary>Specifies a list of email addresses to send the budget notification to when the threshold is exceeded.</summary>
@@ -142,6 +150,7 @@ public partial class V1beta1BudgetResourceGroupSpecForProviderNotification
     public string? ThresholdType { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BudgetResourceGroupSpecForProviderResourceGroupIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -152,6 +161,7 @@ public enum V1beta1BudgetResourceGroupSpecForProviderResourceGroupIdRefPolicyRes
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BudgetResourceGroupSpecForProviderResourceGroupIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -163,6 +173,7 @@ public enum V1beta1BudgetResourceGroupSpecForProviderResourceGroupIdRefPolicyRes
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecForProviderResourceGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -177,6 +188,7 @@ public partial class V1beta1BudgetResourceGroupSpecForProviderResourceGroupIdRef
 }
 
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecForProviderResourceGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -188,6 +200,7 @@ public partial class V1beta1BudgetResourceGroupSpecForProviderResourceGroupIdRef
     public V1beta1BudgetResourceGroupSpecForProviderResourceGroupIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BudgetResourceGroupSpecForProviderResourceGroupIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -198,6 +211,7 @@ public enum V1beta1BudgetResourceGroupSpecForProviderResourceGroupIdSelectorPoli
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BudgetResourceGroupSpecForProviderResourceGroupIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -209,6 +223,7 @@ public enum V1beta1BudgetResourceGroupSpecForProviderResourceGroupIdSelectorPoli
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecForProviderResourceGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -223,6 +238,7 @@ public partial class V1beta1BudgetResourceGroupSpecForProviderResourceGroupIdSel
 }
 
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecForProviderResourceGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -239,6 +255,7 @@ public partial class V1beta1BudgetResourceGroupSpecForProviderResourceGroupIdSel
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecForProviderTimePeriod
 {
     /// <summary>The end date for the budget. If not set this will be 10 years after the start date.</summary>
@@ -251,6 +268,7 @@ public partial class V1beta1BudgetResourceGroupSpecForProviderTimePeriod
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecForProvider
 {
     /// <summary>The total amount of cost to track with the budget.</summary>
@@ -295,6 +313,7 @@ public partial class V1beta1BudgetResourceGroupSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecInitProviderFilterDimension
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -311,6 +330,7 @@ public partial class V1beta1BudgetResourceGroupSpecInitProviderFilterDimension
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecInitProviderFilterNotDimension
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -327,6 +347,7 @@ public partial class V1beta1BudgetResourceGroupSpecInitProviderFilterNotDimensio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecInitProviderFilterNotTag
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -343,6 +364,7 @@ public partial class V1beta1BudgetResourceGroupSpecInitProviderFilterNotTag
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecInitProviderFilterNot
 {
     /// <summary>One dimension block as defined below to filter the budget on. Conflicts with tag.</summary>
@@ -355,6 +377,7 @@ public partial class V1beta1BudgetResourceGroupSpecInitProviderFilterNot
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecInitProviderFilterTag
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -371,6 +394,7 @@ public partial class V1beta1BudgetResourceGroupSpecInitProviderFilterTag
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecInitProviderFilter
 {
     /// <summary>One or more dimension blocks as defined below to filter the budget on.</summary>
@@ -387,6 +411,7 @@ public partial class V1beta1BudgetResourceGroupSpecInitProviderFilter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecInitProviderNotification
 {
     /// <summary>Specifies a list of email addresses to send the budget notification to when the threshold is exceeded.</summary>
@@ -418,6 +443,7 @@ public partial class V1beta1BudgetResourceGroupSpecInitProviderNotification
     public string? ThresholdType { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BudgetResourceGroupSpecInitProviderResourceGroupIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -428,6 +454,7 @@ public enum V1beta1BudgetResourceGroupSpecInitProviderResourceGroupIdRefPolicyRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BudgetResourceGroupSpecInitProviderResourceGroupIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -439,6 +466,7 @@ public enum V1beta1BudgetResourceGroupSpecInitProviderResourceGroupIdRefPolicyRe
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecInitProviderResourceGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -453,6 +481,7 @@ public partial class V1beta1BudgetResourceGroupSpecInitProviderResourceGroupIdRe
 }
 
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecInitProviderResourceGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -464,6 +493,7 @@ public partial class V1beta1BudgetResourceGroupSpecInitProviderResourceGroupIdRe
     public V1beta1BudgetResourceGroupSpecInitProviderResourceGroupIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BudgetResourceGroupSpecInitProviderResourceGroupIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -474,6 +504,7 @@ public enum V1beta1BudgetResourceGroupSpecInitProviderResourceGroupIdSelectorPol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BudgetResourceGroupSpecInitProviderResourceGroupIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -485,6 +516,7 @@ public enum V1beta1BudgetResourceGroupSpecInitProviderResourceGroupIdSelectorPol
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecInitProviderResourceGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -499,6 +531,7 @@ public partial class V1beta1BudgetResourceGroupSpecInitProviderResourceGroupIdSe
 }
 
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecInitProviderResourceGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -515,6 +548,7 @@ public partial class V1beta1BudgetResourceGroupSpecInitProviderResourceGroupIdSe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecInitProviderTimePeriod
 {
     /// <summary>The end date for the budget. If not set this will be 10 years after the start date.</summary>
@@ -527,6 +561,7 @@ public partial class V1beta1BudgetResourceGroupSpecInitProviderTimePeriod
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecInitProvider
 {
     /// <summary>The total amount of cost to track with the budget.</summary>
@@ -570,6 +605,7 @@ public partial class V1beta1BudgetResourceGroupSpecInitProvider
     public IList<V1beta1BudgetResourceGroupSpecInitProviderTimePeriod>? TimePeriod { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BudgetResourceGroupSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -592,6 +628,7 @@ public enum V1beta1BudgetResourceGroupSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BudgetResourceGroupSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -602,6 +639,7 @@ public enum V1beta1BudgetResourceGroupSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BudgetResourceGroupSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -613,6 +651,7 @@ public enum V1beta1BudgetResourceGroupSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -627,6 +666,7 @@ public partial class V1beta1BudgetResourceGroupSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -638,6 +678,7 @@ public partial class V1beta1BudgetResourceGroupSpecProviderConfigRef
     public V1beta1BudgetResourceGroupSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BudgetResourceGroupSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -648,6 +689,7 @@ public enum V1beta1BudgetResourceGroupSpecPublishConnectionDetailsToConfigRefPol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BudgetResourceGroupSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -659,6 +701,7 @@ public enum V1beta1BudgetResourceGroupSpecPublishConnectionDetailsToConfigRefPol
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -673,6 +716,7 @@ public partial class V1beta1BudgetResourceGroupSpecPublishConnectionDetailsToCon
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -685,6 +729,7 @@ public partial class V1beta1BudgetResourceGroupSpecPublishConnectionDetailsToCon
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -701,6 +746,7 @@ public partial class V1beta1BudgetResourceGroupSpecPublishConnectionDetailsToMet
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -717,6 +763,7 @@ public partial class V1beta1BudgetResourceGroupSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -729,6 +776,7 @@ public partial class V1beta1BudgetResourceGroupSpecWriteConnectionSecretToRef
 }
 
 /// <summary>BudgetResourceGroupSpec defines the desired state of BudgetResourceGroup</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -762,6 +810,7 @@ public partial class V1beta1BudgetResourceGroupSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupStatusAtProviderFilterDimension
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -778,6 +827,7 @@ public partial class V1beta1BudgetResourceGroupStatusAtProviderFilterDimension
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupStatusAtProviderFilterNotDimension
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -794,6 +844,7 @@ public partial class V1beta1BudgetResourceGroupStatusAtProviderFilterNotDimensio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupStatusAtProviderFilterNotTag
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -810,6 +861,7 @@ public partial class V1beta1BudgetResourceGroupStatusAtProviderFilterNotTag
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupStatusAtProviderFilterNot
 {
     /// <summary>One dimension block as defined below to filter the budget on. Conflicts with tag.</summary>
@@ -822,6 +874,7 @@ public partial class V1beta1BudgetResourceGroupStatusAtProviderFilterNot
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupStatusAtProviderFilterTag
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -838,6 +891,7 @@ public partial class V1beta1BudgetResourceGroupStatusAtProviderFilterTag
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupStatusAtProviderFilter
 {
     /// <summary>One or more dimension blocks as defined below to filter the budget on.</summary>
@@ -854,6 +908,7 @@ public partial class V1beta1BudgetResourceGroupStatusAtProviderFilter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupStatusAtProviderNotification
 {
     /// <summary>Specifies a list of email addresses to send the budget notification to when the threshold is exceeded.</summary>
@@ -886,6 +941,7 @@ public partial class V1beta1BudgetResourceGroupStatusAtProviderNotification
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupStatusAtProviderTimePeriod
 {
     /// <summary>The end date for the budget. If not set this will be 10 years after the start date.</summary>
@@ -898,6 +954,7 @@ public partial class V1beta1BudgetResourceGroupStatusAtProviderTimePeriod
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupStatusAtProvider
 {
     /// <summary>The total amount of cost to track with the budget.</summary>
@@ -938,6 +995,7 @@ public partial class V1beta1BudgetResourceGroupStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -966,6 +1024,7 @@ public partial class V1beta1BudgetResourceGroupStatusConditions
 }
 
 /// <summary>BudgetResourceGroupStatus defines the observed state of BudgetResourceGroup.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupStatus
 {
     /// <summary></summary>
@@ -981,8 +1040,9 @@ public partial class V1beta1BudgetResourceGroupStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>BudgetResourceGroup is the Schema for the BudgetResourceGroups API. Manages a Resource Group Consumption Budget.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1BudgetResourceGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BudgetResourceGroupSpec>, IStatus<V1beta1BudgetResourceGroupStatus>
 {
     public const string KubeApiVersion = "v1beta1";

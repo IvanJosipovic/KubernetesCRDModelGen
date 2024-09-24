@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigee.gcp.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AddonsConfigSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1AddonsConfigSpecDeletionPolicyEnum
 }
 
 /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigAdvancedApiOpsConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -27,6 +29,7 @@ public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigAdvancedApiOp
 }
 
 /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigApiSecurityConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -35,6 +38,7 @@ public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigApiSecurityCo
 }
 
 /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigConnectorsPlatformConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -43,6 +47,7 @@ public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigConnectorsPla
 }
 
 /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigIntegrationConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -51,6 +56,7 @@ public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigIntegrationCo
 }
 
 /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigMonetizationConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -59,6 +65,7 @@ public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigMonetizationC
 }
 
 /// <summary>Addon configurations of the Apigee organization. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecForProviderAddonsConfig
 {
     /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
@@ -82,6 +89,7 @@ public partial class V1beta1AddonsConfigSpecForProviderAddonsConfig
     public V1beta1AddonsConfigSpecForProviderAddonsConfigMonetizationConfig? MonetizationConfig { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AddonsConfigSpecForProviderOrgRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -92,6 +100,7 @@ public enum V1beta1AddonsConfigSpecForProviderOrgRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AddonsConfigSpecForProviderOrgRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -103,6 +112,7 @@ public enum V1beta1AddonsConfigSpecForProviderOrgRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecForProviderOrgRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -117,6 +127,7 @@ public partial class V1beta1AddonsConfigSpecForProviderOrgRefPolicy
 }
 
 /// <summary>Reference to a Organization in apigee to populate org.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecForProviderOrgRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -128,6 +139,7 @@ public partial class V1beta1AddonsConfigSpecForProviderOrgRef
     public V1beta1AddonsConfigSpecForProviderOrgRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AddonsConfigSpecForProviderOrgSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -138,6 +150,7 @@ public enum V1beta1AddonsConfigSpecForProviderOrgSelectorPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AddonsConfigSpecForProviderOrgSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -149,6 +162,7 @@ public enum V1beta1AddonsConfigSpecForProviderOrgSelectorPolicyResolveEnum
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecForProviderOrgSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -163,6 +177,7 @@ public partial class V1beta1AddonsConfigSpecForProviderOrgSelectorPolicy
 }
 
 /// <summary>Selector for a Organization in apigee to populate org.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecForProviderOrgSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -179,6 +194,7 @@ public partial class V1beta1AddonsConfigSpecForProviderOrgSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecForProvider
 {
     /// <summary>Addon configurations of the Apigee organization. Structure is documented below.</summary>
@@ -199,6 +215,7 @@ public partial class V1beta1AddonsConfigSpecForProvider
 }
 
 /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigAdvancedApiOpsConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -207,6 +224,7 @@ public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigAdvancedApiO
 }
 
 /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigApiSecurityConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -215,6 +233,7 @@ public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigApiSecurityC
 }
 
 /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigConnectorsPlatformConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -223,6 +242,7 @@ public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigConnectorsPl
 }
 
 /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigIntegrationConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -231,6 +251,7 @@ public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigIntegrationC
 }
 
 /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigMonetizationConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -239,6 +260,7 @@ public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigMonetization
 }
 
 /// <summary>Addon configurations of the Apigee organization. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfig
 {
     /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
@@ -262,6 +284,7 @@ public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfig
     public V1beta1AddonsConfigSpecInitProviderAddonsConfigMonetizationConfig? MonetizationConfig { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AddonsConfigSpecInitProviderOrgRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -272,6 +295,7 @@ public enum V1beta1AddonsConfigSpecInitProviderOrgRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AddonsConfigSpecInitProviderOrgRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -283,6 +307,7 @@ public enum V1beta1AddonsConfigSpecInitProviderOrgRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecInitProviderOrgRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -297,6 +322,7 @@ public partial class V1beta1AddonsConfigSpecInitProviderOrgRefPolicy
 }
 
 /// <summary>Reference to a Organization in apigee to populate org.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecInitProviderOrgRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -308,6 +334,7 @@ public partial class V1beta1AddonsConfigSpecInitProviderOrgRef
     public V1beta1AddonsConfigSpecInitProviderOrgRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AddonsConfigSpecInitProviderOrgSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -318,6 +345,7 @@ public enum V1beta1AddonsConfigSpecInitProviderOrgSelectorPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AddonsConfigSpecInitProviderOrgSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -329,6 +357,7 @@ public enum V1beta1AddonsConfigSpecInitProviderOrgSelectorPolicyResolveEnum
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecInitProviderOrgSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -343,6 +372,7 @@ public partial class V1beta1AddonsConfigSpecInitProviderOrgSelectorPolicy
 }
 
 /// <summary>Selector for a Organization in apigee to populate org.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecInitProviderOrgSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -359,6 +389,7 @@ public partial class V1beta1AddonsConfigSpecInitProviderOrgSelector
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecInitProvider
 {
     /// <summary>Addon configurations of the Apigee organization. Structure is documented below.</summary>
@@ -378,6 +409,7 @@ public partial class V1beta1AddonsConfigSpecInitProvider
     public V1beta1AddonsConfigSpecInitProviderOrgSelector? OrgSelector { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AddonsConfigSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -400,6 +432,7 @@ public enum V1beta1AddonsConfigSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AddonsConfigSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -410,6 +443,7 @@ public enum V1beta1AddonsConfigSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AddonsConfigSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -421,6 +455,7 @@ public enum V1beta1AddonsConfigSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -435,6 +470,7 @@ public partial class V1beta1AddonsConfigSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -446,6 +482,7 @@ public partial class V1beta1AddonsConfigSpecProviderConfigRef
     public V1beta1AddonsConfigSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AddonsConfigSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -456,6 +493,7 @@ public enum V1beta1AddonsConfigSpecPublishConnectionDetailsToConfigRefPolicyReso
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AddonsConfigSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -467,6 +505,7 @@ public enum V1beta1AddonsConfigSpecPublishConnectionDetailsToConfigRefPolicyReso
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -481,6 +520,7 @@ public partial class V1beta1AddonsConfigSpecPublishConnectionDetailsToConfigRefP
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -493,6 +533,7 @@ public partial class V1beta1AddonsConfigSpecPublishConnectionDetailsToConfigRef
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -509,6 +550,7 @@ public partial class V1beta1AddonsConfigSpecPublishConnectionDetailsToMetadata
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -525,6 +567,7 @@ public partial class V1beta1AddonsConfigSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -537,6 +580,7 @@ public partial class V1beta1AddonsConfigSpecWriteConnectionSecretToRef
 }
 
 /// <summary>AddonsConfigSpec defines the desired state of AddonsConfig</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -570,6 +614,7 @@ public partial class V1beta1AddonsConfigSpec
 }
 
 /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigAdvancedApiOpsConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -578,6 +623,7 @@ public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigAdvancedApiO
 }
 
 /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigApiSecurityConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -590,6 +636,7 @@ public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigApiSecurityC
 }
 
 /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigConnectorsPlatformConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -602,6 +649,7 @@ public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigConnectorsPl
 }
 
 /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigIntegrationConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -610,6 +658,7 @@ public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigIntegrationC
 }
 
 /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigMonetizationConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -618,6 +667,7 @@ public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigMonetization
 }
 
 /// <summary>Addon configurations of the Apigee organization. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfig
 {
     /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
@@ -642,6 +692,7 @@ public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigStatusAtProvider
 {
     /// <summary>Addon configurations of the Apigee organization. Structure is documented below.</summary>
@@ -658,6 +709,7 @@ public partial class V1beta1AddonsConfigStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -686,6 +738,7 @@ public partial class V1beta1AddonsConfigStatusConditions
 }
 
 /// <summary>AddonsConfigStatus defines the observed state of AddonsConfig.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigStatus
 {
     /// <summary></summary>
@@ -701,8 +754,9 @@ public partial class V1beta1AddonsConfigStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>AddonsConfig is the Schema for the AddonsConfigs API. Configures the add-ons for the Apigee organization.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1AddonsConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AddonsConfigSpec>, IStatus<V1beta1AddonsConfigStatus>
 {
     public const string KubeApiVersion = "v1beta1";

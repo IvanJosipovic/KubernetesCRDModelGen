@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SecurityPolicySpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1SecurityPolicySpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecForProviderAdaptiveProtectionConfigLayer7DdosDefenseConfig
 {
     /// <summary>If set to true, enables CAAP for L7 DDoS detection.</summary>
@@ -31,6 +33,7 @@ public partial class V1beta1SecurityPolicySpecForProviderAdaptiveProtectionConfi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecForProviderAdaptiveProtectionConfig
 {
     /// <summary>Configuration for Google Cloud Armor Adaptive Protection Layer 7 DDoS Defense. Structure is documented below.</summary>
@@ -39,6 +42,7 @@ public partial class V1beta1SecurityPolicySpecForProviderAdaptiveProtectionConfi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecForProviderAdvancedOptionsConfigJsonCustomConfig
 {
     /// <summary>A list of custom Content-Type header values to apply the JSON parsing. The format of the Content-Type header values is defined in RFC 1341. When configuring a custom Content-Type header value, only the type/subtype needs to be specified, and the parameters should be excluded.</summary>
@@ -47,6 +51,7 @@ public partial class V1beta1SecurityPolicySpecForProviderAdvancedOptionsConfigJs
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecForProviderAdvancedOptionsConfig
 {
     /// <summary>Custom configuration to apply the JSON parsing. Only applicable when json_parsing is set to STANDARD. Structure is documented below.</summary>
@@ -67,6 +72,7 @@ public partial class V1beta1SecurityPolicySpecForProviderAdvancedOptionsConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecForProviderRecaptchaOptionsConfig
 {
     /// <summary>A field to supply a reCAPTCHA site key to be used for all the rules using the redirect action with the type of GOOGLE_RECAPTCHA under the security policy. The specified site key needs to be created from the reCAPTCHA API. The user is responsible for the validity of the specified site key. If not specified, a Google-managed site key is used.</summary>
@@ -75,6 +81,7 @@ public partial class V1beta1SecurityPolicySpecForProviderRecaptchaOptionsConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecForProviderRuleHeaderActionRequestHeadersToAdds
 {
     /// <summary>The name of the header to set.</summary>
@@ -87,6 +94,7 @@ public partial class V1beta1SecurityPolicySpecForProviderRuleHeaderActionRequest
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecForProviderRuleHeaderAction
 {
     /// <summary>The list of request headers to add or overwrite if they're already present. Structure is documented below.</summary>
@@ -95,6 +103,7 @@ public partial class V1beta1SecurityPolicySpecForProviderRuleHeaderAction
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecForProviderRuleMatchConfig
 {
     /// <summary>Set of IP addresses or ranges (IPV4 or IPV6) in CIDR notation to match against inbound traffic. There is a limit of 10 IP ranges per rule. A value of * matches all IPs (can be used to override the default behavior).</summary>
@@ -103,6 +112,7 @@ public partial class V1beta1SecurityPolicySpecForProviderRuleMatchConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecForProviderRuleMatchExpr
 {
     /// <summary>Textual representation of an expression in Common Expression Language syntax. The application context of the containing message determines which well-known feature set of CEL is supported.</summary>
@@ -111,6 +121,7 @@ public partial class V1beta1SecurityPolicySpecForProviderRuleMatchExpr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecForProviderRuleMatchExprOptionsRecaptchaOptions
 {
     /// <summary>A list of site keys to be used during the validation of reCAPTCHA action-tokens. The provided site keys need to be created from reCAPTCHA API under the same project where the security policy is created.</summary>
@@ -123,6 +134,7 @@ public partial class V1beta1SecurityPolicySpecForProviderRuleMatchExprOptionsRec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecForProviderRuleMatchExprOptions
 {
     /// <summary>reCAPTCHA configuration options to be applied for the rule. If the rule does not evaluate reCAPTCHA tokens, this field has no effect. Structure is documented below.</summary>
@@ -131,6 +143,7 @@ public partial class V1beta1SecurityPolicySpecForProviderRuleMatchExprOptions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecForProviderRuleMatch
 {
     /// <summary>The configuration options available when specifying versioned_expr. This field must be specified if versioned_expr is specified and cannot be specified if versioned_expr is not specified. Structure is documented below.</summary>
@@ -151,6 +164,7 @@ public partial class V1beta1SecurityPolicySpecForProviderRuleMatch
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecForProviderRuleRateLimitOptionsBanThreshold
 {
     /// <summary>Number of HTTP(S) requests for calculating the threshold.</summary>
@@ -163,6 +177,7 @@ public partial class V1beta1SecurityPolicySpecForProviderRuleRateLimitOptionsBan
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecForProviderRuleRateLimitOptionsExceedRedirectOptions
 {
     /// <summary>Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.</summary>
@@ -175,6 +190,7 @@ public partial class V1beta1SecurityPolicySpecForProviderRuleRateLimitOptionsExc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecForProviderRuleRateLimitOptionsRateLimitThreshold
 {
     /// <summary>Number of HTTP(S) requests for calculating the threshold.</summary>
@@ -187,6 +203,7 @@ public partial class V1beta1SecurityPolicySpecForProviderRuleRateLimitOptionsRat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecForProviderRuleRateLimitOptions
 {
     /// <summary>Can only be specified if the action for the rule is rate_based_ban. If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.</summary>
@@ -223,6 +240,7 @@ public partial class V1beta1SecurityPolicySpecForProviderRuleRateLimitOptions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecForProviderRuleRedirectOptions
 {
     /// <summary>Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.</summary>
@@ -235,6 +253,7 @@ public partial class V1beta1SecurityPolicySpecForProviderRuleRedirectOptions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecForProviderRule
 {
     /// <summary>Action to take when match matches the request. Valid values:</summary>
@@ -271,6 +290,7 @@ public partial class V1beta1SecurityPolicySpecForProviderRule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecForProvider
 {
     /// <summary>Configuration for Google Cloud Armor Adaptive Protection. Structure is documented below.</summary>
@@ -303,6 +323,7 @@ public partial class V1beta1SecurityPolicySpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecInitProviderAdaptiveProtectionConfigLayer7DdosDefenseConfig
 {
     /// <summary>If set to true, enables CAAP for L7 DDoS detection.</summary>
@@ -315,6 +336,7 @@ public partial class V1beta1SecurityPolicySpecInitProviderAdaptiveProtectionConf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecInitProviderAdaptiveProtectionConfig
 {
     /// <summary>Configuration for Google Cloud Armor Adaptive Protection Layer 7 DDoS Defense. Structure is documented below.</summary>
@@ -323,6 +345,7 @@ public partial class V1beta1SecurityPolicySpecInitProviderAdaptiveProtectionConf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecInitProviderAdvancedOptionsConfigJsonCustomConfig
 {
     /// <summary>A list of custom Content-Type header values to apply the JSON parsing. The format of the Content-Type header values is defined in RFC 1341. When configuring a custom Content-Type header value, only the type/subtype needs to be specified, and the parameters should be excluded.</summary>
@@ -331,6 +354,7 @@ public partial class V1beta1SecurityPolicySpecInitProviderAdvancedOptionsConfigJ
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecInitProviderAdvancedOptionsConfig
 {
     /// <summary>Custom configuration to apply the JSON parsing. Only applicable when json_parsing is set to STANDARD. Structure is documented below.</summary>
@@ -351,6 +375,7 @@ public partial class V1beta1SecurityPolicySpecInitProviderAdvancedOptionsConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecInitProviderRecaptchaOptionsConfig
 {
     /// <summary>A field to supply a reCAPTCHA site key to be used for all the rules using the redirect action with the type of GOOGLE_RECAPTCHA under the security policy. The specified site key needs to be created from the reCAPTCHA API. The user is responsible for the validity of the specified site key. If not specified, a Google-managed site key is used.</summary>
@@ -359,6 +384,7 @@ public partial class V1beta1SecurityPolicySpecInitProviderRecaptchaOptionsConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecInitProviderRuleHeaderActionRequestHeadersToAdds
 {
     /// <summary>The name of the header to set.</summary>
@@ -371,6 +397,7 @@ public partial class V1beta1SecurityPolicySpecInitProviderRuleHeaderActionReques
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecInitProviderRuleHeaderAction
 {
     /// <summary>The list of request headers to add or overwrite if they're already present. Structure is documented below.</summary>
@@ -379,6 +406,7 @@ public partial class V1beta1SecurityPolicySpecInitProviderRuleHeaderAction
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecInitProviderRuleMatchConfig
 {
     /// <summary>Set of IP addresses or ranges (IPV4 or IPV6) in CIDR notation to match against inbound traffic. There is a limit of 10 IP ranges per rule. A value of * matches all IPs (can be used to override the default behavior).</summary>
@@ -387,6 +415,7 @@ public partial class V1beta1SecurityPolicySpecInitProviderRuleMatchConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecInitProviderRuleMatchExpr
 {
     /// <summary>Textual representation of an expression in Common Expression Language syntax. The application context of the containing message determines which well-known feature set of CEL is supported.</summary>
@@ -395,6 +424,7 @@ public partial class V1beta1SecurityPolicySpecInitProviderRuleMatchExpr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecInitProviderRuleMatchExprOptionsRecaptchaOptions
 {
     /// <summary>A list of site keys to be used during the validation of reCAPTCHA action-tokens. The provided site keys need to be created from reCAPTCHA API under the same project where the security policy is created.</summary>
@@ -407,6 +437,7 @@ public partial class V1beta1SecurityPolicySpecInitProviderRuleMatchExprOptionsRe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecInitProviderRuleMatchExprOptions
 {
     /// <summary>reCAPTCHA configuration options to be applied for the rule. If the rule does not evaluate reCAPTCHA tokens, this field has no effect. Structure is documented below.</summary>
@@ -415,6 +446,7 @@ public partial class V1beta1SecurityPolicySpecInitProviderRuleMatchExprOptions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecInitProviderRuleMatch
 {
     /// <summary>The configuration options available when specifying versioned_expr. This field must be specified if versioned_expr is specified and cannot be specified if versioned_expr is not specified. Structure is documented below.</summary>
@@ -435,6 +467,7 @@ public partial class V1beta1SecurityPolicySpecInitProviderRuleMatch
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecInitProviderRuleRateLimitOptionsBanThreshold
 {
     /// <summary>Number of HTTP(S) requests for calculating the threshold.</summary>
@@ -447,6 +480,7 @@ public partial class V1beta1SecurityPolicySpecInitProviderRuleRateLimitOptionsBa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecInitProviderRuleRateLimitOptionsExceedRedirectOptions
 {
     /// <summary>Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.</summary>
@@ -459,6 +493,7 @@ public partial class V1beta1SecurityPolicySpecInitProviderRuleRateLimitOptionsEx
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecInitProviderRuleRateLimitOptionsRateLimitThreshold
 {
     /// <summary>Number of HTTP(S) requests for calculating the threshold.</summary>
@@ -471,6 +506,7 @@ public partial class V1beta1SecurityPolicySpecInitProviderRuleRateLimitOptionsRa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecInitProviderRuleRateLimitOptions
 {
     /// <summary>Can only be specified if the action for the rule is rate_based_ban. If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.</summary>
@@ -507,6 +543,7 @@ public partial class V1beta1SecurityPolicySpecInitProviderRuleRateLimitOptions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecInitProviderRuleRedirectOptions
 {
     /// <summary>Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.</summary>
@@ -519,6 +556,7 @@ public partial class V1beta1SecurityPolicySpecInitProviderRuleRedirectOptions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecInitProviderRule
 {
     /// <summary>Action to take when match matches the request. Valid values:</summary>
@@ -555,6 +593,7 @@ public partial class V1beta1SecurityPolicySpecInitProviderRule
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecInitProvider
 {
     /// <summary>Configuration for Google Cloud Armor Adaptive Protection. Structure is documented below.</summary>
@@ -586,6 +625,7 @@ public partial class V1beta1SecurityPolicySpecInitProvider
     public string? Type { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SecurityPolicySpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -608,6 +648,7 @@ public enum V1beta1SecurityPolicySpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SecurityPolicySpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -618,6 +659,7 @@ public enum V1beta1SecurityPolicySpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SecurityPolicySpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -629,6 +671,7 @@ public enum V1beta1SecurityPolicySpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -643,6 +686,7 @@ public partial class V1beta1SecurityPolicySpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -654,6 +698,7 @@ public partial class V1beta1SecurityPolicySpecProviderConfigRef
     public V1beta1SecurityPolicySpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SecurityPolicySpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -664,6 +709,7 @@ public enum V1beta1SecurityPolicySpecPublishConnectionDetailsToConfigRefPolicyRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SecurityPolicySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -675,6 +721,7 @@ public enum V1beta1SecurityPolicySpecPublishConnectionDetailsToConfigRefPolicyRe
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -689,6 +736,7 @@ public partial class V1beta1SecurityPolicySpecPublishConnectionDetailsToConfigRe
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -701,6 +749,7 @@ public partial class V1beta1SecurityPolicySpecPublishConnectionDetailsToConfigRe
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -717,6 +766,7 @@ public partial class V1beta1SecurityPolicySpecPublishConnectionDetailsToMetadata
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -733,6 +783,7 @@ public partial class V1beta1SecurityPolicySpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -745,6 +796,7 @@ public partial class V1beta1SecurityPolicySpecWriteConnectionSecretToRef
 }
 
 /// <summary>SecurityPolicySpec defines the desired state of SecurityPolicy</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -778,6 +830,7 @@ public partial class V1beta1SecurityPolicySpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicyStatusAtProviderAdaptiveProtectionConfigLayer7DdosDefenseConfig
 {
     /// <summary>If set to true, enables CAAP for L7 DDoS detection.</summary>
@@ -790,6 +843,7 @@ public partial class V1beta1SecurityPolicyStatusAtProviderAdaptiveProtectionConf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicyStatusAtProviderAdaptiveProtectionConfig
 {
     /// <summary>Configuration for Google Cloud Armor Adaptive Protection Layer 7 DDoS Defense. Structure is documented below.</summary>
@@ -798,6 +852,7 @@ public partial class V1beta1SecurityPolicyStatusAtProviderAdaptiveProtectionConf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicyStatusAtProviderAdvancedOptionsConfigJsonCustomConfig
 {
     /// <summary>A list of custom Content-Type header values to apply the JSON parsing. The format of the Content-Type header values is defined in RFC 1341. When configuring a custom Content-Type header value, only the type/subtype needs to be specified, and the parameters should be excluded.</summary>
@@ -806,6 +861,7 @@ public partial class V1beta1SecurityPolicyStatusAtProviderAdvancedOptionsConfigJ
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicyStatusAtProviderAdvancedOptionsConfig
 {
     /// <summary>Custom configuration to apply the JSON parsing. Only applicable when json_parsing is set to STANDARD. Structure is documented below.</summary>
@@ -826,6 +882,7 @@ public partial class V1beta1SecurityPolicyStatusAtProviderAdvancedOptionsConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicyStatusAtProviderRecaptchaOptionsConfig
 {
     /// <summary>A field to supply a reCAPTCHA site key to be used for all the rules using the redirect action with the type of GOOGLE_RECAPTCHA under the security policy. The specified site key needs to be created from the reCAPTCHA API. The user is responsible for the validity of the specified site key. If not specified, a Google-managed site key is used.</summary>
@@ -834,6 +891,7 @@ public partial class V1beta1SecurityPolicyStatusAtProviderRecaptchaOptionsConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicyStatusAtProviderRuleHeaderActionRequestHeadersToAdds
 {
     /// <summary>The name of the header to set.</summary>
@@ -846,6 +904,7 @@ public partial class V1beta1SecurityPolicyStatusAtProviderRuleHeaderActionReques
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicyStatusAtProviderRuleHeaderAction
 {
     /// <summary>The list of request headers to add or overwrite if they're already present. Structure is documented below.</summary>
@@ -854,6 +913,7 @@ public partial class V1beta1SecurityPolicyStatusAtProviderRuleHeaderAction
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicyStatusAtProviderRuleMatchConfig
 {
     /// <summary>Set of IP addresses or ranges (IPV4 or IPV6) in CIDR notation to match against inbound traffic. There is a limit of 10 IP ranges per rule. A value of * matches all IPs (can be used to override the default behavior).</summary>
@@ -862,6 +922,7 @@ public partial class V1beta1SecurityPolicyStatusAtProviderRuleMatchConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicyStatusAtProviderRuleMatchExpr
 {
     /// <summary>Textual representation of an expression in Common Expression Language syntax. The application context of the containing message determines which well-known feature set of CEL is supported.</summary>
@@ -870,6 +931,7 @@ public partial class V1beta1SecurityPolicyStatusAtProviderRuleMatchExpr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicyStatusAtProviderRuleMatchExprOptionsRecaptchaOptions
 {
     /// <summary>A list of site keys to be used during the validation of reCAPTCHA action-tokens. The provided site keys need to be created from reCAPTCHA API under the same project where the security policy is created.</summary>
@@ -882,6 +944,7 @@ public partial class V1beta1SecurityPolicyStatusAtProviderRuleMatchExprOptionsRe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicyStatusAtProviderRuleMatchExprOptions
 {
     /// <summary>reCAPTCHA configuration options to be applied for the rule. If the rule does not evaluate reCAPTCHA tokens, this field has no effect. Structure is documented below.</summary>
@@ -890,6 +953,7 @@ public partial class V1beta1SecurityPolicyStatusAtProviderRuleMatchExprOptions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicyStatusAtProviderRuleMatch
 {
     /// <summary>The configuration options available when specifying versioned_expr. This field must be specified if versioned_expr is specified and cannot be specified if versioned_expr is not specified. Structure is documented below.</summary>
@@ -910,6 +974,7 @@ public partial class V1beta1SecurityPolicyStatusAtProviderRuleMatch
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicyStatusAtProviderRuleRateLimitOptionsBanThreshold
 {
     /// <summary>Number of HTTP(S) requests for calculating the threshold.</summary>
@@ -922,6 +987,7 @@ public partial class V1beta1SecurityPolicyStatusAtProviderRuleRateLimitOptionsBa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicyStatusAtProviderRuleRateLimitOptionsExceedRedirectOptions
 {
     /// <summary>Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.</summary>
@@ -934,6 +1000,7 @@ public partial class V1beta1SecurityPolicyStatusAtProviderRuleRateLimitOptionsEx
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicyStatusAtProviderRuleRateLimitOptionsRateLimitThreshold
 {
     /// <summary>Number of HTTP(S) requests for calculating the threshold.</summary>
@@ -946,6 +1013,7 @@ public partial class V1beta1SecurityPolicyStatusAtProviderRuleRateLimitOptionsRa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicyStatusAtProviderRuleRateLimitOptions
 {
     /// <summary>Can only be specified if the action for the rule is rate_based_ban. If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.</summary>
@@ -982,6 +1050,7 @@ public partial class V1beta1SecurityPolicyStatusAtProviderRuleRateLimitOptions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicyStatusAtProviderRuleRedirectOptions
 {
     /// <summary>Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.</summary>
@@ -994,6 +1063,7 @@ public partial class V1beta1SecurityPolicyStatusAtProviderRuleRedirectOptions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicyStatusAtProviderRule
 {
     /// <summary>Action to take when match matches the request. Valid values:</summary>
@@ -1030,6 +1100,7 @@ public partial class V1beta1SecurityPolicyStatusAtProviderRule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicyStatusAtProvider
 {
     /// <summary>Configuration for Google Cloud Armor Adaptive Protection. Structure is documented below.</summary>
@@ -1074,6 +1145,7 @@ public partial class V1beta1SecurityPolicyStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1102,6 +1174,7 @@ public partial class V1beta1SecurityPolicyStatusConditions
 }
 
 /// <summary>SecurityPolicyStatus defines the observed state of SecurityPolicy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicyStatus
 {
     /// <summary></summary>
@@ -1117,8 +1190,9 @@ public partial class V1beta1SecurityPolicyStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>SecurityPolicy is the Schema for the SecurityPolicys API. Creates a Security Policy resource for Google Compute Engine.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1SecurityPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SecurityPolicySpec>, IStatus<V1beta1SecurityPolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

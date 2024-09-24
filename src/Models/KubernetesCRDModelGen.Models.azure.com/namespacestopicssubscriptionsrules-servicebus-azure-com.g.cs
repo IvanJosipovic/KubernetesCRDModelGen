@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.servicebus.azure.com;
 /// <summary>Storage version of v1api20211101.Action Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleSpecAction
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -29,6 +30,7 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleSpecAc
 }
 
 /// <summary>Storage version of v1api20211101.CorrelationFilter Represents the correlation filter expression.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleSpecCorrelationFilter
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -77,6 +79,7 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleSpecCo
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a servicebus.azure.com/NamespacesTopicsSubscription resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleSpecOwner
 {
     /// <summary></summary>
@@ -89,6 +92,7 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleSpecOw
 }
 
 /// <summary>Storage version of v1api20211101.SqlFilter Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleSpecSqlFilter
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -109,6 +113,7 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleSpecSq
 }
 
 /// <summary>Storage version of v1api20211101.Namespaces_Topics_Subscriptions_Rule_Spec</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -145,6 +150,7 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleSpec
 }
 
 /// <summary>Storage version of v1api20211101.Action_STATUS Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleStatusAction
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -165,6 +171,7 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleStatus
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -197,6 +204,7 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleStatus
 }
 
 /// <summary>Storage version of v1api20211101.CorrelationFilter_STATUS Represents the correlation filter expression.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleStatusCorrelationFilter
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -245,6 +253,7 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleStatus
 }
 
 /// <summary>Storage version of v1api20211101.SqlFilter_STATUS Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleStatusSqlFilter
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -265,6 +274,7 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleStatus
 }
 
 /// <summary>Storage version of v1api20211101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -297,6 +307,7 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleStatus
 }
 
 /// <summary>Storage version of v1api20211101.Namespaces_Topics_Subscriptions_Rule_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -344,8 +355,9 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleStatus
     public string? Type { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Storage version of v1api20211101.NamespacesTopicsSubscriptionsRule Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/stable/2021-11-01/Rules.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}/subscriptions/{subscriptionName}/rules/{ruleName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1api20211101storageNamespacesTopicsSubscriptionsRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20211101storageNamespacesTopicsSubscriptionsRuleSpec>, IStatus<V1api20211101storageNamespacesTopicsSubscriptionsRuleStatus>
 {
     public const string KubeApiVersion = "v1api20211101storage";

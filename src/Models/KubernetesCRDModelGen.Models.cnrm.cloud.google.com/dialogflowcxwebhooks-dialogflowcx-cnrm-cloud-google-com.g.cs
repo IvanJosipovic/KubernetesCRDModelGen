@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dialogflowcx.cnrm.cloud.google.com;
 /// <summary>Configuration for a generic web service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXWebhookSpecGenericWebService
 {
     /// <summary>Specifies a list of allowed custom CA certificates (in DER format) for HTTPS verification.</summary>
@@ -25,6 +26,7 @@ public partial class V1alpha1DialogflowCXWebhookSpecGenericWebService
 }
 
 /// <summary>The name of Service Directory service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXWebhookSpecServiceDirectoryGenericWebService
 {
     /// <summary>Specifies a list of allowed custom CA certificates (in DER format) for HTTPS verification.</summary>
@@ -41,6 +43,7 @@ public partial class V1alpha1DialogflowCXWebhookSpecServiceDirectoryGenericWebSe
 }
 
 /// <summary>Configuration for a Service Directory service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXWebhookSpecServiceDirectory
 {
     /// <summary>The name of Service Directory service.</summary>
@@ -53,6 +56,7 @@ public partial class V1alpha1DialogflowCXWebhookSpecServiceDirectory
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXWebhookSpec
 {
     /// <summary>Indicates whether the webhook is disabled.</summary>
@@ -97,6 +101,7 @@ public partial class V1alpha1DialogflowCXWebhookSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXWebhookStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -121,6 +126,7 @@ public partial class V1alpha1DialogflowCXWebhookStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXWebhookStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -140,8 +146,9 @@ public partial class V1alpha1DialogflowCXWebhookStatus
     public string? StartFlow { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1DialogflowCXWebhook : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DialogflowCXWebhookSpec>, IStatus<V1alpha1DialogflowCXWebhookStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

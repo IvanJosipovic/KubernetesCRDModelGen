@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.imagebuilder.aws.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1InfrastructureConfigurationSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecForProviderInstanceMetadataOptions
 {
     /// <summary>The number of hops that an instance can traverse to reach its destonation.</summary>
@@ -30,6 +32,7 @@ public partial class V1beta1InfrastructureConfigurationSpecForProviderInstanceMe
     public string? HttpTokens { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecForProviderInstanceProfileNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -40,6 +43,7 @@ public enum V1beta1InfrastructureConfigurationSpecForProviderInstanceProfileName
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecForProviderInstanceProfileNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -51,6 +55,7 @@ public enum V1beta1InfrastructureConfigurationSpecForProviderInstanceProfileName
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecForProviderInstanceProfileNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -65,6 +70,7 @@ public partial class V1beta1InfrastructureConfigurationSpecForProviderInstancePr
 }
 
 /// <summary>Reference to a InstanceProfile in iam to populate instanceProfileName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecForProviderInstanceProfileNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -76,6 +82,7 @@ public partial class V1beta1InfrastructureConfigurationSpecForProviderInstancePr
     public V1beta1InfrastructureConfigurationSpecForProviderInstanceProfileNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecForProviderInstanceProfileNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -86,6 +93,7 @@ public enum V1beta1InfrastructureConfigurationSpecForProviderInstanceProfileName
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecForProviderInstanceProfileNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -97,6 +105,7 @@ public enum V1beta1InfrastructureConfigurationSpecForProviderInstanceProfileName
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecForProviderInstanceProfileNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -111,6 +120,7 @@ public partial class V1beta1InfrastructureConfigurationSpecForProviderInstancePr
 }
 
 /// <summary>Selector for a InstanceProfile in iam to populate instanceProfileName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecForProviderInstanceProfileNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -126,6 +136,7 @@ public partial class V1beta1InfrastructureConfigurationSpecForProviderInstancePr
     public V1beta1InfrastructureConfigurationSpecForProviderInstanceProfileNameSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecForProviderKeyPairRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -136,6 +147,7 @@ public enum V1beta1InfrastructureConfigurationSpecForProviderKeyPairRefPolicyRes
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecForProviderKeyPairRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -147,6 +159,7 @@ public enum V1beta1InfrastructureConfigurationSpecForProviderKeyPairRefPolicyRes
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecForProviderKeyPairRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -161,6 +174,7 @@ public partial class V1beta1InfrastructureConfigurationSpecForProviderKeyPairRef
 }
 
 /// <summary>Reference to a KeyPair in ec2 to populate keyPair.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecForProviderKeyPairRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -172,6 +186,7 @@ public partial class V1beta1InfrastructureConfigurationSpecForProviderKeyPairRef
     public V1beta1InfrastructureConfigurationSpecForProviderKeyPairRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecForProviderKeyPairSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -182,6 +197,7 @@ public enum V1beta1InfrastructureConfigurationSpecForProviderKeyPairSelectorPoli
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecForProviderKeyPairSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -193,6 +209,7 @@ public enum V1beta1InfrastructureConfigurationSpecForProviderKeyPairSelectorPoli
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecForProviderKeyPairSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -207,6 +224,7 @@ public partial class V1beta1InfrastructureConfigurationSpecForProviderKeyPairSel
 }
 
 /// <summary>Selector for a KeyPair in ec2 to populate keyPair.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecForProviderKeyPairSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +240,7 @@ public partial class V1beta1InfrastructureConfigurationSpecForProviderKeyPairSel
     public V1beta1InfrastructureConfigurationSpecForProviderKeyPairSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecForProviderLoggingS3LogsS3BucketNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -232,6 +251,7 @@ public enum V1beta1InfrastructureConfigurationSpecForProviderLoggingS3LogsS3Buck
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecForProviderLoggingS3LogsS3BucketNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -243,6 +263,7 @@ public enum V1beta1InfrastructureConfigurationSpecForProviderLoggingS3LogsS3Buck
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecForProviderLoggingS3LogsS3BucketNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -257,6 +278,7 @@ public partial class V1beta1InfrastructureConfigurationSpecForProviderLoggingS3L
 }
 
 /// <summary>Reference to a Bucket in s3 to populate s3BucketName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecForProviderLoggingS3LogsS3BucketNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -268,6 +290,7 @@ public partial class V1beta1InfrastructureConfigurationSpecForProviderLoggingS3L
     public V1beta1InfrastructureConfigurationSpecForProviderLoggingS3LogsS3BucketNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecForProviderLoggingS3LogsS3BucketNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -278,6 +301,7 @@ public enum V1beta1InfrastructureConfigurationSpecForProviderLoggingS3LogsS3Buck
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecForProviderLoggingS3LogsS3BucketNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -289,6 +313,7 @@ public enum V1beta1InfrastructureConfigurationSpecForProviderLoggingS3LogsS3Buck
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecForProviderLoggingS3LogsS3BucketNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -303,6 +328,7 @@ public partial class V1beta1InfrastructureConfigurationSpecForProviderLoggingS3L
 }
 
 /// <summary>Selector for a Bucket in s3 to populate s3BucketName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecForProviderLoggingS3LogsS3BucketNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -319,6 +345,7 @@ public partial class V1beta1InfrastructureConfigurationSpecForProviderLoggingS3L
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecForProviderLoggingS3Logs
 {
     /// <summary>Name of the S3 Bucket.</summary>
@@ -339,6 +366,7 @@ public partial class V1beta1InfrastructureConfigurationSpecForProviderLoggingS3L
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecForProviderLogging
 {
     /// <summary>Configuration block with S3 logging settings. Detailed below.</summary>
@@ -346,6 +374,7 @@ public partial class V1beta1InfrastructureConfigurationSpecForProviderLogging
     public IList<V1beta1InfrastructureConfigurationSpecForProviderLoggingS3Logs>? S3Logs { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecForProviderSecurityGroupIdRefsPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -356,6 +385,7 @@ public enum V1beta1InfrastructureConfigurationSpecForProviderSecurityGroupIdRefs
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecForProviderSecurityGroupIdRefsPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -367,6 +397,7 @@ public enum V1beta1InfrastructureConfigurationSpecForProviderSecurityGroupIdRefs
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecForProviderSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -381,6 +412,7 @@ public partial class V1beta1InfrastructureConfigurationSpecForProviderSecurityGr
 }
 
 /// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecForProviderSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -392,6 +424,7 @@ public partial class V1beta1InfrastructureConfigurationSpecForProviderSecurityGr
     public V1beta1InfrastructureConfigurationSpecForProviderSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecForProviderSecurityGroupIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -402,6 +435,7 @@ public enum V1beta1InfrastructureConfigurationSpecForProviderSecurityGroupIdSele
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecForProviderSecurityGroupIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -413,6 +447,7 @@ public enum V1beta1InfrastructureConfigurationSpecForProviderSecurityGroupIdSele
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecForProviderSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -427,6 +462,7 @@ public partial class V1beta1InfrastructureConfigurationSpecForProviderSecurityGr
 }
 
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecForProviderSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -442,6 +478,7 @@ public partial class V1beta1InfrastructureConfigurationSpecForProviderSecurityGr
     public V1beta1InfrastructureConfigurationSpecForProviderSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecForProviderSnsTopicArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -452,6 +489,7 @@ public enum V1beta1InfrastructureConfigurationSpecForProviderSnsTopicArnRefPolic
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecForProviderSnsTopicArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -463,6 +501,7 @@ public enum V1beta1InfrastructureConfigurationSpecForProviderSnsTopicArnRefPolic
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecForProviderSnsTopicArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -477,6 +516,7 @@ public partial class V1beta1InfrastructureConfigurationSpecForProviderSnsTopicAr
 }
 
 /// <summary>Reference to a Topic in sns to populate snsTopicArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecForProviderSnsTopicArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -488,6 +528,7 @@ public partial class V1beta1InfrastructureConfigurationSpecForProviderSnsTopicAr
     public V1beta1InfrastructureConfigurationSpecForProviderSnsTopicArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecForProviderSnsTopicArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -498,6 +539,7 @@ public enum V1beta1InfrastructureConfigurationSpecForProviderSnsTopicArnSelector
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecForProviderSnsTopicArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -509,6 +551,7 @@ public enum V1beta1InfrastructureConfigurationSpecForProviderSnsTopicArnSelector
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecForProviderSnsTopicArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -523,6 +566,7 @@ public partial class V1beta1InfrastructureConfigurationSpecForProviderSnsTopicAr
 }
 
 /// <summary>Selector for a Topic in sns to populate snsTopicArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecForProviderSnsTopicArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -538,6 +582,7 @@ public partial class V1beta1InfrastructureConfigurationSpecForProviderSnsTopicAr
     public V1beta1InfrastructureConfigurationSpecForProviderSnsTopicArnSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecForProviderSubnetIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -548,6 +593,7 @@ public enum V1beta1InfrastructureConfigurationSpecForProviderSubnetIdRefPolicyRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecForProviderSubnetIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -559,6 +605,7 @@ public enum V1beta1InfrastructureConfigurationSpecForProviderSubnetIdRefPolicyRe
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecForProviderSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -573,6 +620,7 @@ public partial class V1beta1InfrastructureConfigurationSpecForProviderSubnetIdRe
 }
 
 /// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecForProviderSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -584,6 +632,7 @@ public partial class V1beta1InfrastructureConfigurationSpecForProviderSubnetIdRe
     public V1beta1InfrastructureConfigurationSpecForProviderSubnetIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecForProviderSubnetIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -594,6 +643,7 @@ public enum V1beta1InfrastructureConfigurationSpecForProviderSubnetIdSelectorPol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecForProviderSubnetIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -605,6 +655,7 @@ public enum V1beta1InfrastructureConfigurationSpecForProviderSubnetIdSelectorPol
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecForProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -619,6 +670,7 @@ public partial class V1beta1InfrastructureConfigurationSpecForProviderSubnetIdSe
 }
 
 /// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecForProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -635,6 +687,7 @@ public partial class V1beta1InfrastructureConfigurationSpecForProviderSubnetIdSe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecForProvider
 {
     /// <summary>Description for the configuration.</summary>
@@ -735,6 +788,7 @@ public partial class V1beta1InfrastructureConfigurationSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecInitProviderInstanceMetadataOptions
 {
     /// <summary>The number of hops that an instance can traverse to reach its destonation.</summary>
@@ -746,6 +800,7 @@ public partial class V1beta1InfrastructureConfigurationSpecInitProviderInstanceM
     public string? HttpTokens { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecInitProviderInstanceProfileNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -756,6 +811,7 @@ public enum V1beta1InfrastructureConfigurationSpecInitProviderInstanceProfileNam
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecInitProviderInstanceProfileNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -767,6 +823,7 @@ public enum V1beta1InfrastructureConfigurationSpecInitProviderInstanceProfileNam
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecInitProviderInstanceProfileNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -781,6 +838,7 @@ public partial class V1beta1InfrastructureConfigurationSpecInitProviderInstanceP
 }
 
 /// <summary>Reference to a InstanceProfile in iam to populate instanceProfileName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecInitProviderInstanceProfileNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -792,6 +850,7 @@ public partial class V1beta1InfrastructureConfigurationSpecInitProviderInstanceP
     public V1beta1InfrastructureConfigurationSpecInitProviderInstanceProfileNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecInitProviderInstanceProfileNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -802,6 +861,7 @@ public enum V1beta1InfrastructureConfigurationSpecInitProviderInstanceProfileNam
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecInitProviderInstanceProfileNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -813,6 +873,7 @@ public enum V1beta1InfrastructureConfigurationSpecInitProviderInstanceProfileNam
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecInitProviderInstanceProfileNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -827,6 +888,7 @@ public partial class V1beta1InfrastructureConfigurationSpecInitProviderInstanceP
 }
 
 /// <summary>Selector for a InstanceProfile in iam to populate instanceProfileName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecInitProviderInstanceProfileNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -842,6 +904,7 @@ public partial class V1beta1InfrastructureConfigurationSpecInitProviderInstanceP
     public V1beta1InfrastructureConfigurationSpecInitProviderInstanceProfileNameSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecInitProviderKeyPairRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -852,6 +915,7 @@ public enum V1beta1InfrastructureConfigurationSpecInitProviderKeyPairRefPolicyRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecInitProviderKeyPairRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -863,6 +927,7 @@ public enum V1beta1InfrastructureConfigurationSpecInitProviderKeyPairRefPolicyRe
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecInitProviderKeyPairRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -877,6 +942,7 @@ public partial class V1beta1InfrastructureConfigurationSpecInitProviderKeyPairRe
 }
 
 /// <summary>Reference to a KeyPair in ec2 to populate keyPair.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecInitProviderKeyPairRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -888,6 +954,7 @@ public partial class V1beta1InfrastructureConfigurationSpecInitProviderKeyPairRe
     public V1beta1InfrastructureConfigurationSpecInitProviderKeyPairRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecInitProviderKeyPairSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -898,6 +965,7 @@ public enum V1beta1InfrastructureConfigurationSpecInitProviderKeyPairSelectorPol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecInitProviderKeyPairSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -909,6 +977,7 @@ public enum V1beta1InfrastructureConfigurationSpecInitProviderKeyPairSelectorPol
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecInitProviderKeyPairSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -923,6 +992,7 @@ public partial class V1beta1InfrastructureConfigurationSpecInitProviderKeyPairSe
 }
 
 /// <summary>Selector for a KeyPair in ec2 to populate keyPair.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecInitProviderKeyPairSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -938,6 +1008,7 @@ public partial class V1beta1InfrastructureConfigurationSpecInitProviderKeyPairSe
     public V1beta1InfrastructureConfigurationSpecInitProviderKeyPairSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecInitProviderLoggingS3LogsS3BucketNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -948,6 +1019,7 @@ public enum V1beta1InfrastructureConfigurationSpecInitProviderLoggingS3LogsS3Buc
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecInitProviderLoggingS3LogsS3BucketNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -959,6 +1031,7 @@ public enum V1beta1InfrastructureConfigurationSpecInitProviderLoggingS3LogsS3Buc
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecInitProviderLoggingS3LogsS3BucketNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -973,6 +1046,7 @@ public partial class V1beta1InfrastructureConfigurationSpecInitProviderLoggingS3
 }
 
 /// <summary>Reference to a Bucket in s3 to populate s3BucketName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecInitProviderLoggingS3LogsS3BucketNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -984,6 +1058,7 @@ public partial class V1beta1InfrastructureConfigurationSpecInitProviderLoggingS3
     public V1beta1InfrastructureConfigurationSpecInitProviderLoggingS3LogsS3BucketNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecInitProviderLoggingS3LogsS3BucketNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -994,6 +1069,7 @@ public enum V1beta1InfrastructureConfigurationSpecInitProviderLoggingS3LogsS3Buc
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecInitProviderLoggingS3LogsS3BucketNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1005,6 +1081,7 @@ public enum V1beta1InfrastructureConfigurationSpecInitProviderLoggingS3LogsS3Buc
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecInitProviderLoggingS3LogsS3BucketNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1019,6 +1096,7 @@ public partial class V1beta1InfrastructureConfigurationSpecInitProviderLoggingS3
 }
 
 /// <summary>Selector for a Bucket in s3 to populate s3BucketName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecInitProviderLoggingS3LogsS3BucketNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1035,6 +1113,7 @@ public partial class V1beta1InfrastructureConfigurationSpecInitProviderLoggingS3
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecInitProviderLoggingS3Logs
 {
     /// <summary>Name of the S3 Bucket.</summary>
@@ -1055,6 +1134,7 @@ public partial class V1beta1InfrastructureConfigurationSpecInitProviderLoggingS3
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecInitProviderLogging
 {
     /// <summary>Configuration block with S3 logging settings. Detailed below.</summary>
@@ -1062,6 +1142,7 @@ public partial class V1beta1InfrastructureConfigurationSpecInitProviderLogging
     public IList<V1beta1InfrastructureConfigurationSpecInitProviderLoggingS3Logs>? S3Logs { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecInitProviderSecurityGroupIdRefsPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1072,6 +1153,7 @@ public enum V1beta1InfrastructureConfigurationSpecInitProviderSecurityGroupIdRef
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecInitProviderSecurityGroupIdRefsPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1083,6 +1165,7 @@ public enum V1beta1InfrastructureConfigurationSpecInitProviderSecurityGroupIdRef
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecInitProviderSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1097,6 +1180,7 @@ public partial class V1beta1InfrastructureConfigurationSpecInitProviderSecurityG
 }
 
 /// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecInitProviderSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1108,6 +1192,7 @@ public partial class V1beta1InfrastructureConfigurationSpecInitProviderSecurityG
     public V1beta1InfrastructureConfigurationSpecInitProviderSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecInitProviderSecurityGroupIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1118,6 +1203,7 @@ public enum V1beta1InfrastructureConfigurationSpecInitProviderSecurityGroupIdSel
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecInitProviderSecurityGroupIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1129,6 +1215,7 @@ public enum V1beta1InfrastructureConfigurationSpecInitProviderSecurityGroupIdSel
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecInitProviderSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1143,6 +1230,7 @@ public partial class V1beta1InfrastructureConfigurationSpecInitProviderSecurityG
 }
 
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecInitProviderSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1158,6 +1246,7 @@ public partial class V1beta1InfrastructureConfigurationSpecInitProviderSecurityG
     public V1beta1InfrastructureConfigurationSpecInitProviderSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecInitProviderSnsTopicArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1168,6 +1257,7 @@ public enum V1beta1InfrastructureConfigurationSpecInitProviderSnsTopicArnRefPoli
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecInitProviderSnsTopicArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1179,6 +1269,7 @@ public enum V1beta1InfrastructureConfigurationSpecInitProviderSnsTopicArnRefPoli
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecInitProviderSnsTopicArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1193,6 +1284,7 @@ public partial class V1beta1InfrastructureConfigurationSpecInitProviderSnsTopicA
 }
 
 /// <summary>Reference to a Topic in sns to populate snsTopicArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecInitProviderSnsTopicArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1204,6 +1296,7 @@ public partial class V1beta1InfrastructureConfigurationSpecInitProviderSnsTopicA
     public V1beta1InfrastructureConfigurationSpecInitProviderSnsTopicArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecInitProviderSnsTopicArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1214,6 +1307,7 @@ public enum V1beta1InfrastructureConfigurationSpecInitProviderSnsTopicArnSelecto
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecInitProviderSnsTopicArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1225,6 +1319,7 @@ public enum V1beta1InfrastructureConfigurationSpecInitProviderSnsTopicArnSelecto
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecInitProviderSnsTopicArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1239,6 +1334,7 @@ public partial class V1beta1InfrastructureConfigurationSpecInitProviderSnsTopicA
 }
 
 /// <summary>Selector for a Topic in sns to populate snsTopicArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecInitProviderSnsTopicArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1254,6 +1350,7 @@ public partial class V1beta1InfrastructureConfigurationSpecInitProviderSnsTopicA
     public V1beta1InfrastructureConfigurationSpecInitProviderSnsTopicArnSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecInitProviderSubnetIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1264,6 +1361,7 @@ public enum V1beta1InfrastructureConfigurationSpecInitProviderSubnetIdRefPolicyR
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecInitProviderSubnetIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1275,6 +1373,7 @@ public enum V1beta1InfrastructureConfigurationSpecInitProviderSubnetIdRefPolicyR
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecInitProviderSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1289,6 +1388,7 @@ public partial class V1beta1InfrastructureConfigurationSpecInitProviderSubnetIdR
 }
 
 /// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecInitProviderSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1300,6 +1400,7 @@ public partial class V1beta1InfrastructureConfigurationSpecInitProviderSubnetIdR
     public V1beta1InfrastructureConfigurationSpecInitProviderSubnetIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecInitProviderSubnetIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1310,6 +1411,7 @@ public enum V1beta1InfrastructureConfigurationSpecInitProviderSubnetIdSelectorPo
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecInitProviderSubnetIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1321,6 +1423,7 @@ public enum V1beta1InfrastructureConfigurationSpecInitProviderSubnetIdSelectorPo
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecInitProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1335,6 +1438,7 @@ public partial class V1beta1InfrastructureConfigurationSpecInitProviderSubnetIdS
 }
 
 /// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecInitProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1351,6 +1455,7 @@ public partial class V1beta1InfrastructureConfigurationSpecInitProviderSubnetIdS
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecInitProvider
 {
     /// <summary>Description for the configuration.</summary>
@@ -1446,6 +1551,7 @@ public partial class V1beta1InfrastructureConfigurationSpecInitProvider
     public bool? TerminateInstanceOnFailure { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -1468,6 +1574,7 @@ public enum V1beta1InfrastructureConfigurationSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1478,6 +1585,7 @@ public enum V1beta1InfrastructureConfigurationSpecProviderConfigRefPolicyResolut
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1489,6 +1597,7 @@ public enum V1beta1InfrastructureConfigurationSpecProviderConfigRefPolicyResolve
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1503,6 +1612,7 @@ public partial class V1beta1InfrastructureConfigurationSpecProviderConfigRefPoli
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1514,6 +1624,7 @@ public partial class V1beta1InfrastructureConfigurationSpecProviderConfigRef
     public V1beta1InfrastructureConfigurationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1524,6 +1635,7 @@ public enum V1beta1InfrastructureConfigurationSpecPublishConnectionDetailsToConf
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InfrastructureConfigurationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1535,6 +1647,7 @@ public enum V1beta1InfrastructureConfigurationSpecPublishConnectionDetailsToConf
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1549,6 +1662,7 @@ public partial class V1beta1InfrastructureConfigurationSpecPublishConnectionDeta
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1561,6 +1675,7 @@ public partial class V1beta1InfrastructureConfigurationSpecPublishConnectionDeta
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1577,6 +1692,7 @@ public partial class V1beta1InfrastructureConfigurationSpecPublishConnectionDeta
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1593,6 +1709,7 @@ public partial class V1beta1InfrastructureConfigurationSpecPublishConnectionDeta
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1605,6 +1722,7 @@ public partial class V1beta1InfrastructureConfigurationSpecWriteConnectionSecret
 }
 
 /// <summary>InfrastructureConfigurationSpec defines the desired state of InfrastructureConfiguration</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1638,6 +1756,7 @@ public partial class V1beta1InfrastructureConfigurationSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationStatusAtProviderInstanceMetadataOptions
 {
     /// <summary>The number of hops that an instance can traverse to reach its destonation.</summary>
@@ -1650,6 +1769,7 @@ public partial class V1beta1InfrastructureConfigurationStatusAtProviderInstanceM
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationStatusAtProviderLoggingS3Logs
 {
     /// <summary>Name of the S3 Bucket.</summary>
@@ -1662,6 +1782,7 @@ public partial class V1beta1InfrastructureConfigurationStatusAtProviderLoggingS3
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationStatusAtProviderLogging
 {
     /// <summary>Configuration block with S3 logging settings. Detailed below.</summary>
@@ -1670,6 +1791,7 @@ public partial class V1beta1InfrastructureConfigurationStatusAtProviderLogging
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationStatusAtProvider
 {
     /// <summary>Amazon Resource Name (ARN) of the configuration.</summary>
@@ -1746,6 +1868,7 @@ public partial class V1beta1InfrastructureConfigurationStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1774,6 +1897,7 @@ public partial class V1beta1InfrastructureConfigurationStatusConditions
 }
 
 /// <summary>InfrastructureConfigurationStatus defines the observed state of InfrastructureConfiguration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationStatus
 {
     /// <summary></summary>
@@ -1789,8 +1913,9 @@ public partial class V1beta1InfrastructureConfigurationStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>InfrastructureConfiguration is the Schema for the InfrastructureConfigurations API. Manages an Image Builder Infrastructure Configuration</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1InfrastructureConfiguration : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1InfrastructureConfigurationSpec>, IStatus<V1beta1InfrastructureConfigurationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

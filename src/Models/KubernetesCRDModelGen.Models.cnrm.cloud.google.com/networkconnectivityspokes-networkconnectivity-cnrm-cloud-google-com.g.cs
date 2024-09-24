@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkconnectivity.cnrm.cloud.google.com;
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivitySpokeSpecHubRef
 {
     /// <summary>Immutable. The URI of the hub that this spoke is attached to.  Allowed value: The Google Cloud resource name of a `NetworkConnectivityHub` resource (format: `projects/{{project}}/locations/global/hubs/{{name}}`).</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1NetworkConnectivitySpokeSpecHubRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivitySpokeSpecLinkedInterconnectAttachmentsUris
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeInterconnectAttachment` resource.</summary>
@@ -41,6 +43,7 @@ public partial class V1beta1NetworkConnectivitySpokeSpecLinkedInterconnectAttach
 }
 
 /// <summary>Immutable. A collection of VLAN attachment resources. These resources should be redundant attachments that all advertise the same prefixes to Google Cloud. Alternatively, in active/passive configurations, all attachments should be capable of advertising the same prefixes.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivitySpokeSpecLinkedInterconnectAttachments
 {
     /// <summary>Immutable. A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.</summary>
@@ -53,6 +56,7 @@ public partial class V1beta1NetworkConnectivitySpokeSpecLinkedInterconnectAttach
 }
 
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivitySpokeSpecLinkedRouterApplianceInstancesInstancesVirtualMachineRef
 {
     /// <summary>The URI of the virtual machine resource  Allowed value: The `selfLink` field of a `ComputeInstance` resource.</summary>
@@ -69,6 +73,7 @@ public partial class V1beta1NetworkConnectivitySpokeSpecLinkedRouterApplianceIns
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivitySpokeSpecLinkedRouterApplianceInstancesInstances
 {
     /// <summary>Immutable. The IP address on the VM to use for peering.</summary>
@@ -81,6 +86,7 @@ public partial class V1beta1NetworkConnectivitySpokeSpecLinkedRouterApplianceIns
 }
 
 /// <summary>Immutable. The URIs of linked Router appliance resources</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivitySpokeSpecLinkedRouterApplianceInstances
 {
     /// <summary>Immutable. The list of router appliance instances</summary>
@@ -93,6 +99,7 @@ public partial class V1beta1NetworkConnectivitySpokeSpecLinkedRouterApplianceIns
 }
 
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivitySpokeSpecLinkedVPCNetworkUriRef
 {
     /// <summary>The URI of the VPC network resource.  Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -109,6 +116,7 @@ public partial class V1beta1NetworkConnectivitySpokeSpecLinkedVPCNetworkUriRef
 }
 
 /// <summary>Immutable. VPC network that is associated with the spoke.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivitySpokeSpecLinkedVPCNetwork
 {
     /// <summary>Immutable. IP ranges encompassing the subnets to be excluded from peering.</summary>
@@ -121,6 +129,7 @@ public partial class V1beta1NetworkConnectivitySpokeSpecLinkedVPCNetwork
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivitySpokeSpecLinkedVpnTunnelsUris
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeVPNTunnel` resource.</summary>
@@ -137,6 +146,7 @@ public partial class V1beta1NetworkConnectivitySpokeSpecLinkedVpnTunnelsUris
 }
 
 /// <summary>Immutable. The URIs of linked VPN tunnel resources</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivitySpokeSpecLinkedVpnTunnels
 {
     /// <summary>Immutable. A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.</summary>
@@ -149,6 +159,7 @@ public partial class V1beta1NetworkConnectivitySpokeSpecLinkedVpnTunnels
 }
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivitySpokeSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -165,6 +176,7 @@ public partial class V1beta1NetworkConnectivitySpokeSpecProjectRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivitySpokeSpec
 {
     /// <summary>An optional description of the spoke.</summary>
@@ -205,6 +217,7 @@ public partial class V1beta1NetworkConnectivitySpokeSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivitySpokeStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -229,6 +242,7 @@ public partial class V1beta1NetworkConnectivitySpokeStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivitySpokeStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -256,8 +270,9 @@ public partial class V1beta1NetworkConnectivitySpokeStatus
     public string? UpdateTime { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1NetworkConnectivitySpoke : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NetworkConnectivitySpokeSpec>, IStatus<V1beta1NetworkConnectivitySpokeStatus>
 {
     public const string KubeApiVersion = "v1beta1";

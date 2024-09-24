@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gke.gcp.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupBackupPlanSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -18,6 +19,7 @@ public enum V1beta1BackupBackupPlanSpecDeletionPolicyEnum
     Delete
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeyRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -28,6 +30,7 @@ public enum V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKeyGcpKm
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeyRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -39,6 +42,7 @@ public enum V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKeyGcpKm
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeyRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -53,6 +57,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptio
 }
 
 /// <summary>Reference to a CryptoKey in kms to populate gcpKmsEncryptionKey.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeyRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -64,6 +69,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptio
     public V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeyRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeySelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -74,6 +80,7 @@ public enum V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKeyGcpKm
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeySelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -85,6 +92,7 @@ public enum V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKeyGcpKm
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -99,6 +107,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptio
 }
 
 /// <summary>Selector for a CryptoKey in kms to populate gcpKmsEncryptionKey.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -115,6 +124,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKey
 {
     /// <summary>Google Cloud KMS encryption key. Format: projects//locations//keyRings//cryptoKeys/</summary>
@@ -131,6 +141,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigSelectedApplicationsNamespacedNames
 {
     /// <summary>The name of a Kubernetes Resource.</summary>
@@ -143,6 +154,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigSelectedA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigSelectedApplications
 {
     /// <summary>A list of namespaced Kubernetes resources. Structure is documented below.</summary>
@@ -151,6 +163,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigSelectedA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigSelectedNamespaces
 {
     /// <summary>A list of Kubernetes Namespaces.</summary>
@@ -159,6 +172,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigSelectedN
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfig
 {
     /// <summary>If True, include all namespaced resources.</summary>
@@ -191,6 +205,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConfigExclusionWindowsDaysOfWeek
 {
     /// <summary>The exclusion window occurs on these days of each week in UTC. Only one of singleOccurrenceDate, daily and daysOfWeek may be set. Structure is documented below.</summary>
@@ -199,6 +214,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConfigExclusionWindowsSingleOccurrenceDate
 {
     /// <summary>Day of a month.</summary>
@@ -215,6 +231,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConfigExclusionWindowsStartTime
 {
     /// <summary>Hours of day in 24 hour format.</summary>
@@ -235,6 +252,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConfigExclusionWindows
 {
     /// <summary>The exclusion window occurs every day if set to "True". Specifying this field to "False" is an error. Only one of singleOccurrenceDate, daily and daysOfWeek may be set.</summary>
@@ -259,6 +277,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConfig
 {
     /// <summary>User specified time windows during which backup can NOT happen for this BackupPlan. Backups should start and finish outside of any given exclusion window. Note: backup jobs will be scheduled to start and finish outside the duration of the window as much as possible, but running jobs will not get canceled when it runs into the window. All the time and date values in exclusionWindows entry in the API are in UTC. We only allow &lt;=1 recurrence (daily or weekly) exclusion window for a BackupPlan while no restriction on number of single occurrence windows. Structure is documented below.</summary>
@@ -271,6 +290,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupSchedule
 {
     /// <summary>A standard cron string that defines a repeating schedule for creating Backups via this BackupPlan. If this is defined, then backupRetainDays must also be defined.</summary>
@@ -286,6 +306,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupSchedule
     public IList<V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConfig>? RpoConfig { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupBackupPlanSpecForProviderClusterRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -296,6 +317,7 @@ public enum V1beta1BackupBackupPlanSpecForProviderClusterRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupBackupPlanSpecForProviderClusterRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -307,6 +329,7 @@ public enum V1beta1BackupBackupPlanSpecForProviderClusterRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderClusterRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -321,6 +344,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderClusterRefPolicy
 }
 
 /// <summary>Reference to a Cluster in container to populate cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderClusterRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -332,6 +356,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderClusterRef
     public V1beta1BackupBackupPlanSpecForProviderClusterRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupBackupPlanSpecForProviderClusterSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -342,6 +367,7 @@ public enum V1beta1BackupBackupPlanSpecForProviderClusterSelectorPolicyResolutio
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupBackupPlanSpecForProviderClusterSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -353,6 +379,7 @@ public enum V1beta1BackupBackupPlanSpecForProviderClusterSelectorPolicyResolveEn
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderClusterSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -367,6 +394,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderClusterSelectorPolicy
 }
 
 /// <summary>Selector for a Cluster in container to populate cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderClusterSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -383,6 +411,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderClusterSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderRetentionPolicy
 {
     /// <summary>Minimum age for a Backup created via this BackupPlan (in days). Must be an integer value between 0-90 (inclusive). A Backup created under this BackupPlan will not be deletable until it reaches Backup's (create time + backup_delete_lock_days). Updating this field of a BackupPlan does not affect existing Backups. Backups created after a successful update will inherit this new value.</summary>
@@ -399,6 +428,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderRetentionPolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProvider
 {
     /// <summary>Defines the configuration of Backups created via this BackupPlan. Structure is documented below.</summary>
@@ -446,6 +476,7 @@ public partial class V1beta1BackupBackupPlanSpecForProvider
     public IList<V1beta1BackupBackupPlanSpecForProviderRetentionPolicy>? RetentionPolicy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeyRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -456,6 +487,7 @@ public enum V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKeyGcpK
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeyRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -467,6 +499,7 @@ public enum V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKeyGcpK
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeyRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -481,6 +514,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncrypti
 }
 
 /// <summary>Reference to a CryptoKey in kms to populate gcpKmsEncryptionKey.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeyRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -492,6 +526,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncrypti
     public V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeyRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeySelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -502,6 +537,7 @@ public enum V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKeyGcpK
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeySelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -513,6 +549,7 @@ public enum V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKeyGcpK
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -527,6 +564,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncrypti
 }
 
 /// <summary>Selector for a CryptoKey in kms to populate gcpKmsEncryptionKey.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -543,6 +581,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncrypti
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKey
 {
     /// <summary>Google Cloud KMS encryption key. Format: projects//locations//keyRings//cryptoKeys/</summary>
@@ -559,6 +598,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncrypti
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigSelectedApplicationsNamespacedNames
 {
     /// <summary>The name of a Kubernetes Resource.</summary>
@@ -571,6 +611,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigSelected
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigSelectedApplications
 {
     /// <summary>A list of namespaced Kubernetes resources. Structure is documented below.</summary>
@@ -579,6 +620,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigSelected
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigSelectedNamespaces
 {
     /// <summary>A list of Kubernetes Namespaces.</summary>
@@ -587,6 +629,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigSelected
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfig
 {
     /// <summary>If True, include all namespaced resources.</summary>
@@ -619,6 +662,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoConfigExclusionWindowsDaysOfWeek
 {
     /// <summary>The exclusion window occurs on these days of each week in UTC. Only one of singleOccurrenceDate, daily and daysOfWeek may be set. Structure is documented below.</summary>
@@ -627,6 +671,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoConfigExclusionWindowsSingleOccurrenceDate
 {
     /// <summary>Day of a month.</summary>
@@ -643,6 +688,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoConfigExclusionWindowsStartTime
 {
     /// <summary>Hours of day in 24 hour format.</summary>
@@ -663,6 +709,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoConfigExclusionWindows
 {
     /// <summary>The exclusion window occurs every day if set to "True". Specifying this field to "False" is an error. Only one of singleOccurrenceDate, daily and daysOfWeek may be set.</summary>
@@ -687,6 +734,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoConfig
 {
     /// <summary>User specified time windows during which backup can NOT happen for this BackupPlan. Backups should start and finish outside of any given exclusion window. Note: backup jobs will be scheduled to start and finish outside the duration of the window as much as possible, but running jobs will not get canceled when it runs into the window. All the time and date values in exclusionWindows entry in the API are in UTC. We only allow &lt;=1 recurrence (daily or weekly) exclusion window for a BackupPlan while no restriction on number of single occurrence windows. Structure is documented below.</summary>
@@ -699,6 +747,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupSchedule
 {
     /// <summary>A standard cron string that defines a repeating schedule for creating Backups via this BackupPlan. If this is defined, then backupRetainDays must also be defined.</summary>
@@ -714,6 +763,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupSchedule
     public IList<V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoConfig>? RpoConfig { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupBackupPlanSpecInitProviderClusterRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -724,6 +774,7 @@ public enum V1beta1BackupBackupPlanSpecInitProviderClusterRefPolicyResolutionEnu
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupBackupPlanSpecInitProviderClusterRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -735,6 +786,7 @@ public enum V1beta1BackupBackupPlanSpecInitProviderClusterRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderClusterRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -749,6 +801,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderClusterRefPolicy
 }
 
 /// <summary>Reference to a Cluster in container to populate cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderClusterRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -760,6 +813,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderClusterRef
     public V1beta1BackupBackupPlanSpecInitProviderClusterRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupBackupPlanSpecInitProviderClusterSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -770,6 +824,7 @@ public enum V1beta1BackupBackupPlanSpecInitProviderClusterSelectorPolicyResoluti
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupBackupPlanSpecInitProviderClusterSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -781,6 +836,7 @@ public enum V1beta1BackupBackupPlanSpecInitProviderClusterSelectorPolicyResolveE
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderClusterSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -795,6 +851,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderClusterSelectorPolic
 }
 
 /// <summary>Selector for a Cluster in container to populate cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderClusterSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -811,6 +868,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderClusterSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderRetentionPolicy
 {
     /// <summary>Minimum age for a Backup created via this BackupPlan (in days). Must be an integer value between 0-90 (inclusive). A Backup created under this BackupPlan will not be deletable until it reaches Backup's (create time + backup_delete_lock_days). Updating this field of a BackupPlan does not affect existing Backups. Backups created after a successful update will inherit this new value.</summary>
@@ -827,6 +885,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderRetentionPolicy
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProvider
 {
     /// <summary>Defines the configuration of Backups created via this BackupPlan. Structure is documented below.</summary>
@@ -870,6 +929,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProvider
     public IList<V1beta1BackupBackupPlanSpecInitProviderRetentionPolicy>? RetentionPolicy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupBackupPlanSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -892,6 +952,7 @@ public enum V1beta1BackupBackupPlanSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupBackupPlanSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -902,6 +963,7 @@ public enum V1beta1BackupBackupPlanSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupBackupPlanSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -913,6 +975,7 @@ public enum V1beta1BackupBackupPlanSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -927,6 +990,7 @@ public partial class V1beta1BackupBackupPlanSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -938,6 +1002,7 @@ public partial class V1beta1BackupBackupPlanSpecProviderConfigRef
     public V1beta1BackupBackupPlanSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupBackupPlanSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -948,6 +1013,7 @@ public enum V1beta1BackupBackupPlanSpecPublishConnectionDetailsToConfigRefPolicy
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupBackupPlanSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -959,6 +1025,7 @@ public enum V1beta1BackupBackupPlanSpecPublishConnectionDetailsToConfigRefPolicy
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -973,6 +1040,7 @@ public partial class V1beta1BackupBackupPlanSpecPublishConnectionDetailsToConfig
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -985,6 +1053,7 @@ public partial class V1beta1BackupBackupPlanSpecPublishConnectionDetailsToConfig
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1001,6 +1070,7 @@ public partial class V1beta1BackupBackupPlanSpecPublishConnectionDetailsToMetada
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1017,6 +1087,7 @@ public partial class V1beta1BackupBackupPlanSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1029,6 +1100,7 @@ public partial class V1beta1BackupBackupPlanSpecWriteConnectionSecretToRef
 }
 
 /// <summary>BackupBackupPlanSpec defines the desired state of BackupBackupPlan</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1062,6 +1134,7 @@ public partial class V1beta1BackupBackupPlanSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupConfigEncryptionKey
 {
     /// <summary>Google Cloud KMS encryption key. Format: projects//locations//keyRings//cryptoKeys/</summary>
@@ -1070,6 +1143,7 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupConfigEncrypti
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupConfigSelectedApplicationsNamespacedNames
 {
     /// <summary>The name of a Kubernetes Resource.</summary>
@@ -1082,6 +1156,7 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupConfigSelected
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupConfigSelectedApplications
 {
     /// <summary>A list of namespaced Kubernetes resources. Structure is documented below.</summary>
@@ -1090,6 +1165,7 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupConfigSelected
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupConfigSelectedNamespaces
 {
     /// <summary>A list of Kubernetes Namespaces.</summary>
@@ -1098,6 +1174,7 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupConfigSelected
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupConfig
 {
     /// <summary>If True, include all namespaced resources.</summary>
@@ -1130,6 +1207,7 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoConfigExclusionWindowsDaysOfWeek
 {
     /// <summary>The exclusion window occurs on these days of each week in UTC. Only one of singleOccurrenceDate, daily and daysOfWeek may be set. Structure is documented below.</summary>
@@ -1138,6 +1216,7 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoConfigExclusionWindowsSingleOccurrenceDate
 {
     /// <summary>Day of a month.</summary>
@@ -1154,6 +1233,7 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoConfigExclusionWindowsStartTime
 {
     /// <summary>Hours of day in 24 hour format.</summary>
@@ -1174,6 +1254,7 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoConfigExclusionWindows
 {
     /// <summary>The exclusion window occurs every day if set to "True". Specifying this field to "False" is an error. Only one of singleOccurrenceDate, daily and daysOfWeek may be set.</summary>
@@ -1198,6 +1279,7 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoConfig
 {
     /// <summary>User specified time windows during which backup can NOT happen for this BackupPlan. Backups should start and finish outside of any given exclusion window. Note: backup jobs will be scheduled to start and finish outside the duration of the window as much as possible, but running jobs will not get canceled when it runs into the window. All the time and date values in exclusionWindows entry in the API are in UTC. We only allow &lt;=1 recurrence (daily or weekly) exclusion window for a BackupPlan while no restriction on number of single occurrence windows. Structure is documented below.</summary>
@@ -1210,6 +1292,7 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupSchedule
 {
     /// <summary>A standard cron string that defines a repeating schedule for creating Backups via this BackupPlan. If this is defined, then backupRetainDays must also be defined.</summary>
@@ -1226,6 +1309,7 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupSchedule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanStatusAtProviderRetentionPolicy
 {
     /// <summary>Minimum age for a Backup created via this BackupPlan (in days). Must be an integer value between 0-90 (inclusive). A Backup created under this BackupPlan will not be deletable until it reaches Backup's (create time + backup_delete_lock_days). Updating this field of a BackupPlan does not affect existing Backups. Backups created after a successful update will inherit this new value.</summary>
@@ -1242,6 +1326,7 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderRetentionPolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanStatusAtProvider
 {
     /// <summary>Defines the configuration of Backups created via this BackupPlan. Structure is documented below.</summary>
@@ -1314,6 +1399,7 @@ public partial class V1beta1BackupBackupPlanStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1342,6 +1428,7 @@ public partial class V1beta1BackupBackupPlanStatusConditions
 }
 
 /// <summary>BackupBackupPlanStatus defines the observed state of BackupBackupPlan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanStatus
 {
     /// <summary></summary>
@@ -1357,8 +1444,9 @@ public partial class V1beta1BackupBackupPlanStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>BackupBackupPlan is the Schema for the BackupBackupPlans API. Represents a Backup Plan instance.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1BackupBackupPlan : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BackupBackupPlanSpec>, IStatus<V1beta1BackupBackupPlanStatus>
 {
     public const string KubeApiVersion = "v1beta1";

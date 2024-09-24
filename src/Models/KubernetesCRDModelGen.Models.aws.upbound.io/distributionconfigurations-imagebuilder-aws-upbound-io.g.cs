@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.imagebuilder.aws.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionConfigurationSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1DistributionConfigurationSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecForProviderDistributionAmiDistributionConfigurationLaunchPermission
 {
     /// <summary>Set of AWS Organization ARNs to assign.</summary>
@@ -39,6 +41,7 @@ public partial class V1beta1DistributionConfigurationSpecForProviderDistribution
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecForProviderDistributionAmiDistributionConfiguration
 {
     /// <summary>Key-value map of tags to apply to the distributed AMI.</summary>
@@ -67,6 +70,7 @@ public partial class V1beta1DistributionConfigurationSpecForProviderDistribution
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecForProviderDistributionContainerDistributionConfigurationTargetRepository
 {
     /// <summary>The name of the container repository where the output container image is stored. This name is prefixed by the repository location.</summary>
@@ -79,6 +83,7 @@ public partial class V1beta1DistributionConfigurationSpecForProviderDistribution
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecForProviderDistributionContainerDistributionConfiguration
 {
     /// <summary>Set of tags that are attached to the container distribution configuration.</summary>
@@ -95,6 +100,7 @@ public partial class V1beta1DistributionConfigurationSpecForProviderDistribution
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecForProviderDistributionFastLaunchConfigurationLaunchTemplate
 {
     /// <summary>The ID of the launch template to use for faster launching for a Windows AMI.</summary>
@@ -111,6 +117,7 @@ public partial class V1beta1DistributionConfigurationSpecForProviderDistribution
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecForProviderDistributionFastLaunchConfigurationSnapshotConfiguration
 {
     /// <summary>The number of pre-provisioned snapshots to keep on hand for a fast-launch enabled Windows AMI.</summary>
@@ -119,6 +126,7 @@ public partial class V1beta1DistributionConfigurationSpecForProviderDistribution
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecForProviderDistributionFastLaunchConfiguration
 {
     /// <summary>The owner account ID for the fast-launch enabled Windows AMI.</summary>
@@ -143,6 +151,7 @@ public partial class V1beta1DistributionConfigurationSpecForProviderDistribution
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecForProviderDistributionLaunchTemplateConfiguration
 {
     /// <summary>The account ID that this configuration applies to.</summary>
@@ -159,6 +168,7 @@ public partial class V1beta1DistributionConfigurationSpecForProviderDistribution
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecForProviderDistribution
 {
     /// <summary>Configuration block with Amazon Machine Image (AMI) distribution settings. Detailed below.</summary>
@@ -187,6 +197,7 @@ public partial class V1beta1DistributionConfigurationSpecForProviderDistribution
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecForProvider
 {
     /// <summary>Description of the distribution configuration.</summary>
@@ -211,6 +222,7 @@ public partial class V1beta1DistributionConfigurationSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecInitProviderDistributionAmiDistributionConfigurationLaunchPermission
 {
     /// <summary>Set of AWS Organization ARNs to assign.</summary>
@@ -231,6 +243,7 @@ public partial class V1beta1DistributionConfigurationSpecInitProviderDistributio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecInitProviderDistributionAmiDistributionConfiguration
 {
     /// <summary>Key-value map of tags to apply to the distributed AMI.</summary>
@@ -259,6 +272,7 @@ public partial class V1beta1DistributionConfigurationSpecInitProviderDistributio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecInitProviderDistributionContainerDistributionConfigurationTargetRepository
 {
     /// <summary>The name of the container repository where the output container image is stored. This name is prefixed by the repository location.</summary>
@@ -271,6 +285,7 @@ public partial class V1beta1DistributionConfigurationSpecInitProviderDistributio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecInitProviderDistributionContainerDistributionConfiguration
 {
     /// <summary>Set of tags that are attached to the container distribution configuration.</summary>
@@ -287,6 +302,7 @@ public partial class V1beta1DistributionConfigurationSpecInitProviderDistributio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecInitProviderDistributionFastLaunchConfigurationLaunchTemplate
 {
     /// <summary>The ID of the launch template to use for faster launching for a Windows AMI.</summary>
@@ -303,6 +319,7 @@ public partial class V1beta1DistributionConfigurationSpecInitProviderDistributio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecInitProviderDistributionFastLaunchConfigurationSnapshotConfiguration
 {
     /// <summary>The number of pre-provisioned snapshots to keep on hand for a fast-launch enabled Windows AMI.</summary>
@@ -311,6 +328,7 @@ public partial class V1beta1DistributionConfigurationSpecInitProviderDistributio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecInitProviderDistributionFastLaunchConfiguration
 {
     /// <summary>The owner account ID for the fast-launch enabled Windows AMI.</summary>
@@ -335,6 +353,7 @@ public partial class V1beta1DistributionConfigurationSpecInitProviderDistributio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecInitProviderDistributionLaunchTemplateConfiguration
 {
     /// <summary>The account ID that this configuration applies to.</summary>
@@ -351,6 +370,7 @@ public partial class V1beta1DistributionConfigurationSpecInitProviderDistributio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecInitProviderDistribution
 {
     /// <summary>Configuration block with Amazon Machine Image (AMI) distribution settings. Detailed below.</summary>
@@ -375,6 +395,7 @@ public partial class V1beta1DistributionConfigurationSpecInitProviderDistributio
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecInitProvider
 {
     /// <summary>Description of the distribution configuration.</summary>
@@ -394,6 +415,7 @@ public partial class V1beta1DistributionConfigurationSpecInitProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionConfigurationSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -416,6 +438,7 @@ public enum V1beta1DistributionConfigurationSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionConfigurationSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -426,6 +449,7 @@ public enum V1beta1DistributionConfigurationSpecProviderConfigRefPolicyResolutio
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionConfigurationSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -437,6 +461,7 @@ public enum V1beta1DistributionConfigurationSpecProviderConfigRefPolicyResolveEn
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -451,6 +476,7 @@ public partial class V1beta1DistributionConfigurationSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -462,6 +488,7 @@ public partial class V1beta1DistributionConfigurationSpecProviderConfigRef
     public V1beta1DistributionConfigurationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionConfigurationSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -472,6 +499,7 @@ public enum V1beta1DistributionConfigurationSpecPublishConnectionDetailsToConfig
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DistributionConfigurationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -483,6 +511,7 @@ public enum V1beta1DistributionConfigurationSpecPublishConnectionDetailsToConfig
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -497,6 +526,7 @@ public partial class V1beta1DistributionConfigurationSpecPublishConnectionDetail
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -509,6 +539,7 @@ public partial class V1beta1DistributionConfigurationSpecPublishConnectionDetail
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -525,6 +556,7 @@ public partial class V1beta1DistributionConfigurationSpecPublishConnectionDetail
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -541,6 +573,7 @@ public partial class V1beta1DistributionConfigurationSpecPublishConnectionDetail
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -553,6 +586,7 @@ public partial class V1beta1DistributionConfigurationSpecWriteConnectionSecretTo
 }
 
 /// <summary>DistributionConfigurationSpec defines the desired state of DistributionConfiguration</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -586,6 +620,7 @@ public partial class V1beta1DistributionConfigurationSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationStatusAtProviderDistributionAmiDistributionConfigurationLaunchPermission
 {
     /// <summary>Set of AWS Organization ARNs to assign.</summary>
@@ -606,6 +641,7 @@ public partial class V1beta1DistributionConfigurationStatusAtProviderDistributio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationStatusAtProviderDistributionAmiDistributionConfiguration
 {
     /// <summary>Key-value map of tags to apply to the distributed AMI.</summary>
@@ -634,6 +670,7 @@ public partial class V1beta1DistributionConfigurationStatusAtProviderDistributio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationStatusAtProviderDistributionContainerDistributionConfigurationTargetRepository
 {
     /// <summary>The name of the container repository where the output container image is stored. This name is prefixed by the repository location.</summary>
@@ -646,6 +683,7 @@ public partial class V1beta1DistributionConfigurationStatusAtProviderDistributio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationStatusAtProviderDistributionContainerDistributionConfiguration
 {
     /// <summary>Set of tags that are attached to the container distribution configuration.</summary>
@@ -662,6 +700,7 @@ public partial class V1beta1DistributionConfigurationStatusAtProviderDistributio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationStatusAtProviderDistributionFastLaunchConfigurationLaunchTemplate
 {
     /// <summary>The ID of the launch template to use for faster launching for a Windows AMI.</summary>
@@ -678,6 +717,7 @@ public partial class V1beta1DistributionConfigurationStatusAtProviderDistributio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationStatusAtProviderDistributionFastLaunchConfigurationSnapshotConfiguration
 {
     /// <summary>The number of pre-provisioned snapshots to keep on hand for a fast-launch enabled Windows AMI.</summary>
@@ -686,6 +726,7 @@ public partial class V1beta1DistributionConfigurationStatusAtProviderDistributio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationStatusAtProviderDistributionFastLaunchConfiguration
 {
     /// <summary>The owner account ID for the fast-launch enabled Windows AMI.</summary>
@@ -710,6 +751,7 @@ public partial class V1beta1DistributionConfigurationStatusAtProviderDistributio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationStatusAtProviderDistributionLaunchTemplateConfiguration
 {
     /// <summary>The account ID that this configuration applies to.</summary>
@@ -726,6 +768,7 @@ public partial class V1beta1DistributionConfigurationStatusAtProviderDistributio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationStatusAtProviderDistribution
 {
     /// <summary>Configuration block with Amazon Machine Image (AMI) distribution settings. Detailed below.</summary>
@@ -754,6 +797,7 @@ public partial class V1beta1DistributionConfigurationStatusAtProviderDistributio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationStatusAtProvider
 {
     /// <summary>Amazon Resource Name (ARN) of the distribution configuration.</summary>
@@ -794,6 +838,7 @@ public partial class V1beta1DistributionConfigurationStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -822,6 +867,7 @@ public partial class V1beta1DistributionConfigurationStatusConditions
 }
 
 /// <summary>DistributionConfigurationStatus defines the observed state of DistributionConfiguration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationStatus
 {
     /// <summary></summary>
@@ -837,8 +883,9 @@ public partial class V1beta1DistributionConfigurationStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>DistributionConfiguration is the Schema for the DistributionConfigurations API. Manage an Image Builder Distribution Configuration</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1DistributionConfiguration : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DistributionConfigurationSpec>, IStatus<V1beta1DistributionConfigurationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

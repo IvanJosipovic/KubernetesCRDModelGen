@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionPerInstanceConfigSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -18,6 +19,7 @@ public enum V1beta1RegionPerInstanceConfigSpecDeletionPolicyEnum
     Delete
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionPerInstanceConfigSpecForProviderPreservedStateDiskSourceRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -28,6 +30,7 @@ public enum V1beta1RegionPerInstanceConfigSpecForProviderPreservedStateDiskSourc
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionPerInstanceConfigSpecForProviderPreservedStateDiskSourceRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -39,6 +42,7 @@ public enum V1beta1RegionPerInstanceConfigSpecForProviderPreservedStateDiskSourc
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecForProviderPreservedStateDiskSourceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -53,6 +57,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecForProviderPreservedState
 }
 
 /// <summary>Reference to a Disk in compute to populate source.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecForProviderPreservedStateDiskSourceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -64,6 +69,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecForProviderPreservedState
     public V1beta1RegionPerInstanceConfigSpecForProviderPreservedStateDiskSourceRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionPerInstanceConfigSpecForProviderPreservedStateDiskSourceSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -74,6 +80,7 @@ public enum V1beta1RegionPerInstanceConfigSpecForProviderPreservedStateDiskSourc
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionPerInstanceConfigSpecForProviderPreservedStateDiskSourceSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -85,6 +92,7 @@ public enum V1beta1RegionPerInstanceConfigSpecForProviderPreservedStateDiskSourc
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecForProviderPreservedStateDiskSourceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -99,6 +107,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecForProviderPreservedState
 }
 
 /// <summary>Selector for a Disk in compute to populate source.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecForProviderPreservedStateDiskSourceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -115,6 +124,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecForProviderPreservedState
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecForProviderPreservedStateDisk
 {
     /// <summary>A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are NEVER and ON_PERMANENT_INSTANCE_DELETION. NEVER - detach the disk when the VM is deleted, but do not delete the disk. ON_PERMANENT_INSTANCE_DELETION will delete the stateful disk when the VM is permanently deleted from the instance group. Default value is NEVER. Possible values are: NEVER, ON_PERMANENT_INSTANCE_DELETION.</summary>
@@ -143,6 +153,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecForProviderPreservedState
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecForProviderPreservedStateExternalIpIpAddress
 {
     /// <summary>The URL of the reservation for this IP address.</summary>
@@ -151,6 +162,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecForProviderPreservedState
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecForProviderPreservedStateExternalIp
 {
     /// <summary>These stateful IPs will never be released during autohealing, update or VM instance recreate operations. This flag is used to configure if the IP reservation should be deleted after it is no longer used by the group, e.g. when the given instance or the whole group is deleted. Default value is NEVER. Possible values are: NEVER, ON_PERMANENT_INSTANCE_DELETION.</summary>
@@ -167,6 +179,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecForProviderPreservedState
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecForProviderPreservedStateInternalIpIpAddress
 {
     /// <summary>The URL of the reservation for this IP address.</summary>
@@ -175,6 +188,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecForProviderPreservedState
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecForProviderPreservedStateInternalIp
 {
     /// <summary>These stateful IPs will never be released during autohealing, update or VM instance recreate operations. This flag is used to configure if the IP reservation should be deleted after it is no longer used by the group, e.g. when the given instance or the whole group is deleted. Default value is NEVER. Possible values are: NEVER, ON_PERMANENT_INSTANCE_DELETION.</summary>
@@ -191,6 +205,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecForProviderPreservedState
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecForProviderPreservedState
 {
     /// <summary>Stateful disks for the instance. Structure is documented below.</summary>
@@ -210,6 +225,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecForProviderPreservedState
     public IDictionary<string, string>? Metadata { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionPerInstanceConfigSpecForProviderRegionInstanceGroupManagerRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -220,6 +236,7 @@ public enum V1beta1RegionPerInstanceConfigSpecForProviderRegionInstanceGroupMana
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionPerInstanceConfigSpecForProviderRegionInstanceGroupManagerRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -231,6 +248,7 @@ public enum V1beta1RegionPerInstanceConfigSpecForProviderRegionInstanceGroupMana
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecForProviderRegionInstanceGroupManagerRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -245,6 +263,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecForProviderRegionInstance
 }
 
 /// <summary>Reference to a RegionInstanceGroupManager in compute to populate regionInstanceGroupManager.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecForProviderRegionInstanceGroupManagerRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -256,6 +275,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecForProviderRegionInstance
     public V1beta1RegionPerInstanceConfigSpecForProviderRegionInstanceGroupManagerRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionPerInstanceConfigSpecForProviderRegionInstanceGroupManagerSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -266,6 +286,7 @@ public enum V1beta1RegionPerInstanceConfigSpecForProviderRegionInstanceGroupMana
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionPerInstanceConfigSpecForProviderRegionInstanceGroupManagerSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -277,6 +298,7 @@ public enum V1beta1RegionPerInstanceConfigSpecForProviderRegionInstanceGroupMana
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecForProviderRegionInstanceGroupManagerSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -291,6 +313,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecForProviderRegionInstance
 }
 
 /// <summary>Selector for a RegionInstanceGroupManager in compute to populate regionInstanceGroupManager.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecForProviderRegionInstanceGroupManagerSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -306,6 +329,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecForProviderRegionInstance
     public V1beta1RegionPerInstanceConfigSpecForProviderRegionInstanceGroupManagerSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionPerInstanceConfigSpecForProviderRegionRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -316,6 +340,7 @@ public enum V1beta1RegionPerInstanceConfigSpecForProviderRegionRefPolicyResoluti
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionPerInstanceConfigSpecForProviderRegionRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -327,6 +352,7 @@ public enum V1beta1RegionPerInstanceConfigSpecForProviderRegionRefPolicyResolveE
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecForProviderRegionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -341,6 +367,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecForProviderRegionRefPolic
 }
 
 /// <summary>Reference to a RegionInstanceGroupManager in compute to populate region.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecForProviderRegionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -352,6 +379,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecForProviderRegionRef
     public V1beta1RegionPerInstanceConfigSpecForProviderRegionRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionPerInstanceConfigSpecForProviderRegionSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -362,6 +390,7 @@ public enum V1beta1RegionPerInstanceConfigSpecForProviderRegionSelectorPolicyRes
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionPerInstanceConfigSpecForProviderRegionSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -373,6 +402,7 @@ public enum V1beta1RegionPerInstanceConfigSpecForProviderRegionSelectorPolicyRes
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecForProviderRegionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -387,6 +417,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecForProviderRegionSelector
 }
 
 /// <summary>Selector for a RegionInstanceGroupManager in compute to populate region.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecForProviderRegionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -403,6 +434,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecForProviderRegionSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecForProvider
 {
     /// <summary>The minimal action to perform on the instance during an update. Default is NONE. Possible values are:</summary>
@@ -458,6 +490,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecForProvider
     public bool? RemoveInstanceStateOnDestroy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionPerInstanceConfigSpecInitProviderPreservedStateDiskSourceRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -468,6 +501,7 @@ public enum V1beta1RegionPerInstanceConfigSpecInitProviderPreservedStateDiskSour
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionPerInstanceConfigSpecInitProviderPreservedStateDiskSourceRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -479,6 +513,7 @@ public enum V1beta1RegionPerInstanceConfigSpecInitProviderPreservedStateDiskSour
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecInitProviderPreservedStateDiskSourceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -493,6 +528,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecInitProviderPreservedStat
 }
 
 /// <summary>Reference to a Disk in compute to populate source.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecInitProviderPreservedStateDiskSourceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -504,6 +540,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecInitProviderPreservedStat
     public V1beta1RegionPerInstanceConfigSpecInitProviderPreservedStateDiskSourceRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionPerInstanceConfigSpecInitProviderPreservedStateDiskSourceSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -514,6 +551,7 @@ public enum V1beta1RegionPerInstanceConfigSpecInitProviderPreservedStateDiskSour
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionPerInstanceConfigSpecInitProviderPreservedStateDiskSourceSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -525,6 +563,7 @@ public enum V1beta1RegionPerInstanceConfigSpecInitProviderPreservedStateDiskSour
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecInitProviderPreservedStateDiskSourceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -539,6 +578,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecInitProviderPreservedStat
 }
 
 /// <summary>Selector for a Disk in compute to populate source.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecInitProviderPreservedStateDiskSourceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -555,6 +595,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecInitProviderPreservedStat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecInitProviderPreservedStateDisk
 {
     /// <summary>A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are NEVER and ON_PERMANENT_INSTANCE_DELETION. NEVER - detach the disk when the VM is deleted, but do not delete the disk. ON_PERMANENT_INSTANCE_DELETION will delete the stateful disk when the VM is permanently deleted from the instance group. Default value is NEVER. Possible values are: NEVER, ON_PERMANENT_INSTANCE_DELETION.</summary>
@@ -583,6 +624,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecInitProviderPreservedStat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecInitProviderPreservedStateExternalIpIpAddress
 {
     /// <summary>The URL of the reservation for this IP address.</summary>
@@ -591,6 +633,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecInitProviderPreservedStat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecInitProviderPreservedStateExternalIp
 {
     /// <summary>These stateful IPs will never be released during autohealing, update or VM instance recreate operations. This flag is used to configure if the IP reservation should be deleted after it is no longer used by the group, e.g. when the given instance or the whole group is deleted. Default value is NEVER. Possible values are: NEVER, ON_PERMANENT_INSTANCE_DELETION.</summary>
@@ -607,6 +650,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecInitProviderPreservedStat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecInitProviderPreservedStateInternalIpIpAddress
 {
     /// <summary>The URL of the reservation for this IP address.</summary>
@@ -615,6 +659,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecInitProviderPreservedStat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecInitProviderPreservedStateInternalIp
 {
     /// <summary>These stateful IPs will never be released during autohealing, update or VM instance recreate operations. This flag is used to configure if the IP reservation should be deleted after it is no longer used by the group, e.g. when the given instance or the whole group is deleted. Default value is NEVER. Possible values are: NEVER, ON_PERMANENT_INSTANCE_DELETION.</summary>
@@ -631,6 +676,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecInitProviderPreservedStat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecInitProviderPreservedState
 {
     /// <summary>Stateful disks for the instance. Structure is documented below.</summary>
@@ -650,6 +696,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecInitProviderPreservedStat
     public IDictionary<string, string>? Metadata { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionPerInstanceConfigSpecInitProviderRegionInstanceGroupManagerRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -660,6 +707,7 @@ public enum V1beta1RegionPerInstanceConfigSpecInitProviderRegionInstanceGroupMan
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionPerInstanceConfigSpecInitProviderRegionInstanceGroupManagerRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -671,6 +719,7 @@ public enum V1beta1RegionPerInstanceConfigSpecInitProviderRegionInstanceGroupMan
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecInitProviderRegionInstanceGroupManagerRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -685,6 +734,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecInitProviderRegionInstanc
 }
 
 /// <summary>Reference to a RegionInstanceGroupManager in compute to populate regionInstanceGroupManager.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecInitProviderRegionInstanceGroupManagerRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -696,6 +746,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecInitProviderRegionInstanc
     public V1beta1RegionPerInstanceConfigSpecInitProviderRegionInstanceGroupManagerRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionPerInstanceConfigSpecInitProviderRegionInstanceGroupManagerSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -706,6 +757,7 @@ public enum V1beta1RegionPerInstanceConfigSpecInitProviderRegionInstanceGroupMan
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionPerInstanceConfigSpecInitProviderRegionInstanceGroupManagerSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -717,6 +769,7 @@ public enum V1beta1RegionPerInstanceConfigSpecInitProviderRegionInstanceGroupMan
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecInitProviderRegionInstanceGroupManagerSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -731,6 +784,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecInitProviderRegionInstanc
 }
 
 /// <summary>Selector for a RegionInstanceGroupManager in compute to populate regionInstanceGroupManager.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecInitProviderRegionInstanceGroupManagerSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -746,6 +800,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecInitProviderRegionInstanc
     public V1beta1RegionPerInstanceConfigSpecInitProviderRegionInstanceGroupManagerSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionPerInstanceConfigSpecInitProviderRegionRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -756,6 +811,7 @@ public enum V1beta1RegionPerInstanceConfigSpecInitProviderRegionRefPolicyResolut
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionPerInstanceConfigSpecInitProviderRegionRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -767,6 +823,7 @@ public enum V1beta1RegionPerInstanceConfigSpecInitProviderRegionRefPolicyResolve
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecInitProviderRegionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -781,6 +838,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecInitProviderRegionRefPoli
 }
 
 /// <summary>Reference to a RegionInstanceGroupManager in compute to populate region.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecInitProviderRegionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -792,6 +850,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecInitProviderRegionRef
     public V1beta1RegionPerInstanceConfigSpecInitProviderRegionRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionPerInstanceConfigSpecInitProviderRegionSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -802,6 +861,7 @@ public enum V1beta1RegionPerInstanceConfigSpecInitProviderRegionSelectorPolicyRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionPerInstanceConfigSpecInitProviderRegionSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -813,6 +873,7 @@ public enum V1beta1RegionPerInstanceConfigSpecInitProviderRegionSelectorPolicyRe
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecInitProviderRegionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -827,6 +888,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecInitProviderRegionSelecto
 }
 
 /// <summary>Selector for a RegionInstanceGroupManager in compute to populate region.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecInitProviderRegionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -843,6 +905,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecInitProviderRegionSelecto
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecInitProvider
 {
     /// <summary>The minimal action to perform on the instance during an update. Default is NONE. Possible values are:</summary>
@@ -898,6 +961,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecInitProvider
     public bool? RemoveInstanceStateOnDestroy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionPerInstanceConfigSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -920,6 +984,7 @@ public enum V1beta1RegionPerInstanceConfigSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionPerInstanceConfigSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -930,6 +995,7 @@ public enum V1beta1RegionPerInstanceConfigSpecProviderConfigRefPolicyResolutionE
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionPerInstanceConfigSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -941,6 +1007,7 @@ public enum V1beta1RegionPerInstanceConfigSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -955,6 +1022,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -966,6 +1034,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecProviderConfigRef
     public V1beta1RegionPerInstanceConfigSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionPerInstanceConfigSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -976,6 +1045,7 @@ public enum V1beta1RegionPerInstanceConfigSpecPublishConnectionDetailsToConfigRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionPerInstanceConfigSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -987,6 +1057,7 @@ public enum V1beta1RegionPerInstanceConfigSpecPublishConnectionDetailsToConfigRe
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1001,6 +1072,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecPublishConnectionDetailsT
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1013,6 +1085,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecPublishConnectionDetailsT
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1029,6 +1102,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecPublishConnectionDetailsT
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1045,6 +1119,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecPublishConnectionDetailsT
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1057,6 +1132,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecWriteConnectionSecretToRe
 }
 
 /// <summary>RegionPerInstanceConfigSpec defines the desired state of RegionPerInstanceConfig</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1090,6 +1166,7 @@ public partial class V1beta1RegionPerInstanceConfigSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigStatusAtProviderPreservedStateDisk
 {
     /// <summary>A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are NEVER and ON_PERMANENT_INSTANCE_DELETION. NEVER - detach the disk when the VM is deleted, but do not delete the disk. ON_PERMANENT_INSTANCE_DELETION will delete the stateful disk when the VM is permanently deleted from the instance group. Default value is NEVER. Possible values are: NEVER, ON_PERMANENT_INSTANCE_DELETION.</summary>
@@ -1110,6 +1187,7 @@ public partial class V1beta1RegionPerInstanceConfigStatusAtProviderPreservedStat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigStatusAtProviderPreservedStateExternalIpIpAddress
 {
     /// <summary>The URL of the reservation for this IP address.</summary>
@@ -1118,6 +1196,7 @@ public partial class V1beta1RegionPerInstanceConfigStatusAtProviderPreservedStat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigStatusAtProviderPreservedStateExternalIp
 {
     /// <summary>These stateful IPs will never be released during autohealing, update or VM instance recreate operations. This flag is used to configure if the IP reservation should be deleted after it is no longer used by the group, e.g. when the given instance or the whole group is deleted. Default value is NEVER. Possible values are: NEVER, ON_PERMANENT_INSTANCE_DELETION.</summary>
@@ -1134,6 +1213,7 @@ public partial class V1beta1RegionPerInstanceConfigStatusAtProviderPreservedStat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigStatusAtProviderPreservedStateInternalIpIpAddress
 {
     /// <summary>The URL of the reservation for this IP address.</summary>
@@ -1142,6 +1222,7 @@ public partial class V1beta1RegionPerInstanceConfigStatusAtProviderPreservedStat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigStatusAtProviderPreservedStateInternalIp
 {
     /// <summary>These stateful IPs will never be released during autohealing, update or VM instance recreate operations. This flag is used to configure if the IP reservation should be deleted after it is no longer used by the group, e.g. when the given instance or the whole group is deleted. Default value is NEVER. Possible values are: NEVER, ON_PERMANENT_INSTANCE_DELETION.</summary>
@@ -1158,6 +1239,7 @@ public partial class V1beta1RegionPerInstanceConfigStatusAtProviderPreservedStat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigStatusAtProviderPreservedState
 {
     /// <summary>Stateful disks for the instance. Structure is documented below.</summary>
@@ -1178,6 +1260,7 @@ public partial class V1beta1RegionPerInstanceConfigStatusAtProviderPreservedStat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigStatusAtProvider
 {
     /// <summary>an identifier for the resource with format {{project}}/{{region}}/{{region_instance_group_manager}}/{{name}}</summary>
@@ -1222,6 +1305,7 @@ public partial class V1beta1RegionPerInstanceConfigStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1250,6 +1334,7 @@ public partial class V1beta1RegionPerInstanceConfigStatusConditions
 }
 
 /// <summary>RegionPerInstanceConfigStatus defines the observed state of RegionPerInstanceConfig.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionPerInstanceConfigStatus
 {
     /// <summary></summary>
@@ -1265,8 +1350,9 @@ public partial class V1beta1RegionPerInstanceConfigStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>RegionPerInstanceConfig is the Schema for the RegionPerInstanceConfigs API. A config defined for a single managed instance that belongs to an instance group manager.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1RegionPerInstanceConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RegionPerInstanceConfigSpec>, IStatus<V1beta1RegionPerInstanceConfigStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apimanagement.azure.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CustomDomainSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -18,6 +19,7 @@ public enum V1beta1CustomDomainSpecDeletionPolicyEnum
     Delete
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CustomDomainSpecForProviderApiManagementIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -28,6 +30,7 @@ public enum V1beta1CustomDomainSpecForProviderApiManagementIdRefPolicyResolution
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CustomDomainSpecForProviderApiManagementIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -39,6 +42,7 @@ public enum V1beta1CustomDomainSpecForProviderApiManagementIdRefPolicyResolveEnu
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderApiManagementIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -53,6 +57,7 @@ public partial class V1beta1CustomDomainSpecForProviderApiManagementIdRefPolicy
 }
 
 /// <summary>Reference to a Management in apimanagement to populate apiManagementId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderApiManagementIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -64,6 +69,7 @@ public partial class V1beta1CustomDomainSpecForProviderApiManagementIdRef
     public V1beta1CustomDomainSpecForProviderApiManagementIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CustomDomainSpecForProviderApiManagementIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -74,6 +80,7 @@ public enum V1beta1CustomDomainSpecForProviderApiManagementIdSelectorPolicyResol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CustomDomainSpecForProviderApiManagementIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -85,6 +92,7 @@ public enum V1beta1CustomDomainSpecForProviderApiManagementIdSelectorPolicyResol
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderApiManagementIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -99,6 +107,7 @@ public partial class V1beta1CustomDomainSpecForProviderApiManagementIdSelectorPo
 }
 
 /// <summary>Selector for a Management in apimanagement to populate apiManagementId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderApiManagementIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -115,6 +124,7 @@ public partial class V1beta1CustomDomainSpecForProviderApiManagementIdSelector
 }
 
 /// <summary>The password associated with the certificate provided above.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalCertificatePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -131,6 +141,7 @@ public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalCertificat
 }
 
 /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalCertificateSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -146,6 +157,7 @@ public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalCertificat
     public string Namespace { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -156,6 +168,7 @@ public enum V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultIdRefPolicy
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -167,6 +180,7 @@ public enum V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultIdRefPolicy
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -181,6 +195,7 @@ public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultId
 }
 
 /// <summary>Reference to a Certificate in keyvault to populate keyVaultId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -192,6 +207,7 @@ public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultId
     public V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -202,6 +218,7 @@ public enum V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultIdSelectorP
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -213,6 +230,7 @@ public enum V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultIdSelectorP
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -227,6 +245,7 @@ public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultId
 }
 
 /// <summary>Selector for a Certificate in keyvault to populate keyVaultId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -243,6 +262,7 @@ public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultId
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderDeveloperPortal
 {
     /// <summary>The password associated with the certificate provided above.</summary>
@@ -279,6 +299,7 @@ public partial class V1beta1CustomDomainSpecForProviderDeveloperPortal
 }
 
 /// <summary>The password associated with the certificate provided above.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderGatewayCertificatePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -295,6 +316,7 @@ public partial class V1beta1CustomDomainSpecForProviderGatewayCertificatePasswor
 }
 
 /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderGatewayCertificateSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -310,6 +332,7 @@ public partial class V1beta1CustomDomainSpecForProviderGatewayCertificateSecretR
     public string Namespace { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -320,6 +343,7 @@ public enum V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdRefPolicyResoluti
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -331,6 +355,7 @@ public enum V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdRefPolicyResolveE
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -345,6 +370,7 @@ public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdRefPolic
 }
 
 /// <summary>Reference to a Certificate in keyvault to populate keyVaultId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -356,6 +382,7 @@ public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdRef
     public V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -366,6 +393,7 @@ public enum V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdSelectorPolicyRes
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -377,6 +405,7 @@ public enum V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdSelectorPolicyRes
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -391,6 +420,7 @@ public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdSelector
 }
 
 /// <summary>Selector for a Certificate in keyvault to populate keyVaultId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -407,6 +437,7 @@ public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderGateway
 {
     /// <summary>The password associated with the certificate provided above.</summary>
@@ -447,6 +478,7 @@ public partial class V1beta1CustomDomainSpecForProviderGateway
 }
 
 /// <summary>The password associated with the certificate provided above.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderManagementCertificatePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -463,6 +495,7 @@ public partial class V1beta1CustomDomainSpecForProviderManagementCertificatePass
 }
 
 /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderManagementCertificateSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -479,6 +512,7 @@ public partial class V1beta1CustomDomainSpecForProviderManagementCertificateSecr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderManagement
 {
     /// <summary>The password associated with the certificate provided above.</summary>
@@ -507,6 +541,7 @@ public partial class V1beta1CustomDomainSpecForProviderManagement
 }
 
 /// <summary>The password associated with the certificate provided above.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderPortalCertificatePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -523,6 +558,7 @@ public partial class V1beta1CustomDomainSpecForProviderPortalCertificatePassword
 }
 
 /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderPortalCertificateSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -539,6 +575,7 @@ public partial class V1beta1CustomDomainSpecForProviderPortalCertificateSecretRe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderPortal
 {
     /// <summary>The password associated with the certificate provided above.</summary>
@@ -567,6 +604,7 @@ public partial class V1beta1CustomDomainSpecForProviderPortal
 }
 
 /// <summary>The password associated with the certificate provided above.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderScmCertificatePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -583,6 +621,7 @@ public partial class V1beta1CustomDomainSpecForProviderScmCertificatePasswordSec
 }
 
 /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderScmCertificateSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -599,6 +638,7 @@ public partial class V1beta1CustomDomainSpecForProviderScmCertificateSecretRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderScm
 {
     /// <summary>The password associated with the certificate provided above.</summary>
@@ -627,6 +667,7 @@ public partial class V1beta1CustomDomainSpecForProviderScm
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProvider
 {
     /// <summary>The ID of the API Management service for which to configure Custom Domains. Changing this forces a new API Management Custom Domain resource to be created.</summary>
@@ -663,6 +704,7 @@ public partial class V1beta1CustomDomainSpecForProvider
 }
 
 /// <summary>The password associated with the certificate provided above.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalCertificatePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -679,6 +721,7 @@ public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalCertifica
 }
 
 /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalCertificateSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -694,6 +737,7 @@ public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalCertifica
     public string Namespace { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -704,6 +748,7 @@ public enum V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultIdRefPolic
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -715,6 +760,7 @@ public enum V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultIdRefPolic
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -729,6 +775,7 @@ public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultI
 }
 
 /// <summary>Reference to a Certificate in keyvault to populate keyVaultId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -740,6 +787,7 @@ public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultI
     public V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -750,6 +798,7 @@ public enum V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultIdSelector
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -761,6 +810,7 @@ public enum V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultIdSelector
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -775,6 +825,7 @@ public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultI
 }
 
 /// <summary>Selector for a Certificate in keyvault to populate keyVaultId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -791,6 +842,7 @@ public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultI
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortal
 {
     /// <summary>The password associated with the certificate provided above.</summary>
@@ -827,6 +879,7 @@ public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortal
 }
 
 /// <summary>The password associated with the certificate provided above.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderGatewayCertificatePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -843,6 +896,7 @@ public partial class V1beta1CustomDomainSpecInitProviderGatewayCertificatePasswo
 }
 
 /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderGatewayCertificateSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -858,6 +912,7 @@ public partial class V1beta1CustomDomainSpecInitProviderGatewayCertificateSecret
     public string Namespace { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -868,6 +923,7 @@ public enum V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdRefPolicyResolut
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -879,6 +935,7 @@ public enum V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdRefPolicyResolve
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -893,6 +950,7 @@ public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdRefPoli
 }
 
 /// <summary>Reference to a Certificate in keyvault to populate keyVaultId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -904,6 +962,7 @@ public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdRef
     public V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -914,6 +973,7 @@ public enum V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdSelectorPolicyRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -925,6 +985,7 @@ public enum V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdSelectorPolicyRe
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -939,6 +1000,7 @@ public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdSelecto
 }
 
 /// <summary>Selector for a Certificate in keyvault to populate keyVaultId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -955,6 +1017,7 @@ public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdSelecto
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderGateway
 {
     /// <summary>The password associated with the certificate provided above.</summary>
@@ -995,6 +1058,7 @@ public partial class V1beta1CustomDomainSpecInitProviderGateway
 }
 
 /// <summary>The password associated with the certificate provided above.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderManagementCertificatePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1011,6 +1075,7 @@ public partial class V1beta1CustomDomainSpecInitProviderManagementCertificatePas
 }
 
 /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderManagementCertificateSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1027,6 +1092,7 @@ public partial class V1beta1CustomDomainSpecInitProviderManagementCertificateSec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderManagement
 {
     /// <summary>The password associated with the certificate provided above.</summary>
@@ -1055,6 +1121,7 @@ public partial class V1beta1CustomDomainSpecInitProviderManagement
 }
 
 /// <summary>The password associated with the certificate provided above.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderPortalCertificatePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1071,6 +1138,7 @@ public partial class V1beta1CustomDomainSpecInitProviderPortalCertificatePasswor
 }
 
 /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderPortalCertificateSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1087,6 +1155,7 @@ public partial class V1beta1CustomDomainSpecInitProviderPortalCertificateSecretR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderPortal
 {
     /// <summary>The password associated with the certificate provided above.</summary>
@@ -1115,6 +1184,7 @@ public partial class V1beta1CustomDomainSpecInitProviderPortal
 }
 
 /// <summary>The password associated with the certificate provided above.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderScmCertificatePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1131,6 +1201,7 @@ public partial class V1beta1CustomDomainSpecInitProviderScmCertificatePasswordSe
 }
 
 /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderScmCertificateSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1147,6 +1218,7 @@ public partial class V1beta1CustomDomainSpecInitProviderScmCertificateSecretRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderScm
 {
     /// <summary>The password associated with the certificate provided above.</summary>
@@ -1175,6 +1247,7 @@ public partial class V1beta1CustomDomainSpecInitProviderScm
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProvider
 {
     /// <summary>One or more developer_portal blocks as defined below.</summary>
@@ -1198,6 +1271,7 @@ public partial class V1beta1CustomDomainSpecInitProvider
     public IList<V1beta1CustomDomainSpecInitProviderScm>? Scm { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CustomDomainSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -1220,6 +1294,7 @@ public enum V1beta1CustomDomainSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CustomDomainSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1230,6 +1305,7 @@ public enum V1beta1CustomDomainSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CustomDomainSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1241,6 +1317,7 @@ public enum V1beta1CustomDomainSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1255,6 +1332,7 @@ public partial class V1beta1CustomDomainSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1266,6 +1344,7 @@ public partial class V1beta1CustomDomainSpecProviderConfigRef
     public V1beta1CustomDomainSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CustomDomainSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1276,6 +1355,7 @@ public enum V1beta1CustomDomainSpecPublishConnectionDetailsToConfigRefPolicyReso
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CustomDomainSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1287,6 +1367,7 @@ public enum V1beta1CustomDomainSpecPublishConnectionDetailsToConfigRefPolicyReso
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1301,6 +1382,7 @@ public partial class V1beta1CustomDomainSpecPublishConnectionDetailsToConfigRefP
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1313,6 +1395,7 @@ public partial class V1beta1CustomDomainSpecPublishConnectionDetailsToConfigRef
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1329,6 +1412,7 @@ public partial class V1beta1CustomDomainSpecPublishConnectionDetailsToMetadata
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1345,6 +1429,7 @@ public partial class V1beta1CustomDomainSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1357,6 +1442,7 @@ public partial class V1beta1CustomDomainSpecWriteConnectionSecretToRef
 }
 
 /// <summary>CustomDomainSpec defines the desired state of CustomDomain</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1390,6 +1476,7 @@ public partial class V1beta1CustomDomainSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainStatusAtProviderDeveloperPortal
 {
     /// <summary></summary>
@@ -1430,6 +1517,7 @@ public partial class V1beta1CustomDomainStatusAtProviderDeveloperPortal
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainStatusAtProviderGateway
 {
     /// <summary></summary>
@@ -1474,6 +1562,7 @@ public partial class V1beta1CustomDomainStatusAtProviderGateway
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainStatusAtProviderManagement
 {
     /// <summary></summary>
@@ -1514,6 +1603,7 @@ public partial class V1beta1CustomDomainStatusAtProviderManagement
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainStatusAtProviderPortal
 {
     /// <summary></summary>
@@ -1554,6 +1644,7 @@ public partial class V1beta1CustomDomainStatusAtProviderPortal
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainStatusAtProviderScm
 {
     /// <summary></summary>
@@ -1594,6 +1685,7 @@ public partial class V1beta1CustomDomainStatusAtProviderScm
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainStatusAtProvider
 {
     /// <summary>The ID of the API Management service for which to configure Custom Domains. Changing this forces a new API Management Custom Domain resource to be created.</summary>
@@ -1626,6 +1718,7 @@ public partial class V1beta1CustomDomainStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1654,6 +1747,7 @@ public partial class V1beta1CustomDomainStatusConditions
 }
 
 /// <summary>CustomDomainStatus defines the observed state of CustomDomain.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainStatus
 {
     /// <summary></summary>
@@ -1669,8 +1763,9 @@ public partial class V1beta1CustomDomainStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>CustomDomain is the Schema for the CustomDomains API. Manages a API Management Custom Domain.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1CustomDomain : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CustomDomainSpec>, IStatus<V1beta1CustomDomainStatus>
 {
     public const string KubeApiVersion = "v1beta1";

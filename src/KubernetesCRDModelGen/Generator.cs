@@ -1,4 +1,6 @@
-﻿using System.Reflection;
+﻿using System.CodeDom.Compiler;
+using System.Diagnostics.CodeAnalysis;
+using System.Reflection;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
@@ -90,6 +92,19 @@ public class Generator : IGenerator
 
         var @class = SyntaxFactory.ClassDeclaration(CleanIdentifier((isRoot ? version : string.Empty) + " " + name))
                         .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.PartialKeyword))
+                        .AddAttributeLists(SyntaxFactory.AttributeList()
+                            .AddAttributes(
+                            [
+                                SyntaxFactory.Attribute(
+                                    SyntaxFactory.ParseName("global::System.CodeDom.Compiler.GeneratedCode"))
+                                    .WithArgumentList(SyntaxFactory.AttributeArgumentList(SyntaxFactory.SeparatedList(new[]
+                                    {
+                                        SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("KubernetesCRDModelGen.Tool"))),
+                                        SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("1.0.0.0")))
+                                    }))),
+                                SyntaxFactory.Attribute(SyntaxFactory.ParseName("global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage"))
+                            ])
+                        )
                         .WithLeadingTrivia(
                             SyntaxFactory.TriviaList(
                                 SyntaxFactory.Comment($"/// <summary>{XmlString(schema.Description?.Replace("\n", " ").Replace("\r", " "))}</summary>"),
@@ -333,7 +348,19 @@ public class Generator : IGenerator
     private static string GenerateEnum(IList<IOpenApiAny> options, List<BaseTypeDeclarationSyntax> types, string parentClassName, string propertyName)
     {
         var enumDeclaration = SyntaxFactory.EnumDeclaration(CleanIdentifier(parentClassName + " " + propertyName) + "Enum")
-            .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword));
+            .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword))
+            .AddAttributeLists(SyntaxFactory.AttributeList()
+                .AddAttributes(
+                [
+                    SyntaxFactory.Attribute(
+                        SyntaxFactory.ParseName("global::System.CodeDom.Compiler.GeneratedCode"))
+                        .WithArgumentList(SyntaxFactory.AttributeArgumentList(SyntaxFactory.SeparatedList(new[]
+                        {
+                            SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("KubernetesCRDModelGen.Tool"))),
+                            SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("1.0.0.0")))
+                        }))),
+                ])
+            );
 
         for (var i = 0; i < options.Count; i++)
         {

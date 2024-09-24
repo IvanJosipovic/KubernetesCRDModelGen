@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.labservices.azure.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LabServiceLabSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1LabServiceLabSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecForProviderAutoShutdown
 {
     /// <summary>The amount of time a VM will stay running after a user disconnects if this behavior is enabled. This value must be formatted as an ISO 8601 string.</summary>
@@ -39,6 +41,7 @@ public partial class V1beta1LabServiceLabSpecForProviderAutoShutdown
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecForProviderConnectionSetting
 {
     /// <summary>The enabled access level for Client Access over RDP. Possible value is Public.</summary>
@@ -50,6 +53,7 @@ public partial class V1beta1LabServiceLabSpecForProviderConnectionSetting
     public string? ClientSshAccess { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LabServiceLabSpecForProviderNetworkSubnetIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -60,6 +64,7 @@ public enum V1beta1LabServiceLabSpecForProviderNetworkSubnetIdRefPolicyResolutio
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LabServiceLabSpecForProviderNetworkSubnetIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -71,6 +76,7 @@ public enum V1beta1LabServiceLabSpecForProviderNetworkSubnetIdRefPolicyResolveEn
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecForProviderNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -85,6 +91,7 @@ public partial class V1beta1LabServiceLabSpecForProviderNetworkSubnetIdRefPolicy
 }
 
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecForProviderNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -96,6 +103,7 @@ public partial class V1beta1LabServiceLabSpecForProviderNetworkSubnetIdRef
     public V1beta1LabServiceLabSpecForProviderNetworkSubnetIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LabServiceLabSpecForProviderNetworkSubnetIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -106,6 +114,7 @@ public enum V1beta1LabServiceLabSpecForProviderNetworkSubnetIdSelectorPolicyReso
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LabServiceLabSpecForProviderNetworkSubnetIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -117,6 +126,7 @@ public enum V1beta1LabServiceLabSpecForProviderNetworkSubnetIdSelectorPolicyReso
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecForProviderNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -131,6 +141,7 @@ public partial class V1beta1LabServiceLabSpecForProviderNetworkSubnetIdSelectorP
 }
 
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecForProviderNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -147,6 +158,7 @@ public partial class V1beta1LabServiceLabSpecForProviderNetworkSubnetIdSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecForProviderNetwork
 {
     /// <summary>The resource ID of the Subnet for the network profile of the Lab Service Lab.</summary>
@@ -162,6 +174,7 @@ public partial class V1beta1LabServiceLabSpecForProviderNetwork
     public V1beta1LabServiceLabSpecForProviderNetworkSubnetIdSelector? SubnetIdSelector { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LabServiceLabSpecForProviderResourceGroupNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -172,6 +185,7 @@ public enum V1beta1LabServiceLabSpecForProviderResourceGroupNameRefPolicyResolut
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LabServiceLabSpecForProviderResourceGroupNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -183,6 +197,7 @@ public enum V1beta1LabServiceLabSpecForProviderResourceGroupNameRefPolicyResolve
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -197,6 +212,7 @@ public partial class V1beta1LabServiceLabSpecForProviderResourceGroupNameRefPoli
 }
 
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -208,6 +224,7 @@ public partial class V1beta1LabServiceLabSpecForProviderResourceGroupNameRef
     public V1beta1LabServiceLabSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LabServiceLabSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -218,6 +235,7 @@ public enum V1beta1LabServiceLabSpecForProviderResourceGroupNameSelectorPolicyRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LabServiceLabSpecForProviderResourceGroupNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -229,6 +247,7 @@ public enum V1beta1LabServiceLabSpecForProviderResourceGroupNameSelectorPolicyRe
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -243,6 +262,7 @@ public partial class V1beta1LabServiceLabSpecForProviderResourceGroupNameSelecto
 }
 
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -259,6 +279,7 @@ public partial class V1beta1LabServiceLabSpecForProviderResourceGroupNameSelecto
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecForProviderRoster
 {
     /// <summary>The AAD group ID which this Lab Service Lab roster is populated from.</summary>
@@ -283,6 +304,7 @@ public partial class V1beta1LabServiceLabSpecForProviderRoster
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecForProviderSecurity
 {
     /// <summary>Is open access enabled to allow any user or only specified users to register to a Lab Service Lab?</summary>
@@ -291,6 +313,7 @@ public partial class V1beta1LabServiceLabSpecForProviderSecurity
 }
 
 /// <summary>The password for the user.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecForProviderVirtualMachineAdminUserPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -307,6 +330,7 @@ public partial class V1beta1LabServiceLabSpecForProviderVirtualMachineAdminUserP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecForProviderVirtualMachineAdminUser
 {
     /// <summary>The password for the user.</summary>
@@ -319,6 +343,7 @@ public partial class V1beta1LabServiceLabSpecForProviderVirtualMachineAdminUser
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecForProviderVirtualMachineImageReference
 {
     /// <summary>The resource ID of the image. Changing this forces a new resource to be created.</summary>
@@ -343,6 +368,7 @@ public partial class V1beta1LabServiceLabSpecForProviderVirtualMachineImageRefer
 }
 
 /// <summary>The password for the user.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecForProviderVirtualMachineNonAdminUserPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -359,6 +385,7 @@ public partial class V1beta1LabServiceLabSpecForProviderVirtualMachineNonAdminUs
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecForProviderVirtualMachineNonAdminUser
 {
     /// <summary>The password for the user.</summary>
@@ -371,6 +398,7 @@ public partial class V1beta1LabServiceLabSpecForProviderVirtualMachineNonAdminUs
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecForProviderVirtualMachineSku
 {
     /// <summary>The capacity for the SKU. Possible values are between 0 and 400.</summary>
@@ -383,6 +411,7 @@ public partial class V1beta1LabServiceLabSpecForProviderVirtualMachineSku
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecForProviderVirtualMachine
 {
     /// <summary>Is flagged to pre-install dedicated GPU drivers? Defaults to false. Changing this forces a new resource to be created.</summary>
@@ -419,6 +448,7 @@ public partial class V1beta1LabServiceLabSpecForProviderVirtualMachine
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecForProvider
 {
     /// <summary>An auto_shutdown block as defined below.</summary>
@@ -479,6 +509,7 @@ public partial class V1beta1LabServiceLabSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecInitProviderAutoShutdown
 {
     /// <summary>The amount of time a VM will stay running after a user disconnects if this behavior is enabled. This value must be formatted as an ISO 8601 string.</summary>
@@ -499,6 +530,7 @@ public partial class V1beta1LabServiceLabSpecInitProviderAutoShutdown
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecInitProviderConnectionSetting
 {
     /// <summary>The enabled access level for Client Access over RDP. Possible value is Public.</summary>
@@ -510,6 +542,7 @@ public partial class V1beta1LabServiceLabSpecInitProviderConnectionSetting
     public string? ClientSshAccess { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LabServiceLabSpecInitProviderNetworkSubnetIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -520,6 +553,7 @@ public enum V1beta1LabServiceLabSpecInitProviderNetworkSubnetIdRefPolicyResoluti
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LabServiceLabSpecInitProviderNetworkSubnetIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -531,6 +565,7 @@ public enum V1beta1LabServiceLabSpecInitProviderNetworkSubnetIdRefPolicyResolveE
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecInitProviderNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -545,6 +580,7 @@ public partial class V1beta1LabServiceLabSpecInitProviderNetworkSubnetIdRefPolic
 }
 
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecInitProviderNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -556,6 +592,7 @@ public partial class V1beta1LabServiceLabSpecInitProviderNetworkSubnetIdRef
     public V1beta1LabServiceLabSpecInitProviderNetworkSubnetIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LabServiceLabSpecInitProviderNetworkSubnetIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -566,6 +603,7 @@ public enum V1beta1LabServiceLabSpecInitProviderNetworkSubnetIdSelectorPolicyRes
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LabServiceLabSpecInitProviderNetworkSubnetIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -577,6 +615,7 @@ public enum V1beta1LabServiceLabSpecInitProviderNetworkSubnetIdSelectorPolicyRes
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecInitProviderNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -591,6 +630,7 @@ public partial class V1beta1LabServiceLabSpecInitProviderNetworkSubnetIdSelector
 }
 
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecInitProviderNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -607,6 +647,7 @@ public partial class V1beta1LabServiceLabSpecInitProviderNetworkSubnetIdSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecInitProviderNetwork
 {
     /// <summary>The resource ID of the Subnet for the network profile of the Lab Service Lab.</summary>
@@ -623,6 +664,7 @@ public partial class V1beta1LabServiceLabSpecInitProviderNetwork
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecInitProviderRoster
 {
     /// <summary>The AAD group ID which this Lab Service Lab roster is populated from.</summary>
@@ -647,6 +689,7 @@ public partial class V1beta1LabServiceLabSpecInitProviderRoster
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecInitProviderSecurity
 {
     /// <summary>Is open access enabled to allow any user or only specified users to register to a Lab Service Lab?</summary>
@@ -655,6 +698,7 @@ public partial class V1beta1LabServiceLabSpecInitProviderSecurity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecInitProviderVirtualMachineAdminUser
 {
     /// <summary>The username to use when signing in to Lab Service Lab VMs.</summary>
@@ -663,6 +707,7 @@ public partial class V1beta1LabServiceLabSpecInitProviderVirtualMachineAdminUser
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecInitProviderVirtualMachineImageReference
 {
     /// <summary>The resource ID of the image. Changing this forces a new resource to be created.</summary>
@@ -687,6 +732,7 @@ public partial class V1beta1LabServiceLabSpecInitProviderVirtualMachineImageRefe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecInitProviderVirtualMachineNonAdminUser
 {
     /// <summary>The username to use when signing in to Lab Service Lab VMs.</summary>
@@ -695,6 +741,7 @@ public partial class V1beta1LabServiceLabSpecInitProviderVirtualMachineNonAdminU
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecInitProviderVirtualMachineSku
 {
     /// <summary>The capacity for the SKU. Possible values are between 0 and 400.</summary>
@@ -707,6 +754,7 @@ public partial class V1beta1LabServiceLabSpecInitProviderVirtualMachineSku
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecInitProviderVirtualMachine
 {
     /// <summary>Is flagged to pre-install dedicated GPU drivers? Defaults to false. Changing this forces a new resource to be created.</summary>
@@ -743,6 +791,7 @@ public partial class V1beta1LabServiceLabSpecInitProviderVirtualMachine
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecInitProvider
 {
     /// <summary>An auto_shutdown block as defined below.</summary>
@@ -790,6 +839,7 @@ public partial class V1beta1LabServiceLabSpecInitProvider
     public IList<V1beta1LabServiceLabSpecInitProviderVirtualMachine>? VirtualMachine { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LabServiceLabSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -812,6 +862,7 @@ public enum V1beta1LabServiceLabSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LabServiceLabSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -822,6 +873,7 @@ public enum V1beta1LabServiceLabSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LabServiceLabSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -833,6 +885,7 @@ public enum V1beta1LabServiceLabSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -847,6 +900,7 @@ public partial class V1beta1LabServiceLabSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -858,6 +912,7 @@ public partial class V1beta1LabServiceLabSpecProviderConfigRef
     public V1beta1LabServiceLabSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LabServiceLabSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -868,6 +923,7 @@ public enum V1beta1LabServiceLabSpecPublishConnectionDetailsToConfigRefPolicyRes
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LabServiceLabSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -879,6 +935,7 @@ public enum V1beta1LabServiceLabSpecPublishConnectionDetailsToConfigRefPolicyRes
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -893,6 +950,7 @@ public partial class V1beta1LabServiceLabSpecPublishConnectionDetailsToConfigRef
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -905,6 +963,7 @@ public partial class V1beta1LabServiceLabSpecPublishConnectionDetailsToConfigRef
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -921,6 +980,7 @@ public partial class V1beta1LabServiceLabSpecPublishConnectionDetailsToMetadata
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -937,6 +997,7 @@ public partial class V1beta1LabServiceLabSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -949,6 +1010,7 @@ public partial class V1beta1LabServiceLabSpecWriteConnectionSecretToRef
 }
 
 /// <summary>LabServiceLabSpec defines the desired state of LabServiceLab</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -982,6 +1044,7 @@ public partial class V1beta1LabServiceLabSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabStatusAtProviderAutoShutdown
 {
     /// <summary>The amount of time a VM will stay running after a user disconnects if this behavior is enabled. This value must be formatted as an ISO 8601 string.</summary>
@@ -1002,6 +1065,7 @@ public partial class V1beta1LabServiceLabStatusAtProviderAutoShutdown
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabStatusAtProviderConnectionSetting
 {
     /// <summary>The enabled access level for Client Access over RDP. Possible value is Public.</summary>
@@ -1014,6 +1078,7 @@ public partial class V1beta1LabServiceLabStatusAtProviderConnectionSetting
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabStatusAtProviderNetwork
 {
     /// <summary>The resource ID of the Load Balancer for the network profile of the Lab Service Lab.</summary>
@@ -1030,6 +1095,7 @@ public partial class V1beta1LabServiceLabStatusAtProviderNetwork
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabStatusAtProviderRoster
 {
     /// <summary>The AAD group ID which this Lab Service Lab roster is populated from.</summary>
@@ -1054,6 +1120,7 @@ public partial class V1beta1LabServiceLabStatusAtProviderRoster
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabStatusAtProviderSecurity
 {
     /// <summary>Is open access enabled to allow any user or only specified users to register to a Lab Service Lab?</summary>
@@ -1066,6 +1133,7 @@ public partial class V1beta1LabServiceLabStatusAtProviderSecurity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabStatusAtProviderVirtualMachineAdminUser
 {
     /// <summary>The username to use when signing in to Lab Service Lab VMs.</summary>
@@ -1074,6 +1142,7 @@ public partial class V1beta1LabServiceLabStatusAtProviderVirtualMachineAdminUser
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabStatusAtProviderVirtualMachineImageReference
 {
     /// <summary>The resource ID of the image. Changing this forces a new resource to be created.</summary>
@@ -1098,6 +1167,7 @@ public partial class V1beta1LabServiceLabStatusAtProviderVirtualMachineImageRefe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabStatusAtProviderVirtualMachineNonAdminUser
 {
     /// <summary>The username to use when signing in to Lab Service Lab VMs.</summary>
@@ -1106,6 +1176,7 @@ public partial class V1beta1LabServiceLabStatusAtProviderVirtualMachineNonAdminU
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabStatusAtProviderVirtualMachineSku
 {
     /// <summary>The capacity for the SKU. Possible values are between 0 and 400.</summary>
@@ -1118,6 +1189,7 @@ public partial class V1beta1LabServiceLabStatusAtProviderVirtualMachineSku
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabStatusAtProviderVirtualMachine
 {
     /// <summary>Is flagged to pre-install dedicated GPU drivers? Defaults to false. Changing this forces a new resource to be created.</summary>
@@ -1154,6 +1226,7 @@ public partial class V1beta1LabServiceLabStatusAtProviderVirtualMachine
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabStatusAtProvider
 {
     /// <summary>An auto_shutdown block as defined below.</summary>
@@ -1210,6 +1283,7 @@ public partial class V1beta1LabServiceLabStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1238,6 +1312,7 @@ public partial class V1beta1LabServiceLabStatusConditions
 }
 
 /// <summary>LabServiceLabStatus defines the observed state of LabServiceLab.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LabServiceLabStatus
 {
     /// <summary></summary>
@@ -1253,8 +1328,9 @@ public partial class V1beta1LabServiceLabStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>LabServiceLab is the Schema for the LabServiceLabs API. Manages a Lab Service Lab.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1LabServiceLab : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LabServiceLabSpec>, IStatus<V1beta1LabServiceLabStatus>
 {
     public const string KubeApiVersion = "v1beta1";

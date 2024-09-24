@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.vertexai.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIFeaturestoreEntityTypeFeatureSpec
 {
     /// <summary>Description of the feature.</summary>
@@ -29,6 +30,7 @@ public partial class V1alpha1VertexAIFeaturestoreEntityTypeFeatureSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIFeaturestoreEntityTypeFeatureStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -53,6 +55,7 @@ public partial class V1alpha1VertexAIFeaturestoreEntityTypeFeatureStatusConditio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIFeaturestoreEntityTypeFeatureStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -80,8 +83,9 @@ public partial class V1alpha1VertexAIFeaturestoreEntityTypeFeatureStatus
     public string? UpdateTime { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1VertexAIFeaturestoreEntityTypeFeature : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1VertexAIFeaturestoreEntityTypeFeatureSpec>, IStatus<V1alpha1VertexAIFeaturestoreEntityTypeFeatureStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

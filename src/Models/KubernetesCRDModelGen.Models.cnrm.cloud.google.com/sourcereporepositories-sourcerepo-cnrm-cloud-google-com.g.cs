@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sourcerepo.cnrm.cloud.google.com;
 /// <summary>Service account used for publishing Cloud Pub/Sub messages. This service account needs to be in the same project as the pubsubConfig. When added, the caller needs to have iam.serviceAccounts.actAs permission on this service account. If unspecified, it defaults to the compute engine default service account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SourceRepoRepositorySpecPubsubConfigsServiceAccountRef
 {
     /// <summary>Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1SourceRepoRepositorySpecPubsubConfigsServiceAccountR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SourceRepoRepositorySpecPubsubConfigsTopicRef
 {
     /// <summary>Allowed value: The `name` field of a `PubSubTopic` resource.</summary>
@@ -41,6 +43,7 @@ public partial class V1beta1SourceRepoRepositorySpecPubsubConfigsTopicRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SourceRepoRepositorySpecPubsubConfigs
 {
     /// <summary>The format of the Cloud Pub/Sub messages. - PROTOBUF: The message payload is a serialized protocol buffer of SourceRepoEvent. - JSON: The message payload is a JSON string of SourceRepoEvent. Possible values: ["PROTOBUF", "JSON"].</summary>
@@ -57,6 +60,7 @@ public partial class V1beta1SourceRepoRepositorySpecPubsubConfigs
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SourceRepoRepositorySpec
 {
     /// <summary>How this repository publishes a change in the repository through Cloud Pub/Sub. Keyed by the topic names.</summary>
@@ -69,6 +73,7 @@ public partial class V1beta1SourceRepoRepositorySpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SourceRepoRepositoryStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -93,6 +98,7 @@ public partial class V1beta1SourceRepoRepositoryStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SourceRepoRepositoryStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -112,8 +118,9 @@ public partial class V1beta1SourceRepoRepositoryStatus
     public string? Url { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1SourceRepoRepository : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SourceRepoRepositorySpec>, IStatus<V1beta1SourceRepoRepositoryStatus>
 {
     public const string KubeApiVersion = "v1beta1";

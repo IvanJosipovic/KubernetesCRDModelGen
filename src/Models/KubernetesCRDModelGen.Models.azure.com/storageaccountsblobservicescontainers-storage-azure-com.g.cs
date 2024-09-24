@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.azure.com;
 /// <summary>Storage version of v1api20230101.ImmutableStorageWithVersioning Object level immutability properties of the container.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServicesContainerSpecImmutableStorageWithVersioning
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -21,6 +22,7 @@ public partial class V1api20230101storageStorageAccountsBlobServicesContainerSpe
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a storage.azure.com/StorageAccountsBlobService resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServicesContainerSpecOwner
 {
     /// <summary></summary>
@@ -33,6 +35,7 @@ public partial class V1api20230101storageStorageAccountsBlobServicesContainerSpe
 }
 
 /// <summary>Storage version of v1api20230101.StorageAccounts_BlobServices_Container_Spec</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServicesContainerSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -81,6 +84,7 @@ public partial class V1api20230101storageStorageAccountsBlobServicesContainerSpe
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServicesContainerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -113,6 +117,7 @@ public partial class V1api20230101storageStorageAccountsBlobServicesContainerSta
 }
 
 /// <summary>Storage version of v1api20230101.UpdateHistoryProperty_STATUS An update history of the ImmutabilityPolicy of a blob container.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServicesContainerStatusImmutabilityPolicyUpdateHistory
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -153,6 +158,7 @@ public partial class V1api20230101storageStorageAccountsBlobServicesContainerSta
 }
 
 /// <summary>Storage version of v1api20230101.ImmutabilityPolicyProperties_STATUS The properties of an ImmutabilityPolicy of a blob container.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServicesContainerStatusImmutabilityPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -185,6 +191,7 @@ public partial class V1api20230101storageStorageAccountsBlobServicesContainerSta
 }
 
 /// <summary>Storage version of v1api20230101.ImmutableStorageWithVersioning_STATUS Object level immutability properties of the container.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServicesContainerStatusImmutableStorageWithVersioning
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -205,6 +212,7 @@ public partial class V1api20230101storageStorageAccountsBlobServicesContainerSta
 }
 
 /// <summary>Storage version of v1api20230101.ProtectedAppendWritesHistory_STATUS Protected append writes history setting for the blob container with Legal holds.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServicesContainerStatusLegalHoldProtectedAppendWritesHistory
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -221,6 +229,7 @@ public partial class V1api20230101storageStorageAccountsBlobServicesContainerSta
 }
 
 /// <summary>Storage version of v1api20230101.TagProperty_STATUS A tag of the LegalHold of a blob container.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServicesContainerStatusLegalHoldTags
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -249,6 +258,7 @@ public partial class V1api20230101storageStorageAccountsBlobServicesContainerSta
 }
 
 /// <summary>Storage version of v1api20230101.LegalHoldProperties_STATUS The LegalHold property of a blob container.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServicesContainerStatusLegalHold
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -269,6 +279,7 @@ public partial class V1api20230101storageStorageAccountsBlobServicesContainerSta
 }
 
 /// <summary>Storage version of v1api20230101.StorageAccounts_BlobServices_Container_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServicesContainerStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -372,8 +383,9 @@ public partial class V1api20230101storageStorageAccountsBlobServicesContainerSta
     public string? Version { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Storage version of v1api20230101.StorageAccountsBlobServicesContainer Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2023-01-01/blob.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/default/containers/{containerName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1api20230101storageStorageAccountsBlobServicesContainer : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230101storageStorageAccountsBlobServicesContainerSpec>, IStatus<V1api20230101storageStorageAccountsBlobServicesContainerStatus>
 {
     public const string KubeApiVersion = "v1api20230101storage";

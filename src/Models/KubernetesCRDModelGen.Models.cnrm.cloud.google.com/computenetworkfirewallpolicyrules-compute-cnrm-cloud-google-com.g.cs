@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary>The firewall policy of the resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecFirewallPolicyRef
 {
     /// <summary>Allowed value: The `networkFirewallPolicyId` field of a `ComputeNetworkFirewallPolicy` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecFirewallPolicyR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecMatchLayer4Configs
 {
     /// <summary>The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (`tcp`, `udp`, `icmp`, `esp`, `ah`, `ipip`, `sctp`), or the IP protocol number.</summary>
@@ -37,6 +39,7 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecMatchLayer4Conf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecMatchSrcSecureTags
 {
     /// <summary>Name of the secure tag, created with TagManager's TagValue API. @pattern tagValues/[0-9]+.</summary>
@@ -49,6 +52,7 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecMatchSrcSecureT
 }
 
 /// <summary>A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecMatch
 {
     /// <summary>Address groups which should be matched against the traffic destination. Maximum number of destination address groups is 10. Destination address groups is only supported in Egress rules.</summary>
@@ -101,6 +105,7 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecMatch
 }
 
 /// <summary>The project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -117,6 +122,7 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecProjectRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecTargetSecureTags
 {
     /// <summary>Name of the secure tag, created with TagManager's TagValue API. @pattern tagValues/[0-9]+.</summary>
@@ -129,6 +135,7 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecTargetSecureTag
 }
 
 /// <summary>A list of service accounts indicating the sets of instances that are applied with this rule</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecTargetServiceAccountRefs
 {
     /// <summary>Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
@@ -145,6 +152,7 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecTargetServiceAc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpec
 {
     /// <summary>The Action to perform when the client connection triggers the rule. Valid actions are "allow", "deny" and "goto_next".</summary>
@@ -197,6 +205,7 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkFirewallPolicyRuleStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -221,6 +230,7 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkFirewallPolicyRuleStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -240,8 +250,9 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleStatus
     public int? RuleTupleCount { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1ComputeNetworkFirewallPolicyRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputeNetworkFirewallPolicyRuleSpec>, IStatus<V1alpha1ComputeNetworkFirewallPolicyRuleStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

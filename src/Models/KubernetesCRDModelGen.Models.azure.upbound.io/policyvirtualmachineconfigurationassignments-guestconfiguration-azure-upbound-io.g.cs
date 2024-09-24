@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.guestconfiguration.azure.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PolicyVirtualMachineConfigurationAssignmentSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1PolicyVirtualMachineConfigurationAssignmentSpecDeletionPolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForProviderConfigurationParameter
 {
     /// <summary>The name of the configuration parameter to check.</summary>
@@ -31,6 +33,7 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForPr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForProviderConfiguration
 {
     /// <summary>The assignment type for the Guest Configuration Assignment. Possible values are Audit, ApplyAndAutoCorrect, ApplyAndMonitor and DeployAndAutoCorrect.</summary>
@@ -54,6 +57,7 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForPr
     public string? Version { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForProviderVirtualMachineIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -64,6 +68,7 @@ public enum V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForProviderVir
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForProviderVirtualMachineIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -75,6 +80,7 @@ public enum V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForProviderVir
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForProviderVirtualMachineIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -89,6 +95,7 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForPr
 }
 
 /// <summary>Reference to a WindowsVirtualMachine in compute to populate virtualMachineId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForProviderVirtualMachineIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -100,6 +107,7 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForPr
     public V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForProviderVirtualMachineIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForProviderVirtualMachineIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -110,6 +118,7 @@ public enum V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForProviderVir
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForProviderVirtualMachineIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -121,6 +130,7 @@ public enum V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForProviderVir
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForProviderVirtualMachineIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -135,6 +145,7 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForPr
 }
 
 /// <summary>Selector for a WindowsVirtualMachine in compute to populate virtualMachineId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForProviderVirtualMachineIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -151,6 +162,7 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForPr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForProvider
 {
     /// <summary>A configuration block as defined below.</summary>
@@ -175,6 +187,7 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForPr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecInitProviderConfigurationParameter
 {
     /// <summary>The name of the configuration parameter to check.</summary>
@@ -187,6 +200,7 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecInitP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecInitProviderConfiguration
 {
     /// <summary>The assignment type for the Guest Configuration Assignment. Possible values are Audit, ApplyAndAutoCorrect, ApplyAndMonitor and DeployAndAutoCorrect.</summary>
@@ -211,6 +225,7 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecInitP
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecInitProvider
 {
     /// <summary>A configuration block as defined below.</summary>
@@ -222,6 +237,7 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecInitP
     public string? Location { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PolicyVirtualMachineConfigurationAssignmentSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -244,6 +260,7 @@ public enum V1beta1PolicyVirtualMachineConfigurationAssignmentSpecManagementPoli
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PolicyVirtualMachineConfigurationAssignmentSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -254,6 +271,7 @@ public enum V1beta1PolicyVirtualMachineConfigurationAssignmentSpecProviderConfig
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PolicyVirtualMachineConfigurationAssignmentSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -265,6 +283,7 @@ public enum V1beta1PolicyVirtualMachineConfigurationAssignmentSpecProviderConfig
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +298,7 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecProvi
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -290,6 +310,7 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecProvi
     public V1beta1PolicyVirtualMachineConfigurationAssignmentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PolicyVirtualMachineConfigurationAssignmentSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -300,6 +321,7 @@ public enum V1beta1PolicyVirtualMachineConfigurationAssignmentSpecPublishConnect
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PolicyVirtualMachineConfigurationAssignmentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -311,6 +333,7 @@ public enum V1beta1PolicyVirtualMachineConfigurationAssignmentSpecPublishConnect
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -325,6 +348,7 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecPubli
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -337,6 +361,7 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecPubli
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -353,6 +378,7 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecPubli
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -369,6 +395,7 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecPubli
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -381,6 +408,7 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecWrite
 }
 
 /// <summary>PolicyVirtualMachineConfigurationAssignmentSpec defines the desired state of PolicyVirtualMachineConfigurationAssignment</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -414,6 +442,7 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentStatusAtProviderConfigurationParameter
 {
     /// <summary>The name of the configuration parameter to check.</summary>
@@ -426,6 +455,7 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentStatusAtP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentStatusAtProviderConfiguration
 {
     /// <summary>The assignment type for the Guest Configuration Assignment. Possible values are Audit, ApplyAndAutoCorrect, ApplyAndMonitor and DeployAndAutoCorrect.</summary>
@@ -450,6 +480,7 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentStatusAtP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentStatusAtProvider
 {
     /// <summary>A configuration block as defined below.</summary>
@@ -470,6 +501,7 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentStatusAtP
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -498,6 +530,7 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentStatusCon
 }
 
 /// <summary>PolicyVirtualMachineConfigurationAssignmentStatus defines the observed state of PolicyVirtualMachineConfigurationAssignment.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentStatus
 {
     /// <summary></summary>
@@ -513,8 +546,9 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>PolicyVirtualMachineConfigurationAssignment is the Schema for the PolicyVirtualMachineConfigurationAssignments API. Applies a Guest Configuration Policy to a Virtual Machine.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1PolicyVirtualMachineConfigurationAssignmentSpec>, IStatus<V1beta1PolicyVirtualMachineConfigurationAssignmentStatus>
 {
     public const string KubeApiVersion = "v1beta1";

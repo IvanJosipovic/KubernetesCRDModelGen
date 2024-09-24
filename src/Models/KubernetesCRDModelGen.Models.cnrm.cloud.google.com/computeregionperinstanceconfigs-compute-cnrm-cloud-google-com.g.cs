@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionPerInstanceConfigSpecPreservedStateDisk
 {
     /// <summary>A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are 'NEVER' and 'ON_PERMANENT_INSTANCE_DELETION'. 'NEVER' - detach the disk when the VM is deleted, but do not delete the disk. 'ON_PERMANENT_INSTANCE_DELETION' will delete the stateful disk when the VM is permanently deleted from the instance group. Default value: "NEVER" Possible values: ["NEVER", "ON_PERMANENT_INSTANCE_DELETION"].</summary>
@@ -29,6 +30,7 @@ public partial class V1alpha1ComputeRegionPerInstanceConfigSpecPreservedStateDis
 }
 
 /// <summary>Ip address representation.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionPerInstanceConfigSpecPreservedStateExternalIpIpAddress
 {
     /// <summary>The URL of the reservation for this IP address.</summary>
@@ -37,6 +39,7 @@ public partial class V1alpha1ComputeRegionPerInstanceConfigSpecPreservedStateExt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionPerInstanceConfigSpecPreservedStateExternalIp
 {
     /// <summary>These stateful IPs will never be released during autohealing, update or VM instance recreate operations. This flag is used to configure if the IP reservation should be deleted after it is no longer used by the group, e.g. when the given instance or the whole group is deleted. Default value: "NEVER" Possible values: ["NEVER", "ON_PERMANENT_INSTANCE_DELETION"].</summary>
@@ -53,6 +56,7 @@ public partial class V1alpha1ComputeRegionPerInstanceConfigSpecPreservedStateExt
 }
 
 /// <summary>Ip address representation.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionPerInstanceConfigSpecPreservedStateInternalIpIpAddress
 {
     /// <summary>The URL of the reservation for this IP address.</summary>
@@ -61,6 +65,7 @@ public partial class V1alpha1ComputeRegionPerInstanceConfigSpecPreservedStateInt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionPerInstanceConfigSpecPreservedStateInternalIp
 {
     /// <summary>These stateful IPs will never be released during autohealing, update or VM instance recreate operations. This flag is used to configure if the IP reservation should be deleted after it is no longer used by the group, e.g. when the given instance or the whole group is deleted. Default value: "NEVER" Possible values: ["NEVER", "ON_PERMANENT_INSTANCE_DELETION"].</summary>
@@ -77,6 +82,7 @@ public partial class V1alpha1ComputeRegionPerInstanceConfigSpecPreservedStateInt
 }
 
 /// <summary>The preserved state for this instance.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionPerInstanceConfigSpecPreservedState
 {
     /// <summary>Stateful disks for the instance.</summary>
@@ -97,6 +103,7 @@ public partial class V1alpha1ComputeRegionPerInstanceConfigSpecPreservedState
 }
 
 /// <summary>The project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionPerInstanceConfigSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -113,6 +120,7 @@ public partial class V1alpha1ComputeRegionPerInstanceConfigSpecProjectRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionPerInstanceConfigSpecRegionInstanceGroupManagerRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeRegionInstanceGroupManager` resource.</summary>
@@ -129,6 +137,7 @@ public partial class V1alpha1ComputeRegionPerInstanceConfigSpecRegionInstanceGro
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionPerInstanceConfigSpec
 {
     /// <summary>The minimal action to perform on the instance during an update. Default is 'NONE'. Possible values are: * REPLACE * RESTART * REFRESH * NONE.</summary>
@@ -165,6 +174,7 @@ public partial class V1alpha1ComputeRegionPerInstanceConfigSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionPerInstanceConfigStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -189,6 +199,7 @@ public partial class V1alpha1ComputeRegionPerInstanceConfigStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionPerInstanceConfigStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -200,8 +211,9 @@ public partial class V1alpha1ComputeRegionPerInstanceConfigStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1ComputeRegionPerInstanceConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputeRegionPerInstanceConfigSpec>, IStatus<V1alpha1ComputeRegionPerInstanceConfigStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

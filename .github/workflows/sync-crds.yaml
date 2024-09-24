@@ -74,9 +74,6 @@ jobs:
             }
           }
 
-      - name: .NET Build
-        run: dotnet build -c Release
-
       - name: Check Files Changed
         id: checkfiles
         shell: pwsh

@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.image.toolkit.fluxcd.io;
 /// <summary>NamespaceSelector selects the namespaces to which this ACL applies. An empty map of MatchLabels matches all namespaces in a cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImageRepositorySpecAccessFromNamespaceSelectors
 {
     /// <summary>MatchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.</summary>
@@ -17,6 +18,7 @@ public partial class V1beta2ImageRepositorySpecAccessFromNamespaceSelectors
 }
 
 /// <summary>AccessFrom defines an ACL for allowing cross-namespace references to the ImageRepository object based on the caller's namespace labels.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImageRepositorySpecAccessFrom
 {
     /// <summary>NamespaceSelectors is the list of namespace selectors to which this ACL applies. Items in this list are evaluated using a logical OR operation.</summary>
@@ -25,6 +27,7 @@ public partial class V1beta2ImageRepositorySpecAccessFrom
 }
 
 /// <summary>CertSecretRef can be given the name of a Secret containing either or both of   - a PEM-encoded client certificate (`tls.crt`) and private key (`tls.key`); - a PEM-encoded CA certificate (`ca.crt`)   and whichever are supplied, will be used for connecting to the registry. The client cert and key are useful if you are authenticating with a certificate; the CA cert is useful if you are using a self-signed server certificate. The Secret must be of type `Opaque` or `kubernetes.io/tls`.   Note: Support for the `caFile`, `certFile` and `keyFile` keys has been deprecated.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImageRepositorySpecCertSecretRef
 {
     /// <summary>Name of the referent.</summary>
@@ -32,6 +35,7 @@ public partial class V1beta2ImageRepositorySpecCertSecretRef
     public string Name { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta2ImageRepositorySpecProviderEnum
 {
     [EnumMember(Value = "generic"), JsonStringEnumMemberName("generic")]
@@ -49,6 +53,7 @@ public enum V1beta2ImageRepositorySpecProviderEnum
 }
 
 /// <summary>SecretRef can be given the name of a secret containing credentials to use for the image registry. The secret should be created with `kubectl create secret docker-registry`, or the equivalent.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImageRepositorySpecSecretRef
 {
     /// <summary>Name of the referent.</summary>
@@ -57,6 +62,7 @@ public partial class V1beta2ImageRepositorySpecSecretRef
 }
 
 /// <summary>ImageRepositorySpec defines the parameters for scanning an image repository, e.g., `fluxcd/flux`.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImageRepositorySpec
 {
     /// <summary>AccessFrom defines an ACL for allowing cross-namespace references to the ImageRepository object based on the caller's namespace labels.</summary>
@@ -105,6 +111,7 @@ public partial class V1beta2ImageRepositorySpec
     public string? Timeout { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta2ImageRepositoryStatusConditionsStatusEnum
 {
     [EnumMember(Value = "true"), JsonStringEnumMemberName("true")]
@@ -119,6 +126,7 @@ public enum V1beta2ImageRepositoryStatusConditionsStatusEnum
 }
 
 /// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImageRepositoryStatusConditions
 {
     /// <summary>lastTransitionTime is the last time the condition transitioned from one status to another. This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.</summary>
@@ -148,6 +156,7 @@ public partial class V1beta2ImageRepositoryStatusConditions
 }
 
 /// <summary>LastScanResult contains the number of fetched tags.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImageRepositoryStatusLastScanResult
 {
     /// <summary></summary>
@@ -164,6 +173,7 @@ public partial class V1beta2ImageRepositoryStatusLastScanResult
 }
 
 /// <summary>ImageRepositoryStatus defines the observed state of ImageRepository</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImageRepositoryStatus
 {
     /// <summary>CanonicalName is the name of the image repository with all the implied bits made explicit; e.g., `docker.io/library/alpine` rather than `alpine`.</summary>
@@ -191,8 +201,9 @@ public partial class V1beta2ImageRepositoryStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>ImageRepository is the Schema for the imagerepositories API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta2ImageRepository : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta2ImageRepositorySpec>, IStatus<V1beta2ImageRepositoryStatus>
 {
     public const string KubeApiVersion = "v1beta2";

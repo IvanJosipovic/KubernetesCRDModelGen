@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.eventgrid.azure.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventSubscriptionSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1EventSubscriptionSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterBoolEquals
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -31,6 +33,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterBoolEq
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterIsNotNull
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -39,6 +42,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterIsNotN
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterIsNullOrUndefined
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -47,6 +51,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterIsNull
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterNumberGreaterThan
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -59,6 +64,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterNumber
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterNumberGreaterThanOrEquals
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -71,6 +77,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterNumber
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterNumberIn
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -83,6 +90,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterNumber
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterNumberInRange
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -95,6 +103,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterNumber
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterNumberLessThan
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -107,6 +116,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterNumber
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterNumberLessThanOrEquals
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -119,6 +129,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterNumber
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterNumberNotIn
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -131,6 +142,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterNumber
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterNumberNotInRange
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -143,6 +155,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterNumber
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterStringBeginsWith
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -155,6 +168,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterString
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterStringContains
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -167,6 +181,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterString
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterStringEndsWith
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -179,6 +194,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterString
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterStringIn
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -191,6 +207,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterString
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterStringNotBeginsWith
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -203,6 +220,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterString
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterStringNotContains
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -215,6 +233,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterString
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterStringNotEndsWith
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -227,6 +246,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterString
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterStringNotIn
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -239,6 +259,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterString
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilter
 {
     /// <summary>Compares a value of an event using a single boolean value.</summary>
@@ -319,6 +340,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAzureFunctionEndpoint
 {
     /// <summary>Specifies the ID of the Function where the Event Subscription will receive events. This must be the functions ID in format {function_app.id}/functions/{name}.</summary>
@@ -335,6 +357,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderAzureFunctionEndpoin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderDeadLetterIdentity
 {
     /// <summary>Specifies the type of Managed Service Identity that is used for dead lettering. Allowed value is SystemAssigned, UserAssigned.</summary>
@@ -347,6 +370,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderDeadLetterIdentity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderDeliveryIdentity
 {
     /// <summary>Specifies the type of Managed Service Identity that is used for event delivery. Allowed value is SystemAssigned, UserAssigned.</summary>
@@ -359,6 +383,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderDeliveryIdentity
 }
 
 /// <summary>If the type is Static, then provide the value to use</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderDeliveryPropertyValueSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -375,6 +400,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderDeliveryPropertyValu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderDeliveryProperty
 {
     /// <summary>The name of the header to send on to the destination</summary>
@@ -399,6 +425,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderDeliveryProperty
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderRetryPolicy
 {
     /// <summary>Specifies the time to live (in minutes) for events. Supported range is 1 to 1440. See official documentation for more details.</summary>
@@ -410,6 +437,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderRetryPolicy
     public double? MaxDeliveryAttempts { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventSubscriptionSpecForProviderScopeRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -420,6 +448,7 @@ public enum V1beta1EventSubscriptionSpecForProviderScopeRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventSubscriptionSpecForProviderScopeRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -431,6 +460,7 @@ public enum V1beta1EventSubscriptionSpecForProviderScopeRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderScopeRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -445,6 +475,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderScopeRefPolicy
 }
 
 /// <summary>Reference to a ResourceGroup in azure to populate scope.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderScopeRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -456,6 +487,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderScopeRef
     public V1beta1EventSubscriptionSpecForProviderScopeRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventSubscriptionSpecForProviderScopeSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -466,6 +498,7 @@ public enum V1beta1EventSubscriptionSpecForProviderScopeSelectorPolicyResolution
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventSubscriptionSpecForProviderScopeSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -477,6 +510,7 @@ public enum V1beta1EventSubscriptionSpecForProviderScopeSelectorPolicyResolveEnu
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderScopeSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -491,6 +525,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderScopeSelectorPolicy
 }
 
 /// <summary>Selector for a ResourceGroup in azure to populate scope.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderScopeSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -507,6 +542,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderScopeSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderStorageBlobDeadLetterDestination
 {
     /// <summary>Specifies the id of the storage account id where the storage blob is located.</summary>
@@ -518,6 +554,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderStorageBlobDeadLette
     public string? StorageBlobContainerName { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointQueueNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -528,6 +565,7 @@ public enum V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointQueueName
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointQueueNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -539,6 +577,7 @@ public enum V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointQueueName
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointQueueNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -553,6 +592,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpoint
 }
 
 /// <summary>Reference to a Queue in storage to populate queueName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointQueueNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -564,6 +604,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpoint
     public V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointQueueNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointQueueNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -574,6 +615,7 @@ public enum V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointQueueName
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointQueueNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -585,6 +627,7 @@ public enum V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointQueueName
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointQueueNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -599,6 +642,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpoint
 }
 
 /// <summary>Selector for a Queue in storage to populate queueName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointQueueNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -614,6 +658,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpoint
     public V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointQueueNameSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointStorageAccountIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -624,6 +669,7 @@ public enum V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointStorageAc
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointStorageAccountIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -635,6 +681,7 @@ public enum V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointStorageAc
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointStorageAccountIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -649,6 +696,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpoint
 }
 
 /// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointStorageAccountIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -660,6 +708,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpoint
     public V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointStorageAccountIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointStorageAccountIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -670,6 +719,7 @@ public enum V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointStorageAc
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointStorageAccountIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -681,6 +731,7 @@ public enum V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointStorageAc
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointStorageAccountIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -695,6 +746,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpoint
 }
 
 /// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointStorageAccountIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -711,6 +763,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpoint
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpoint
 {
     /// <summary>Storage queue message time to live in seconds.</summary>
@@ -743,6 +796,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpoint
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderSubjectFilter
 {
     /// <summary>Specifies if subject_begins_with and subject_ends_with case sensitive. This value</summary>
@@ -759,6 +813,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderSubjectFilter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderWebhookEndpoint
 {
     /// <summary>The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.</summary>
@@ -783,6 +838,7 @@ public partial class V1beta1EventSubscriptionSpecForProviderWebhookEndpoint
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProvider
 {
     /// <summary>A advanced_filter block as defined below.</summary>
@@ -879,6 +935,7 @@ public partial class V1beta1EventSubscriptionSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterBoolEquals
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -891,6 +948,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterBoolE
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterIsNotNull
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -899,6 +957,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterIsNot
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterIsNullOrUndefined
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -907,6 +966,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterIsNul
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterNumberGreaterThan
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -919,6 +979,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterNumbe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterNumberGreaterThanOrEquals
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -931,6 +992,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterNumbe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterNumberIn
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -943,6 +1005,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterNumbe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterNumberInRange
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -955,6 +1018,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterNumbe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterNumberLessThan
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -967,6 +1031,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterNumbe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterNumberLessThanOrEquals
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -979,6 +1044,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterNumbe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterNumberNotIn
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -991,6 +1057,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterNumbe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterNumberNotInRange
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -1003,6 +1070,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterNumbe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStringBeginsWith
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -1015,6 +1083,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStrin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStringContains
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -1027,6 +1096,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStrin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStringEndsWith
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -1039,6 +1109,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStrin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStringIn
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -1051,6 +1122,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStrin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStringNotBeginsWith
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -1063,6 +1135,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStrin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStringNotContains
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -1075,6 +1148,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStrin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStringNotEndsWith
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -1087,6 +1161,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStrin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStringNotIn
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -1099,6 +1174,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStrin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilter
 {
     /// <summary>Compares a value of an event using a single boolean value.</summary>
@@ -1179,6 +1255,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAzureFunctionEndpoint
 {
     /// <summary>Specifies the ID of the Function where the Event Subscription will receive events. This must be the functions ID in format {function_app.id}/functions/{name}.</summary>
@@ -1195,6 +1272,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAzureFunctionEndpoi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderDeadLetterIdentity
 {
     /// <summary>Specifies the type of Managed Service Identity that is used for dead lettering. Allowed value is SystemAssigned, UserAssigned.</summary>
@@ -1207,6 +1285,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderDeadLetterIdentity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderDeliveryIdentity
 {
     /// <summary>Specifies the type of Managed Service Identity that is used for event delivery. Allowed value is SystemAssigned, UserAssigned.</summary>
@@ -1219,6 +1298,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderDeliveryIdentity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderDeliveryProperty
 {
     /// <summary>The name of the header to send on to the destination</summary>
@@ -1239,6 +1319,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderDeliveryProperty
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderRetryPolicy
 {
     /// <summary>Specifies the time to live (in minutes) for events. Supported range is 1 to 1440. See official documentation for more details.</summary>
@@ -1250,6 +1331,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderRetryPolicy
     public double? MaxDeliveryAttempts { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventSubscriptionSpecInitProviderScopeRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1260,6 +1342,7 @@ public enum V1beta1EventSubscriptionSpecInitProviderScopeRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventSubscriptionSpecInitProviderScopeRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1271,6 +1354,7 @@ public enum V1beta1EventSubscriptionSpecInitProviderScopeRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderScopeRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1285,6 +1369,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderScopeRefPolicy
 }
 
 /// <summary>Reference to a ResourceGroup in azure to populate scope.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderScopeRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1296,6 +1381,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderScopeRef
     public V1beta1EventSubscriptionSpecInitProviderScopeRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventSubscriptionSpecInitProviderScopeSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1306,6 +1392,7 @@ public enum V1beta1EventSubscriptionSpecInitProviderScopeSelectorPolicyResolutio
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventSubscriptionSpecInitProviderScopeSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1317,6 +1404,7 @@ public enum V1beta1EventSubscriptionSpecInitProviderScopeSelectorPolicyResolveEn
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderScopeSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1331,6 +1419,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderScopeSelectorPolicy
 }
 
 /// <summary>Selector for a ResourceGroup in azure to populate scope.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderScopeSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1347,6 +1436,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderScopeSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderStorageBlobDeadLetterDestination
 {
     /// <summary>Specifies the id of the storage account id where the storage blob is located.</summary>
@@ -1358,6 +1448,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderStorageBlobDeadLett
     public string? StorageBlobContainerName { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointQueueNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1368,6 +1459,7 @@ public enum V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointQueueNam
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointQueueNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1379,6 +1471,7 @@ public enum V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointQueueNam
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointQueueNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1393,6 +1486,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpoin
 }
 
 /// <summary>Reference to a Queue in storage to populate queueName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointQueueNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1404,6 +1498,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpoin
     public V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointQueueNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointQueueNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1414,6 +1509,7 @@ public enum V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointQueueNam
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointQueueNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1425,6 +1521,7 @@ public enum V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointQueueNam
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointQueueNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1439,6 +1536,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpoin
 }
 
 /// <summary>Selector for a Queue in storage to populate queueName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointQueueNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1454,6 +1552,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpoin
     public V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointQueueNameSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointStorageAccountIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1464,6 +1563,7 @@ public enum V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointStorageA
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointStorageAccountIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1475,6 +1575,7 @@ public enum V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointStorageA
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointStorageAccountIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1489,6 +1590,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpoin
 }
 
 /// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointStorageAccountIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1500,6 +1602,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpoin
     public V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointStorageAccountIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointStorageAccountIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1510,6 +1613,7 @@ public enum V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointStorageA
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointStorageAccountIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1521,6 +1625,7 @@ public enum V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointStorageA
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointStorageAccountIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1535,6 +1640,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpoin
 }
 
 /// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointStorageAccountIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1551,6 +1657,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpoin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpoint
 {
     /// <summary>Storage queue message time to live in seconds.</summary>
@@ -1583,6 +1690,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpoin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderSubjectFilter
 {
     /// <summary>Specifies if subject_begins_with and subject_ends_with case sensitive. This value</summary>
@@ -1599,6 +1707,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderSubjectFilter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderWebhookEndpoint
 {
     /// <summary>The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.</summary>
@@ -1623,6 +1732,7 @@ public partial class V1beta1EventSubscriptionSpecInitProviderWebhookEndpoint
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProvider
 {
     /// <summary>A advanced_filter block as defined below.</summary>
@@ -1718,6 +1828,7 @@ public partial class V1beta1EventSubscriptionSpecInitProvider
     public IList<V1beta1EventSubscriptionSpecInitProviderWebhookEndpoint>? WebhookEndpoint { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventSubscriptionSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -1740,6 +1851,7 @@ public enum V1beta1EventSubscriptionSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventSubscriptionSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1750,6 +1862,7 @@ public enum V1beta1EventSubscriptionSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventSubscriptionSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1761,6 +1874,7 @@ public enum V1beta1EventSubscriptionSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1775,6 +1889,7 @@ public partial class V1beta1EventSubscriptionSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1786,6 +1901,7 @@ public partial class V1beta1EventSubscriptionSpecProviderConfigRef
     public V1beta1EventSubscriptionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventSubscriptionSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1796,6 +1912,7 @@ public enum V1beta1EventSubscriptionSpecPublishConnectionDetailsToConfigRefPolic
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventSubscriptionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1807,6 +1924,7 @@ public enum V1beta1EventSubscriptionSpecPublishConnectionDetailsToConfigRefPolic
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1821,6 +1939,7 @@ public partial class V1beta1EventSubscriptionSpecPublishConnectionDetailsToConfi
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1833,6 +1952,7 @@ public partial class V1beta1EventSubscriptionSpecPublishConnectionDetailsToConfi
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1849,6 +1969,7 @@ public partial class V1beta1EventSubscriptionSpecPublishConnectionDetailsToMetad
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1865,6 +1986,7 @@ public partial class V1beta1EventSubscriptionSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1877,6 +1999,7 @@ public partial class V1beta1EventSubscriptionSpecWriteConnectionSecretToRef
 }
 
 /// <summary>EventSubscriptionSpec defines the desired state of EventSubscription</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1910,6 +2033,7 @@ public partial class V1beta1EventSubscriptionSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterBoolEquals
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -1922,6 +2046,7 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterBoolE
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterIsNotNull
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -1930,6 +2055,7 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterIsNot
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterIsNullOrUndefined
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -1938,6 +2064,7 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterIsNul
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterNumberGreaterThan
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -1950,6 +2077,7 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterNumbe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterNumberGreaterThanOrEquals
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -1962,6 +2090,7 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterNumbe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterNumberIn
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -1974,6 +2103,7 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterNumbe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterNumberInRange
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -1986,6 +2116,7 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterNumbe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterNumberLessThan
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -1998,6 +2129,7 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterNumbe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterNumberLessThanOrEquals
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -2010,6 +2142,7 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterNumbe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterNumberNotIn
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -2022,6 +2155,7 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterNumbe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterNumberNotInRange
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -2034,6 +2168,7 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterNumbe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStringBeginsWith
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -2046,6 +2181,7 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStrin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStringContains
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -2058,6 +2194,7 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStrin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStringEndsWith
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -2070,6 +2207,7 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStrin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStringIn
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -2082,6 +2220,7 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStrin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStringNotBeginsWith
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -2094,6 +2233,7 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStrin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStringNotContains
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -2106,6 +2246,7 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStrin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStringNotEndsWith
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -2118,6 +2259,7 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStrin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStringNotIn
 {
     /// <summary>Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.</summary>
@@ -2130,6 +2272,7 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStrin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilter
 {
     /// <summary>Compares a value of an event using a single boolean value.</summary>
@@ -2210,6 +2353,7 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAzureFunctionEndpoint
 {
     /// <summary>Specifies the ID of the Function where the Event Subscription will receive events. This must be the functions ID in format {function_app.id}/functions/{name}.</summary>
@@ -2226,6 +2370,7 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAzureFunctionEndpoi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderDeadLetterIdentity
 {
     /// <summary>Specifies the type of Managed Service Identity that is used for dead lettering. Allowed value is SystemAssigned, UserAssigned.</summary>
@@ -2238,6 +2383,7 @@ public partial class V1beta1EventSubscriptionStatusAtProviderDeadLetterIdentity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderDeliveryIdentity
 {
     /// <summary>Specifies the type of Managed Service Identity that is used for event delivery. Allowed value is SystemAssigned, UserAssigned.</summary>
@@ -2250,6 +2396,7 @@ public partial class V1beta1EventSubscriptionStatusAtProviderDeliveryIdentity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderDeliveryProperty
 {
     /// <summary>The name of the header to send on to the destination</summary>
@@ -2270,6 +2417,7 @@ public partial class V1beta1EventSubscriptionStatusAtProviderDeliveryProperty
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderRetryPolicy
 {
     /// <summary>Specifies the time to live (in minutes) for events. Supported range is 1 to 1440. See official documentation for more details.</summary>
@@ -2282,6 +2430,7 @@ public partial class V1beta1EventSubscriptionStatusAtProviderRetryPolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderStorageBlobDeadLetterDestination
 {
     /// <summary>Specifies the id of the storage account id where the storage blob is located.</summary>
@@ -2294,6 +2443,7 @@ public partial class V1beta1EventSubscriptionStatusAtProviderStorageBlobDeadLett
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderStorageQueueEndpoint
 {
     /// <summary>Storage queue message time to live in seconds.</summary>
@@ -2310,6 +2460,7 @@ public partial class V1beta1EventSubscriptionStatusAtProviderStorageQueueEndpoin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderSubjectFilter
 {
     /// <summary>Specifies if subject_begins_with and subject_ends_with case sensitive. This value</summary>
@@ -2326,6 +2477,7 @@ public partial class V1beta1EventSubscriptionStatusAtProviderSubjectFilter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderWebhookEndpoint
 {
     /// <summary>The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.</summary>
@@ -2354,6 +2506,7 @@ public partial class V1beta1EventSubscriptionStatusAtProviderWebhookEndpoint
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProvider
 {
     /// <summary>A advanced_filter block as defined below.</summary>
@@ -2446,6 +2599,7 @@ public partial class V1beta1EventSubscriptionStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2474,6 +2628,7 @@ public partial class V1beta1EventSubscriptionStatusConditions
 }
 
 /// <summary>EventSubscriptionStatus defines the observed state of EventSubscription.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatus
 {
     /// <summary></summary>
@@ -2489,8 +2644,9 @@ public partial class V1beta1EventSubscriptionStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>EventSubscription is the Schema for the EventSubscriptions API. Manages an EventGrid Event Subscription</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1EventSubscription : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1EventSubscriptionSpec>, IStatus<V1beta1EventSubscriptionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

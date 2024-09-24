@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1InstanceTemplateSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderAdvancedMachineFeatures
 {
     /// <summary>Defines whether the instance should have nested virtualization enabled. Defaults to false.</summary>
@@ -35,6 +37,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderAdvancedMachineFeatur
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderConfidentialInstanceConfig
 {
     /// <summary>Defines the confidential computing technology the instance uses. SEV is an AMD feature. One of the following values: SEV, SEV_SNP. on_host_maintenance can be set to MIGRATE if confidential_instance_type is set to SEV and min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM. If SEV_SNP, currently min_cpu_platform has to be set to "AMD Milan" or this will fail to create the VM.</summary>
@@ -47,6 +50,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderConfidentialInstanceC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderDiskDiskEncryptionKey
 {
     /// <summary>The self link of the encryption key that is stored in Google Cloud KMS.</summary>
@@ -55,6 +59,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderDiskDiskEncryptionKey
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderDiskSourceImageEncryptionKey
 {
     /// <summary>The self link of the encryption key that is stored in Google Cloud KMS.</summary>
@@ -66,6 +71,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderDiskSourceImageEncryp
     public string? KmsKeyServiceAccount { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecForProviderDiskSourceRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -76,6 +82,7 @@ public enum V1beta1InstanceTemplateSpecForProviderDiskSourceRefPolicyResolutionE
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecForProviderDiskSourceRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -87,6 +94,7 @@ public enum V1beta1InstanceTemplateSpecForProviderDiskSourceRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderDiskSourceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -101,6 +109,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderDiskSourceRefPolicy
 }
 
 /// <summary>Reference to a Disk in compute to populate source.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderDiskSourceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -112,6 +121,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderDiskSourceRef
     public V1beta1InstanceTemplateSpecForProviderDiskSourceRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecForProviderDiskSourceSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -122,6 +132,7 @@ public enum V1beta1InstanceTemplateSpecForProviderDiskSourceSelectorPolicyResolu
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecForProviderDiskSourceSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -133,6 +144,7 @@ public enum V1beta1InstanceTemplateSpecForProviderDiskSourceSelectorPolicyResolv
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderDiskSourceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -147,6 +159,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderDiskSourceSelectorPol
 }
 
 /// <summary>Selector for a Disk in compute to populate source.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderDiskSourceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -163,6 +176,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderDiskSourceSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderDiskSourceSnapshotEncryptionKey
 {
     /// <summary>The self link of the encryption key that is stored in Google Cloud KMS.</summary>
@@ -175,6 +189,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderDiskSourceSnapshotEnc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderDisk
 {
     /// <summary>Whether or not the disk should be auto-deleted. This defaults to true.</summary>
@@ -263,6 +278,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderDisk
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderGuestAccelerator
 {
     /// <summary>The number of the guest accelerator cards exposed to this instance.</summary>
@@ -275,6 +291,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderGuestAccelerator
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderNetworkInterfaceAccessConfig
 {
     /// <summary>The IP address that will be 1:1 mapped to the instance's network ip. If not given, one will be generated.</summary>
@@ -287,6 +304,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderNetworkInterfaceAcces
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderNetworkInterfaceAliasIpRange
 {
     /// <summary>The IP CIDR range represented by this alias IP range. This IP CIDR range must belong to the specified subnetwork and cannot contain IP addresses reserved by system or used by other network interfaces. At the time of writing only a netmask (e.g. /24) may be supplied, with a CIDR format resulting in an API error.</summary>
@@ -299,6 +317,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderNetworkInterfaceAlias
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderNetworkInterfaceIpv6AccessConfig
 {
     /// <summary>The service-level to be provided for IPv6 traffic when the subnet has an external subnet. Only PREMIUM and STANDARD tier is valid for IPv6.</summary>
@@ -306,6 +325,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderNetworkInterfaceIpv6A
     public string? NetworkTier { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecForProviderNetworkInterfaceNetworkRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -316,6 +336,7 @@ public enum V1beta1InstanceTemplateSpecForProviderNetworkInterfaceNetworkRefPoli
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecForProviderNetworkInterfaceNetworkRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -327,6 +348,7 @@ public enum V1beta1InstanceTemplateSpecForProviderNetworkInterfaceNetworkRefPoli
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderNetworkInterfaceNetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -341,6 +363,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderNetworkInterfaceNetwo
 }
 
 /// <summary>Reference to a Network in compute to populate network.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderNetworkInterfaceNetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -352,6 +375,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderNetworkInterfaceNetwo
     public V1beta1InstanceTemplateSpecForProviderNetworkInterfaceNetworkRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecForProviderNetworkInterfaceNetworkSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -362,6 +386,7 @@ public enum V1beta1InstanceTemplateSpecForProviderNetworkInterfaceNetworkSelecto
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecForProviderNetworkInterfaceNetworkSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -373,6 +398,7 @@ public enum V1beta1InstanceTemplateSpecForProviderNetworkInterfaceNetworkSelecto
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderNetworkInterfaceNetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -387,6 +413,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderNetworkInterfaceNetwo
 }
 
 /// <summary>Selector for a Network in compute to populate network.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderNetworkInterfaceNetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -402,6 +429,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderNetworkInterfaceNetwo
     public V1beta1InstanceTemplateSpecForProviderNetworkInterfaceNetworkSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecForProviderNetworkInterfaceSubnetworkRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -412,6 +440,7 @@ public enum V1beta1InstanceTemplateSpecForProviderNetworkInterfaceSubnetworkRefP
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecForProviderNetworkInterfaceSubnetworkRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -423,6 +452,7 @@ public enum V1beta1InstanceTemplateSpecForProviderNetworkInterfaceSubnetworkRefP
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderNetworkInterfaceSubnetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -437,6 +467,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderNetworkInterfaceSubne
 }
 
 /// <summary>Reference to a Subnetwork in compute to populate subnetwork.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderNetworkInterfaceSubnetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -448,6 +479,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderNetworkInterfaceSubne
     public V1beta1InstanceTemplateSpecForProviderNetworkInterfaceSubnetworkRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecForProviderNetworkInterfaceSubnetworkSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -458,6 +490,7 @@ public enum V1beta1InstanceTemplateSpecForProviderNetworkInterfaceSubnetworkSele
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecForProviderNetworkInterfaceSubnetworkSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -469,6 +502,7 @@ public enum V1beta1InstanceTemplateSpecForProviderNetworkInterfaceSubnetworkSele
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderNetworkInterfaceSubnetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -483,6 +517,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderNetworkInterfaceSubne
 }
 
 /// <summary>Selector for a Subnetwork in compute to populate subnetwork.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderNetworkInterfaceSubnetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -499,6 +534,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderNetworkInterfaceSubne
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderNetworkInterface
 {
     /// <summary>Access configurations, i.e. IPs via which this instance can be accessed via the Internet.g. via tunnel or because it is running on another cloud instance on that network). This block can be repeated multiple times. Structure documented below.</summary>
@@ -567,6 +603,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderNetworkInterface
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderNetworkPerformanceConfig
 {
     /// <summary>The egress bandwidth tier to enable. Possible values: TIER_1, DEFAULT</summary>
@@ -575,6 +612,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderNetworkPerformanceCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderReservationAffinitySpecificReservation
 {
     /// <summary>Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.</summary>
@@ -587,6 +625,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderReservationAffinitySp
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderReservationAffinity
 {
     /// <summary>Specifies the label selector for the reservation to use.. Structure is documented below.</summary>
@@ -599,6 +638,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderReservationAffinity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderSchedulingLocalSsdRecoveryTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -611,6 +651,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderSchedulingLocalSsdRec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderSchedulingMaxRunDuration
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -623,6 +664,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderSchedulingMaxRunDurat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderSchedulingNodeAffinities
 {
     /// <summary>Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.</summary>
@@ -639,6 +681,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderSchedulingNodeAffinit
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderSchedulingOnInstanceStopAction
 {
     /// <summary>Whether to discard local SSDs attached to the VM while terminating using max_run_duration. Only supports true at this point.</summary>
@@ -647,6 +690,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderSchedulingOnInstanceS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderScheduling
 {
     /// <summary>Specifies whether the instance should be automatically restarted if it is terminated by Compute Engine (not terminated by a user). This defaults to true.</summary>
@@ -690,6 +734,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderScheduling
     public string? ProvisioningModel { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecForProviderServiceAccountEmailRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -700,6 +745,7 @@ public enum V1beta1InstanceTemplateSpecForProviderServiceAccountEmailRefPolicyRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecForProviderServiceAccountEmailRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -711,6 +757,7 @@ public enum V1beta1InstanceTemplateSpecForProviderServiceAccountEmailRefPolicyRe
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderServiceAccountEmailRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -725,6 +772,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderServiceAccountEmailRe
 }
 
 /// <summary>Reference to a ServiceAccount in cloudplatform to populate email.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderServiceAccountEmailRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -736,6 +784,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderServiceAccountEmailRe
     public V1beta1InstanceTemplateSpecForProviderServiceAccountEmailRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecForProviderServiceAccountEmailSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -746,6 +795,7 @@ public enum V1beta1InstanceTemplateSpecForProviderServiceAccountEmailSelectorPol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecForProviderServiceAccountEmailSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -757,6 +807,7 @@ public enum V1beta1InstanceTemplateSpecForProviderServiceAccountEmailSelectorPol
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderServiceAccountEmailSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -771,6 +822,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderServiceAccountEmailSe
 }
 
 /// <summary>Selector for a ServiceAccount in cloudplatform to populate email.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderServiceAccountEmailSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -787,6 +839,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderServiceAccountEmailSe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderServiceAccount
 {
     /// <summary>The service account e-mail address. If not given, the default Google Compute Engine service account is used.</summary>
@@ -807,6 +860,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderServiceAccount
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderShieldedInstanceConfig
 {
     /// <summary>- Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true.</summary>
@@ -823,6 +877,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderShieldedInstanceConfi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProvider
 {
     /// <summary>Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM. Structure is documented below</summary>
@@ -927,6 +982,7 @@ public partial class V1beta1InstanceTemplateSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderAdvancedMachineFeatures
 {
     /// <summary>Defines whether the instance should have nested virtualization enabled. Defaults to false.</summary>
@@ -943,6 +999,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderAdvancedMachineFeatu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderConfidentialInstanceConfig
 {
     /// <summary>Defines the confidential computing technology the instance uses. SEV is an AMD feature. One of the following values: SEV, SEV_SNP. on_host_maintenance can be set to MIGRATE if confidential_instance_type is set to SEV and min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM. If SEV_SNP, currently min_cpu_platform has to be set to "AMD Milan" or this will fail to create the VM.</summary>
@@ -955,6 +1012,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderConfidentialInstance
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderDiskDiskEncryptionKey
 {
     /// <summary>The self link of the encryption key that is stored in Google Cloud KMS.</summary>
@@ -963,6 +1021,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderDiskDiskEncryptionKe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderDiskSourceImageEncryptionKey
 {
     /// <summary>The self link of the encryption key that is stored in Google Cloud KMS.</summary>
@@ -974,6 +1033,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderDiskSourceImageEncry
     public string? KmsKeyServiceAccount { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecInitProviderDiskSourceRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -984,6 +1044,7 @@ public enum V1beta1InstanceTemplateSpecInitProviderDiskSourceRefPolicyResolution
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecInitProviderDiskSourceRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -995,6 +1056,7 @@ public enum V1beta1InstanceTemplateSpecInitProviderDiskSourceRefPolicyResolveEnu
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderDiskSourceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1009,6 +1071,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderDiskSourceRefPolicy
 }
 
 /// <summary>Reference to a Disk in compute to populate source.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderDiskSourceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1020,6 +1083,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderDiskSourceRef
     public V1beta1InstanceTemplateSpecInitProviderDiskSourceRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecInitProviderDiskSourceSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1030,6 +1094,7 @@ public enum V1beta1InstanceTemplateSpecInitProviderDiskSourceSelectorPolicyResol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecInitProviderDiskSourceSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1041,6 +1106,7 @@ public enum V1beta1InstanceTemplateSpecInitProviderDiskSourceSelectorPolicyResol
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderDiskSourceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1055,6 +1121,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderDiskSourceSelectorPo
 }
 
 /// <summary>Selector for a Disk in compute to populate source.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderDiskSourceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1071,6 +1138,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderDiskSourceSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderDiskSourceSnapshotEncryptionKey
 {
     /// <summary>The self link of the encryption key that is stored in Google Cloud KMS.</summary>
@@ -1083,6 +1151,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderDiskSourceSnapshotEn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderDisk
 {
     /// <summary>Whether or not the disk should be auto-deleted. This defaults to true.</summary>
@@ -1171,6 +1240,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderDisk
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderGuestAccelerator
 {
     /// <summary>The number of the guest accelerator cards exposed to this instance.</summary>
@@ -1183,6 +1253,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderGuestAccelerator
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceAccessConfig
 {
     /// <summary>The IP address that will be 1:1 mapped to the instance's network ip. If not given, one will be generated.</summary>
@@ -1195,6 +1266,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceAcce
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceAliasIpRange
 {
     /// <summary>The IP CIDR range represented by this alias IP range. This IP CIDR range must belong to the specified subnetwork and cannot contain IP addresses reserved by system or used by other network interfaces. At the time of writing only a netmask (e.g. /24) may be supplied, with a CIDR format resulting in an API error.</summary>
@@ -1207,6 +1279,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceAlia
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceIpv6AccessConfig
 {
     /// <summary>The service-level to be provided for IPv6 traffic when the subnet has an external subnet. Only PREMIUM and STANDARD tier is valid for IPv6.</summary>
@@ -1214,6 +1287,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceIpv6
     public string? NetworkTier { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceNetworkRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1224,6 +1298,7 @@ public enum V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceNetworkRefPol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceNetworkRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1235,6 +1310,7 @@ public enum V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceNetworkRefPol
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceNetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1249,6 +1325,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceNetw
 }
 
 /// <summary>Reference to a Network in compute to populate network.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceNetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1260,6 +1337,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceNetw
     public V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceNetworkRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceNetworkSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1270,6 +1348,7 @@ public enum V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceNetworkSelect
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceNetworkSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1281,6 +1360,7 @@ public enum V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceNetworkSelect
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceNetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1295,6 +1375,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceNetw
 }
 
 /// <summary>Selector for a Network in compute to populate network.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceNetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1310,6 +1391,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceNetw
     public V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceNetworkSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceSubnetworkRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1320,6 +1402,7 @@ public enum V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceSubnetworkRef
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceSubnetworkRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1331,6 +1414,7 @@ public enum V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceSubnetworkRef
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceSubnetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1345,6 +1429,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceSubn
 }
 
 /// <summary>Reference to a Subnetwork in compute to populate subnetwork.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceSubnetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1356,6 +1441,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceSubn
     public V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceSubnetworkRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceSubnetworkSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1366,6 +1452,7 @@ public enum V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceSubnetworkSel
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceSubnetworkSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1377,6 +1464,7 @@ public enum V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceSubnetworkSel
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceSubnetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1391,6 +1479,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceSubn
 }
 
 /// <summary>Selector for a Subnetwork in compute to populate subnetwork.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceSubnetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1407,6 +1496,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderNetworkInterfaceSubn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderNetworkInterface
 {
     /// <summary>Access configurations, i.e. IPs via which this instance can be accessed via the Internet.g. via tunnel or because it is running on another cloud instance on that network). This block can be repeated multiple times. Structure documented below.</summary>
@@ -1475,6 +1565,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderNetworkInterface
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderNetworkPerformanceConfig
 {
     /// <summary>The egress bandwidth tier to enable. Possible values: TIER_1, DEFAULT</summary>
@@ -1483,6 +1574,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderNetworkPerformanceCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderReservationAffinitySpecificReservation
 {
     /// <summary>Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.</summary>
@@ -1495,6 +1587,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderReservationAffinityS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderReservationAffinity
 {
     /// <summary>Specifies the label selector for the reservation to use.. Structure is documented below.</summary>
@@ -1507,6 +1600,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderReservationAffinity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderSchedulingLocalSsdRecoveryTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -1519,6 +1613,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderSchedulingLocalSsdRe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderSchedulingMaxRunDuration
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -1531,6 +1626,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderSchedulingMaxRunDura
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderSchedulingNodeAffinities
 {
     /// <summary>Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.</summary>
@@ -1547,6 +1643,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderSchedulingNodeAffini
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderSchedulingOnInstanceStopAction
 {
     /// <summary>Whether to discard local SSDs attached to the VM while terminating using max_run_duration. Only supports true at this point.</summary>
@@ -1555,6 +1652,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderSchedulingOnInstance
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderScheduling
 {
     /// <summary>Specifies whether the instance should be automatically restarted if it is terminated by Compute Engine (not terminated by a user). This defaults to true.</summary>
@@ -1598,6 +1696,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderScheduling
     public string? ProvisioningModel { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecInitProviderServiceAccountEmailRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1608,6 +1707,7 @@ public enum V1beta1InstanceTemplateSpecInitProviderServiceAccountEmailRefPolicyR
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecInitProviderServiceAccountEmailRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1619,6 +1719,7 @@ public enum V1beta1InstanceTemplateSpecInitProviderServiceAccountEmailRefPolicyR
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderServiceAccountEmailRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1633,6 +1734,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderServiceAccountEmailR
 }
 
 /// <summary>Reference to a ServiceAccount in cloudplatform to populate email.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderServiceAccountEmailRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1644,6 +1746,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderServiceAccountEmailR
     public V1beta1InstanceTemplateSpecInitProviderServiceAccountEmailRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecInitProviderServiceAccountEmailSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1654,6 +1757,7 @@ public enum V1beta1InstanceTemplateSpecInitProviderServiceAccountEmailSelectorPo
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecInitProviderServiceAccountEmailSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1665,6 +1769,7 @@ public enum V1beta1InstanceTemplateSpecInitProviderServiceAccountEmailSelectorPo
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderServiceAccountEmailSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1679,6 +1784,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderServiceAccountEmailS
 }
 
 /// <summary>Selector for a ServiceAccount in cloudplatform to populate email.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderServiceAccountEmailSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1695,6 +1801,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderServiceAccountEmailS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderServiceAccount
 {
     /// <summary>The service account e-mail address. If not given, the default Google Compute Engine service account is used.</summary>
@@ -1715,6 +1822,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderServiceAccount
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProviderShieldedInstanceConfig
 {
     /// <summary>- Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true.</summary>
@@ -1731,6 +1839,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderShieldedInstanceConf
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecInitProvider
 {
     /// <summary>Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM. Structure is documented below</summary>
@@ -1834,6 +1943,7 @@ public partial class V1beta1InstanceTemplateSpecInitProvider
     public IList<string>? Tags { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -1856,6 +1966,7 @@ public enum V1beta1InstanceTemplateSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1866,6 +1977,7 @@ public enum V1beta1InstanceTemplateSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1877,6 +1989,7 @@ public enum V1beta1InstanceTemplateSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1891,6 +2004,7 @@ public partial class V1beta1InstanceTemplateSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1902,6 +2016,7 @@ public partial class V1beta1InstanceTemplateSpecProviderConfigRef
     public V1beta1InstanceTemplateSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1912,6 +2027,7 @@ public enum V1beta1InstanceTemplateSpecPublishConnectionDetailsToConfigRefPolicy
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceTemplateSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1923,6 +2039,7 @@ public enum V1beta1InstanceTemplateSpecPublishConnectionDetailsToConfigRefPolicy
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1937,6 +2054,7 @@ public partial class V1beta1InstanceTemplateSpecPublishConnectionDetailsToConfig
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1949,6 +2067,7 @@ public partial class V1beta1InstanceTemplateSpecPublishConnectionDetailsToConfig
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1965,6 +2084,7 @@ public partial class V1beta1InstanceTemplateSpecPublishConnectionDetailsToMetada
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1981,6 +2101,7 @@ public partial class V1beta1InstanceTemplateSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1993,6 +2114,7 @@ public partial class V1beta1InstanceTemplateSpecWriteConnectionSecretToRef
 }
 
 /// <summary>InstanceTemplateSpec defines the desired state of InstanceTemplate</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -2026,6 +2148,7 @@ public partial class V1beta1InstanceTemplateSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateStatusAtProviderAdvancedMachineFeatures
 {
     /// <summary>Defines whether the instance should have nested virtualization enabled. Defaults to false.</summary>
@@ -2042,6 +2165,7 @@ public partial class V1beta1InstanceTemplateStatusAtProviderAdvancedMachineFeatu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateStatusAtProviderConfidentialInstanceConfig
 {
     /// <summary>Defines the confidential computing technology the instance uses. SEV is an AMD feature. One of the following values: SEV, SEV_SNP. on_host_maintenance can be set to MIGRATE if confidential_instance_type is set to SEV and min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM. If SEV_SNP, currently min_cpu_platform has to be set to "AMD Milan" or this will fail to create the VM.</summary>
@@ -2054,6 +2178,7 @@ public partial class V1beta1InstanceTemplateStatusAtProviderConfidentialInstance
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateStatusAtProviderDiskDiskEncryptionKey
 {
     /// <summary>The self link of the encryption key that is stored in Google Cloud KMS.</summary>
@@ -2062,6 +2187,7 @@ public partial class V1beta1InstanceTemplateStatusAtProviderDiskDiskEncryptionKe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateStatusAtProviderDiskSourceImageEncryptionKey
 {
     /// <summary>The self link of the encryption key that is stored in Google Cloud KMS.</summary>
@@ -2074,6 +2200,7 @@ public partial class V1beta1InstanceTemplateStatusAtProviderDiskSourceImageEncry
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateStatusAtProviderDiskSourceSnapshotEncryptionKey
 {
     /// <summary>The self link of the encryption key that is stored in Google Cloud KMS.</summary>
@@ -2086,6 +2213,7 @@ public partial class V1beta1InstanceTemplateStatusAtProviderDiskSourceSnapshotEn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateStatusAtProviderDisk
 {
     /// <summary>Whether or not the disk should be auto-deleted. This defaults to true.</summary>
@@ -2166,6 +2294,7 @@ public partial class V1beta1InstanceTemplateStatusAtProviderDisk
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateStatusAtProviderGuestAccelerator
 {
     /// <summary>The number of the guest accelerator cards exposed to this instance.</summary>
@@ -2178,6 +2307,7 @@ public partial class V1beta1InstanceTemplateStatusAtProviderGuestAccelerator
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateStatusAtProviderNetworkInterfaceAccessConfig
 {
     /// <summary>The IP address that will be 1:1 mapped to the instance's network ip. If not given, one will be generated.</summary>
@@ -2194,6 +2324,7 @@ public partial class V1beta1InstanceTemplateStatusAtProviderNetworkInterfaceAcce
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateStatusAtProviderNetworkInterfaceAliasIpRange
 {
     /// <summary>The IP CIDR range represented by this alias IP range. This IP CIDR range must belong to the specified subnetwork and cannot contain IP addresses reserved by system or used by other network interfaces. At the time of writing only a netmask (e.g. /24) may be supplied, with a CIDR format resulting in an API error.</summary>
@@ -2206,6 +2337,7 @@ public partial class V1beta1InstanceTemplateStatusAtProviderNetworkInterfaceAlia
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateStatusAtProviderNetworkInterfaceIpv6AccessConfig
 {
     /// <summary></summary>
@@ -2230,6 +2362,7 @@ public partial class V1beta1InstanceTemplateStatusAtProviderNetworkInterfaceIpv6
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateStatusAtProviderNetworkInterface
 {
     /// <summary>Access configurations, i.e. IPs via which this instance can be accessed via the Internet.g. via tunnel or because it is running on another cloud instance on that network). This block can be repeated multiple times. Structure documented below.</summary>
@@ -2290,6 +2423,7 @@ public partial class V1beta1InstanceTemplateStatusAtProviderNetworkInterface
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateStatusAtProviderNetworkPerformanceConfig
 {
     /// <summary>The egress bandwidth tier to enable. Possible values: TIER_1, DEFAULT</summary>
@@ -2298,6 +2432,7 @@ public partial class V1beta1InstanceTemplateStatusAtProviderNetworkPerformanceCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateStatusAtProviderReservationAffinitySpecificReservation
 {
     /// <summary>Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.</summary>
@@ -2310,6 +2445,7 @@ public partial class V1beta1InstanceTemplateStatusAtProviderReservationAffinityS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateStatusAtProviderReservationAffinity
 {
     /// <summary>Specifies the label selector for the reservation to use.. Structure is documented below.</summary>
@@ -2322,6 +2458,7 @@ public partial class V1beta1InstanceTemplateStatusAtProviderReservationAffinity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateStatusAtProviderSchedulingLocalSsdRecoveryTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -2334,6 +2471,7 @@ public partial class V1beta1InstanceTemplateStatusAtProviderSchedulingLocalSsdRe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateStatusAtProviderSchedulingMaxRunDuration
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -2346,6 +2484,7 @@ public partial class V1beta1InstanceTemplateStatusAtProviderSchedulingMaxRunDura
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateStatusAtProviderSchedulingNodeAffinities
 {
     /// <summary>Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.</summary>
@@ -2362,6 +2501,7 @@ public partial class V1beta1InstanceTemplateStatusAtProviderSchedulingNodeAffini
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateStatusAtProviderSchedulingOnInstanceStopAction
 {
     /// <summary>Whether to discard local SSDs attached to the VM while terminating using max_run_duration. Only supports true at this point.</summary>
@@ -2370,6 +2510,7 @@ public partial class V1beta1InstanceTemplateStatusAtProviderSchedulingOnInstance
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateStatusAtProviderScheduling
 {
     /// <summary>Specifies whether the instance should be automatically restarted if it is terminated by Compute Engine (not terminated by a user). This defaults to true.</summary>
@@ -2414,6 +2555,7 @@ public partial class V1beta1InstanceTemplateStatusAtProviderScheduling
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateStatusAtProviderServiceAccount
 {
     /// <summary>The service account e-mail address. If not given, the default Google Compute Engine service account is used.</summary>
@@ -2426,6 +2568,7 @@ public partial class V1beta1InstanceTemplateStatusAtProviderServiceAccount
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateStatusAtProviderShieldedInstanceConfig
 {
     /// <summary>- Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true.</summary>
@@ -2442,6 +2585,7 @@ public partial class V1beta1InstanceTemplateStatusAtProviderShieldedInstanceConf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateStatusAtProvider
 {
     /// <summary>Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM. Structure is documented below</summary>
@@ -2574,6 +2718,7 @@ public partial class V1beta1InstanceTemplateStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2602,6 +2747,7 @@ public partial class V1beta1InstanceTemplateStatusConditions
 }
 
 /// <summary>InstanceTemplateStatus defines the observed state of InstanceTemplate.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateStatus
 {
     /// <summary></summary>
@@ -2617,8 +2763,9 @@ public partial class V1beta1InstanceTemplateStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>InstanceTemplate is the Schema for the InstanceTemplates API. Manages a VM instance template resource within GCE.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1InstanceTemplate : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1InstanceTemplateSpec>, IStatus<V1beta1InstanceTemplateStatus>
 {
     public const string KubeApiVersion = "v1beta1";

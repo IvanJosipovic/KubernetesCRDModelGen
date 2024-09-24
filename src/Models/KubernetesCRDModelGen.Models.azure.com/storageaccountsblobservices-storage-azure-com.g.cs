@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.azure.com;
 /// <summary>Storage version of v1api20230101.ChangeFeed The blob service properties for change feed events.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceSpecChangeFeed
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -25,6 +26,7 @@ public partial class V1api20230101storageStorageAccountsBlobServiceSpecChangeFee
 }
 
 /// <summary>Storage version of v1api20230101.DeleteRetentionPolicy The service properties for soft delete.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceSpecContainerDeleteRetentionPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -45,6 +47,7 @@ public partial class V1api20230101storageStorageAccountsBlobServiceSpecContainer
 }
 
 /// <summary>Storage version of v1api20230101.CorsRule Specifies a CORS rule for the Blob service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceSpecCorsCorsRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -73,6 +76,7 @@ public partial class V1api20230101storageStorageAccountsBlobServiceSpecCorsCorsR
 }
 
 /// <summary>Storage version of v1api20230101.CorsRules Sets the CORS rules. You can include up to five CorsRule elements in the request.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceSpecCors
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -85,6 +89,7 @@ public partial class V1api20230101storageStorageAccountsBlobServiceSpecCors
 }
 
 /// <summary>Storage version of v1api20230101.DeleteRetentionPolicy The service properties for soft delete.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceSpecDeleteRetentionPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -105,6 +110,7 @@ public partial class V1api20230101storageStorageAccountsBlobServiceSpecDeleteRet
 }
 
 /// <summary>Storage version of v1api20230101.LastAccessTimeTrackingPolicy The blob service properties for Last access time based tracking policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceSpecLastAccessTimeTrackingPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -129,6 +135,7 @@ public partial class V1api20230101storageStorageAccountsBlobServiceSpecLastAcces
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a storage.azure.com/StorageAccount resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceSpecOwner
 {
     /// <summary></summary>
@@ -141,6 +148,7 @@ public partial class V1api20230101storageStorageAccountsBlobServiceSpecOwner
 }
 
 /// <summary>Storage version of v1api20230101.RestorePolicyProperties The blob service properties for blob restore policy</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceSpecRestorePolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -157,6 +165,7 @@ public partial class V1api20230101storageStorageAccountsBlobServiceSpecRestorePo
 }
 
 /// <summary>Storage version of v1api20230101.StorageAccounts_BlobService_Spec</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -209,6 +218,7 @@ public partial class V1api20230101storageStorageAccountsBlobServiceSpec
 }
 
 /// <summary>Storage version of v1api20230101.ChangeFeed_STATUS The blob service properties for change feed events.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceStatusChangeFeed
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -225,6 +235,7 @@ public partial class V1api20230101storageStorageAccountsBlobServiceStatusChangeF
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -257,6 +268,7 @@ public partial class V1api20230101storageStorageAccountsBlobServiceStatusConditi
 }
 
 /// <summary>Storage version of v1api20230101.DeleteRetentionPolicy_STATUS The service properties for soft delete.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceStatusContainerDeleteRetentionPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -277,6 +289,7 @@ public partial class V1api20230101storageStorageAccountsBlobServiceStatusContain
 }
 
 /// <summary>Storage version of v1api20230101.CorsRule_STATUS Specifies a CORS rule for the Blob service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceStatusCorsCorsRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -305,6 +318,7 @@ public partial class V1api20230101storageStorageAccountsBlobServiceStatusCorsCor
 }
 
 /// <summary>Storage version of v1api20230101.CorsRules_STATUS Sets the CORS rules. You can include up to five CorsRule elements in the request.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceStatusCors
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -317,6 +331,7 @@ public partial class V1api20230101storageStorageAccountsBlobServiceStatusCors
 }
 
 /// <summary>Storage version of v1api20230101.DeleteRetentionPolicy_STATUS The service properties for soft delete.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceStatusDeleteRetentionPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -337,6 +352,7 @@ public partial class V1api20230101storageStorageAccountsBlobServiceStatusDeleteR
 }
 
 /// <summary>Storage version of v1api20230101.LastAccessTimeTrackingPolicy_STATUS The blob service properties for Last access time based tracking policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceStatusLastAccessTimeTrackingPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -361,6 +377,7 @@ public partial class V1api20230101storageStorageAccountsBlobServiceStatusLastAcc
 }
 
 /// <summary>Storage version of v1api20230101.RestorePolicyProperties_STATUS The blob service properties for blob restore policy</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceStatusRestorePolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -385,6 +402,7 @@ public partial class V1api20230101storageStorageAccountsBlobServiceStatusRestore
 }
 
 /// <summary>Storage version of v1api20230101.Sku_STATUS The SKU of the storage account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -401,6 +419,7 @@ public partial class V1api20230101storageStorageAccountsBlobServiceStatusSku
 }
 
 /// <summary>Storage version of v1api20230101.StorageAccounts_BlobService_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -464,8 +483,9 @@ public partial class V1api20230101storageStorageAccountsBlobServiceStatus
     public string? Type { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Storage version of v1api20230101.StorageAccountsBlobService Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2023-01-01/blob.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/default</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1api20230101storageStorageAccountsBlobService : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230101storageStorageAccountsBlobServiceSpec>, IStatus<V1api20230101storageStorageAccountsBlobServiceStatus>
 {
     public const string KubeApiVersion = "v1api20230101storage";

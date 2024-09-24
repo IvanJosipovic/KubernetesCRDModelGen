@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeHTTPHealthCheckSpec
 {
     /// <summary>How often (in seconds) to send a health check. The default value is 5 seconds.</summary>
@@ -49,6 +50,7 @@ public partial class V1beta1ComputeHTTPHealthCheckSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeHTTPHealthCheckStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -73,6 +75,7 @@ public partial class V1beta1ComputeHTTPHealthCheckStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeHTTPHealthCheckStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -92,8 +95,9 @@ public partial class V1beta1ComputeHTTPHealthCheckStatus
     public string? SelfLink { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ComputeHTTPHealthCheck : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeHTTPHealthCheckSpec>, IStatus<V1beta1ComputeHTTPHealthCheckStatus>
 {
     public const string KubeApiVersion = "v1beta1";

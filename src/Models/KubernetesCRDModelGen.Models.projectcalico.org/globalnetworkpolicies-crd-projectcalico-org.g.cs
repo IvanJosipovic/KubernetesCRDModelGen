@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
 /// <summary>ServiceAccounts is an optional field that restricts the rule to only apply to traffic that originates from (or terminates at) a pod running as a matching service account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GlobalNetworkPolicySpecEgressDestinationServiceAccounts
 {
     /// <summary>Names is an optional field that restricts the rule to only apply to traffic that originates from (or terminates at) a pod running as a service account whose name is in the list.</summary>
@@ -21,6 +22,7 @@ public partial class V1GlobalNetworkPolicySpecEgressDestinationServiceAccounts
 }
 
 /// <summary>Services is an optional field that contains options for matching Kubernetes Services. If specified, only traffic that originates from or terminates at endpoints within the selected service(s) will be matched, and only to/from each endpoint's port.   Services cannot be specified on the same rule as Selector, NotSelector, NamespaceSelector, Nets, NotNets or ServiceAccounts.   Ports and NotPorts can only be specified with Services on ingress rules.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GlobalNetworkPolicySpecEgressDestinationServices
 {
     /// <summary>Name specifies the name of a Kubernetes Service to match.</summary>
@@ -33,6 +35,7 @@ public partial class V1GlobalNetworkPolicySpecEgressDestinationServices
 }
 
 /// <summary>Destination contains the match criteria that apply to destination entity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GlobalNetworkPolicySpecEgressDestination
 {
     /// <summary>NamespaceSelector is an optional field that contains a selector expression. Only traffic that originates from (or terminates at) endpoints within the selected namespaces will be matched. When both NamespaceSelector and another selector are defined on the same rule, then only workload endpoints that are matched by both selectors will be selected by the rule.   For NetworkPolicy, an empty NamespaceSelector implies that the Selector is limited to selecting only workload endpoints in the same namespace as the NetworkPolicy.   For NetworkPolicy, `global()` NamespaceSelector implies that the Selector is limited to selecting only GlobalNetworkSet or HostEndpoint.   For GlobalNetworkPolicy, an empty NamespaceSelector implies the Selector applies to workload endpoints across all namespaces.</summary>
@@ -73,6 +76,7 @@ public partial class V1GlobalNetworkPolicySpecEgressDestination
 }
 
 /// <summary>HTTPPath specifies an HTTP path to match. It may be either of the form: exact: &lt;path&gt;: which matches the path exactly or prefix: &lt;path-prefix&gt;: which matches the path prefix</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GlobalNetworkPolicySpecEgressHttpPaths
 {
     /// <summary></summary>
@@ -85,6 +89,7 @@ public partial class V1GlobalNetworkPolicySpecEgressHttpPaths
 }
 
 /// <summary>HTTP contains match criteria that apply to HTTP requests.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GlobalNetworkPolicySpecEgressHttp
 {
     /// <summary>Methods is an optional field that restricts the rule to apply only to HTTP requests that use one of the listed HTTP Methods (e.g. GET, PUT, etc.) Multiple methods are OR'd together.</summary>
@@ -97,6 +102,7 @@ public partial class V1GlobalNetworkPolicySpecEgressHttp
 }
 
 /// <summary>ICMP is an optional field that restricts the rule to apply to a specific type and code of ICMP traffic.  This should only be specified if the Protocol field is set to "ICMP" or "ICMPv6".</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GlobalNetworkPolicySpecEgressIcmp
 {
     /// <summary>Match on a specific ICMP code.  If specified, the Type value must also be specified. This is a technical limitation imposed by the kernel's iptables firewall, which Calico uses to enforce the rule.</summary>
@@ -109,6 +115,7 @@ public partial class V1GlobalNetworkPolicySpecEgressIcmp
 }
 
 /// <summary>Metadata contains additional information for this rule</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GlobalNetworkPolicySpecEgressMetadata
 {
     /// <summary>Annotations is a set of key value pairs that give extra information about the rule</summary>
@@ -117,6 +124,7 @@ public partial class V1GlobalNetworkPolicySpecEgressMetadata
 }
 
 /// <summary>NotICMP is the negated version of the ICMP field.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GlobalNetworkPolicySpecEgressNotICMP
 {
     /// <summary>Match on a specific ICMP code.  If specified, the Type value must also be specified. This is a technical limitation imposed by the kernel's iptables firewall, which Calico uses to enforce the rule.</summary>
@@ -129,6 +137,7 @@ public partial class V1GlobalNetworkPolicySpecEgressNotICMP
 }
 
 /// <summary>ServiceAccounts is an optional field that restricts the rule to only apply to traffic that originates from (or terminates at) a pod running as a matching service account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GlobalNetworkPolicySpecEgressSourceServiceAccounts
 {
     /// <summary>Names is an optional field that restricts the rule to only apply to traffic that originates from (or terminates at) a pod running as a service account whose name is in the list.</summary>
@@ -141,6 +150,7 @@ public partial class V1GlobalNetworkPolicySpecEgressSourceServiceAccounts
 }
 
 /// <summary>Services is an optional field that contains options for matching Kubernetes Services. If specified, only traffic that originates from or terminates at endpoints within the selected service(s) will be matched, and only to/from each endpoint's port.   Services cannot be specified on the same rule as Selector, NotSelector, NamespaceSelector, Nets, NotNets or ServiceAccounts.   Ports and NotPorts can only be specified with Services on ingress rules.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GlobalNetworkPolicySpecEgressSourceServices
 {
     /// <summary>Name specifies the name of a Kubernetes Service to match.</summary>
@@ -153,6 +163,7 @@ public partial class V1GlobalNetworkPolicySpecEgressSourceServices
 }
 
 /// <summary>Source contains the match criteria that apply to source entity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GlobalNetworkPolicySpecEgressSource
 {
     /// <summary>NamespaceSelector is an optional field that contains a selector expression. Only traffic that originates from (or terminates at) endpoints within the selected namespaces will be matched. When both NamespaceSelector and another selector are defined on the same rule, then only workload endpoints that are matched by both selectors will be selected by the rule.   For NetworkPolicy, an empty NamespaceSelector implies that the Selector is limited to selecting only workload endpoints in the same namespace as the NetworkPolicy.   For NetworkPolicy, `global()` NamespaceSelector implies that the Selector is limited to selecting only GlobalNetworkSet or HostEndpoint.   For GlobalNetworkPolicy, an empty NamespaceSelector implies the Selector applies to workload endpoints across all namespaces.</summary>
@@ -193,6 +204,7 @@ public partial class V1GlobalNetworkPolicySpecEgressSource
 }
 
 /// <summary>A Rule encapsulates a set of match criteria and an action.  Both selector-based security Policy and security Profiles reference rules - separated out as a list of rules for both ingress and egress packet matching.   Each positive match criteria has a negated version, prefixed with "Not". All the match criteria within a rule must be satisfied for a packet to match. A single rule can contain the positive and negative version of a match and both must be satisfied for the rule to match.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GlobalNetworkPolicySpecEgress
 {
     /// <summary></summary>
@@ -237,6 +249,7 @@ public partial class V1GlobalNetworkPolicySpecEgress
 }
 
 /// <summary>ServiceAccounts is an optional field that restricts the rule to only apply to traffic that originates from (or terminates at) a pod running as a matching service account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GlobalNetworkPolicySpecIngressDestinationServiceAccounts
 {
     /// <summary>Names is an optional field that restricts the rule to only apply to traffic that originates from (or terminates at) a pod running as a service account whose name is in the list.</summary>
@@ -249,6 +262,7 @@ public partial class V1GlobalNetworkPolicySpecIngressDestinationServiceAccounts
 }
 
 /// <summary>Services is an optional field that contains options for matching Kubernetes Services. If specified, only traffic that originates from or terminates at endpoints within the selected service(s) will be matched, and only to/from each endpoint's port.   Services cannot be specified on the same rule as Selector, NotSelector, NamespaceSelector, Nets, NotNets or ServiceAccounts.   Ports and NotPorts can only be specified with Services on ingress rules.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GlobalNetworkPolicySpecIngressDestinationServices
 {
     /// <summary>Name specifies the name of a Kubernetes Service to match.</summary>
@@ -261,6 +275,7 @@ public partial class V1GlobalNetworkPolicySpecIngressDestinationServices
 }
 
 /// <summary>Destination contains the match criteria that apply to destination entity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GlobalNetworkPolicySpecIngressDestination
 {
     /// <summary>NamespaceSelector is an optional field that contains a selector expression. Only traffic that originates from (or terminates at) endpoints within the selected namespaces will be matched. When both NamespaceSelector and another selector are defined on the same rule, then only workload endpoints that are matched by both selectors will be selected by the rule.   For NetworkPolicy, an empty NamespaceSelector implies that the Selector is limited to selecting only workload endpoints in the same namespace as the NetworkPolicy.   For NetworkPolicy, `global()` NamespaceSelector implies that the Selector is limited to selecting only GlobalNetworkSet or HostEndpoint.   For GlobalNetworkPolicy, an empty NamespaceSelector implies the Selector applies to workload endpoints across all namespaces.</summary>
@@ -301,6 +316,7 @@ public partial class V1GlobalNetworkPolicySpecIngressDestination
 }
 
 /// <summary>HTTPPath specifies an HTTP path to match. It may be either of the form: exact: &lt;path&gt;: which matches the path exactly or prefix: &lt;path-prefix&gt;: which matches the path prefix</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GlobalNetworkPolicySpecIngressHttpPaths
 {
     /// <summary></summary>
@@ -313,6 +329,7 @@ public partial class V1GlobalNetworkPolicySpecIngressHttpPaths
 }
 
 /// <summary>HTTP contains match criteria that apply to HTTP requests.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GlobalNetworkPolicySpecIngressHttp
 {
     /// <summary>Methods is an optional field that restricts the rule to apply only to HTTP requests that use one of the listed HTTP Methods (e.g. GET, PUT, etc.) Multiple methods are OR'd together.</summary>
@@ -325,6 +342,7 @@ public partial class V1GlobalNetworkPolicySpecIngressHttp
 }
 
 /// <summary>ICMP is an optional field that restricts the rule to apply to a specific type and code of ICMP traffic.  This should only be specified if the Protocol field is set to "ICMP" or "ICMPv6".</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GlobalNetworkPolicySpecIngressIcmp
 {
     /// <summary>Match on a specific ICMP code.  If specified, the Type value must also be specified. This is a technical limitation imposed by the kernel's iptables firewall, which Calico uses to enforce the rule.</summary>
@@ -337,6 +355,7 @@ public partial class V1GlobalNetworkPolicySpecIngressIcmp
 }
 
 /// <summary>Metadata contains additional information for this rule</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GlobalNetworkPolicySpecIngressMetadata
 {
     /// <summary>Annotations is a set of key value pairs that give extra information about the rule</summary>
@@ -345,6 +364,7 @@ public partial class V1GlobalNetworkPolicySpecIngressMetadata
 }
 
 /// <summary>NotICMP is the negated version of the ICMP field.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GlobalNetworkPolicySpecIngressNotICMP
 {
     /// <summary>Match on a specific ICMP code.  If specified, the Type value must also be specified. This is a technical limitation imposed by the kernel's iptables firewall, which Calico uses to enforce the rule.</summary>
@@ -357,6 +377,7 @@ public partial class V1GlobalNetworkPolicySpecIngressNotICMP
 }
 
 /// <summary>ServiceAccounts is an optional field that restricts the rule to only apply to traffic that originates from (or terminates at) a pod running as a matching service account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GlobalNetworkPolicySpecIngressSourceServiceAccounts
 {
     /// <summary>Names is an optional field that restricts the rule to only apply to traffic that originates from (or terminates at) a pod running as a service account whose name is in the list.</summary>
@@ -369,6 +390,7 @@ public partial class V1GlobalNetworkPolicySpecIngressSourceServiceAccounts
 }
 
 /// <summary>Services is an optional field that contains options for matching Kubernetes Services. If specified, only traffic that originates from or terminates at endpoints within the selected service(s) will be matched, and only to/from each endpoint's port.   Services cannot be specified on the same rule as Selector, NotSelector, NamespaceSelector, Nets, NotNets or ServiceAccounts.   Ports and NotPorts can only be specified with Services on ingress rules.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GlobalNetworkPolicySpecIngressSourceServices
 {
     /// <summary>Name specifies the name of a Kubernetes Service to match.</summary>
@@ -381,6 +403,7 @@ public partial class V1GlobalNetworkPolicySpecIngressSourceServices
 }
 
 /// <summary>Source contains the match criteria that apply to source entity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GlobalNetworkPolicySpecIngressSource
 {
     /// <summary>NamespaceSelector is an optional field that contains a selector expression. Only traffic that originates from (or terminates at) endpoints within the selected namespaces will be matched. When both NamespaceSelector and another selector are defined on the same rule, then only workload endpoints that are matched by both selectors will be selected by the rule.   For NetworkPolicy, an empty NamespaceSelector implies that the Selector is limited to selecting only workload endpoints in the same namespace as the NetworkPolicy.   For NetworkPolicy, `global()` NamespaceSelector implies that the Selector is limited to selecting only GlobalNetworkSet or HostEndpoint.   For GlobalNetworkPolicy, an empty NamespaceSelector implies the Selector applies to workload endpoints across all namespaces.</summary>
@@ -421,6 +444,7 @@ public partial class V1GlobalNetworkPolicySpecIngressSource
 }
 
 /// <summary>A Rule encapsulates a set of match criteria and an action.  Both selector-based security Policy and security Profiles reference rules - separated out as a list of rules for both ingress and egress packet matching.   Each positive match criteria has a negated version, prefixed with "Not". All the match criteria within a rule must be satisfied for a packet to match. A single rule can contain the positive and negative version of a match and both must be satisfied for the rule to match.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GlobalNetworkPolicySpecIngress
 {
     /// <summary></summary>
@@ -465,6 +489,7 @@ public partial class V1GlobalNetworkPolicySpecIngress
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GlobalNetworkPolicySpec
 {
     /// <summary>ApplyOnForward indicates to apply the rules in this policy on forward traffic.</summary>
@@ -516,8 +541,9 @@ public partial class V1GlobalNetworkPolicySpec
     public IList<string>? Types { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1GlobalNetworkPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1GlobalNetworkPolicySpec>
 {
     public const string KubeApiVersion = "v1";

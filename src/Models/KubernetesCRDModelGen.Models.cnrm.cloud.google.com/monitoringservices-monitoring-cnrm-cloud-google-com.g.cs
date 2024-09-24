@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.monitoring.cnrm.cloud.google.com;
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringServiceSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1MonitoringServiceSpecProjectRef
 }
 
 /// <summary>Configuration for how to query telemetry on a Service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringServiceSpecTelemetry
 {
     /// <summary>The full name of the resource that defines this service. Formatted as described in https://cloud.google.com/apis/design/resource_names.</summary>
@@ -33,6 +35,7 @@ public partial class V1beta1MonitoringServiceSpecTelemetry
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringServiceSpec
 {
     /// <summary>Name used for UI elements listing this Service.</summary>
@@ -53,6 +56,7 @@ public partial class V1beta1MonitoringServiceSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringServiceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -77,6 +81,7 @@ public partial class V1beta1MonitoringServiceStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringServiceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -88,8 +93,9 @@ public partial class V1beta1MonitoringServiceStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1MonitoringService : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MonitoringServiceSpec>, IStatus<V1beta1MonitoringServiceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

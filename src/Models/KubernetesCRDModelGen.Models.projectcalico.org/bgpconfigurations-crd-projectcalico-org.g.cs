@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
 /// <summary>Community contains standard or large community value and its name.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BGPConfigurationSpecCommunities
 {
     /// <summary>Name given to community value.</summary>
@@ -21,6 +22,7 @@ public partial class V1BGPConfigurationSpecCommunities
 }
 
 /// <summary>Selects a key of a secret in the node pod's namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BGPConfigurationSpecNodeMeshPasswordSecretKeyRef
 {
     /// <summary>The key of the secret to select from.  Must be a valid secret key.</summary>
@@ -37,6 +39,7 @@ public partial class V1BGPConfigurationSpecNodeMeshPasswordSecretKeyRef
 }
 
 /// <summary>Optional BGP password for full node-to-mesh peerings. This field can only be set on the default BGPConfiguration instance and requires that NodeMesh is enabled</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BGPConfigurationSpecNodeMeshPassword
 {
     /// <summary>Selects a key of a secret in the node pod's namespace.</summary>
@@ -45,6 +48,7 @@ public partial class V1BGPConfigurationSpecNodeMeshPassword
 }
 
 /// <summary>PrefixAdvertisement configures advertisement properties for the specified CIDR.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BGPConfigurationSpecPrefixAdvertisements
 {
     /// <summary>CIDR for which properties should be advertised.</summary>
@@ -57,6 +61,7 @@ public partial class V1BGPConfigurationSpecPrefixAdvertisements
 }
 
 /// <summary>ServiceClusterIPBlock represents a single allowed ClusterIP CIDR block.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BGPConfigurationSpecServiceClusterIPs
 {
     /// <summary></summary>
@@ -65,6 +70,7 @@ public partial class V1BGPConfigurationSpecServiceClusterIPs
 }
 
 /// <summary>ServiceExternalIPBlock represents a single allowed External IP CIDR block.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BGPConfigurationSpecServiceExternalIPs
 {
     /// <summary></summary>
@@ -73,6 +79,7 @@ public partial class V1BGPConfigurationSpecServiceExternalIPs
 }
 
 /// <summary>ServiceLoadBalancerIPBlock represents a single allowed LoadBalancer IP CIDR block.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BGPConfigurationSpecServiceLoadBalancerIPs
 {
     /// <summary></summary>
@@ -81,6 +88,7 @@ public partial class V1BGPConfigurationSpecServiceLoadBalancerIPs
 }
 
 /// <summary>BGPConfigurationSpec contains the values of the BGP configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BGPConfigurationSpec
 {
     /// <summary>ASNumber is the default AS number used by a node. [Default: 64512]</summary>
@@ -136,8 +144,9 @@ public partial class V1BGPConfigurationSpec
     public IList<V1BGPConfigurationSpecServiceLoadBalancerIPs>? ServiceLoadBalancerIPs { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>BGPConfiguration contains the configuration for any BGP routing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1BGPConfiguration : IKubernetesObject<V1ObjectMeta>, ISpec<V1BGPConfigurationSpec>
 {
     public const string KubeApiVersion = "v1";

@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.essentialcontacts.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EssentialContactsContactSpec
 {
     /// <summary>Immutable. The email address to send notifications to. This does not need to be a Google account.</summary>
@@ -33,6 +34,7 @@ public partial class V1alpha1EssentialContactsContactSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EssentialContactsContactStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -57,6 +59,7 @@ public partial class V1alpha1EssentialContactsContactStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EssentialContactsContactStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -72,8 +75,9 @@ public partial class V1alpha1EssentialContactsContactStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1EssentialContactsContact : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1EssentialContactsContactSpec>, IStatus<V1alpha1EssentialContactsContactStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

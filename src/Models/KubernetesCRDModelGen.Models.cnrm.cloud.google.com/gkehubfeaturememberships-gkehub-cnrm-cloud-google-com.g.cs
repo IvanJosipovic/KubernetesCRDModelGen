@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gkehub.cnrm.cloud.google.com;
 /// <summary>**DEPRECATED** Binauthz configuration for the cluster. This field will be ignored and should not be set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureMembershipSpecConfigmanagementBinauthz
 {
     /// <summary>Whether binauthz is enabled in this cluster.</summary>
@@ -17,6 +18,7 @@ public partial class V1beta1GKEHubFeatureMembershipSpecConfigmanagementBinauthz
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureMembershipSpecConfigmanagementConfigSyncGitGcpServiceAccountRef
 {
     /// <summary>The `email` field of an `IAMServiceAccount` resource.</summary>
@@ -33,6 +35,7 @@ public partial class V1beta1GKEHubFeatureMembershipSpecConfigmanagementConfigSyn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureMembershipSpecConfigmanagementConfigSyncGit
 {
     /// <summary></summary>
@@ -69,6 +72,7 @@ public partial class V1beta1GKEHubFeatureMembershipSpecConfigmanagementConfigSyn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureMembershipSpecConfigmanagementConfigSyncMetricsGcpServiceAccountRef
 {
     /// <summary>The Email of the Google Cloud Service Account (GSA) used for exporting Config Sync metrics to Cloud Monitoring. The GSA should have the Monitoring Metric Writer(roles/monitoring.metricWriter) IAM role. The Kubernetes ServiceAccount `default` in the namespace `config-management-monitoring` should be bound to the GSA. Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
@@ -85,6 +89,7 @@ public partial class V1beta1GKEHubFeatureMembershipSpecConfigmanagementConfigSyn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureMembershipSpecConfigmanagementConfigSyncOciGcpServiceAccountRef
 {
     /// <summary>The `email` field of an `IAMServiceAccount` resource.</summary>
@@ -101,6 +106,7 @@ public partial class V1beta1GKEHubFeatureMembershipSpecConfigmanagementConfigSyn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureMembershipSpecConfigmanagementConfigSyncOci
 {
     /// <summary></summary>
@@ -125,6 +131,7 @@ public partial class V1beta1GKEHubFeatureMembershipSpecConfigmanagementConfigSyn
 }
 
 /// <summary>Config Sync configuration for the cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureMembershipSpecConfigmanagementConfigSync
 {
     /// <summary></summary>
@@ -149,6 +156,7 @@ public partial class V1beta1GKEHubFeatureMembershipSpecConfigmanagementConfigSyn
 }
 
 /// <summary>Hierarchy Controller is no longer available. Use https://github.com/kubernetes-sigs/hierarchical-namespaces instead.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureMembershipSpecConfigmanagementHierarchyController
 {
     /// <summary>Whether hierarchical resource quota is enabled in this cluster.</summary>
@@ -165,6 +173,7 @@ public partial class V1beta1GKEHubFeatureMembershipSpecConfigmanagementHierarchy
 }
 
 /// <summary>Specifies the backends Policy Controller should export metrics to. For example, to specify metrics should be exported to Cloud Monitoring and Prometheus, specify backends: ["cloudmonitoring", "prometheus"]. Default: ["cloudmonitoring", "prometheus"]</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureMembershipSpecConfigmanagementPolicyControllerMonitoring
 {
     /// <summary>Specifies the list of backends Policy Controller will export to. Specifying an empty value `[]` disables metrics export.</summary>
@@ -173,6 +182,7 @@ public partial class V1beta1GKEHubFeatureMembershipSpecConfigmanagementPolicyCon
 }
 
 /// <summary>**DEPRECATED** Configuring Policy Controller through the configmanagement feature is no longer recommended. Use the policycontroller feature instead.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureMembershipSpecConfigmanagementPolicyController
 {
     /// <summary>Sets the interval for Policy Controller Audit Scans (in seconds). When set to 0, this disables audit functionality altogether.</summary>
@@ -209,6 +219,7 @@ public partial class V1beta1GKEHubFeatureMembershipSpecConfigmanagementPolicyCon
 }
 
 /// <summary>Config Management-specific spec.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureMembershipSpecConfigmanagement
 {
     /// <summary>**DEPRECATED** Binauthz configuration for the cluster. This field will be ignored and should not be set.</summary>
@@ -233,6 +244,7 @@ public partial class V1beta1GKEHubFeatureMembershipSpecConfigmanagement
 }
 
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureMembershipSpecFeatureRef
 {
     /// <summary>The name of the feature. Allowed value: The Google Cloud resource name of a `GKEHubFeature` resource (format: `projects/{{project}}/locations/{{location}}/features/{{name}}`).</summary>
@@ -249,6 +261,7 @@ public partial class V1beta1GKEHubFeatureMembershipSpecFeatureRef
 }
 
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureMembershipSpecMembershipRef
 {
     /// <summary>The name of the membership. Allowed value: The Google Cloud resource name of a `GKEHubMembership` resource (format: `projects/{{project}}/locations/{{location}}/memberships/{{name}}`).</summary>
@@ -265,6 +278,7 @@ public partial class V1beta1GKEHubFeatureMembershipSpecMembershipRef
 }
 
 /// <summary>Manage Mesh Features</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureMembershipSpecMesh
 {
     /// <summary>**DEPRECATED** Whether to automatically manage Service Mesh control planes. Possible values: CONTROL_PLANE_MANAGEMENT_UNSPECIFIED, AUTOMATIC, MANUAL</summary>
@@ -277,6 +291,7 @@ public partial class V1beta1GKEHubFeatureMembershipSpecMesh
 }
 
 /// <summary>Specifies the backends Policy Controller should export metrics to. For example, to specify metrics should be exported to Cloud Monitoring and Prometheus, specify backends: ["cloudmonitoring", "prometheus"]. Default: ["cloudmonitoring", "prometheus"]</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureMembershipSpecPolicycontrollerPolicyControllerHubConfigMonitoring
 {
     /// <summary>Specifies the list of backends Policy Controller will export to. Specifying an empty value `[]` disables metrics export.</summary>
@@ -285,6 +300,7 @@ public partial class V1beta1GKEHubFeatureMembershipSpecPolicycontrollerPolicyCon
 }
 
 /// <summary>Configures the installation of the Template Library.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureMembershipSpecPolicycontrollerPolicyControllerHubConfigPolicyContentTemplateLibrary
 {
     /// <summary>Configures the manner in which the template library is installed on the cluster. Possible values: INSTALLATION_UNSPECIFIED, NOT_INSTALLED, ALL</summary>
@@ -293,6 +309,7 @@ public partial class V1beta1GKEHubFeatureMembershipSpecPolicycontrollerPolicyCon
 }
 
 /// <summary>Specifies the desired policy content on the cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureMembershipSpecPolicycontrollerPolicyControllerHubConfigPolicyContent
 {
     /// <summary>Configures the installation of the Template Library.</summary>
@@ -301,6 +318,7 @@ public partial class V1beta1GKEHubFeatureMembershipSpecPolicycontrollerPolicyCon
 }
 
 /// <summary>Policy Controller configuration for the cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureMembershipSpecPolicycontrollerPolicyControllerHubConfig
 {
     /// <summary>Sets the interval for Policy Controller Audit Scans (in seconds). When set to 0, this disables audit functionality altogether.</summary>
@@ -341,6 +359,7 @@ public partial class V1beta1GKEHubFeatureMembershipSpecPolicycontrollerPolicyCon
 }
 
 /// <summary>Policy Controller-specific spec.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureMembershipSpecPolicycontroller
 {
     /// <summary>Policy Controller configuration for the cluster.</summary>
@@ -353,6 +372,7 @@ public partial class V1beta1GKEHubFeatureMembershipSpecPolicycontroller
 }
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureMembershipSpecProjectRef
 {
     /// <summary>The project of the feature. Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -369,6 +389,7 @@ public partial class V1beta1GKEHubFeatureMembershipSpecProjectRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureMembershipSpec
 {
     /// <summary>Config Management-specific spec.</summary>
@@ -405,6 +426,7 @@ public partial class V1beta1GKEHubFeatureMembershipSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureMembershipStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -429,6 +451,7 @@ public partial class V1beta1GKEHubFeatureMembershipStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureMembershipStatus
 {
     /// <summary>Conditions represent the latest available observations of the GKEHubFeatureMembership's current state.</summary>
@@ -440,8 +463,9 @@ public partial class V1beta1GKEHubFeatureMembershipStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>GKEHubFeatureMembership is the Schema for the gkehub API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1GKEHubFeatureMembership : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1GKEHubFeatureMembershipSpec>, IStatus<V1beta1GKEHubFeatureMembershipStatus>
 {
     public const string KubeApiVersion = "v1beta1";

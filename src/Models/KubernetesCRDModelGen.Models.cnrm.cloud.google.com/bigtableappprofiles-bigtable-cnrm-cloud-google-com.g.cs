@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigtable.cnrm.cloud.google.com;
 /// <summary>The instance to create the app profile within.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigtableAppProfileSpecInstanceRef
 {
     /// <summary>Allowed value: The `name` field of a `BigtableInstance` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1BigtableAppProfileSpecInstanceRef
 }
 
 /// <summary>Use a single-cluster routing policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigtableAppProfileSpecSingleClusterRouting
 {
     /// <summary>If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile. It is unsafe to send these requests to the same table/row/column in multiple clusters.</summary>
@@ -37,6 +39,7 @@ public partial class V1beta1BigtableAppProfileSpecSingleClusterRouting
 }
 
 /// <summary>The standard options used for isolating this app profile's traffic from other use cases.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigtableAppProfileSpecStandardIsolation
 {
     /// <summary>The priority of requests sent using this app profile. Possible values: ["PRIORITY_LOW", "PRIORITY_MEDIUM", "PRIORITY_HIGH"].</summary>
@@ -45,6 +48,7 @@ public partial class V1beta1BigtableAppProfileSpecStandardIsolation
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigtableAppProfileSpec
 {
     /// <summary>Long form description of the use case for this app profile.</summary>
@@ -77,6 +81,7 @@ public partial class V1beta1BigtableAppProfileSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigtableAppProfileStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -101,6 +106,7 @@ public partial class V1beta1BigtableAppProfileStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigtableAppProfileStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -116,8 +122,9 @@ public partial class V1beta1BigtableAppProfileStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1BigtableAppProfile : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BigtableAppProfileSpec>, IStatus<V1beta1BigtableAppProfileStatus>
 {
     public const string KubeApiVersion = "v1beta1";

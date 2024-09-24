@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iam.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPolicySpecAuditConfigsAuditLogConfigs
 {
     /// <summary>Identities that do not cause logging for this type of permission. The format is the same as that for 'members' in IAMPolicy/IAMPolicyMember.</summary>
@@ -21,6 +22,7 @@ public partial class V1beta1IAMPolicySpecAuditConfigsAuditLogConfigs
 }
 
 /// <summary>Specifies the Cloud Audit Logs configuration for the IAM policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPolicySpecAuditConfigs
 {
     /// <summary>Required. The configuration for logging of each type of permission.</summary>
@@ -33,6 +35,7 @@ public partial class V1beta1IAMPolicySpecAuditConfigs
 }
 
 /// <summary>Optional. The condition under which the binding applies.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPolicySpecBindingsCondition
 {
     /// <summary></summary>
@@ -49,6 +52,7 @@ public partial class V1beta1IAMPolicySpecBindingsCondition
 }
 
 /// <summary>Specifies the members to bind to an IAM role.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPolicySpecBindings
 {
     /// <summary>Optional. The condition under which the binding applies.</summary>
@@ -65,6 +69,7 @@ public partial class V1beta1IAMPolicySpecBindings
 }
 
 /// <summary>Immutable. Required. The GCP resource to set the IAM policy on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPolicySpecResourceRef
 {
     /// <summary></summary>
@@ -89,6 +94,7 @@ public partial class V1beta1IAMPolicySpecResourceRef
 }
 
 /// <summary>IAMPolicySpec defines the desired state of IAMPolicy</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPolicySpec
 {
     /// <summary>Optional. The list of IAM audit configs.</summary>
@@ -105,6 +111,7 @@ public partial class V1beta1IAMPolicySpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -129,6 +136,7 @@ public partial class V1beta1IAMPolicyStatusConditions
 }
 
 /// <summary>IAMPolicyStatus defines the observed state of IAMPolicy</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPolicyStatus
 {
     /// <summary>Conditions represent the latest available observations of the IAM policy's current state.</summary>
@@ -140,8 +148,9 @@ public partial class V1beta1IAMPolicyStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>IAMPolicy is the Schema for the iampolicies API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1IAMPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IAMPolicySpec>, IStatus<V1beta1IAMPolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

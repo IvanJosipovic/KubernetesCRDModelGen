@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary>The encryption key that is stored in Google Cloud KMS.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSnapshotSpecSnapshotEncryptionKeyKmsKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1ComputeSnapshotSpecSnapshotEncryptionKeyKmsKeyRef
 }
 
 /// <summary>The service account used for the encryption request for the given KMS key. If absent, the Compute Engine Service Agent service account is used.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSnapshotSpecSnapshotEncryptionKeyKmsKeyServiceAccountRef
 {
     /// <summary>Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
@@ -41,6 +43,7 @@ public partial class V1beta1ComputeSnapshotSpecSnapshotEncryptionKeyKmsKeyServic
 }
 
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSnapshotSpecSnapshotEncryptionKeyRawKeyValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -53,6 +56,7 @@ public partial class V1beta1ComputeSnapshotSpecSnapshotEncryptionKeyRawKeyValueF
 }
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSnapshotSpecSnapshotEncryptionKeyRawKeyValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -61,6 +65,7 @@ public partial class V1beta1ComputeSnapshotSpecSnapshotEncryptionKeyRawKeyValueF
 }
 
 /// <summary>Immutable. Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSnapshotSpecSnapshotEncryptionKeyRawKey
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -73,6 +78,7 @@ public partial class V1beta1ComputeSnapshotSpecSnapshotEncryptionKeyRawKey
 }
 
 /// <summary>Immutable. Encrypts the snapshot using a customer-supplied encryption key.  After you encrypt a snapshot using a customer-supplied key, you must provide the same key if you use the snapshot later. For example, you must provide the encryption key when you create a disk from the encrypted snapshot in a future request.  Customer-supplied encryption keys do not protect access to metadata of the snapshot.  If you do not provide an encryption key when creating the snapshot, then the snapshot will be encrypted using an automatically generated key and you do not need to provide a key to use the snapshot later.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSnapshotSpecSnapshotEncryptionKey
 {
     /// <summary>The encryption key that is stored in Google Cloud KMS.</summary>
@@ -93,6 +99,7 @@ public partial class V1beta1ComputeSnapshotSpecSnapshotEncryptionKey
 }
 
 /// <summary>The service account used for the encryption request for the given KMS key. If absent, the Compute Engine Service Agent service account is used.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSnapshotSpecSourceDiskEncryptionKeyKmsKeyServiceAccountRef
 {
     /// <summary>Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
@@ -109,6 +116,7 @@ public partial class V1beta1ComputeSnapshotSpecSourceDiskEncryptionKeyKmsKeyServ
 }
 
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSnapshotSpecSourceDiskEncryptionKeyRawKeyValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -121,6 +129,7 @@ public partial class V1beta1ComputeSnapshotSpecSourceDiskEncryptionKeyRawKeyValu
 }
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSnapshotSpecSourceDiskEncryptionKeyRawKeyValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -129,6 +138,7 @@ public partial class V1beta1ComputeSnapshotSpecSourceDiskEncryptionKeyRawKeyValu
 }
 
 /// <summary>Immutable. Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSnapshotSpecSourceDiskEncryptionKeyRawKey
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -141,6 +151,7 @@ public partial class V1beta1ComputeSnapshotSpecSourceDiskEncryptionKeyRawKey
 }
 
 /// <summary>Immutable. The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a customer-supplied encryption key.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSnapshotSpecSourceDiskEncryptionKey
 {
     /// <summary>The service account used for the encryption request for the given KMS key. If absent, the Compute Engine Service Agent service account is used.</summary>
@@ -153,6 +164,7 @@ public partial class V1beta1ComputeSnapshotSpecSourceDiskEncryptionKey
 }
 
 /// <summary>A reference to the disk used to create this snapshot.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSnapshotSpecSourceDiskRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeDisk` resource.</summary>
@@ -169,6 +181,7 @@ public partial class V1beta1ComputeSnapshotSpecSourceDiskRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSnapshotSpec
 {
     /// <summary>Immutable. Creates the new snapshot in the snapshot chain labeled with the specified name. The chain name must be 1-63 characters long and comply with RFC1035. This is an uncommon option only for advanced service owners who needs to create separate snapshot chains, for example, for chargeback tracking.  When you describe your snapshot resource, this field is visible only if it has a non-empty value.</summary>
@@ -205,6 +218,7 @@ public partial class V1beta1ComputeSnapshotSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSnapshotStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -229,6 +243,7 @@ public partial class V1beta1ComputeSnapshotStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSnapshotStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -268,8 +283,9 @@ public partial class V1beta1ComputeSnapshotStatus
     public int? StorageBytes { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ComputeSnapshot : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeSnapshotSpec>, IStatus<V1beta1ComputeSnapshotStatus>
 {
     public const string KubeApiVersion = "v1beta1";

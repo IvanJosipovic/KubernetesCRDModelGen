@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.redhatopenshift.azure.com;
 /// <summary>Storage version of v1api20231122.APIServerProfile APIServerProfile represents an API server profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecApiserverProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -21,6 +22,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecApiserverProfile
 }
 
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecClusterProfilePullSecret
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -33,6 +35,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecClusterProfilePullS
 }
 
 /// <summary>Storage version of v1api20231122.ClusterProfile ClusterProfile represents a cluster profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecClusterProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -61,6 +64,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecClusterProfile
 }
 
 /// <summary>Storage version of v1api20231122.IngressProfile IngressProfile represents an ingress profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecIngressProfiles
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -77,6 +81,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecIngressProfiles
 }
 
 /// <summary>DiskEncryptionSetReference: The resource ID of an associated DiskEncryptionSet, if applicable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecMasterProfileDiskEncryptionSetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -97,6 +102,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecMasterProfileDiskEn
 }
 
 /// <summary>SubnetReference: The Azure resource ID of the master subnet.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecMasterProfileSubnetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -117,6 +123,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecMasterProfileSubnet
 }
 
 /// <summary>Storage version of v1api20231122.MasterProfile MasterProfile represents a master profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecMasterProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -141,6 +148,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecMasterProfile
 }
 
 /// <summary>Storage version of v1api20231122.ManagedOutboundIPs ManagedOutboundIPs represents the desired managed outbound IPs for the cluster public load balancer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecNetworkProfileLoadBalancerProfileManagedOutboundIps
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -153,6 +161,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecNetworkProfileLoadB
 }
 
 /// <summary>Storage version of v1api20231122.LoadBalancerProfile LoadBalancerProfile represents the profile of the cluster public load balancer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecNetworkProfileLoadBalancerProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -165,6 +174,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecNetworkProfileLoadB
 }
 
 /// <summary>Storage version of v1api20231122.NetworkProfile NetworkProfile represents a network profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecNetworkProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -193,6 +203,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecNetworkProfile
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecOwner
 {
     /// <summary></summary>
@@ -205,6 +216,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecOwner
 }
 
 /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecServicePrincipalProfileClientIdFromConfig
 {
     /// <summary>Key is the key in the Kubernetes configmap being referenced</summary>
@@ -217,6 +229,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecServicePrincipalPro
 }
 
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecServicePrincipalProfileClientSecret
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -229,6 +242,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecServicePrincipalPro
 }
 
 /// <summary>Storage version of v1api20231122.ServicePrincipalProfile ServicePrincipalProfile represents a service principal profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecServicePrincipalProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -249,6 +263,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecServicePrincipalPro
 }
 
 /// <summary>DiskEncryptionSetReference: The resource ID of an associated DiskEncryptionSet, if applicable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecWorkerProfilesDiskEncryptionSetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -269,6 +284,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecWorkerProfilesDiskE
 }
 
 /// <summary>SubnetReference: The Azure resource ID of the worker subnet.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecWorkerProfilesSubnetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -289,6 +305,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecWorkerProfilesSubne
 }
 
 /// <summary>Storage version of v1api20231122.WorkerProfile WorkerProfile represents a worker profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecWorkerProfiles
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -325,6 +342,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecWorkerProfiles
 }
 
 /// <summary>Storage version of v1api20231122.OpenShiftCluster_Spec</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -381,6 +399,7 @@ public partial class V1api20231122storageOpenShiftClusterSpec
 }
 
 /// <summary>Storage version of v1api20231122.APIServerProfile_STATUS APIServerProfile represents an API server profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterStatusApiserverProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -401,6 +420,7 @@ public partial class V1api20231122storageOpenShiftClusterStatusApiserverProfile
 }
 
 /// <summary>Storage version of v1api20231122.ClusterProfile_STATUS ClusterProfile represents a cluster profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterStatusClusterProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -425,6 +445,7 @@ public partial class V1api20231122storageOpenShiftClusterStatusClusterProfile
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -457,6 +478,7 @@ public partial class V1api20231122storageOpenShiftClusterStatusConditions
 }
 
 /// <summary>Storage version of v1api20231122.ConsoleProfile_STATUS ConsoleProfile represents a console profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterStatusConsoleProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -469,6 +491,7 @@ public partial class V1api20231122storageOpenShiftClusterStatusConsoleProfile
 }
 
 /// <summary>Storage version of v1api20231122.IngressProfile_STATUS IngressProfile represents an ingress profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterStatusIngressProfiles
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -489,6 +512,7 @@ public partial class V1api20231122storageOpenShiftClusterStatusIngressProfiles
 }
 
 /// <summary>Storage version of v1api20231122.MasterProfile_STATUS MasterProfile represents a master profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterStatusMasterProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -513,6 +537,7 @@ public partial class V1api20231122storageOpenShiftClusterStatusMasterProfile
 }
 
 /// <summary>Storage version of v1api20231122.EffectiveOutboundIP_STATUS EffectiveOutboundIP represents an effective outbound IP resource of the cluster public load balancer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterStatusNetworkProfileLoadBalancerProfileEffectiveOutboundIps
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -525,6 +550,7 @@ public partial class V1api20231122storageOpenShiftClusterStatusNetworkProfileLoa
 }
 
 /// <summary>Storage version of v1api20231122.ManagedOutboundIPs_STATUS ManagedOutboundIPs represents the desired managed outbound IPs for the cluster public load balancer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterStatusNetworkProfileLoadBalancerProfileManagedOutboundIps
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -537,6 +563,7 @@ public partial class V1api20231122storageOpenShiftClusterStatusNetworkProfileLoa
 }
 
 /// <summary>Storage version of v1api20231122.LoadBalancerProfile_STATUS LoadBalancerProfile represents the profile of the cluster public load balancer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterStatusNetworkProfileLoadBalancerProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -553,6 +580,7 @@ public partial class V1api20231122storageOpenShiftClusterStatusNetworkProfileLoa
 }
 
 /// <summary>Storage version of v1api20231122.NetworkProfile_STATUS NetworkProfile represents a network profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterStatusNetworkProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -581,6 +609,7 @@ public partial class V1api20231122storageOpenShiftClusterStatusNetworkProfile
 }
 
 /// <summary>Storage version of v1api20231122.ServicePrincipalProfile_STATUS ServicePrincipalProfile represents a service principal profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterStatusServicePrincipalProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -593,6 +622,7 @@ public partial class V1api20231122storageOpenShiftClusterStatusServicePrincipalP
 }
 
 /// <summary>Storage version of v1api20231122.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -625,6 +655,7 @@ public partial class V1api20231122storageOpenShiftClusterStatusSystemData
 }
 
 /// <summary>Storage version of v1api20231122.WorkerProfile_STATUS WorkerProfile represents a worker profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterStatusWorkerProfiles
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -661,6 +692,7 @@ public partial class V1api20231122storageOpenShiftClusterStatusWorkerProfiles
 }
 
 /// <summary>Storage version of v1api20231122.WorkerProfile_STATUS WorkerProfile represents a worker profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterStatusWorkerProfilesStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -697,6 +729,7 @@ public partial class V1api20231122storageOpenShiftClusterStatusWorkerProfilesSta
 }
 
 /// <summary>Storage version of v1api20231122.OpenShiftCluster_STATUS OpenShiftCluster represents an Azure Red Hat OpenShift cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -772,8 +805,9 @@ public partial class V1api20231122storageOpenShiftClusterStatus
     public IList<V1api20231122storageOpenShiftClusterStatusWorkerProfilesStatus>? WorkerProfilesStatus { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Storage version of v1api20231122.OpenShiftCluster Generator information: - Generated from: /redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/openshiftclusters/stable/2023-11-22/redhatopenshift.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RedHatOpenShift/openShiftClusters/{resourceName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1api20231122storageOpenShiftCluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20231122storageOpenShiftClusterSpec>, IStatus<V1api20231122storageOpenShiftClusterStatus>
 {
     public const string KubeApiVersion = "v1api20231122storage";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.artifact.gcp.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegistryRepositorySpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1RegistryRepositorySpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderCleanupPoliciesCondition
 {
     /// <summary>Match versions newer than a duration.</summary>
@@ -47,6 +49,7 @@ public partial class V1beta1RegistryRepositorySpecForProviderCleanupPoliciesCond
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderCleanupPoliciesMostRecentVersions
 {
     /// <summary>Minimum number of versions to keep.</summary>
@@ -59,6 +62,7 @@ public partial class V1beta1RegistryRepositorySpecForProviderCleanupPoliciesMost
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderCleanupPolicies
 {
     /// <summary>Policy action. Possible values are: DELETE, KEEP.</summary>
@@ -79,6 +83,7 @@ public partial class V1beta1RegistryRepositorySpecForProviderCleanupPolicies
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderDockerConfig
 {
     /// <summary>The repository which enabled this flag prevents all tags from being modified, moved or deleted. This does not prevent tags from being created.</summary>
@@ -87,6 +92,7 @@ public partial class V1beta1RegistryRepositorySpecForProviderDockerConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderMavenConfig
 {
     /// <summary>The repository with this flag will allow publishing the same snapshot versions.</summary>
@@ -99,6 +105,7 @@ public partial class V1beta1RegistryRepositorySpecForProviderMavenConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigAptRepositoryPublicRepository
 {
     /// <summary>A common public repository base for Yum. Possible values are: CENTOS, CENTOS_DEBUG, CENTOS_VAULT, CENTOS_STREAM, ROCKY, EPEL.</summary>
@@ -111,6 +118,7 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigAptRepository
 {
     /// <summary>One of the publicly available Yum repositories supported by Artifact Registry. Structure is documented below.</summary>
@@ -119,6 +127,7 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigDockerRepositoryCustomRepository
 {
     /// <summary>Specific uri to the registry, e.g. "https://registry-1.docker.io"</summary>
@@ -127,6 +136,7 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigDockerRepository
 {
     /// <summary>Settings for a remote repository with a custom uri. Structure is documented below.</summary>
@@ -139,6 +149,7 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigMavenRepositoryCustomRepository
 {
     /// <summary>Specific uri to the registry, e.g. "https://registry-1.docker.io"</summary>
@@ -147,6 +158,7 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigMavenRepository
 {
     /// <summary>Settings for a remote repository with a custom uri. Structure is documented below.</summary>
@@ -159,6 +171,7 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigNpmRepositoryCustomRepository
 {
     /// <summary>Specific uri to the registry, e.g. "https://registry-1.docker.io"</summary>
@@ -167,6 +180,7 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigNpmRepository
 {
     /// <summary>Settings for a remote repository with a custom uri. Structure is documented below.</summary>
@@ -179,6 +193,7 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigPythonRepositoryCustomRepository
 {
     /// <summary>Specific uri to the registry, e.g. "https://registry-1.docker.io"</summary>
@@ -187,6 +202,7 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigPythonRepository
 {
     /// <summary>Settings for a remote repository with a custom uri. Structure is documented below.</summary>
@@ -198,6 +214,7 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
     public string? PublicRepository { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentialsPasswordSecretVersionRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -208,6 +225,7 @@ public enum V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigUpstre
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentialsPasswordSecretVersionRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -219,6 +237,7 @@ public enum V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigUpstre
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentialsPasswordSecretVersionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -233,6 +252,7 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
 }
 
 /// <summary>Reference to a SecretVersion in secretmanager to populate passwordSecretVersion.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentialsPasswordSecretVersionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -244,6 +264,7 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
     public V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentialsPasswordSecretVersionRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentialsPasswordSecretVersionSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -254,6 +275,7 @@ public enum V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigUpstre
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentialsPasswordSecretVersionSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -265,6 +287,7 @@ public enum V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigUpstre
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentialsPasswordSecretVersionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +302,7 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
 }
 
 /// <summary>Selector for a SecretVersion in secretmanager to populate passwordSecretVersion.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentialsPasswordSecretVersionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -295,6 +319,7 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentials
 {
     /// <summary>The Secret Manager key version that holds the password to access the remote repository. Must be in the format of projects/{project}/secrets/{secret}/versions/{version}.</summary>
@@ -315,6 +340,7 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigUpstreamCredentials
 {
     /// <summary>Use username and password to access the remote repository. Structure is documented below.</summary>
@@ -323,6 +349,7 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigYumRepositoryPublicRepository
 {
     /// <summary>A common public repository base for Yum. Possible values are: CENTOS, CENTOS_DEBUG, CENTOS_VAULT, CENTOS_STREAM, ROCKY, EPEL.</summary>
@@ -335,6 +362,7 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigYumRepository
 {
     /// <summary>One of the publicly available Yum repositories supported by Artifact Registry. Structure is documented below.</summary>
@@ -343,6 +371,7 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfig
 {
     /// <summary>Specific settings for an Apt remote repository. Structure is documented below.</summary>
@@ -382,6 +411,7 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
     public IList<V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigYumRepository>? YumRepository { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegistryRepositorySpecForProviderVirtualRepositoryConfigUpstreamPoliciesRepositoryRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -392,6 +422,7 @@ public enum V1beta1RegistryRepositorySpecForProviderVirtualRepositoryConfigUpstr
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegistryRepositorySpecForProviderVirtualRepositoryConfigUpstreamPoliciesRepositoryRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -403,6 +434,7 @@ public enum V1beta1RegistryRepositorySpecForProviderVirtualRepositoryConfigUpstr
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderVirtualRepositoryConfigUpstreamPoliciesRepositoryRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -417,6 +449,7 @@ public partial class V1beta1RegistryRepositorySpecForProviderVirtualRepositoryCo
 }
 
 /// <summary>Reference to a RegistryRepository in artifact to populate repository.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderVirtualRepositoryConfigUpstreamPoliciesRepositoryRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -428,6 +461,7 @@ public partial class V1beta1RegistryRepositorySpecForProviderVirtualRepositoryCo
     public V1beta1RegistryRepositorySpecForProviderVirtualRepositoryConfigUpstreamPoliciesRepositoryRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegistryRepositorySpecForProviderVirtualRepositoryConfigUpstreamPoliciesRepositorySelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -438,6 +472,7 @@ public enum V1beta1RegistryRepositorySpecForProviderVirtualRepositoryConfigUpstr
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegistryRepositorySpecForProviderVirtualRepositoryConfigUpstreamPoliciesRepositorySelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -449,6 +484,7 @@ public enum V1beta1RegistryRepositorySpecForProviderVirtualRepositoryConfigUpstr
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderVirtualRepositoryConfigUpstreamPoliciesRepositorySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -463,6 +499,7 @@ public partial class V1beta1RegistryRepositorySpecForProviderVirtualRepositoryCo
 }
 
 /// <summary>Selector for a RegistryRepository in artifact to populate repository.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderVirtualRepositoryConfigUpstreamPoliciesRepositorySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -479,6 +516,7 @@ public partial class V1beta1RegistryRepositorySpecForProviderVirtualRepositoryCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderVirtualRepositoryConfigUpstreamPolicies
 {
     /// <summary>The user-provided ID of the upstream policy.</summary>
@@ -503,6 +541,7 @@ public partial class V1beta1RegistryRepositorySpecForProviderVirtualRepositoryCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderVirtualRepositoryConfig
 {
     /// <summary>Policies that configure the upstream artifacts distributed by the Virtual Repository. Upstream policies cannot be set on a standard repository. Structure is documented below.</summary>
@@ -511,6 +550,7 @@ public partial class V1beta1RegistryRepositorySpecForProviderVirtualRepositoryCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProvider
 {
     /// <summary>Cleanup policies for this repository. Cleanup policies indicate when certain package versions can be automatically deleted. Map keys are policy IDs supplied by users during policy creation. They must unique within a repository and be under 128 characters in length. Structure is documented below.</summary>
@@ -567,6 +607,7 @@ public partial class V1beta1RegistryRepositorySpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderCleanupPoliciesCondition
 {
     /// <summary>Match versions newer than a duration.</summary>
@@ -595,6 +636,7 @@ public partial class V1beta1RegistryRepositorySpecInitProviderCleanupPoliciesCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderCleanupPoliciesMostRecentVersions
 {
     /// <summary>Minimum number of versions to keep.</summary>
@@ -607,6 +649,7 @@ public partial class V1beta1RegistryRepositorySpecInitProviderCleanupPoliciesMos
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderCleanupPolicies
 {
     /// <summary>Policy action. Possible values are: DELETE, KEEP.</summary>
@@ -627,6 +670,7 @@ public partial class V1beta1RegistryRepositorySpecInitProviderCleanupPolicies
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderDockerConfig
 {
     /// <summary>The repository which enabled this flag prevents all tags from being modified, moved or deleted. This does not prevent tags from being created.</summary>
@@ -635,6 +679,7 @@ public partial class V1beta1RegistryRepositorySpecInitProviderDockerConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderMavenConfig
 {
     /// <summary>The repository with this flag will allow publishing the same snapshot versions.</summary>
@@ -647,6 +692,7 @@ public partial class V1beta1RegistryRepositorySpecInitProviderMavenConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigAptRepositoryPublicRepository
 {
     /// <summary>A common public repository base for Yum. Possible values are: CENTOS, CENTOS_DEBUG, CENTOS_VAULT, CENTOS_STREAM, ROCKY, EPEL.</summary>
@@ -659,6 +705,7 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigAptRepository
 {
     /// <summary>One of the publicly available Yum repositories supported by Artifact Registry. Structure is documented below.</summary>
@@ -667,6 +714,7 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigDockerRepositoryCustomRepository
 {
     /// <summary>Specific uri to the registry, e.g. "https://registry-1.docker.io"</summary>
@@ -675,6 +723,7 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigDockerRepository
 {
     /// <summary>Settings for a remote repository with a custom uri. Structure is documented below.</summary>
@@ -687,6 +736,7 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigMavenRepositoryCustomRepository
 {
     /// <summary>Specific uri to the registry, e.g. "https://registry-1.docker.io"</summary>
@@ -695,6 +745,7 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigMavenRepository
 {
     /// <summary>Settings for a remote repository with a custom uri. Structure is documented below.</summary>
@@ -707,6 +758,7 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigNpmRepositoryCustomRepository
 {
     /// <summary>Specific uri to the registry, e.g. "https://registry-1.docker.io"</summary>
@@ -715,6 +767,7 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigNpmRepository
 {
     /// <summary>Settings for a remote repository with a custom uri. Structure is documented below.</summary>
@@ -727,6 +780,7 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigPythonRepositoryCustomRepository
 {
     /// <summary>Specific uri to the registry, e.g. "https://registry-1.docker.io"</summary>
@@ -735,6 +789,7 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigPythonRepository
 {
     /// <summary>Settings for a remote repository with a custom uri. Structure is documented below.</summary>
@@ -746,6 +801,7 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
     public string? PublicRepository { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentialsPasswordSecretVersionRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -756,6 +812,7 @@ public enum V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigUpstr
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentialsPasswordSecretVersionRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -767,6 +824,7 @@ public enum V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigUpstr
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentialsPasswordSecretVersionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -781,6 +839,7 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
 }
 
 /// <summary>Reference to a SecretVersion in secretmanager to populate passwordSecretVersion.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentialsPasswordSecretVersionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -792,6 +851,7 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
     public V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentialsPasswordSecretVersionRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentialsPasswordSecretVersionSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -802,6 +862,7 @@ public enum V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigUpstr
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentialsPasswordSecretVersionSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -813,6 +874,7 @@ public enum V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigUpstr
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentialsPasswordSecretVersionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -827,6 +889,7 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
 }
 
 /// <summary>Selector for a SecretVersion in secretmanager to populate passwordSecretVersion.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentialsPasswordSecretVersionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -843,6 +906,7 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentials
 {
     /// <summary>The Secret Manager key version that holds the password to access the remote repository. Must be in the format of projects/{project}/secrets/{secret}/versions/{version}.</summary>
@@ -863,6 +927,7 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigUpstreamCredentials
 {
     /// <summary>Use username and password to access the remote repository. Structure is documented below.</summary>
@@ -871,6 +936,7 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigYumRepositoryPublicRepository
 {
     /// <summary>A common public repository base for Yum. Possible values are: CENTOS, CENTOS_DEBUG, CENTOS_VAULT, CENTOS_STREAM, ROCKY, EPEL.</summary>
@@ -883,6 +949,7 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigYumRepository
 {
     /// <summary>One of the publicly available Yum repositories supported by Artifact Registry. Structure is documented below.</summary>
@@ -891,6 +958,7 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfig
 {
     /// <summary>Specific settings for an Apt remote repository. Structure is documented below.</summary>
@@ -930,6 +998,7 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
     public IList<V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigYumRepository>? YumRepository { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryConfigUpstreamPoliciesRepositoryRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -940,6 +1009,7 @@ public enum V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryConfigUpst
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryConfigUpstreamPoliciesRepositoryRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -951,6 +1021,7 @@ public enum V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryConfigUpst
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryConfigUpstreamPoliciesRepositoryRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -965,6 +1036,7 @@ public partial class V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryC
 }
 
 /// <summary>Reference to a RegistryRepository in artifact to populate repository.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryConfigUpstreamPoliciesRepositoryRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -976,6 +1048,7 @@ public partial class V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryC
     public V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryConfigUpstreamPoliciesRepositoryRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryConfigUpstreamPoliciesRepositorySelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -986,6 +1059,7 @@ public enum V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryConfigUpst
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryConfigUpstreamPoliciesRepositorySelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -997,6 +1071,7 @@ public enum V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryConfigUpst
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryConfigUpstreamPoliciesRepositorySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1011,6 +1086,7 @@ public partial class V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryC
 }
 
 /// <summary>Selector for a RegistryRepository in artifact to populate repository.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryConfigUpstreamPoliciesRepositorySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1027,6 +1103,7 @@ public partial class V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryConfigUpstreamPolicies
 {
     /// <summary>The user-provided ID of the upstream policy.</summary>
@@ -1051,6 +1128,7 @@ public partial class V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryConfig
 {
     /// <summary>Policies that configure the upstream artifacts distributed by the Virtual Repository. Upstream policies cannot be set on a standard repository. Structure is documented below.</summary>
@@ -1059,6 +1137,7 @@ public partial class V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryC
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProvider
 {
     /// <summary>Cleanup policies for this repository. Cleanup policies indicate when certain package versions can be automatically deleted. Map keys are policy IDs supplied by users during policy creation. They must unique within a repository and be under 128 characters in length. Structure is documented below.</summary>
@@ -1110,6 +1189,7 @@ public partial class V1beta1RegistryRepositorySpecInitProvider
     public IList<V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryConfig>? VirtualRepositoryConfig { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegistryRepositorySpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -1132,6 +1212,7 @@ public enum V1beta1RegistryRepositorySpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegistryRepositorySpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1142,6 +1223,7 @@ public enum V1beta1RegistryRepositorySpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegistryRepositorySpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1153,6 +1235,7 @@ public enum V1beta1RegistryRepositorySpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1167,6 +1250,7 @@ public partial class V1beta1RegistryRepositorySpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1178,6 +1262,7 @@ public partial class V1beta1RegistryRepositorySpecProviderConfigRef
     public V1beta1RegistryRepositorySpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegistryRepositorySpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1188,6 +1273,7 @@ public enum V1beta1RegistryRepositorySpecPublishConnectionDetailsToConfigRefPoli
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegistryRepositorySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1199,6 +1285,7 @@ public enum V1beta1RegistryRepositorySpecPublishConnectionDetailsToConfigRefPoli
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1213,6 +1300,7 @@ public partial class V1beta1RegistryRepositorySpecPublishConnectionDetailsToConf
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1225,6 +1313,7 @@ public partial class V1beta1RegistryRepositorySpecPublishConnectionDetailsToConf
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1241,6 +1330,7 @@ public partial class V1beta1RegistryRepositorySpecPublishConnectionDetailsToMeta
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1257,6 +1347,7 @@ public partial class V1beta1RegistryRepositorySpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1269,6 +1360,7 @@ public partial class V1beta1RegistryRepositorySpecWriteConnectionSecretToRef
 }
 
 /// <summary>RegistryRepositorySpec defines the desired state of RegistryRepository</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1302,6 +1394,7 @@ public partial class V1beta1RegistryRepositorySpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderCleanupPoliciesCondition
 {
     /// <summary>Match versions newer than a duration.</summary>
@@ -1330,6 +1423,7 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderCleanupPoliciesCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderCleanupPoliciesMostRecentVersions
 {
     /// <summary>Minimum number of versions to keep.</summary>
@@ -1342,6 +1436,7 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderCleanupPoliciesMos
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderCleanupPolicies
 {
     /// <summary>Policy action. Possible values are: DELETE, KEEP.</summary>
@@ -1362,6 +1457,7 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderCleanupPolicies
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderDockerConfig
 {
     /// <summary>The repository which enabled this flag prevents all tags from being modified, moved or deleted. This does not prevent tags from being created.</summary>
@@ -1370,6 +1466,7 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderDockerConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderMavenConfig
 {
     /// <summary>The repository with this flag will allow publishing the same snapshot versions.</summary>
@@ -1382,6 +1479,7 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderMavenConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigAptRepositoryPublicRepository
 {
     /// <summary>A common public repository base for Yum. Possible values are: CENTOS, CENTOS_DEBUG, CENTOS_VAULT, CENTOS_STREAM, ROCKY, EPEL.</summary>
@@ -1394,6 +1492,7 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigAptRepository
 {
     /// <summary>One of the publicly available Yum repositories supported by Artifact Registry. Structure is documented below.</summary>
@@ -1402,6 +1501,7 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigDockerRepositoryCustomRepository
 {
     /// <summary>Specific uri to the registry, e.g. "https://registry-1.docker.io"</summary>
@@ -1410,6 +1510,7 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigDockerRepository
 {
     /// <summary>Settings for a remote repository with a custom uri. Structure is documented below.</summary>
@@ -1422,6 +1523,7 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigMavenRepositoryCustomRepository
 {
     /// <summary>Specific uri to the registry, e.g. "https://registry-1.docker.io"</summary>
@@ -1430,6 +1532,7 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigMavenRepository
 {
     /// <summary>Settings for a remote repository with a custom uri. Structure is documented below.</summary>
@@ -1442,6 +1545,7 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigNpmRepositoryCustomRepository
 {
     /// <summary>Specific uri to the registry, e.g. "https://registry-1.docker.io"</summary>
@@ -1450,6 +1554,7 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigNpmRepository
 {
     /// <summary>Settings for a remote repository with a custom uri. Structure is documented below.</summary>
@@ -1462,6 +1567,7 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigPythonRepositoryCustomRepository
 {
     /// <summary>Specific uri to the registry, e.g. "https://registry-1.docker.io"</summary>
@@ -1470,6 +1576,7 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigPythonRepository
 {
     /// <summary>Settings for a remote repository with a custom uri. Structure is documented below.</summary>
@@ -1482,6 +1589,7 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentials
 {
     /// <summary>The Secret Manager key version that holds the password to access the remote repository. Must be in the format of projects/{project}/secrets/{secret}/versions/{version}.</summary>
@@ -1494,6 +1602,7 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigUpstreamCredentials
 {
     /// <summary>Use username and password to access the remote repository. Structure is documented below.</summary>
@@ -1502,6 +1611,7 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigYumRepositoryPublicRepository
 {
     /// <summary>A common public repository base for Yum. Possible values are: CENTOS, CENTOS_DEBUG, CENTOS_VAULT, CENTOS_STREAM, ROCKY, EPEL.</summary>
@@ -1514,6 +1624,7 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigYumRepository
 {
     /// <summary>One of the publicly available Yum repositories supported by Artifact Registry. Structure is documented below.</summary>
@@ -1522,6 +1633,7 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfig
 {
     /// <summary>Specific settings for an Apt remote repository. Structure is documented below.</summary>
@@ -1562,6 +1674,7 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderVirtualRepositoryConfigUpstreamPolicies
 {
     /// <summary>The user-provided ID of the upstream policy.</summary>
@@ -1578,6 +1691,7 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderVirtualRepositoryC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderVirtualRepositoryConfig
 {
     /// <summary>Policies that configure the upstream artifacts distributed by the Virtual Repository. Upstream policies cannot be set on a standard repository. Structure is documented below.</summary>
@@ -1586,6 +1700,7 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderVirtualRepositoryC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProvider
 {
     /// <summary>Cleanup policies for this repository. Cleanup policies indicate when certain package versions can be automatically deleted. Map keys are policy IDs supplied by users during policy creation. They must unique within a repository and be under 128 characters in length. Structure is documented below.</summary>
@@ -1666,6 +1781,7 @@ public partial class V1beta1RegistryRepositoryStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1694,6 +1810,7 @@ public partial class V1beta1RegistryRepositoryStatusConditions
 }
 
 /// <summary>RegistryRepositoryStatus defines the observed state of RegistryRepository.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatus
 {
     /// <summary></summary>
@@ -1709,8 +1826,9 @@ public partial class V1beta1RegistryRepositoryStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>RegistryRepository is the Schema for the RegistryRepositorys API. A repository for storing artifacts</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1RegistryRepository : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RegistryRepositorySpec>, IStatus<V1beta1RegistryRepositoryStatus>
 {
     public const string KubeApiVersion = "v1beta1";

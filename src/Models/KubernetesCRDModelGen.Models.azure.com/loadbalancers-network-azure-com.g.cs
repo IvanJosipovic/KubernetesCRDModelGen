@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
 /// <summary>Reference: Resource ID.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesLoadBalancerFrontendIPConfigurationReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -29,6 +30,7 @@ public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoad
 }
 
 /// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesLoadBalancerFrontendIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -41,6 +43,7 @@ public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoad
 }
 
 /// <summary>Reference: Resource ID.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesSubnetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -61,6 +64,7 @@ public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoad
 }
 
 /// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesSubnet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -73,6 +77,7 @@ public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoad
 }
 
 /// <summary>Reference: Resource ID.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesVirtualNetworkReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -93,6 +98,7 @@ public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoad
 }
 
 /// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesVirtualNetwork
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -105,6 +111,7 @@ public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoad
 }
 
 /// <summary>Storage version of v1api20201101.LoadBalancerBackendAddress Load balancer backend addresses.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddresses
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -133,6 +140,7 @@ public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoad
 }
 
 /// <summary>Storage version of v1api20201101.BackendAddressPool_LoadBalancer_SubResourceEmbedded Pool of backend IP addresses.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecBackendAddressPools
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -149,6 +157,7 @@ public partial class V1api20201101storageLoadBalancerSpecBackendAddressPools
 }
 
 /// <summary>Storage version of v1api20201101.ExtendedLocation ExtendedLocation complex type.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -165,6 +174,7 @@ public partial class V1api20201101storageLoadBalancerSpecExtendedLocation
 }
 
 /// <summary>Reference: Resource ID.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfigurationsPublicIPAddressReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -185,6 +195,7 @@ public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfiguration
 }
 
 /// <summary>Storage version of v1api20201101.PublicIPAddressSpec_LoadBalancer_SubResourceEmbedded Public IP address resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfigurationsPublicIPAddress
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -197,6 +208,7 @@ public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfiguration
 }
 
 /// <summary>Reference: Resource ID.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfigurationsPublicIPPrefixReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -217,6 +229,7 @@ public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfiguration
 }
 
 /// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfigurationsPublicIPPrefix
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -229,6 +242,7 @@ public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfiguration
 }
 
 /// <summary>Reference: Resource ID.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfigurationsSubnetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -249,6 +263,7 @@ public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfiguration
 }
 
 /// <summary>Storage version of v1api20201101.Subnet_LoadBalancer_SubResourceEmbedded Subnet in a virtual network resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfigurationsSubnet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -261,6 +276,7 @@ public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfiguration
 }
 
 /// <summary>Storage version of v1api20201101.FrontendIPConfiguration_LoadBalancer_SubResourceEmbedded Frontend IP address of the load balancer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -301,6 +317,7 @@ public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfiguration
 }
 
 /// <summary>Reference: Resource ID.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecInboundNatPoolsFrontendIPConfigurationReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -321,6 +338,7 @@ public partial class V1api20201101storageLoadBalancerSpecInboundNatPoolsFrontend
 }
 
 /// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecInboundNatPoolsFrontendIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -333,6 +351,7 @@ public partial class V1api20201101storageLoadBalancerSpecInboundNatPoolsFrontend
 }
 
 /// <summary>Storage version of v1api20201101.InboundNatPool Inbound NAT pool of the load balancer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecInboundNatPools
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -377,6 +396,7 @@ public partial class V1api20201101storageLoadBalancerSpecInboundNatPools
 }
 
 /// <summary>Reference: Resource ID.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecInboundNatRulesFrontendIPConfigurationReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -397,6 +417,7 @@ public partial class V1api20201101storageLoadBalancerSpecInboundNatRulesFrontend
 }
 
 /// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecInboundNatRulesFrontendIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -409,6 +430,7 @@ public partial class V1api20201101storageLoadBalancerSpecInboundNatRulesFrontend
 }
 
 /// <summary>Storage version of v1api20201101.InboundNatRule_LoadBalancer_SubResourceEmbedded Inbound NAT rule of the load balancer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecInboundNatRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -449,6 +471,7 @@ public partial class V1api20201101storageLoadBalancerSpecInboundNatRules
 }
 
 /// <summary>Reference: Resource ID.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesBackendAddressPoolReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -469,6 +492,7 @@ public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesBacke
 }
 
 /// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesBackendAddressPool
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -481,6 +505,7 @@ public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesBacke
 }
 
 /// <summary>Reference: Resource ID.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesFrontendIPConfigurationReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -501,6 +526,7 @@ public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesFront
 }
 
 /// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesFrontendIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -513,6 +539,7 @@ public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesFront
 }
 
 /// <summary>Reference: Resource ID.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesProbeReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -533,6 +560,7 @@ public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesProbe
 }
 
 /// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesProbe
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -545,6 +573,7 @@ public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesProbe
 }
 
 /// <summary>Storage version of v1api20201101.LoadBalancingRule A load balancing rule for a load balancer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -601,6 +630,7 @@ public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRules
 }
 
 /// <summary>Reference: Resource ID.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecOutboundRulesBackendAddressPoolReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -621,6 +651,7 @@ public partial class V1api20201101storageLoadBalancerSpecOutboundRulesBackendAdd
 }
 
 /// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecOutboundRulesBackendAddressPool
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -633,6 +664,7 @@ public partial class V1api20201101storageLoadBalancerSpecOutboundRulesBackendAdd
 }
 
 /// <summary>Reference: Resource ID.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecOutboundRulesFrontendIPConfigurationsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -653,6 +685,7 @@ public partial class V1api20201101storageLoadBalancerSpecOutboundRulesFrontendIP
 }
 
 /// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecOutboundRulesFrontendIPConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -665,6 +698,7 @@ public partial class V1api20201101storageLoadBalancerSpecOutboundRulesFrontendIP
 }
 
 /// <summary>Storage version of v1api20201101.OutboundRule Outbound rule of the load balancer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecOutboundRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -701,6 +735,7 @@ public partial class V1api20201101storageLoadBalancerSpecOutboundRules
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecOwner
 {
     /// <summary></summary>
@@ -713,6 +748,7 @@ public partial class V1api20201101storageLoadBalancerSpecOwner
 }
 
 /// <summary>Storage version of v1api20201101.Probe A load balancer probe.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecProbes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -745,6 +781,7 @@ public partial class V1api20201101storageLoadBalancerSpecProbes
 }
 
 /// <summary>Storage version of v1api20201101.LoadBalancerSku SKU of a load balancer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -761,6 +798,7 @@ public partial class V1api20201101storageLoadBalancerSpecSku
 }
 
 /// <summary>Storage version of v1api20201101.LoadBalancer_Spec</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -825,6 +863,7 @@ public partial class V1api20201101storageLoadBalancerSpec
 }
 
 /// <summary>Storage version of v1api20201101.NetworkInterfaceIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded IPConfiguration in a network interface.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsBackendIPConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -837,6 +876,7 @@ public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsBa
 }
 
 /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesLoadBalancerFrontendIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -849,6 +889,7 @@ public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLo
 }
 
 /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesNetworkInterfaceIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -861,6 +902,7 @@ public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLo
 }
 
 /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesSubnet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -873,6 +915,7 @@ public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLo
 }
 
 /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesVirtualNetwork
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -885,6 +928,7 @@ public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLo
 }
 
 /// <summary>Storage version of v1api20201101.LoadBalancerBackendAddress_STATUS Load balancer backend addresses.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddresses
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -917,6 +961,7 @@ public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLo
 }
 
 /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLoadBalancingRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -929,6 +974,7 @@ public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLo
 }
 
 /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsOutboundRule
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -941,6 +987,7 @@ public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsOu
 }
 
 /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsOutboundRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -953,6 +1000,7 @@ public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsOu
 }
 
 /// <summary>Storage version of v1api20201101.BackendAddressPool_STATUS_LoadBalancer_SubResourceEmbedded Pool of backend IP addresses.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusBackendAddressPools
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1001,6 +1049,7 @@ public partial class V1api20201101storageLoadBalancerStatusBackendAddressPools
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -1033,6 +1082,7 @@ public partial class V1api20201101storageLoadBalancerStatusConditions
 }
 
 /// <summary>Storage version of v1api20201101.ExtendedLocation_STATUS ExtendedLocation complex type.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1049,6 +1099,7 @@ public partial class V1api20201101storageLoadBalancerStatusExtendedLocation
 }
 
 /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurationsInboundNatPools
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1061,6 +1112,7 @@ public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurati
 }
 
 /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurationsInboundNatRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1073,6 +1125,7 @@ public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurati
 }
 
 /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurationsLoadBalancingRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1085,6 +1138,7 @@ public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurati
 }
 
 /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurationsOutboundRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1097,6 +1151,7 @@ public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurati
 }
 
 /// <summary>Storage version of v1api20201101.PublicIPAddress_STATUS_LoadBalancer_SubResourceEmbedded Public IP address resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurationsPublicIPAddress
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1109,6 +1164,7 @@ public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurati
 }
 
 /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurationsPublicIPPrefix
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1121,6 +1177,7 @@ public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurati
 }
 
 /// <summary>Storage version of v1api20201101.Subnet_STATUS_LoadBalancer_SubResourceEmbedded Subnet in a virtual network resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurationsSubnet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1133,6 +1190,7 @@ public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurati
 }
 
 /// <summary>Storage version of v1api20201101.FrontendIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded Frontend IP address of the load balancer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1205,6 +1263,7 @@ public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurati
 }
 
 /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusInboundNatPoolsFrontendIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1217,6 +1276,7 @@ public partial class V1api20201101storageLoadBalancerStatusInboundNatPoolsFronte
 }
 
 /// <summary>Storage version of v1api20201101.InboundNatPool_STATUS Inbound NAT pool of the load balancer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusInboundNatPools
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1277,6 +1337,7 @@ public partial class V1api20201101storageLoadBalancerStatusInboundNatPools
 }
 
 /// <summary>Storage version of v1api20201101.NetworkInterfaceIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded IPConfiguration in a network interface.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusInboundNatRulesBackendIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1289,6 +1350,7 @@ public partial class V1api20201101storageLoadBalancerStatusInboundNatRulesBacken
 }
 
 /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusInboundNatRulesFrontendIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1301,6 +1363,7 @@ public partial class V1api20201101storageLoadBalancerStatusInboundNatRulesFronte
 }
 
 /// <summary>Storage version of v1api20201101.InboundNatRule_STATUS_LoadBalancer_SubResourceEmbedded Inbound NAT rule of the load balancer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusInboundNatRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1361,6 +1424,7 @@ public partial class V1api20201101storageLoadBalancerStatusInboundNatRules
 }
 
 /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusLoadBalancingRulesBackendAddressPool
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1373,6 +1437,7 @@ public partial class V1api20201101storageLoadBalancerStatusLoadBalancingRulesBac
 }
 
 /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusLoadBalancingRulesFrontendIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1385,6 +1450,7 @@ public partial class V1api20201101storageLoadBalancerStatusLoadBalancingRulesFro
 }
 
 /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusLoadBalancingRulesProbe
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1397,6 +1463,7 @@ public partial class V1api20201101storageLoadBalancerStatusLoadBalancingRulesPro
 }
 
 /// <summary>Storage version of v1api20201101.LoadBalancingRule_STATUS A load balancing rule for a load balancer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusLoadBalancingRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1469,6 +1536,7 @@ public partial class V1api20201101storageLoadBalancerStatusLoadBalancingRules
 }
 
 /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusOutboundRulesBackendAddressPool
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1481,6 +1549,7 @@ public partial class V1api20201101storageLoadBalancerStatusOutboundRulesBackendA
 }
 
 /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusOutboundRulesFrontendIPConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1493,6 +1562,7 @@ public partial class V1api20201101storageLoadBalancerStatusOutboundRulesFrontend
 }
 
 /// <summary>Storage version of v1api20201101.OutboundRule_STATUS Outbound rule of the load balancer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusOutboundRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1545,6 +1615,7 @@ public partial class V1api20201101storageLoadBalancerStatusOutboundRules
 }
 
 /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusProbesLoadBalancingRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1557,6 +1628,7 @@ public partial class V1api20201101storageLoadBalancerStatusProbesLoadBalancingRu
 }
 
 /// <summary>Storage version of v1api20201101.Probe_STATUS A load balancer probe.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusProbes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1609,6 +1681,7 @@ public partial class V1api20201101storageLoadBalancerStatusProbes
 }
 
 /// <summary>Storage version of v1api20201101.LoadBalancerSku_STATUS SKU of a load balancer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1625,6 +1698,7 @@ public partial class V1api20201101storageLoadBalancerStatusSku
 }
 
 /// <summary>Storage version of v1api20201101.LoadBalancer_STATUS LoadBalancer resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageLoadBalancerStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1704,8 +1778,9 @@ public partial class V1api20201101storageLoadBalancerStatus
     public string? Type { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Storage version of v1api20201101.LoadBalancer Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/loadBalancer.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1api20201101storageLoadBalancer : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20201101storageLoadBalancerSpec>, IStatus<V1api20201101storageLoadBalancerStatus>
 {
     public const string KubeApiVersion = "v1api20201101storage";

@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kms.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1KMSKeyRingImportJobSpec
 {
     /// <summary>Immutable. It must be unique within a KeyRing and match the regular expression [a-zA-Z0-9_-]{1,63}.</summary>
@@ -33,6 +34,7 @@ public partial class V1alpha1KMSKeyRingImportJobSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1KMSKeyRingImportJobStatusAttestation
 {
     /// <summary>The attestation data provided by the HSM when the key operation was performed. A base64-encoded string.</summary>
@@ -45,6 +47,7 @@ public partial class V1alpha1KMSKeyRingImportJobStatusAttestation
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1KMSKeyRingImportJobStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -69,6 +72,7 @@ public partial class V1alpha1KMSKeyRingImportJobStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1KMSKeyRingImportJobStatusPublicKey
 {
     /// <summary>The public key, encoded in PEM format. For more information, see the RFC 7468 sections for General Considerations and Textual Encoding of Subject Public Key Info.</summary>
@@ -77,6 +81,7 @@ public partial class V1alpha1KMSKeyRingImportJobStatusPublicKey
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1KMSKeyRingImportJobStatus
 {
     /// <summary>Statement that was generated and signed by the key creator (for example, an HSM) at key creation time. Use this statement to verify attributes of the key as stored on the HSM, independently of Google. Only present if the chosen ImportMethod is one with a protection level of HSM.</summary>
@@ -108,8 +113,9 @@ public partial class V1alpha1KMSKeyRingImportJobStatus
     public string? State { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1KMSKeyRingImportJob : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1KMSKeyRingImportJobSpec>, IStatus<V1alpha1KMSKeyRingImportJobStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

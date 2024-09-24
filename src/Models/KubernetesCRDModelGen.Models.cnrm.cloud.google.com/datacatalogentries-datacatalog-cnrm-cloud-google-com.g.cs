@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datacatalog.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecGcsFilesetSpecSampleGcsFileSpecs
 {
     /// <summary>The full file path.</summary>
@@ -21,6 +22,7 @@ public partial class V1alpha1DataCatalogEntrySpecGcsFilesetSpecSampleGcsFileSpec
 }
 
 /// <summary>Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecGcsFilesetSpec
 {
     /// <summary>Patterns to identify a set of files in Google Cloud Storage. See [Cloud Storage documentation](https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames) for more information. Note that bucket wildcards are currently not supported. Examples of valid filePatterns:  * gs://bucket_name/dir/*: matches all files within bucket_name/dir directory. * gs://bucket_name/dir/**: matches all files in bucket_name/dir spanning all subdirectories. * gs://bucket_name/file*: matches files prefixed by file in bucket_name * gs://bucket_name/??.txt: matches files with two characters followed by .txt in bucket_name * gs://bucket_name/[aeiou].txt: matches files that contain a single vowel character followed by .txt in bucket_name * gs://bucket_name/[a-m].txt: matches files that contain a, b, ... or m followed by .txt in bucket_name * gs://bucket_name/a/*/b: matches all files in bucket_name that match a/*/b pattern, such as a/c/b, a/d/b * gs://another_bucket/a.txt: matches gs://another_bucket/a.txt.</summary>
@@ -33,6 +35,7 @@ public partial class V1alpha1DataCatalogEntrySpecGcsFilesetSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpec
 {
     /// <summary>Entry description, which can consist of several sentences or paragraphs that describe entry contents.</summary>
@@ -81,6 +84,7 @@ public partial class V1alpha1DataCatalogEntrySpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntryStatusBigqueryDateShardedSpec
 {
     /// <summary>The Data Catalog resource name of the dataset entry the current table belongs to, for example, projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}.</summary>
@@ -97,6 +101,7 @@ public partial class V1alpha1DataCatalogEntryStatusBigqueryDateShardedSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntryStatusBigqueryTableSpecTableSpec
 {
     /// <summary>If the table is a dated shard, i.e., with name pattern [prefix]YYYYMMDD, groupedEntry is the Data Catalog resource name of the date sharded grouped entry, for example, projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}. Otherwise, groupedEntry is empty.</summary>
@@ -105,6 +110,7 @@ public partial class V1alpha1DataCatalogEntryStatusBigqueryTableSpecTableSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntryStatusBigqueryTableSpecViewSpec
 {
     /// <summary>The query that defines the table view.</summary>
@@ -113,6 +119,7 @@ public partial class V1alpha1DataCatalogEntryStatusBigqueryTableSpecViewSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntryStatusBigqueryTableSpec
 {
     /// <summary>The table source type.</summary>
@@ -129,6 +136,7 @@ public partial class V1alpha1DataCatalogEntryStatusBigqueryTableSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntryStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -153,6 +161,7 @@ public partial class V1alpha1DataCatalogEntryStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntryStatus
 {
     /// <summary>Specification for a group of BigQuery tables with name pattern [prefix]YYYYMMDD. Context: https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.</summary>
@@ -180,8 +189,9 @@ public partial class V1alpha1DataCatalogEntryStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1DataCatalogEntry : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DataCatalogEntrySpec>, IStatus<V1alpha1DataCatalogEntryStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

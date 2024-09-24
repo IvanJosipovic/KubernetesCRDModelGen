@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary>A reference to the ComputeBackendService resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetSSLProxySpecBackendServiceRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeBackendService` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1ComputeTargetSSLProxySpecBackendServiceRef
 }
 
 /// <summary>A reference to the CertificateMap resource uri that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. Accepted format is '//certificatemanager.googleapis.com/projects/{project}/locations/{location}/certificateMaps/{resourceName}'.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetSSLProxySpecCertificateMapRef
 {
     /// <summary>Allowed value: The `name` field of a `CertificateManagerCertificateMap` resource.</summary>
@@ -41,6 +43,7 @@ public partial class V1beta1ComputeTargetSSLProxySpecCertificateMapRef
 }
 
 /// <summary>A list of ComputeSSLCertificate resources that are used to authenticate connections between users and the load balancer. Currently, exactly one SSL certificate must be specified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetSSLProxySpecSslCertificates
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSSLCertificate` resource.</summary>
@@ -57,6 +60,7 @@ public partial class V1beta1ComputeTargetSSLProxySpecSslCertificates
 }
 
 /// <summary>A reference to the ComputeSSLPolicy resource that will be associated with the TargetSslProxy resource. If not set, the ComputeTargetSSLProxy resource will not have any SSL policy configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetSSLProxySpecSslPolicyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSSLPolicy` resource.</summary>
@@ -73,6 +77,7 @@ public partial class V1beta1ComputeTargetSSLProxySpecSslPolicyRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetSSLProxySpec
 {
     /// <summary>A reference to the ComputeBackendService resource.</summary>
@@ -105,6 +110,7 @@ public partial class V1beta1ComputeTargetSSLProxySpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetSSLProxyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -129,6 +135,7 @@ public partial class V1beta1ComputeTargetSSLProxyStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetSSLProxyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -152,8 +159,9 @@ public partial class V1beta1ComputeTargetSSLProxyStatus
     public string? SelfLink { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ComputeTargetSSLProxy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeTargetSSLProxySpec>, IStatus<V1beta1ComputeTargetSSLProxyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

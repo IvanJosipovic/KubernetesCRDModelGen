@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataproc.gcp.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1ClusterSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigAutoscalingConfig
 {
     /// <summary>The autoscaling policy used by the cluster.</summary>
@@ -27,6 +29,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigAutoscalingConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAccelerators
 {
     /// <summary>The number of the accelerator cards of this type exposed to this instance. Often restricted to one of 1, 2, 4, or 8.</summary>
@@ -39,6 +42,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigAuxiliaryNodeGrou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigDiskConfig
 {
     /// <summary>Size of the primary disk attached to each node, specified in GB. The primary disk contains the boot volume and system libraries, and the smallest allowed disk size is 10GB. GCP will default to a predetermined computed value if not set (currently 500GB). Note: If SSDs are not attached, it also contains the HDFS data blocks and Hadoop working directories.</summary>
@@ -59,6 +63,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigAuxiliaryNodeGrou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfig
 {
     /// <summary>The Compute Engine accelerator configuration for these instances. Can be specified multiple times.</summary>
@@ -83,6 +88,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigAuxiliaryNodeGrou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigAuxiliaryNodeGroupsNodeGroup
 {
     /// <summary>The node group instance group configuration.</summary>
@@ -95,6 +101,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigAuxiliaryNodeGrou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigAuxiliaryNodeGroups
 {
     /// <summary>Node group configuration.</summary>
@@ -107,6 +114,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigAuxiliaryNodeGrou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigDataprocMetricConfigMetrics
 {
     /// <summary>One or more [available OSS metrics] (https://cloud.google.com/dataproc/docs/guides/monitoring#available_oss_metrics) to collect for the metric course.</summary>
@@ -119,6 +127,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigDataprocMetricCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigDataprocMetricConfig
 {
     /// <summary>Metrics sources to enable.</summary>
@@ -127,6 +136,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigDataprocMetricCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigEncryptionConfig
 {
     /// <summary>The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.</summary>
@@ -135,6 +145,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigEncryptionConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigEndpointConfig
 {
     /// <summary>The flag to enable http access to specific ports on the cluster from external sources (aka Component Gateway). Defaults to false.</summary>
@@ -143,6 +154,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigEndpointConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigNodeGroupAffinity
 {
     /// <summary>The URI of a sole-tenant node group resource that the cluster will be created on.</summary>
@@ -151,6 +163,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigN
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigReservationAffinity
 {
     /// <summary>Corresponds to the type of reservation consumption.</summary>
@@ -166,6 +179,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigR
     public IList<string>? Values { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigServiceAccountRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -176,6 +190,7 @@ public enum V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigServiceAcc
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigServiceAccountRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -187,6 +202,7 @@ public enum V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigServiceAcc
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigServiceAccountRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -201,6 +217,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigS
 }
 
 /// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigServiceAccountRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -212,6 +229,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigS
     public V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigServiceAccountRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigServiceAccountSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -222,6 +240,7 @@ public enum V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigServiceAcc
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigServiceAccountSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -233,6 +252,7 @@ public enum V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigServiceAcc
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigServiceAccountSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -247,6 +267,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigS
 }
 
 /// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigServiceAccountSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -263,6 +284,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigShieldedInstanceConfig
 {
     /// <summary>Defines whether instances have integrity monitoring enabled.</summary>
@@ -279,6 +301,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfig
 {
     /// <summary>By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. If set to true, all instances in the cluster will only have internal IP addresses. Note: Private Google Access (also known as privateIpGoogleAccess) must be enabled on the subnetwork that the cluster will be launched in.</summary>
@@ -335,6 +358,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigInitializationAction
 {
     /// <summary>The script to be executed during initialization of the cluster. The script must be a GCS file with a gs:// prefix.</summary>
@@ -347,6 +371,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigInitializationAct
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigLifecycleConfig
 {
     /// <summary>The time when cluster will be auto-deleted. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".</summary>
@@ -359,6 +384,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigLifecycleConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigMasterConfigAccelerators
 {
     /// <summary>The number of the accelerator cards of this type exposed to this instance. Often restricted to one of 1, 2, 4, or 8.</summary>
@@ -371,6 +397,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigMasterConfigAccel
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigMasterConfigDiskConfig
 {
     /// <summary>Size of the primary disk attached to each node, specified in GB. The primary disk contains the boot volume and system libraries, and the smallest allowed disk size is 10GB. GCP will default to a predetermined computed value if not set (currently 500GB). Note: If SSDs are not attached, it also contains the HDFS data blocks and Hadoop working directories.</summary>
@@ -391,6 +418,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigMasterConfigDiskC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigMasterConfig
 {
     /// <summary>The Compute Engine accelerator (GPU) configuration for these instances. Can be specified multiple times.</summary>
@@ -419,6 +447,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigMasterConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigMetastoreConfig
 {
     /// <summary>Resource name of an existing Dataproc Metastore service.</summary>
@@ -427,6 +456,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigMetastoreConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigPreemptibleWorkerConfigDiskConfig
 {
     /// <summary>Size of the primary disk attached to each node, specified in GB. The primary disk contains the boot volume and system libraries, and the smallest allowed disk size is 10GB. GCP will default to a predetermined computed value if not set (currently 500GB). Note: If SSDs are not attached, it also contains the HDFS data blocks and Hadoop working directories.</summary>
@@ -447,6 +477,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigPreemptibleWorker
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionList
 {
     /// <summary>Full machine-type names, e.g. "n1-standard-16".</summary>
@@ -459,6 +490,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigPreemptibleWorker
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicy
 {
     /// <summary>List of instance selection options that the group will use when creating new VMs.</summary>
@@ -467,6 +499,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigPreemptibleWorker
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigPreemptibleWorkerConfig
 {
     /// <summary>Disk Config</summary>
@@ -487,6 +520,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigPreemptibleWorker
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigSecurityConfigKerberosConfig
 {
     /// <summary>The admin server (IP or hostname) for the remote trusted realm in a cross realm trust relationship.</summary>
@@ -551,6 +585,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigSecurityConfigKer
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigSecurityConfig
 {
     /// <summary>Kerberos Configuration</summary>
@@ -559,6 +594,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigSecurityConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigSoftwareConfig
 {
     /// <summary>The Cloud Dataproc image version to use for the cluster - this controls the sets of software versions installed onto the nodes when you create clusters. If not specified, defaults to the latest version. For a list of valid versions see Cloud Dataproc versions</summary>
@@ -575,6 +611,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigSoftwareConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigWorkerConfigAccelerators
 {
     /// <summary>The number of the accelerator cards of this type exposed to this instance. Often restricted to one of 1, 2, 4, or 8.</summary>
@@ -587,6 +624,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigWorkerConfigAccel
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigWorkerConfigDiskConfig
 {
     /// <summary>Size of the primary disk attached to each node, specified in GB. The primary disk contains the boot volume and system libraries, and the smallest allowed disk size is 10GB. GCP will default to a predetermined computed value if not set (currently 500GB). Note: If SSDs are not attached, it also contains the HDFS data blocks and Hadoop working directories.</summary>
@@ -607,6 +645,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigWorkerConfigDiskC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigWorkerConfig
 {
     /// <summary>The Compute Engine accelerator configuration for these instances. Can be specified multiple times.</summary>
@@ -639,6 +678,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigWorkerConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfig
 {
     /// <summary>The autoscaling policy config associated with the cluster. Note that once set, if autoscaling_config is the only field set in cluster_config, it can only be removed by setting policy_uri = "", rather than removing the whole block. Structure defined below.</summary>
@@ -707,6 +747,7 @@ public partial class V1beta1ClusterSpecForProviderClusterConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigAuxiliaryServicesConfigMetastoreConfig
 {
     /// <summary>Resource name of an existing Dataproc Metastore service.</summary>
@@ -715,6 +756,7 @@ public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigAuxiliaryS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigAuxiliaryServicesConfigSparkHistoryServerConfig
 {
     /// <summary>Resource name of an existing Dataproc Cluster to act as a Spark History Server for the workload.</summary>
@@ -723,6 +765,7 @@ public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigAuxiliaryS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigAuxiliaryServicesConfig
 {
     /// <summary>The config setting for metastore service with the cluster. Structure defined below.</summary>
@@ -735,6 +778,7 @@ public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigAuxiliaryS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigAutoscaling
 {
     /// <summary>The maximum number of nodes in the node pool. Must be &gt;= minNodeCount, and must be &gt; 0.</summary>
@@ -747,6 +791,7 @@ public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigKubernetes
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfig
 {
     /// <summary>The number of local SSD disks to attach to the node, which is limited by the maximum number of disks allowable per zone.</summary>
@@ -771,6 +816,7 @@ public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigKubernetes
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfig
 {
     /// <summary>The autoscaler configuration for this node pool. The autoscaler is enabled only when a valid configuration is present.</summary>
@@ -787,6 +833,7 @@ public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigKubernetes
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget
 {
     /// <summary>The target GKE node pool.</summary>
@@ -803,6 +850,7 @@ public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigKubernetes
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfig
 {
     /// <summary>A target GKE cluster to deploy to. It must be in the same project and region as the Dataproc cluster (the GKE cluster can be zonal or regional)</summary>
@@ -815,6 +863,7 @@ public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigKubernetes
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigKubernetesClusterConfigKubernetesSoftwareConfig
 {
     /// <summary>The components that should be installed in this Dataproc cluster. The key must be a string from the KubernetesComponent enumeration. The value is the version of the software to be installed. At least one entry must be specified.</summary>
@@ -827,6 +876,7 @@ public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigKubernetes
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigKubernetesClusterConfig
 {
     /// <summary>The configuration for running the Dataproc cluster on GKE.</summary>
@@ -843,6 +893,7 @@ public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigKubernetes
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVirtualClusterConfig
 {
     /// <summary>Configuration of auxiliary services used by this cluster. Structure defined below.</summary>
@@ -859,6 +910,7 @@ public partial class V1beta1ClusterSpecForProviderVirtualClusterConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProvider
 {
     /// <summary>Allows you to configure various aspects of the cluster. Structure defined below.</summary>
@@ -891,6 +943,7 @@ public partial class V1beta1ClusterSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigAutoscalingConfig
 {
     /// <summary>The autoscaling policy used by the cluster.</summary>
@@ -899,6 +952,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigAutoscalingConfi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAccelerators
 {
     /// <summary>The number of the accelerator cards of this type exposed to this instance. Often restricted to one of 1, 2, 4, or 8.</summary>
@@ -911,6 +965,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigAuxiliaryNodeGro
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigDiskConfig
 {
     /// <summary>Size of the primary disk attached to each node, specified in GB. The primary disk contains the boot volume and system libraries, and the smallest allowed disk size is 10GB. GCP will default to a predetermined computed value if not set (currently 500GB). Note: If SSDs are not attached, it also contains the HDFS data blocks and Hadoop working directories.</summary>
@@ -931,6 +986,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigAuxiliaryNodeGro
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfig
 {
     /// <summary>The Compute Engine accelerator configuration for these instances. Can be specified multiple times.</summary>
@@ -955,6 +1011,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigAuxiliaryNodeGro
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigAuxiliaryNodeGroupsNodeGroup
 {
     /// <summary>The node group instance group configuration.</summary>
@@ -967,6 +1024,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigAuxiliaryNodeGro
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigAuxiliaryNodeGroups
 {
     /// <summary>Node group configuration.</summary>
@@ -979,6 +1037,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigAuxiliaryNodeGro
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigDataprocMetricConfigMetrics
 {
     /// <summary>One or more [available OSS metrics] (https://cloud.google.com/dataproc/docs/guides/monitoring#available_oss_metrics) to collect for the metric course.</summary>
@@ -991,6 +1050,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigDataprocMetricCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigDataprocMetricConfig
 {
     /// <summary>Metrics sources to enable.</summary>
@@ -999,6 +1059,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigDataprocMetricCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigEncryptionConfig
 {
     /// <summary>The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.</summary>
@@ -1007,6 +1068,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigEncryptionConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigEndpointConfig
 {
     /// <summary>The flag to enable http access to specific ports on the cluster from external sources (aka Component Gateway). Defaults to false.</summary>
@@ -1015,6 +1077,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigEndpointConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfigNodeGroupAffinity
 {
     /// <summary>The URI of a sole-tenant node group resource that the cluster will be created on.</summary>
@@ -1023,6 +1086,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfigReservationAffinity
 {
     /// <summary>Corresponds to the type of reservation consumption.</summary>
@@ -1038,6 +1102,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfig
     public IList<string>? Values { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfigServiceAccountRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1048,6 +1113,7 @@ public enum V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfigServiceAc
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfigServiceAccountRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1059,6 +1125,7 @@ public enum V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfigServiceAc
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfigServiceAccountRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1073,6 +1140,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfig
 }
 
 /// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfigServiceAccountRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1084,6 +1152,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfig
     public V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfigServiceAccountRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfigServiceAccountSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1094,6 +1163,7 @@ public enum V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfigServiceAc
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfigServiceAccountSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1105,6 +1175,7 @@ public enum V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfigServiceAc
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfigServiceAccountSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1119,6 +1190,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfig
 }
 
 /// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfigServiceAccountSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1135,6 +1207,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfigShieldedInstanceConfig
 {
     /// <summary>Defines whether instances have integrity monitoring enabled.</summary>
@@ -1151,6 +1224,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfig
 {
     /// <summary>By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. If set to true, all instances in the cluster will only have internal IP addresses. Note: Private Google Access (also known as privateIpGoogleAccess) must be enabled on the subnetwork that the cluster will be launched in.</summary>
@@ -1207,6 +1281,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigInitializationAction
 {
     /// <summary>The script to be executed during initialization of the cluster. The script must be a GCS file with a gs:// prefix.</summary>
@@ -1219,6 +1294,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigInitializationAc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigLifecycleConfig
 {
     /// <summary>The time when cluster will be auto-deleted. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".</summary>
@@ -1231,6 +1307,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigLifecycleConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigMasterConfigAccelerators
 {
     /// <summary>The number of the accelerator cards of this type exposed to this instance. Often restricted to one of 1, 2, 4, or 8.</summary>
@@ -1243,6 +1320,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigMasterConfigAcce
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigMasterConfigDiskConfig
 {
     /// <summary>Size of the primary disk attached to each node, specified in GB. The primary disk contains the boot volume and system libraries, and the smallest allowed disk size is 10GB. GCP will default to a predetermined computed value if not set (currently 500GB). Note: If SSDs are not attached, it also contains the HDFS data blocks and Hadoop working directories.</summary>
@@ -1263,6 +1341,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigMasterConfigDisk
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigMasterConfig
 {
     /// <summary>The Compute Engine accelerator (GPU) configuration for these instances. Can be specified multiple times.</summary>
@@ -1291,6 +1370,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigMasterConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigMetastoreConfig
 {
     /// <summary>Resource name of an existing Dataproc Metastore service.</summary>
@@ -1299,6 +1379,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigMetastoreConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigPreemptibleWorkerConfigDiskConfig
 {
     /// <summary>Size of the primary disk attached to each node, specified in GB. The primary disk contains the boot volume and system libraries, and the smallest allowed disk size is 10GB. GCP will default to a predetermined computed value if not set (currently 500GB). Note: If SSDs are not attached, it also contains the HDFS data blocks and Hadoop working directories.</summary>
@@ -1319,6 +1400,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigPreemptibleWorke
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionList
 {
     /// <summary>Full machine-type names, e.g. "n1-standard-16".</summary>
@@ -1331,6 +1413,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigPreemptibleWorke
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicy
 {
     /// <summary>List of instance selection options that the group will use when creating new VMs.</summary>
@@ -1339,6 +1422,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigPreemptibleWorke
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigPreemptibleWorkerConfig
 {
     /// <summary>Disk Config</summary>
@@ -1359,6 +1443,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigPreemptibleWorke
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigSecurityConfigKerberosConfig
 {
     /// <summary>The admin server (IP or hostname) for the remote trusted realm in a cross realm trust relationship.</summary>
@@ -1423,6 +1508,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigSecurityConfigKe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigSecurityConfig
 {
     /// <summary>Kerberos Configuration</summary>
@@ -1431,6 +1517,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigSecurityConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigSoftwareConfig
 {
     /// <summary>The Cloud Dataproc image version to use for the cluster - this controls the sets of software versions installed onto the nodes when you create clusters. If not specified, defaults to the latest version. For a list of valid versions see Cloud Dataproc versions</summary>
@@ -1447,6 +1534,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigSoftwareConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigWorkerConfigAccelerators
 {
     /// <summary>The number of the accelerator cards of this type exposed to this instance. Often restricted to one of 1, 2, 4, or 8.</summary>
@@ -1459,6 +1547,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigWorkerConfigAcce
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigWorkerConfigDiskConfig
 {
     /// <summary>Size of the primary disk attached to each node, specified in GB. The primary disk contains the boot volume and system libraries, and the smallest allowed disk size is 10GB. GCP will default to a predetermined computed value if not set (currently 500GB). Note: If SSDs are not attached, it also contains the HDFS data blocks and Hadoop working directories.</summary>
@@ -1479,6 +1568,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigWorkerConfigDisk
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigWorkerConfig
 {
     /// <summary>The Compute Engine accelerator configuration for these instances. Can be specified multiple times.</summary>
@@ -1511,6 +1601,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigWorkerConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfig
 {
     /// <summary>The autoscaling policy config associated with the cluster. Note that once set, if autoscaling_config is the only field set in cluster_config, it can only be removed by setting policy_uri = "", rather than removing the whole block. Structure defined below.</summary>
@@ -1579,6 +1670,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigAuxiliaryServicesConfigMetastoreConfig
 {
     /// <summary>Resource name of an existing Dataproc Metastore service.</summary>
@@ -1587,6 +1679,7 @@ public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigAuxiliary
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigAuxiliaryServicesConfigSparkHistoryServerConfig
 {
     /// <summary>Resource name of an existing Dataproc Cluster to act as a Spark History Server for the workload.</summary>
@@ -1595,6 +1688,7 @@ public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigAuxiliary
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigAuxiliaryServicesConfig
 {
     /// <summary>The config setting for metastore service with the cluster. Structure defined below.</summary>
@@ -1607,6 +1701,7 @@ public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigAuxiliary
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigAutoscaling
 {
     /// <summary>The maximum number of nodes in the node pool. Must be &gt;= minNodeCount, and must be &gt; 0.</summary>
@@ -1619,6 +1714,7 @@ public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigKubernete
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfig
 {
     /// <summary>The number of local SSD disks to attach to the node, which is limited by the maximum number of disks allowable per zone.</summary>
@@ -1643,6 +1739,7 @@ public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigKubernete
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfig
 {
     /// <summary>The autoscaler configuration for this node pool. The autoscaler is enabled only when a valid configuration is present.</summary>
@@ -1659,6 +1756,7 @@ public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigKubernete
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget
 {
     /// <summary>The target GKE node pool.</summary>
@@ -1675,6 +1773,7 @@ public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigKubernete
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfig
 {
     /// <summary>A target GKE cluster to deploy to. It must be in the same project and region as the Dataproc cluster (the GKE cluster can be zonal or regional)</summary>
@@ -1687,6 +1786,7 @@ public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigKubernete
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigKubernetesClusterConfigKubernetesSoftwareConfig
 {
     /// <summary>The components that should be installed in this Dataproc cluster. The key must be a string from the KubernetesComponent enumeration. The value is the version of the software to be installed. At least one entry must be specified.</summary>
@@ -1699,6 +1799,7 @@ public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigKubernete
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigKubernetesClusterConfig
 {
     /// <summary>The configuration for running the Dataproc cluster on GKE.</summary>
@@ -1715,6 +1816,7 @@ public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigKubernete
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfig
 {
     /// <summary>Configuration of auxiliary services used by this cluster. Structure defined below.</summary>
@@ -1731,6 +1833,7 @@ public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfig
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProvider
 {
     /// <summary>Allows you to configure various aspects of the cluster. Structure defined below.</summary>
@@ -1762,6 +1865,7 @@ public partial class V1beta1ClusterSpecInitProvider
     public IList<V1beta1ClusterSpecInitProviderVirtualClusterConfig>? VirtualClusterConfig { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -1784,6 +1888,7 @@ public enum V1beta1ClusterSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1794,6 +1899,7 @@ public enum V1beta1ClusterSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1805,6 +1911,7 @@ public enum V1beta1ClusterSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1819,6 +1926,7 @@ public partial class V1beta1ClusterSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1830,6 +1938,7 @@ public partial class V1beta1ClusterSpecProviderConfigRef
     public V1beta1ClusterSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1840,6 +1949,7 @@ public enum V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicyResolutio
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1851,6 +1961,7 @@ public enum V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicyResolveEn
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1865,6 +1976,7 @@ public partial class V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicy
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1877,6 +1989,7 @@ public partial class V1beta1ClusterSpecPublishConnectionDetailsToConfigRef
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1893,6 +2006,7 @@ public partial class V1beta1ClusterSpecPublishConnectionDetailsToMetadata
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1909,6 +2023,7 @@ public partial class V1beta1ClusterSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1921,6 +2036,7 @@ public partial class V1beta1ClusterSpecWriteConnectionSecretToRef
 }
 
 /// <summary>ClusterSpec defines the desired state of Cluster</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1954,6 +2070,7 @@ public partial class V1beta1ClusterSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigAutoscalingConfig
 {
     /// <summary>The autoscaling policy used by the cluster.</summary>
@@ -1962,6 +2079,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigAutoscalingConfi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAccelerators
 {
     /// <summary>The number of the accelerator cards of this type exposed to this instance. Often restricted to one of 1, 2, 4, or 8.</summary>
@@ -1974,6 +2092,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigAuxiliaryNodeGro
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigDiskConfig
 {
     /// <summary>Size of the primary disk attached to each node, specified in GB. The primary disk contains the boot volume and system libraries, and the smallest allowed disk size is 10GB. GCP will default to a predetermined computed value if not set (currently 500GB). Note: If SSDs are not attached, it also contains the HDFS data blocks and Hadoop working directories.</summary>
@@ -1994,6 +2113,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigAuxiliaryNodeGro
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfig
 {
     /// <summary>The Compute Engine accelerator configuration for these instances. Can be specified multiple times.</summary>
@@ -2022,6 +2142,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigAuxiliaryNodeGro
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigAuxiliaryNodeGroupsNodeGroup
 {
     /// <summary>The name of the cluster, unique within the project and zone.</summary>
@@ -2038,6 +2159,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigAuxiliaryNodeGro
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigAuxiliaryNodeGroups
 {
     /// <summary>Node group configuration.</summary>
@@ -2050,6 +2172,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigAuxiliaryNodeGro
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigDataprocMetricConfigMetrics
 {
     /// <summary>One or more [available OSS metrics] (https://cloud.google.com/dataproc/docs/guides/monitoring#available_oss_metrics) to collect for the metric course.</summary>
@@ -2062,6 +2185,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigDataprocMetricCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigDataprocMetricConfig
 {
     /// <summary>Metrics sources to enable.</summary>
@@ -2070,6 +2194,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigDataprocMetricCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigEncryptionConfig
 {
     /// <summary>The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.</summary>
@@ -2078,6 +2203,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigEncryptionConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigEndpointConfig
 {
     /// <summary>The flag to enable http access to specific ports on the cluster from external sources (aka Component Gateway). Defaults to false.</summary>
@@ -2090,6 +2216,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigEndpointConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigGceClusterConfigNodeGroupAffinity
 {
     /// <summary>The URI of a sole-tenant node group resource that the cluster will be created on.</summary>
@@ -2098,6 +2225,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigGceClusterConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigGceClusterConfigReservationAffinity
 {
     /// <summary>Corresponds to the type of reservation consumption.</summary>
@@ -2114,6 +2242,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigGceClusterConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigGceClusterConfigShieldedInstanceConfig
 {
     /// <summary>Defines whether instances have integrity monitoring enabled.</summary>
@@ -2130,6 +2259,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigGceClusterConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigGceClusterConfig
 {
     /// <summary>By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. If set to true, all instances in the cluster will only have internal IP addresses. Note: Private Google Access (also known as privateIpGoogleAccess) must be enabled on the subnetwork that the cluster will be launched in.</summary>
@@ -2178,6 +2308,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigGceClusterConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigInitializationAction
 {
     /// <summary>The script to be executed during initialization of the cluster. The script must be a GCS file with a gs:// prefix.</summary>
@@ -2190,6 +2321,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigInitializationAc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigLifecycleConfig
 {
     /// <summary>The time when cluster will be auto-deleted. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".</summary>
@@ -2206,6 +2338,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigLifecycleConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigMasterConfigAccelerators
 {
     /// <summary>The number of the accelerator cards of this type exposed to this instance. Often restricted to one of 1, 2, 4, or 8.</summary>
@@ -2218,6 +2351,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigMasterConfigAcce
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigMasterConfigDiskConfig
 {
     /// <summary>Size of the primary disk attached to each node, specified in GB. The primary disk contains the boot volume and system libraries, and the smallest allowed disk size is 10GB. GCP will default to a predetermined computed value if not set (currently 500GB). Note: If SSDs are not attached, it also contains the HDFS data blocks and Hadoop working directories.</summary>
@@ -2238,6 +2372,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigMasterConfigDisk
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigMasterConfig
 {
     /// <summary>The Compute Engine accelerator (GPU) configuration for these instances. Can be specified multiple times.</summary>
@@ -2270,6 +2405,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigMasterConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigMetastoreConfig
 {
     /// <summary>Resource name of an existing Dataproc Metastore service.</summary>
@@ -2278,6 +2414,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigMetastoreConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigPreemptibleWorkerConfigDiskConfig
 {
     /// <summary>Size of the primary disk attached to each node, specified in GB. The primary disk contains the boot volume and system libraries, and the smallest allowed disk size is 10GB. GCP will default to a predetermined computed value if not set (currently 500GB). Note: If SSDs are not attached, it also contains the HDFS data blocks and Hadoop working directories.</summary>
@@ -2298,6 +2435,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigPreemptibleWorke
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionList
 {
     /// <summary>Full machine-type names, e.g. "n1-standard-16".</summary>
@@ -2310,6 +2448,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigPreemptibleWorke
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionResults
 {
     /// <summary>The name of a Compute Engine machine type.</summary>
@@ -2322,6 +2461,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigPreemptibleWorke
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicy
 {
     /// <summary>List of instance selection options that the group will use when creating new VMs.</summary>
@@ -2334,6 +2474,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigPreemptibleWorke
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigPreemptibleWorkerConfig
 {
     /// <summary>Disk Config</summary>
@@ -2358,6 +2499,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigPreemptibleWorke
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigSecurityConfigKerberosConfig
 {
     /// <summary>The admin server (IP or hostname) for the remote trusted realm in a cross realm trust relationship.</summary>
@@ -2422,6 +2564,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigSecurityConfigKe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigSecurityConfig
 {
     /// <summary>Kerberos Configuration</summary>
@@ -2430,6 +2573,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigSecurityConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigSoftwareConfig
 {
     /// <summary>The Cloud Dataproc image version to use for the cluster - this controls the sets of software versions installed onto the nodes when you create clusters. If not specified, defaults to the latest version. For a list of valid versions see Cloud Dataproc versions</summary>
@@ -2450,6 +2594,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigSoftwareConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigWorkerConfigAccelerators
 {
     /// <summary>The number of the accelerator cards of this type exposed to this instance. Often restricted to one of 1, 2, 4, or 8.</summary>
@@ -2462,6 +2607,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigWorkerConfigAcce
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigWorkerConfigDiskConfig
 {
     /// <summary>Size of the primary disk attached to each node, specified in GB. The primary disk contains the boot volume and system libraries, and the smallest allowed disk size is 10GB. GCP will default to a predetermined computed value if not set (currently 500GB). Note: If SSDs are not attached, it also contains the HDFS data blocks and Hadoop working directories.</summary>
@@ -2482,6 +2628,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigWorkerConfigDisk
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigWorkerConfig
 {
     /// <summary>The Compute Engine accelerator configuration for these instances. Can be specified multiple times.</summary>
@@ -2518,6 +2665,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigWorkerConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfig
 {
     /// <summary>The autoscaling policy config associated with the cluster. Note that once set, if autoscaling_config is the only field set in cluster_config, it can only be removed by setting policy_uri = "", rather than removing the whole block. Structure defined below.</summary>
@@ -2590,6 +2738,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigAuxiliaryServicesConfigMetastoreConfig
 {
     /// <summary>Resource name of an existing Dataproc Metastore service.</summary>
@@ -2598,6 +2747,7 @@ public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigAuxiliary
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigAuxiliaryServicesConfigSparkHistoryServerConfig
 {
     /// <summary>Resource name of an existing Dataproc Cluster to act as a Spark History Server for the workload.</summary>
@@ -2606,6 +2756,7 @@ public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigAuxiliary
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigAuxiliaryServicesConfig
 {
     /// <summary>The config setting for metastore service with the cluster. Structure defined below.</summary>
@@ -2618,6 +2769,7 @@ public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigAuxiliary
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigAutoscaling
 {
     /// <summary>The maximum number of nodes in the node pool. Must be &gt;= minNodeCount, and must be &gt; 0.</summary>
@@ -2630,6 +2782,7 @@ public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigKubernete
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfig
 {
     /// <summary>The number of local SSD disks to attach to the node, which is limited by the maximum number of disks allowable per zone.</summary>
@@ -2654,6 +2807,7 @@ public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigKubernete
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfig
 {
     /// <summary>The autoscaler configuration for this node pool. The autoscaler is enabled only when a valid configuration is present.</summary>
@@ -2670,6 +2824,7 @@ public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigKubernete
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget
 {
     /// <summary>The target GKE node pool.</summary>
@@ -2686,6 +2841,7 @@ public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigKubernete
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfig
 {
     /// <summary>A target GKE cluster to deploy to. It must be in the same project and region as the Dataproc cluster (the GKE cluster can be zonal or regional)</summary>
@@ -2698,6 +2854,7 @@ public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigKubernete
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigKubernetesClusterConfigKubernetesSoftwareConfig
 {
     /// <summary>The components that should be installed in this Dataproc cluster. The key must be a string from the KubernetesComponent enumeration. The value is the version of the software to be installed. At least one entry must be specified.</summary>
@@ -2710,6 +2867,7 @@ public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigKubernete
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigKubernetesClusterConfig
 {
     /// <summary>The configuration for running the Dataproc cluster on GKE.</summary>
@@ -2726,6 +2884,7 @@ public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigKubernete
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfig
 {
     /// <summary>Configuration of auxiliary services used by this cluster. Structure defined below.</summary>
@@ -2742,6 +2901,7 @@ public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProvider
 {
     /// <summary>Allows you to configure various aspects of the cluster. Structure defined below.</summary>
@@ -2786,6 +2946,7 @@ public partial class V1beta1ClusterStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2814,6 +2975,7 @@ public partial class V1beta1ClusterStatusConditions
 }
 
 /// <summary>ClusterStatus defines the observed state of Cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatus
 {
     /// <summary></summary>
@@ -2829,8 +2991,9 @@ public partial class V1beta1ClusterStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Cluster is the Schema for the Clusters API. Manages a Cloud Dataproc cluster resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Cluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ClusterSpec>, IStatus<V1beta1ClusterStatus>
 {
     public const string KubeApiVersion = "v1beta1";

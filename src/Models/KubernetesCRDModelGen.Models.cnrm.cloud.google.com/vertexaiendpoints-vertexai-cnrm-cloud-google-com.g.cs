@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.vertexai.cnrm.cloud.google.com;
 /// <summary>Required. The Cloud KMS resource identifier of the customer managed encryption key used to protect a resource. Has the form: projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key. The key needs to be in the same region as where the compute resource is created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIEndpointSpecEncryptionSpecKmsKeyNameRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1alpha1VertexAIEndpointSpecEncryptionSpecKmsKeyNameRef
 }
 
 /// <summary>Immutable. Customer-managed encryption key spec for an Endpoint. If set, this Endpoint and all sub-resources of this Endpoint will be secured by this key.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIEndpointSpecEncryptionSpec
 {
     /// <summary>Required. The Cloud KMS resource identifier of the customer managed encryption key used to protect a resource. Has the form: projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key. The key needs to be in the same region as where the compute resource is created.</summary>
@@ -33,6 +35,7 @@ public partial class V1alpha1VertexAIEndpointSpecEncryptionSpec
 }
 
 /// <summary>Optional. The full name of the Google Compute Engine network to which the Endpoint should be peered. Private services access must already be configured for the network. If left unspecified, the Endpoint is not peered with any network. Only one of the fields, network or enablePrivateServiceConnect, can be set. Format: projects/{project_id}/global/networks/{network_name}.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIEndpointSpecNetworkRef
 {
     /// <summary>Allowed value: string of the format `projects/{{project}}/global/networks/{{value}}`, where {{value}} is the `name` field of a `ComputeNetwork` resource.</summary>
@@ -49,6 +52,7 @@ public partial class V1alpha1VertexAIEndpointSpecNetworkRef
 }
 
 /// <summary>The project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIEndpointSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -65,6 +69,7 @@ public partial class V1alpha1VertexAIEndpointSpecProjectRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIEndpointSpec
 {
     /// <summary>The description of the Endpoint.</summary>
@@ -97,6 +102,7 @@ public partial class V1alpha1VertexAIEndpointSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIEndpointStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -121,6 +127,7 @@ public partial class V1alpha1VertexAIEndpointStatusConditions
 }
 
 /// <summary>The observed state of the underlying GCP resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIEndpointStatusObservedState
 {
     /// <summary>Output only. Timestamp when this Endpoint was created.</summary>
@@ -133,6 +140,7 @@ public partial class V1alpha1VertexAIEndpointStatusObservedState
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIEndpointStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -148,8 +156,9 @@ public partial class V1alpha1VertexAIEndpointStatus
     public V1alpha1VertexAIEndpointStatusObservedState? ObservedState { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1VertexAIEndpoint : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1VertexAIEndpointSpec>, IStatus<V1alpha1VertexAIEndpointStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

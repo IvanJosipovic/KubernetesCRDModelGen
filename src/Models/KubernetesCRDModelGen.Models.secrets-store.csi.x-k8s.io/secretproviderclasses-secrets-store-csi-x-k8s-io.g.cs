@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.secretsstore.csi.xk8s.io;
 /// <summary>SecretObjectData defines the desired state of synced K8s secret object data</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SecretProviderClassSpecSecretObjectsData
 {
     /// <summary>data field to populate</summary>
@@ -21,6 +22,7 @@ public partial class V1SecretProviderClassSpecSecretObjectsData
 }
 
 /// <summary>SecretObject defines the desired state of synced K8s secret objects</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SecretProviderClassSpecSecretObjects
 {
     /// <summary>annotations of k8s secret object</summary>
@@ -45,6 +47,7 @@ public partial class V1SecretProviderClassSpecSecretObjects
 }
 
 /// <summary>SecretProviderClassSpec defines the desired state of SecretProviderClass</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SecretProviderClassSpec
 {
     /// <summary>Configuration for specific provider</summary>
@@ -61,12 +64,14 @@ public partial class V1SecretProviderClassSpec
 }
 
 /// <summary>SecretProviderClassStatus defines the observed state of SecretProviderClass</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SecretProviderClassStatus
 {
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>SecretProviderClass is the Schema for the secretproviderclasses API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1SecretProviderClass : IKubernetesObject<V1ObjectMeta>, ISpec<V1SecretProviderClassSpec>, IStatus<V1SecretProviderClassStatus>
 {
     public const string KubeApiVersion = "v1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataprotection.azure.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupPolicyKubernetesClusterSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1BackupPolicyKubernetesClusterSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderDefaultRetentionRuleLifeCycle
 {
     /// <summary>The type of data store. The only possible value is OperationalStore. Changing this forces a new resource to be created.</summary>
@@ -31,6 +33,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderDefaultR
 }
 
 /// <summary>A default_retention_rule block as defined below. Changing this forces a new resource to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderDefaultRetentionRule
 {
     /// <summary>A life_cycle block as defined below. Changing this forces a new resource to be created.</summary>
@@ -38,6 +41,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderDefaultR
     public IList<V1beta1BackupPolicyKubernetesClusterSpecForProviderDefaultRetentionRuleLifeCycle>? LifeCycle { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupPolicyKubernetesClusterSpecForProviderResourceGroupNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -48,6 +52,7 @@ public enum V1beta1BackupPolicyKubernetesClusterSpecForProviderResourceGroupName
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupPolicyKubernetesClusterSpecForProviderResourceGroupNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -59,6 +64,7 @@ public enum V1beta1BackupPolicyKubernetesClusterSpecForProviderResourceGroupName
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -73,6 +79,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderResource
 }
 
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -84,6 +91,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderResource
     public V1beta1BackupPolicyKubernetesClusterSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupPolicyKubernetesClusterSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -94,6 +102,7 @@ public enum V1beta1BackupPolicyKubernetesClusterSpecForProviderResourceGroupName
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupPolicyKubernetesClusterSpecForProviderResourceGroupNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -105,6 +114,7 @@ public enum V1beta1BackupPolicyKubernetesClusterSpecForProviderResourceGroupName
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -119,6 +129,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderResource
 }
 
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -135,6 +146,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderResource
 }
 
 /// <summary>A criteria block as defined below. Changing this forces a new resource to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderRetentionRuleCriteria
 {
     /// <summary>Possible values are AllBackup, FirstOfDay, FirstOfWeek, FirstOfMonth and FirstOfYear. These values mean the first successful backup of the day/week/month/year. Changing this forces a new resource to be created.</summary>
@@ -159,6 +171,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderRetentio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderRetentionRuleLifeCycle
 {
     /// <summary>The type of data store. The only possible value is OperationalStore. Changing this forces a new resource to be created.</summary>
@@ -171,6 +184,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderRetentio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderRetentionRule
 {
     /// <summary>A criteria block as defined below. Changing this forces a new resource to be created.</summary>
@@ -190,6 +204,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderRetentio
     public double? Priority { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -200,6 +215,7 @@ public enum V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNameRefPolic
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -211,6 +227,7 @@ public enum V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNameRefPolic
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -225,6 +242,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNam
 }
 
 /// <summary>Reference to a BackupVault in dataprotection to populate vaultName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -236,6 +254,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNam
     public V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -246,6 +265,7 @@ public enum V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNameSelector
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -257,6 +277,7 @@ public enum V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNameSelector
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -271,6 +292,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNam
 }
 
 /// <summary>Selector for a BackupVault in dataprotection to populate vaultName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -287,6 +309,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNam
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProvider
 {
     /// <summary>Specifies a list of repeating time interval. It supports weekly back. It should follow ISO 8601 repeating time interval. Changing this forces a new resource to be created.</summary>
@@ -331,6 +354,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProviderDefaultRetentionRuleLifeCycle
 {
     /// <summary>The type of data store. The only possible value is OperationalStore. Changing this forces a new resource to be created.</summary>
@@ -343,6 +367,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProviderDefault
 }
 
 /// <summary>A default_retention_rule block as defined below. Changing this forces a new resource to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProviderDefaultRetentionRule
 {
     /// <summary>A life_cycle block as defined below. Changing this forces a new resource to be created.</summary>
@@ -351,6 +376,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProviderDefault
 }
 
 /// <summary>A criteria block as defined below. Changing this forces a new resource to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProviderRetentionRuleCriteria
 {
     /// <summary>Possible values are AllBackup, FirstOfDay, FirstOfWeek, FirstOfMonth and FirstOfYear. These values mean the first successful backup of the day/week/month/year. Changing this forces a new resource to be created.</summary>
@@ -375,6 +401,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProviderRetenti
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProviderRetentionRuleLifeCycle
 {
     /// <summary>The type of data store. The only possible value is OperationalStore. Changing this forces a new resource to be created.</summary>
@@ -387,6 +414,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProviderRetenti
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProviderRetentionRule
 {
     /// <summary>A criteria block as defined below. Changing this forces a new resource to be created.</summary>
@@ -407,6 +435,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProviderRetenti
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProvider
 {
     /// <summary>Specifies a list of repeating time interval. It supports weekly back. It should follow ISO 8601 repeating time interval. Changing this forces a new resource to be created.</summary>
@@ -426,6 +455,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProvider
     public string? TimeZone { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupPolicyKubernetesClusterSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -448,6 +478,7 @@ public enum V1beta1BackupPolicyKubernetesClusterSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupPolicyKubernetesClusterSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -458,6 +489,7 @@ public enum V1beta1BackupPolicyKubernetesClusterSpecProviderConfigRefPolicyResol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupPolicyKubernetesClusterSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -469,6 +501,7 @@ public enum V1beta1BackupPolicyKubernetesClusterSpecProviderConfigRefPolicyResol
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -483,6 +516,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecProviderConfigRefPo
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -494,6 +528,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecProviderConfigRef
     public V1beta1BackupPolicyKubernetesClusterSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupPolicyKubernetesClusterSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -504,6 +539,7 @@ public enum V1beta1BackupPolicyKubernetesClusterSpecPublishConnectionDetailsToCo
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupPolicyKubernetesClusterSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -515,6 +551,7 @@ public enum V1beta1BackupPolicyKubernetesClusterSpecPublishConnectionDetailsToCo
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -529,6 +566,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecPublishConnectionDe
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -541,6 +579,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecPublishConnectionDe
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -557,6 +596,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecPublishConnectionDe
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -573,6 +613,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecPublishConnectionDe
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -585,6 +626,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecWriteConnectionSecr
 }
 
 /// <summary>BackupPolicyKubernetesClusterSpec defines the desired state of BackupPolicyKubernetesCluster</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -618,6 +660,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProviderDefaultRetentionRuleLifeCycle
 {
     /// <summary>The type of data store. The only possible value is OperationalStore. Changing this forces a new resource to be created.</summary>
@@ -630,6 +673,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProviderDefault
 }
 
 /// <summary>A default_retention_rule block as defined below. Changing this forces a new resource to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProviderDefaultRetentionRule
 {
     /// <summary>A life_cycle block as defined below. Changing this forces a new resource to be created.</summary>
@@ -638,6 +682,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProviderDefault
 }
 
 /// <summary>A criteria block as defined below. Changing this forces a new resource to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProviderRetentionRuleCriteria
 {
     /// <summary>Possible values are AllBackup, FirstOfDay, FirstOfWeek, FirstOfMonth and FirstOfYear. These values mean the first successful backup of the day/week/month/year. Changing this forces a new resource to be created.</summary>
@@ -662,6 +707,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProviderRetenti
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProviderRetentionRuleLifeCycle
 {
     /// <summary>The type of data store. The only possible value is OperationalStore. Changing this forces a new resource to be created.</summary>
@@ -674,6 +720,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProviderRetenti
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProviderRetentionRule
 {
     /// <summary>A criteria block as defined below. Changing this forces a new resource to be created.</summary>
@@ -694,6 +741,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProviderRetenti
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProvider
 {
     /// <summary>Specifies a list of repeating time interval. It supports weekly back. It should follow ISO 8601 repeating time interval. Changing this forces a new resource to be created.</summary>
@@ -726,6 +774,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -754,6 +803,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterStatusConditions
 }
 
 /// <summary>BackupPolicyKubernetesClusterStatus defines the observed state of BackupPolicyKubernetesCluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterStatus
 {
     /// <summary></summary>
@@ -769,8 +819,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>BackupPolicyKubernetesCluster is the Schema for the BackupPolicyKubernetesClusters API. Manages a Backup Policy to back up Kubernetes Cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1BackupPolicyKubernetesCluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BackupPolicyKubernetesClusterSpec>, IStatus<V1beta1BackupPolicyKubernetesClusterStatus>
 {
     public const string KubeApiVersion = "v1beta1";

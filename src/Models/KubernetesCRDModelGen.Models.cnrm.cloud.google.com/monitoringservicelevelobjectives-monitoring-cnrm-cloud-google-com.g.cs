@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.monitoring.cnrm.cloud.google.com;
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringServiceLevelObjectiveSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecProjectRef
 }
 
 /// <summary>Good service is defined to be the count of requests made to this service that are fast enough with respect to `latency.threshold`.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorBasicSliLatency
 {
     /// <summary>A description of the experience associated with failing requests. Possible values: LATENCY_EXPERIENCE_UNSPECIFIED, DELIGHTING, SATISFYING, ANNOYING</summary>
@@ -37,6 +39,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 }
 
 /// <summary>Good service is defined to be the count of operations performed by this service that are fast enough with respect to `operation_latency.threshold`.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorBasicSliOperationLatency
 {
     /// <summary>A description of the experience associated with failing requests. Possible values: LATENCY_EXPERIENCE_UNSPECIFIED, DELIGHTING, SATISFYING, ANNOYING</summary>
@@ -49,6 +52,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 }
 
 /// <summary>Basic SLI on a well-known service type.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorBasicSli
 {
     /// <summary>Good service is defined to be the count of requests made to this service that return successfully.</summary>
@@ -81,6 +85,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 }
 
 /// <summary>Range of values considered "good." For a one-sided range, set one bound to an infinite value.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorRequestBasedDistributionCutRange
 {
     /// <summary>Range maximum.</summary>
@@ -93,6 +98,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 }
 
 /// <summary>`distribution_cut` is used when `good_service` is a count of values aggregated in a `Distribution` that fall into a good range. The `total_service` is the total count of all values aggregated in the `Distribution`.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorRequestBasedDistributionCut
 {
     /// <summary>A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters) specifying a `TimeSeries` aggregating values. Must have `ValueType = DISTRIBUTION` and `MetricKind = DELTA` or `MetricKind = CUMULATIVE`.</summary>
@@ -105,6 +111,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 }
 
 /// <summary>`good_total_ratio` is used when the ratio of `good_service` to `total_service` is computed from two `TimeSeries`.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorRequestBasedGoodTotalRatio
 {
     /// <summary>A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters) specifying a `TimeSeries` quantifying bad service, either demanded service that was not provided or demanded service that was of inadequate quality. Must have `ValueType = DOUBLE` or `ValueType = INT64` and must have `MetricKind = DELTA` or `MetricKind = CUMULATIVE`.</summary>
@@ -121,6 +128,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 }
 
 /// <summary>Request-based SLIs</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorRequestBased
 {
     /// <summary>`distribution_cut` is used when `good_service` is a count of values aggregated in a `Distribution` that fall into a good range. The `total_service` is the total count of all values aggregated in the `Distribution`.</summary>
@@ -133,6 +141,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 }
 
 /// <summary>Good service is defined to be the count of requests made to this service that are fast enough with respect to `latency.threshold`.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdBasicSliPerformanceLatency
 {
     /// <summary>A description of the experience associated with failing requests. Possible values: LATENCY_EXPERIENCE_UNSPECIFIED, DELIGHTING, SATISFYING, ANNOYING</summary>
@@ -145,6 +154,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 }
 
 /// <summary>Good service is defined to be the count of operations performed by this service that are fast enough with respect to `operation_latency.threshold`.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdBasicSliPerformanceOperationLatency
 {
     /// <summary>A description of the experience associated with failing requests. Possible values: LATENCY_EXPERIENCE_UNSPECIFIED, DELIGHTING, SATISFYING, ANNOYING</summary>
@@ -157,6 +167,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 }
 
 /// <summary>`BasicSli` to evaluate to judge window quality.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdBasicSliPerformance
 {
     /// <summary>Good service is defined to be the count of requests made to this service that return successfully.</summary>
@@ -189,6 +200,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 }
 
 /// <summary>Range of values considered "good." For a one-sided range, set one bound to an infinite value.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdPerformanceDistributionCutRange
 {
     /// <summary>Range maximum.</summary>
@@ -201,6 +213,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 }
 
 /// <summary>`distribution_cut` is used when `good_service` is a count of values aggregated in a `Distribution` that fall into a good range. The `total_service` is the total count of all values aggregated in the `Distribution`.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdPerformanceDistributionCut
 {
     /// <summary>A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters) specifying a `TimeSeries` aggregating values. Must have `ValueType = DISTRIBUTION` and `MetricKind = DELTA` or `MetricKind = CUMULATIVE`.</summary>
@@ -213,6 +226,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 }
 
 /// <summary>`good_total_ratio` is used when the ratio of `good_service` to `total_service` is computed from two `TimeSeries`.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdPerformanceGoodTotalRatio
 {
     /// <summary>A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters) specifying a `TimeSeries` quantifying bad service, either demanded service that was not provided or demanded service that was of inadequate quality. Must have `ValueType = DOUBLE` or `ValueType = INT64` and must have `MetricKind = DELTA` or `MetricKind = CUMULATIVE`.</summary>
@@ -229,6 +243,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 }
 
 /// <summary>`RequestBasedSli` to evaluate to judge window quality.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdPerformance
 {
     /// <summary>`distribution_cut` is used when `good_service` is a count of values aggregated in a `Distribution` that fall into a good range. The `total_service` is the total count of all values aggregated in the `Distribution`.</summary>
@@ -241,6 +256,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 }
 
 /// <summary>A window is good if its `performance` is high enough.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThreshold
 {
     /// <summary>`BasicSli` to evaluate to judge window quality.</summary>
@@ -257,6 +273,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 }
 
 /// <summary>Range of values considered "good." For a one-sided range, set one bound to an infinite value.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedMetricMeanInRangeRange
 {
     /// <summary>Range maximum.</summary>
@@ -269,6 +286,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 }
 
 /// <summary>A window is good if the metric's value is in a good range, averaged across returned streams.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedMetricMeanInRange
 {
     /// <summary>Range of values considered "good." For a one-sided range, set one bound to an infinite value.</summary>
@@ -281,6 +299,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 }
 
 /// <summary>Range of values considered "good." For a one-sided range, set one bound to an infinite value.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedMetricSumInRangeRange
 {
     /// <summary>Range maximum.</summary>
@@ -293,6 +312,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 }
 
 /// <summary>A window is good if the metric's value is in a good range, summed across returned streams.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedMetricSumInRange
 {
     /// <summary>Range of values considered "good." For a one-sided range, set one bound to an infinite value.</summary>
@@ -305,6 +325,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 }
 
 /// <summary>Windows-based SLIs</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBased
 {
     /// <summary>A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters) specifying a `TimeSeries` with `ValueType = BOOL`. The window is good if any `true` values appear in the window.</summary>
@@ -329,6 +350,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 }
 
 /// <summary>The definition of good service, used to measure and calculate the quality of the `Service`'s performance with respect to a single aspect of service quality.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicator
 {
     /// <summary>Basic SLI on a well-known service type.</summary>
@@ -345,6 +367,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 }
 
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceRef
 {
     /// <summary>The service for the resource  Allowed value: The Google Cloud resource name of a `MonitoringService` resource (format: `projects/{{project}}/services/{{name}}`).</summary>
@@ -361,6 +384,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringServiceLevelObjectiveSpec
 {
     /// <summary>A calendar period, semantically "since the start of the current ``". At this time, only `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH` are supported. Possible values: CALENDAR_PERIOD_UNSPECIFIED, DAY, WEEK, FORTNIGHT, MONTH, QUARTER, HALF, YEAR</summary>
@@ -397,6 +421,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringServiceLevelObjectiveStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -421,6 +446,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringServiceLevelObjectiveStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -444,8 +470,9 @@ public partial class V1beta1MonitoringServiceLevelObjectiveStatus
     public bool? ServiceManagementOwned { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1MonitoringServiceLevelObjective : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MonitoringServiceLevelObjectiveSpec>, IStatus<V1beta1MonitoringServiceLevelObjectiveStatus>
 {
     public const string KubeApiVersion = "v1beta1";

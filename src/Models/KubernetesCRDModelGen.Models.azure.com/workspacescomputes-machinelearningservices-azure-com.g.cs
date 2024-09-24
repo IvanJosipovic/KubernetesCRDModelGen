@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.machinelearningservices.azure.com;
 /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecIdentityUserAssignedIdentitiesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -29,6 +30,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecIdentityUserAssign
 }
 
 /// <summary>Storage version of v1api20210701.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -41,6 +43,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecIdentityUserAssign
 }
 
 /// <summary>Storage version of v1api20210701.Identity Identity for the resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -57,6 +60,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecIdentity
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a machinelearningservices.azure.com/Workspace resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecOwner
 {
     /// <summary></summary>
@@ -69,6 +73,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecOwner
 }
 
 /// <summary>SubnetReference: Virtual network subnet resource ID the compute nodes belong to</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAksPropertiesAksNetworkingConfigurationSubnetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -89,6 +94,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAksPrope
 }
 
 /// <summary>Storage version of v1api20210701.AksNetworkingConfiguration Advance configuration for AKS networking</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAksPropertiesAksNetworkingConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -113,6 +119,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAksPrope
 }
 
 /// <summary>Storage version of v1api20210701.SslConfiguration The ssl configuration for scoring</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAksPropertiesSslConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -145,6 +152,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAksPrope
 }
 
 /// <summary>Storage version of v1api20210701.AKS_Properties</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAksProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -185,6 +193,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAksPrope
 }
 
 /// <summary>ResourceReference: ARM resource id of the underlying compute</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAksResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -205,6 +214,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAksResou
 }
 
 /// <summary>Storage version of v1api20210701.AKS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAks
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -237,6 +247,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAks
 }
 
 /// <summary>Storage version of v1api20210701.ScaleSettings scale settings for AML Compute</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAmlComputePropertiesScaleSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -257,6 +268,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAmlCompu
 }
 
 /// <summary>Reference: The ID of the resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAmlComputePropertiesSubnetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -277,6 +289,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAmlCompu
 }
 
 /// <summary>Storage version of v1api20210701.ResourceId Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAmlComputePropertiesSubnet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -289,6 +302,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAmlCompu
 }
 
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAmlComputePropertiesUserAccountCredentialsAdminUserPassword
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -301,6 +315,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAmlCompu
 }
 
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAmlComputePropertiesUserAccountCredentialsAdminUserSshPublicKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -313,6 +328,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAmlCompu
 }
 
 /// <summary>Storage version of v1api20210701.UserAccountCredentials Settings for user account that gets created on each on the nodes of a compute.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAmlComputePropertiesUserAccountCredentials
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -333,6 +349,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAmlCompu
 }
 
 /// <summary>Reference: Virtual Machine image path</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAmlComputePropertiesVirtualMachineImageReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -353,6 +370,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAmlCompu
 }
 
 /// <summary>Storage version of v1api20210701.VirtualMachineImage Virtual Machine image for Windows AML Compute</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAmlComputePropertiesVirtualMachineImage
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -365,6 +383,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAmlCompu
 }
 
 /// <summary>Storage version of v1api20210701.AmlComputeProperties AML Compute properties</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAmlComputeProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -413,6 +432,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAmlCompu
 }
 
 /// <summary>ResourceReference: ARM resource id of the underlying compute</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAmlComputeResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -433,6 +453,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAmlCompu
 }
 
 /// <summary>Storage version of v1api20210701.AmlCompute</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAmlCompute
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -465,6 +486,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesAmlCompu
 }
 
 /// <summary>Storage version of v1api20210701.AssignedUser A user that can be assigned to a compute instance.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesPersonalComputeInstanceSettingsAssignedUser
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -481,6 +503,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesComputeI
 }
 
 /// <summary>Storage version of v1api20210701.PersonalComputeInstanceSettings Settings for a personal compute instance.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesPersonalComputeInstanceSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -493,6 +516,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesComputeI
 }
 
 /// <summary>Storage version of v1api20210701.ScriptReference Script reference</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesSetupScriptsScriptsCreationScript
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -517,6 +541,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesComputeI
 }
 
 /// <summary>Storage version of v1api20210701.ScriptReference Script reference</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesSetupScriptsScriptsStartupScript
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -541,6 +566,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesComputeI
 }
 
 /// <summary>Storage version of v1api20210701.ScriptsToExecute Customized setup scripts</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesSetupScriptsScripts
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -557,6 +583,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesComputeI
 }
 
 /// <summary>Storage version of v1api20210701.SetupScripts Details of customized scripts to execute for setting up the cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesSetupScripts
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -569,6 +596,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesComputeI
 }
 
 /// <summary>Storage version of v1api20210701.ComputeInstanceSshSettings Specifies policy and settings for SSH access.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesSshSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -585,6 +613,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesComputeI
 }
 
 /// <summary>Reference: The ID of the resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesSubnetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -605,6 +634,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesComputeI
 }
 
 /// <summary>Storage version of v1api20210701.ResourceId Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesSubnet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -617,6 +647,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesComputeI
 }
 
 /// <summary>Storage version of v1api20210701.ComputeInstanceProperties Compute Instance properties</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesComputeInstanceProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -653,6 +684,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesComputeI
 }
 
 /// <summary>ResourceReference: ARM resource id of the underlying compute</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesComputeInstanceResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -673,6 +705,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesComputeI
 }
 
 /// <summary>Storage version of v1api20210701.ComputeInstance</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesComputeInstance
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -705,6 +738,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesComputeI
 }
 
 /// <summary>ResourceReference: ARM resource id of the underlying compute</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesDataFactoryResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -725,6 +759,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesDataFact
 }
 
 /// <summary>Storage version of v1api20210701.DataFactory</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesDataFactory
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -753,6 +788,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesDataFact
 }
 
 /// <summary>Storage version of v1api20210701.DataLakeAnalytics_Properties</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesDataLakeAnalyticsProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -765,6 +801,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesDataLake
 }
 
 /// <summary>ResourceReference: ARM resource id of the underlying compute</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesDataLakeAnalyticsResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -785,6 +822,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesDataLake
 }
 
 /// <summary>Storage version of v1api20210701.DataLakeAnalytics</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesDataLakeAnalytics
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -817,6 +855,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesDataLake
 }
 
 /// <summary>Storage version of v1api20210701.DatabricksProperties Properties of Databricks</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesDatabricksProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -833,6 +872,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesDatabric
 }
 
 /// <summary>ResourceReference: ARM resource id of the underlying compute</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesDatabricksResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -853,6 +893,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesDatabric
 }
 
 /// <summary>Storage version of v1api20210701.Databricks</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesDatabricks
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -885,6 +926,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesDatabric
 }
 
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesHdInsightPropertiesAdministratorAccountPassword
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -897,6 +939,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesHdInsigh
 }
 
 /// <summary>Storage version of v1api20210701.VirtualMachineSshCredentials Admin credentials for virtual machine</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesHdInsightPropertiesAdministratorAccount
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -921,6 +964,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesHdInsigh
 }
 
 /// <summary>Storage version of v1api20210701.HDInsightProperties HDInsight compute properties</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesHdInsightProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -941,6 +985,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesHdInsigh
 }
 
 /// <summary>ResourceReference: ARM resource id of the underlying compute</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesHdInsightResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -961,6 +1006,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesHdInsigh
 }
 
 /// <summary>Storage version of v1api20210701.HDInsight</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesHdInsight
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -993,6 +1039,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesHdInsigh
 }
 
 /// <summary>Storage version of v1api20210701.InstanceTypeSchema_Resources</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesKubernetesPropertiesInstanceTypesResources
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1009,6 +1056,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesKubernet
 }
 
 /// <summary>Storage version of v1api20210701.InstanceTypeSchema Instance type schema.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesKubernetesPropertiesInstanceTypes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1025,6 +1073,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesKubernet
 }
 
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesKubernetesPropertiesRelayConnectionString
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -1037,6 +1086,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesKubernet
 }
 
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesKubernetesPropertiesServiceBusConnectionString
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -1049,6 +1099,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesKubernet
 }
 
 /// <summary>Storage version of v1api20210701.KubernetesProperties Kubernetes properties</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesKubernetesProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1089,6 +1140,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesKubernet
 }
 
 /// <summary>ResourceReference: ARM resource id of the underlying compute</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesKubernetesResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -1109,6 +1161,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesKubernet
 }
 
 /// <summary>Storage version of v1api20210701.Kubernetes</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesKubernetes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1141,6 +1194,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesKubernet
 }
 
 /// <summary>Storage version of v1api20210701.AutoPauseProperties Auto pause properties</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesSynapseSparkPropertiesAutoPauseProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1157,6 +1211,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesSynapseS
 }
 
 /// <summary>Storage version of v1api20210701.AutoScaleProperties Auto scale properties</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesSynapseSparkPropertiesAutoScaleProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1177,6 +1232,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesSynapseS
 }
 
 /// <summary>Storage version of v1api20210701.SynapseSpark_Properties</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesSynapseSparkProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1225,6 +1281,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesSynapseS
 }
 
 /// <summary>ResourceReference: ARM resource id of the underlying compute</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesSynapseSparkResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -1245,6 +1302,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesSynapseS
 }
 
 /// <summary>Storage version of v1api20210701.SynapseSpark</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesSynapseSpark
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1277,6 +1335,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesSynapseS
 }
 
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesVirtualMachinePropertiesAdministratorAccountPassword
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -1289,6 +1348,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesVirtualM
 }
 
 /// <summary>Storage version of v1api20210701.VirtualMachineSshCredentials Admin credentials for virtual machine</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesVirtualMachinePropertiesAdministratorAccount
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1313,6 +1373,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesVirtualM
 }
 
 /// <summary>Storage version of v1api20210701.VirtualMachine_Properties</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesVirtualMachineProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1341,6 +1402,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesVirtualM
 }
 
 /// <summary>ResourceReference: ARM resource id of the underlying compute</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesVirtualMachineResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -1361,6 +1423,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesVirtualM
 }
 
 /// <summary>Storage version of v1api20210701.VirtualMachine</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecPropertiesVirtualMachine
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1393,6 +1456,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecPropertiesVirtualM
 }
 
 /// <summary>Storage version of v1api20210701.Compute</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1441,6 +1505,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecProperties
 }
 
 /// <summary>Storage version of v1api20210701.Sku Sku of the resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1457,6 +1522,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecSku
 }
 
 /// <summary>Storage version of v1api20210701.SystemData Metadata pertaining to creation and last modification of the resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpecSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1489,6 +1555,7 @@ public partial class V1api20210701storageWorkspacesComputeSpecSystemData
 }
 
 /// <summary>Storage version of v1api20210701.Workspaces_Compute_Spec</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1533,6 +1600,7 @@ public partial class V1api20210701storageWorkspacesComputeSpec
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -1565,6 +1633,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusConditions
 }
 
 /// <summary>Storage version of v1api20210701.UserAssignedIdentity_STATUS User Assigned Identity</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1585,6 +1654,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusIdentityUserAssi
 }
 
 /// <summary>Storage version of v1api20210701.Identity_STATUS Identity for the resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1609,6 +1679,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusIdentity
 }
 
 /// <summary>Storage version of v1api20210701.AksNetworkingConfiguration_STATUS Advance configuration for AKS networking</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAksPropertiesAksNetworkingConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1633,6 +1704,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAksPro
 }
 
 /// <summary>Storage version of v1api20210701.SslConfiguration_STATUS The ssl configuration for scoring</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAksPropertiesSslConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1665,6 +1737,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAksPro
 }
 
 /// <summary>Storage version of v1api20210701.SystemService_STATUS A system service running on a compute.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAksPropertiesSystemServices
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1685,6 +1758,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAksPro
 }
 
 /// <summary>Storage version of v1api20210701.AKS_Properties_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAksProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1729,6 +1803,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAksPro
 }
 
 /// <summary>Storage version of v1api20210701.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAksProvisioningErrorsErrorAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1745,6 +1820,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAksPro
 }
 
 /// <summary>Storage version of v1api20210701.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAksProvisioningErrorsErrorDetailsAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1761,6 +1837,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAksPro
 }
 
 /// <summary>Storage version of v1api20210701.ErrorDetail_STATUS_Unrolled</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAksProvisioningErrorsErrorDetails
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1785,6 +1862,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAksPro
 }
 
 /// <summary>Storage version of v1api20210701.ErrorDetail_STATUS The error detail.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAksProvisioningErrorsError
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1813,6 +1891,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAksPro
 }
 
 /// <summary>Storage version of v1api20210701.ErrorResponse_STATUS Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAksProvisioningErrors
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1825,6 +1904,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAksPro
 }
 
 /// <summary>Storage version of v1api20210701.AKS_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAks
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1877,6 +1957,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAks
 }
 
 /// <summary>Storage version of v1api20210701.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlComputePropertiesErrorsErrorAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1893,6 +1974,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlCom
 }
 
 /// <summary>Storage version of v1api20210701.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlComputePropertiesErrorsErrorDetailsAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1909,6 +1991,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlCom
 }
 
 /// <summary>Storage version of v1api20210701.ErrorDetail_STATUS_Unrolled</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlComputePropertiesErrorsErrorDetails
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1933,6 +2016,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlCom
 }
 
 /// <summary>Storage version of v1api20210701.ErrorDetail_STATUS The error detail.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlComputePropertiesErrorsError
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1961,6 +2045,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlCom
 }
 
 /// <summary>Storage version of v1api20210701.ErrorResponse_STATUS Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlComputePropertiesErrors
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1973,6 +2058,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlCom
 }
 
 /// <summary>Storage version of v1api20210701.NodeStateCounts_STATUS Counts of various compute node states on the amlCompute.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlComputePropertiesNodeStateCounts
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2005,6 +2091,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlCom
 }
 
 /// <summary>Storage version of v1api20210701.ScaleSettings_STATUS scale settings for AML Compute</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlComputePropertiesScaleSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2025,6 +2112,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlCom
 }
 
 /// <summary>Storage version of v1api20210701.ResourceId_STATUS Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlComputePropertiesSubnet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2037,6 +2125,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlCom
 }
 
 /// <summary>Storage version of v1api20210701.UserAccountCredentials_STATUS Settings for user account that gets created on each on the nodes of a compute.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlComputePropertiesUserAccountCredentials
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2049,6 +2138,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlCom
 }
 
 /// <summary>Storage version of v1api20210701.VirtualMachineImage_STATUS Virtual Machine image for Windows AML Compute</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlComputePropertiesVirtualMachineImage
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2061,6 +2151,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlCom
 }
 
 /// <summary>Storage version of v1api20210701.AmlComputeProperties_STATUS AML Compute properties</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlComputeProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2133,6 +2224,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlCom
 }
 
 /// <summary>Storage version of v1api20210701.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlComputeProvisioningErrorsErrorAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2149,6 +2241,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlCom
 }
 
 /// <summary>Storage version of v1api20210701.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlComputeProvisioningErrorsErrorDetailsAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2165,6 +2258,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlCom
 }
 
 /// <summary>Storage version of v1api20210701.ErrorDetail_STATUS_Unrolled</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlComputeProvisioningErrorsErrorDetails
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2189,6 +2283,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlCom
 }
 
 /// <summary>Storage version of v1api20210701.ErrorDetail_STATUS The error detail.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlComputeProvisioningErrorsError
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2217,6 +2312,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlCom
 }
 
 /// <summary>Storage version of v1api20210701.ErrorResponse_STATUS Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlComputeProvisioningErrors
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2229,6 +2325,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlCom
 }
 
 /// <summary>Storage version of v1api20210701.AmlCompute_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlCompute
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2281,6 +2378,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesAmlCom
 }
 
 /// <summary>Storage version of v1api20210701.ComputeInstanceApplication_STATUS Defines an Aml Instance application and its connectivity endpoint URI.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesApplications
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2297,6 +2395,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComput
 }
 
 /// <summary>Storage version of v1api20210701.ComputeInstanceConnectivityEndpoints_STATUS Defines all connectivity endpoints and properties for an ComputeInstance.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesConnectivityEndpoints
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2313,6 +2412,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComput
 }
 
 /// <summary>Storage version of v1api20210701.ComputeInstanceCreatedBy_STATUS Describes information on user who created this ComputeInstance.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesCreatedBy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2333,6 +2433,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComput
 }
 
 /// <summary>Storage version of v1api20210701.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesErrorsErrorAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2349,6 +2450,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComput
 }
 
 /// <summary>Storage version of v1api20210701.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesErrorsErrorDetailsAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2365,6 +2467,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComput
 }
 
 /// <summary>Storage version of v1api20210701.ErrorDetail_STATUS_Unrolled</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesErrorsErrorDetails
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2389,6 +2492,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComput
 }
 
 /// <summary>Storage version of v1api20210701.ErrorDetail_STATUS The error detail.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesErrorsError
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2417,6 +2521,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComput
 }
 
 /// <summary>Storage version of v1api20210701.ErrorResponse_STATUS Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesErrors
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2429,6 +2534,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComput
 }
 
 /// <summary>Storage version of v1api20210701.ComputeInstanceLastOperation_STATUS The last operation on ComputeInstance.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesLastOperation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2449,6 +2555,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComput
 }
 
 /// <summary>Storage version of v1api20210701.AssignedUser_STATUS A user that can be assigned to a compute instance.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesPersonalComputeInstanceSettingsAssignedUser
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2465,6 +2572,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComput
 }
 
 /// <summary>Storage version of v1api20210701.PersonalComputeInstanceSettings_STATUS Settings for a personal compute instance.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesPersonalComputeInstanceSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2477,6 +2585,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComput
 }
 
 /// <summary>Storage version of v1api20210701.ScriptReference_STATUS Script reference</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesSetupScriptsScriptsCreationScript
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2501,6 +2610,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComput
 }
 
 /// <summary>Storage version of v1api20210701.ScriptReference_STATUS Script reference</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesSetupScriptsScriptsStartupScript
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2525,6 +2635,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComput
 }
 
 /// <summary>Storage version of v1api20210701.ScriptsToExecute_STATUS Customized setup scripts</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesSetupScriptsScripts
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2541,6 +2652,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComput
 }
 
 /// <summary>Storage version of v1api20210701.SetupScripts_STATUS Details of customized scripts to execute for setting up the cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesSetupScripts
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2553,6 +2665,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComput
 }
 
 /// <summary>Storage version of v1api20210701.ComputeInstanceSshSettings_STATUS Specifies policy and settings for SSH access.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesSshSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2577,6 +2690,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComput
 }
 
 /// <summary>Storage version of v1api20210701.ResourceId_STATUS Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesSubnet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2589,6 +2703,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComput
 }
 
 /// <summary>Storage version of v1api20210701.ComputeInstanceProperties_STATUS Compute Instance properties</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComputeInstanceProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2649,6 +2764,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComput
 }
 
 /// <summary>Storage version of v1api20210701.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComputeInstanceProvisioningErrorsErrorAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2665,6 +2781,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComput
 }
 
 /// <summary>Storage version of v1api20210701.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComputeInstanceProvisioningErrorsErrorDetailsAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2681,6 +2798,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComput
 }
 
 /// <summary>Storage version of v1api20210701.ErrorDetail_STATUS_Unrolled</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComputeInstanceProvisioningErrorsErrorDetails
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2705,6 +2823,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComput
 }
 
 /// <summary>Storage version of v1api20210701.ErrorDetail_STATUS The error detail.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComputeInstanceProvisioningErrorsError
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2733,6 +2852,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComput
 }
 
 /// <summary>Storage version of v1api20210701.ErrorResponse_STATUS Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComputeInstanceProvisioningErrors
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2745,6 +2865,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComput
 }
 
 /// <summary>Storage version of v1api20210701.ComputeInstance_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComputeInstance
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2797,6 +2918,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesComput
 }
 
 /// <summary>Storage version of v1api20210701.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDataFactoryProvisioningErrorsErrorAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2813,6 +2935,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDataFa
 }
 
 /// <summary>Storage version of v1api20210701.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDataFactoryProvisioningErrorsErrorDetailsAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2829,6 +2952,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDataFa
 }
 
 /// <summary>Storage version of v1api20210701.ErrorDetail_STATUS_Unrolled</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDataFactoryProvisioningErrorsErrorDetails
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2853,6 +2977,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDataFa
 }
 
 /// <summary>Storage version of v1api20210701.ErrorDetail_STATUS The error detail.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDataFactoryProvisioningErrorsError
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2881,6 +3006,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDataFa
 }
 
 /// <summary>Storage version of v1api20210701.ErrorResponse_STATUS Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDataFactoryProvisioningErrors
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2893,6 +3019,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDataFa
 }
 
 /// <summary>Storage version of v1api20210701.DataFactory_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDataFactory
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2941,6 +3068,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDataFa
 }
 
 /// <summary>Storage version of v1api20210701.DataLakeAnalytics_Properties_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDataLakeAnalyticsProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2953,6 +3081,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDataLa
 }
 
 /// <summary>Storage version of v1api20210701.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDataLakeAnalyticsProvisioningErrorsErrorAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2969,6 +3098,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDataLa
 }
 
 /// <summary>Storage version of v1api20210701.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDataLakeAnalyticsProvisioningErrorsErrorDetailsAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2985,6 +3115,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDataLa
 }
 
 /// <summary>Storage version of v1api20210701.ErrorDetail_STATUS_Unrolled</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDataLakeAnalyticsProvisioningErrorsErrorDetails
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3009,6 +3140,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDataLa
 }
 
 /// <summary>Storage version of v1api20210701.ErrorDetail_STATUS The error detail.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDataLakeAnalyticsProvisioningErrorsError
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3037,6 +3169,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDataLa
 }
 
 /// <summary>Storage version of v1api20210701.ErrorResponse_STATUS Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDataLakeAnalyticsProvisioningErrors
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3049,6 +3182,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDataLa
 }
 
 /// <summary>Storage version of v1api20210701.DataLakeAnalytics_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDataLakeAnalytics
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3101,6 +3235,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDataLa
 }
 
 /// <summary>Storage version of v1api20210701.DatabricksProperties_STATUS Properties of Databricks</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDatabricksProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3117,6 +3252,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDatabr
 }
 
 /// <summary>Storage version of v1api20210701.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDatabricksProvisioningErrorsErrorAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3133,6 +3269,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDatabr
 }
 
 /// <summary>Storage version of v1api20210701.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDatabricksProvisioningErrorsErrorDetailsAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3149,6 +3286,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDatabr
 }
 
 /// <summary>Storage version of v1api20210701.ErrorDetail_STATUS_Unrolled</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDatabricksProvisioningErrorsErrorDetails
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3173,6 +3311,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDatabr
 }
 
 /// <summary>Storage version of v1api20210701.ErrorDetail_STATUS The error detail.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDatabricksProvisioningErrorsError
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3201,6 +3340,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDatabr
 }
 
 /// <summary>Storage version of v1api20210701.ErrorResponse_STATUS Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDatabricksProvisioningErrors
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3213,6 +3353,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDatabr
 }
 
 /// <summary>Storage version of v1api20210701.Databricks_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDatabricks
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3265,6 +3406,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesDatabr
 }
 
 /// <summary>Storage version of v1api20210701.VirtualMachineSshCredentials_STATUS Admin credentials for virtual machine</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesHdInsightPropertiesAdministratorAccount
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3285,6 +3427,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesHdInsi
 }
 
 /// <summary>Storage version of v1api20210701.HDInsightProperties_STATUS HDInsight compute properties</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesHdInsightProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3305,6 +3448,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesHdInsi
 }
 
 /// <summary>Storage version of v1api20210701.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesHdInsightProvisioningErrorsErrorAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3321,6 +3465,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesHdInsi
 }
 
 /// <summary>Storage version of v1api20210701.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesHdInsightProvisioningErrorsErrorDetailsAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3337,6 +3482,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesHdInsi
 }
 
 /// <summary>Storage version of v1api20210701.ErrorDetail_STATUS_Unrolled</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesHdInsightProvisioningErrorsErrorDetails
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3361,6 +3507,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesHdInsi
 }
 
 /// <summary>Storage version of v1api20210701.ErrorDetail_STATUS The error detail.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesHdInsightProvisioningErrorsError
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3389,6 +3536,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesHdInsi
 }
 
 /// <summary>Storage version of v1api20210701.ErrorResponse_STATUS Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesHdInsightProvisioningErrors
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3401,6 +3549,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesHdInsi
 }
 
 /// <summary>Storage version of v1api20210701.HDInsight_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesHdInsight
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3453,6 +3602,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesHdInsi
 }
 
 /// <summary>Storage version of v1api20210701.InstanceTypeSchema_Resources_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesKubernetesPropertiesInstanceTypesResources
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3469,6 +3619,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesKubern
 }
 
 /// <summary>Storage version of v1api20210701.InstanceTypeSchema_STATUS Instance type schema.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesKubernetesPropertiesInstanceTypes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3485,6 +3636,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesKubern
 }
 
 /// <summary>Storage version of v1api20210701.KubernetesProperties_STATUS Kubernetes properties</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesKubernetesProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3517,6 +3669,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesKubern
 }
 
 /// <summary>Storage version of v1api20210701.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesKubernetesProvisioningErrorsErrorAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3533,6 +3686,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesKubern
 }
 
 /// <summary>Storage version of v1api20210701.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesKubernetesProvisioningErrorsErrorDetailsAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3549,6 +3703,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesKubern
 }
 
 /// <summary>Storage version of v1api20210701.ErrorDetail_STATUS_Unrolled</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesKubernetesProvisioningErrorsErrorDetails
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3573,6 +3728,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesKubern
 }
 
 /// <summary>Storage version of v1api20210701.ErrorDetail_STATUS The error detail.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesKubernetesProvisioningErrorsError
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3601,6 +3757,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesKubern
 }
 
 /// <summary>Storage version of v1api20210701.ErrorResponse_STATUS Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesKubernetesProvisioningErrors
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3613,6 +3770,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesKubern
 }
 
 /// <summary>Storage version of v1api20210701.Kubernetes_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesKubernetes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3665,6 +3823,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesKubern
 }
 
 /// <summary>Storage version of v1api20210701.AutoPauseProperties_STATUS Auto pause properties</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesSynapseSparkPropertiesAutoPauseProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3681,6 +3840,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesSynaps
 }
 
 /// <summary>Storage version of v1api20210701.AutoScaleProperties_STATUS Auto scale properties</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesSynapseSparkPropertiesAutoScaleProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3701,6 +3861,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesSynaps
 }
 
 /// <summary>Storage version of v1api20210701.SynapseSpark_Properties_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesSynapseSparkProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3749,6 +3910,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesSynaps
 }
 
 /// <summary>Storage version of v1api20210701.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesSynapseSparkProvisioningErrorsErrorAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3765,6 +3927,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesSynaps
 }
 
 /// <summary>Storage version of v1api20210701.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesSynapseSparkProvisioningErrorsErrorDetailsAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3781,6 +3944,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesSynaps
 }
 
 /// <summary>Storage version of v1api20210701.ErrorDetail_STATUS_Unrolled</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesSynapseSparkProvisioningErrorsErrorDetails
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3805,6 +3969,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesSynaps
 }
 
 /// <summary>Storage version of v1api20210701.ErrorDetail_STATUS The error detail.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesSynapseSparkProvisioningErrorsError
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3833,6 +3998,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesSynaps
 }
 
 /// <summary>Storage version of v1api20210701.ErrorResponse_STATUS Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesSynapseSparkProvisioningErrors
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3845,6 +4011,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesSynaps
 }
 
 /// <summary>Storage version of v1api20210701.SynapseSpark_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesSynapseSpark
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3897,6 +4064,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesSynaps
 }
 
 /// <summary>Storage version of v1api20210701.VirtualMachineSshCredentials_STATUS Admin credentials for virtual machine</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesVirtualMachinePropertiesAdministratorAccount
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3917,6 +4085,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesVirtua
 }
 
 /// <summary>Storage version of v1api20210701.VirtualMachine_Properties_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesVirtualMachineProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3945,6 +4114,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesVirtua
 }
 
 /// <summary>Storage version of v1api20210701.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesVirtualMachineProvisioningErrorsErrorAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3961,6 +4131,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesVirtua
 }
 
 /// <summary>Storage version of v1api20210701.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesVirtualMachineProvisioningErrorsErrorDetailsAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3977,6 +4148,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesVirtua
 }
 
 /// <summary>Storage version of v1api20210701.ErrorDetail_STATUS_Unrolled</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesVirtualMachineProvisioningErrorsErrorDetails
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -4001,6 +4173,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesVirtua
 }
 
 /// <summary>Storage version of v1api20210701.ErrorDetail_STATUS The error detail.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesVirtualMachineProvisioningErrorsError
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -4029,6 +4202,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesVirtua
 }
 
 /// <summary>Storage version of v1api20210701.ErrorResponse_STATUS Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesVirtualMachineProvisioningErrors
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -4041,6 +4215,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesVirtua
 }
 
 /// <summary>Storage version of v1api20210701.VirtualMachine_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusPropertiesVirtualMachine
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -4093,6 +4268,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusPropertiesVirtua
 }
 
 /// <summary>Storage version of v1api20210701.Compute_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -4141,6 +4317,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusProperties
 }
 
 /// <summary>Storage version of v1api20210701.Sku_STATUS Sku of the resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -4157,6 +4334,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusSku
 }
 
 /// <summary>Storage version of v1api20210701.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -4189,6 +4367,7 @@ public partial class V1api20210701storageWorkspacesComputeStatusSystemData
 }
 
 /// <summary>Storage version of v1api20210701.Workspaces_Compute_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210701storageWorkspacesComputeStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -4236,8 +4415,9 @@ public partial class V1api20210701storageWorkspacesComputeStatus
     public string? Type { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Storage version of v1api20210701.WorkspacesCompute Generator information: - Generated from: /machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2021-07-01/machineLearningServices.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/computes/{computeName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1api20210701storageWorkspacesCompute : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20210701storageWorkspacesComputeSpec>, IStatus<V1api20210701storageWorkspacesComputeStatus>
 {
     public const string KubeApiVersion = "v1api20210701storage";

@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.tags.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagsTagBindingSpecParentRef
 {
     /// <summary>Allowed value: string of the format `//cloudresourcemanager.googleapis.com/projects/{{value}}`, where {{value}} is the `number` field of a `Project` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1TagsTagBindingSpecParentRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagsTagBindingSpecTagValueRef
 {
     /// <summary>Allowed value: string of the format `tagValues/{{value}}`, where {{value}} is the `name` field of a `TagsTagValue` resource.</summary>
@@ -41,6 +43,7 @@ public partial class V1beta1TagsTagBindingSpecTagValueRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagsTagBindingSpec
 {
     /// <summary></summary>
@@ -57,6 +60,7 @@ public partial class V1beta1TagsTagBindingSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagsTagBindingStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -81,6 +85,7 @@ public partial class V1beta1TagsTagBindingStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagsTagBindingStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -96,8 +101,9 @@ public partial class V1beta1TagsTagBindingStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1TagsTagBinding : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TagsTagBindingSpec>, IStatus<V1beta1TagsTagBindingStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dlp.cnrm.cloud.google.com;
 /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeSpecDictionaryCloudStoragePath
 {
     /// <summary>A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt</summary>
@@ -17,6 +18,7 @@ public partial class V1beta1DLPStoredInfoTypeSpecDictionaryCloudStoragePath
 }
 
 /// <summary>List of words or phrases to search for.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeSpecDictionaryWordList
 {
     /// <summary>Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits. [required]</summary>
@@ -25,6 +27,7 @@ public partial class V1beta1DLPStoredInfoTypeSpecDictionaryWordList
 }
 
 /// <summary>Store dictionary-based CustomInfoType.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeSpecDictionary
 {
     /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted.</summary>
@@ -37,6 +40,7 @@ public partial class V1beta1DLPStoredInfoTypeSpecDictionary
 }
 
 /// <summary>Designated field in the BigQuery table.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryBigQueryFieldField
 {
     /// <summary>Name describing the field.</summary>
@@ -45,6 +49,7 @@ public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryBigQueryFi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryBigQueryFieldTableDatasetRef
 {
     /// <summary>Dataset ID of the table.  Allowed value: The Google Cloud resource name of a `BigQueryDataset` resource (format: `projects/{{project}}/datasets/{{name}}`).</summary>
@@ -61,6 +66,7 @@ public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryBigQueryFi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryBigQueryFieldTableProjectRef
 {
     /// <summary>The Google Cloud Platform project ID of the project containing the table. If omitted, project ID is inferred from the API call.  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -77,6 +83,7 @@ public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryBigQueryFi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryBigQueryFieldTableTableRef
 {
     /// <summary>Name of the table.  Allowed value: The Google Cloud resource name of a `BigQueryTable` resource (format: `projects/{{project}}/datasets/{{dataset_id}}/tables/{{name}}`).</summary>
@@ -93,6 +100,7 @@ public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryBigQueryFi
 }
 
 /// <summary>Source table of the field.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryBigQueryFieldTable
 {
     /// <summary></summary>
@@ -109,6 +117,7 @@ public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryBigQueryFi
 }
 
 /// <summary>Field in a BigQuery table where each cell represents a dictionary phrase.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryBigQueryField
 {
     /// <summary>Designated field in the BigQuery table.</summary>
@@ -121,6 +130,7 @@ public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryBigQueryFi
 }
 
 /// <summary>Set of files containing newline-delimited lists of dictionary phrases.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryCloudStorageFileSet
 {
     /// <summary>The url, in the format `gs:///`. Trailing wildcard in the path is allowed.</summary>
@@ -129,6 +139,7 @@ public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryCloudStora
 }
 
 /// <summary>Location to store dictionary artifacts in Google Cloud Storage. These files will only be accessible by project owners and the DLP API. If any of these artifacts are modified, the dictionary is considered invalid and can no longer be used.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryOutputPath
 {
     /// <summary>A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt</summary>
@@ -137,6 +148,7 @@ public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryOutputPath
 }
 
 /// <summary>StoredInfoType where findings are defined by a dictionary of phrases.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionary
 {
     /// <summary>Field in a BigQuery table where each cell represents a dictionary phrase.</summary>
@@ -153,6 +165,7 @@ public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionary
 }
 
 /// <summary>Immutable. The Organization that this resource belongs to. Only one of [organizationRef, projectRef] may be specified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeSpecOrganizationRef
 {
     /// <summary>Allowed value: The Google Cloud resource name of a Google Cloud Organization (format: `organizations/{{name}}`).</summary>
@@ -169,6 +182,7 @@ public partial class V1beta1DLPStoredInfoTypeSpecOrganizationRef
 }
 
 /// <summary>Immutable. The Project that this resource belongs to. Only one of [organizationRef, projectRef] may be specified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeSpecProjectRef
 {
     /// <summary>Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -185,6 +199,7 @@ public partial class V1beta1DLPStoredInfoTypeSpecProjectRef
 }
 
 /// <summary>Store regular expression-based StoredInfoType.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeSpecRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -197,6 +212,7 @@ public partial class V1beta1DLPStoredInfoTypeSpecRegex
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeSpec
 {
     /// <summary>Description of the StoredInfoType (max 256 characters).</summary>
@@ -237,6 +253,7 @@ public partial class V1beta1DLPStoredInfoTypeSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -261,6 +278,7 @@ public partial class V1beta1DLPStoredInfoTypeStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -272,8 +290,9 @@ public partial class V1beta1DLPStoredInfoTypeStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1DLPStoredInfoType : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DLPStoredInfoTypeSpec>, IStatus<V1beta1DLPStoredInfoTypeStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.securitycenter.cnrm.cloud.google.com;
 /// <summary>The organization that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SecurityCenterNotificationConfigSpecOrganizationRef
 {
     /// <summary>Allowed value: The `name` field of an `Organization` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1alpha1SecurityCenterNotificationConfigSpecOrganizationRef
 }
 
 /// <summary>The config for triggering streaming-based notifications.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SecurityCenterNotificationConfigSpecStreamingConfig
 {
     /// <summary>Expression that defines the filter to apply across create/update events of assets or findings as specified by the event type. The expression is a list of zero or more restrictions combined via logical operators AND and OR. Parentheses are supported, and OR has higher precedence than AND.  Restrictions have the form &lt;field&gt; &lt;operator&gt; &lt;value&gt; and may have a - character in front of them to indicate negation. The fields map to those defined in the corresponding resource.  The supported operators are:  * = for all value types. * &gt;, &lt;, &gt;=, &lt;= for integer values. * :, meaning substring matching, for strings.  The supported value types are:  * string literals in quotes. * integer literals without quotes. * boolean literals true and false without quotes.  See [Filtering notifications](https://cloud.google.com/security-command-center/docs/how-to-api-filter-notifications) for information on how to write a filter.</summary>
@@ -33,6 +35,7 @@ public partial class V1alpha1SecurityCenterNotificationConfigSpecStreamingConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SecurityCenterNotificationConfigSpec
 {
     /// <summary>Immutable. This must be unique within the organization.</summary>
@@ -61,6 +64,7 @@ public partial class V1alpha1SecurityCenterNotificationConfigSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SecurityCenterNotificationConfigStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -85,6 +89,7 @@ public partial class V1alpha1SecurityCenterNotificationConfigStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SecurityCenterNotificationConfigStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -104,8 +109,9 @@ public partial class V1alpha1SecurityCenterNotificationConfigStatus
     public string? ServiceAccount { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1SecurityCenterNotificationConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1SecurityCenterNotificationConfigSpec>, IStatus<V1alpha1SecurityCenterNotificationConfigStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

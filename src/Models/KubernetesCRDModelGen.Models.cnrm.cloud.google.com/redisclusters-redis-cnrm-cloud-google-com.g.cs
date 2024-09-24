@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.redis.cnrm.cloud.google.com;
 /// <summary>Optional. AOF configuration. This field will be ignored if mode is not AOF.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RedisClusterSpecPersistenceConfigAofConfig
 {
     /// <summary>Optional. fsync configuration.</summary>
@@ -17,6 +18,7 @@ public partial class V1alpha1RedisClusterSpecPersistenceConfigAofConfig
 }
 
 /// <summary>Optional. RDB configuration. This field will be ignored if mode is not RDB.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RedisClusterSpecPersistenceConfigRdbConfig
 {
     /// <summary>Optional. Period between RDB snapshots.</summary>
@@ -29,6 +31,7 @@ public partial class V1alpha1RedisClusterSpecPersistenceConfigRdbConfig
 }
 
 /// <summary>Optional. Persistence config (RDB, AOF) for the cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RedisClusterSpecPersistenceConfig
 {
     /// <summary>Optional. AOF configuration. This field will be ignored if mode is not AOF.</summary>
@@ -45,6 +48,7 @@ public partial class V1alpha1RedisClusterSpecPersistenceConfig
 }
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RedisClusterSpecProjectRef
 {
     /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
@@ -65,6 +69,7 @@ public partial class V1alpha1RedisClusterSpecProjectRef
 }
 
 /// <summary>Required. The network where the IP address of the discovery endpoint will be reserved, in the form of projects/{network_project}/global/networks/{network_id}.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RedisClusterSpecPscConfigsNetworkRef
 {
     /// <summary>A reference to an externally managed Compute Network resource. Should be in the format `projects/&lt;projectID&gt;/global/networks/&lt;network&gt;`.</summary>
@@ -81,6 +86,7 @@ public partial class V1alpha1RedisClusterSpecPscConfigsNetworkRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RedisClusterSpecPscConfigs
 {
     /// <summary>Required. The network where the IP address of the discovery endpoint will be reserved, in the form of projects/{network_project}/global/networks/{network_id}.</summary>
@@ -89,6 +95,7 @@ public partial class V1alpha1RedisClusterSpecPscConfigs
 }
 
 /// <summary>Optional. This config will be used to determine how the customer wants us to distribute cluster resources within the region.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RedisClusterSpecZoneDistributionConfig
 {
     /// <summary>Optional. The mode of zone distribution. Defaults to MULTI_ZONE, when not specified.</summary>
@@ -101,6 +108,7 @@ public partial class V1alpha1RedisClusterSpecZoneDistributionConfig
 }
 
 /// <summary>RedisClusterSpec defines the desired state of RedisCluster</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RedisClusterSpec
 {
     /// <summary>Optional. The authorization mode of the Redis cluster. If not provided, auth feature is disabled for the cluster.</summary>
@@ -157,6 +165,7 @@ public partial class V1alpha1RedisClusterSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RedisClusterStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -181,6 +190,7 @@ public partial class V1alpha1RedisClusterStatusConditions
 }
 
 /// <summary>Output only. Customer configuration for where the endpoint is created and accessed from.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RedisClusterStatusObservedStateDiscoveryEndpointsPscConfig
 {
     /// <summary>Required. The network where the IP address of the discovery endpoint will be reserved, in the form of projects/{network_project}/global/networks/{network_id}.</summary>
@@ -189,6 +199,7 @@ public partial class V1alpha1RedisClusterStatusObservedStateDiscoveryEndpointsPs
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RedisClusterStatusObservedStateDiscoveryEndpoints
 {
     /// <summary>Output only. Address of the exposed Redis endpoint used by clients to connect to the service. The address could be either IP or hostname.</summary>
@@ -205,6 +216,7 @@ public partial class V1alpha1RedisClusterStatusObservedStateDiscoveryEndpoints
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RedisClusterStatusObservedStatePscConnections
 {
     /// <summary>Output only. The IP allocated on the consumer network for the PSC forwarding rule.</summary>
@@ -229,6 +241,7 @@ public partial class V1alpha1RedisClusterStatusObservedStatePscConnections
 }
 
 /// <summary>Describes ongoing update on the cluster when cluster state is UPDATING.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RedisClusterStatusObservedStateStateInfoUpdateInfo
 {
     /// <summary>Target number of replica nodes per shard.</summary>
@@ -241,6 +254,7 @@ public partial class V1alpha1RedisClusterStatusObservedStateStateInfoUpdateInfo
 }
 
 /// <summary>Output only. Additional information about the current state of the cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RedisClusterStatusObservedStateStateInfo
 {
     /// <summary>Describes ongoing update on the cluster when cluster state is UPDATING.</summary>
@@ -249,6 +263,7 @@ public partial class V1alpha1RedisClusterStatusObservedStateStateInfo
 }
 
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RedisClusterStatusObservedState
 {
     /// <summary>Output only. The timestamp associated with the cluster creation request.</summary>
@@ -285,6 +300,7 @@ public partial class V1alpha1RedisClusterStatusObservedState
 }
 
 /// <summary>RedisClusterStatus defines the config connector machine state of RedisCluster</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RedisClusterStatus
 {
     /// <summary>Conditions represent the latest available observations of the object's current state.</summary>
@@ -304,8 +320,9 @@ public partial class V1alpha1RedisClusterStatus
     public V1alpha1RedisClusterStatusObservedState? ObservedState { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>RedisCluster is the Schema for the RedisCluster API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1RedisCluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1RedisClusterSpec>, IStatus<V1alpha1RedisClusterStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSharedVPCHostProjectStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1ComputeSharedVPCHostProjectStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSharedVPCHostProjectStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -44,8 +46,9 @@ public partial class V1beta1ComputeSharedVPCHostProjectStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ComputeSharedVPCHostProject : IKubernetesObject<V1ObjectMeta>, IStatus<V1beta1ComputeSharedVPCHostProjectStatus>
 {
     public const string KubeApiVersion = "v1beta1";

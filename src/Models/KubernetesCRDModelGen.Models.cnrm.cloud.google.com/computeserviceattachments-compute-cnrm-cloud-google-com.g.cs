@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeServiceAttachmentSpecConsumerAcceptListsProjectRef
 {
     /// <summary>The project id or number for the project to set the limit for.  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1ComputeServiceAttachmentSpecConsumerAcceptListsProje
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeServiceAttachmentSpecConsumerAcceptLists
 {
     /// <summary>The value of the limit to set.</summary>
@@ -37,6 +39,7 @@ public partial class V1beta1ComputeServiceAttachmentSpecConsumerAcceptLists
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeServiceAttachmentSpecConsumerRejectLists
 {
     /// <summary>Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -53,6 +56,7 @@ public partial class V1beta1ComputeServiceAttachmentSpecConsumerRejectLists
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeServiceAttachmentSpecNatSubnets
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSubnetwork` resource.</summary>
@@ -69,6 +73,7 @@ public partial class V1beta1ComputeServiceAttachmentSpecNatSubnets
 }
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeServiceAttachmentSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -85,6 +90,7 @@ public partial class V1beta1ComputeServiceAttachmentSpecProjectRef
 }
 
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeServiceAttachmentSpecTargetServiceRef
 {
     /// <summary>The URL of a service serving the endpoint identified by this service attachment.  Allowed value: The `selfLink` field of a `ComputeForwardingRule` resource.</summary>
@@ -101,6 +107,7 @@ public partial class V1beta1ComputeServiceAttachmentSpecTargetServiceRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeServiceAttachmentSpec
 {
     /// <summary>The connection preference of service attachment. The value can be set to `ACCEPT_AUTOMATIC`. An `ACCEPT_AUTOMATIC` service attachment is one that always accepts the connection from consumer forwarding rules. Possible values: CONNECTION_PREFERENCE_UNSPECIFIED, ACCEPT_AUTOMATIC, ACCEPT_MANUAL</summary>
@@ -145,6 +152,7 @@ public partial class V1beta1ComputeServiceAttachmentSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeServiceAttachmentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -169,6 +177,7 @@ public partial class V1beta1ComputeServiceAttachmentStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeServiceAttachmentStatusConnectedEndpoints
 {
     /// <summary>The url of a connected endpoint.</summary>
@@ -185,6 +194,7 @@ public partial class V1beta1ComputeServiceAttachmentStatusConnectedEndpoints
 }
 
 /// <summary>An 128-bit global unique ID of the PSC service attachment.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeServiceAttachmentStatusPscServiceAttachmentId
 {
     /// <summary></summary>
@@ -197,6 +207,7 @@ public partial class V1beta1ComputeServiceAttachmentStatusPscServiceAttachmentId
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeServiceAttachmentStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -232,8 +243,9 @@ public partial class V1beta1ComputeServiceAttachmentStatus
     public string? SelfLink { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ComputeServiceAttachment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeServiceAttachmentSpec>, IStatus<V1beta1ComputeServiceAttachmentStatus>
 {
     public const string KubeApiVersion = "v1beta1";

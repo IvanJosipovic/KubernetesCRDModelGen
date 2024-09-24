@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
 /// <summary>NetworkSetSpec contains the specification for a NetworkSet resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkSetSpec
 {
     /// <summary>The list of IP networks that belong to this set.</summary>
@@ -16,8 +17,9 @@ public partial class V1NetworkSetSpec
     public IList<string>? Nets { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>NetworkSet is the Namespaced-equivalent of the GlobalNetworkSet.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1NetworkSet : IKubernetesObject<V1ObjectMeta>, ISpec<V1NetworkSetSpec>
 {
     public const string KubeApiVersion = "v1";

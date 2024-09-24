@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.source.toolkit.fluxcd.io;
 /// <summary>GitRepositoryRef specifies the GitRepository which Artifact contents must be included.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GitRepositorySpecIncludeRepository
 {
     /// <summary>Name of the referent.</summary>
@@ -17,6 +18,7 @@ public partial class V1GitRepositorySpecIncludeRepository
 }
 
 /// <summary>GitRepositoryInclude specifies a local reference to a GitRepository which Artifact (sub-)contents must be included, and where they should be placed.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GitRepositorySpecInclude
 {
     /// <summary>FromPath specifies the path to copy contents from, defaults to the root of the Artifact.</summary>
@@ -33,6 +35,7 @@ public partial class V1GitRepositorySpecInclude
 }
 
 /// <summary>ProxySecretRef specifies the Secret containing the proxy configuration to use while communicating with the Git server.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GitRepositorySpecProxySecretRef
 {
     /// <summary>Name of the referent.</summary>
@@ -41,6 +44,7 @@ public partial class V1GitRepositorySpecProxySecretRef
 }
 
 /// <summary>Reference specifies the Git reference to resolve and monitor for changes, defaults to the 'master' branch.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GitRepositorySpecRef
 {
     /// <summary>Branch to check out, defaults to 'master' if no other field is defined.</summary>
@@ -65,6 +69,7 @@ public partial class V1GitRepositorySpecRef
 }
 
 /// <summary>SecretRef specifies the Secret containing authentication credentials for the GitRepository. For HTTPS repositories the Secret must contain 'username' and 'password' fields for basic auth or 'bearerToken' field for token auth. For SSH repositories the Secret must contain 'identity' and 'known_hosts' fields.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GitRepositorySpecSecretRef
 {
     /// <summary>Name of the referent.</summary>
@@ -72,6 +77,7 @@ public partial class V1GitRepositorySpecSecretRef
     public string Name { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1GitRepositorySpecVerifyModeEnum
 {
     [EnumMember(Value = "head"), JsonStringEnumMemberName("head")]
@@ -89,6 +95,7 @@ public enum V1GitRepositorySpecVerifyModeEnum
 }
 
 /// <summary>SecretRef specifies the Secret containing the public keys of trusted Git authors.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GitRepositorySpecVerifySecretRef
 {
     /// <summary>Name of the referent.</summary>
@@ -97,6 +104,7 @@ public partial class V1GitRepositorySpecVerifySecretRef
 }
 
 /// <summary>Verification specifies the configuration to verify the Git commit signature(s).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GitRepositorySpecVerify
 {
     /// <summary>Mode specifies which Git object(s) should be verified.   The variants "head" and "HEAD" both imply the same thing, i.e. verify the commit that the HEAD of the Git repository points to. The variant "head" solely exists to ensure backwards compatibility.</summary>
@@ -110,6 +118,7 @@ public partial class V1GitRepositorySpecVerify
 }
 
 /// <summary>GitRepositorySpec specifies the required configuration to produce an Artifact for a Git repository.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GitRepositorySpec
 {
     /// <summary>Ignore overrides the set of excluded patterns in the .sourceignore format (which is the same as .gitignore). If not provided, a default will be used, consult the documentation for your version to find out what those are.</summary>
@@ -158,6 +167,7 @@ public partial class V1GitRepositorySpec
 }
 
 /// <summary>Artifact represents the last successful GitRepository reconciliation.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GitRepositoryStatusArtifact
 {
     /// <summary>Digest is the digest of the file in the form of '&lt;algorithm&gt;:&lt;checksum&gt;'.</summary>
@@ -189,6 +199,7 @@ public partial class V1GitRepositoryStatusArtifact
     public string Url { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1GitRepositoryStatusConditionsStatusEnum
 {
     [EnumMember(Value = "true"), JsonStringEnumMemberName("true")]
@@ -203,6 +214,7 @@ public enum V1GitRepositoryStatusConditionsStatusEnum
 }
 
 /// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GitRepositoryStatusConditions
 {
     /// <summary>lastTransitionTime is the last time the condition transitioned from one status to another. This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.</summary>
@@ -232,6 +244,7 @@ public partial class V1GitRepositoryStatusConditions
 }
 
 /// <summary>Artifact represents the output of a Source reconciliation.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GitRepositoryStatusIncludedArtifacts
 {
     /// <summary>Digest is the digest of the file in the form of '&lt;algorithm&gt;:&lt;checksum&gt;'.</summary>
@@ -264,6 +277,7 @@ public partial class V1GitRepositoryStatusIncludedArtifacts
 }
 
 /// <summary>GitRepositoryRef specifies the GitRepository which Artifact contents must be included.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GitRepositoryStatusObservedIncludeRepository
 {
     /// <summary>Name of the referent.</summary>
@@ -272,6 +286,7 @@ public partial class V1GitRepositoryStatusObservedIncludeRepository
 }
 
 /// <summary>GitRepositoryInclude specifies a local reference to a GitRepository which Artifact (sub-)contents must be included, and where they should be placed.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GitRepositoryStatusObservedInclude
 {
     /// <summary>FromPath specifies the path to copy contents from, defaults to the root of the Artifact.</summary>
@@ -288,6 +303,7 @@ public partial class V1GitRepositoryStatusObservedInclude
 }
 
 /// <summary>GitRepositoryStatus records the observed state of a Git repository.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GitRepositoryStatus
 {
     /// <summary>Artifact represents the last successful GitRepository reconciliation.</summary>
@@ -327,8 +343,9 @@ public partial class V1GitRepositoryStatus
     public string? SourceVerificationMode { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>GitRepository is the Schema for the gitrepositories API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1GitRepository : IKubernetesObject<V1ObjectMeta>, ISpec<V1GitRepositorySpec>, IStatus<V1GitRepositoryStatus>
 {
     public const string KubeApiVersion = "v1";

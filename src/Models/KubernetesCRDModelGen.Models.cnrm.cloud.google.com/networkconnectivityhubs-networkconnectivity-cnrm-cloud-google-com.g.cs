@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkconnectivity.cnrm.cloud.google.com;
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivityHubSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1NetworkConnectivityHubSpecProjectRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivityHubSpec
 {
     /// <summary>An optional description of the hub.</summary>
@@ -41,6 +43,7 @@ public partial class V1beta1NetworkConnectivityHubSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivityHubStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -65,6 +68,7 @@ public partial class V1beta1NetworkConnectivityHubStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivityHubStatusRoutingVpcs
 {
     /// <summary>The URI of the VPC network.</summary>
@@ -73,6 +77,7 @@ public partial class V1beta1NetworkConnectivityHubStatusRoutingVpcs
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivityHubStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -104,8 +109,9 @@ public partial class V1beta1NetworkConnectivityHubStatus
     public string? UpdateTime { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1NetworkConnectivityHub : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NetworkConnectivityHubSpec>, IStatus<V1beta1NetworkConnectivityHubStatus>
 {
     public const string KubeApiVersion = "v1beta1";

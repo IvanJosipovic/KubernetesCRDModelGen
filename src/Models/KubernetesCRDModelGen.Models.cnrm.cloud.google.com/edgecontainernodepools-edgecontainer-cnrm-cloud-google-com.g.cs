@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.edgecontainer.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerNodePoolSpecClusterRef
 {
     /// <summary>Allowed value: The `name` field of an `EdgeContainerCluster` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1EdgeContainerNodePoolSpecClusterRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerNodePoolSpecLocalDiskEncryptionKmsKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
@@ -41,6 +43,7 @@ public partial class V1beta1EdgeContainerNodePoolSpecLocalDiskEncryptionKmsKeyRe
 }
 
 /// <summary>Local disk encryption options. This field is only used when enabling CMEK support.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerNodePoolSpecLocalDiskEncryption
 {
     /// <summary>The Cloud KMS CryptoKeyVersion currently in use for protecting node local disks. Only applicable if kmsKey is set.</summary>
@@ -57,6 +60,7 @@ public partial class V1beta1EdgeContainerNodePoolSpecLocalDiskEncryption
 }
 
 /// <summary>Configuration for each node in the NodePool.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerNodePoolSpecNodeConfig
 {
     /// <summary>"The Kubernetes node labels".</summary>
@@ -65,6 +69,7 @@ public partial class V1beta1EdgeContainerNodePoolSpecNodeConfig
 }
 
 /// <summary>The project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerNodePoolSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -81,6 +86,7 @@ public partial class V1beta1EdgeContainerNodePoolSpecProjectRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerNodePoolSpec
 {
     /// <summary></summary>
@@ -121,6 +127,7 @@ public partial class V1beta1EdgeContainerNodePoolSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerNodePoolStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -145,6 +152,7 @@ public partial class V1beta1EdgeContainerNodePoolStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerNodePoolStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -168,8 +176,9 @@ public partial class V1beta1EdgeContainerNodePoolStatus
     public string? UpdateTime { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1EdgeContainerNodePool : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1EdgeContainerNodePoolSpec>, IStatus<V1beta1EdgeContainerNodePoolStatus>
 {
     public const string KubeApiVersion = "v1beta1";

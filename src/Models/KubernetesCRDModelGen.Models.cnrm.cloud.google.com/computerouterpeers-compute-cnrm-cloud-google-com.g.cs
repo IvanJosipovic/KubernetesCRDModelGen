@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRouterPeerSpecAdvertisedIpRanges
 {
     /// <summary>User-specified description for the IP range.</summary>
@@ -21,6 +22,7 @@ public partial class V1beta1ComputeRouterPeerSpecAdvertisedIpRanges
 }
 
 /// <summary>BFD configuration for the BGP peering.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRouterPeerSpecBfd
 {
     /// <summary>The minimum interval, in milliseconds, between BFD control packets received from the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the transmit interval of the other router. If set, this value must be between 1000 and 30000.</summary>
@@ -41,6 +43,7 @@ public partial class V1beta1ComputeRouterPeerSpecBfd
 }
 
 /// <summary>IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRouterPeerSpecIpAddress
 {
     /// <summary></summary>
@@ -49,6 +52,7 @@ public partial class V1beta1ComputeRouterPeerSpecIpAddress
 }
 
 /// <summary>The URI of the VM instance that is used as third-party router appliances such as Next Gen Firewalls, Virtual Routers, or Router Appliances. The VM instance must be located in zones contained in the same region as this Cloud Router. The VM instance is the peer side of the BGP session.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRouterPeerSpecRouterApplianceInstanceRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeInstance` resource.</summary>
@@ -65,6 +69,7 @@ public partial class V1beta1ComputeRouterPeerSpecRouterApplianceInstanceRef
 }
 
 /// <summary>The interface the BGP peer is associated with.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRouterPeerSpecRouterInterfaceRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeRouterInterface` resource.</summary>
@@ -81,6 +86,7 @@ public partial class V1beta1ComputeRouterPeerSpecRouterInterfaceRef
 }
 
 /// <summary>The Cloud Router in which this BGP peer will be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRouterPeerSpecRouterRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeRouter` resource.</summary>
@@ -97,6 +103,7 @@ public partial class V1beta1ComputeRouterPeerSpecRouterRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRouterPeerSpec
 {
     /// <summary>User-specified flag to indicate which mode to use for advertisement. Valid values of this enum field are: 'DEFAULT', 'CUSTOM' Default value: "DEFAULT" Possible values: ["DEFAULT", "CUSTOM"].</summary>
@@ -169,6 +176,7 @@ public partial class V1beta1ComputeRouterPeerSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRouterPeerStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -193,6 +201,7 @@ public partial class V1beta1ComputeRouterPeerStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRouterPeerStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -208,8 +217,9 @@ public partial class V1beta1ComputeRouterPeerStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ComputeRouterPeer : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeRouterPeerSpec>, IStatus<V1beta1ComputeRouterPeerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apikeys.cnrm.cloud.google.com;
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIKeysKeySpecProjectRef
 {
     /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
@@ -29,6 +30,7 @@ public partial class V1alpha1APIKeysKeySpecProjectRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIKeysKeySpecRestrictionsAndroidKeyRestrictionsAllowedApplications
 {
     /// <summary>The package name of the application.</summary>
@@ -41,6 +43,7 @@ public partial class V1alpha1APIKeysKeySpecRestrictionsAndroidKeyRestrictionsAll
 }
 
 /// <summary>The Android apps that are allowed to use the key.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIKeysKeySpecRestrictionsAndroidKeyRestrictions
 {
     /// <summary>A list of Android applications that are allowed to make API calls with this key.</summary>
@@ -49,6 +52,7 @@ public partial class V1alpha1APIKeysKeySpecRestrictionsAndroidKeyRestrictions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIKeysKeySpecRestrictionsApiTargets
 {
     /// <summary>Optional. List of one or more methods that can be called. If empty, all methods for the service are allowed. A wildcard (*) can be used as the last symbol. Valid examples: `google.cloud.translate.v2.TranslateService.GetSupportedLanguage` `TranslateText` `Get*` `translate.googleapis.com.Get*`</summary>
@@ -61,6 +65,7 @@ public partial class V1alpha1APIKeysKeySpecRestrictionsApiTargets
 }
 
 /// <summary>The HTTP referrers (websites) that are allowed to use the key.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIKeysKeySpecRestrictionsBrowserKeyRestrictions
 {
     /// <summary>A list of regular expressions for the referrer URLs that are allowed to make API calls with this key.</summary>
@@ -69,6 +74,7 @@ public partial class V1alpha1APIKeysKeySpecRestrictionsBrowserKeyRestrictions
 }
 
 /// <summary>The iOS apps that are allowed to use the key.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIKeysKeySpecRestrictionsIosKeyRestrictions
 {
     /// <summary>A list of bundle IDs that are allowed when making API calls with this key.</summary>
@@ -77,6 +83,7 @@ public partial class V1alpha1APIKeysKeySpecRestrictionsIosKeyRestrictions
 }
 
 /// <summary>The IP addresses of callers that are allowed to use the key.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIKeysKeySpecRestrictionsServerKeyRestrictions
 {
     /// <summary>A list of the caller IP addresses that are allowed to make API calls with this key.</summary>
@@ -85,6 +92,7 @@ public partial class V1alpha1APIKeysKeySpecRestrictionsServerKeyRestrictions
 }
 
 /// <summary>Key restrictions.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIKeysKeySpecRestrictions
 {
     /// <summary>The Android apps that are allowed to use the key.</summary>
@@ -109,6 +117,7 @@ public partial class V1alpha1APIKeysKeySpecRestrictions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIKeysKeySpec
 {
     /// <summary>Human-readable display name of this key that you can modify. The maximum length is 63 characters.</summary>
@@ -129,6 +138,7 @@ public partial class V1alpha1APIKeysKeySpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIKeysKeyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -153,6 +163,7 @@ public partial class V1alpha1APIKeysKeyStatusConditions
 }
 
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIKeysKeyStatusObservedState
 {
     /// <summary>Output only. Unique id in UUID4 format.</summary>
@@ -161,6 +172,7 @@ public partial class V1alpha1APIKeysKeyStatusObservedState
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIKeysKeyStatus
 {
     /// <summary>Conditions represent the latest available observations of the object's current state.</summary>
@@ -176,8 +188,9 @@ public partial class V1alpha1APIKeysKeyStatus
     public V1alpha1APIKeysKeyStatusObservedState? ObservedState { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>APIKeysKey is the Schema for the APIKeys Key resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1APIKeysKey : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1APIKeysKeySpec>, IStatus<V1alpha1APIKeysKeyStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

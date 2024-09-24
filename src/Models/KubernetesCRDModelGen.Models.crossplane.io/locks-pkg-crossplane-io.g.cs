@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.pkg.crossplane.io;
 /// <summary>A Dependency is a dependency of a package in the lock.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LockPackagesDependencies
 {
     /// <summary>Constraints is a valid semver range or a digest, which will be used to select a valid dependency version.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1LockPackagesDependencies
 }
 
 /// <summary>LockPackage is a package that is in the lock.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LockPackages
 {
     /// <summary>Dependencies are the list of dependencies of this package. The order of the dependencies will dictate the order in which they are resolved.</summary>
@@ -48,8 +50,9 @@ public partial class V1beta1LockPackages
     public string Version { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Lock is the CRD type that tracks package dependencies.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Lock : IKubernetesObject<V1ObjectMeta>
 {
     public const string KubeApiVersion = "v1beta1";

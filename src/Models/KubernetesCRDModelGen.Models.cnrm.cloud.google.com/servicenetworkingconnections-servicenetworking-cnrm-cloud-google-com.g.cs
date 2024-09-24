@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.servicenetworking.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceNetworkingConnectionSpecNetworkRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeNetwork` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1ServiceNetworkingConnectionSpecNetworkRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceNetworkingConnectionSpecReservedPeeringRanges
 {
     /// <summary>Allowed value: The `name` field of a `ComputeAddress` resource.</summary>
@@ -41,6 +43,7 @@ public partial class V1beta1ServiceNetworkingConnectionSpecReservedPeeringRanges
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceNetworkingConnectionSpec
 {
     /// <summary></summary>
@@ -57,6 +60,7 @@ public partial class V1beta1ServiceNetworkingConnectionSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceNetworkingConnectionStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -81,6 +85,7 @@ public partial class V1beta1ServiceNetworkingConnectionStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceNetworkingConnectionStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -96,8 +101,9 @@ public partial class V1beta1ServiceNetworkingConnectionStatus
     public string? Peering { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ServiceNetworkingConnection : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ServiceNetworkingConnectionSpec>, IStatus<V1beta1ServiceNetworkingConnectionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

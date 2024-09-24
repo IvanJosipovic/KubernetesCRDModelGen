@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iam.cnrm.cloud.google.com;
 /// <summary>An Amazon Web Services identity provider.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkloadIdentityPoolProviderSpecAws
 {
     /// <summary>Required. The AWS account ID.</summary>
@@ -21,6 +22,7 @@ public partial class V1beta1IAMWorkloadIdentityPoolProviderSpecAws
 }
 
 /// <summary>An OpenId Connect 1.0 identity provider.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkloadIdentityPoolProviderSpecOidc
 {
     /// <summary>Acceptable values for the `aud` field (audience) in the OIDC token. Token exchange requests are rejected if the token audience does not match one of the configured values. Each audience may be at most 256 characters. A maximum of 10 audiences may be configured. If this list is empty, the OIDC token audience must be equal to the full canonical resource name of the WorkloadIdentityPoolProvider, with or without the HTTPS prefix. For example: ``` //iam.googleapis.com/projects//locations//workloadIdentityPools//providers/ https://iam.googleapis.com/projects//locations//workloadIdentityPools//providers/ ```</summary>
@@ -33,6 +35,7 @@ public partial class V1beta1IAMWorkloadIdentityPoolProviderSpecOidc
 }
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkloadIdentityPoolProviderSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -49,6 +52,7 @@ public partial class V1beta1IAMWorkloadIdentityPoolProviderSpecProjectRef
 }
 
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkloadIdentityPoolProviderSpecWorkloadIdentityPoolRef
 {
     /// <summary>The workloadIdentityPool for the resource  Allowed value: The Google Cloud resource name of an `IAMWorkloadIdentityPool` resource (format: `projects/{{project}}/locations/{{location}}/workloadIdentityPools/{{name}}`).</summary>
@@ -65,6 +69,7 @@ public partial class V1beta1IAMWorkloadIdentityPoolProviderSpecWorkloadIdentityP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkloadIdentityPoolProviderSpec
 {
     /// <summary>[A Common Expression Language](https://opensource.google/projects/cel) expression, in plain text, to restrict what otherwise valid authentication credentials issued by the provider should not be accepted. The expression must output a boolean representing whether to allow the federation. The following keywords may be referenced in the expressions: * `assertion`: JSON representing the authentication credential issued by the provider. * `google`: The Google attributes mapped from the assertion in the `attribute_mappings`. * `attribute`: The custom attributes mapped from the assertion in the `attribute_mappings`. The maximum length of the attribute condition expression is 4096 characters. If unspecified, all valid authentication credential are accepted. The following example shows how to only allow credentials with a mapped `google.groups` value of `admins`: ``` "'admins' in google.groups" ```</summary>
@@ -113,6 +118,7 @@ public partial class V1beta1IAMWorkloadIdentityPoolProviderSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkloadIdentityPoolProviderStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -137,6 +143,7 @@ public partial class V1beta1IAMWorkloadIdentityPoolProviderStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkloadIdentityPoolProviderStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -152,8 +159,9 @@ public partial class V1beta1IAMWorkloadIdentityPoolProviderStatus
     public string? State { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1IAMWorkloadIdentityPoolProvider : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IAMWorkloadIdentityPoolProviderSpec>, IStatus<V1beta1IAMWorkloadIdentityPoolProviderStatus>
 {
     public const string KubeApiVersion = "v1beta1";

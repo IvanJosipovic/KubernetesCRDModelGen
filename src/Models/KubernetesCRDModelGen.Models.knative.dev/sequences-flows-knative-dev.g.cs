@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.flows.knative.dev;
 /// <summary>ChannelTemplate specifies which Channel CRD to use. If left unspecified, it is set to the default Channel CRD for the namespace (or cluster, in case there are no defaults for the namespace).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceSpecChannelTemplate
 {
     /// <summary>APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources</summary>
@@ -25,6 +26,7 @@ public partial class V1SequenceSpecChannelTemplate
 }
 
 /// <summary>Ref points to an Addressable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceSpecReplyRef
 {
     /// <summary>API version of the referent.</summary>
@@ -45,6 +47,7 @@ public partial class V1SequenceSpecReplyRef
 }
 
 /// <summary>Reply is a Reference to where the result of the last Subscriber gets sent to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceSpecReply
 {
     /// <summary>Ref points to an Addressable.</summary>
@@ -65,6 +68,7 @@ public partial class V1SequenceSpecReply
 }
 
 /// <summary>Ref points to an Addressable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceSpecStepsRef
 {
     /// <summary>API version of the referent.</summary>
@@ -85,6 +89,7 @@ public partial class V1SequenceSpecStepsRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceSpecSteps
 {
     /// <summary>Delivery is the delivery specification for events to the subscriber This includes things like retries, DLQ, etc.</summary>
@@ -109,6 +114,7 @@ public partial class V1SequenceSpecSteps
 }
 
 /// <summary>Spec defines the desired state of the Sequence.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceSpec
 {
     /// <summary>ChannelTemplate specifies which Channel CRD to use. If left unspecified, it is set to the default Channel CRD for the namespace (or cluster, in case there are no defaults for the namespace).</summary>
@@ -125,6 +131,7 @@ public partial class V1SequenceSpec
 }
 
 /// <summary>Sequence is Addressable. It exposes the endpoint as an URI to get events delivered into the Sequence.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceStatusAddress
 {
     /// <summary></summary>
@@ -145,6 +152,7 @@ public partial class V1SequenceStatusAddress
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceStatusAddresses
 {
     /// <summary></summary>
@@ -165,6 +173,7 @@ public partial class V1SequenceStatusAddresses
 }
 
 /// <summary>Auth provides the relevant information for OIDC authentication.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceStatusAuth
 {
     /// <summary>ServiceAccountName is the name of the generated service account used for this components OIDC authentication.</summary>
@@ -177,6 +186,7 @@ public partial class V1SequenceStatusAuth
 }
 
 /// <summary>Channel is the reference to the underlying channel.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceStatusChannelStatusesChannel
 {
     /// <summary>API version of the referent.</summary>
@@ -209,6 +219,7 @@ public partial class V1SequenceStatusChannelStatusesChannel
 }
 
 /// <summary>ReadyCondition indicates whether the Channel is ready or not.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceStatusChannelStatusesReady
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
@@ -237,6 +248,7 @@ public partial class V1SequenceStatusChannelStatusesReady
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceStatusChannelStatuses
 {
     /// <summary>Channel is the reference to the underlying channel.</summary>
@@ -249,6 +261,7 @@ public partial class V1SequenceStatusChannelStatuses
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceStatusPolicies
 {
     /// <summary>The API version of the applied EventPolicy. This indicates, which version of EventPolicy is supported by the resource.</summary>
@@ -261,6 +274,7 @@ public partial class V1SequenceStatusPolicies
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
@@ -289,6 +303,7 @@ public partial class V1SequenceStatusConditions
 }
 
 /// <summary>ReadyCondition indicates whether the Subscription is ready or not.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceStatusSubscriptionStatusesReady
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
@@ -317,6 +332,7 @@ public partial class V1SequenceStatusSubscriptionStatusesReady
 }
 
 /// <summary>Subscription is the reference to the underlying Subscription.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceStatusSubscriptionStatusesSubscription
 {
     /// <summary>API version of the referent.</summary>
@@ -349,6 +365,7 @@ public partial class V1SequenceStatusSubscriptionStatusesSubscription
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceStatusSubscriptionStatuses
 {
     /// <summary>ReadyCondition indicates whether the Subscription is ready or not.</summary>
@@ -361,6 +378,7 @@ public partial class V1SequenceStatusSubscriptionStatuses
 }
 
 /// <summary>Status represents the current state of the Sequence. This data may be out of date.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceStatus
 {
     /// <summary>Sequence is Addressable. It exposes the endpoint as an URI to get events delivered into the Sequence.</summary>
@@ -400,8 +418,9 @@ public partial class V1SequenceStatus
     public IList<V1SequenceStatusSubscriptionStatuses>? SubscriptionStatuses { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Sequence defines a sequence of Subscribers that will be wired in series through Channels and Subscriptions.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1Sequence : IKubernetesObject<V1ObjectMeta>, ISpec<V1SequenceSpec>, IStatus<V1SequenceStatus>
 {
     public const string KubeApiVersion = "v1";

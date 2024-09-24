@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleSpecMatchConfigLayer4Config
 {
     /// <summary>The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (tcp, udp, icmp, esp, ah, ipip, sctp), or the IP protocol number.</summary>
@@ -21,6 +22,7 @@ public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleSpecMatchConfi
 }
 
 /// <summary>The configuration options for matching the rule.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleSpecMatchConfig
 {
     /// <summary>Destination IP address range in CIDR format. Required for EGRESS rules.</summary>
@@ -37,6 +39,7 @@ public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleSpecMatchConfi
 }
 
 /// <summary>A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleSpecMatch
 {
     /// <summary>The configuration options for matching the rule.</summary>
@@ -53,6 +56,7 @@ public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleSpecMatch
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleSpec
 {
     /// <summary>The Action to perform when the client connection triggers the rule. Can currently be either "allow", "deny" or "goto_next".</summary>
@@ -97,6 +101,7 @@ public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -121,6 +126,7 @@ public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleStatusConditio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -132,8 +138,9 @@ public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1ComputeOrganizationSecurityPolicyRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputeOrganizationSecurityPolicyRuleSpec>, IStatus<V1alpha1ComputeOrganizationSecurityPolicyRuleStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionDiskResourcePolicyAttachmentSpecDiskRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeDisk` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1alpha1ComputeRegionDiskResourcePolicyAttachmentSpecDiskRe
 }
 
 /// <summary>The project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionDiskResourcePolicyAttachmentSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -41,6 +43,7 @@ public partial class V1alpha1ComputeRegionDiskResourcePolicyAttachmentSpecProjec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionDiskResourcePolicyAttachmentSpec
 {
     /// <summary></summary>
@@ -61,6 +64,7 @@ public partial class V1alpha1ComputeRegionDiskResourcePolicyAttachmentSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionDiskResourcePolicyAttachmentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -85,6 +89,7 @@ public partial class V1alpha1ComputeRegionDiskResourcePolicyAttachmentStatusCond
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionDiskResourcePolicyAttachmentStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -96,8 +101,9 @@ public partial class V1alpha1ComputeRegionDiskResourcePolicyAttachmentStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1ComputeRegionDiskResourcePolicyAttachment : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputeRegionDiskResourcePolicyAttachmentSpec>, IStatus<V1alpha1ComputeRegionDiskResourcePolicyAttachmentStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

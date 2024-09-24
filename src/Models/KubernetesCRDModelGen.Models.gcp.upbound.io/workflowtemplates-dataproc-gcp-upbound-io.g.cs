@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataproc.gcp.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1WorkflowTemplateSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1WorkflowTemplateSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderJobsHadoopJobLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -27,6 +29,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderJobsHadoopJobLoggingC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderJobsHadoopJob
 {
     /// <summary>HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.</summary>
@@ -63,6 +66,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderJobsHadoopJob
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderJobsHiveJobQueryList
 {
     /// <summary>Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }</summary>
@@ -71,6 +75,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderJobsHiveJobQueryList
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderJobsHiveJob
 {
     /// <summary>Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.</summary>
@@ -99,6 +104,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderJobsHiveJob
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderJobsPigJobLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -107,6 +113,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderJobsPigJobLoggingConf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderJobsPigJobQueryList
 {
     /// <summary>Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }</summary>
@@ -115,6 +122,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderJobsPigJobQueryList
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderJobsPigJob
 {
     /// <summary>Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.</summary>
@@ -147,6 +155,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderJobsPigJob
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderJobsPrestoJobLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -155,6 +164,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderJobsPrestoJobLoggingC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderJobsPrestoJobQueryList
 {
     /// <summary>Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }</summary>
@@ -163,6 +173,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderJobsPrestoJobQueryLis
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderJobsPrestoJob
 {
     /// <summary>Presto client tags to attach to this query</summary>
@@ -195,6 +206,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderJobsPrestoJob
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderJobsPysparkJobLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -203,6 +215,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderJobsPysparkJobLogging
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderJobsPysparkJob
 {
     /// <summary>HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.</summary>
@@ -239,6 +252,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderJobsPysparkJob
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderJobsScheduling
 {
     /// <summary>Maximum number of times per hour a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed. A job may be reported as thrashing if driver exits with non-zero code 4 times within 10 minute window. Maximum value is 10.</summary>
@@ -251,6 +265,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderJobsScheduling
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderJobsSparkJobLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -259,6 +274,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderJobsSparkJobLoggingCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderJobsSparkJob
 {
     /// <summary>HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.</summary>
@@ -295,6 +311,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderJobsSparkJob
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderJobsSparkRJobLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -303,6 +320,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderJobsSparkRJobLoggingC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderJobsSparkRJob
 {
     /// <summary>HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.</summary>
@@ -331,6 +349,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderJobsSparkRJob
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderJobsSparkSqlJobLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -339,6 +358,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderJobsSparkSqlJobLoggin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderJobsSparkSqlJobQueryList
 {
     /// <summary>Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }</summary>
@@ -347,6 +367,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderJobsSparkSqlJobQueryL
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderJobsSparkSqlJob
 {
     /// <summary>HCFS URIs of jar files to be added to the Spark CLASSPATH.</summary>
@@ -375,6 +396,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderJobsSparkSqlJob
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderJobs
 {
     /// <summary>Job is a Hadoop job.</summary>
@@ -427,6 +449,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderJobs
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderParametersValidationRegex
 {
     /// <summary>Required. RE2 regular expressions used to validate the parameter's value. The value must match the regex in its entirety (substring matches are not sufficient).</summary>
@@ -435,6 +458,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderParametersValidationR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderParametersValidationValues
 {
     /// <summary>Required. List of allowed values for the parameter.</summary>
@@ -443,6 +467,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderParametersValidationV
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderParametersValidation
 {
     /// <summary>Validation based on regular expressions.</summary>
@@ -455,6 +480,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderParametersValidation
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderParameters
 {
     /// <summary>Brief description of the parameter. Must not exceed 1024 characters.</summary>
@@ -475,6 +501,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderParameters
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderPlacementClusterSelector
 {
     /// <summary>Required. The cluster labels. Cluster must have all labels to match.</summary>
@@ -487,6 +514,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderPlacementClusterSelec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClusterConfigAutoscalingConfig
 {
     /// <summary>The autoscaling policy used by the cluster. Only resource names including projectid and location (region) are valid. Examples: * https://www.googleapis.com/compute/v1/projects/ Note that the policy must be in the same project and Dataproc region.</summary>
@@ -495,6 +523,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClust
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClusterConfigEncryptionConfig
 {
     /// <summary>The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.</summary>
@@ -503,6 +532,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClust
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClusterConfigEndpointConfig
 {
     /// <summary>If true, enable http access to specific ports on the cluster from external sources. Defaults to false.</summary>
@@ -511,6 +541,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClust
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity
 {
     /// <summary>Required. The URI of a sole-tenant /zones/us-central1-a/nodeGroups/node-group-1*node-group-1`</summary>
@@ -519,6 +550,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClust
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClusterConfigGceClusterConfigReservationAffinity
 {
     /// <summary>Type of reservation to consume Possible values: TYPE_UNSPECIFIED, NO_RESERVATION, ANY_RESERVATION, SPECIFIC_RESERVATION</summary>
@@ -535,6 +567,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClust
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfig
 {
     /// <summary>Defines whether instances have Integrity Monitoring enabled.</summary>
@@ -551,6 +584,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClust
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClusterConfigGceClusterConfig
 {
     /// <summary>If true, all instances in the cluster will only have internal IP addresses. By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. This internal_ip_only restriction can only be enabled for subnetwork enabled networks, and all off-cluster dependencies must be configured to be accessible without external IP addresses.</summary>
@@ -603,6 +637,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClust
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClusterConfigInitializationActions
 {
     /// <summary>Required. Cloud Storage URI of executable file.</summary>
@@ -615,6 +650,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClust
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClusterConfigLifecycleConfig
 {
     /// <summary>The time when cluster will be auto-deleted (see JSON representation of (https://developers.google.com/protocol-buffers/docs/proto3#json)).</summary>
@@ -631,6 +667,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClust
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClusterConfigMasterConfigAccelerators
 {
     /// <summary>The number of the accelerator cards of this type exposed to this instance.</summary>
@@ -643,6 +680,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClust
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClusterConfigMasterConfigDiskConfig
 {
     /// <summary>Size in GB of the boot disk (default is 500GB).</summary>
@@ -659,6 +697,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClust
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClusterConfigMasterConfig
 {
     /// <summary>The Compute Engine accelerator configuration for these instances.</summary>
@@ -691,6 +730,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClust
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClusterConfigSecondaryWorkerConfigAccelerators
 {
     /// <summary>The number of the accelerator cards of this type exposed to this instance.</summary>
@@ -703,6 +743,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClust
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig
 {
     /// <summary>Size in GB of the boot disk (default is 500GB).</summary>
@@ -719,6 +760,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClust
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClusterConfigSecondaryWorkerConfig
 {
     /// <summary>The Compute Engine accelerator configuration for these instances.</summary>
@@ -751,6 +793,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClust
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClusterConfigSecurityConfigKerberosConfig
 {
     /// <summary>The admin server (IP or hostname) for the remote trusted realm in a cross realm trust relationship.</summary>
@@ -815,6 +858,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClust
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClusterConfigSecurityConfig
 {
     /// <summary>Kerberos related configuration.</summary>
@@ -823,6 +867,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClust
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClusterConfigSoftwareConfig
 {
     /// <summary>The version of software inside the cluster. It must be one of the supported Dataproc Versions, such as "1.2" (including a subminor version, such as "1.2.29"), or the "preview" version. If unspecified, it defaults to the latest Debian version.</summary>
@@ -839,6 +884,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClust
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClusterConfigWorkerConfigAccelerators
 {
     /// <summary>The number of the accelerator cards of this type exposed to this instance.</summary>
@@ -851,6 +897,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClust
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClusterConfigWorkerConfigDiskConfig
 {
     /// <summary>Size in GB of the boot disk (default is 500GB).</summary>
@@ -867,6 +914,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClust
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClusterConfigWorkerConfig
 {
     /// <summary>The Compute Engine accelerator configuration for these instances.</summary>
@@ -899,6 +947,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClust
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClusterConfig
 {
     /// <summary>Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.</summary>
@@ -955,6 +1004,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClust
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedCluster
 {
     /// <summary>Required. The cluster name prefix. A unique cluster name will be formed by appending a random suffix. The name must contain only lower-case letters (a-z), numbers (0-9), and hyphens (-). Must begin with a letter. Cannot begin or end with hyphen. Must consist of between 2 and 35 characters.</summary>
@@ -971,6 +1021,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderPlacementManagedClust
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderPlacement
 {
     /// <summary>A selector that chooses target cluster for jobs based on metadata. The selector is evaluated at the time each job is submitted.</summary>
@@ -983,6 +1034,7 @@ public partial class V1beta1WorkflowTemplateSpecForProviderPlacement
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProvider
 {
     /// <summary>(Beta only) Optional. Timeout duration for the DAG of jobs. You can use "s", "m", "h", and "d" suffixes for second, minute, hour, and day duration values, respectively. The timeout duration must be from 10 minutes ("10m") to 24 hours ("24h" or "1d"). The timer begins when the first job is submitted. If the workflow is running at the end of the timeout period, any remaining jobs are cancelled, the workflow is ended, and if the workflow was running on a (/dataproc/docs/concepts/workflows/using-workflows#configuring_or_selecting_a_cluster), the cluster is deleted.</summary>
@@ -1019,6 +1071,7 @@ public partial class V1beta1WorkflowTemplateSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderJobsHadoopJobLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -1027,6 +1080,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderJobsHadoopJobLogging
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderJobsHadoopJob
 {
     /// <summary>HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.</summary>
@@ -1063,6 +1117,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderJobsHadoopJob
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderJobsHiveJobQueryList
 {
     /// <summary>Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }</summary>
@@ -1071,6 +1126,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderJobsHiveJobQueryList
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderJobsHiveJob
 {
     /// <summary>Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.</summary>
@@ -1099,6 +1155,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderJobsHiveJob
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderJobsPigJobLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -1107,6 +1164,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderJobsPigJobLoggingCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderJobsPigJobQueryList
 {
     /// <summary>Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }</summary>
@@ -1115,6 +1173,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderJobsPigJobQueryList
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderJobsPigJob
 {
     /// <summary>Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.</summary>
@@ -1147,6 +1206,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderJobsPigJob
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderJobsPrestoJobLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -1155,6 +1215,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderJobsPrestoJobLogging
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderJobsPrestoJobQueryList
 {
     /// <summary>Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }</summary>
@@ -1163,6 +1224,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderJobsPrestoJobQueryLi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderJobsPrestoJob
 {
     /// <summary>Presto client tags to attach to this query</summary>
@@ -1195,6 +1257,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderJobsPrestoJob
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderJobsPysparkJobLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -1203,6 +1266,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderJobsPysparkJobLoggin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderJobsPysparkJob
 {
     /// <summary>HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.</summary>
@@ -1239,6 +1303,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderJobsPysparkJob
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderJobsScheduling
 {
     /// <summary>Maximum number of times per hour a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed. A job may be reported as thrashing if driver exits with non-zero code 4 times within 10 minute window. Maximum value is 10.</summary>
@@ -1251,6 +1316,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderJobsScheduling
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderJobsSparkJobLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -1259,6 +1325,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderJobsSparkJobLoggingC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderJobsSparkJob
 {
     /// <summary>HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.</summary>
@@ -1295,6 +1362,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderJobsSparkJob
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderJobsSparkRJobLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -1303,6 +1371,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderJobsSparkRJobLogging
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderJobsSparkRJob
 {
     /// <summary>HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.</summary>
@@ -1331,6 +1400,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderJobsSparkRJob
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderJobsSparkSqlJobLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -1339,6 +1409,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderJobsSparkSqlJobLoggi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderJobsSparkSqlJobQueryList
 {
     /// <summary>Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }</summary>
@@ -1347,6 +1418,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderJobsSparkSqlJobQuery
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderJobsSparkSqlJob
 {
     /// <summary>HCFS URIs of jar files to be added to the Spark CLASSPATH.</summary>
@@ -1375,6 +1447,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderJobsSparkSqlJob
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderJobs
 {
     /// <summary>Job is a Hadoop job.</summary>
@@ -1427,6 +1500,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderJobs
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderParametersValidationRegex
 {
     /// <summary>Required. RE2 regular expressions used to validate the parameter's value. The value must match the regex in its entirety (substring matches are not sufficient).</summary>
@@ -1435,6 +1509,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderParametersValidation
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderParametersValidationValues
 {
     /// <summary>Required. List of allowed values for the parameter.</summary>
@@ -1443,6 +1518,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderParametersValidation
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderParametersValidation
 {
     /// <summary>Validation based on regular expressions.</summary>
@@ -1455,6 +1531,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderParametersValidation
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderParameters
 {
     /// <summary>Brief description of the parameter. Must not exceed 1024 characters.</summary>
@@ -1475,6 +1552,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderParameters
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementClusterSelector
 {
     /// <summary>Required. The cluster labels. Cluster must have all labels to match.</summary>
@@ -1487,6 +1565,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementClusterSele
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClusterConfigAutoscalingConfig
 {
     /// <summary>The autoscaling policy used by the cluster. Only resource names including projectid and location (region) are valid. Examples: * https://www.googleapis.com/compute/v1/projects/ Note that the policy must be in the same project and Dataproc region.</summary>
@@ -1495,6 +1574,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClusterConfigEncryptionConfig
 {
     /// <summary>The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.</summary>
@@ -1503,6 +1583,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClusterConfigEndpointConfig
 {
     /// <summary>If true, enable http access to specific ports on the cluster from external sources. Defaults to false.</summary>
@@ -1511,6 +1592,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity
 {
     /// <summary>Required. The URI of a sole-tenant /zones/us-central1-a/nodeGroups/node-group-1*node-group-1`</summary>
@@ -1519,6 +1601,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClusterConfigGceClusterConfigReservationAffinity
 {
     /// <summary>Type of reservation to consume Possible values: TYPE_UNSPECIFIED, NO_RESERVATION, ANY_RESERVATION, SPECIFIC_RESERVATION</summary>
@@ -1535,6 +1618,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfig
 {
     /// <summary>Defines whether instances have Integrity Monitoring enabled.</summary>
@@ -1551,6 +1635,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClusterConfigGceClusterConfig
 {
     /// <summary>If true, all instances in the cluster will only have internal IP addresses. By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. This internal_ip_only restriction can only be enabled for subnetwork enabled networks, and all off-cluster dependencies must be configured to be accessible without external IP addresses.</summary>
@@ -1603,6 +1688,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClusterConfigInitializationActions
 {
     /// <summary>Required. Cloud Storage URI of executable file.</summary>
@@ -1615,6 +1701,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClusterConfigLifecycleConfig
 {
     /// <summary>The time when cluster will be auto-deleted (see JSON representation of (https://developers.google.com/protocol-buffers/docs/proto3#json)).</summary>
@@ -1631,6 +1718,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClusterConfigMasterConfigAccelerators
 {
     /// <summary>The number of the accelerator cards of this type exposed to this instance.</summary>
@@ -1643,6 +1731,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClusterConfigMasterConfigDiskConfig
 {
     /// <summary>Size in GB of the boot disk (default is 500GB).</summary>
@@ -1659,6 +1748,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClusterConfigMasterConfig
 {
     /// <summary>The Compute Engine accelerator configuration for these instances.</summary>
@@ -1691,6 +1781,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClusterConfigSecondaryWorkerConfigAccelerators
 {
     /// <summary>The number of the accelerator cards of this type exposed to this instance.</summary>
@@ -1703,6 +1794,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig
 {
     /// <summary>Size in GB of the boot disk (default is 500GB).</summary>
@@ -1719,6 +1811,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClusterConfigSecondaryWorkerConfig
 {
     /// <summary>The Compute Engine accelerator configuration for these instances.</summary>
@@ -1751,6 +1844,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClusterConfigSecurityConfigKerberosConfig
 {
     /// <summary>The admin server (IP or hostname) for the remote trusted realm in a cross realm trust relationship.</summary>
@@ -1815,6 +1909,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClusterConfigSecurityConfig
 {
     /// <summary>Kerberos related configuration.</summary>
@@ -1823,6 +1918,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClusterConfigSoftwareConfig
 {
     /// <summary>The version of software inside the cluster. It must be one of the supported Dataproc Versions, such as "1.2" (including a subminor version, such as "1.2.29"), or the "preview" version. If unspecified, it defaults to the latest Debian version.</summary>
@@ -1839,6 +1935,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClusterConfigWorkerConfigAccelerators
 {
     /// <summary>The number of the accelerator cards of this type exposed to this instance.</summary>
@@ -1851,6 +1948,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClusterConfigWorkerConfigDiskConfig
 {
     /// <summary>Size in GB of the boot disk (default is 500GB).</summary>
@@ -1867,6 +1965,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClusterConfigWorkerConfig
 {
     /// <summary>The Compute Engine accelerator configuration for these instances.</summary>
@@ -1899,6 +1998,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClusterConfig
 {
     /// <summary>Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.</summary>
@@ -1955,6 +2055,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedCluster
 {
     /// <summary>Required. The cluster name prefix. A unique cluster name will be formed by appending a random suffix. The name must contain only lower-case letters (a-z), numbers (0-9), and hyphens (-). Must begin with a letter. Cannot begin or end with hyphen. Must consist of between 2 and 35 characters.</summary>
@@ -1971,6 +2072,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProviderPlacement
 {
     /// <summary>A selector that chooses target cluster for jobs based on metadata. The selector is evaluated at the time each job is submitted.</summary>
@@ -1983,6 +2085,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProviderPlacement
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecInitProvider
 {
     /// <summary>(Beta only) Optional. Timeout duration for the DAG of jobs. You can use "s", "m", "h", and "d" suffixes for second, minute, hour, and day duration values, respectively. The timeout duration must be from 10 minutes ("10m") to 24 hours ("24h" or "1d"). The timer begins when the first job is submitted. If the workflow is running at the end of the timeout period, any remaining jobs are cancelled, the workflow is ended, and if the workflow was running on a (/dataproc/docs/concepts/workflows/using-workflows#configuring_or_selecting_a_cluster), the cluster is deleted.</summary>
@@ -2014,6 +2117,7 @@ public partial class V1beta1WorkflowTemplateSpecInitProvider
     public double? Version { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1WorkflowTemplateSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -2036,6 +2140,7 @@ public enum V1beta1WorkflowTemplateSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1WorkflowTemplateSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2046,6 +2151,7 @@ public enum V1beta1WorkflowTemplateSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1WorkflowTemplateSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2057,6 +2163,7 @@ public enum V1beta1WorkflowTemplateSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2071,6 +2178,7 @@ public partial class V1beta1WorkflowTemplateSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2082,6 +2190,7 @@ public partial class V1beta1WorkflowTemplateSpecProviderConfigRef
     public V1beta1WorkflowTemplateSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1WorkflowTemplateSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2092,6 +2201,7 @@ public enum V1beta1WorkflowTemplateSpecPublishConnectionDetailsToConfigRefPolicy
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1WorkflowTemplateSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2103,6 +2213,7 @@ public enum V1beta1WorkflowTemplateSpecPublishConnectionDetailsToConfigRefPolicy
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2117,6 +2228,7 @@ public partial class V1beta1WorkflowTemplateSpecPublishConnectionDetailsToConfig
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2129,6 +2241,7 @@ public partial class V1beta1WorkflowTemplateSpecPublishConnectionDetailsToConfig
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -2145,6 +2258,7 @@ public partial class V1beta1WorkflowTemplateSpecPublishConnectionDetailsToMetada
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -2161,6 +2275,7 @@ public partial class V1beta1WorkflowTemplateSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -2173,6 +2288,7 @@ public partial class V1beta1WorkflowTemplateSpecWriteConnectionSecretToRef
 }
 
 /// <summary>WorkflowTemplateSpec defines the desired state of WorkflowTemplate</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -2206,6 +2322,7 @@ public partial class V1beta1WorkflowTemplateSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderJobsHadoopJobLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -2214,6 +2331,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderJobsHadoopJobLogging
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderJobsHadoopJob
 {
     /// <summary>HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.</summary>
@@ -2250,6 +2368,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderJobsHadoopJob
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderJobsHiveJobQueryList
 {
     /// <summary>Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }</summary>
@@ -2258,6 +2377,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderJobsHiveJobQueryList
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderJobsHiveJob
 {
     /// <summary>Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.</summary>
@@ -2286,6 +2406,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderJobsHiveJob
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderJobsPigJobLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -2294,6 +2415,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderJobsPigJobLoggingCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderJobsPigJobQueryList
 {
     /// <summary>Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }</summary>
@@ -2302,6 +2424,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderJobsPigJobQueryList
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderJobsPigJob
 {
     /// <summary>Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.</summary>
@@ -2334,6 +2457,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderJobsPigJob
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderJobsPrestoJobLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -2342,6 +2466,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderJobsPrestoJobLogging
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderJobsPrestoJobQueryList
 {
     /// <summary>Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }</summary>
@@ -2350,6 +2475,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderJobsPrestoJobQueryLi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderJobsPrestoJob
 {
     /// <summary>Presto client tags to attach to this query</summary>
@@ -2382,6 +2508,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderJobsPrestoJob
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderJobsPysparkJobLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -2390,6 +2517,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderJobsPysparkJobLoggin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderJobsPysparkJob
 {
     /// <summary>HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.</summary>
@@ -2426,6 +2554,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderJobsPysparkJob
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderJobsScheduling
 {
     /// <summary>Maximum number of times per hour a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed. A job may be reported as thrashing if driver exits with non-zero code 4 times within 10 minute window. Maximum value is 10.</summary>
@@ -2438,6 +2567,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderJobsScheduling
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderJobsSparkJobLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -2446,6 +2576,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderJobsSparkJobLoggingC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderJobsSparkJob
 {
     /// <summary>HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.</summary>
@@ -2482,6 +2613,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderJobsSparkJob
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderJobsSparkRJobLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -2490,6 +2622,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderJobsSparkRJobLogging
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderJobsSparkRJob
 {
     /// <summary>HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.</summary>
@@ -2518,6 +2651,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderJobsSparkRJob
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderJobsSparkSqlJobLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -2526,6 +2660,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderJobsSparkSqlJobLoggi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderJobsSparkSqlJobQueryList
 {
     /// <summary>Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }</summary>
@@ -2534,6 +2669,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderJobsSparkSqlJobQuery
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderJobsSparkSqlJob
 {
     /// <summary>HCFS URIs of jar files to be added to the Spark CLASSPATH.</summary>
@@ -2562,6 +2698,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderJobsSparkSqlJob
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderJobs
 {
     /// <summary>Job is a Hadoop job.</summary>
@@ -2614,6 +2751,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderJobs
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderParametersValidationRegex
 {
     /// <summary>Required. RE2 regular expressions used to validate the parameter's value. The value must match the regex in its entirety (substring matches are not sufficient).</summary>
@@ -2622,6 +2760,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderParametersValidation
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderParametersValidationValues
 {
     /// <summary>Required. List of allowed values for the parameter.</summary>
@@ -2630,6 +2769,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderParametersValidation
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderParametersValidation
 {
     /// <summary>Validation based on regular expressions.</summary>
@@ -2642,6 +2782,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderParametersValidation
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderParameters
 {
     /// <summary>Brief description of the parameter. Must not exceed 1024 characters.</summary>
@@ -2662,6 +2803,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderParameters
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementClusterSelector
 {
     /// <summary>Required. The cluster labels. Cluster must have all labels to match.</summary>
@@ -2674,6 +2816,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementClusterSele
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClusterConfigAutoscalingConfig
 {
     /// <summary>The autoscaling policy used by the cluster. Only resource names including projectid and location (region) are valid. Examples: * https://www.googleapis.com/compute/v1/projects/ Note that the policy must be in the same project and Dataproc region.</summary>
@@ -2682,6 +2825,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClusterConfigEncryptionConfig
 {
     /// <summary>The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.</summary>
@@ -2690,6 +2834,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClusterConfigEndpointConfig
 {
     /// <summary>If true, enable http access to specific ports on the cluster from external sources. Defaults to false.</summary>
@@ -2702,6 +2847,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity
 {
     /// <summary>Required. The URI of a sole-tenant /zones/us-central1-a/nodeGroups/node-group-1*node-group-1`</summary>
@@ -2710,6 +2856,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClusterConfigGceClusterConfigReservationAffinity
 {
     /// <summary>Type of reservation to consume Possible values: TYPE_UNSPECIFIED, NO_RESERVATION, ANY_RESERVATION, SPECIFIC_RESERVATION</summary>
@@ -2726,6 +2873,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfig
 {
     /// <summary>Defines whether instances have Integrity Monitoring enabled.</summary>
@@ -2742,6 +2890,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClusterConfigGceClusterConfig
 {
     /// <summary>If true, all instances in the cluster will only have internal IP addresses. By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. This internal_ip_only restriction can only be enabled for subnetwork enabled networks, and all off-cluster dependencies must be configured to be accessible without external IP addresses.</summary>
@@ -2794,6 +2943,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClusterConfigInitializationActions
 {
     /// <summary>Required. Cloud Storage URI of executable file.</summary>
@@ -2806,6 +2956,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClusterConfigLifecycleConfig
 {
     /// <summary>The time when cluster will be auto-deleted (see JSON representation of (https://developers.google.com/protocol-buffers/docs/proto3#json)).</summary>
@@ -2826,6 +2977,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClusterConfigMasterConfigAccelerators
 {
     /// <summary>The number of the accelerator cards of this type exposed to this instance.</summary>
@@ -2838,6 +2990,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClusterConfigMasterConfigDiskConfig
 {
     /// <summary>Size in GB of the boot disk (default is 500GB).</summary>
@@ -2854,6 +3007,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClusterConfigMasterConfigManagedGroupConfig
 {
     /// <summary>Output only. The resource name of the workflow template, as described in https://cloud.google.com/apis/design/resource_names. * For projects.regions.workflowTemplates, the resource name of the template has the following format: projects/{project_id}/regions/{region}/workflowTemplates/{template_id} * For projects.locations.workflowTemplates, the resource name of the template has the following format: projects/{project_id}/locations/{location}/workflowTemplates/{template_id}</summary>
@@ -2866,6 +3020,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClusterConfigMasterConfig
 {
     /// <summary>The Compute Engine accelerator configuration for these instances.</summary>
@@ -2910,6 +3065,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClusterConfigSecondaryWorkerConfigAccelerators
 {
     /// <summary>The number of the accelerator cards of this type exposed to this instance.</summary>
@@ -2922,6 +3078,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig
 {
     /// <summary>Size in GB of the boot disk (default is 500GB).</summary>
@@ -2938,6 +3095,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfig
 {
     /// <summary>Output only. The resource name of the workflow template, as described in https://cloud.google.com/apis/design/resource_names. * For projects.regions.workflowTemplates, the resource name of the template has the following format: projects/{project_id}/regions/{region}/workflowTemplates/{template_id} * For projects.locations.workflowTemplates, the resource name of the template has the following format: projects/{project_id}/locations/{location}/workflowTemplates/{template_id}</summary>
@@ -2950,6 +3108,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClusterConfigSecondaryWorkerConfig
 {
     /// <summary>The Compute Engine accelerator configuration for these instances.</summary>
@@ -2994,6 +3153,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClusterConfigSecurityConfigKerberosConfig
 {
     /// <summary>The admin server (IP or hostname) for the remote trusted realm in a cross realm trust relationship.</summary>
@@ -3058,6 +3218,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClusterConfigSecurityConfig
 {
     /// <summary>Kerberos related configuration.</summary>
@@ -3066,6 +3227,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClusterConfigSoftwareConfig
 {
     /// <summary>The version of software inside the cluster. It must be one of the supported Dataproc Versions, such as "1.2" (including a subminor version, such as "1.2.29"), or the "preview" version. If unspecified, it defaults to the latest Debian version.</summary>
@@ -3082,6 +3244,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClusterConfigWorkerConfigAccelerators
 {
     /// <summary>The number of the accelerator cards of this type exposed to this instance.</summary>
@@ -3094,6 +3257,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClusterConfigWorkerConfigDiskConfig
 {
     /// <summary>Size in GB of the boot disk (default is 500GB).</summary>
@@ -3110,6 +3274,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClusterConfigWorkerConfigManagedGroupConfig
 {
     /// <summary>Output only. The resource name of the workflow template, as described in https://cloud.google.com/apis/design/resource_names. * For projects.regions.workflowTemplates, the resource name of the template has the following format: projects/{project_id}/regions/{region}/workflowTemplates/{template_id} * For projects.locations.workflowTemplates, the resource name of the template has the following format: projects/{project_id}/locations/{location}/workflowTemplates/{template_id}</summary>
@@ -3122,6 +3287,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClusterConfigWorkerConfig
 {
     /// <summary>The Compute Engine accelerator configuration for these instances.</summary>
@@ -3166,6 +3332,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClusterConfig
 {
     /// <summary>Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.</summary>
@@ -3222,6 +3389,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedCluster
 {
     /// <summary>Required. The cluster name prefix. A unique cluster name will be formed by appending a random suffix. The name must contain only lower-case letters (a-z), numbers (0-9), and hyphens (-). Must begin with a letter. Cannot begin or end with hyphen. Must consist of between 2 and 35 characters.</summary>
@@ -3238,6 +3406,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderPlacementManagedClus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProviderPlacement
 {
     /// <summary>A selector that chooses target cluster for jobs based on metadata. The selector is evaluated at the time each job is submitted.</summary>
@@ -3250,6 +3419,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProviderPlacement
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusAtProvider
 {
     /// <summary>Output only. The time template was created.</summary>
@@ -3306,6 +3476,7 @@ public partial class V1beta1WorkflowTemplateStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -3334,6 +3505,7 @@ public partial class V1beta1WorkflowTemplateStatusConditions
 }
 
 /// <summary>WorkflowTemplateStatus defines the observed state of WorkflowTemplate.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateStatus
 {
     /// <summary></summary>
@@ -3349,8 +3521,9 @@ public partial class V1beta1WorkflowTemplateStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>WorkflowTemplate is the Schema for the WorkflowTemplates API. A Workflow Template is a reusable workflow configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1WorkflowTemplate : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1WorkflowTemplateSpec>, IStatus<V1beta1WorkflowTemplateStatus>
 {
     public const string KubeApiVersion = "v1beta1";

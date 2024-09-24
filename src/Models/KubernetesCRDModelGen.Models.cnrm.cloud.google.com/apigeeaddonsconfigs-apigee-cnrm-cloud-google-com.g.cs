@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigee.cnrm.cloud.google.com;
 /// <summary>Configuration for the Monetization add-on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfigAdvancedApiOpsConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -17,6 +18,7 @@ public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfigAdvancedApiOpsCon
 }
 
 /// <summary>Configuration for the Monetization add-on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfigApiSecurityConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -29,6 +31,7 @@ public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfigApiSecurityConfig
 }
 
 /// <summary>Configuration for the Monetization add-on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfigConnectorsPlatformConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -41,6 +44,7 @@ public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfigConnectorsPlatfor
 }
 
 /// <summary>Configuration for the Monetization add-on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfigIntegrationConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -49,6 +53,7 @@ public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfigIntegrationConfig
 }
 
 /// <summary>Configuration for the Monetization add-on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfigMonetizationConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -57,6 +62,7 @@ public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfigMonetizationConfi
 }
 
 /// <summary>Addon configurations of the Apigee organization.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfig
 {
     /// <summary>Configuration for the Monetization add-on.</summary>
@@ -81,6 +87,7 @@ public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApigeeAddonsConfigSpec
 {
     /// <summary>Addon configurations of the Apigee organization.</summary>
@@ -97,6 +104,7 @@ public partial class V1alpha1ApigeeAddonsConfigSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApigeeAddonsConfigStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -121,6 +129,7 @@ public partial class V1alpha1ApigeeAddonsConfigStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApigeeAddonsConfigStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -132,8 +141,9 @@ public partial class V1alpha1ApigeeAddonsConfigStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1ApigeeAddonsConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ApigeeAddonsConfigSpec>, IStatus<V1alpha1ApigeeAddonsConfigStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

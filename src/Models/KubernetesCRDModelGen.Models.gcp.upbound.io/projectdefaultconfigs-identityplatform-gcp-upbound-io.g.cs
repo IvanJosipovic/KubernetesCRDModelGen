@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.identityplatform.gcp.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ProjectDefaultConfigSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1ProjectDefaultConfigSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectDefaultConfigSpecForProviderSignInAnonymous
 {
     /// <summary>Whether phone number auth is enabled for the project or not.</summary>
@@ -27,6 +29,7 @@ public partial class V1beta1ProjectDefaultConfigSpecForProviderSignInAnonymous
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectDefaultConfigSpecForProviderSignInEmail
 {
     /// <summary>Whether phone number auth is enabled for the project or not.</summary>
@@ -39,6 +42,7 @@ public partial class V1beta1ProjectDefaultConfigSpecForProviderSignInEmail
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectDefaultConfigSpecForProviderSignInPhoneNumber
 {
     /// <summary>Whether phone number auth is enabled for the project or not.</summary>
@@ -51,6 +55,7 @@ public partial class V1beta1ProjectDefaultConfigSpecForProviderSignInPhoneNumber
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectDefaultConfigSpecForProviderSignIn
 {
     /// <summary>Whether to allow more than one account to have the same email.</summary>
@@ -71,6 +76,7 @@ public partial class V1beta1ProjectDefaultConfigSpecForProviderSignIn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectDefaultConfigSpecForProvider
 {
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
@@ -83,6 +89,7 @@ public partial class V1beta1ProjectDefaultConfigSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectDefaultConfigSpecInitProviderSignInAnonymous
 {
     /// <summary>Whether phone number auth is enabled for the project or not.</summary>
@@ -91,6 +98,7 @@ public partial class V1beta1ProjectDefaultConfigSpecInitProviderSignInAnonymous
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectDefaultConfigSpecInitProviderSignInEmail
 {
     /// <summary>Whether phone number auth is enabled for the project or not.</summary>
@@ -103,6 +111,7 @@ public partial class V1beta1ProjectDefaultConfigSpecInitProviderSignInEmail
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectDefaultConfigSpecInitProviderSignInPhoneNumber
 {
     /// <summary>Whether phone number auth is enabled for the project or not.</summary>
@@ -115,6 +124,7 @@ public partial class V1beta1ProjectDefaultConfigSpecInitProviderSignInPhoneNumbe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectDefaultConfigSpecInitProviderSignIn
 {
     /// <summary>Whether to allow more than one account to have the same email.</summary>
@@ -135,6 +145,7 @@ public partial class V1beta1ProjectDefaultConfigSpecInitProviderSignIn
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectDefaultConfigSpecInitProvider
 {
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
@@ -146,6 +157,7 @@ public partial class V1beta1ProjectDefaultConfigSpecInitProvider
     public IList<V1beta1ProjectDefaultConfigSpecInitProviderSignIn>? SignIn { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ProjectDefaultConfigSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -168,6 +180,7 @@ public enum V1beta1ProjectDefaultConfigSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ProjectDefaultConfigSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -178,6 +191,7 @@ public enum V1beta1ProjectDefaultConfigSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ProjectDefaultConfigSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -189,6 +203,7 @@ public enum V1beta1ProjectDefaultConfigSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectDefaultConfigSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -203,6 +218,7 @@ public partial class V1beta1ProjectDefaultConfigSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectDefaultConfigSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -214,6 +230,7 @@ public partial class V1beta1ProjectDefaultConfigSpecProviderConfigRef
     public V1beta1ProjectDefaultConfigSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ProjectDefaultConfigSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -224,6 +241,7 @@ public enum V1beta1ProjectDefaultConfigSpecPublishConnectionDetailsToConfigRefPo
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ProjectDefaultConfigSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -235,6 +253,7 @@ public enum V1beta1ProjectDefaultConfigSpecPublishConnectionDetailsToConfigRefPo
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectDefaultConfigSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -249,6 +268,7 @@ public partial class V1beta1ProjectDefaultConfigSpecPublishConnectionDetailsToCo
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectDefaultConfigSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -261,6 +281,7 @@ public partial class V1beta1ProjectDefaultConfigSpecPublishConnectionDetailsToCo
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectDefaultConfigSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -277,6 +298,7 @@ public partial class V1beta1ProjectDefaultConfigSpecPublishConnectionDetailsToMe
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectDefaultConfigSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -293,6 +315,7 @@ public partial class V1beta1ProjectDefaultConfigSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectDefaultConfigSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -305,6 +328,7 @@ public partial class V1beta1ProjectDefaultConfigSpecWriteConnectionSecretToRef
 }
 
 /// <summary>ProjectDefaultConfigSpec defines the desired state of ProjectDefaultConfig</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectDefaultConfigSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -338,6 +362,7 @@ public partial class V1beta1ProjectDefaultConfigSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectDefaultConfigStatusAtProviderSignInAnonymous
 {
     /// <summary>Whether phone number auth is enabled for the project or not.</summary>
@@ -346,6 +371,7 @@ public partial class V1beta1ProjectDefaultConfigStatusAtProviderSignInAnonymous
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectDefaultConfigStatusAtProviderSignInEmail
 {
     /// <summary>Whether phone number auth is enabled for the project or not.</summary>
@@ -358,6 +384,7 @@ public partial class V1beta1ProjectDefaultConfigStatusAtProviderSignInEmail
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectDefaultConfigStatusAtProviderSignInHashConfig
 {
     /// <summary>(Output) Different password hash algorithms used in Identity Toolkit.</summary>
@@ -382,6 +409,7 @@ public partial class V1beta1ProjectDefaultConfigStatusAtProviderSignInHashConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectDefaultConfigStatusAtProviderSignInPhoneNumber
 {
     /// <summary>Whether phone number auth is enabled for the project or not.</summary>
@@ -394,6 +422,7 @@ public partial class V1beta1ProjectDefaultConfigStatusAtProviderSignInPhoneNumbe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectDefaultConfigStatusAtProviderSignIn
 {
     /// <summary>Whether to allow more than one account to have the same email.</summary>
@@ -418,6 +447,7 @@ public partial class V1beta1ProjectDefaultConfigStatusAtProviderSignIn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectDefaultConfigStatusAtProvider
 {
     /// <summary>an identifier for the resource with format {{project}}</summary>
@@ -438,6 +468,7 @@ public partial class V1beta1ProjectDefaultConfigStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectDefaultConfigStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -466,6 +497,7 @@ public partial class V1beta1ProjectDefaultConfigStatusConditions
 }
 
 /// <summary>ProjectDefaultConfigStatus defines the observed state of ProjectDefaultConfig.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectDefaultConfigStatus
 {
     /// <summary></summary>
@@ -481,8 +513,9 @@ public partial class V1beta1ProjectDefaultConfigStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>ProjectDefaultConfig is the Schema for the ProjectDefaultConfigs API. There is no persistent data associated with this resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ProjectDefaultConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ProjectDefaultConfigSpec>, IStatus<V1beta1ProjectDefaultConfigStatus>
 {
     public const string KubeApiVersion = "v1beta1";

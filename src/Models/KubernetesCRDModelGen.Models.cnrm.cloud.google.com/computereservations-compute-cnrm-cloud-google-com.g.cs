@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeReservationSpecSpecificReservationInstancePropertiesGuestAccelerators
 {
     /// <summary>Immutable. The number of the guest accelerator cards exposed to this instance.</summary>
@@ -21,6 +22,7 @@ public partial class V1beta1ComputeReservationSpecSpecificReservationInstancePro
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeReservationSpecSpecificReservationInstancePropertiesLocalSsds
 {
     /// <summary>Immutable. The size of the disk in base-2 GB.</summary>
@@ -33,6 +35,7 @@ public partial class V1beta1ComputeReservationSpecSpecificReservationInstancePro
 }
 
 /// <summary>Immutable. The instance properties for the reservation.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeReservationSpecSpecificReservationInstanceProperties
 {
     /// <summary>Immutable. Guest accelerator type and count.</summary>
@@ -53,6 +56,7 @@ public partial class V1beta1ComputeReservationSpecSpecificReservationInstancePro
 }
 
 /// <summary>Reservation for instances with specific machine shapes.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeReservationSpecSpecificReservation
 {
     /// <summary>The number of resources that are allocated.</summary>
@@ -69,6 +73,7 @@ public partial class V1beta1ComputeReservationSpecSpecificReservation
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeReservationSpec
 {
     /// <summary>Immutable. An optional description of this resource.</summary>
@@ -93,6 +98,7 @@ public partial class V1beta1ComputeReservationSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeReservationStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -117,6 +123,7 @@ public partial class V1beta1ComputeReservationStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeReservationStatus
 {
     /// <summary>Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.</summary>
@@ -144,8 +151,9 @@ public partial class V1beta1ComputeReservationStatus
     public string? Status { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ComputeReservation : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeReservationSpec>, IStatus<V1beta1ComputeReservationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

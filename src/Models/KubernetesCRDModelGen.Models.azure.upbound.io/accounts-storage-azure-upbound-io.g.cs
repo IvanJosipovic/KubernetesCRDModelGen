@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.azure.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AccountSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1AccountSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderAzureFilesAuthenticationActiveDirectory
 {
     /// <summary>Specifies the domain GUID.</summary>
@@ -47,6 +49,7 @@ public partial class V1beta1AccountSpecForProviderAzureFilesAuthenticationActive
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderAzureFilesAuthentication
 {
     /// <summary>A active_directory block as defined below. Required when directory_type is AD.</summary>
@@ -59,6 +62,7 @@ public partial class V1beta1AccountSpecForProviderAzureFilesAuthentication
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderBlobPropertiesContainerDeleteRetentionPolicy
 {
     /// <summary>Specifies the number of days that the azurerm_storage_share should be retained, between 1 and 365 days. Defaults to 7.</summary>
@@ -67,6 +71,7 @@ public partial class V1beta1AccountSpecForProviderBlobPropertiesContainerDeleteR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderBlobPropertiesCorsRule
 {
     /// <summary>A list of headers that are allowed to be a part of the cross-origin request.</summary>
@@ -91,6 +96,7 @@ public partial class V1beta1AccountSpecForProviderBlobPropertiesCorsRule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderBlobPropertiesDeleteRetentionPolicy
 {
     /// <summary>Specifies the number of days that the azurerm_storage_share should be retained, between 1 and 365 days. Defaults to 7.</summary>
@@ -99,6 +105,7 @@ public partial class V1beta1AccountSpecForProviderBlobPropertiesDeleteRetentionP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderBlobPropertiesRestorePolicy
 {
     /// <summary>Specifies the number of days that the azurerm_storage_share should be retained, between 1 and 365 days. Defaults to 7.</summary>
@@ -107,6 +114,7 @@ public partial class V1beta1AccountSpecForProviderBlobPropertiesRestorePolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderBlobProperties
 {
     /// <summary>Is the blob service properties for change feed events enabled? Default to false.</summary>
@@ -147,6 +155,7 @@ public partial class V1beta1AccountSpecForProviderBlobProperties
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderCustomDomain
 {
     /// <summary>The Custom Domain Name to use for the Storage Account, which will be validated by Azure.</summary>
@@ -159,6 +168,7 @@ public partial class V1beta1AccountSpecForProviderCustomDomain
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderCustomerManagedKey
 {
     /// <summary>The ID of the Key Vault Key, supplying a version-less key ID will enable auto-rotation of this key.</summary>
@@ -171,6 +181,7 @@ public partial class V1beta1AccountSpecForProviderCustomerManagedKey
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Storage Account.</summary>
@@ -183,6 +194,7 @@ public partial class V1beta1AccountSpecForProviderIdentity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderImmutabilityPolicy
 {
     /// <summary>When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted.</summary>
@@ -199,6 +211,7 @@ public partial class V1beta1AccountSpecForProviderImmutabilityPolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderNetworkRulesPrivateLinkAccess
 {
     /// <summary>The ID of the Azure resource that should be allowed access to the target storage account.</summary>
@@ -211,6 +224,7 @@ public partial class V1beta1AccountSpecForProviderNetworkRulesPrivateLinkAccess
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderNetworkRules
 {
     /// <summary>Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Valid options are any combination of Logging, Metrics, AzureServices, or None.</summary>
@@ -235,6 +249,7 @@ public partial class V1beta1AccountSpecForProviderNetworkRules
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderQueuePropertiesCorsRule
 {
     /// <summary>A list of headers that are allowed to be a part of the cross-origin request.</summary>
@@ -259,6 +274,7 @@ public partial class V1beta1AccountSpecForProviderQueuePropertiesCorsRule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderQueuePropertiesHourMetrics
 {
     /// <summary>Indicates whether minute metrics are enabled for the Queue service.</summary>
@@ -279,6 +295,7 @@ public partial class V1beta1AccountSpecForProviderQueuePropertiesHourMetrics
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderQueuePropertiesLogging
 {
     /// <summary>(Defaults to 60 minutes) Used when deleting the Storage Account.</summary>
@@ -303,6 +320,7 @@ public partial class V1beta1AccountSpecForProviderQueuePropertiesLogging
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderQueuePropertiesMinuteMetrics
 {
     /// <summary>Indicates whether minute metrics are enabled for the Queue service.</summary>
@@ -323,6 +341,7 @@ public partial class V1beta1AccountSpecForProviderQueuePropertiesMinuteMetrics
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderQueueProperties
 {
     /// <summary>A cors_rule block as defined above.</summary>
@@ -342,6 +361,7 @@ public partial class V1beta1AccountSpecForProviderQueueProperties
     public IList<V1beta1AccountSpecForProviderQueuePropertiesMinuteMetrics>? MinuteMetrics { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AccountSpecForProviderResourceGroupNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -352,6 +372,7 @@ public enum V1beta1AccountSpecForProviderResourceGroupNameRefPolicyResolutionEnu
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AccountSpecForProviderResourceGroupNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -363,6 +384,7 @@ public enum V1beta1AccountSpecForProviderResourceGroupNameRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -377,6 +399,7 @@ public partial class V1beta1AccountSpecForProviderResourceGroupNameRefPolicy
 }
 
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -388,6 +411,7 @@ public partial class V1beta1AccountSpecForProviderResourceGroupNameRef
     public V1beta1AccountSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AccountSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -398,6 +422,7 @@ public enum V1beta1AccountSpecForProviderResourceGroupNameSelectorPolicyResoluti
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AccountSpecForProviderResourceGroupNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -409,6 +434,7 @@ public enum V1beta1AccountSpecForProviderResourceGroupNameSelectorPolicyResolveE
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -423,6 +449,7 @@ public partial class V1beta1AccountSpecForProviderResourceGroupNameSelectorPolic
 }
 
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -439,6 +466,7 @@ public partial class V1beta1AccountSpecForProviderResourceGroupNameSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderRouting
 {
     /// <summary>Specifies the kind of network routing opted by the user. Possible values are InternetRouting and MicrosoftRouting. Defaults to MicrosoftRouting.</summary>
@@ -455,6 +483,7 @@ public partial class V1beta1AccountSpecForProviderRouting
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderSasPolicy
 {
     /// <summary>The SAS expiration action. The only possible value is Log at this moment. Defaults to Log.</summary>
@@ -467,6 +496,7 @@ public partial class V1beta1AccountSpecForProviderSasPolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderSharePropertiesCorsRule
 {
     /// <summary>A list of headers that are allowed to be a part of the cross-origin request.</summary>
@@ -491,6 +521,7 @@ public partial class V1beta1AccountSpecForProviderSharePropertiesCorsRule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderSharePropertiesRetentionPolicy
 {
     /// <summary>Specifies the number of days that the azurerm_storage_share should be retained, between 1 and 365 days. Defaults to 7.</summary>
@@ -499,6 +530,7 @@ public partial class V1beta1AccountSpecForProviderSharePropertiesRetentionPolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderSharePropertiesSmb
 {
     /// <summary>A set of SMB authentication methods. Possible values are NTLMv2, and Kerberos.</summary>
@@ -523,6 +555,7 @@ public partial class V1beta1AccountSpecForProviderSharePropertiesSmb
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderShareProperties
 {
     /// <summary>A cors_rule block as defined below.</summary>
@@ -539,6 +572,7 @@ public partial class V1beta1AccountSpecForProviderShareProperties
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderStaticWebsite
 {
     /// <summary>The absolute path to a custom webpage that should be used when a request is made which does not correspond to an existing file.</summary>
@@ -551,6 +585,7 @@ public partial class V1beta1AccountSpecForProviderStaticWebsite
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProvider
 {
     /// <summary>Defines the access tier for BlobStorage, FileStorage and StorageV2 accounts. Valid options are Hot and Cool, defaults to Hot.</summary>
@@ -707,6 +742,7 @@ public partial class V1beta1AccountSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProviderAzureFilesAuthenticationActiveDirectory
 {
     /// <summary>Specifies the domain GUID.</summary>
@@ -735,6 +771,7 @@ public partial class V1beta1AccountSpecInitProviderAzureFilesAuthenticationActiv
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProviderAzureFilesAuthentication
 {
     /// <summary>A active_directory block as defined below. Required when directory_type is AD.</summary>
@@ -747,6 +784,7 @@ public partial class V1beta1AccountSpecInitProviderAzureFilesAuthentication
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProviderBlobPropertiesContainerDeleteRetentionPolicy
 {
     /// <summary>Specifies the number of days that the azurerm_storage_share should be retained, between 1 and 365 days. Defaults to 7.</summary>
@@ -755,6 +793,7 @@ public partial class V1beta1AccountSpecInitProviderBlobPropertiesContainerDelete
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProviderBlobPropertiesCorsRule
 {
     /// <summary>A list of headers that are allowed to be a part of the cross-origin request.</summary>
@@ -779,6 +818,7 @@ public partial class V1beta1AccountSpecInitProviderBlobPropertiesCorsRule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProviderBlobPropertiesDeleteRetentionPolicy
 {
     /// <summary>Specifies the number of days that the azurerm_storage_share should be retained, between 1 and 365 days. Defaults to 7.</summary>
@@ -787,6 +827,7 @@ public partial class V1beta1AccountSpecInitProviderBlobPropertiesDeleteRetention
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProviderBlobPropertiesRestorePolicy
 {
     /// <summary>Specifies the number of days that the azurerm_storage_share should be retained, between 1 and 365 days. Defaults to 7.</summary>
@@ -795,6 +836,7 @@ public partial class V1beta1AccountSpecInitProviderBlobPropertiesRestorePolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProviderBlobProperties
 {
     /// <summary>Is the blob service properties for change feed events enabled? Default to false.</summary>
@@ -835,6 +877,7 @@ public partial class V1beta1AccountSpecInitProviderBlobProperties
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProviderCustomDomain
 {
     /// <summary>The Custom Domain Name to use for the Storage Account, which will be validated by Azure.</summary>
@@ -847,6 +890,7 @@ public partial class V1beta1AccountSpecInitProviderCustomDomain
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProviderCustomerManagedKey
 {
     /// <summary>The ID of the Key Vault Key, supplying a version-less key ID will enable auto-rotation of this key.</summary>
@@ -859,6 +903,7 @@ public partial class V1beta1AccountSpecInitProviderCustomerManagedKey
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Storage Account.</summary>
@@ -871,6 +916,7 @@ public partial class V1beta1AccountSpecInitProviderIdentity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProviderImmutabilityPolicy
 {
     /// <summary>When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted.</summary>
@@ -887,6 +933,7 @@ public partial class V1beta1AccountSpecInitProviderImmutabilityPolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProviderNetworkRulesPrivateLinkAccess
 {
     /// <summary>The ID of the Azure resource that should be allowed access to the target storage account.</summary>
@@ -899,6 +946,7 @@ public partial class V1beta1AccountSpecInitProviderNetworkRulesPrivateLinkAccess
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProviderNetworkRules
 {
     /// <summary>Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Valid options are any combination of Logging, Metrics, AzureServices, or None.</summary>
@@ -923,6 +971,7 @@ public partial class V1beta1AccountSpecInitProviderNetworkRules
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProviderQueuePropertiesCorsRule
 {
     /// <summary>A list of headers that are allowed to be a part of the cross-origin request.</summary>
@@ -947,6 +996,7 @@ public partial class V1beta1AccountSpecInitProviderQueuePropertiesCorsRule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProviderQueuePropertiesHourMetrics
 {
     /// <summary>Indicates whether minute metrics are enabled for the Queue service.</summary>
@@ -967,6 +1017,7 @@ public partial class V1beta1AccountSpecInitProviderQueuePropertiesHourMetrics
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProviderQueuePropertiesLogging
 {
     /// <summary>(Defaults to 60 minutes) Used when deleting the Storage Account.</summary>
@@ -991,6 +1042,7 @@ public partial class V1beta1AccountSpecInitProviderQueuePropertiesLogging
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProviderQueuePropertiesMinuteMetrics
 {
     /// <summary>Indicates whether minute metrics are enabled for the Queue service.</summary>
@@ -1011,6 +1063,7 @@ public partial class V1beta1AccountSpecInitProviderQueuePropertiesMinuteMetrics
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProviderQueueProperties
 {
     /// <summary>A cors_rule block as defined above.</summary>
@@ -1031,6 +1084,7 @@ public partial class V1beta1AccountSpecInitProviderQueueProperties
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProviderRouting
 {
     /// <summary>Specifies the kind of network routing opted by the user. Possible values are InternetRouting and MicrosoftRouting. Defaults to MicrosoftRouting.</summary>
@@ -1047,6 +1101,7 @@ public partial class V1beta1AccountSpecInitProviderRouting
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProviderSasPolicy
 {
     /// <summary>The SAS expiration action. The only possible value is Log at this moment. Defaults to Log.</summary>
@@ -1059,6 +1114,7 @@ public partial class V1beta1AccountSpecInitProviderSasPolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProviderSharePropertiesCorsRule
 {
     /// <summary>A list of headers that are allowed to be a part of the cross-origin request.</summary>
@@ -1083,6 +1139,7 @@ public partial class V1beta1AccountSpecInitProviderSharePropertiesCorsRule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProviderSharePropertiesRetentionPolicy
 {
     /// <summary>Specifies the number of days that the azurerm_storage_share should be retained, between 1 and 365 days. Defaults to 7.</summary>
@@ -1091,6 +1148,7 @@ public partial class V1beta1AccountSpecInitProviderSharePropertiesRetentionPolic
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProviderSharePropertiesSmb
 {
     /// <summary>A set of SMB authentication methods. Possible values are NTLMv2, and Kerberos.</summary>
@@ -1115,6 +1173,7 @@ public partial class V1beta1AccountSpecInitProviderSharePropertiesSmb
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProviderShareProperties
 {
     /// <summary>A cors_rule block as defined below.</summary>
@@ -1131,6 +1190,7 @@ public partial class V1beta1AccountSpecInitProviderShareProperties
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProviderStaticWebsite
 {
     /// <summary>The absolute path to a custom webpage that should be used when a request is made which does not correspond to an existing file.</summary>
@@ -1143,6 +1203,7 @@ public partial class V1beta1AccountSpecInitProviderStaticWebsite
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProvider
 {
     /// <summary>Defines the access tier for BlobStorage, FileStorage and StorageV2 accounts. Valid options are Hot and Cool, defaults to Hot.</summary>
@@ -1286,6 +1347,7 @@ public partial class V1beta1AccountSpecInitProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AccountSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -1308,6 +1370,7 @@ public enum V1beta1AccountSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AccountSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1318,6 +1381,7 @@ public enum V1beta1AccountSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AccountSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1329,6 +1393,7 @@ public enum V1beta1AccountSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1343,6 +1408,7 @@ public partial class V1beta1AccountSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1354,6 +1420,7 @@ public partial class V1beta1AccountSpecProviderConfigRef
     public V1beta1AccountSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AccountSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1364,6 +1431,7 @@ public enum V1beta1AccountSpecPublishConnectionDetailsToConfigRefPolicyResolutio
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AccountSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1375,6 +1443,7 @@ public enum V1beta1AccountSpecPublishConnectionDetailsToConfigRefPolicyResolveEn
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1389,6 +1458,7 @@ public partial class V1beta1AccountSpecPublishConnectionDetailsToConfigRefPolicy
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1401,6 +1471,7 @@ public partial class V1beta1AccountSpecPublishConnectionDetailsToConfigRef
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1417,6 +1488,7 @@ public partial class V1beta1AccountSpecPublishConnectionDetailsToMetadata
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1433,6 +1505,7 @@ public partial class V1beta1AccountSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1445,6 +1518,7 @@ public partial class V1beta1AccountSpecWriteConnectionSecretToRef
 }
 
 /// <summary>AccountSpec defines the desired state of Account</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1478,6 +1552,7 @@ public partial class V1beta1AccountSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProviderAzureFilesAuthenticationActiveDirectory
 {
     /// <summary>Specifies the domain GUID.</summary>
@@ -1506,6 +1581,7 @@ public partial class V1beta1AccountStatusAtProviderAzureFilesAuthenticationActiv
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProviderAzureFilesAuthentication
 {
     /// <summary>A active_directory block as defined below. Required when directory_type is AD.</summary>
@@ -1518,6 +1594,7 @@ public partial class V1beta1AccountStatusAtProviderAzureFilesAuthentication
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProviderBlobPropertiesContainerDeleteRetentionPolicy
 {
     /// <summary>Specifies the number of days that the azurerm_storage_share should be retained, between 1 and 365 days. Defaults to 7.</summary>
@@ -1526,6 +1603,7 @@ public partial class V1beta1AccountStatusAtProviderBlobPropertiesContainerDelete
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProviderBlobPropertiesCorsRule
 {
     /// <summary>A list of headers that are allowed to be a part of the cross-origin request.</summary>
@@ -1550,6 +1628,7 @@ public partial class V1beta1AccountStatusAtProviderBlobPropertiesCorsRule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProviderBlobPropertiesDeleteRetentionPolicy
 {
     /// <summary>Specifies the number of days that the azurerm_storage_share should be retained, between 1 and 365 days. Defaults to 7.</summary>
@@ -1558,6 +1637,7 @@ public partial class V1beta1AccountStatusAtProviderBlobPropertiesDeleteRetention
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProviderBlobPropertiesRestorePolicy
 {
     /// <summary>Specifies the number of days that the azurerm_storage_share should be retained, between 1 and 365 days. Defaults to 7.</summary>
@@ -1566,6 +1646,7 @@ public partial class V1beta1AccountStatusAtProviderBlobPropertiesRestorePolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProviderBlobProperties
 {
     /// <summary>Is the blob service properties for change feed events enabled? Default to false.</summary>
@@ -1606,6 +1687,7 @@ public partial class V1beta1AccountStatusAtProviderBlobProperties
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProviderCustomDomain
 {
     /// <summary>The Custom Domain Name to use for the Storage Account, which will be validated by Azure.</summary>
@@ -1618,6 +1700,7 @@ public partial class V1beta1AccountStatusAtProviderCustomDomain
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProviderCustomerManagedKey
 {
     /// <summary>The ID of the Key Vault Key, supplying a version-less key ID will enable auto-rotation of this key.</summary>
@@ -1630,6 +1713,7 @@ public partial class V1beta1AccountStatusAtProviderCustomerManagedKey
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Storage Account.</summary>
@@ -1650,6 +1734,7 @@ public partial class V1beta1AccountStatusAtProviderIdentity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProviderImmutabilityPolicy
 {
     /// <summary>When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted.</summary>
@@ -1666,6 +1751,7 @@ public partial class V1beta1AccountStatusAtProviderImmutabilityPolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProviderNetworkRulesPrivateLinkAccess
 {
     /// <summary>The ID of the Azure resource that should be allowed access to the target storage account.</summary>
@@ -1678,6 +1764,7 @@ public partial class V1beta1AccountStatusAtProviderNetworkRulesPrivateLinkAccess
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProviderNetworkRules
 {
     /// <summary>Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Valid options are any combination of Logging, Metrics, AzureServices, or None.</summary>
@@ -1702,6 +1789,7 @@ public partial class V1beta1AccountStatusAtProviderNetworkRules
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProviderQueuePropertiesCorsRule
 {
     /// <summary>A list of headers that are allowed to be a part of the cross-origin request.</summary>
@@ -1726,6 +1814,7 @@ public partial class V1beta1AccountStatusAtProviderQueuePropertiesCorsRule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProviderQueuePropertiesHourMetrics
 {
     /// <summary>Indicates whether minute metrics are enabled for the Queue service.</summary>
@@ -1746,6 +1835,7 @@ public partial class V1beta1AccountStatusAtProviderQueuePropertiesHourMetrics
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProviderQueuePropertiesLogging
 {
     /// <summary>(Defaults to 60 minutes) Used when deleting the Storage Account.</summary>
@@ -1770,6 +1860,7 @@ public partial class V1beta1AccountStatusAtProviderQueuePropertiesLogging
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProviderQueuePropertiesMinuteMetrics
 {
     /// <summary>Indicates whether minute metrics are enabled for the Queue service.</summary>
@@ -1790,6 +1881,7 @@ public partial class V1beta1AccountStatusAtProviderQueuePropertiesMinuteMetrics
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProviderQueueProperties
 {
     /// <summary>A cors_rule block as defined above.</summary>
@@ -1810,6 +1902,7 @@ public partial class V1beta1AccountStatusAtProviderQueueProperties
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProviderRouting
 {
     /// <summary>Specifies the kind of network routing opted by the user. Possible values are InternetRouting and MicrosoftRouting. Defaults to MicrosoftRouting.</summary>
@@ -1826,6 +1919,7 @@ public partial class V1beta1AccountStatusAtProviderRouting
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProviderSasPolicy
 {
     /// <summary>The SAS expiration action. The only possible value is Log at this moment. Defaults to Log.</summary>
@@ -1838,6 +1932,7 @@ public partial class V1beta1AccountStatusAtProviderSasPolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProviderSharePropertiesCorsRule
 {
     /// <summary>A list of headers that are allowed to be a part of the cross-origin request.</summary>
@@ -1862,6 +1957,7 @@ public partial class V1beta1AccountStatusAtProviderSharePropertiesCorsRule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProviderSharePropertiesRetentionPolicy
 {
     /// <summary>Specifies the number of days that the azurerm_storage_share should be retained, between 1 and 365 days. Defaults to 7.</summary>
@@ -1870,6 +1966,7 @@ public partial class V1beta1AccountStatusAtProviderSharePropertiesRetentionPolic
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProviderSharePropertiesSmb
 {
     /// <summary>A set of SMB authentication methods. Possible values are NTLMv2, and Kerberos.</summary>
@@ -1894,6 +1991,7 @@ public partial class V1beta1AccountStatusAtProviderSharePropertiesSmb
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProviderShareProperties
 {
     /// <summary>A cors_rule block as defined below.</summary>
@@ -1910,6 +2008,7 @@ public partial class V1beta1AccountStatusAtProviderShareProperties
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProviderStaticWebsite
 {
     /// <summary>The absolute path to a custom webpage that should be used when a request is made which does not correspond to an existing file.</summary>
@@ -1922,6 +2021,7 @@ public partial class V1beta1AccountStatusAtProviderStaticWebsite
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProvider
 {
     /// <summary>Defines the access tier for BlobStorage, FileStorage and StorageV2 accounts. Valid options are Hot and Cool, defaults to Hot.</summary>
@@ -2338,6 +2438,7 @@ public partial class V1beta1AccountStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2366,6 +2467,7 @@ public partial class V1beta1AccountStatusConditions
 }
 
 /// <summary>AccountStatus defines the observed state of Account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatus
 {
     /// <summary></summary>
@@ -2381,8 +2483,9 @@ public partial class V1beta1AccountStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Account is the Schema for the Accounts API. Manages a Azure Storage Account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Account : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AccountSpec>, IStatus<V1beta1AccountStatus>
 {
     public const string KubeApiVersion = "v1beta1";

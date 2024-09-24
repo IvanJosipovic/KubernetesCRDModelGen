@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cdn.azure.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EndpointSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1EndpointSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleCacheExpirationAction
 {
     /// <summary>The behavior of the cache key for query strings. Valid values are Exclude, ExcludeAll, Include and IncludeAll.</summary>
@@ -31,6 +33,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleCacheExpirationAc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleCacheKeyQueryStringAction
 {
     /// <summary>The behavior of the cache key for query strings. Valid values are Exclude, ExcludeAll, Include and IncludeAll.</summary>
@@ -43,6 +46,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleCacheKeyQueryStri
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleCookiesCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -67,6 +71,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleCookiesCondition
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleDeviceCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -83,6 +88,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleDeviceCondition
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleHttpVersionCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -99,6 +105,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleHttpVersionCondit
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleModifyRequestHeaderAction
 {
     /// <summary>Action to be executed on a header value. Valid values are Append, Delete and Overwrite.</summary>
@@ -115,6 +122,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleModifyRequestHead
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleModifyResponseHeaderAction
 {
     /// <summary>Action to be executed on a header value. Valid values are Append, Delete and Overwrite.</summary>
@@ -131,6 +139,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleModifyResponseHea
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRulePostArgCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -155,6 +164,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRulePostArgCondition
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleQueryStringCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -175,6 +185,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleQueryStringCondit
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleRemoteAddressCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -191,6 +202,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleRemoteAddressCond
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleRequestBodyCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -211,6 +223,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleRequestBodyCondit
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleRequestHeaderCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -235,6 +248,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleRequestHeaderCond
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleRequestMethodCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -251,6 +265,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleRequestMethodCond
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleRequestSchemeCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -267,6 +282,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleRequestSchemeCond
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleRequestUriCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -287,6 +303,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleRequestUriConditi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleUrlFileExtensionCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -307,6 +324,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleUrlFileExtensionC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleUrlFileNameCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -327,6 +345,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleUrlFileNameCondit
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleUrlPathCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -347,6 +366,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleUrlPathCondition
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleUrlRedirectAction
 {
     /// <summary>Specifies the fragment part of the URL. This value must not start with a #.</summary>
@@ -375,6 +395,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleUrlRedirectAction
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleUrlRewriteAction
 {
     /// <summary>This value must start with a / and can't be longer than 260 characters.</summary>
@@ -391,6 +412,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleUrlRewriteAction
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRule
 {
     /// <summary>A cache_expiration_action block as defined above.</summary>
@@ -483,6 +505,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderGeoFilter
 {
     /// <summary>The Action of the Geo Filter. Possible values include Allow and Block.</summary>
@@ -499,6 +522,7 @@ public partial class V1beta1EndpointSpecForProviderGeoFilter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleCacheExpirationAction
 {
     /// <summary>The behavior of the cache key for query strings. Valid values are Exclude, ExcludeAll, Include and IncludeAll.</summary>
@@ -511,6 +535,7 @@ public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleCacheExpira
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleCacheKeyQueryStringAction
 {
     /// <summary>The behavior of the cache key for query strings. Valid values are Exclude, ExcludeAll, Include and IncludeAll.</summary>
@@ -523,6 +548,7 @@ public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleCacheKeyQue
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleModifyRequestHeaderAction
 {
     /// <summary>Action to be executed on a header value. Valid values are Append, Delete and Overwrite.</summary>
@@ -539,6 +565,7 @@ public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleModifyReque
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleModifyResponseHeaderAction
 {
     /// <summary>Action to be executed on a header value. Valid values are Append, Delete and Overwrite.</summary>
@@ -555,6 +582,7 @@ public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleModifyRespo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleUrlRedirectAction
 {
     /// <summary>Specifies the fragment part of the URL. This value must not start with a #.</summary>
@@ -583,6 +611,7 @@ public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleUrlRedirect
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleUrlRewriteAction
 {
     /// <summary>This value must start with a / and can't be longer than 260 characters.</summary>
@@ -599,6 +628,7 @@ public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleUrlRewriteA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRule
 {
     /// <summary>A cache_expiration_action block as defined above.</summary>
@@ -627,6 +657,7 @@ public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderOrigin
 {
     /// <summary>A string that determines the hostname/IP address of the origin server. This string can be a domain name, Storage Account endpoint, Web App endpoint, IPv4 address or IPv6 address. Changing this forces a new resource to be created.</summary>
@@ -646,6 +677,7 @@ public partial class V1beta1EndpointSpecForProviderOrigin
     public string? Name { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EndpointSpecForProviderProfileNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -656,6 +688,7 @@ public enum V1beta1EndpointSpecForProviderProfileNameRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EndpointSpecForProviderProfileNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -667,6 +700,7 @@ public enum V1beta1EndpointSpecForProviderProfileNameRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderProfileNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -681,6 +715,7 @@ public partial class V1beta1EndpointSpecForProviderProfileNameRefPolicy
 }
 
 /// <summary>Reference to a Profile in cdn to populate profileName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderProfileNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -692,6 +727,7 @@ public partial class V1beta1EndpointSpecForProviderProfileNameRef
     public V1beta1EndpointSpecForProviderProfileNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EndpointSpecForProviderProfileNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -702,6 +738,7 @@ public enum V1beta1EndpointSpecForProviderProfileNameSelectorPolicyResolutionEnu
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EndpointSpecForProviderProfileNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -713,6 +750,7 @@ public enum V1beta1EndpointSpecForProviderProfileNameSelectorPolicyResolveEnum
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderProfileNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -727,6 +765,7 @@ public partial class V1beta1EndpointSpecForProviderProfileNameSelectorPolicy
 }
 
 /// <summary>Selector for a Profile in cdn to populate profileName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderProfileNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -742,6 +781,7 @@ public partial class V1beta1EndpointSpecForProviderProfileNameSelector
     public V1beta1EndpointSpecForProviderProfileNameSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EndpointSpecForProviderResourceGroupNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -752,6 +792,7 @@ public enum V1beta1EndpointSpecForProviderResourceGroupNameRefPolicyResolutionEn
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EndpointSpecForProviderResourceGroupNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -763,6 +804,7 @@ public enum V1beta1EndpointSpecForProviderResourceGroupNameRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -777,6 +819,7 @@ public partial class V1beta1EndpointSpecForProviderResourceGroupNameRefPolicy
 }
 
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -788,6 +831,7 @@ public partial class V1beta1EndpointSpecForProviderResourceGroupNameRef
     public V1beta1EndpointSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EndpointSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -798,6 +842,7 @@ public enum V1beta1EndpointSpecForProviderResourceGroupNameSelectorPolicyResolut
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EndpointSpecForProviderResourceGroupNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -809,6 +854,7 @@ public enum V1beta1EndpointSpecForProviderResourceGroupNameSelectorPolicyResolve
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -823,6 +869,7 @@ public partial class V1beta1EndpointSpecForProviderResourceGroupNameSelectorPoli
 }
 
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -839,6 +886,7 @@ public partial class V1beta1EndpointSpecForProviderResourceGroupNameSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProvider
 {
     /// <summary>An array of strings that indicates a content types on which compression will be applied. The value for the elements should be MIME types.</summary>
@@ -927,6 +975,7 @@ public partial class V1beta1EndpointSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleCacheExpirationAction
 {
     /// <summary>The behavior of the cache key for query strings. Valid values are Exclude, ExcludeAll, Include and IncludeAll.</summary>
@@ -939,6 +988,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleCacheExpirationA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleCacheKeyQueryStringAction
 {
     /// <summary>The behavior of the cache key for query strings. Valid values are Exclude, ExcludeAll, Include and IncludeAll.</summary>
@@ -951,6 +1001,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleCacheKeyQueryStr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleCookiesCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -975,6 +1026,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleCookiesCondition
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleDeviceCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -991,6 +1043,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleDeviceCondition
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleHttpVersionCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1007,6 +1060,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleHttpVersionCondi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleModifyRequestHeaderAction
 {
     /// <summary>Action to be executed on a header value. Valid values are Append, Delete and Overwrite.</summary>
@@ -1023,6 +1077,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleModifyRequestHea
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleModifyResponseHeaderAction
 {
     /// <summary>Action to be executed on a header value. Valid values are Append, Delete and Overwrite.</summary>
@@ -1039,6 +1094,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleModifyResponseHe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRulePostArgCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1063,6 +1119,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRulePostArgCondition
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleQueryStringCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1083,6 +1140,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleQueryStringCondi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRemoteAddressCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1099,6 +1157,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRemoteAddressCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRequestBodyCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1119,6 +1178,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRequestBodyCondi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRequestHeaderCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1143,6 +1203,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRequestHeaderCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRequestMethodCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1159,6 +1220,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRequestMethodCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRequestSchemeCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1175,6 +1237,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRequestSchemeCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRequestUriCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1195,6 +1258,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRequestUriCondit
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleUrlFileExtensionCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1215,6 +1279,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleUrlFileExtension
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleUrlFileNameCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1235,6 +1300,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleUrlFileNameCondi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleUrlPathCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1255,6 +1321,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleUrlPathCondition
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleUrlRedirectAction
 {
     /// <summary>Specifies the fragment part of the URL. This value must not start with a #.</summary>
@@ -1283,6 +1350,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleUrlRedirectActio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleUrlRewriteAction
 {
     /// <summary>This value must start with a / and can't be longer than 260 characters.</summary>
@@ -1299,6 +1367,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleUrlRewriteAction
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRule
 {
     /// <summary>A cache_expiration_action block as defined above.</summary>
@@ -1391,6 +1460,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderGeoFilter
 {
     /// <summary>The Action of the Geo Filter. Possible values include Allow and Block.</summary>
@@ -1407,6 +1477,7 @@ public partial class V1beta1EndpointSpecInitProviderGeoFilter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleCacheExpirationAction
 {
     /// <summary>The behavior of the cache key for query strings. Valid values are Exclude, ExcludeAll, Include and IncludeAll.</summary>
@@ -1419,6 +1490,7 @@ public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleCacheExpir
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleCacheKeyQueryStringAction
 {
     /// <summary>The behavior of the cache key for query strings. Valid values are Exclude, ExcludeAll, Include and IncludeAll.</summary>
@@ -1431,6 +1503,7 @@ public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleCacheKeyQu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleModifyRequestHeaderAction
 {
     /// <summary>Action to be executed on a header value. Valid values are Append, Delete and Overwrite.</summary>
@@ -1447,6 +1520,7 @@ public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleModifyRequ
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleModifyResponseHeaderAction
 {
     /// <summary>Action to be executed on a header value. Valid values are Append, Delete and Overwrite.</summary>
@@ -1463,6 +1537,7 @@ public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleModifyResp
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleUrlRedirectAction
 {
     /// <summary>Specifies the fragment part of the URL. This value must not start with a #.</summary>
@@ -1491,6 +1566,7 @@ public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleUrlRedirec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleUrlRewriteAction
 {
     /// <summary>This value must start with a / and can't be longer than 260 characters.</summary>
@@ -1507,6 +1583,7 @@ public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleUrlRewrite
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRule
 {
     /// <summary>A cache_expiration_action block as defined above.</summary>
@@ -1535,6 +1612,7 @@ public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderOrigin
 {
     /// <summary>A string that determines the hostname/IP address of the origin server. This string can be a domain name, Storage Account endpoint, Web App endpoint, IPv4 address or IPv6 address. Changing this forces a new resource to be created.</summary>
@@ -1555,6 +1633,7 @@ public partial class V1beta1EndpointSpecInitProviderOrigin
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProvider
 {
     /// <summary>An array of strings that indicates a content types on which compression will be applied. The value for the elements should be MIME types.</summary>
@@ -1618,6 +1697,7 @@ public partial class V1beta1EndpointSpecInitProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EndpointSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -1640,6 +1720,7 @@ public enum V1beta1EndpointSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EndpointSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1650,6 +1731,7 @@ public enum V1beta1EndpointSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EndpointSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1661,6 +1743,7 @@ public enum V1beta1EndpointSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1675,6 +1758,7 @@ public partial class V1beta1EndpointSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1686,6 +1770,7 @@ public partial class V1beta1EndpointSpecProviderConfigRef
     public V1beta1EndpointSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EndpointSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1696,6 +1781,7 @@ public enum V1beta1EndpointSpecPublishConnectionDetailsToConfigRefPolicyResoluti
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EndpointSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1707,6 +1793,7 @@ public enum V1beta1EndpointSpecPublishConnectionDetailsToConfigRefPolicyResolveE
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1721,6 +1808,7 @@ public partial class V1beta1EndpointSpecPublishConnectionDetailsToConfigRefPolic
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1733,6 +1821,7 @@ public partial class V1beta1EndpointSpecPublishConnectionDetailsToConfigRef
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1749,6 +1838,7 @@ public partial class V1beta1EndpointSpecPublishConnectionDetailsToMetadata
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1765,6 +1855,7 @@ public partial class V1beta1EndpointSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1777,6 +1868,7 @@ public partial class V1beta1EndpointSpecWriteConnectionSecretToRef
 }
 
 /// <summary>EndpointSpec defines the desired state of Endpoint</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1810,6 +1902,7 @@ public partial class V1beta1EndpointSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleCacheExpirationAction
 {
     /// <summary>The behavior of the cache key for query strings. Valid values are Exclude, ExcludeAll, Include and IncludeAll.</summary>
@@ -1822,6 +1915,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleCacheExpirationA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleCacheKeyQueryStringAction
 {
     /// <summary>The behavior of the cache key for query strings. Valid values are Exclude, ExcludeAll, Include and IncludeAll.</summary>
@@ -1834,6 +1928,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleCacheKeyQueryStr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleCookiesCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1858,6 +1953,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleCookiesCondition
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleDeviceCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1874,6 +1970,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleDeviceCondition
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleHttpVersionCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1890,6 +1987,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleHttpVersionCondi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleModifyRequestHeaderAction
 {
     /// <summary>Action to be executed on a header value. Valid values are Append, Delete and Overwrite.</summary>
@@ -1906,6 +2004,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleModifyRequestHea
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleModifyResponseHeaderAction
 {
     /// <summary>Action to be executed on a header value. Valid values are Append, Delete and Overwrite.</summary>
@@ -1922,6 +2021,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleModifyResponseHe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRulePostArgCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1946,6 +2046,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRulePostArgCondition
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleQueryStringCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1966,6 +2067,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleQueryStringCondi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRemoteAddressCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1982,6 +2084,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRemoteAddressCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRequestBodyCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -2002,6 +2105,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRequestBodyCondi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRequestHeaderCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -2026,6 +2130,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRequestHeaderCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRequestMethodCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -2042,6 +2147,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRequestMethodCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRequestSchemeCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -2058,6 +2164,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRequestSchemeCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRequestUriCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -2078,6 +2185,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRequestUriCondit
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleUrlFileExtensionCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -2098,6 +2206,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleUrlFileExtension
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleUrlFileNameCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -2118,6 +2227,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleUrlFileNameCondi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleUrlPathCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -2138,6 +2248,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleUrlPathCondition
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleUrlRedirectAction
 {
     /// <summary>Specifies the fragment part of the URL. This value must not start with a #.</summary>
@@ -2166,6 +2277,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleUrlRedirectActio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleUrlRewriteAction
 {
     /// <summary>This value must start with a / and can't be longer than 260 characters.</summary>
@@ -2182,6 +2294,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleUrlRewriteAction
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRule
 {
     /// <summary>A cache_expiration_action block as defined above.</summary>
@@ -2274,6 +2387,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderGeoFilter
 {
     /// <summary>The Action of the Geo Filter. Possible values include Allow and Block.</summary>
@@ -2290,6 +2404,7 @@ public partial class V1beta1EndpointStatusAtProviderGeoFilter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleCacheExpirationAction
 {
     /// <summary>The behavior of the cache key for query strings. Valid values are Exclude, ExcludeAll, Include and IncludeAll.</summary>
@@ -2302,6 +2417,7 @@ public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleCacheExpir
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleCacheKeyQueryStringAction
 {
     /// <summary>The behavior of the cache key for query strings. Valid values are Exclude, ExcludeAll, Include and IncludeAll.</summary>
@@ -2314,6 +2430,7 @@ public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleCacheKeyQu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleModifyRequestHeaderAction
 {
     /// <summary>Action to be executed on a header value. Valid values are Append, Delete and Overwrite.</summary>
@@ -2330,6 +2447,7 @@ public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleModifyRequ
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleModifyResponseHeaderAction
 {
     /// <summary>Action to be executed on a header value. Valid values are Append, Delete and Overwrite.</summary>
@@ -2346,6 +2464,7 @@ public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleModifyResp
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleUrlRedirectAction
 {
     /// <summary>Specifies the fragment part of the URL. This value must not start with a #.</summary>
@@ -2374,6 +2493,7 @@ public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleUrlRedirec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleUrlRewriteAction
 {
     /// <summary>This value must start with a / and can't be longer than 260 characters.</summary>
@@ -2390,6 +2510,7 @@ public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleUrlRewrite
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRule
 {
     /// <summary>A cache_expiration_action block as defined above.</summary>
@@ -2418,6 +2539,7 @@ public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderOrigin
 {
     /// <summary>A string that determines the hostname/IP address of the origin server. This string can be a domain name, Storage Account endpoint, Web App endpoint, IPv4 address or IPv6 address. Changing this forces a new resource to be created.</summary>
@@ -2438,6 +2560,7 @@ public partial class V1beta1EndpointStatusAtProviderOrigin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProvider
 {
     /// <summary>An array of strings that indicates a content types on which compression will be applied. The value for the elements should be MIME types.</summary>
@@ -2518,6 +2641,7 @@ public partial class V1beta1EndpointStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2546,6 +2670,7 @@ public partial class V1beta1EndpointStatusConditions
 }
 
 /// <summary>EndpointStatus defines the observed state of Endpoint.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatus
 {
     /// <summary></summary>
@@ -2561,8 +2686,9 @@ public partial class V1beta1EndpointStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Endpoint is the Schema for the Endpoints API. Manages a CDN Endpoint.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Endpoint : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1EndpointSpec>, IStatus<V1beta1EndpointStatus>
 {
     public const string KubeApiVersion = "v1beta1";

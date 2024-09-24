@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.azure.com;
 /// <summary>Storage version of v1api20220301.AdditionalCapabilities Enables or disables a capability on the virtual machine or virtual machine scale set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecAdditionalCapabilities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -25,6 +26,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecAdditionalCap
 }
 
 /// <summary>Storage version of v1api20220301.AutomaticRepairsPolicy Specifies the configuration parameters for automatic repairs on the virtual machine scale set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecAutomaticRepairsPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -45,6 +47,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecAutomaticRepa
 }
 
 /// <summary>Storage version of v1api20220301.ExtendedLocation The complex type of the extended location.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -61,6 +64,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecExtendedLocat
 }
 
 /// <summary>Reference: Resource Id</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecHostGroupReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -81,6 +85,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecHostGroupRefe
 }
 
 /// <summary>Storage version of v1api20220301.SubResource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecHostGroup
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -93,6 +98,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecHostGroup
 }
 
 /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecIdentityUserAssignedIdentitiesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -113,6 +119,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecIdentityUserA
 }
 
 /// <summary>Storage version of v1api20220301.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -125,6 +132,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecIdentityUserA
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetIdentity Identity for the virtual machine scale set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -141,6 +149,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecIdentity
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecOwner
 {
     /// <summary></summary>
@@ -153,6 +162,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecOwner
 }
 
 /// <summary>Storage version of v1api20220301.Plan Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use. In the Azure portal, find the marketplace image that you want to use and then click Want to deploy programmatically, Get Started -&gt;. Enter any required information and then click Save.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecPlan
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -177,6 +187,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecPlan
 }
 
 /// <summary>Reference: Resource Id</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecProximityPlacementGroupReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -197,6 +208,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecProximityPlac
 }
 
 /// <summary>Storage version of v1api20220301.SubResource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecProximityPlacementGroup
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -209,6 +221,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecProximityPlac
 }
 
 /// <summary>Storage version of v1api20220301.ScaleInPolicy Describes a scale-in policy for a virtual machine scale set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecScaleInPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -225,6 +238,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecScaleInPolicy
 }
 
 /// <summary>Storage version of v1api20220301.Sku Describes a virtual machine scale set sku. NOTE: If the new VM SKU is not supported on the hardware the scale set is currently on, you need to deallocate the VMs in the scale set before you modify the SKU name.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -245,6 +259,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecSku
 }
 
 /// <summary>Storage version of v1api20220301.SpotRestorePolicy Specifies the Spot-Try-Restore properties for the virtual machine scale set. With this property customer can enable or disable automatic restore of the evicted Spot VMSS VM instances opportunistically based on capacity availability and pricing constraint.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecSpotRestorePolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -261,6 +276,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecSpotRestorePo
 }
 
 /// <summary>Storage version of v1api20220301.AutomaticOSUpgradePolicy The configuration parameters used for performing automatic OS upgrade.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecUpgradePolicyAutomaticOSUpgradePolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -281,6 +297,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecUpgradePolicy
 }
 
 /// <summary>Storage version of v1api20220301.RollingUpgradePolicy The configuration parameters used while performing a rolling upgrade.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecUpgradePolicyRollingUpgradePolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -313,6 +330,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecUpgradePolicy
 }
 
 /// <summary>Storage version of v1api20220301.UpgradePolicy Describes an upgrade policy - automatic, manual, or rolling.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecUpgradePolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -333,6 +351,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecUpgradePolicy
 }
 
 /// <summary>PackageReferenceReference: Specifies the GalleryApplicationVersion resource id on the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName}/applications/{application}/versions/{version}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileApplicationProfileGalleryApplicationsPackageReferenceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -353,6 +372,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.VMGalleryApplication Specifies the required information to reference a compute gallery application version</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileApplicationProfileGalleryApplications
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -385,6 +405,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.ApplicationProfile Contains the list of gallery applications that should be made available to the VM/VMSS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileApplicationProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -397,6 +418,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.BillingProfile Specifies the billing related details of a Azure Spot VM or VMSS. Minimum api-version: 2019-03-01.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileBillingProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -409,6 +431,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Reference: Resource Id</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileCapacityReservationCapacityReservationGroupReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -429,6 +452,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.SubResource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileCapacityReservationCapacityReservationGroup
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -441,6 +465,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.CapacityReservationProfile The parameters of a capacity reservation Profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileCapacityReservation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -453,6 +478,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.BootDiagnostics Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. You can easily view the output of your console log. Azure also enables you to see a screenshot of the VM from the hypervisor.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileDiagnosticsProfileBootDiagnostics
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -469,6 +495,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.DiagnosticsProfile Specifies the boot diagnostic settings state. Minimum api-version: 2015-06-15.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileDiagnosticsProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -481,6 +508,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>SecretMapReference is a reference to a Kubernetes secret in the same namespace as the resource it is on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileExtensionProfileExtensionsProtectedSettings
 {
     /// <summary>Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource</summary>
@@ -489,6 +517,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Reference: Resource Id</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileExtensionProfileExtensionsProtectedSettingsFromKeyVaultSourceVaultReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -509,6 +538,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.SubResource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileExtensionProfileExtensionsProtectedSettingsFromKeyVaultSourceVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -521,6 +551,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.KeyVaultSecretReference Describes a reference to Key Vault Secret</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileExtensionProfileExtensionsProtectedSettingsFromKeyVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -537,6 +568,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetExtension Describes a Virtual Machine Scale Set Extension.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileExtensionProfileExtensions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -593,6 +625,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetExtensionProfile Describes a virtual machine scale set extension profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileExtensionProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -609,6 +642,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.VMSizeProperties Specifies VM Size Property settings on the virtual machine.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileHardwareProfileVmSizeProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -625,6 +659,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetHardwareProfile Specifies the hardware settings for the virtual machine scale set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileHardwareProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -637,6 +672,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Reference: The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileHealthProbeReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -657,6 +693,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.ApiEntityReference The API entity reference.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileHealthProbe
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -669,6 +706,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetNetworkConfigurationDnsSettings Describes a virtual machines scale sets network configuration's DNS settings.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsDnsSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -681,6 +719,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Reference: Resource Id</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsApplicationGatewayBackendAddressPoolsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -701,6 +740,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.SubResource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsApplicationGatewayBackendAddressPools
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -713,6 +753,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Reference: Resource Id</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsApplicationSecurityGroupsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -733,6 +774,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.SubResource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsApplicationSecurityGroups
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -745,6 +787,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Reference: Resource Id</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsLoadBalancerBackendAddressPoolsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -765,6 +808,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.SubResource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsLoadBalancerBackendAddressPools
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -777,6 +821,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Reference: Resource Id</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsLoadBalancerInboundNatPoolsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -797,6 +842,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.SubResource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsLoadBalancerInboundNatPools
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -809,6 +855,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings Describes a virtual machines scale sets network configuration's DNS settings.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationDnsSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -821,6 +868,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetIpTag Contains the IP tag associated with the public IP address.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationIpTags
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -837,6 +885,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Reference: Resource Id</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationPublicIPPrefixReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -857,6 +906,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.SubResource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationPublicIPPrefix
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -869,6 +919,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.PublicIPAddressSku Describes the public IP Sku. It can only be set with OrchestrationMode as Flexible.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -885,6 +936,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetPublicIPAddressConfiguration Describes a virtual machines scale set IP Configuration's PublicIPAddress configuration</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -925,6 +977,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Reference: Resource Id</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -945,6 +998,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Reference: The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsSubnetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -965,6 +1019,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.ApiEntityReference The API entity reference.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsSubnet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -977,6 +1032,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetIPConfiguration Describes a virtual machine scale set network profile's IP configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1025,6 +1081,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Reference: Resource Id</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsNetworkSecurityGroupReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -1045,6 +1102,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.SubResource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsNetworkSecurityGroup
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1057,6 +1115,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Reference: Resource Id</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -1077,6 +1136,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetNetworkConfiguration Describes a virtual machine scale set network profile's network configurations.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1125,6 +1185,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetNetworkProfile Describes a virtual machine scale set network profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1145,6 +1206,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileAdminPassword
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -1157,6 +1219,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.LinuxVMGuestPatchAutomaticByPlatformSettings Specifies additional settings to be applied when patch mode AutomaticByPlatform is selected in Linux patch settings.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileLinuxConfigurationPatchSettingsAutomaticByPlatformSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1169,6 +1232,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.LinuxPatchSettings Specifies settings related to VM Guest Patching on Linux.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileLinuxConfigurationPatchSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1189,6 +1253,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.SshPublicKeySpec Contains information about SSH certificate public key and the path on the Linux VM where the public key is placed.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileLinuxConfigurationSshPublicKeys
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1205,6 +1270,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.SshConfiguration SSH configuration for Linux based VMs running on Azure</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileLinuxConfigurationSsh
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1217,6 +1283,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.LinuxConfiguration Specifies the Linux operating system settings on the virtual machine. For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileLinuxConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1241,6 +1308,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Reference: Resource Id</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileSecretsSourceVaultReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -1261,6 +1329,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.SubResource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileSecretsSourceVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1273,6 +1342,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.VaultCertificate Describes a single certificate reference in a Key Vault, and where the certificate should reside on the VM.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileSecretsVaultCertificates
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1289,6 +1359,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.VaultSecretGroup Describes a set of certificates which are all in the same Key Vault.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileSecrets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1305,6 +1376,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.AdditionalUnattendContent Specifies additional XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup. Contents are defined by setting name, component name, and the pass in which the content is applied.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileWindowsConfigurationAdditionalUnattendContent
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1329,6 +1401,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.WindowsVMGuestPatchAutomaticByPlatformSettings Specifies additional settings to be applied when patch mode AutomaticByPlatform is selected in Windows patch settings.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileWindowsConfigurationPatchSettingsAutomaticByPlatformSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1341,6 +1414,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.PatchSettings Specifies settings related to VM Guest Patching on Windows.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileWindowsConfigurationPatchSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1365,6 +1439,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.WinRMListener Describes Protocol and thumbprint of Windows Remote Management listener</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileWindowsConfigurationWinRMListeners
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1381,6 +1456,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.WinRMConfiguration Describes Windows Remote Management configuration of the VM</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileWindowsConfigurationWinRM
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1393,6 +1469,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.WindowsConfiguration Specifies Windows operating system settings on the virtual machine.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileWindowsConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1425,6 +1502,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetOSProfile Describes a virtual machine scale set OS profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1465,6 +1543,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.TerminateNotificationProfile</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileScheduledEventsProfileTerminateNotificationProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1481,6 +1560,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.ScheduledEventsProfile</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileScheduledEventsProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1493,6 +1573,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.UefiSettings Specifies the security settings like secure boot and vTPM used while creating the virtual machine. Minimum api-version: 2020-12-01</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileSecurityProfileUefiSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1509,6 +1590,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.SecurityProfile Specifies the Security profile settings for the virtual machine or virtual machine scale set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileSecurityProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1529,6 +1611,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Reference: Resource Id</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileDataDisksManagedDiskDiskEncryptionSetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -1549,6 +1632,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.SubResource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileDataDisksManagedDiskDiskEncryptionSet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1561,6 +1645,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Reference: Resource Id</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileDataDisksManagedDiskSecurityProfileDiskEncryptionSetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -1581,6 +1666,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.SubResource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileDataDisksManagedDiskSecurityProfileDiskEncryptionSet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1593,6 +1679,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.VMDiskSecurityProfile Specifies the security profile settings for the managed disk. NOTE: It can only be set for Confidential VMs</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileDataDisksManagedDiskSecurityProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1609,6 +1696,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetManagedDiskParameters Describes the parameters of a ScaleSet managed disk.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileDataDisksManagedDisk
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1629,6 +1717,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetDataDisk Describes a virtual machine scale set data disk.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileDataDisks
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1677,6 +1766,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Reference: Resource Id</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileImageReferenceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -1697,6 +1787,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.ImageReference Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations. NOTE: Image reference publisher and offer can only be set when you create the scale set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileImageReference
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1733,6 +1824,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.DiffDiskSettings Describes the parameters of ephemeral disk settings that can be specified for operating system disk. NOTE: The ephemeral disk settings can only be specified for managed disk.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileOsDiskDiffDiskSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1749,6 +1841,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.VirtualHardDisk Describes the uri of a disk.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileOsDiskImage
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1761,6 +1854,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Reference: Resource Id</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileOsDiskManagedDiskDiskEncryptionSetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -1781,6 +1875,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.SubResource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileOsDiskManagedDiskDiskEncryptionSet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1793,6 +1888,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Reference: Resource Id</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileOsDiskManagedDiskSecurityProfileDiskEncryptionSetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -1813,6 +1909,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.SubResource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileOsDiskManagedDiskSecurityProfileDiskEncryptionSet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1825,6 +1922,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.VMDiskSecurityProfile Specifies the security profile settings for the managed disk. NOTE: It can only be set for Confidential VMs</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileOsDiskManagedDiskSecurityProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1841,6 +1939,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetManagedDiskParameters Describes the parameters of a ScaleSet managed disk.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileOsDiskManagedDisk
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1861,6 +1960,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetOSDisk Describes a virtual machine scale set operating system disk.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileOsDisk
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1913,6 +2013,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetStorageProfile Describes a virtual machine scale set storage profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1933,6 +2034,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetVMProfile Describes a virtual machine scale set virtual machine profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2001,6 +2103,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSet_Spec</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2105,6 +2208,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpec
 }
 
 /// <summary>Storage version of v1api20220301.AdditionalCapabilities_STATUS Enables or disables a capability on the virtual machine or virtual machine scale set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusAdditionalCapabilities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2121,6 +2225,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusAdditionalC
 }
 
 /// <summary>Storage version of v1api20220301.AutomaticRepairsPolicy_STATUS Specifies the configuration parameters for automatic repairs on the virtual machine scale set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusAutomaticRepairsPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2141,6 +2246,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusAutomaticRe
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -2173,6 +2279,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusConditions
 }
 
 /// <summary>Storage version of v1api20220301.ExtendedLocation_STATUS The complex type of the extended location.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2189,6 +2296,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusExtendedLoc
 }
 
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusHostGroup
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2201,6 +2309,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusHostGroup
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetIdentity_UserAssignedIdentities_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2217,6 +2326,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusIdentityUse
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetIdentity_STATUS Identity for the virtual machine scale set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2241,6 +2351,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusIdentity
 }
 
 /// <summary>Storage version of v1api20220301.Plan_STATUS Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use. In the Azure portal, find the marketplace image that you want to use and then click Want to deploy programmatically, Get Started -&gt;. Enter any required information and then click Save.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusPlan
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2265,6 +2376,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusPlan
 }
 
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusProximityPlacementGroup
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2277,6 +2389,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusProximityPl
 }
 
 /// <summary>Storage version of v1api20220301.ScaleInPolicy_STATUS Describes a scale-in policy for a virtual machine scale set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusScaleInPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2293,6 +2406,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusScaleInPoli
 }
 
 /// <summary>Storage version of v1api20220301.Sku_STATUS Describes a virtual machine scale set sku. NOTE: If the new VM SKU is not supported on the hardware the scale set is currently on, you need to deallocate the VMs in the scale set before you modify the SKU name.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2313,6 +2427,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusSku
 }
 
 /// <summary>Storage version of v1api20220301.SpotRestorePolicy_STATUS Specifies the Spot-Try-Restore properties for the virtual machine scale set. With this property customer can enable or disable automatic restore of the evicted Spot VMSS VM instances opportunistically based on capacity availability and pricing constraint.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusSpotRestorePolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2329,6 +2444,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusSpotRestore
 }
 
 /// <summary>Storage version of v1api20220301.AutomaticOSUpgradePolicy_STATUS The configuration parameters used for performing automatic OS upgrade.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusUpgradePolicyAutomaticOSUpgradePolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2349,6 +2465,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusUpgradePoli
 }
 
 /// <summary>Storage version of v1api20220301.RollingUpgradePolicy_STATUS The configuration parameters used while performing a rolling upgrade.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusUpgradePolicyRollingUpgradePolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2381,6 +2498,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusUpgradePoli
 }
 
 /// <summary>Storage version of v1api20220301.UpgradePolicy_STATUS Describes an upgrade policy - automatic, manual, or rolling.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusUpgradePolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2401,6 +2519,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusUpgradePoli
 }
 
 /// <summary>Storage version of v1api20220301.VMGalleryApplication_STATUS Specifies the required information to reference a compute gallery application version</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileApplicationProfileGalleryApplications
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2433,6 +2552,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.ApplicationProfile_STATUS Contains the list of gallery applications that should be made available to the VM/VMSS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileApplicationProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2445,6 +2565,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.BillingProfile_STATUS Specifies the billing related details of a Azure Spot VM or VMSS. Minimum api-version: 2019-03-01.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileBillingProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2457,6 +2578,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileCapacityReservationCapacityReservationGroup
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2469,6 +2591,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.CapacityReservationProfile_STATUS The parameters of a capacity reservation Profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileCapacityReservation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2481,6 +2604,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.BootDiagnostics_STATUS Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. You can easily view the output of your console log. Azure also enables you to see a screenshot of the VM from the hypervisor.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileDiagnosticsProfileBootDiagnostics
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2497,6 +2621,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.DiagnosticsProfile_STATUS Specifies the boot diagnostic settings state. Minimum api-version: 2015-06-15.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileDiagnosticsProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2509,6 +2634,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileExtensionProfileExtensionsProtectedSettingsFromKeyVaultSourceVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2521,6 +2647,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.KeyVaultSecretReference_STATUS Describes a reference to Key Vault Secret</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileExtensionProfileExtensionsProtectedSettingsFromKeyVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2537,6 +2664,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetExtension_STATUS Describes a Virtual Machine Scale Set Extension.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileExtensionProfileExtensions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2601,6 +2729,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetExtensionProfile_STATUS Describes a virtual machine scale set extension profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileExtensionProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2617,6 +2746,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.VMSizeProperties_STATUS Specifies VM Size Property settings on the virtual machine.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileHardwareProfileVmSizeProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2633,6 +2763,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetHardwareProfile_STATUS Specifies the hardware settings for the virtual machine scale set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileHardwareProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2645,6 +2776,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.ApiEntityReference_STATUS The API entity reference.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileHealthProbe
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2657,6 +2789,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetNetworkConfigurationDnsSettings_STATUS Describes a virtual machines scale sets network configuration's DNS settings.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsDnsSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2669,6 +2802,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsApplicationGatewayBackendAddressPools
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2681,6 +2815,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsApplicationSecurityGroups
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2693,6 +2828,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsLoadBalancerBackendAddressPools
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2705,6 +2841,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsLoadBalancerInboundNatPools
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2717,6 +2854,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings_STATUS Describes a virtual machines scale sets network configuration's DNS settings.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationDnsSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2729,6 +2867,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetIpTag_STATUS Contains the IP tag associated with the public IP address.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationIpTags
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2745,6 +2884,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationPublicIPPrefix
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2757,6 +2897,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.PublicIPAddressSku_STATUS Describes the public IP Sku. It can only be set with OrchestrationMode as Flexible.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2773,6 +2914,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetPublicIPAddressConfiguration_STATUS Describes a virtual machines scale set IP Configuration's PublicIPAddress configuration</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2813,6 +2955,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.ApiEntityReference_STATUS The API entity reference.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsSubnet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2825,6 +2968,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetIPConfiguration_STATUS Describes a virtual machine scale set network profile's IP configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2873,6 +3017,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsNetworkSecurityGroup
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2885,6 +3030,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetNetworkConfiguration_STATUS Describes a virtual machine scale set network profile's network configurations.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2933,6 +3079,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetNetworkProfile_STATUS Describes a virtual machine scale set network profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2953,6 +3100,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.LinuxVMGuestPatchAutomaticByPlatformSettings_STATUS Specifies additional settings to be applied when patch mode AutomaticByPlatform is selected in Linux patch settings.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileLinuxConfigurationPatchSettingsAutomaticByPlatformSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2965,6 +3113,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.LinuxPatchSettings_STATUS Specifies settings related to VM Guest Patching on Linux.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileLinuxConfigurationPatchSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2985,6 +3134,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.SshPublicKey_STATUS Contains information about SSH certificate public key and the path on the Linux VM where the public key is placed.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileLinuxConfigurationSshPublicKeys
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3001,6 +3151,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.SshConfiguration_STATUS SSH configuration for Linux based VMs running on Azure</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileLinuxConfigurationSsh
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3013,6 +3164,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.LinuxConfiguration_STATUS Specifies the Linux operating system settings on the virtual machine. For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileLinuxConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3037,6 +3189,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileSecretsSourceVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3049,6 +3202,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.VaultCertificate_STATUS Describes a single certificate reference in a Key Vault, and where the certificate should reside on the VM.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileSecretsVaultCertificates
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3065,6 +3219,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.VaultSecretGroup_STATUS Describes a set of certificates which are all in the same Key Vault.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileSecrets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3081,6 +3236,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.AdditionalUnattendContent_STATUS Specifies additional XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup. Contents are defined by setting name, component name, and the pass in which the content is applied.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileWindowsConfigurationAdditionalUnattendContent
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3105,6 +3261,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.WindowsVMGuestPatchAutomaticByPlatformSettings_STATUS Specifies additional settings to be applied when patch mode AutomaticByPlatform is selected in Windows patch settings.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileWindowsConfigurationPatchSettingsAutomaticByPlatformSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3117,6 +3274,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.PatchSettings_STATUS Specifies settings related to VM Guest Patching on Windows.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileWindowsConfigurationPatchSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3141,6 +3299,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.WinRMListener_STATUS Describes Protocol and thumbprint of Windows Remote Management listener</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileWindowsConfigurationWinRMListeners
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3157,6 +3316,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.WinRMConfiguration_STATUS Describes Windows Remote Management configuration of the VM</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileWindowsConfigurationWinRM
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3169,6 +3329,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.WindowsConfiguration_STATUS Specifies Windows operating system settings on the virtual machine.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileWindowsConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3201,6 +3362,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetOSProfile_STATUS Describes a virtual machine scale set OS profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3237,6 +3399,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.TerminateNotificationProfile_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileScheduledEventsProfileTerminateNotificationProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3253,6 +3416,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.ScheduledEventsProfile_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileScheduledEventsProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3265,6 +3429,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.UefiSettings_STATUS Specifies the security settings like secure boot and vTPM used while creating the virtual machine. Minimum api-version: 2020-12-01</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileSecurityProfileUefiSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3281,6 +3446,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.SecurityProfile_STATUS Specifies the Security profile settings for the virtual machine or virtual machine scale set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileSecurityProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3301,6 +3467,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileStorageProfileDataDisksManagedDiskDiskEncryptionSet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3313,6 +3480,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileStorageProfileDataDisksManagedDiskSecurityProfileDiskEncryptionSet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3325,6 +3493,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.VMDiskSecurityProfile_STATUS Specifies the security profile settings for the managed disk. NOTE: It can only be set for Confidential VMs</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileStorageProfileDataDisksManagedDiskSecurityProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3341,6 +3510,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetManagedDiskParameters_STATUS Describes the parameters of a ScaleSet managed disk.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileStorageProfileDataDisksManagedDisk
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3361,6 +3531,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetDataDisk_STATUS Describes a virtual machine scale set data disk.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileStorageProfileDataDisks
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3409,6 +3580,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.ImageReference_STATUS Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations. NOTE: Image reference publisher and offer can only be set when you create the scale set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileStorageProfileImageReference
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3449,6 +3621,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.DiffDiskSettings_STATUS Describes the parameters of ephemeral disk settings that can be specified for operating system disk. NOTE: The ephemeral disk settings can only be specified for managed disk.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileStorageProfileOsDiskDiffDiskSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3465,6 +3638,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.VirtualHardDisk_STATUS Describes the uri of a disk.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileStorageProfileOsDiskImage
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3477,6 +3651,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileStorageProfileOsDiskManagedDiskDiskEncryptionSet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3489,6 +3664,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileStorageProfileOsDiskManagedDiskSecurityProfileDiskEncryptionSet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3501,6 +3677,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.VMDiskSecurityProfile_STATUS Specifies the security profile settings for the managed disk. NOTE: It can only be set for Confidential VMs</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileStorageProfileOsDiskManagedDiskSecurityProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3517,6 +3694,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetManagedDiskParameters_STATUS Describes the parameters of a ScaleSet managed disk.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileStorageProfileOsDiskManagedDisk
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3537,6 +3715,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetOSDisk_STATUS Describes a virtual machine scale set operating system disk.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileStorageProfileOsDisk
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3589,6 +3768,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetStorageProfile_STATUS Describes a virtual machine scale set storage profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileStorageProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3609,6 +3789,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetVMProfile_STATUS Describes a virtual machine scale set virtual machine profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3677,6 +3858,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
 }
 
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSet_STATUS Describes a Virtual Machine Scale Set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3796,8 +3978,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatus
     public IList<string>? Zones { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSet Generator information: - Generated from: /compute/resource-manager/Microsoft.Compute/ComputeRP/stable/2022-03-01/virtualMachineScaleSet.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1api20220301storageVirtualMachineScaleSet : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220301storageVirtualMachineScaleSetSpec>, IStatus<V1api20220301storageVirtualMachineScaleSetStatus>
 {
     public const string KubeApiVersion = "v1api20220301storage";

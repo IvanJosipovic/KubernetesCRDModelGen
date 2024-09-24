@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
 /// <summary>Storage version of v1api20201101.IPConfigurationBgpPeeringAddress Properties of IPConfigurationBgpPeeringAddress.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewaySpecBgpSettingsBgpPeeringAddresses
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -25,6 +26,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecBgpSettingsBgp
 }
 
 /// <summary>Storage version of v1api20201101.BgpSettings BGP settings details.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewaySpecBgpSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -49,6 +51,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecBgpSettings
 }
 
 /// <summary>Storage version of v1api20201101.AddressSpace AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewaySpecCustomRoutes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -61,6 +64,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecCustomRoutes
 }
 
 /// <summary>Storage version of v1api20201101.ExtendedLocation ExtendedLocation complex type.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewaySpecExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -77,6 +81,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecExtendedLocati
 }
 
 /// <summary>Reference: Resource ID.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewaySpecGatewayDefaultSiteReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -97,6 +102,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecGatewayDefault
 }
 
 /// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewaySpecGatewayDefaultSite
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -109,6 +115,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecGatewayDefault
 }
 
 /// <summary>Reference: Resource ID.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewaySpecIpConfigurationsPublicIPAddressReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -129,6 +136,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecIpConfiguratio
 }
 
 /// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewaySpecIpConfigurationsPublicIPAddress
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -141,6 +149,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecIpConfiguratio
 }
 
 /// <summary>Reference: Resource ID.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewaySpecIpConfigurationsSubnetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -161,6 +170,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecIpConfiguratio
 }
 
 /// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewaySpecIpConfigurationsSubnet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -173,6 +183,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecIpConfiguratio
 }
 
 /// <summary>Storage version of v1api20201101.VirtualNetworkGatewayIPConfiguration IP configuration for virtual network gateway.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewaySpecIpConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -197,6 +208,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecIpConfiguratio
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewaySpecOwner
 {
     /// <summary></summary>
@@ -209,6 +221,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecOwner
 }
 
 /// <summary>Storage version of v1api20201101.VirtualNetworkGatewaySku VirtualNetworkGatewaySku details.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewaySpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -225,6 +238,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecSku
 }
 
 /// <summary>VNetExtendedLocationResourceReference: Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewaySpecVNetExtendedLocationResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -245,6 +259,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecVNetExtendedLo
 }
 
 /// <summary>Storage version of v1api20201101.RadiusServer Radius Server Settings.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewaySpecVpnClientConfigurationRadiusServers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -265,6 +280,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecVpnClientConfi
 }
 
 /// <summary>Storage version of v1api20201101.AddressSpace AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewaySpecVpnClientConfigurationVpnClientAddressPool
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -277,6 +293,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecVpnClientConfi
 }
 
 /// <summary>Storage version of v1api20201101.IpsecPolicy An IPSec Policy configuration for a virtual network gateway connection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewaySpecVpnClientConfigurationVpnClientIpsecPolicies
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -317,6 +334,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecVpnClientConfi
 }
 
 /// <summary>Storage version of v1api20201101.VpnClientRevokedCertificate VPN client revoked certificate of virtual network gateway.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewaySpecVpnClientConfigurationVpnClientRevokedCertificates
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -333,6 +351,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecVpnClientConfi
 }
 
 /// <summary>Storage version of v1api20201101.VpnClientRootCertificate VPN client root certificate of virtual network gateway.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewaySpecVpnClientConfigurationVpnClientRootCertificates
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -349,6 +368,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecVpnClientConfi
 }
 
 /// <summary>Storage version of v1api20201101.VpnClientConfiguration VpnClientConfiguration for P2S client.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewaySpecVpnClientConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -405,6 +425,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecVpnClientConfi
 }
 
 /// <summary>Storage version of v1api20201101.VirtualNetworkGateway_Spec</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewaySpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -493,6 +514,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpec
 }
 
 /// <summary>Storage version of v1api20201101.IPConfigurationBgpPeeringAddress_STATUS Properties of IPConfigurationBgpPeeringAddress.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewayStatusBgpSettingsBgpPeeringAddresses
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -517,6 +539,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatusBgpSettingsB
 }
 
 /// <summary>Storage version of v1api20201101.BgpSettings_STATUS BGP settings details.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewayStatusBgpSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -541,6 +564,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatusBgpSettings
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewayStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -573,6 +597,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatusConditions
 }
 
 /// <summary>Storage version of v1api20201101.AddressSpace_STATUS AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewayStatusCustomRoutes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -585,6 +610,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatusCustomRoutes
 }
 
 /// <summary>Storage version of v1api20201101.ExtendedLocation_STATUS ExtendedLocation complex type.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewayStatusExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -601,6 +627,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatusExtendedLoca
 }
 
 /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewayStatusGatewayDefaultSite
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -613,6 +640,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatusGatewayDefau
 }
 
 /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewayStatusIpConfigurationsPublicIPAddress
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -625,6 +653,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatusIpConfigurat
 }
 
 /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewayStatusIpConfigurationsSubnet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -637,6 +666,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatusIpConfigurat
 }
 
 /// <summary>Storage version of v1api20201101.VirtualNetworkGatewayIPConfiguration_STATUS IP configuration for virtual network gateway.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewayStatusIpConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -677,6 +707,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatusIpConfigurat
 }
 
 /// <summary>Storage version of v1api20201101.VirtualNetworkGatewaySku_STATUS VirtualNetworkGatewaySku details.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewayStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -697,6 +728,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatusSku
 }
 
 /// <summary>Storage version of v1api20201101.RadiusServer_STATUS Radius Server Settings.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewayStatusVpnClientConfigurationRadiusServers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -717,6 +749,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatusVpnClientCon
 }
 
 /// <summary>Storage version of v1api20201101.AddressSpace_STATUS AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewayStatusVpnClientConfigurationVpnClientAddressPool
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -729,6 +762,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatusVpnClientCon
 }
 
 /// <summary>Storage version of v1api20201101.IpsecPolicy_STATUS An IPSec Policy configuration for a virtual network gateway connection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewayStatusVpnClientConfigurationVpnClientIpsecPolicies
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -769,6 +803,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatusVpnClientCon
 }
 
 /// <summary>Storage version of v1api20201101.VpnClientRevokedCertificate_STATUS VPN client revoked certificate of virtual network gateway.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewayStatusVpnClientConfigurationVpnClientRevokedCertificates
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -797,6 +832,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatusVpnClientCon
 }
 
 /// <summary>Storage version of v1api20201101.VpnClientRootCertificate_STATUS VPN client root certificate of virtual network gateway.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewayStatusVpnClientConfigurationVpnClientRootCertificates
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -825,6 +861,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatusVpnClientCon
 }
 
 /// <summary>Storage version of v1api20201101.VpnClientConfiguration_STATUS VpnClientConfiguration for P2S client.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewayStatusVpnClientConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -881,6 +918,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatusVpnClientCon
 }
 
 /// <summary>Storage version of v1api20201101.VirtualNetworkGateway_STATUS A common class for general resource information.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworkGatewayStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -988,8 +1026,9 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatus
     public string? VpnType { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Storage version of v1api20201101.VirtualNetworkGateway Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/virtualNetworkGateway.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworkGateways/{virtualNetworkGatewayName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1api20201101storageVirtualNetworkGateway : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20201101storageVirtualNetworkGatewaySpec>, IStatus<V1api20201101storageVirtualNetworkGatewayStatus>
 {
     public const string KubeApiVersion = "v1api20201101storage";

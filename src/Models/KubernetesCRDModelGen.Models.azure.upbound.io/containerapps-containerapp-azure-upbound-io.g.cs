@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerapp.azure.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ContainerAppSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -18,6 +19,7 @@ public enum V1beta1ContainerAppSpecDeletionPolicyEnum
     Delete
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ContainerAppSpecForProviderContainerAppEnvironmentIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -28,6 +30,7 @@ public enum V1beta1ContainerAppSpecForProviderContainerAppEnvironmentIdRefPolicy
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ContainerAppSpecForProviderContainerAppEnvironmentIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -39,6 +42,7 @@ public enum V1beta1ContainerAppSpecForProviderContainerAppEnvironmentIdRefPolicy
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderContainerAppEnvironmentIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -53,6 +57,7 @@ public partial class V1beta1ContainerAppSpecForProviderContainerAppEnvironmentId
 }
 
 /// <summary>Reference to a Environment in containerapp to populate containerAppEnvironmentId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderContainerAppEnvironmentIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -64,6 +69,7 @@ public partial class V1beta1ContainerAppSpecForProviderContainerAppEnvironmentId
     public V1beta1ContainerAppSpecForProviderContainerAppEnvironmentIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ContainerAppSpecForProviderContainerAppEnvironmentIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -74,6 +80,7 @@ public enum V1beta1ContainerAppSpecForProviderContainerAppEnvironmentIdSelectorP
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ContainerAppSpecForProviderContainerAppEnvironmentIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -85,6 +92,7 @@ public enum V1beta1ContainerAppSpecForProviderContainerAppEnvironmentIdSelectorP
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderContainerAppEnvironmentIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -99,6 +107,7 @@ public partial class V1beta1ContainerAppSpecForProviderContainerAppEnvironmentId
 }
 
 /// <summary>Selector for a Environment in containerapp to populate containerAppEnvironmentId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderContainerAppEnvironmentIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -115,6 +124,7 @@ public partial class V1beta1ContainerAppSpecForProviderContainerAppEnvironmentId
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderDapr
 {
     /// <summary>The Dapr Application Identifier. The Dapr Application Identifier.</summary>
@@ -131,6 +141,7 @@ public partial class V1beta1ContainerAppSpecForProviderDapr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderIdentity
 {
     /// <summary>- A list of one or more Resource IDs for User Assigned Managed identities to assign. Required when type is set to UserAssigned or SystemAssigned, UserAssigned.</summary>
@@ -143,6 +154,7 @@ public partial class V1beta1ContainerAppSpecForProviderIdentity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderIngressCustomDomain
 {
     /// <summary>The Binding type. Possible values include Disabled and SniEnabled. Defaults to Disabled. The Binding type. Possible values include `Disabled` and `SniEnabled`. Defaults to `Disabled`</summary>
@@ -159,6 +171,7 @@ public partial class V1beta1ContainerAppSpecForProviderIngressCustomDomain
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderIngressIpSecurityRestriction
 {
     /// <summary>The IP-filter action. Allow or Deny. The action. Allow or Deny.</summary>
@@ -179,6 +192,7 @@ public partial class V1beta1ContainerAppSpecForProviderIngressIpSecurityRestrict
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderIngressTrafficWeight
 {
     /// <summary>The label to apply to the revision as a name prefix for routing traffic. The label to apply to the revision as a name prefix for routing traffic.</summary>
@@ -199,6 +213,7 @@ public partial class V1beta1ContainerAppSpecForProviderIngressTrafficWeight
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderIngress
 {
     /// <summary>Should this ingress allow insecure connections? Should this ingress allow insecure connections?</summary>
@@ -235,6 +250,7 @@ public partial class V1beta1ContainerAppSpecForProviderIngress
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderRegistry
 {
     /// <summary>Resource ID for the User Assigned Managed identity to use when pulling from the Container Registry. ID of the System or User Managed Identity used to pull images from the Container Registry</summary>
@@ -254,6 +270,7 @@ public partial class V1beta1ContainerAppSpecForProviderRegistry
     public string? Username { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ContainerAppSpecForProviderResourceGroupNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -264,6 +281,7 @@ public enum V1beta1ContainerAppSpecForProviderResourceGroupNameRefPolicyResoluti
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ContainerAppSpecForProviderResourceGroupNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -275,6 +293,7 @@ public enum V1beta1ContainerAppSpecForProviderResourceGroupNameRefPolicyResolveE
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -289,6 +308,7 @@ public partial class V1beta1ContainerAppSpecForProviderResourceGroupNameRefPolic
 }
 
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -300,6 +320,7 @@ public partial class V1beta1ContainerAppSpecForProviderResourceGroupNameRef
     public V1beta1ContainerAppSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ContainerAppSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -310,6 +331,7 @@ public enum V1beta1ContainerAppSpecForProviderResourceGroupNameSelectorPolicyRes
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ContainerAppSpecForProviderResourceGroupNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -321,6 +343,7 @@ public enum V1beta1ContainerAppSpecForProviderResourceGroupNameSelectorPolicyRes
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -335,6 +358,7 @@ public partial class V1beta1ContainerAppSpecForProviderResourceGroupNameSelector
 }
 
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -351,6 +375,7 @@ public partial class V1beta1ContainerAppSpecForProviderResourceGroupNameSelector
 }
 
 /// <summary>The Secret name. The Secret name.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderSecretNameSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -367,6 +392,7 @@ public partial class V1beta1ContainerAppSpecForProviderSecretNameSecretRef
 }
 
 /// <summary>The value for this secret. The value for this secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderSecretValueSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -383,6 +409,7 @@ public partial class V1beta1ContainerAppSpecForProviderSecretValueSecretRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderSecret
 {
     /// <summary>The Secret name. The Secret name.</summary>
@@ -395,6 +422,7 @@ public partial class V1beta1ContainerAppSpecForProviderSecret
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateAzureQueueScaleRuleAuthentication
 {
     /// <summary>The name of the secret that contains the value for this environment variable.</summary>
@@ -407,6 +435,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateAzureQueueScaleRu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateAzureQueueScaleRule
 {
     /// <summary>Zero or more authentication blocks as defined below.</summary>
@@ -427,6 +456,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateAzureQueueScaleRu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateContainerEnv
 {
     /// <summary>The name of the Volume to be mounted in the container. The name of the environment variable for the container.</summary>
@@ -443,6 +473,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainerEnv
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateContainerLivenessProbeHeader
 {
     /// <summary>The name of the Volume to be mounted in the container. The HTTP Header Name.</summary>
@@ -455,6 +486,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainerLiveness
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateContainerLivenessProbe
 {
     /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.</summary>
@@ -495,6 +527,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainerLiveness
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateContainerReadinessProbeHeader
 {
     /// <summary>The name of the Volume to be mounted in the container. The HTTP Header Name.</summary>
@@ -507,6 +540,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainerReadines
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateContainerReadinessProbe
 {
     /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.</summary>
@@ -547,6 +581,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainerReadines
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateContainerStartupProbeHeader
 {
     /// <summary>The name of the Volume to be mounted in the container. The HTTP Header Name.</summary>
@@ -559,6 +594,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainerStartupP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateContainerStartupProbe
 {
     /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.</summary>
@@ -595,6 +631,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainerStartupP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateContainerVolumeMounts
 {
     /// <summary>The name of the Volume to be mounted in the container. The name of the Volume to be mounted in the container.</summary>
@@ -607,6 +644,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainerVolumeMo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateContainer
 {
     /// <summary>A list of extra arguments to pass to the container. A list of args to pass to the container.</summary>
@@ -655,6 +693,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainer
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateCustomScaleRuleAuthentication
 {
     /// <summary>The name of the secret that contains the value for this environment variable.</summary>
@@ -667,6 +706,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateCustomScaleRuleAu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateCustomScaleRule
 {
     /// <summary>Zero or more authentication blocks as defined below.</summary>
@@ -687,6 +727,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateCustomScaleRule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateHttpScaleRuleAuthentication
 {
     /// <summary>The name of the secret that contains the value for this environment variable.</summary>
@@ -699,6 +740,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateHttpScaleRuleAuth
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateHttpScaleRule
 {
     /// <summary>Zero or more authentication blocks as defined below.</summary>
@@ -715,6 +757,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateHttpScaleRule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateInitContainerEnv
 {
     /// <summary>The name of the Volume to be mounted in the container. The name of the environment variable for the container.</summary>
@@ -731,6 +774,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateInitContainerEnv
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateInitContainerVolumeMounts
 {
     /// <summary>The name of the Volume to be mounted in the container. The name of the Volume to be mounted in the container.</summary>
@@ -743,6 +787,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateInitContainerVolu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateInitContainer
 {
     /// <summary>A list of extra arguments to pass to the container. A list of args to pass to the container.</summary>
@@ -779,6 +824,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateInitContainer
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateTcpScaleRuleAuthentication
 {
     /// <summary>The name of the secret that contains the value for this environment variable.</summary>
@@ -791,6 +837,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateTcpScaleRuleAuthe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateTcpScaleRule
 {
     /// <summary>Zero or more authentication blocks as defined below.</summary>
@@ -807,6 +854,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateTcpScaleRule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateVolume
 {
     /// <summary>The name of the Volume to be mounted in the container. The name of the volume.</summary>
@@ -823,6 +871,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateVolume
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplate
 {
     /// <summary>One or more azure_queue_scale_rule blocks as defined below.</summary>
@@ -867,6 +916,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplate
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProvider
 {
     /// <summary>The ID of the Container App Environment within which this Container App should exist. Changing this forces a new resource to be created. The ID of the Container App Environment to host this Container App.</summary>
@@ -930,6 +980,7 @@ public partial class V1beta1ContainerAppSpecForProvider
     public string? WorkloadProfileName { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -940,6 +991,7 @@ public enum V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentIdRefPolic
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -951,6 +1003,7 @@ public enum V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentIdRefPolic
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -965,6 +1018,7 @@ public partial class V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentI
 }
 
 /// <summary>Reference to a Environment in containerapp to populate containerAppEnvironmentId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -976,6 +1030,7 @@ public partial class V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentI
     public V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -986,6 +1041,7 @@ public enum V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentIdSelector
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -997,6 +1053,7 @@ public enum V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentIdSelector
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1011,6 +1068,7 @@ public partial class V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentI
 }
 
 /// <summary>Selector for a Environment in containerapp to populate containerAppEnvironmentId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1027,6 +1085,7 @@ public partial class V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentI
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderDapr
 {
     /// <summary>The Dapr Application Identifier. The Dapr Application Identifier.</summary>
@@ -1043,6 +1102,7 @@ public partial class V1beta1ContainerAppSpecInitProviderDapr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderIdentity
 {
     /// <summary>- A list of one or more Resource IDs for User Assigned Managed identities to assign. Required when type is set to UserAssigned or SystemAssigned, UserAssigned.</summary>
@@ -1055,6 +1115,7 @@ public partial class V1beta1ContainerAppSpecInitProviderIdentity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderIngressCustomDomain
 {
     /// <summary>The Binding type. Possible values include Disabled and SniEnabled. Defaults to Disabled. The Binding type. Possible values include `Disabled` and `SniEnabled`. Defaults to `Disabled`</summary>
@@ -1071,6 +1132,7 @@ public partial class V1beta1ContainerAppSpecInitProviderIngressCustomDomain
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderIngressIpSecurityRestriction
 {
     /// <summary>The IP-filter action. Allow or Deny. The action. Allow or Deny.</summary>
@@ -1091,6 +1153,7 @@ public partial class V1beta1ContainerAppSpecInitProviderIngressIpSecurityRestric
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderIngressTrafficWeight
 {
     /// <summary>The label to apply to the revision as a name prefix for routing traffic. The label to apply to the revision as a name prefix for routing traffic.</summary>
@@ -1111,6 +1174,7 @@ public partial class V1beta1ContainerAppSpecInitProviderIngressTrafficWeight
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderIngress
 {
     /// <summary>Should this ingress allow insecure connections? Should this ingress allow insecure connections?</summary>
@@ -1147,6 +1211,7 @@ public partial class V1beta1ContainerAppSpecInitProviderIngress
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderRegistry
 {
     /// <summary>Resource ID for the User Assigned Managed identity to use when pulling from the Container Registry. ID of the System or User Managed Identity used to pull images from the Container Registry</summary>
@@ -1167,11 +1232,13 @@ public partial class V1beta1ContainerAppSpecInitProviderRegistry
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderSecret
 {
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateAzureQueueScaleRuleAuthentication
 {
     /// <summary>The name of the secret that contains the value for this environment variable.</summary>
@@ -1184,6 +1251,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateAzureQueueScaleR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateAzureQueueScaleRule
 {
     /// <summary>Zero or more authentication blocks as defined below.</summary>
@@ -1204,6 +1272,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateAzureQueueScaleR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerEnv
 {
     /// <summary>The name of the Volume to be mounted in the container. The name of the environment variable for the container.</summary>
@@ -1220,6 +1289,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerEnv
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerLivenessProbeHeader
 {
     /// <summary>The name of the Volume to be mounted in the container. The HTTP Header Name.</summary>
@@ -1232,6 +1302,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerLivenes
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerLivenessProbe
 {
     /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.</summary>
@@ -1272,6 +1343,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerLivenes
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerReadinessProbeHeader
 {
     /// <summary>The name of the Volume to be mounted in the container. The HTTP Header Name.</summary>
@@ -1284,6 +1356,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerReadine
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerReadinessProbe
 {
     /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.</summary>
@@ -1324,6 +1397,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerReadine
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerStartupProbeHeader
 {
     /// <summary>The name of the Volume to be mounted in the container. The HTTP Header Name.</summary>
@@ -1336,6 +1410,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerStartup
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerStartupProbe
 {
     /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.</summary>
@@ -1372,6 +1447,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerStartup
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerVolumeMounts
 {
     /// <summary>The name of the Volume to be mounted in the container. The name of the Volume to be mounted in the container.</summary>
@@ -1384,6 +1460,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerVolumeM
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateContainer
 {
     /// <summary>A list of extra arguments to pass to the container. A list of args to pass to the container.</summary>
@@ -1432,6 +1509,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainer
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateCustomScaleRuleAuthentication
 {
     /// <summary>The name of the secret that contains the value for this environment variable.</summary>
@@ -1444,6 +1522,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateCustomScaleRuleA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateCustomScaleRule
 {
     /// <summary>Zero or more authentication blocks as defined below.</summary>
@@ -1464,6 +1543,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateCustomScaleRule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateHttpScaleRuleAuthentication
 {
     /// <summary>The name of the secret that contains the value for this environment variable.</summary>
@@ -1476,6 +1556,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateHttpScaleRuleAut
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateHttpScaleRule
 {
     /// <summary>Zero or more authentication blocks as defined below.</summary>
@@ -1492,6 +1573,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateHttpScaleRule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateInitContainerEnv
 {
     /// <summary>The name of the Volume to be mounted in the container. The name of the environment variable for the container.</summary>
@@ -1508,6 +1590,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateInitContainerEnv
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateInitContainerVolumeMounts
 {
     /// <summary>The name of the Volume to be mounted in the container. The name of the Volume to be mounted in the container.</summary>
@@ -1520,6 +1603,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateInitContainerVol
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateInitContainer
 {
     /// <summary>A list of extra arguments to pass to the container. A list of args to pass to the container.</summary>
@@ -1556,6 +1640,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateInitContainer
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateTcpScaleRuleAuthentication
 {
     /// <summary>The name of the secret that contains the value for this environment variable.</summary>
@@ -1568,6 +1653,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateTcpScaleRuleAuth
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateTcpScaleRule
 {
     /// <summary>Zero or more authentication blocks as defined below.</summary>
@@ -1584,6 +1670,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateTcpScaleRule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateVolume
 {
     /// <summary>The name of the Volume to be mounted in the container. The name of the volume.</summary>
@@ -1600,6 +1687,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateVolume
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplate
 {
     /// <summary>One or more azure_queue_scale_rule blocks as defined below.</summary>
@@ -1644,6 +1732,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplate
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProvider
 {
     /// <summary>The ID of the Container App Environment within which this Container App should exist. Changing this forces a new resource to be created. The ID of the Container App Environment to host this Container App.</summary>
@@ -1695,6 +1784,7 @@ public partial class V1beta1ContainerAppSpecInitProvider
     public string? WorkloadProfileName { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ContainerAppSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -1717,6 +1807,7 @@ public enum V1beta1ContainerAppSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ContainerAppSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1727,6 +1818,7 @@ public enum V1beta1ContainerAppSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ContainerAppSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1738,6 +1830,7 @@ public enum V1beta1ContainerAppSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1752,6 +1845,7 @@ public partial class V1beta1ContainerAppSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1763,6 +1857,7 @@ public partial class V1beta1ContainerAppSpecProviderConfigRef
     public V1beta1ContainerAppSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ContainerAppSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1773,6 +1868,7 @@ public enum V1beta1ContainerAppSpecPublishConnectionDetailsToConfigRefPolicyReso
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ContainerAppSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1784,6 +1880,7 @@ public enum V1beta1ContainerAppSpecPublishConnectionDetailsToConfigRefPolicyReso
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1798,6 +1895,7 @@ public partial class V1beta1ContainerAppSpecPublishConnectionDetailsToConfigRefP
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1810,6 +1908,7 @@ public partial class V1beta1ContainerAppSpecPublishConnectionDetailsToConfigRef
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1826,6 +1925,7 @@ public partial class V1beta1ContainerAppSpecPublishConnectionDetailsToMetadata
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1842,6 +1942,7 @@ public partial class V1beta1ContainerAppSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1854,6 +1955,7 @@ public partial class V1beta1ContainerAppSpecWriteConnectionSecretToRef
 }
 
 /// <summary>ContainerAppSpec defines the desired state of ContainerApp</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1887,6 +1989,7 @@ public partial class V1beta1ContainerAppSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderDapr
 {
     /// <summary>The Dapr Application Identifier. The Dapr Application Identifier.</summary>
@@ -1903,6 +2006,7 @@ public partial class V1beta1ContainerAppStatusAtProviderDapr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderIdentity
 {
     /// <summary>- A list of one or more Resource IDs for User Assigned Managed identities to assign. Required when type is set to UserAssigned or SystemAssigned, UserAssigned.</summary>
@@ -1923,6 +2027,7 @@ public partial class V1beta1ContainerAppStatusAtProviderIdentity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderIngressCustomDomain
 {
     /// <summary>The Binding type. Possible values include Disabled and SniEnabled. Defaults to Disabled. The Binding type. Possible values include `Disabled` and `SniEnabled`. Defaults to `Disabled`</summary>
@@ -1939,6 +2044,7 @@ public partial class V1beta1ContainerAppStatusAtProviderIngressCustomDomain
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderIngressIpSecurityRestriction
 {
     /// <summary>The IP-filter action. Allow or Deny. The action. Allow or Deny.</summary>
@@ -1959,6 +2065,7 @@ public partial class V1beta1ContainerAppStatusAtProviderIngressIpSecurityRestric
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderIngressTrafficWeight
 {
     /// <summary>The label to apply to the revision as a name prefix for routing traffic. The label to apply to the revision as a name prefix for routing traffic.</summary>
@@ -1979,6 +2086,7 @@ public partial class V1beta1ContainerAppStatusAtProviderIngressTrafficWeight
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderIngress
 {
     /// <summary>Should this ingress allow insecure connections? Should this ingress allow insecure connections?</summary>
@@ -2019,6 +2127,7 @@ public partial class V1beta1ContainerAppStatusAtProviderIngress
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderRegistry
 {
     /// <summary>Resource ID for the User Assigned Managed identity to use when pulling from the Container Registry. ID of the System or User Managed Identity used to pull images from the Container Registry</summary>
@@ -2039,6 +2148,7 @@ public partial class V1beta1ContainerAppStatusAtProviderRegistry
 }
 
 /// <summary>The Secret name. The Secret name.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderSecretNameSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -2055,6 +2165,7 @@ public partial class V1beta1ContainerAppStatusAtProviderSecretNameSecretRef
 }
 
 /// <summary>The value for this secret. The value for this secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderSecretValueSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -2071,6 +2182,7 @@ public partial class V1beta1ContainerAppStatusAtProviderSecretValueSecretRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderSecret
 {
     /// <summary>The Secret name. The Secret name.</summary>
@@ -2083,6 +2195,7 @@ public partial class V1beta1ContainerAppStatusAtProviderSecret
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateAzureQueueScaleRuleAuthentication
 {
     /// <summary>The name of the secret that contains the value for this environment variable.</summary>
@@ -2095,6 +2208,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateAzureQueueScaleR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateAzureQueueScaleRule
 {
     /// <summary>Zero or more authentication blocks as defined below.</summary>
@@ -2115,6 +2229,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateAzureQueueScaleR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerEnv
 {
     /// <summary>The name of the Volume to be mounted in the container. The name of the environment variable for the container.</summary>
@@ -2131,6 +2246,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerEnv
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerLivenessProbeHeader
 {
     /// <summary>The name of the Volume to be mounted in the container. The HTTP Header Name.</summary>
@@ -2143,6 +2259,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerLivenes
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerLivenessProbe
 {
     /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.</summary>
@@ -2187,6 +2304,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerLivenes
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerReadinessProbeHeader
 {
     /// <summary>The name of the Volume to be mounted in the container. The HTTP Header Name.</summary>
@@ -2199,6 +2317,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerReadine
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerReadinessProbe
 {
     /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.</summary>
@@ -2239,6 +2358,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerReadine
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerStartupProbeHeader
 {
     /// <summary>The name of the Volume to be mounted in the container. The HTTP Header Name.</summary>
@@ -2251,6 +2371,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerStartup
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerStartupProbe
 {
     /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.</summary>
@@ -2291,6 +2412,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerStartup
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerVolumeMounts
 {
     /// <summary>The name of the Volume to be mounted in the container. The name of the Volume to be mounted in the container.</summary>
@@ -2303,6 +2425,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerVolumeM
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateContainer
 {
     /// <summary>A list of extra arguments to pass to the container. A list of args to pass to the container.</summary>
@@ -2355,6 +2478,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainer
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateCustomScaleRuleAuthentication
 {
     /// <summary>The name of the secret that contains the value for this environment variable.</summary>
@@ -2367,6 +2491,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateCustomScaleRuleA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateCustomScaleRule
 {
     /// <summary>Zero or more authentication blocks as defined below.</summary>
@@ -2387,6 +2512,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateCustomScaleRule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateHttpScaleRuleAuthentication
 {
     /// <summary>The name of the secret that contains the value for this environment variable.</summary>
@@ -2399,6 +2525,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateHttpScaleRuleAut
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateHttpScaleRule
 {
     /// <summary>Zero or more authentication blocks as defined below.</summary>
@@ -2415,6 +2542,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateHttpScaleRule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateInitContainerEnv
 {
     /// <summary>The name of the Volume to be mounted in the container. The name of the environment variable for the container.</summary>
@@ -2431,6 +2559,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateInitContainerEnv
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateInitContainerVolumeMounts
 {
     /// <summary>The name of the Volume to be mounted in the container. The name of the Volume to be mounted in the container.</summary>
@@ -2443,6 +2572,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateInitContainerVol
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateInitContainer
 {
     /// <summary>A list of extra arguments to pass to the container. A list of args to pass to the container.</summary>
@@ -2483,6 +2613,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateInitContainer
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateTcpScaleRuleAuthentication
 {
     /// <summary>The name of the secret that contains the value for this environment variable.</summary>
@@ -2495,6 +2626,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateTcpScaleRuleAuth
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateTcpScaleRule
 {
     /// <summary>Zero or more authentication blocks as defined below.</summary>
@@ -2511,6 +2643,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateTcpScaleRule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateVolume
 {
     /// <summary>The name of the Volume to be mounted in the container. The name of the volume.</summary>
@@ -2527,6 +2660,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateVolume
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplate
 {
     /// <summary>One or more azure_queue_scale_rule blocks as defined below.</summary>
@@ -2571,6 +2705,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplate
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProvider
 {
     /// <summary>The ID of the Container App Environment within which this Container App should exist. Changing this forces a new resource to be created. The ID of the Container App Environment to host this Container App.</summary>
@@ -2639,6 +2774,7 @@ public partial class V1beta1ContainerAppStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2667,6 +2803,7 @@ public partial class V1beta1ContainerAppStatusConditions
 }
 
 /// <summary>ContainerAppStatus defines the observed state of ContainerApp.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatus
 {
     /// <summary></summary>
@@ -2682,8 +2819,9 @@ public partial class V1beta1ContainerAppStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>ContainerApp is the Schema for the ContainerApps API. Manages a Container App.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ContainerApp : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ContainerAppSpec>, IStatus<V1beta1ContainerAppStatus>
 {
     public const string KubeApiVersion = "v1beta1";

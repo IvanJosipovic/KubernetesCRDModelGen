@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudtasks.cnrm.cloud.google.com;
 /// <summary>Overrides for task-level appEngineRouting. These settings apply only to App Engine tasks in this queue.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudTasksQueueSpecAppEngineRoutingOverride
 {
     /// <summary>The host that the task is sent to.</summary>
@@ -29,6 +30,7 @@ public partial class V1alpha1CloudTasksQueueSpecAppEngineRoutingOverride
 }
 
 /// <summary>The project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudTasksQueueSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -45,6 +47,7 @@ public partial class V1alpha1CloudTasksQueueSpecProjectRef
 }
 
 /// <summary>Rate limits for task dispatches.  The queue's actual dispatch rate is the result of:  * Number of tasks in the queue * User-specified throttling: rateLimits, retryConfig, and the queue's state. * System throttling due to 429 (Too Many Requests) or 503 (Service   Unavailable) responses from the worker, high error rates, or to   smooth sudden large traffic spikes.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudTasksQueueSpecRateLimits
 {
     /// <summary>The max burst size.  Max burst size limits how fast tasks in queue are processed when many tasks are in the queue and the rate is high. This field allows the queue to have a high rate so processing starts shortly after a task is enqueued, but still limits resource usage when many tasks are enqueued in a short period of time.</summary>
@@ -61,6 +64,7 @@ public partial class V1alpha1CloudTasksQueueSpecRateLimits
 }
 
 /// <summary>Settings that determine the retry behavior.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudTasksQueueSpecRetryConfig
 {
     /// <summary>Number of attempts per task.  Cloud Tasks will attempt the task maxAttempts times (that is, if the first attempt fails, then there will be maxAttempts - 1 retries). Must be &gt;= -1.  If unspecified when the queue is created, Cloud Tasks will pick the default.  -1 indicates unlimited attempts.</summary>
@@ -85,6 +89,7 @@ public partial class V1alpha1CloudTasksQueueSpecRetryConfig
 }
 
 /// <summary>Configuration options for writing logs to Stackdriver Logging.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudTasksQueueSpecStackdriverLoggingConfig
 {
     /// <summary>Specifies the fraction of operations to write to Stackdriver Logging. This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the default and means that no operations are logged.</summary>
@@ -93,6 +98,7 @@ public partial class V1alpha1CloudTasksQueueSpecStackdriverLoggingConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudTasksQueueSpec
 {
     /// <summary>Overrides for task-level appEngineRouting. These settings apply only to App Engine tasks in this queue.</summary>
@@ -125,6 +131,7 @@ public partial class V1alpha1CloudTasksQueueSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudTasksQueueStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -149,6 +156,7 @@ public partial class V1alpha1CloudTasksQueueStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudTasksQueueStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -160,8 +168,9 @@ public partial class V1alpha1CloudTasksQueueStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1CloudTasksQueue : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1CloudTasksQueueSpec>, IStatus<V1alpha1CloudTasksQueueStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

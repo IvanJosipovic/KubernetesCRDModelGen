@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
 /// <summary>Storage version of v1api20220701.ResourceSet The base resource set for visibility and auto-approval.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storagePrivateLinkServiceSpecAutoApproval
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -21,6 +22,7 @@ public partial class V1api20220701storagePrivateLinkServiceSpecAutoApproval
 }
 
 /// <summary>Storage version of v1api20220701.ExtendedLocation ExtendedLocation complex type.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storagePrivateLinkServiceSpecExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -37,6 +39,7 @@ public partial class V1api20220701storagePrivateLinkServiceSpecExtendedLocation
 }
 
 /// <summary>Reference: Resource ID.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storagePrivateLinkServiceSpecIpConfigurationsSubnetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -57,6 +60,7 @@ public partial class V1api20220701storagePrivateLinkServiceSpecIpConfigurationsS
 }
 
 /// <summary>Storage version of v1api20220701.Subnet_PrivateLinkService_SubResourceEmbedded Subnet in a virtual network resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storagePrivateLinkServiceSpecIpConfigurationsSubnet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -69,6 +73,7 @@ public partial class V1api20220701storagePrivateLinkServiceSpecIpConfigurationsS
 }
 
 /// <summary>Storage version of v1api20220701.PrivateLinkServiceIpConfiguration The private link service ip configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storagePrivateLinkServiceSpecIpConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -101,6 +106,7 @@ public partial class V1api20220701storagePrivateLinkServiceSpecIpConfigurations
 }
 
 /// <summary>Reference: Resource ID.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storagePrivateLinkServiceSpecLoadBalancerFrontendIpConfigurationsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -121,6 +127,7 @@ public partial class V1api20220701storagePrivateLinkServiceSpecLoadBalancerFront
 }
 
 /// <summary>Storage version of v1api20220701.FrontendIPConfiguration_PrivateLinkService_SubResourceEmbedded Frontend IP address of the load balancer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storagePrivateLinkServiceSpecLoadBalancerFrontendIpConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -133,6 +140,7 @@ public partial class V1api20220701storagePrivateLinkServiceSpecLoadBalancerFront
 }
 
 /// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storagePrivateLinkServiceSpecOperatorSpecConfigMapsAlias
 {
     /// <summary>Key is the key in the ConfigMap being referenced</summary>
@@ -145,6 +153,7 @@ public partial class V1api20220701storagePrivateLinkServiceSpecOperatorSpecConfi
 }
 
 /// <summary>Storage version of v1api20220701.PrivateLinkServiceOperatorConfigMaps</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storagePrivateLinkServiceSpecOperatorSpecConfigMaps
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -157,6 +166,7 @@ public partial class V1api20220701storagePrivateLinkServiceSpecOperatorSpecConfi
 }
 
 /// <summary>Storage version of v1api20220701.PrivateLinkServiceOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storagePrivateLinkServiceSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -169,6 +179,7 @@ public partial class V1api20220701storagePrivateLinkServiceSpecOperatorSpec
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storagePrivateLinkServiceSpecOwner
 {
     /// <summary></summary>
@@ -181,6 +192,7 @@ public partial class V1api20220701storagePrivateLinkServiceSpecOwner
 }
 
 /// <summary>Storage version of v1api20220701.ResourceSet The base resource set for visibility and auto-approval.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storagePrivateLinkServiceSpecVisibility
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -193,6 +205,7 @@ public partial class V1api20220701storagePrivateLinkServiceSpecVisibility
 }
 
 /// <summary>Storage version of v1api20220701.PrivateLinkService_Spec</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storagePrivateLinkServiceSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -253,6 +266,7 @@ public partial class V1api20220701storagePrivateLinkServiceSpec
 }
 
 /// <summary>Storage version of v1api20220701.ResourceSet_STATUS The base resource set for visibility and auto-approval.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storagePrivateLinkServiceStatusAutoApproval
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -265,6 +279,7 @@ public partial class V1api20220701storagePrivateLinkServiceStatusAutoApproval
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storagePrivateLinkServiceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -297,6 +312,7 @@ public partial class V1api20220701storagePrivateLinkServiceStatusConditions
 }
 
 /// <summary>Storage version of v1api20220701.ExtendedLocation_STATUS ExtendedLocation complex type.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storagePrivateLinkServiceStatusExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -313,6 +329,7 @@ public partial class V1api20220701storagePrivateLinkServiceStatusExtendedLocatio
 }
 
 /// <summary>Storage version of v1api20220701.Subnet_STATUS_PrivateLinkService_SubResourceEmbedded Subnet in a virtual network resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storagePrivateLinkServiceStatusIpConfigurationsSubnet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -325,6 +342,7 @@ public partial class V1api20220701storagePrivateLinkServiceStatusIpConfiguration
 }
 
 /// <summary>Storage version of v1api20220701.PrivateLinkServiceIpConfiguration_STATUS The private link service ip configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storagePrivateLinkServiceStatusIpConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -373,6 +391,7 @@ public partial class V1api20220701storagePrivateLinkServiceStatusIpConfiguration
 }
 
 /// <summary>Storage version of v1api20220701.FrontendIPConfiguration_STATUS_PrivateLinkService_SubResourceEmbedded Frontend IP address of the load balancer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storagePrivateLinkServiceStatusLoadBalancerFrontendIpConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -385,6 +404,7 @@ public partial class V1api20220701storagePrivateLinkServiceStatusLoadBalancerFro
 }
 
 /// <summary>Storage version of v1api20220701.NetworkInterface_STATUS_PrivateLinkService_SubResourceEmbedded A network interface in a resource group.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storagePrivateLinkServiceStatusNetworkInterfaces
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -397,6 +417,7 @@ public partial class V1api20220701storagePrivateLinkServiceStatusNetworkInterfac
 }
 
 /// <summary>Storage version of v1api20220701.PrivateEndpointConnection_STATUS PrivateEndpointConnection resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storagePrivateLinkServiceStatusPrivateEndpointConnections
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -409,6 +430,7 @@ public partial class V1api20220701storagePrivateLinkServiceStatusPrivateEndpoint
 }
 
 /// <summary>Storage version of v1api20220701.ResourceSet_STATUS The base resource set for visibility and auto-approval.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storagePrivateLinkServiceStatusVisibility
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -421,6 +443,7 @@ public partial class V1api20220701storagePrivateLinkServiceStatusVisibility
 }
 
 /// <summary>Storage version of v1api20220701.PrivateLinkService_STATUS_PrivateLinkService_SubResourceEmbedded Private link service resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storagePrivateLinkServiceStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -500,8 +523,9 @@ public partial class V1api20220701storagePrivateLinkServiceStatus
     public V1api20220701storagePrivateLinkServiceStatusVisibility? Visibility { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Storage version of v1api20220701.PrivateLinkService Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2022-07-01/privateLinkService.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateLinkServices/{serviceName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1api20220701storagePrivateLinkService : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220701storagePrivateLinkServiceSpec>, IStatus<V1api20220701storagePrivateLinkServiceStatus>
 {
     public const string KubeApiVersion = "v1api20220701storage";

@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.com;
 /// <summary>Storage version of v1api20230101.ArmRoleReceiver An arm role receiver.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecArmRoleReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -29,6 +30,7 @@ public partial class V1api20230101storageActionGroupSpecArmRoleReceivers
 }
 
 /// <summary>WebhookResourceReference: The resource id for webhook linked to this runbook.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecAutomationRunbookReceiversWebhookResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -49,6 +51,7 @@ public partial class V1api20230101storageActionGroupSpecAutomationRunbookReceive
 }
 
 /// <summary>Storage version of v1api20230101.AutomationRunbookReceiver The Azure Automation Runbook notification receiver.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecAutomationRunbookReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -85,6 +88,7 @@ public partial class V1api20230101storageActionGroupSpecAutomationRunbookReceive
 }
 
 /// <summary>Storage version of v1api20230101.AzureAppPushReceiver The Azure mobile App push notification receiver.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecAzureAppPushReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -101,6 +105,7 @@ public partial class V1api20230101storageActionGroupSpecAzureAppPushReceivers
 }
 
 /// <summary>FunctionAppResourceReference: The azure resource id of the function app.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecAzureFunctionReceiversFunctionAppResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -121,6 +126,7 @@ public partial class V1api20230101storageActionGroupSpecAzureFunctionReceiversFu
 }
 
 /// <summary>Storage version of v1api20230101.AzureFunctionReceiver An azure function receiver.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecAzureFunctionReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -149,6 +155,7 @@ public partial class V1api20230101storageActionGroupSpecAzureFunctionReceivers
 }
 
 /// <summary>Storage version of v1api20230101.EmailReceiver An email receiver.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecEmailReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -169,6 +176,7 @@ public partial class V1api20230101storageActionGroupSpecEmailReceivers
 }
 
 /// <summary>Storage version of v1api20230101.EventHubReceiver An Event hub receiver.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecEventHubReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -201,6 +209,7 @@ public partial class V1api20230101storageActionGroupSpecEventHubReceivers
 }
 
 /// <summary>Storage version of v1api20230101.ItsmReceiver An Itsm receiver.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecItsmReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -229,6 +238,7 @@ public partial class V1api20230101storageActionGroupSpecItsmReceivers
 }
 
 /// <summary>ResourceReference: The azure resource id of the logic app receiver.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecLogicAppReceiversResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -249,6 +259,7 @@ public partial class V1api20230101storageActionGroupSpecLogicAppReceiversResourc
 }
 
 /// <summary>Storage version of v1api20230101.LogicAppReceiver A logic app receiver.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecLogicAppReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -273,6 +284,7 @@ public partial class V1api20230101storageActionGroupSpecLogicAppReceivers
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecOwner
 {
     /// <summary></summary>
@@ -285,6 +297,7 @@ public partial class V1api20230101storageActionGroupSpecOwner
 }
 
 /// <summary>Storage version of v1api20230101.SmsReceiver An SMS receiver.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecSmsReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -305,6 +318,7 @@ public partial class V1api20230101storageActionGroupSpecSmsReceivers
 }
 
 /// <summary>Storage version of v1api20230101.VoiceReceiver A voice receiver.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecVoiceReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -325,6 +339,7 @@ public partial class V1api20230101storageActionGroupSpecVoiceReceivers
 }
 
 /// <summary>Storage version of v1api20230101.WebhookReceiver A webhook receiver.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecWebhookReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -361,6 +376,7 @@ public partial class V1api20230101storageActionGroupSpecWebhookReceivers
 }
 
 /// <summary>Storage version of v1api20230101.ActionGroup_Spec</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -441,6 +457,7 @@ public partial class V1api20230101storageActionGroupSpec
 }
 
 /// <summary>Storage version of v1api20230101.ArmRoleReceiver_STATUS An arm role receiver.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupStatusArmRoleReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -461,6 +478,7 @@ public partial class V1api20230101storageActionGroupStatusArmRoleReceivers
 }
 
 /// <summary>Storage version of v1api20230101.AutomationRunbookReceiver_STATUS The Azure Automation Runbook notification receiver.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupStatusAutomationRunbookReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -497,6 +515,7 @@ public partial class V1api20230101storageActionGroupStatusAutomationRunbookRecei
 }
 
 /// <summary>Storage version of v1api20230101.AzureAppPushReceiver_STATUS The Azure mobile App push notification receiver.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupStatusAzureAppPushReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -513,6 +532,7 @@ public partial class V1api20230101storageActionGroupStatusAzureAppPushReceivers
 }
 
 /// <summary>Storage version of v1api20230101.AzureFunctionReceiver_STATUS An azure function receiver.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupStatusAzureFunctionReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -541,6 +561,7 @@ public partial class V1api20230101storageActionGroupStatusAzureFunctionReceivers
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -573,6 +594,7 @@ public partial class V1api20230101storageActionGroupStatusConditions
 }
 
 /// <summary>Storage version of v1api20230101.EmailReceiver_STATUS An email receiver.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupStatusEmailReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -597,6 +619,7 @@ public partial class V1api20230101storageActionGroupStatusEmailReceivers
 }
 
 /// <summary>Storage version of v1api20230101.EventHubReceiver_STATUS An Event hub receiver.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupStatusEventHubReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -629,6 +652,7 @@ public partial class V1api20230101storageActionGroupStatusEventHubReceivers
 }
 
 /// <summary>Storage version of v1api20230101.ItsmReceiver_STATUS An Itsm receiver.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupStatusItsmReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -657,6 +681,7 @@ public partial class V1api20230101storageActionGroupStatusItsmReceivers
 }
 
 /// <summary>Storage version of v1api20230101.LogicAppReceiver_STATUS A logic app receiver.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupStatusLogicAppReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -681,6 +706,7 @@ public partial class V1api20230101storageActionGroupStatusLogicAppReceivers
 }
 
 /// <summary>Storage version of v1api20230101.SmsReceiver_STATUS An SMS receiver.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupStatusSmsReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -705,6 +731,7 @@ public partial class V1api20230101storageActionGroupStatusSmsReceivers
 }
 
 /// <summary>Storage version of v1api20230101.VoiceReceiver_STATUS A voice receiver.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupStatusVoiceReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -725,6 +752,7 @@ public partial class V1api20230101storageActionGroupStatusVoiceReceivers
 }
 
 /// <summary>Storage version of v1api20230101.WebhookReceiver_STATUS A webhook receiver.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupStatusWebhookReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -761,6 +789,7 @@ public partial class V1api20230101storageActionGroupStatusWebhookReceivers
 }
 
 /// <summary>Storage version of v1api20230101.ActionGroupResource_STATUS An action group resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -844,8 +873,9 @@ public partial class V1api20230101storageActionGroupStatus
     public IList<V1api20230101storageActionGroupStatusWebhookReceivers>? WebhookReceivers { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Storage version of v1api20230101.ActionGroup Generator information: - Generated from: /monitor/resource-manager/Microsoft.Insights/stable/2023-01-01/actionGroups_API.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/actionGroups/{actionGroupName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1api20230101storageActionGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230101storageActionGroupSpec>, IStatus<V1api20230101storageActionGroupStatus>
 {
     public const string KubeApiVersion = "v1api20230101storage";

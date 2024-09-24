@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sinks.knative.dev;
 /// <summary>Spec defines the desired state of the JobSink.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSinkSpec
 {
     /// <summary>Full Job resource object, see https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#job-v1-batch for more details.</summary>
@@ -17,6 +18,7 @@ public partial class V1alpha1JobSinkSpec
 }
 
 /// <summary>JobSink is Addressable. It exposes the endpoint as an URI to schedule long running jobs when an even occurs.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSinkStatusAddress
 {
     /// <summary></summary>
@@ -37,6 +39,7 @@ public partial class V1alpha1JobSinkStatusAddress
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSinkStatusAddresses
 {
     /// <summary></summary>
@@ -57,6 +60,7 @@ public partial class V1alpha1JobSinkStatusAddresses
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSinkStatusJob
 {
     /// <summary>Label selector for all scheduled jobs</summary>
@@ -65,6 +69,7 @@ public partial class V1alpha1JobSinkStatusJob
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSinkStatusPolicies
 {
     /// <summary>The API version of the applied EventPolicy. This indicates, which version of EventPolicy is supported by the resource.</summary>
@@ -77,6 +82,7 @@ public partial class V1alpha1JobSinkStatusPolicies
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSinkStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
@@ -105,6 +111,7 @@ public partial class V1alpha1JobSinkStatusConditions
 }
 
 /// <summary>Status represents the current state of the JobSink. This data may be out of date.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSinkStatus
 {
     /// <summary>JobSink is Addressable. It exposes the endpoint as an URI to schedule long running jobs when an even occurs.</summary>
@@ -132,8 +139,9 @@ public partial class V1alpha1JobSinkStatus
     public IList<V1alpha1JobSinkStatusConditions>? Conditions { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>JobSink triggers long-running jobs when an event occur.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1JobSink : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1JobSinkSpec>, IStatus<V1alpha1JobSinkStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

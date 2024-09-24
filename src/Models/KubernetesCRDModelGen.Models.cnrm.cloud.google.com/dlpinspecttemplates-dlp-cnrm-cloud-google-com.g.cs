@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dlp.cnrm.cloud.google.com;
 /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypesDictionaryCloudStoragePath
 {
     /// <summary>A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt</summary>
@@ -17,6 +18,7 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypesDi
 }
 
 /// <summary>List of words or phrases to search for.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypesDictionaryWordList
 {
     /// <summary>Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits. [required]</summary>
@@ -25,6 +27,7 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypesDi
 }
 
 /// <summary>A list of phrases to detect as a CustomInfoType.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypesDictionary
 {
     /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted.</summary>
@@ -37,6 +40,7 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypesDi
 }
 
 /// <summary>CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing infoTypes and that infoType is specified in `InspectContent.info_types` field. Specifying the latter adds findings to the one detected by the system. If built-in info type is not specified in `InspectContent.info_types` list then the name is treated as a custom info type.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypesInfoType
 {
     /// <summary>Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.</summary>
@@ -45,6 +49,7 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypesIn
 }
 
 /// <summary>Regular expression based CustomInfoType.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypesRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -57,6 +62,7 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypesRe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypesStoredTypeNameRef
 {
     /// <summary>Resource name of the requested `StoredInfoType`, for example `organizations/433245324/storedInfoTypes/432452342` or `projects/project-id/storedInfoTypes/432452342`.  Allowed value: The Google Cloud resource name of a `DLPStoredInfoType` resource (format: `{{parent}}/storedInfoTypes/{{name}}`).</summary>
@@ -73,6 +79,7 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypesSt
 }
 
 /// <summary>Load an existing `StoredInfoType` resource for use in `InspectDataSource`. Not currently supported in `InspectContent`.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypesStoredType
 {
     /// <summary>Timestamp indicating when the version of the `StoredInfoType` used for inspection was created. Output-only field, populated by the system.</summary>
@@ -85,6 +92,7 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypesSt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypes
 {
     /// <summary>A list of phrases to detect as a CustomInfoType.</summary>
@@ -117,6 +125,7 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypes
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigInfoTypes
 {
     /// <summary>Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.</summary>
@@ -125,6 +134,7 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigInfoTypes
 }
 
 /// <summary>Type of information the findings limit applies to. Only one limit per info_type should be provided. If InfoTypeLimit does not have an info_type, the DLP API applies the limit against all info_types that are found but not specified in another InfoTypeLimit.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigLimitsMaxFindingsPerInfoTypeInfoType
 {
     /// <summary>Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.</summary>
@@ -133,6 +143,7 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigLimitsMaxFindings
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigLimitsMaxFindingsPerInfoType
 {
     /// <summary>Type of information the findings limit applies to. Only one limit per info_type should be provided. If InfoTypeLimit does not have an info_type, the DLP API applies the limit against all info_types that are found but not specified in another InfoTypeLimit.</summary>
@@ -145,6 +156,7 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigLimitsMaxFindings
 }
 
 /// <summary>Configuration to control the number of findings returned.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigLimits
 {
     /// <summary>Configuration of findings limit given for specified infoTypes.</summary>
@@ -161,6 +173,7 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigLimits
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetInfoTypes
 {
     /// <summary>Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.</summary>
@@ -169,6 +182,7 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetInfoTypes
 }
 
 /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath
 {
     /// <summary>A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt</summary>
@@ -177,6 +191,7 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesExclu
 }
 
 /// <summary>List of words or phrases to search for.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesExclusionRuleDictionaryWordList
 {
     /// <summary>Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits. [required]</summary>
@@ -185,6 +200,7 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesExclu
 }
 
 /// <summary>Dictionary which defines the rule.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesExclusionRuleDictionary
 {
     /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted.</summary>
@@ -197,6 +213,7 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesExclu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes
 {
     /// <summary>Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.</summary>
@@ -205,6 +222,7 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesExclu
 }
 
 /// <summary>Set of infoTypes for which findings would affect this rule.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes
 {
     /// <summary>InfoType list in ExclusionRule rule drops a finding when it overlaps or contained within with a finding of an infoType from this list. For example, for `InspectionRuleSet.info_types` containing "PHONE_NUMBER"` and `exclusion_rule` containing `exclude_info_types.info_types` with "EMAIL_ADDRESS" the phone number findings are dropped if they overlap with EMAIL_ADDRESS finding. That leads to "555-222-2222@example.org" to generate only a single finding, namely email address.</summary>
@@ -213,6 +231,7 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesExclu
 }
 
 /// <summary>Regular expression which defines the rule.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesExclusionRuleRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -225,6 +244,7 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesExclu
 }
 
 /// <summary>Exclusion rule.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesExclusionRule
 {
     /// <summary>Dictionary which defines the rule.</summary>
@@ -245,6 +265,7 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesExclu
 }
 
 /// <summary>Regular expression pattern defining what qualifies as a hotword.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesHotwordRuleHotwordRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -257,6 +278,7 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesHotwo
 }
 
 /// <summary>Likelihood adjustment to apply to all matching findings.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment
 {
     /// <summary>Set the likelihood of a finding to a fixed value. Possible values: LIKELIHOOD_UNSPECIFIED, VERY_UNLIKELY, UNLIKELY, POSSIBLE, LIKELY, VERY_LIKELY</summary>
@@ -269,6 +291,7 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesHotwo
 }
 
 /// <summary>Proximity of the finding within which the entire hotword must reside. The total length of the window cannot exceed 1000 characters. Note that the finding itself will be included in the window, so that hotwords may be used to match substrings of the finding itself. For example, the certainty of a phone number regex "(d{3}) d{3}-d{4}" could be adjusted upwards if the area code is known to be the local area code of a company office using the hotword regex "(xxx)", where "xxx" is the area code in question.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesHotwordRuleProximity
 {
     /// <summary>Number of characters after the finding to consider.</summary>
@@ -281,6 +304,7 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesHotwo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesHotwordRule
 {
     /// <summary>Regular expression pattern defining what qualifies as a hotword.</summary>
@@ -297,6 +321,7 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesHotwo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRules
 {
     /// <summary>Exclusion rule.</summary>
@@ -309,6 +334,7 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRules
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSet
 {
     /// <summary>List of infoTypes this rule set is applied to.</summary>
@@ -321,6 +347,7 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSet
 }
 
 /// <summary>The core content of the template. Configuration of the scanning process.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfig
 {
     /// <summary>List of options defining data content to scan. If empty, text, images, and other content will be included.</summary>
@@ -357,6 +384,7 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfig
 }
 
 /// <summary>Immutable. The Organization that this resource belongs to. Only one of [organizationRef, projectRef] may be specified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecOrganizationRef
 {
     /// <summary>Allowed value: The Google Cloud resource name of a Google Cloud Organization (format: `organizations/{{name}}`).</summary>
@@ -373,6 +401,7 @@ public partial class V1beta1DLPInspectTemplateSpecOrganizationRef
 }
 
 /// <summary>Immutable. The Project that this resource belongs to. Only one of [organizationRef, projectRef] may be specified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecProjectRef
 {
     /// <summary>Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -389,6 +418,7 @@ public partial class V1beta1DLPInspectTemplateSpecProjectRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpec
 {
     /// <summary>Short description (max 256 chars).</summary>
@@ -421,6 +451,7 @@ public partial class V1beta1DLPInspectTemplateSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -445,6 +476,7 @@ public partial class V1beta1DLPInspectTemplateStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -468,8 +500,9 @@ public partial class V1beta1DLPInspectTemplateStatus
     public string? UpdateTime { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1DLPInspectTemplate : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DLPInspectTemplateSpec>, IStatus<V1beta1DLPInspectTemplateStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iam.cnrm.cloud.google.com;
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkforcePoolProviderSpecOidcClientSecretValuePlainTextValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -21,6 +22,7 @@ public partial class V1beta1IAMWorkforcePoolProviderSpecOidcClientSecretValuePla
 }
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkforcePoolProviderSpecOidcClientSecretValuePlainTextValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -29,6 +31,7 @@ public partial class V1beta1IAMWorkforcePoolProviderSpecOidcClientSecretValuePla
 }
 
 /// <summary>Input only. The plain text of the client secret value.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkforcePoolProviderSpecOidcClientSecretValuePlainText
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -41,6 +44,7 @@ public partial class V1beta1IAMWorkforcePoolProviderSpecOidcClientSecretValuePla
 }
 
 /// <summary>The value of the client secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkforcePoolProviderSpecOidcClientSecretValue
 {
     /// <summary>Input only. The plain text of the client secret value.</summary>
@@ -49,6 +53,7 @@ public partial class V1beta1IAMWorkforcePoolProviderSpecOidcClientSecretValue
 }
 
 /// <summary>The optional client secret. Required to enable Authorization Code flow for web sign-in.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkforcePoolProviderSpecOidcClientSecret
 {
     /// <summary>The value of the client secret.</summary>
@@ -57,6 +62,7 @@ public partial class V1beta1IAMWorkforcePoolProviderSpecOidcClientSecret
 }
 
 /// <summary>Required. Configuration for web single sign-on for the OIDC provider. Here, web sign-in refers to console sign-in and gcloud sign-in through the browser.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkforcePoolProviderSpecOidcWebSsoConfig
 {
     /// <summary>Additional scopes to request for in the OIDC authentication request on top of scopes requested by default. By default, the `openid`, `profile` and `email` scopes that are supported by the identity provider are requested. Each additional scope may be at most 256 characters. A maximum of 10 additional scopes may be configured.</summary>
@@ -73,6 +79,7 @@ public partial class V1beta1IAMWorkforcePoolProviderSpecOidcWebSsoConfig
 }
 
 /// <summary>An OpenId Connect 1.0 identity provider configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkforcePoolProviderSpecOidc
 {
     /// <summary>Required. The client ID. Must match the audience claim of the JWT issued by the identity provider.</summary>
@@ -97,6 +104,7 @@ public partial class V1beta1IAMWorkforcePoolProviderSpecOidc
 }
 
 /// <summary>A SAML identity provider configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkforcePoolProviderSpecSaml
 {
     /// <summary>Required. SAML Identity provider configuration metadata xml doc. The xml document should comply with [SAML 2.0 specification](https://docs.oasis-open.org/security/saml/v2.0/saml-metadata-2.0-os.pdf). The max size of the acceptable xml document will be bounded to 128k characters. The metadata xml document should satisfy the following constraints: 1) Must contain an Identity Provider Entity ID. 2) Must contain at least one non-expired signing key certificate. 3) For each signing key: a) Valid from should be no more than 7 days from now. b) Valid to should be no more than 10 years in the future. 4) Up to 3 IdP signing keys are allowed in the metadata xml. When updating the provider's metadata xml, at least one non-expired signing key must overlap with the existing metadata. This requirement is skipped if there are no non-expired signing keys present in the existing metadata.</summary>
@@ -105,6 +113,7 @@ public partial class V1beta1IAMWorkforcePoolProviderSpecSaml
 }
 
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkforcePoolProviderSpecWorkforcePoolRef
 {
     /// <summary>The workforce_pool for the resource  Allowed value: The Google Cloud resource name of an `IAMWorkforcePool` resource (format: `locations/{{location}}/workforcePools/{{name}}`).</summary>
@@ -121,6 +130,7 @@ public partial class V1beta1IAMWorkforcePoolProviderSpecWorkforcePoolRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkforcePoolProviderSpec
 {
     /// <summary>A [Common Expression Language](https://opensource.google/projects/cel) expression, in plain text, to restrict what otherwise valid authentication credentials issued by the provider should not be accepted. The expression must output a boolean representing whether to allow the federation. The following keywords may be referenced in the expressions: * `assertion`: JSON representing the authentication credential issued by the provider. * `google`: The Google attributes mapped from the assertion in the `attribute_mappings`. `google.profile_photo` and `google.display_name` are not supported. * `attribute`: The custom attributes mapped from the assertion in the `attribute_mappings`. The maximum length of the attribute condition expression is 4096 characters. If unspecified, all valid authentication credentials will be accepted. The following example shows how to only allow credentials with a mapped `google.groups` value of `admins`: ``` "'admins' in google.groups" ```</summary>
@@ -165,6 +175,7 @@ public partial class V1beta1IAMWorkforcePoolProviderSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkforcePoolProviderStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -189,6 +200,7 @@ public partial class V1beta1IAMWorkforcePoolProviderStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkforcePoolProviderStatusOidcClientSecretValue
 {
     /// <summary>Output only. A thumbprint to represent the current client secret value.</summary>
@@ -197,6 +209,7 @@ public partial class V1beta1IAMWorkforcePoolProviderStatusOidcClientSecretValue
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkforcePoolProviderStatusOidcClientSecret
 {
     /// <summary></summary>
@@ -205,6 +218,7 @@ public partial class V1beta1IAMWorkforcePoolProviderStatusOidcClientSecret
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkforcePoolProviderStatusOidc
 {
     /// <summary></summary>
@@ -213,6 +227,7 @@ public partial class V1beta1IAMWorkforcePoolProviderStatusOidc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkforcePoolProviderStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -232,8 +247,9 @@ public partial class V1beta1IAMWorkforcePoolProviderStatus
     public string? State { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1IAMWorkforcePoolProvider : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IAMWorkforcePoolProviderSpec>, IStatus<V1beta1IAMWorkforcePoolProviderStatus>
 {
     public const string KubeApiVersion = "v1beta1";

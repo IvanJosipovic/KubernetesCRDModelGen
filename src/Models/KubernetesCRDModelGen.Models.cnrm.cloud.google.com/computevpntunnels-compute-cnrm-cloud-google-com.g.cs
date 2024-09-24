@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary>The peer side external VPN gateway to which this VPN tunnel is connected.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeVPNTunnelSpecPeerExternalGatewayRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeExternalVPNGateway` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1ComputeVPNTunnelSpecPeerExternalGatewayRef
 }
 
 /// <summary>The peer side HA GCP VPN gateway to which this VPN tunnel is connected. If provided, the VPN tunnel will automatically use the same VPN gateway interface ID in the peer GCP VPN gateway.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeVPNTunnelSpecPeerGCPGatewayRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeVPNGateway` resource.</summary>
@@ -41,6 +43,7 @@ public partial class V1beta1ComputeVPNTunnelSpecPeerGCPGatewayRef
 }
 
 /// <summary>The router to be used for dynamic routing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeVPNTunnelSpecRouterRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeRouter` resource.</summary>
@@ -57,6 +60,7 @@ public partial class V1beta1ComputeVPNTunnelSpecRouterRef
 }
 
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeVPNTunnelSpecSharedSecretValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -69,6 +73,7 @@ public partial class V1beta1ComputeVPNTunnelSpecSharedSecretValueFromSecretKeyRe
 }
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeVPNTunnelSpecSharedSecretValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -77,6 +82,7 @@ public partial class V1beta1ComputeVPNTunnelSpecSharedSecretValueFrom
 }
 
 /// <summary>Immutable. Shared secret used to set the secure session between the Cloud VPN gateway and the peer VPN gateway.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeVPNTunnelSpecSharedSecret
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -89,6 +95,7 @@ public partial class V1beta1ComputeVPNTunnelSpecSharedSecret
 }
 
 /// <summary>The ComputeTargetVPNGateway with which this VPN tunnel is associated.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeVPNTunnelSpecTargetVPNGatewayRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeTargetVPNGateway` resource.</summary>
@@ -105,6 +112,7 @@ public partial class V1beta1ComputeVPNTunnelSpecTargetVPNGatewayRef
 }
 
 /// <summary>The ComputeVPNGateway with which this VPN tunnel is associated. This must be used if a High Availability VPN gateway resource is created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeVPNTunnelSpecVpnGatewayRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeVPNGateway` resource.</summary>
@@ -121,6 +129,7 @@ public partial class V1beta1ComputeVPNTunnelSpecVpnGatewayRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeVPNTunnelSpec
 {
     /// <summary>Immutable. An optional description of this resource.</summary>
@@ -185,6 +194,7 @@ public partial class V1beta1ComputeVPNTunnelSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeVPNTunnelStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -209,6 +219,7 @@ public partial class V1beta1ComputeVPNTunnelStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeVPNTunnelStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -244,8 +255,9 @@ public partial class V1beta1ComputeVPNTunnelStatus
     public string? TunnelId { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ComputeVPNTunnel : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeVPNTunnelSpec>, IStatus<V1beta1ComputeVPNTunnelStatus>
 {
     public const string KubeApiVersion = "v1beta1";

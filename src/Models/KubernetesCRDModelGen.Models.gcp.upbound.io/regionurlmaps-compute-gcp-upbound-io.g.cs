@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1RegionURLMapSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access- Control-Allow-Credentials header. Defaults to false.</summary>
@@ -55,6 +57,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionCorsPol
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionFaultInjectionPolicyAbort
 {
     /// <summary>The HTTP status code used to abort the request. The value must be between 200 and 599 inclusive.</summary>
@@ -67,6 +70,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionFaultIn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionFaultInjectionPolicyDelayFixedDelay
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -79,6 +83,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionFaultIn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionFaultInjectionPolicyDelay
 {
     /// <summary>Specifies the value of the fixed delay interval. Structure is documented below.</summary>
@@ -91,6 +96,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionFaultIn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionFaultInjectionPolicy
 {
     /// <summary>The specification for how client requests are aborted as part of fault injection. Structure is documented below.</summary>
@@ -102,6 +108,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionFaultIn
     public IList<V1beta1RegionURLMapSpecForProviderDefaultRouteActionFaultInjectionPolicyDelay>? Delay { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -112,6 +119,7 @@ public enum V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -123,6 +131,7 @@ public enum V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPol
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -137,6 +146,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequest
 }
 
 /// <summary>Reference to a RegionBackendService in compute to populate backendService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -148,6 +158,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequest
     public V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -158,6 +169,7 @@ public enum V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -169,6 +181,7 @@ public enum V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPol
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -183,6 +196,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequest
 }
 
 /// <summary>Selector for a RegionBackendService in compute to populate backendService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -199,6 +213,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequest
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPolicy
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -215,6 +230,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequest
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRetryPolicyPerTryTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -227,6 +243,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRetryPo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRetryPolicy
 {
     /// <summary>Specifies the allowed number retries. This number must be &gt; 0.</summary>
@@ -243,6 +260,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRetryPo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -255,6 +273,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionTimeout
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionUrlRewrite
 {
     /// <summary>Prior to forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite. The value must be between 1 and 255 characters.</summary>
@@ -266,6 +285,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionUrlRewr
     public string? PathPrefixRewrite { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesBackendServiceRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -276,6 +296,7 @@ public enum V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendS
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesBackendServiceRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -287,6 +308,7 @@ public enum V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendS
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesBackendServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -301,6 +323,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeighte
 }
 
 /// <summary>Reference to a RegionBackendService in compute to populate backendService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesBackendServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -312,6 +335,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeighte
     public V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesBackendServiceRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesBackendServiceSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -322,6 +346,7 @@ public enum V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendS
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesBackendServiceSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -333,6 +358,7 @@ public enum V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendS
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesBackendServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -347,6 +373,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeighte
 }
 
 /// <summary>Selector for a RegionBackendService in compute to populate backendService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesBackendServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -363,6 +390,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeighte
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -379,6 +407,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeighte
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -395,6 +424,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeighte
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesHeaderAction
 {
     /// <summary>Headers to add to a matching request prior to forwarding the request to the backendService. Structure is documented below.</summary>
@@ -415,6 +445,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeighte
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServices
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -439,6 +470,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeighte
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteAction
 {
     /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing Structure is documented below.</summary>
@@ -470,6 +502,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteAction
     public IList<V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderDefaultServiceRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -480,6 +513,7 @@ public enum V1beta1RegionURLMapSpecForProviderDefaultServiceRefPolicyResolutionE
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderDefaultServiceRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -491,6 +525,7 @@ public enum V1beta1RegionURLMapSpecForProviderDefaultServiceRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -505,6 +540,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultServiceRefPolicy
 }
 
 /// <summary>Reference to a RegionBackendService in compute to populate defaultService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -516,6 +552,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultServiceRef
     public V1beta1RegionURLMapSpecForProviderDefaultServiceRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderDefaultServiceSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -526,6 +563,7 @@ public enum V1beta1RegionURLMapSpecForProviderDefaultServiceSelectorPolicyResolu
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderDefaultServiceSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -537,6 +575,7 @@ public enum V1beta1RegionURLMapSpecForProviderDefaultServiceSelectorPolicyResolv
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -551,6 +590,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultServiceSelectorPol
 }
 
 /// <summary>Selector for a RegionBackendService in compute to populate defaultService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -567,6 +607,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultServiceSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultUrlRedirect
 {
     /// <summary>The host that will be used in the redirect response instead of the one that was supplied in the request. The value must be between 1 and 255 characters.</summary>
@@ -595,6 +636,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultUrlRedirect
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderHostRule
 {
     /// <summary>An optional description of this HostRule. Provide this property when you create the resource.</summary>
@@ -610,6 +652,7 @@ public partial class V1beta1RegionURLMapSpecForProviderHostRule
     public string? PathMatcher { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -620,6 +663,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceRefPolicy
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -631,6 +675,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceRefPolicy
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -645,6 +690,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultService
 }
 
 /// <summary>Reference to a RegionBackendService in compute to populate defaultService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -656,6 +702,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultService
     public V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -666,6 +713,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceSelectorP
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -677,6 +725,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceSelectorP
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -691,6 +740,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultService
 }
 
 /// <summary>Selector for a RegionBackendService in compute to populate defaultService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -707,6 +757,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultService
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultUrlRedirect
 {
     /// <summary>The host that will be used in the redirect response instead of the one that was supplied in the request. The value must be between 1 and 255 characters.</summary>
@@ -735,6 +786,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultUrlRedi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access- Control-Allow-Credentials header. Defaults to false.</summary>
@@ -771,6 +823,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort
 {
     /// <summary>The HTTP status code used to abort the request. The value must be between 200 and 599 inclusive.</summary>
@@ -783,6 +836,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -795,6 +849,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay
 {
     /// <summary>Specifies the value of the fixed delay interval. Structure is documented below.</summary>
@@ -807,6 +862,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionFaultInjectionPolicy
 {
     /// <summary>The specification for how client requests are aborted as part of fault injection. Structure is documented below.</summary>
@@ -818,6 +874,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     public IList<V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay>? Delay { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -828,6 +885,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequ
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -839,6 +897,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequ
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -853,6 +912,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
 }
 
 /// <summary>Reference to a RegionBackendService in compute to populate backendService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -864,6 +924,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     public V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -874,6 +935,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequ
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -885,6 +947,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequ
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -899,6 +962,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
 }
 
 /// <summary>Selector for a RegionBackendService in compute to populate backendService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -915,6 +979,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicy
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -931,6 +996,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -943,6 +1009,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRetryPolicy
 {
     /// <summary>Specifies the allowed number retries. This number must be &gt; 0.</summary>
@@ -959,6 +1026,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -971,6 +1039,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionUrlRewrite
 {
     /// <summary>Prior to forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite. The value must be between 1 and 255 characters.</summary>
@@ -982,6 +1051,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     public string? PathPrefixRewrite { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -992,6 +1062,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeig
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1003,6 +1074,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeig
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1017,6 +1089,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
 }
 
 /// <summary>Reference to a RegionBackendService in compute to populate backendService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1028,6 +1101,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     public V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1038,6 +1112,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeig
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1049,6 +1124,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeig
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1063,6 +1139,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
 }
 
 /// <summary>Selector for a RegionBackendService in compute to populate backendService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1079,6 +1156,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -1095,6 +1173,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -1111,6 +1190,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction
 {
     /// <summary>Headers to add to a matching request prior to forwarding the request to the backendService. Structure is documented below.</summary>
@@ -1131,6 +1211,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServices
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -1155,6 +1236,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteAction
 {
     /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing Structure is documented below.</summary>
@@ -1186,6 +1268,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     public IList<V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1196,6 +1279,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceRefPolic
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1207,6 +1291,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceRefPolic
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1221,6 +1306,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServic
 }
 
 /// <summary>Reference to a RegionBackendService in compute to populate service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1232,6 +1318,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServic
     public V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1242,6 +1329,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceSelector
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1253,6 +1341,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceSelector
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1267,6 +1356,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServic
 }
 
 /// <summary>Selector for a RegionBackendService in compute to populate service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1283,6 +1373,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServic
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleUrlRedirect
 {
     /// <summary>The host that will be used in the redirect response instead of the one that was supplied in the request. The value must be between 1 and 255 characters.</summary>
@@ -1311,6 +1402,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleUrlRed
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRule
 {
     /// <summary>The list of path patterns to match. Each must start with / and the only place a * is allowed is at the end following a /. The string fed to the path matcher does not include any text after the first ? or #, and those chars are not allowed here.</summary>
@@ -1339,6 +1431,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -1355,6 +1448,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesHead
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesHeaderActionResponseHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -1371,6 +1465,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesHead
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesHeaderAction
 {
     /// <summary>Headers to add to a matching request prior to forwarding the request to the backendService. Structure is documented below.</summary>
@@ -1391,6 +1486,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesHead
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch
 {
     /// <summary>The end of the range (exclusive).</summary>
@@ -1403,6 +1499,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatchRulesHeaderMatches
 {
     /// <summary>The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch must be set.</summary>
@@ -1439,6 +1536,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels
 {
     /// <summary>The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.</summary>
@@ -1451,6 +1549,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatchRulesMetadataFilters
 {
     /// <summary>The list of label value pairs that must match labels in the provided metadata based on filterMatchCriteria  This list must not be empty and can have at the most 64 entries. Structure is documented below.</summary>
@@ -1463,6 +1562,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatchRulesQueryParameterMatches
 {
     /// <summary>The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch must be set.</summary>
@@ -1483,6 +1583,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatchRules
 {
     /// <summary>For satisfying the matchRule condition, the path of the request must exactly match the value specified in fullPathMatch after removing any query parameters and anchor that may be part of the original URL. FullPathMatch must be between 1 and 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must be specified.</summary>
@@ -1519,6 +1620,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access- Control-Allow-Credentials header. Defaults to false.</summary>
@@ -1555,6 +1657,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort
 {
     /// <summary>The HTTP status code used to abort the request. The value must be between 200 and 599 inclusive.</summary>
@@ -1567,6 +1670,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -1579,6 +1683,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay
 {
     /// <summary>Specifies the value of the fixed delay interval. Structure is documented below.</summary>
@@ -1591,6 +1696,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicy
 {
     /// <summary>The specification for how client requests are aborted as part of fault injection. Structure is documented below.</summary>
@@ -1603,6 +1709,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionRequestMirrorPolicy
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -1611,6 +1718,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -1623,6 +1731,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionRetryPolicy
 {
     /// <summary>Specifies the allowed number retries. This number must be &gt; 0.</summary>
@@ -1639,6 +1748,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -1651,6 +1761,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionUrlRewrite
 {
     /// <summary>Prior to forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite. The value must be between 1 and 255 characters.</summary>
@@ -1667,6 +1778,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -1683,6 +1795,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -1699,6 +1812,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction
 {
     /// <summary>Headers to add to a matching request prior to forwarding the request to the backendService. Structure is documented below.</summary>
@@ -1719,6 +1833,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionWeightedBackendServices
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -1735,6 +1850,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteAction
 {
     /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing Structure is documented below.</summary>
@@ -1766,6 +1882,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
     public IList<V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1776,6 +1893,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceRefPol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1787,6 +1905,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceRefPol
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1801,6 +1920,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServ
 }
 
 /// <summary>Reference to a RegionBackendService in compute to populate service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1812,6 +1932,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServ
     public V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1822,6 +1943,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceSelect
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1833,6 +1955,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceSelect
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1847,6 +1970,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServ
 }
 
 /// <summary>Selector for a RegionBackendService in compute to populate service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1863,6 +1987,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServ
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesUrlRedirect
 {
     /// <summary>The host that will be used in the redirect response instead of the one that was supplied in the request. The value must be between 1 and 255 characters.</summary>
@@ -1891,6 +2016,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesUrlR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRules
 {
     /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap. Structure is documented below.</summary>
@@ -1927,6 +2053,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRules
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcher
 {
     /// <summary>A reference to a RegionBackendService resource. This will be used if none of the pathRules defined by this PathMatcher is matched by the URL's path portion.</summary>
@@ -1962,6 +2089,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcher
     public IList<V1beta1RegionURLMapSpecForProviderPathMatcherRouteRules>? RouteRules { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderTestServiceRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1972,6 +2100,7 @@ public enum V1beta1RegionURLMapSpecForProviderTestServiceRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderTestServiceRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1983,6 +2112,7 @@ public enum V1beta1RegionURLMapSpecForProviderTestServiceRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderTestServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1997,6 +2127,7 @@ public partial class V1beta1RegionURLMapSpecForProviderTestServiceRefPolicy
 }
 
 /// <summary>Reference to a RegionBackendService in compute to populate service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderTestServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2008,6 +2139,7 @@ public partial class V1beta1RegionURLMapSpecForProviderTestServiceRef
     public V1beta1RegionURLMapSpecForProviderTestServiceRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderTestServiceSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2018,6 +2150,7 @@ public enum V1beta1RegionURLMapSpecForProviderTestServiceSelectorPolicyResolutio
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderTestServiceSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2029,6 +2162,7 @@ public enum V1beta1RegionURLMapSpecForProviderTestServiceSelectorPolicyResolveEn
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderTestServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2043,6 +2177,7 @@ public partial class V1beta1RegionURLMapSpecForProviderTestServiceSelectorPolicy
 }
 
 /// <summary>Selector for a RegionBackendService in compute to populate service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderTestServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2059,6 +2194,7 @@ public partial class V1beta1RegionURLMapSpecForProviderTestServiceSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderTest
 {
     /// <summary>Description of this test case.</summary>
@@ -2087,6 +2223,7 @@ public partial class V1beta1RegionURLMapSpecForProviderTest
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProvider
 {
     /// <summary>defaultRouteAction takes effect when none of the hostRules match. The load balancer performs advanced routing actions, such as URL rewrites and header transformations, before forwarding the request to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices. Only one of defaultRouteAction or defaultUrlRedirect must be set. URL maps for Classic external HTTP(S) load balancers only support the urlRewrite action within defaultRouteAction. defaultRouteAction has no effect when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true. Structure is documented below.</summary>
@@ -2135,6 +2272,7 @@ public partial class V1beta1RegionURLMapSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access- Control-Allow-Credentials header. Defaults to false.</summary>
@@ -2171,6 +2309,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionCorsPo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionFaultInjectionPolicyAbort
 {
     /// <summary>The HTTP status code used to abort the request. The value must be between 200 and 599 inclusive.</summary>
@@ -2183,6 +2322,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionFaultI
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionFaultInjectionPolicyDelayFixedDelay
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -2195,6 +2335,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionFaultI
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionFaultInjectionPolicyDelay
 {
     /// <summary>Specifies the value of the fixed delay interval. Structure is documented below.</summary>
@@ -2207,6 +2348,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionFaultI
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionFaultInjectionPolicy
 {
     /// <summary>The specification for how client requests are aborted as part of fault injection. Structure is documented below.</summary>
@@ -2218,6 +2360,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionFaultI
     public IList<V1beta1RegionURLMapSpecInitProviderDefaultRouteActionFaultInjectionPolicyDelay>? Delay { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2228,6 +2371,7 @@ public enum V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPo
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2239,6 +2383,7 @@ public enum V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPo
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2253,6 +2398,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionReques
 }
 
 /// <summary>Reference to a RegionBackendService in compute to populate backendService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2264,6 +2410,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionReques
     public V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2274,6 +2421,7 @@ public enum V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPo
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2285,6 +2433,7 @@ public enum V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPo
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2299,6 +2448,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionReques
 }
 
 /// <summary>Selector for a RegionBackendService in compute to populate backendService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2315,6 +2465,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionReques
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicy
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -2331,6 +2482,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionReques
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRetryPolicyPerTryTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -2343,6 +2495,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRetryP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRetryPolicy
 {
     /// <summary>Specifies the allowed number retries. This number must be &gt; 0.</summary>
@@ -2359,6 +2512,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRetryP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -2371,6 +2525,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionTimeou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionUrlRewrite
 {
     /// <summary>Prior to forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite. The value must be between 1 and 255 characters.</summary>
@@ -2382,6 +2537,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionUrlRew
     public string? PathPrefixRewrite { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesBackendServiceRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2392,6 +2548,7 @@ public enum V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackend
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesBackendServiceRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2403,6 +2560,7 @@ public enum V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackend
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesBackendServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2417,6 +2575,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeight
 }
 
 /// <summary>Reference to a RegionBackendService in compute to populate backendService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesBackendServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2428,6 +2587,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeight
     public V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesBackendServiceRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesBackendServiceSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2438,6 +2598,7 @@ public enum V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackend
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesBackendServiceSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2449,6 +2610,7 @@ public enum V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackend
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesBackendServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2463,6 +2625,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeight
 }
 
 /// <summary>Selector for a RegionBackendService in compute to populate backendService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesBackendServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2479,6 +2642,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeight
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -2495,6 +2659,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeight
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -2511,6 +2676,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeight
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesHeaderAction
 {
     /// <summary>Headers to add to a matching request prior to forwarding the request to the backendService. Structure is documented below.</summary>
@@ -2531,6 +2697,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeight
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServices
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -2555,6 +2722,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeight
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteAction
 {
     /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing Structure is documented below.</summary>
@@ -2586,6 +2754,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteAction
     public IList<V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderDefaultServiceRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2596,6 +2765,7 @@ public enum V1beta1RegionURLMapSpecInitProviderDefaultServiceRefPolicyResolution
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderDefaultServiceRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2607,6 +2777,7 @@ public enum V1beta1RegionURLMapSpecInitProviderDefaultServiceRefPolicyResolveEnu
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2621,6 +2792,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultServiceRefPolicy
 }
 
 /// <summary>Reference to a RegionBackendService in compute to populate defaultService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2632,6 +2804,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultServiceRef
     public V1beta1RegionURLMapSpecInitProviderDefaultServiceRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderDefaultServiceSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2642,6 +2815,7 @@ public enum V1beta1RegionURLMapSpecInitProviderDefaultServiceSelectorPolicyResol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderDefaultServiceSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2653,6 +2827,7 @@ public enum V1beta1RegionURLMapSpecInitProviderDefaultServiceSelectorPolicyResol
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2667,6 +2842,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultServiceSelectorPo
 }
 
 /// <summary>Selector for a RegionBackendService in compute to populate defaultService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2683,6 +2859,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultServiceSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultUrlRedirect
 {
     /// <summary>The host that will be used in the redirect response instead of the one that was supplied in the request. The value must be between 1 and 255 characters.</summary>
@@ -2711,6 +2888,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultUrlRedirect
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderHostRule
 {
     /// <summary>An optional description of this HostRule. Provide this property when you create the resource.</summary>
@@ -2726,6 +2904,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderHostRule
     public string? PathMatcher { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2736,6 +2915,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceRefPolic
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2747,6 +2927,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceRefPolic
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2761,6 +2942,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServic
 }
 
 /// <summary>Reference to a RegionBackendService in compute to populate defaultService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2772,6 +2954,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServic
     public V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2782,6 +2965,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceSelector
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2793,6 +2977,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceSelector
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2807,6 +2992,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServic
 }
 
 /// <summary>Selector for a RegionBackendService in compute to populate defaultService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2823,6 +3009,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServic
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultUrlRedirect
 {
     /// <summary>The host that will be used in the redirect response instead of the one that was supplied in the request. The value must be between 1 and 255 characters.</summary>
@@ -2851,6 +3038,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultUrlRed
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access- Control-Allow-Credentials header. Defaults to false.</summary>
@@ -2887,6 +3075,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort
 {
     /// <summary>The HTTP status code used to abort the request. The value must be between 200 and 599 inclusive.</summary>
@@ -2899,6 +3088,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -2911,6 +3101,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay
 {
     /// <summary>Specifies the value of the fixed delay interval. Structure is documented below.</summary>
@@ -2923,6 +3114,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionFaultInjectionPolicy
 {
     /// <summary>The specification for how client requests are aborted as part of fault injection. Structure is documented below.</summary>
@@ -2934,6 +3126,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     public IList<V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay>? Delay { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2944,6 +3137,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionReq
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2955,6 +3149,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionReq
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2969,6 +3164,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
 }
 
 /// <summary>Reference to a RegionBackendService in compute to populate backendService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2980,6 +3176,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     public V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2990,6 +3187,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionReq
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -3001,6 +3199,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionReq
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3015,6 +3214,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
 }
 
 /// <summary>Selector for a RegionBackendService in compute to populate backendService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -3031,6 +3231,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicy
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -3047,6 +3248,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -3059,6 +3261,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRetryPolicy
 {
     /// <summary>Specifies the allowed number retries. This number must be &gt; 0.</summary>
@@ -3075,6 +3278,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -3087,6 +3291,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionUrlRewrite
 {
     /// <summary>Prior to forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite. The value must be between 1 and 255 characters.</summary>
@@ -3098,6 +3303,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     public string? PathPrefixRewrite { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -3108,6 +3314,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWei
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -3119,6 +3326,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWei
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3133,6 +3341,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
 }
 
 /// <summary>Reference to a RegionBackendService in compute to populate backendService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3144,6 +3353,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     public V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -3154,6 +3364,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWei
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -3165,6 +3376,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWei
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3179,6 +3391,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
 }
 
 /// <summary>Selector for a RegionBackendService in compute to populate backendService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -3195,6 +3408,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -3211,6 +3425,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -3227,6 +3442,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction
 {
     /// <summary>Headers to add to a matching request prior to forwarding the request to the backendService. Structure is documented below.</summary>
@@ -3247,6 +3463,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServices
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -3271,6 +3488,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteAction
 {
     /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing Structure is documented below.</summary>
@@ -3302,6 +3520,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     public IList<V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -3312,6 +3531,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceRefPoli
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -3323,6 +3543,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceRefPoli
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3337,6 +3558,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServi
 }
 
 /// <summary>Reference to a RegionBackendService in compute to populate service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3348,6 +3570,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServi
     public V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -3358,6 +3581,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceSelecto
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -3369,6 +3593,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceSelecto
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3383,6 +3608,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServi
 }
 
 /// <summary>Selector for a RegionBackendService in compute to populate service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -3399,6 +3625,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleUrlRedirect
 {
     /// <summary>The host that will be used in the redirect response instead of the one that was supplied in the request. The value must be between 1 and 255 characters.</summary>
@@ -3427,6 +3654,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleUrlRe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRule
 {
     /// <summary>The list of path patterns to match. Each must start with / and the only place a * is allowed is at the end following a /. The string fed to the path matcher does not include any text after the first ? or #, and those chars are not allowed here.</summary>
@@ -3455,6 +3683,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -3471,6 +3700,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesHea
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesHeaderActionResponseHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -3487,6 +3717,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesHea
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesHeaderAction
 {
     /// <summary>Headers to add to a matching request prior to forwarding the request to the backendService. Structure is documented below.</summary>
@@ -3507,6 +3738,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesHea
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch
 {
     /// <summary>The end of the range (exclusive).</summary>
@@ -3519,6 +3751,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMatchRulesHeaderMatches
 {
     /// <summary>The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch must be set.</summary>
@@ -3555,6 +3788,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels
 {
     /// <summary>The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.</summary>
@@ -3567,6 +3801,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMatchRulesMetadataFilters
 {
     /// <summary>The list of label value pairs that must match labels in the provided metadata based on filterMatchCriteria  This list must not be empty and can have at the most 64 entries. Structure is documented below.</summary>
@@ -3579,6 +3814,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMatchRulesQueryParameterMatches
 {
     /// <summary>The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch must be set.</summary>
@@ -3599,6 +3835,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMatchRules
 {
     /// <summary>For satisfying the matchRule condition, the path of the request must exactly match the value specified in fullPathMatch after removing any query parameters and anchor that may be part of the original URL. FullPathMatch must be between 1 and 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must be specified.</summary>
@@ -3635,6 +3872,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access- Control-Allow-Credentials header. Defaults to false.</summary>
@@ -3671,6 +3909,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort
 {
     /// <summary>The HTTP status code used to abort the request. The value must be between 200 and 599 inclusive.</summary>
@@ -3683,6 +3922,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -3695,6 +3935,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay
 {
     /// <summary>Specifies the value of the fixed delay interval. Structure is documented below.</summary>
@@ -3707,6 +3948,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicy
 {
     /// <summary>The specification for how client requests are aborted as part of fault injection. Structure is documented below.</summary>
@@ -3719,6 +3961,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionRequestMirrorPolicy
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -3727,6 +3970,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -3739,6 +3983,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionRetryPolicy
 {
     /// <summary>Specifies the allowed number retries. This number must be &gt; 0.</summary>
@@ -3755,6 +4000,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -3767,6 +4013,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionUrlRewrite
 {
     /// <summary>Prior to forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite. The value must be between 1 and 255 characters.</summary>
@@ -3783,6 +4030,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -3799,6 +4047,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -3815,6 +4064,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction
 {
     /// <summary>Headers to add to a matching request prior to forwarding the request to the backendService. Structure is documented below.</summary>
@@ -3835,6 +4085,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionWeightedBackendServices
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -3851,6 +4102,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteAction
 {
     /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing Structure is documented below.</summary>
@@ -3882,6 +4134,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
     public IList<V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -3892,6 +4145,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceRefPo
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -3903,6 +4157,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceRefPo
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3917,6 +4172,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesSer
 }
 
 /// <summary>Reference to a RegionBackendService in compute to populate service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3928,6 +4184,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesSer
     public V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -3938,6 +4195,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceSelec
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -3949,6 +4207,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceSelec
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3963,6 +4222,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesSer
 }
 
 /// <summary>Selector for a RegionBackendService in compute to populate service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -3979,6 +4239,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesSer
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesUrlRedirect
 {
     /// <summary>The host that will be used in the redirect response instead of the one that was supplied in the request. The value must be between 1 and 255 characters.</summary>
@@ -4007,6 +4268,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesUrl
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRules
 {
     /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap. Structure is documented below.</summary>
@@ -4043,6 +4305,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRules
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcher
 {
     /// <summary>A reference to a RegionBackendService resource. This will be used if none of the pathRules defined by this PathMatcher is matched by the URL's path portion.</summary>
@@ -4078,6 +4341,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcher
     public IList<V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRules>? RouteRules { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderTestServiceRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -4088,6 +4352,7 @@ public enum V1beta1RegionURLMapSpecInitProviderTestServiceRefPolicyResolutionEnu
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderTestServiceRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -4099,6 +4364,7 @@ public enum V1beta1RegionURLMapSpecInitProviderTestServiceRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderTestServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -4113,6 +4379,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderTestServiceRefPolicy
 }
 
 /// <summary>Reference to a RegionBackendService in compute to populate service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderTestServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -4124,6 +4391,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderTestServiceRef
     public V1beta1RegionURLMapSpecInitProviderTestServiceRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderTestServiceSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -4134,6 +4402,7 @@ public enum V1beta1RegionURLMapSpecInitProviderTestServiceSelectorPolicyResoluti
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderTestServiceSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -4145,6 +4414,7 @@ public enum V1beta1RegionURLMapSpecInitProviderTestServiceSelectorPolicyResolveE
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderTestServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -4159,6 +4429,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderTestServiceSelectorPolic
 }
 
 /// <summary>Selector for a RegionBackendService in compute to populate service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderTestServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -4175,6 +4446,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderTestServiceSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderTest
 {
     /// <summary>Description of this test case.</summary>
@@ -4203,6 +4475,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderTest
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProvider
 {
     /// <summary>defaultRouteAction takes effect when none of the hostRules match. The load balancer performs advanced routing actions, such as URL rewrites and header transformations, before forwarding the request to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices. Only one of defaultRouteAction or defaultUrlRedirect must be set. URL maps for Classic external HTTP(S) load balancers only support the urlRewrite action within defaultRouteAction. defaultRouteAction has no effect when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true. Structure is documented below.</summary>
@@ -4246,6 +4519,7 @@ public partial class V1beta1RegionURLMapSpecInitProvider
     public IList<V1beta1RegionURLMapSpecInitProviderTest>? Test { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -4268,6 +4542,7 @@ public enum V1beta1RegionURLMapSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -4278,6 +4553,7 @@ public enum V1beta1RegionURLMapSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -4289,6 +4565,7 @@ public enum V1beta1RegionURLMapSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -4303,6 +4580,7 @@ public partial class V1beta1RegionURLMapSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -4314,6 +4592,7 @@ public partial class V1beta1RegionURLMapSpecProviderConfigRef
     public V1beta1RegionURLMapSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -4324,6 +4603,7 @@ public enum V1beta1RegionURLMapSpecPublishConnectionDetailsToConfigRefPolicyReso
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -4335,6 +4615,7 @@ public enum V1beta1RegionURLMapSpecPublishConnectionDetailsToConfigRefPolicyReso
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -4349,6 +4630,7 @@ public partial class V1beta1RegionURLMapSpecPublishConnectionDetailsToConfigRefP
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -4361,6 +4643,7 @@ public partial class V1beta1RegionURLMapSpecPublishConnectionDetailsToConfigRef
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -4377,6 +4660,7 @@ public partial class V1beta1RegionURLMapSpecPublishConnectionDetailsToMetadata
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -4393,6 +4677,7 @@ public partial class V1beta1RegionURLMapSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -4405,6 +4690,7 @@ public partial class V1beta1RegionURLMapSpecWriteConnectionSecretToRef
 }
 
 /// <summary>RegionURLMapSpec defines the desired state of RegionURLMap</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -4438,6 +4724,7 @@ public partial class V1beta1RegionURLMapSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access- Control-Allow-Credentials header. Defaults to false.</summary>
@@ -4474,6 +4761,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionCorsPo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionFaultInjectionPolicyAbort
 {
     /// <summary>The HTTP status code used to abort the request. The value must be between 200 and 599 inclusive.</summary>
@@ -4486,6 +4774,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionFaultI
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionFaultInjectionPolicyDelayFixedDelay
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -4498,6 +4787,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionFaultI
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionFaultInjectionPolicyDelay
 {
     /// <summary>Specifies the value of the fixed delay interval. Structure is documented below.</summary>
@@ -4510,6 +4800,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionFaultI
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionFaultInjectionPolicy
 {
     /// <summary>The specification for how client requests are aborted as part of fault injection. Structure is documented below.</summary>
@@ -4522,6 +4813,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionFaultI
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionRequestMirrorPolicy
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -4530,6 +4822,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionReques
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionRetryPolicyPerTryTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -4542,6 +4835,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionRetryP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionRetryPolicy
 {
     /// <summary>Specifies the allowed number retries. This number must be &gt; 0.</summary>
@@ -4558,6 +4852,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionRetryP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -4570,6 +4865,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionTimeou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionUrlRewrite
 {
     /// <summary>Prior to forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite. The value must be between 1 and 255 characters.</summary>
@@ -4582,6 +4878,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionUrlRew
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -4598,6 +4895,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionWeight
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -4614,6 +4912,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionWeight
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionWeightedBackendServicesHeaderAction
 {
     /// <summary>Headers to add to a matching request prior to forwarding the request to the backendService. Structure is documented below.</summary>
@@ -4634,6 +4933,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionWeight
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionWeightedBackendServices
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -4650,6 +4950,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionWeight
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteAction
 {
     /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing Structure is documented below.</summary>
@@ -4682,6 +4983,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteAction
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultUrlRedirect
 {
     /// <summary>The host that will be used in the redirect response instead of the one that was supplied in the request. The value must be between 1 and 255 characters.</summary>
@@ -4710,6 +5012,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultUrlRedirect
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderHostRule
 {
     /// <summary>An optional description of this HostRule. Provide this property when you create the resource.</summary>
@@ -4726,6 +5029,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderHostRule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultUrlRedirect
 {
     /// <summary>The host that will be used in the redirect response instead of the one that was supplied in the request. The value must be between 1 and 255 characters.</summary>
@@ -4754,6 +5058,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultUrlRed
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access- Control-Allow-Credentials header. Defaults to false.</summary>
@@ -4790,6 +5095,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort
 {
     /// <summary>The HTTP status code used to abort the request. The value must be between 200 and 599 inclusive.</summary>
@@ -4802,6 +5108,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -4814,6 +5121,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay
 {
     /// <summary>Specifies the value of the fixed delay interval. Structure is documented below.</summary>
@@ -4826,6 +5134,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionFaultInjectionPolicy
 {
     /// <summary>The specification for how client requests are aborted as part of fault injection. Structure is documented below.</summary>
@@ -4838,6 +5147,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionRequestMirrorPolicy
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -4846,6 +5156,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -4858,6 +5169,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionRetryPolicy
 {
     /// <summary>Specifies the allowed number retries. This number must be &gt; 0.</summary>
@@ -4874,6 +5186,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -4886,6 +5199,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionUrlRewrite
 {
     /// <summary>Prior to forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite. The value must be between 1 and 255 characters.</summary>
@@ -4898,6 +5212,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -4914,6 +5229,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -4930,6 +5246,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction
 {
     /// <summary>Headers to add to a matching request prior to forwarding the request to the backendService. Structure is documented below.</summary>
@@ -4950,6 +5267,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionWeightedBackendServices
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -4966,6 +5284,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteAction
 {
     /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing Structure is documented below.</summary>
@@ -4998,6 +5317,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleUrlRedirect
 {
     /// <summary>The host that will be used in the redirect response instead of the one that was supplied in the request. The value must be between 1 and 255 characters.</summary>
@@ -5026,6 +5346,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleUrlRe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRule
 {
     /// <summary>The list of path patterns to match. Each must start with / and the only place a * is allowed is at the end following a /. The string fed to the path matcher does not include any text after the first ? or #, and those chars are not allowed here.</summary>
@@ -5046,6 +5367,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -5062,6 +5384,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesHea
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesHeaderActionResponseHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -5078,6 +5401,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesHea
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesHeaderAction
 {
     /// <summary>Headers to add to a matching request prior to forwarding the request to the backendService. Structure is documented below.</summary>
@@ -5098,6 +5422,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesHea
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch
 {
     /// <summary>The end of the range (exclusive).</summary>
@@ -5110,6 +5435,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMatchRulesHeaderMatches
 {
     /// <summary>The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch must be set.</summary>
@@ -5146,6 +5472,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels
 {
     /// <summary>The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.</summary>
@@ -5158,6 +5485,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMatchRulesMetadataFilters
 {
     /// <summary>The list of label value pairs that must match labels in the provided metadata based on filterMatchCriteria  This list must not be empty and can have at the most 64 entries. Structure is documented below.</summary>
@@ -5170,6 +5498,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMatchRulesQueryParameterMatches
 {
     /// <summary>The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch must be set.</summary>
@@ -5190,6 +5519,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMatchRules
 {
     /// <summary>For satisfying the matchRule condition, the path of the request must exactly match the value specified in fullPathMatch after removing any query parameters and anchor that may be part of the original URL. FullPathMatch must be between 1 and 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must be specified.</summary>
@@ -5226,6 +5556,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access- Control-Allow-Credentials header. Defaults to false.</summary>
@@ -5262,6 +5593,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort
 {
     /// <summary>The HTTP status code used to abort the request. The value must be between 200 and 599 inclusive.</summary>
@@ -5274,6 +5606,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -5286,6 +5619,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay
 {
     /// <summary>Specifies the value of the fixed delay interval. Structure is documented below.</summary>
@@ -5298,6 +5632,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicy
 {
     /// <summary>The specification for how client requests are aborted as part of fault injection. Structure is documented below.</summary>
@@ -5310,6 +5645,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionRequestMirrorPolicy
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -5318,6 +5654,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -5330,6 +5667,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionRetryPolicy
 {
     /// <summary>Specifies the allowed number retries. This number must be &gt; 0.</summary>
@@ -5346,6 +5684,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -5358,6 +5697,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionUrlRewrite
 {
     /// <summary>Prior to forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite. The value must be between 1 and 255 characters.</summary>
@@ -5374,6 +5714,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -5390,6 +5731,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -5406,6 +5748,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction
 {
     /// <summary>Headers to add to a matching request prior to forwarding the request to the backendService. Structure is documented below.</summary>
@@ -5426,6 +5769,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionWeightedBackendServices
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -5442,6 +5786,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteAction
 {
     /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing Structure is documented below.</summary>
@@ -5474,6 +5819,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesUrlRedirect
 {
     /// <summary>The host that will be used in the redirect response instead of the one that was supplied in the request. The value must be between 1 and 255 characters.</summary>
@@ -5502,6 +5848,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesUrl
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRules
 {
     /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap. Structure is documented below.</summary>
@@ -5530,6 +5877,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRules
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcher
 {
     /// <summary>A reference to a RegionBackendService resource. This will be used if none of the pathRules defined by this PathMatcher is matched by the URL's path portion.</summary>
@@ -5558,6 +5906,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcher
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderTest
 {
     /// <summary>Description of this test case.</summary>
@@ -5578,6 +5927,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderTest
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProvider
 {
     /// <summary>Creation timestamp in RFC3339 text format.</summary>
@@ -5638,6 +5988,7 @@ public partial class V1beta1RegionURLMapStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -5666,6 +6017,7 @@ public partial class V1beta1RegionURLMapStatusConditions
 }
 
 /// <summary>RegionURLMapStatus defines the observed state of RegionURLMap.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatus
 {
     /// <summary></summary>
@@ -5681,8 +6033,9 @@ public partial class V1beta1RegionURLMapStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>RegionURLMap is the Schema for the RegionURLMaps API. UrlMaps are used to route requests to a backend service based on rules that you define for the host and path of an incoming URL.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1RegionURLMap : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RegionURLMapSpec>, IStatus<V1beta1RegionURLMapStatus>
 {
     public const string KubeApiVersion = "v1beta1";

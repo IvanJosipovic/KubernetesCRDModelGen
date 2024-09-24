@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceFromTemplateSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1InstanceFromTemplateSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderAdvancedMachineFeatures
 {
     /// <summary></summary>
@@ -35,6 +37,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderAdvancedMachineFe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderAttachedDisk
 {
     /// <summary>A unique name for the resource, required by GCE. Changing this forces a new resource to be created.</summary>
@@ -63,6 +66,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderAttachedDisk
 }
 
 /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderBootDiskDiskEncryptionKeyRawSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -79,6 +83,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderBootDiskDiskEncry
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderBootDiskInitializeParams
 {
     /// <summary></summary>
@@ -119,6 +124,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderBootDiskInitializ
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderBootDisk
 {
     /// <summary>Default is 6 minutes.</summary>
@@ -151,6 +157,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderBootDisk
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderConfidentialInstanceConfig
 {
     /// <summary></summary>
@@ -163,6 +170,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderConfidentialInsta
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderGuestAccelerator
 {
     /// <summary></summary>
@@ -175,6 +183,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderGuestAccelerator
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceAccessConfig
 {
     /// <summary></summary>
@@ -191,6 +200,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceAliasIpRange
 {
     /// <summary></summary>
@@ -203,6 +213,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceIpv6AccessConfig
 {
     /// <summary></summary>
@@ -226,6 +237,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceI
     public string? PublicPtrDomainName { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceNetworkRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -236,6 +248,7 @@ public enum V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceNetworkRef
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceNetworkRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -247,6 +260,7 @@ public enum V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceNetworkRef
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceNetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -261,6 +275,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceN
 }
 
 /// <summary>Reference to a Network in compute to populate network.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceNetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -272,6 +287,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceN
     public V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceNetworkRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceNetworkSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -282,6 +298,7 @@ public enum V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceNetworkSel
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceNetworkSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -293,6 +310,7 @@ public enum V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceNetworkSel
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceNetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -307,6 +325,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceN
 }
 
 /// <summary>Selector for a Network in compute to populate network.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceNetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -322,6 +341,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceN
     public V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceNetworkSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceSubnetworkRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -332,6 +352,7 @@ public enum V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceSubnetwork
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceSubnetworkRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -343,6 +364,7 @@ public enum V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceSubnetwork
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceSubnetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -357,6 +379,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceS
 }
 
 /// <summary>Reference to a Subnetwork in compute to populate subnetwork.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceSubnetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -368,6 +391,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceS
     public V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceSubnetworkRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceSubnetworkSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -378,6 +402,7 @@ public enum V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceSubnetwork
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceSubnetworkSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -389,6 +414,7 @@ public enum V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceSubnetwork
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceSubnetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -403,6 +429,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceS
 }
 
 /// <summary>Selector for a Subnetwork in compute to populate subnetwork.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceSubnetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -419,6 +446,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterface
 {
     /// <summary></summary>
@@ -487,6 +515,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterface
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkPerformanceConfig
 {
     /// <summary></summary>
@@ -495,6 +524,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkPerformanc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderParams
 {
     /// <summary></summary>
@@ -503,6 +533,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderParams
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderReservationAffinitySpecificReservation
 {
     /// <summary></summary>
@@ -515,6 +546,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderReservationAffini
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderReservationAffinity
 {
     /// <summary></summary>
@@ -527,6 +559,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderReservationAffini
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderSchedulingLocalSsdRecoveryTimeout
 {
     /// <summary></summary>
@@ -539,6 +572,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderSchedulingLocalSs
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderSchedulingMaxRunDuration
 {
     /// <summary></summary>
@@ -551,6 +585,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderSchedulingMaxRunD
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderSchedulingNodeAffinities
 {
     /// <summary></summary>
@@ -567,6 +602,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderSchedulingNodeAff
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderSchedulingOnInstanceStopAction
 {
     /// <summary></summary>
@@ -575,6 +611,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderSchedulingOnInsta
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderScheduling
 {
     /// <summary></summary>
@@ -619,6 +656,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderScheduling
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderScratchDisk
 {
     /// <summary>A unique name for the resource, required by GCE. Changing this forces a new resource to be created.</summary>
@@ -635,6 +673,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderScratchDisk
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderServiceAccount
 {
     /// <summary></summary>
@@ -647,6 +686,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderServiceAccount
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderShieldedInstanceConfig
 {
     /// <summary></summary>
@@ -662,6 +702,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderShieldedInstanceC
     public bool? EnableVtpm { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceFromTemplateSpecForProviderSourceInstanceTemplateRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -672,6 +713,7 @@ public enum V1beta1InstanceFromTemplateSpecForProviderSourceInstanceTemplateRefP
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceFromTemplateSpecForProviderSourceInstanceTemplateRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -683,6 +725,7 @@ public enum V1beta1InstanceFromTemplateSpecForProviderSourceInstanceTemplateRefP
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderSourceInstanceTemplateRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -697,6 +740,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderSourceInstanceTem
 }
 
 /// <summary>Reference to a InstanceTemplate in compute to populate sourceInstanceTemplate.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderSourceInstanceTemplateRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -708,6 +752,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderSourceInstanceTem
     public V1beta1InstanceFromTemplateSpecForProviderSourceInstanceTemplateRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceFromTemplateSpecForProviderSourceInstanceTemplateSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -718,6 +763,7 @@ public enum V1beta1InstanceFromTemplateSpecForProviderSourceInstanceTemplateSele
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceFromTemplateSpecForProviderSourceInstanceTemplateSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -729,6 +775,7 @@ public enum V1beta1InstanceFromTemplateSpecForProviderSourceInstanceTemplateSele
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderSourceInstanceTemplateSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -743,6 +790,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderSourceInstanceTem
 }
 
 /// <summary>Selector for a InstanceTemplate in compute to populate sourceInstanceTemplate.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderSourceInstanceTemplateSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -759,6 +807,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderSourceInstanceTem
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProvider
 {
     /// <summary></summary>
@@ -895,6 +944,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderAdvancedMachineFeatures
 {
     /// <summary></summary>
@@ -911,6 +961,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderAdvancedMachineF
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderAttachedDisk
 {
     /// <summary>A unique name for the resource, required by GCE. Changing this forces a new resource to be created.</summary>
@@ -939,6 +990,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderAttachedDisk
 }
 
 /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderBootDiskDiskEncryptionKeyRawSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -955,6 +1007,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderBootDiskDiskEncr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderBootDiskInitializeParams
 {
     /// <summary></summary>
@@ -995,6 +1048,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderBootDiskInitiali
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderBootDisk
 {
     /// <summary>Default is 6 minutes.</summary>
@@ -1027,6 +1081,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderBootDisk
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderConfidentialInstanceConfig
 {
     /// <summary></summary>
@@ -1039,6 +1094,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderConfidentialInst
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderGuestAccelerator
 {
     /// <summary></summary>
@@ -1051,6 +1107,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderGuestAccelerator
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceAccessConfig
 {
     /// <summary></summary>
@@ -1067,6 +1124,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterface
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceAliasIpRange
 {
     /// <summary></summary>
@@ -1079,6 +1137,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterface
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceIpv6AccessConfig
 {
     /// <summary></summary>
@@ -1102,6 +1161,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterface
     public string? PublicPtrDomainName { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceNetworkRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1112,6 +1172,7 @@ public enum V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceNetworkRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceNetworkRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1123,6 +1184,7 @@ public enum V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceNetworkRe
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceNetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1137,6 +1199,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterface
 }
 
 /// <summary>Reference to a Network in compute to populate network.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceNetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1148,6 +1211,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterface
     public V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceNetworkRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceNetworkSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1158,6 +1222,7 @@ public enum V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceNetworkSe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceNetworkSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1169,6 +1234,7 @@ public enum V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceNetworkSe
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceNetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1183,6 +1249,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterface
 }
 
 /// <summary>Selector for a Network in compute to populate network.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceNetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1198,6 +1265,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterface
     public V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceNetworkSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceSubnetworkRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1208,6 +1276,7 @@ public enum V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceSubnetwor
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceSubnetworkRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1219,6 +1288,7 @@ public enum V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceSubnetwor
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceSubnetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1233,6 +1303,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterface
 }
 
 /// <summary>Reference to a Subnetwork in compute to populate subnetwork.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceSubnetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1244,6 +1315,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterface
     public V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceSubnetworkRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceSubnetworkSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1254,6 +1326,7 @@ public enum V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceSubnetwor
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceSubnetworkSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1265,6 +1338,7 @@ public enum V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceSubnetwor
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceSubnetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1279,6 +1353,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterface
 }
 
 /// <summary>Selector for a Subnetwork in compute to populate subnetwork.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceSubnetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1295,6 +1370,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterface
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterface
 {
     /// <summary></summary>
@@ -1363,6 +1439,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterface
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkPerformanceConfig
 {
     /// <summary></summary>
@@ -1371,6 +1448,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkPerforman
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderParams
 {
     /// <summary></summary>
@@ -1379,6 +1457,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderParams
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderReservationAffinitySpecificReservation
 {
     /// <summary></summary>
@@ -1391,6 +1470,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderReservationAffin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderReservationAffinity
 {
     /// <summary></summary>
@@ -1403,6 +1483,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderReservationAffin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderSchedulingLocalSsdRecoveryTimeout
 {
     /// <summary></summary>
@@ -1415,6 +1496,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderSchedulingLocalS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderSchedulingMaxRunDuration
 {
     /// <summary></summary>
@@ -1427,6 +1509,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderSchedulingMaxRun
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderSchedulingNodeAffinities
 {
     /// <summary></summary>
@@ -1443,6 +1526,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderSchedulingNodeAf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderSchedulingOnInstanceStopAction
 {
     /// <summary></summary>
@@ -1451,6 +1535,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderSchedulingOnInst
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderScheduling
 {
     /// <summary></summary>
@@ -1495,6 +1580,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderScheduling
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderScratchDisk
 {
     /// <summary>A unique name for the resource, required by GCE. Changing this forces a new resource to be created.</summary>
@@ -1511,6 +1597,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderScratchDisk
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderServiceAccount
 {
     /// <summary></summary>
@@ -1523,6 +1610,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderServiceAccount
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderShieldedInstanceConfig
 {
     /// <summary></summary>
@@ -1538,6 +1626,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderShieldedInstance
     public bool? EnableVtpm { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceFromTemplateSpecInitProviderSourceInstanceTemplateRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1548,6 +1637,7 @@ public enum V1beta1InstanceFromTemplateSpecInitProviderSourceInstanceTemplateRef
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceFromTemplateSpecInitProviderSourceInstanceTemplateRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1559,6 +1649,7 @@ public enum V1beta1InstanceFromTemplateSpecInitProviderSourceInstanceTemplateRef
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderSourceInstanceTemplateRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1573,6 +1664,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderSourceInstanceTe
 }
 
 /// <summary>Reference to a InstanceTemplate in compute to populate sourceInstanceTemplate.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderSourceInstanceTemplateRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1584,6 +1676,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderSourceInstanceTe
     public V1beta1InstanceFromTemplateSpecInitProviderSourceInstanceTemplateRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceFromTemplateSpecInitProviderSourceInstanceTemplateSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1594,6 +1687,7 @@ public enum V1beta1InstanceFromTemplateSpecInitProviderSourceInstanceTemplateSel
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceFromTemplateSpecInitProviderSourceInstanceTemplateSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1605,6 +1699,7 @@ public enum V1beta1InstanceFromTemplateSpecInitProviderSourceInstanceTemplateSel
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderSourceInstanceTemplateSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1619,6 +1714,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderSourceInstanceTe
 }
 
 /// <summary>Selector for a InstanceTemplate in compute to populate sourceInstanceTemplate.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderSourceInstanceTemplateSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1635,6 +1731,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderSourceInstanceTe
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProvider
 {
     /// <summary></summary>
@@ -1770,6 +1867,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProvider
     public string? Zone { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceFromTemplateSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -1792,6 +1890,7 @@ public enum V1beta1InstanceFromTemplateSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceFromTemplateSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1802,6 +1901,7 @@ public enum V1beta1InstanceFromTemplateSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceFromTemplateSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1813,6 +1913,7 @@ public enum V1beta1InstanceFromTemplateSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1827,6 +1928,7 @@ public partial class V1beta1InstanceFromTemplateSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1838,6 +1940,7 @@ public partial class V1beta1InstanceFromTemplateSpecProviderConfigRef
     public V1beta1InstanceFromTemplateSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceFromTemplateSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1848,6 +1951,7 @@ public enum V1beta1InstanceFromTemplateSpecPublishConnectionDetailsToConfigRefPo
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1InstanceFromTemplateSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1859,6 +1963,7 @@ public enum V1beta1InstanceFromTemplateSpecPublishConnectionDetailsToConfigRefPo
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1873,6 +1978,7 @@ public partial class V1beta1InstanceFromTemplateSpecPublishConnectionDetailsToCo
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1885,6 +1991,7 @@ public partial class V1beta1InstanceFromTemplateSpecPublishConnectionDetailsToCo
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1901,6 +2008,7 @@ public partial class V1beta1InstanceFromTemplateSpecPublishConnectionDetailsToMe
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1917,6 +2025,7 @@ public partial class V1beta1InstanceFromTemplateSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1929,6 +2038,7 @@ public partial class V1beta1InstanceFromTemplateSpecWriteConnectionSecretToRef
 }
 
 /// <summary>InstanceFromTemplateSpec defines the desired state of InstanceFromTemplate</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1962,6 +2072,7 @@ public partial class V1beta1InstanceFromTemplateSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateStatusAtProviderAdvancedMachineFeatures
 {
     /// <summary></summary>
@@ -1978,6 +2089,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderAdvancedMachineF
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateStatusAtProviderAttachedDisk
 {
     /// <summary>A unique name for the resource, required by GCE. Changing this forces a new resource to be created.</summary>
@@ -2006,6 +2118,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderAttachedDisk
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateStatusAtProviderBootDiskInitializeParams
 {
     /// <summary></summary>
@@ -2046,6 +2159,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderBootDiskInitiali
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateStatusAtProviderBootDisk
 {
     /// <summary>Default is 6 minutes.</summary>
@@ -2078,6 +2192,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderBootDisk
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateStatusAtProviderConfidentialInstanceConfig
 {
     /// <summary></summary>
@@ -2090,6 +2205,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderConfidentialInst
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateStatusAtProviderGuestAccelerator
 {
     /// <summary></summary>
@@ -2102,6 +2218,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderGuestAccelerator
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateStatusAtProviderNetworkInterfaceAccessConfig
 {
     /// <summary></summary>
@@ -2118,6 +2235,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderNetworkInterface
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateStatusAtProviderNetworkInterfaceAliasIpRange
 {
     /// <summary></summary>
@@ -2130,6 +2248,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderNetworkInterface
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateStatusAtProviderNetworkInterfaceIpv6AccessConfig
 {
     /// <summary></summary>
@@ -2154,6 +2273,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderNetworkInterface
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateStatusAtProviderNetworkInterface
 {
     /// <summary></summary>
@@ -2214,6 +2334,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderNetworkInterface
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateStatusAtProviderNetworkPerformanceConfig
 {
     /// <summary></summary>
@@ -2222,6 +2343,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderNetworkPerforman
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateStatusAtProviderParams
 {
     /// <summary></summary>
@@ -2230,6 +2352,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderParams
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateStatusAtProviderReservationAffinitySpecificReservation
 {
     /// <summary></summary>
@@ -2242,6 +2365,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderReservationAffin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateStatusAtProviderReservationAffinity
 {
     /// <summary></summary>
@@ -2254,6 +2378,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderReservationAffin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateStatusAtProviderSchedulingLocalSsdRecoveryTimeout
 {
     /// <summary></summary>
@@ -2266,6 +2391,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderSchedulingLocalS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateStatusAtProviderSchedulingMaxRunDuration
 {
     /// <summary></summary>
@@ -2278,6 +2404,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderSchedulingMaxRun
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateStatusAtProviderSchedulingNodeAffinities
 {
     /// <summary></summary>
@@ -2294,6 +2421,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderSchedulingNodeAf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateStatusAtProviderSchedulingOnInstanceStopAction
 {
     /// <summary></summary>
@@ -2302,6 +2430,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderSchedulingOnInst
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateStatusAtProviderScheduling
 {
     /// <summary></summary>
@@ -2346,6 +2475,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderScheduling
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateStatusAtProviderScratchDisk
 {
     /// <summary>A unique name for the resource, required by GCE. Changing this forces a new resource to be created.</summary>
@@ -2362,6 +2492,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderScratchDisk
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateStatusAtProviderServiceAccount
 {
     /// <summary></summary>
@@ -2374,6 +2505,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderServiceAccount
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateStatusAtProviderShieldedInstanceConfig
 {
     /// <summary></summary>
@@ -2390,6 +2522,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderShieldedInstance
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateStatusAtProvider
 {
     /// <summary></summary>
@@ -2558,6 +2691,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2586,6 +2720,7 @@ public partial class V1beta1InstanceFromTemplateStatusConditions
 }
 
 /// <summary>InstanceFromTemplateStatus defines the observed state of InstanceFromTemplate.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateStatus
 {
     /// <summary></summary>
@@ -2601,8 +2736,9 @@ public partial class V1beta1InstanceFromTemplateStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>InstanceFromTemplate is the Schema for the InstanceFromTemplates API. Manages a VM instance resource within GCE.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1InstanceFromTemplate : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1InstanceFromTemplateSpec>, IStatus<V1beta1InstanceFromTemplateStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigee.cnrm.cloud.google.com;
 /// <summary>Configuration for the Advanced API Ops add-on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApigeeOrganizationSpecAddonsConfigAdvancedApiOpsConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -17,6 +18,7 @@ public partial class V1beta1ApigeeOrganizationSpecAddonsConfigAdvancedApiOpsConf
 }
 
 /// <summary>Configuration for the Monetization add-on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApigeeOrganizationSpecAddonsConfigMonetizationConfig
 {
     /// <summary>Flag that specifies whether the Monetization add-on is enabled.</summary>
@@ -25,6 +27,7 @@ public partial class V1beta1ApigeeOrganizationSpecAddonsConfigMonetizationConfig
 }
 
 /// <summary>Addon configurations of the Apigee organization.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApigeeOrganizationSpecAddonsConfig
 {
     /// <summary>Configuration for the Advanced API Ops add-on.</summary>
@@ -37,6 +40,7 @@ public partial class V1beta1ApigeeOrganizationSpecAddonsConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApigeeOrganizationSpecAuthorizedNetworkRef
 {
     /// <summary>Compute Engine network used for Service Networking to be peered with Apigee runtime instances. See (https://cloud.google.com/vpc/docs/shared-vpc). To use a shared VPC network, use the following format: `projects/{host-project-id}/{region}/networks/{network-name}`. For example: `projects/my-sharedvpc-host/global/networks/mynetwork` **Note:** Not supported for Apigee hybrid.  Allowed value: The Google Cloud resource name of a `ComputeNetwork` resource (format: `projects/{{project}}/global/networks/{{name}}`).</summary>
@@ -53,6 +57,7 @@ public partial class V1beta1ApigeeOrganizationSpecAuthorizedNetworkRef
 }
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApigeeOrganizationSpecProjectRef
 {
     /// <summary>Required. Name of the GCP project in which to associate the Apigee organization. Pass the information as a query parameter using the following structure in your request: projects/&lt;project&gt; Authorization requires the following IAM permission on the specified resource parent: apigee.organizations.create  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -69,6 +74,7 @@ public partial class V1beta1ApigeeOrganizationSpecProjectRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApigeeOrganizationSpecRuntimeDatabaseEncryptionKeyRef
 {
     /// <summary>Cloud KMS key name used for encrypting the data that is stored and replicated across runtime instances. Update is not allowed after the organization is created. Required when (#RuntimeType) is `TRIAL`, a Google-Managed encryption key will be used. For example: "projects/foo/locations/us/keyRings/bar/cryptoKeys/baz". **Note:** Not supported for Apigee hybrid.  Allowed value: The Google Cloud resource name of a `KMSCryptoKey` resource (format: `{{selfLink}}`).</summary>
@@ -85,6 +91,7 @@ public partial class V1beta1ApigeeOrganizationSpecRuntimeDatabaseEncryptionKeyRe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApigeeOrganizationSpec
 {
     /// <summary>Addon configurations of the Apigee organization.</summary>
@@ -129,6 +136,7 @@ public partial class V1beta1ApigeeOrganizationSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApigeeOrganizationStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -153,6 +161,7 @@ public partial class V1beta1ApigeeOrganizationStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApigeeOrganizationStatus
 {
     /// <summary>Output only. Billing type of the Apigee organization. See (https://cloud.google.com/apigee/pricing). Possible values: BILLING_TYPE_UNSPECIFIED, SUBSCRIPTION, EVALUATION</summary>
@@ -200,8 +209,9 @@ public partial class V1beta1ApigeeOrganizationStatus
     public string? SubscriptionType { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ApigeeOrganization : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ApigeeOrganizationSpec>, IStatus<V1beta1ApigeeOrganizationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

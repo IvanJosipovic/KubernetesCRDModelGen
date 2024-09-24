@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.certmanager.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CertificateSpecAdditionalOutputFormatsTypeEnum
 {
     [EnumMember(Value = "DER"), JsonStringEnumMemberName("DER")]
@@ -19,6 +20,7 @@ public enum V1CertificateSpecAdditionalOutputFormatsTypeEnum
 }
 
 /// <summary>CertificateAdditionalOutputFormat defines an additional output format of a Certificate resource. These contain supplementary data formats of the signed certificate chain and paired private key.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CertificateSpecAdditionalOutputFormats
 {
     /// <summary>Type is the name of the format type that should be written to the Certificate's target Secret.</summary>
@@ -28,6 +30,7 @@ public partial class V1CertificateSpecAdditionalOutputFormats
 }
 
 /// <summary>Reference to the issuer responsible for issuing the certificate. If the issuer is namespace-scoped, it must be in the same namespace as the Certificate. If the issuer is cluster-scoped, it can be used from any namespace.   The `name` field of the reference must always be specified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CertificateSpecIssuerRef
 {
     /// <summary>Group of the resource being referred to.</summary>
@@ -44,6 +47,7 @@ public partial class V1CertificateSpecIssuerRef
 }
 
 /// <summary>PasswordSecretRef is a reference to a key in a Secret resource containing the password used to encrypt the JKS keystore.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CertificateSpecKeystoresJksPasswordSecretRef
 {
     /// <summary>The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required.</summary>
@@ -56,6 +60,7 @@ public partial class V1CertificateSpecKeystoresJksPasswordSecretRef
 }
 
 /// <summary>JKS configures options for storing a JKS keystore in the `spec.secretName` Secret resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CertificateSpecKeystoresJks
 {
     /// <summary>Alias specifies the alias of the key in the keystore, required by the JKS format. If not provided, the default alias `certificate` will be used.</summary>
@@ -72,6 +77,7 @@ public partial class V1CertificateSpecKeystoresJks
 }
 
 /// <summary>PasswordSecretRef is a reference to a key in a Secret resource containing the password used to encrypt the PKCS12 keystore.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CertificateSpecKeystoresPkcs12PasswordSecretRef
 {
     /// <summary>The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required.</summary>
@@ -83,6 +89,7 @@ public partial class V1CertificateSpecKeystoresPkcs12PasswordSecretRef
     public string Name { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CertificateSpecKeystoresPkcs12ProfileEnum
 {
     [EnumMember(Value = "LegacyRC2"), JsonStringEnumMemberName("LegacyRC2")]
@@ -97,6 +104,7 @@ public enum V1CertificateSpecKeystoresPkcs12ProfileEnum
 }
 
 /// <summary>PKCS12 configures options for storing a PKCS12 keystore in the `spec.secretName` Secret resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CertificateSpecKeystoresPkcs12
 {
     /// <summary>Create enables PKCS12 keystore creation for the Certificate. If true, a file named `keystore.p12` will be created in the target Secret resource, encrypted using the password stored in `passwordSecretRef`. The keystore file will be updated immediately. If the issuer provided a CA certificate, a file named `truststore.p12` will also be created in the target Secret resource, encrypted using the password stored in `passwordSecretRef` containing the issuing Certificate Authority</summary>
@@ -114,6 +122,7 @@ public partial class V1CertificateSpecKeystoresPkcs12
 }
 
 /// <summary>Additional keystore output formats to be stored in the Certificate's Secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CertificateSpecKeystores
 {
     /// <summary>JKS configures options for storing a JKS keystore in the `spec.secretName` Secret resource.</summary>
@@ -126,6 +135,7 @@ public partial class V1CertificateSpecKeystores
 }
 
 /// <summary>Excluded contains the constraints which must be disallowed. Any name matching a restriction in the excluded field is invalid regardless of information appearing in the permitted</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CertificateSpecNameConstraintsExcluded
 {
     /// <summary>DNSDomains is a list of DNS domains that are permitted or excluded.</summary>
@@ -146,6 +156,7 @@ public partial class V1CertificateSpecNameConstraintsExcluded
 }
 
 /// <summary>Permitted contains the constraints in which the names must be located.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CertificateSpecNameConstraintsPermitted
 {
     /// <summary>DNSDomains is a list of DNS domains that are permitted or excluded.</summary>
@@ -166,6 +177,7 @@ public partial class V1CertificateSpecNameConstraintsPermitted
 }
 
 /// <summary>x.509 certificate NameConstraint extension which MUST NOT be used in a non-CA certificate. More Info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.10   This is an Alpha Feature and is only enabled with the `--feature-gates=NameConstraints=true` option set on both the controller and webhook components.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CertificateSpecNameConstraints
 {
     /// <summary>if true then the name constraints are marked critical.</summary>
@@ -182,6 +194,7 @@ public partial class V1CertificateSpecNameConstraints
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CertificateSpecOtherNames
 {
     /// <summary>OID is the object identifier for the otherName SAN. The object identifier must be expressed as a dotted string, for example, "1.2.840.113556.1.4.221".</summary>
@@ -193,6 +206,7 @@ public partial class V1CertificateSpecOtherNames
     public string? Utf8Value { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CertificateSpecPrivateKeyAlgorithmEnum
 {
     [EnumMember(Value = "RSA"), JsonStringEnumMemberName("RSA")]
@@ -206,6 +220,7 @@ public enum V1CertificateSpecPrivateKeyAlgorithmEnum
     Ed25519
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CertificateSpecPrivateKeyEncodingEnum
 {
     [EnumMember(Value = "PKCS1"), JsonStringEnumMemberName("PKCS1")]
@@ -216,6 +231,7 @@ public enum V1CertificateSpecPrivateKeyEncodingEnum
     PKCS8
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CertificateSpecPrivateKeyRotationPolicyEnum
 {
     [EnumMember(Value = "Never"), JsonStringEnumMemberName("Never")]
@@ -227,6 +243,7 @@ public enum V1CertificateSpecPrivateKeyRotationPolicyEnum
 }
 
 /// <summary>Private key options. These include the key algorithm and size, the used encoding and the rotation policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CertificateSpecPrivateKey
 {
     /// <summary>Algorithm is the private key algorithm of the corresponding private key for this certificate.   If provided, allowed values are either `RSA`, `ECDSA` or `Ed25519`. If `algorithm` is specified and `size` is not provided, key size of 2048 will be used for `RSA` key algorithm and key size of 256 will be used for `ECDSA` key algorithm. key size is ignored when using the `Ed25519` key algorithm.</summary>
@@ -250,6 +267,7 @@ public partial class V1CertificateSpecPrivateKey
 }
 
 /// <summary>Defines annotations and labels to be copied to the Certificate's Secret. Labels and annotations on the Secret will be changed as they appear on the SecretTemplate when added or removed. SecretTemplate annotations are added in conjunction with, and cannot overwrite, the base set of annotations cert-manager sets on the Certificate's Secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CertificateSpecSecretTemplate
 {
     /// <summary>Annotations is a key value map to be copied to the target Kubernetes Secret.</summary>
@@ -262,6 +280,7 @@ public partial class V1CertificateSpecSecretTemplate
 }
 
 /// <summary>Requested set of X509 certificate subject attributes. More info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6   The common name attribute is specified separately in the `commonName` field. Cannot be set if the `literalSubject` field is set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CertificateSpecSubject
 {
     /// <summary>Countries to be used on the Certificate.</summary>
@@ -297,6 +316,7 @@ public partial class V1CertificateSpecSubject
     public IList<string>? StreetAddresses { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CertificateSpecUsagesEnum
 {
     [EnumMember(Value = "signing"), JsonStringEnumMemberName("signing")]
@@ -371,6 +391,7 @@ public enum V1CertificateSpecUsagesEnum
 }
 
 /// <summary>Specification of the desired state of the Certificate resource. https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CertificateSpec
 {
     /// <summary>Defines extra output formats of the private key and signed certificate chain to be written to this Certificate's target Secret.   This is a Beta Feature enabled by default. It can be disabled with the `--feature-gates=AdditionalCertificateOutputFormats=false` option set on both the controller and webhook components.</summary>
@@ -458,6 +479,7 @@ public partial class V1CertificateSpec
     public IList<V1CertificateSpecUsagesEnum>? Usages { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CertificateStatusConditionsStatusEnum
 {
     [EnumMember(Value = "true"), JsonStringEnumMemberName("true")]
@@ -472,6 +494,7 @@ public enum V1CertificateStatusConditionsStatusEnum
 }
 
 /// <summary>CertificateCondition contains condition information for an Certificate.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CertificateStatusConditions
 {
     /// <summary>LastTransitionTime is the timestamp corresponding to the last status change of this condition.</summary>
@@ -501,6 +524,7 @@ public partial class V1CertificateStatusConditions
 }
 
 /// <summary>Status of the Certificate. This is set and managed automatically. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CertificateStatus
 {
     /// <summary>List of status conditions to indicate the status of certificates. Known condition types are `Ready` and `Issuing`.</summary>
@@ -536,8 +560,9 @@ public partial class V1CertificateStatus
     public int? Revision { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>A Certificate resource should be created to ensure an up to date and signed X.509 certificate is stored in the Kubernetes Secret resource named in `spec.secretName`.   The stored certificate will be renewed before it expires (as configured by `spec.renewBefore`).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1Certificate : IKubernetesObject<V1ObjectMeta>, ISpec<V1CertificateSpec>, IStatus<V1CertificateStatus>
 {
     public const string KubeApiVersion = "v1";

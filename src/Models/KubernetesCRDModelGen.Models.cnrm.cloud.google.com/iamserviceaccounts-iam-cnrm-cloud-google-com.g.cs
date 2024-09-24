@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iam.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMServiceAccountSpec
 {
     /// <summary>A text description of the service account. Must be less than or equal to 256 UTF-8 bytes.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1IAMServiceAccountSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMServiceAccountStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -53,6 +55,7 @@ public partial class V1beta1IAMServiceAccountStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMServiceAccountStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -80,8 +83,9 @@ public partial class V1beta1IAMServiceAccountStatus
     public string? UniqueId { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1IAMServiceAccount : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IAMServiceAccountSpec>, IStatus<V1beta1IAMServiceAccountStatus>
 {
     public const string KubeApiVersion = "v1beta1";

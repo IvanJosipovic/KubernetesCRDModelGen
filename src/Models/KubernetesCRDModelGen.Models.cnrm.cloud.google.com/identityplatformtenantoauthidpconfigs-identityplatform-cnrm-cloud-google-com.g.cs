@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.identityplatform.cnrm.cloud.google.com;
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpecClientSecretValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -21,6 +22,7 @@ public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpecClientSecret
 }
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpecClientSecretValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -29,6 +31,7 @@ public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpecClientSecret
 }
 
 /// <summary>The client secret of the OAuth client, to enable OIDC code flow.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpecClientSecret
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -41,6 +44,7 @@ public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpecClientSecret
 }
 
 /// <summary>The multiple response type to request for in the OAuth authorization flow. This can possibly be a combination of set bits (e.g.: {id\_token, token}).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpecResponseType
 {
     /// <summary>If true, authorization code is returned from IdP's authorization endpoint.</summary>
@@ -57,6 +61,7 @@ public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpecResponseType
 }
 
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpecTenantRef
 {
     /// <summary>The tenant for the resource  Allowed value: The Google Cloud resource name of an `IdentityPlatformTenant` resource (format: `projects/{{project}}/tenants/{{name}}`).</summary>
@@ -73,6 +78,7 @@ public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpecTenantRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpec
 {
     /// <summary>The client id of an OAuth client.</summary>
@@ -109,6 +115,7 @@ public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -133,6 +140,7 @@ public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -144,8 +152,9 @@ public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1IdentityPlatformTenantOAuthIDPConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IdentityPlatformTenantOAuthIDPConfigSpec>, IStatus<V1beta1IdentityPlatformTenantOAuthIDPConfigStatus>
 {
     public const string KubeApiVersion = "v1beta1";

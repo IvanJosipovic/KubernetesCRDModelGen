@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkservices.cnrm.cloud.google.com;
 /// <summary>Enable AWS Signature Version 4 origin authentication.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecAwsV4Authentication
 {
     /// <summary>The access key ID your origin uses to identify the key.</summary>
@@ -25,6 +26,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecAwsV4Authenticati
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecOriginOverrideActionHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header to add.</summary>
@@ -41,6 +43,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecOriginOverrideAct
 }
 
 /// <summary>The header actions, including adding and removing headers, for request handled by this origin.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecOriginOverrideActionHeaderAction
 {
     /// <summary>Describes a header to add.  You may add a maximum of 25 request headers.</summary>
@@ -49,6 +52,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecOriginOverrideAct
 }
 
 /// <summary>The URL rewrite configuration for request that are handled by this origin.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecOriginOverrideActionUrlRewrite
 {
     /// <summary>Prior to forwarding the request to the selected origin, the request's host header is replaced with contents of the hostRewrite.  This value must be between 1 and 255 characters.</summary>
@@ -57,6 +61,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecOriginOverrideAct
 }
 
 /// <summary>The override actions, including url rewrites and header additions, for requests that use this origin.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecOriginOverrideAction
 {
     /// <summary>The header actions, including adding and removing headers, for request handled by this origin.</summary>
@@ -69,6 +74,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecOriginOverrideAct
 }
 
 /// <summary>Follow redirects from this origin.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecOriginRedirect
 {
     /// <summary>The set of redirect response codes that the CDN follows. Values of [RedirectConditions](https://cloud.google.com/media-cdn/docs/reference/rest/v1/projects.locations.edgeCacheOrigins#redirectconditions) are accepted.</summary>
@@ -77,6 +83,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecOriginRedirect
 }
 
 /// <summary>The project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -93,6 +100,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecProjectRef
 }
 
 /// <summary>The connection and HTTP timeout configuration for this origin.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecTimeout
 {
     /// <summary>The maximum duration to wait for a single origin connection to be established, including DNS lookup, TLS handshake and TCP/QUIC connection establishment.  Defaults to 5 seconds. The timeout must be a value between 1s and 15s.  The connectTimeout capped by the deadline set by the request's maxAttemptsTimeout.  The last connection attempt may have a smaller connectTimeout in order to adhere to the overall maxAttemptsTimeout.</summary>
@@ -113,6 +121,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecTimeout
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesEdgeCacheOriginSpec
 {
     /// <summary>Enable AWS Signature Version 4 origin authentication.</summary>
@@ -169,6 +178,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesEdgeCacheOriginStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -193,6 +203,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesEdgeCacheOriginStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -204,8 +215,9 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1NetworkServicesEdgeCacheOrigin : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1NetworkServicesEdgeCacheOriginSpec>, IStatus<V1alpha1NetworkServicesEdgeCacheOriginStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

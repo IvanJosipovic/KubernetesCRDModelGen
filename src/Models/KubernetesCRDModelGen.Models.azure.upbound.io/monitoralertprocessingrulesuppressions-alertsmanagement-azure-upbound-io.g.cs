@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.alertsmanagement.azure.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderConditionAlertContext
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -31,6 +33,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderConditionAlertRuleId
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -43,6 +46,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderConditionAlertRuleName
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -55,6 +59,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderConditionDescription
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -67,6 +72,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderConditionMonitorCondition
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -79,6 +85,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderConditionMonitorService
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -91,6 +98,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderConditionSeverity
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -103,6 +111,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderConditionSignalType
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -115,6 +124,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderConditionTargetResource
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -127,6 +137,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderConditionTargetResourceGroup
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -139,6 +150,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderConditionTargetResourceType
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -151,6 +163,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderCondition
 {
     /// <summary>A alert_context block as defined above.</summary>
@@ -198,6 +211,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
     public IList<V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderConditionTargetResourceType>? TargetResourceType { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderResourceGroupNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -208,6 +222,7 @@ public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderResourceG
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderResourceGroupNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -219,6 +234,7 @@ public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderResourceG
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -233,6 +249,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
 }
 
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -244,6 +261,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
     public V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -254,6 +272,7 @@ public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderResourceG
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderResourceGroupNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -265,6 +284,7 @@ public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderResourceG
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +299,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
 }
 
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -295,6 +316,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderScheduleRecurrenceDaily
 {
     /// <summary>Specifies the recurrence end time (H:M:S).</summary>
@@ -307,6 +329,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderScheduleRecurrenceMonthly
 {
     /// <summary>Specifies a list of dayOfMonth to recurrence. Possible values are integers between 1 - 31.</summary>
@@ -323,6 +346,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderScheduleRecurrenceWeekly
 {
     /// <summary>Specifies a list of dayOfWeek to recurrence. Possible values are Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday.</summary>
@@ -339,6 +363,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderScheduleRecurrence
 {
     /// <summary>One or more daily blocks as defined above.</summary>
@@ -355,6 +380,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderSchedule
 {
     /// <summary>Specifies the Alert Processing Rule effective start time (Y-m-d'T'H:M:S).</summary>
@@ -374,6 +400,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
     public string? TimeZone { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderScopesRefsPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -384,6 +411,7 @@ public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderScopesRef
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderScopesRefsPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -395,6 +423,7 @@ public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderScopesRef
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderScopesRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -409,6 +438,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
 }
 
 /// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderScopesRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -420,6 +450,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
     public V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderScopesRefsPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderScopesSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -430,6 +461,7 @@ public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderScopesSel
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderScopesSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -441,6 +473,7 @@ public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderScopesSel
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderScopesSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -455,6 +488,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
 }
 
 /// <summary>Selector for a list of ResourceGroup in azure to populate scopes.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderScopesSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -471,6 +505,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
 {
     /// <summary>A condition block as defined below.</summary>
@@ -519,6 +554,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderConditionAlertContext
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -531,6 +567,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderConditionAlertRuleId
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -543,6 +580,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderConditionAlertRuleName
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -555,6 +593,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderConditionDescription
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -567,6 +606,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderConditionMonitorCondition
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -579,6 +619,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderConditionMonitorService
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -591,6 +632,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderConditionSeverity
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -603,6 +645,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderConditionSignalType
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -615,6 +658,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderConditionTargetResource
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -627,6 +671,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderConditionTargetResourceGroup
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -639,6 +684,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderConditionTargetResourceType
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -651,6 +697,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderCondition
 {
     /// <summary>A alert_context block as defined above.</summary>
@@ -699,6 +746,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderScheduleRecurrenceDaily
 {
     /// <summary>Specifies the recurrence end time (H:M:S).</summary>
@@ -711,6 +759,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderScheduleRecurrenceMonthly
 {
     /// <summary>Specifies a list of dayOfMonth to recurrence. Possible values are integers between 1 - 31.</summary>
@@ -727,6 +776,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderScheduleRecurrenceWeekly
 {
     /// <summary>Specifies a list of dayOfWeek to recurrence. Possible values are Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday.</summary>
@@ -743,6 +793,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderScheduleRecurrence
 {
     /// <summary>One or more daily blocks as defined above.</summary>
@@ -759,6 +810,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderSchedule
 {
     /// <summary>Specifies the Alert Processing Rule effective start time (Y-m-d'T'H:M:S).</summary>
@@ -778,6 +830,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
     public string? TimeZone { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderScopesRefsPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -788,6 +841,7 @@ public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderScopesRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderScopesRefsPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -799,6 +853,7 @@ public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderScopesRe
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderScopesRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -813,6 +868,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
 }
 
 /// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderScopesRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -824,6 +880,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
     public V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderScopesRefsPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderScopesSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -834,6 +891,7 @@ public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderScopesSe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderScopesSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -845,6 +903,7 @@ public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderScopesSe
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderScopesSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -859,6 +918,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
 }
 
 /// <summary>Selector for a list of ResourceGroup in azure to populate scopes.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderScopesSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -875,6 +935,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvider
 {
     /// <summary>A condition block as defined below.</summary>
@@ -910,6 +971,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -932,6 +994,7 @@ public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecManagementPoliciesEn
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -942,6 +1005,7 @@ public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecProviderConfigRefPol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -953,6 +1017,7 @@ public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecProviderConfigRefPol
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -967,6 +1032,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecProviderCon
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -978,6 +1044,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecProviderCon
     public V1beta1MonitorAlertProcessingRuleSuppressionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -988,6 +1055,7 @@ public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecPublishConnectionDet
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -999,6 +1067,7 @@ public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecPublishConnectionDet
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1013,6 +1082,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecPublishConn
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1025,6 +1095,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecPublishConn
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1041,6 +1112,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecPublishConn
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1057,6 +1129,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecPublishConn
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1069,6 +1142,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecWriteConnec
 }
 
 /// <summary>MonitorAlertProcessingRuleSuppressionSpec defines the desired state of MonitorAlertProcessingRuleSuppression</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1102,6 +1176,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderConditionAlertContext
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1114,6 +1189,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderConditionAlertRuleId
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1126,6 +1202,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderConditionAlertRuleName
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1138,6 +1215,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderConditionDescription
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1150,6 +1228,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderConditionMonitorCondition
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1162,6 +1241,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderConditionMonitorService
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1174,6 +1254,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderConditionSeverity
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1186,6 +1267,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderConditionSignalType
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1198,6 +1280,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderConditionTargetResource
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1210,6 +1293,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderConditionTargetResourceGroup
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1222,6 +1306,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderConditionTargetResourceType
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1234,6 +1319,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderCondition
 {
     /// <summary>A alert_context block as defined above.</summary>
@@ -1282,6 +1368,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderScheduleRecurrenceDaily
 {
     /// <summary>Specifies the recurrence end time (H:M:S).</summary>
@@ -1294,6 +1381,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderScheduleRecurrenceMonthly
 {
     /// <summary>Specifies a list of dayOfMonth to recurrence. Possible values are integers between 1 - 31.</summary>
@@ -1310,6 +1398,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderScheduleRecurrenceWeekly
 {
     /// <summary>Specifies a list of dayOfWeek to recurrence. Possible values are Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday.</summary>
@@ -1326,6 +1415,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderScheduleRecurrence
 {
     /// <summary>One or more daily blocks as defined above.</summary>
@@ -1342,6 +1432,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderSchedule
 {
     /// <summary>Specifies the Alert Processing Rule effective start time (Y-m-d'T'H:M:S).</summary>
@@ -1362,6 +1453,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvider
 {
     /// <summary>A condition block as defined below.</summary>
@@ -1398,6 +1490,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1426,6 +1519,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusCondition
 }
 
 /// <summary>MonitorAlertProcessingRuleSuppressionStatus defines the observed state of MonitorAlertProcessingRuleSuppression.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatus
 {
     /// <summary></summary>
@@ -1441,8 +1535,9 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>MonitorAlertProcessingRuleSuppression is the Schema for the MonitorAlertProcessingRuleSuppressions API. Manages an Alert Processing Rule which suppress notifications.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1MonitorAlertProcessingRuleSuppression : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MonitorAlertProcessingRuleSuppressionSpec>, IStatus<V1beta1MonitorAlertProcessingRuleSuppressionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

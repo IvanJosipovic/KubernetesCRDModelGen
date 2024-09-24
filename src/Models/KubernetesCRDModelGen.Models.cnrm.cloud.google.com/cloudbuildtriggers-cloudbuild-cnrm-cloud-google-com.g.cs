@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudbuild.cnrm.cloud.google.com;
 /// <summary>Configuration for manual approval to start a build invocation of this BuildTrigger. Builds created by this trigger will require approval before they execute. Any user with a Cloud Build Approver role for the project can approve a build.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecApprovalConfig
 {
     /// <summary>Whether or not approval is needed. If this is set on a build, it will become pending when run, and will need to be explicitly approved to start.</summary>
@@ -17,6 +18,7 @@ public partial class V1beta1CloudBuildTriggerSpecApprovalConfig
 }
 
 /// <summary>Only `external` field is supported to configure the reference.  The full resource name of the bitbucket server config. Format: projects/{project}/locations/{location}/bitbucketServerConfigs/{id}.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecBitbucketServerTriggerConfigBitbucketServerConfigResourceRef
 {
     /// <summary>Allowed value: The `name` field of a `CloudBuildBitbucketServerConfig` resource.</summary>
@@ -33,6 +35,7 @@ public partial class V1beta1CloudBuildTriggerSpecBitbucketServerTriggerConfigBit
 }
 
 /// <summary>Filter to match changes in pull requests.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecBitbucketServerTriggerConfigPullRequest
 {
     /// <summary>Regex of branches to match. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax.</summary>
@@ -49,6 +52,7 @@ public partial class V1beta1CloudBuildTriggerSpecBitbucketServerTriggerConfigPul
 }
 
 /// <summary>Filter to match changes in refs like branches, tags.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecBitbucketServerTriggerConfigPush
 {
     /// <summary>Regex of branches to match.  Specify only one of branch or tag.</summary>
@@ -65,6 +69,7 @@ public partial class V1beta1CloudBuildTriggerSpecBitbucketServerTriggerConfigPus
 }
 
 /// <summary>BitbucketServerTriggerConfig describes the configuration of a trigger that creates a build whenever a Bitbucket Server event is received.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecBitbucketServerTriggerConfig
 {
     /// <summary>Only `external` field is supported to configure the reference.  The full resource name of the bitbucket server config. Format: projects/{project}/locations/{location}/bitbucketServerConfigs/{id}.</summary>
@@ -89,6 +94,7 @@ public partial class V1beta1CloudBuildTriggerSpecBitbucketServerTriggerConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecBuildArtifactsObjectsTiming
 {
     /// <summary>End of time span.  A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".</summary>
@@ -101,6 +107,7 @@ public partial class V1beta1CloudBuildTriggerSpecBuildArtifactsObjectsTiming
 }
 
 /// <summary>A list of objects to be uploaded to Cloud Storage upon successful completion of all build steps.  Files in the workspace matching specified paths globs will be uploaded to the Cloud Storage location using the builder service account's credentials.  The location and generation of the uploaded objects will be stored in the Build resource's results field.  If any objects fail to be pushed, the build is marked FAILURE.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecBuildArtifactsObjects
 {
     /// <summary>Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/".  Files in the workspace matching any path pattern will be uploaded to Cloud Storage with this location as a prefix.</summary>
@@ -117,6 +124,7 @@ public partial class V1beta1CloudBuildTriggerSpecBuildArtifactsObjects
 }
 
 /// <summary>Artifacts produced by the build that should be uploaded upon successful completion of all build steps.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecBuildArtifacts
 {
     /// <summary>A list of images to be pushed upon the successful completion of all build steps.  The images will be pushed using the builder service account's credentials.  The digests of the pushed images will be stored in the Build resource's results field.  If any of the images fail to be pushed, the build is marked FAILURE.</summary>
@@ -129,6 +137,7 @@ public partial class V1beta1CloudBuildTriggerSpecBuildArtifacts
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecBuildAvailableSecretsSecretManagerVersionRef
 {
     /// <summary>Allowed value: The `name` field of a `SecretManagerSecretVersion` resource.</summary>
@@ -145,6 +154,7 @@ public partial class V1beta1CloudBuildTriggerSpecBuildAvailableSecretsSecretMana
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecBuildAvailableSecretsSecretManager
 {
     /// <summary>Environment variable name to associate with the secret. Secret environment variables must be unique across all of a build's secrets, and must be used by at least one build step.</summary>
@@ -157,6 +167,7 @@ public partial class V1beta1CloudBuildTriggerSpecBuildAvailableSecretsSecretMana
 }
 
 /// <summary>Secrets and secret environment variables.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecBuildAvailableSecrets
 {
     /// <summary>Pairs a secret environment variable with a SecretVersion in Secret Manager.</summary>
@@ -165,6 +176,7 @@ public partial class V1beta1CloudBuildTriggerSpecBuildAvailableSecrets
 }
 
 /// <summary>Google Cloud Storage bucket where logs should be written. Logs file names will be of the format ${logsBucket}/log-${build_id}.txt.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecBuildLogsBucketRef
 {
     /// <summary>Allowed value: The `url` field of a `StorageBucket` resource.</summary>
@@ -181,6 +193,7 @@ public partial class V1beta1CloudBuildTriggerSpecBuildLogsBucketRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecBuildOptionsVolumes
 {
     /// <summary>Name of the volume to mount.  Volume names must be unique per build step and must be valid names for Docker volumes. Each named volume must be used by at least two build steps.</summary>
@@ -193,6 +206,7 @@ public partial class V1beta1CloudBuildTriggerSpecBuildOptionsVolumes
 }
 
 /// <summary>Special options for this build.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecBuildOptions
 {
     /// <summary>Requested disk size for the VM that runs the build. Note that this is NOT "disk free"; some of the space will be used by the operating system and build utilities. Also note that this is the minimum disk size that will be allocated for the build -- the build may run with a larger disk than requested. At present, the maximum disk size is 1000GB; builds that request more than the maximum are rejected with an error.</summary>
@@ -245,6 +259,7 @@ public partial class V1beta1CloudBuildTriggerSpecBuildOptions
 }
 
 /// <summary>KMS crypto key to use to decrypt these envs.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecBuildSecretKmsKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
@@ -261,6 +276,7 @@ public partial class V1beta1CloudBuildTriggerSpecBuildSecretKmsKeyRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecBuildSecret
 {
     /// <summary>KMS crypto key to use to decrypt these envs.</summary>
@@ -273,6 +289,7 @@ public partial class V1beta1CloudBuildTriggerSpecBuildSecret
 }
 
 /// <summary>The desired Cloud Source Repository. If omitted, "default" is assumed.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecBuildSourceRepoSourceRepoRef
 {
     /// <summary>Allowed value: The `name` field of a `SourceRepoRepository` resource.</summary>
@@ -289,6 +306,7 @@ public partial class V1beta1CloudBuildTriggerSpecBuildSourceRepoSourceRepoRef
 }
 
 /// <summary>Location of the source in a Google Cloud Source Repository.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecBuildSourceRepoSource
 {
     /// <summary>Regex matching branches to build. Exactly one a of branch name, tag, or commit SHA must be provided. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax.</summary>
@@ -325,6 +343,7 @@ public partial class V1beta1CloudBuildTriggerSpecBuildSourceRepoSource
 }
 
 /// <summary>Google Cloud Storage bucket containing the source.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecBuildSourceStorageSourceBucketRef
 {
     /// <summary>Allowed value: The `name` field of a `StorageBucket` resource.</summary>
@@ -341,6 +360,7 @@ public partial class V1beta1CloudBuildTriggerSpecBuildSourceStorageSourceBucketR
 }
 
 /// <summary>Location of the source in an archive file in Google Cloud Storage.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecBuildSourceStorageSource
 {
     /// <summary>Google Cloud Storage bucket containing the source.</summary>
@@ -357,6 +377,7 @@ public partial class V1beta1CloudBuildTriggerSpecBuildSourceStorageSource
 }
 
 /// <summary>The location of the source files to build.  One of 'storageSource' or 'repoSource' must be provided.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecBuildSource
 {
     /// <summary>Location of the source in a Google Cloud Source Repository.</summary>
@@ -369,6 +390,7 @@ public partial class V1beta1CloudBuildTriggerSpecBuildSource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecBuildStepVolumes
 {
     /// <summary>Name of the volume to mount.  Volume names must be unique per build step and must be valid names for Docker volumes. Each named volume must be used by at least two build steps.</summary>
@@ -381,6 +403,7 @@ public partial class V1beta1CloudBuildTriggerSpecBuildStepVolumes
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecBuildStep
 {
     /// <summary>Allow this build step to fail without failing the entire build if and only if the exit code is one of the specified codes.  If 'allowFailure' is also specified, this field will take precedence.</summary>
@@ -441,6 +464,7 @@ public partial class V1beta1CloudBuildTriggerSpecBuildStep
 }
 
 /// <summary>Contents of the build template. Either a filename or build template must be provided.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecBuild
 {
     /// <summary>Artifacts produced by the build that should be uploaded upon successful completion of all build steps.</summary>
@@ -493,6 +517,7 @@ public partial class V1beta1CloudBuildTriggerSpecBuild
 }
 
 /// <summary>Only `external` field is supported to configure the reference.  The full resource name of the bitbucket server config. Format: projects/{project}/locations/{location}/bitbucketServerConfigs/{id}.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecGitFileSourceBitbucketServerConfigRef
 {
     /// <summary>Allowed value: The `name` field of a `CloudBuildBitbucketServerConfig` resource.</summary>
@@ -509,6 +534,7 @@ public partial class V1beta1CloudBuildTriggerSpecGitFileSourceBitbucketServerCon
 }
 
 /// <summary>Only `external` field is supported to configure the reference.  The full resource name of the github enterprise config. Format: projects/{project}/locations/{location}/githubEnterpriseConfigs/{id}.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecGitFileSourceGithubEnterpriseConfigRef
 {
     /// <summary>Allowed value: The `name` field of a `CloudBuildGithubEnterpriseConfig` resource.</summary>
@@ -525,6 +551,7 @@ public partial class V1beta1CloudBuildTriggerSpecGitFileSourceGithubEnterpriseCo
 }
 
 /// <summary>Only `external` field is supported to configure the reference.  The fully qualified resource name of the Repo API repository. The fully qualified resource name of the Repo API repository. If unspecified, the repo from which the trigger invocation originated is assumed to be the repo from which to read the specified path.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecGitFileSourceRepositoryRef
 {
     /// <summary>Allowed value: The `name` field of a `CloudBuildV2Repository` resource.</summary>
@@ -541,6 +568,7 @@ public partial class V1beta1CloudBuildTriggerSpecGitFileSourceRepositoryRef
 }
 
 /// <summary>The file source describing the local or remote Build template.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecGitFileSource
 {
     /// <summary>Only `external` field is supported to configure the reference.  The full resource name of the bitbucket server config. Format: projects/{project}/locations/{location}/bitbucketServerConfigs/{id}.</summary>
@@ -573,6 +601,7 @@ public partial class V1beta1CloudBuildTriggerSpecGitFileSource
 }
 
 /// <summary>Only `external` field is supported to configure the reference.  The full resource name of the github enterprise config. Format: projects/{project}/locations/{location}/githubEnterpriseConfigs/{id}.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecGithubEnterpriseConfigResourceNameRef
 {
     /// <summary>Allowed value: The `name` field of a `CloudBuildGithubEnterpriseConfig` resource.</summary>
@@ -589,6 +618,7 @@ public partial class V1beta1CloudBuildTriggerSpecGithubEnterpriseConfigResourceN
 }
 
 /// <summary>filter to match changes in pull requests. Specify only one of 'pull_request' or 'push'.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecGithubPullRequest
 {
     /// <summary>Regex of branches to match.</summary>
@@ -605,6 +635,7 @@ public partial class V1beta1CloudBuildTriggerSpecGithubPullRequest
 }
 
 /// <summary>filter to match changes in refs, like branches or tags. Specify only one of 'pull_request' or 'push'.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecGithubPush
 {
     /// <summary>Regex of branches to match.  Specify only one of branch or tag.</summary>
@@ -621,6 +652,7 @@ public partial class V1beta1CloudBuildTriggerSpecGithubPush
 }
 
 /// <summary>Describes the configuration of a trigger that creates a build whenever a GitHub event is received.  One of 'trigger_template', 'github', 'pubsub_config' or 'webhook_config' must be provided.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecGithub
 {
     /// <summary>Only `external` field is supported to configure the reference.  The full resource name of the github enterprise config. Format: projects/{project}/locations/{location}/githubEnterpriseConfigs/{id}.</summary>
@@ -645,6 +677,7 @@ public partial class V1beta1CloudBuildTriggerSpecGithub
 }
 
 /// <summary>Service account that will make the push request.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecPubsubConfigServiceAccountRef
 {
     /// <summary>Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
@@ -661,6 +694,7 @@ public partial class V1beta1CloudBuildTriggerSpecPubsubConfigServiceAccountRef
 }
 
 /// <summary>The name of the topic from which this subscription is receiving messages.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecPubsubConfigTopicRef
 {
     /// <summary>Allowed value: string of the format `projects/{{project}}/topics/{{value}}`, where {{value}} is the `name` field of a `PubSubTopic` resource.</summary>
@@ -677,6 +711,7 @@ public partial class V1beta1CloudBuildTriggerSpecPubsubConfigTopicRef
 }
 
 /// <summary>PubsubConfig describes the configuration of a trigger that creates a build whenever a Pub/Sub message is published.  One of 'trigger_template', 'github', 'pubsub_config' 'webhook_config' or 'source_to_build' must be provided.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecPubsubConfig
 {
     /// <summary>Service account that will make the push request.</summary>
@@ -697,6 +732,7 @@ public partial class V1beta1CloudBuildTriggerSpecPubsubConfig
 }
 
 /// <summary>Contains filter properties for matching Pull Requests.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecRepositoryEventConfigPullRequest
 {
     /// <summary>Regex of branches to match.  The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax.</summary>
@@ -713,6 +749,7 @@ public partial class V1beta1CloudBuildTriggerSpecRepositoryEventConfigPullReques
 }
 
 /// <summary>Contains filter properties for matching git pushes.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecRepositoryEventConfigPush
 {
     /// <summary>Regex of branches to match.  The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax.</summary>
@@ -729,6 +766,7 @@ public partial class V1beta1CloudBuildTriggerSpecRepositoryEventConfigPush
 }
 
 /// <summary>The configuration of a trigger that creates a build whenever an event from Repo API is received.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecRepositoryEventConfig
 {
     /// <summary>Contains filter properties for matching Pull Requests.</summary>
@@ -745,6 +783,7 @@ public partial class V1beta1CloudBuildTriggerSpecRepositoryEventConfig
 }
 
 /// <summary>The service account used for all user-controlled operations including triggers.patch, triggers.run, builds.create, and builds.cancel.  If no service account is set, then the standard Cloud Build service account ([PROJECT_NUM]@system.gserviceaccount.com) will be used instead.  When populating via the external field, the following format is supported: projects/{PROJECT_ID}/serviceAccounts/{SERVICE_ACCOUNT_EMAIL}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecServiceAccountRef
 {
     /// <summary>Allowed value: string of the format `projects/{{project}}/serviceAccounts/{{value}}`, where {{value}} is the `email` field of an `IAMServiceAccount` resource.</summary>
@@ -761,6 +800,7 @@ public partial class V1beta1CloudBuildTriggerSpecServiceAccountRef
 }
 
 /// <summary>Only `external` field is supported to configure the reference.  The full resource name of the bitbucket server config. Format: projects/{project}/locations/{location}/bitbucketServerConfigs/{id}.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecSourceToBuildBitbucketServerConfigRef
 {
     /// <summary>Allowed value: The `name` field of a `CloudBuildBitbucketServerConfig` resource.</summary>
@@ -777,6 +817,7 @@ public partial class V1beta1CloudBuildTriggerSpecSourceToBuildBitbucketServerCon
 }
 
 /// <summary>Only `external` field is supported to configure the reference.  The full resource name of the github enterprise config. Format: projects/{project}/locations/{location}/githubEnterpriseConfigs/{id}.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecSourceToBuildGithubEnterpriseConfigRef
 {
     /// <summary>Allowed value: The `name` field of a `CloudBuildGithubEnterpriseConfig` resource.</summary>
@@ -793,6 +834,7 @@ public partial class V1beta1CloudBuildTriggerSpecSourceToBuildGithubEnterpriseCo
 }
 
 /// <summary>Only `external` field is supported to configure the reference.  The qualified resource name of the Repo API repository. Either uri or repository can be specified and is required.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecSourceToBuildRepositoryRef
 {
     /// <summary>Allowed value: The `name` field of a `CloudBuildV2Repository` resource.</summary>
@@ -809,6 +851,7 @@ public partial class V1beta1CloudBuildTriggerSpecSourceToBuildRepositoryRef
 }
 
 /// <summary>The repo and ref of the repository from which to build. This field is used only for those triggers that do not respond to SCM events. Triggers that respond to such events build source at whatever commit caused the event. This field is currently only used by Webhook, Pub/Sub, Manual, and Cron triggers.  One of 'trigger_template', 'github', 'pubsub_config' 'webhook_config' or 'source_to_build' must be provided.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecSourceToBuild
 {
     /// <summary>Only `external` field is supported to configure the reference.  The full resource name of the bitbucket server config. Format: projects/{project}/locations/{location}/bitbucketServerConfigs/{id}.</summary>
@@ -837,6 +880,7 @@ public partial class V1beta1CloudBuildTriggerSpecSourceToBuild
 }
 
 /// <summary>The Cloud Source Repository to build. If omitted, the repo with name "default" is assumed.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecTriggerTemplateRepoRef
 {
     /// <summary>Allowed value: The `name` field of a `SourceRepoRepository` resource.</summary>
@@ -853,6 +897,7 @@ public partial class V1beta1CloudBuildTriggerSpecTriggerTemplateRepoRef
 }
 
 /// <summary>Template describing the types of source changes to trigger a build.  Branch and tag names in trigger templates are interpreted as regular expressions. Any branch or tag change that matches that regular expression will trigger a build.  One of 'trigger_template', 'github', 'pubsub_config', 'webhook_config' or 'source_to_build' must be provided.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecTriggerTemplate
 {
     /// <summary>Name of the branch to build. Exactly one a of branch name, tag, or commit SHA must be provided. This field is a regular expression.</summary>
@@ -881,6 +926,7 @@ public partial class V1beta1CloudBuildTriggerSpecTriggerTemplate
 }
 
 /// <summary>The secret required</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecWebhookConfigSecretRef
 {
     /// <summary>Allowed value: The `name` field of a `SecretManagerSecretVersion` resource.</summary>
@@ -897,6 +943,7 @@ public partial class V1beta1CloudBuildTriggerSpecWebhookConfigSecretRef
 }
 
 /// <summary>WebhookConfig describes the configuration of a trigger that creates a build whenever a webhook is sent to a trigger's webhook URL.  One of 'trigger_template', 'github', 'pubsub_config' 'webhook_config' or 'source_to_build' must be provided.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpecWebhookConfig
 {
     /// <summary>The secret required</summary>
@@ -909,6 +956,7 @@ public partial class V1beta1CloudBuildTriggerSpecWebhookConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerSpec
 {
     /// <summary>Configuration for manual approval to start a build invocation of this BuildTrigger. Builds created by this trigger will require approval before they execute. Any user with a Cloud Build Approver role for the project can approve a build.</summary>
@@ -997,6 +1045,7 @@ public partial class V1beta1CloudBuildTriggerSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -1021,6 +1070,7 @@ public partial class V1beta1CloudBuildTriggerStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildTriggerStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -1040,8 +1090,9 @@ public partial class V1beta1CloudBuildTriggerStatus
     public string? TriggerId { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1CloudBuildTrigger : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CloudBuildTriggerSpec>, IStatus<V1beta1CloudBuildTriggerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

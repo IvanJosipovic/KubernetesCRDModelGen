@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeBackendServiceSignedURLKeySpecBackendServiceRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeBackendService` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1alpha1ComputeBackendServiceSignedURLKeySpecBackendService
 }
 
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeBackendServiceSignedURLKeySpecKeyValueValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -37,6 +39,7 @@ public partial class V1alpha1ComputeBackendServiceSignedURLKeySpecKeyValueValueF
 }
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeBackendServiceSignedURLKeySpecKeyValueValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -45,6 +48,7 @@ public partial class V1alpha1ComputeBackendServiceSignedURLKeySpecKeyValueValueF
 }
 
 /// <summary>Immutable. 128-bit key value used for signing the URL. The key value must be a valid RFC 4648 Section 5 base64url encoded string.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeBackendServiceSignedURLKeySpecKeyValue
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -57,6 +61,7 @@ public partial class V1alpha1ComputeBackendServiceSignedURLKeySpecKeyValue
 }
 
 /// <summary>The project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeBackendServiceSignedURLKeySpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -73,6 +78,7 @@ public partial class V1alpha1ComputeBackendServiceSignedURLKeySpecProjectRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeBackendServiceSignedURLKeySpec
 {
     /// <summary></summary>
@@ -93,6 +99,7 @@ public partial class V1alpha1ComputeBackendServiceSignedURLKeySpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeBackendServiceSignedURLKeyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -117,6 +124,7 @@ public partial class V1alpha1ComputeBackendServiceSignedURLKeyStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeBackendServiceSignedURLKeyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -128,8 +136,9 @@ public partial class V1alpha1ComputeBackendServiceSignedURLKeyStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1ComputeBackendServiceSignedURLKey : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputeBackendServiceSignedURLKeySpec>, IStatus<V1alpha1ComputeBackendServiceSignedURLKeyStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

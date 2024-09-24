@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networking.@internal.knative.dev;
 /// <summary>HeaderMatch represents a matching value of Headers in HTTPIngressPath. Currently, only the exact matching is supported.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressSpecRulesHttpPathsHeaders
 {
     /// <summary></summary>
@@ -17,6 +18,7 @@ public partial class V1alpha1IngressSpecRulesHttpPathsHeaders
 }
 
 /// <summary>IngressBackendSplit describes all endpoints for a given service and port.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressSpecRulesHttpPathsSplits
 {
     /// <summary>AppendHeaders allow specifying additional HTTP headers to add before forwarding a request to the destination service.   NOTE: This differs from K8s Ingress which doesn't allow header appending.</summary>
@@ -41,6 +43,7 @@ public partial class V1alpha1IngressSpecRulesHttpPathsSplits
 }
 
 /// <summary>HTTPIngressPath associates a path regex with a backend. Incoming URLs matching the path are forwarded to the backend.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressSpecRulesHttpPaths
 {
     /// <summary>AppendHeaders allow specifying additional HTTP headers to add before forwarding a request to the destination service.   NOTE: This differs from K8s Ingress which doesn't allow header appending.</summary>
@@ -65,6 +68,7 @@ public partial class V1alpha1IngressSpecRulesHttpPaths
 }
 
 /// <summary>HTTP represents a rule to apply against incoming requests. If the rule is satisfied, the request is routed to the specified backend.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressSpecRulesHttp
 {
     /// <summary>A collection of paths that map requests to backends.   If they are multiple matching paths, the first match takes precedence.</summary>
@@ -73,6 +77,7 @@ public partial class V1alpha1IngressSpecRulesHttp
 }
 
 /// <summary>IngressRule represents the rules mapping the paths under a specified host to the related backend services. Incoming requests are first evaluated for a host match, then routed to the backend associated with the matching IngressRuleValue.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressSpecRules
 {
     /// <summary>Host is the fully qualified domain name of a network host, as defined by RFC 3986. Note the following deviations from the "host" part of the URI as defined in the RFC: 1. IPs are not allowed. Currently a rule value can only apply to the 	  IP in the Spec of the parent . 2. The `:` delimiter is not respected because ports are not allowed. 	  Currently the port of an Ingress is implicitly :80 for http and 	  :443 for https. Both these may change in the future. If the host is unspecified, the Ingress routes all traffic based on the specified IngressRuleValue. If multiple matching Hosts were provided, the first rule will take precedent.</summary>
@@ -89,6 +94,7 @@ public partial class V1alpha1IngressSpecRules
 }
 
 /// <summary>IngressTLS describes the transport layer security associated with an Ingress.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressSpecTls
 {
     /// <summary>Hosts is a list of hosts included in the TLS certificate. The values in this list must match the name/s used in the tlsSecret. Defaults to the wildcard host setting for the loadbalancer controller fulfilling this Ingress, if left unspecified.</summary>
@@ -105,6 +111,7 @@ public partial class V1alpha1IngressSpecTls
 }
 
 /// <summary>Spec is the desired state of the Ingress. More info: https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressSpec
 {
     /// <summary>HTTPOption is the option of HTTP. It has the following two values: `HTTPOptionEnabled`, `HTTPOptionRedirected`</summary>
@@ -121,6 +128,7 @@ public partial class V1alpha1IngressSpec
 }
 
 /// <summary>Condition defines a readiness condition for a Knative resource. See: https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#typical-status-properties</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
@@ -149,6 +157,7 @@ public partial class V1alpha1IngressStatusConditions
 }
 
 /// <summary>LoadBalancerIngressStatus represents the status of a load-balancer ingress point: traffic intended for the service should be sent to an ingress point.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressStatusPrivateLoadBalancerIngress
 {
     /// <summary>Domain is set for load-balancer ingress points that are DNS based (typically AWS load-balancers)</summary>
@@ -169,6 +178,7 @@ public partial class V1alpha1IngressStatusPrivateLoadBalancerIngress
 }
 
 /// <summary>PrivateLoadBalancer contains the current status of the load-balancer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressStatusPrivateLoadBalancer
 {
     /// <summary>Ingress is a list containing ingress points for the load-balancer. Traffic intended for the service should be sent to these ingress points.</summary>
@@ -177,6 +187,7 @@ public partial class V1alpha1IngressStatusPrivateLoadBalancer
 }
 
 /// <summary>LoadBalancerIngressStatus represents the status of a load-balancer ingress point: traffic intended for the service should be sent to an ingress point.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressStatusPublicLoadBalancerIngress
 {
     /// <summary>Domain is set for load-balancer ingress points that are DNS based (typically AWS load-balancers)</summary>
@@ -197,6 +208,7 @@ public partial class V1alpha1IngressStatusPublicLoadBalancerIngress
 }
 
 /// <summary>PublicLoadBalancer contains the current status of the load-balancer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressStatusPublicLoadBalancer
 {
     /// <summary>Ingress is a list containing ingress points for the load-balancer. Traffic intended for the service should be sent to these ingress points.</summary>
@@ -205,6 +217,7 @@ public partial class V1alpha1IngressStatusPublicLoadBalancer
 }
 
 /// <summary>Status is the current state of the Ingress. More info: https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressStatus
 {
     /// <summary>Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.</summary>
@@ -228,8 +241,9 @@ public partial class V1alpha1IngressStatus
     public V1alpha1IngressStatusPublicLoadBalancer? PublicLoadBalancer { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Ingress is a collection of rules that allow inbound connections to reach the endpoints defined by a backend. An Ingress can be configured to give services externally-reachable URLs, load balance traffic, offer name based virtual hosting, etc.   This is heavily based on K8s Ingress https://godoc.org/k8s.io/api/networking/v1beta1#Ingress which some highlighted modifications.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1Ingress : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1IngressSpec>, IStatus<V1alpha1IngressStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

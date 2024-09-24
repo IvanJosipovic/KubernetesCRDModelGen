@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigee.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApigeeNATAddressSpec
 {
     /// <summary>Immutable. The Apigee instance associated with the Apigee environment, in the format 'organizations/{{org_name}}/instances/{{instance_name}}'.</summary>
@@ -21,6 +22,7 @@ public partial class V1alpha1ApigeeNATAddressSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApigeeNATAddressStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -45,6 +47,7 @@ public partial class V1alpha1ApigeeNATAddressStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApigeeNATAddressStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -64,8 +67,9 @@ public partial class V1alpha1ApigeeNATAddressStatus
     public string? State { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1ApigeeNATAddress : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ApigeeNATAddressSpec>, IStatus<V1alpha1ApigeeNATAddressStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

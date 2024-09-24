@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkservices.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesTLSRouteSpecGateways
 {
     /// <summary>Allowed value: The `selfLink` field of a `NetworkServicesGateway` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1NetworkServicesTLSRouteSpecGateways
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesTLSRouteSpecMeshes
 {
     /// <summary>Allowed value: The `selfLink` field of a `NetworkServicesMesh` resource.</summary>
@@ -41,6 +43,7 @@ public partial class V1beta1NetworkServicesTLSRouteSpecMeshes
 }
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesTLSRouteSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -57,6 +60,7 @@ public partial class V1beta1NetworkServicesTLSRouteSpecProjectRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesTLSRouteSpecRulesActionDestinationsServiceRef
 {
     /// <summary>Required. The URL of a BackendService to route traffic to.  Allowed value: The Google Cloud resource name of a `ComputeBackendService` resource (format: `projects/{{project}}/global/backendServices/{{name}}`).</summary>
@@ -73,6 +77,7 @@ public partial class V1beta1NetworkServicesTLSRouteSpecRulesActionDestinationsSe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesTLSRouteSpecRulesActionDestinations
 {
     /// <summary></summary>
@@ -85,6 +90,7 @@ public partial class V1beta1NetworkServicesTLSRouteSpecRulesActionDestinations
 }
 
 /// <summary>Required. The detailed rule defining how to route matched traffic.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesTLSRouteSpecRulesAction
 {
     /// <summary>Required. The destination services to which traffic should be forwarded. At least one destination service is required.</summary>
@@ -93,6 +99,7 @@ public partial class V1beta1NetworkServicesTLSRouteSpecRulesAction
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesTLSRouteSpecRulesMatches
 {
     /// <summary>Optional. ALPN (Application-Layer Protocol Negotiation) to match against. Examples: "http/1.1", "h2". At least one of sni_host and alpn is required. Up to 5 alpns across all matches can be set.</summary>
@@ -105,6 +112,7 @@ public partial class V1beta1NetworkServicesTLSRouteSpecRulesMatches
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesTLSRouteSpecRules
 {
     /// <summary>Required. The detailed rule defining how to route matched traffic.</summary>
@@ -117,6 +125,7 @@ public partial class V1beta1NetworkServicesTLSRouteSpecRules
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesTLSRouteSpec
 {
     /// <summary>Optional. A free-text description of the resource. Max length 1024 characters.</summary>
@@ -149,6 +158,7 @@ public partial class V1beta1NetworkServicesTLSRouteSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesTLSRouteStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -173,6 +183,7 @@ public partial class V1beta1NetworkServicesTLSRouteStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesTLSRouteStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -196,8 +207,9 @@ public partial class V1beta1NetworkServicesTLSRouteStatus
     public string? UpdateTime { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1NetworkServicesTLSRoute : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NetworkServicesTLSRouteSpec>, IStatus<V1beta1NetworkServicesTLSRouteStatus>
 {
     public const string KubeApiVersion = "v1beta1";

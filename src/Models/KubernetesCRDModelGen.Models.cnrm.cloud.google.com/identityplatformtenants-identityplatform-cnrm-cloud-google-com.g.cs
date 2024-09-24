@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.identityplatform.cnrm.cloud.google.com;
 /// <summary>The tenant-level configuration of MFA options.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformTenantSpecMfaConfig
 {
     /// <summary>A list of usable second factors for this project.</summary>
@@ -21,6 +22,7 @@ public partial class V1beta1IdentityPlatformTenantSpecMfaConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformTenantSpec
 {
     /// <summary>Whether to allow email/password user authentication.</summary>
@@ -57,6 +59,7 @@ public partial class V1beta1IdentityPlatformTenantSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformTenantStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -81,6 +84,7 @@ public partial class V1beta1IdentityPlatformTenantStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformTenantStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -92,8 +96,9 @@ public partial class V1beta1IdentityPlatformTenantStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1IdentityPlatformTenant : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IdentityPlatformTenantSpec>, IStatus<V1beta1IdentityPlatformTenantStatus>
 {
     public const string KubeApiVersion = "v1beta1";

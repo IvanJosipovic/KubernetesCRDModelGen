@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigquerydatatransfer.cnrm.cloud.google.com;
 /// <summary>The BigQuery target dataset id.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryDataTransferConfigSpecDatasetRef
 {
     /// <summary>If provided must be in the format `projects/[project_id]/datasets/[dataset_id]`.</summary>
@@ -25,6 +26,7 @@ public partial class V1alpha1BigQueryDataTransferConfigSpecDatasetRef
 }
 
 /// <summary>Email notifications will be sent according to these preferences to the email address of the user who owns this transfer config.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryDataTransferConfigSpecEmailPreferences
 {
     /// <summary>If true, email notifications will be sent on transfer run failures.</summary>
@@ -33,6 +35,7 @@ public partial class V1alpha1BigQueryDataTransferConfigSpecEmailPreferences
 }
 
 /// <summary>The KMS key used for encrypting BigQuery data.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryDataTransferConfigSpecEncryptionConfigurationKmsKeyRef
 {
     /// <summary>A reference to an externally managed KMSCryptoKey. Should be in the format `projects/[kms_project_id]/locations/[region]/keyRings/[key_ring_id]/cryptoKeys/[key]`.</summary>
@@ -49,6 +52,7 @@ public partial class V1alpha1BigQueryDataTransferConfigSpecEncryptionConfigurati
 }
 
 /// <summary>The encryption configuration part. Currently, it is only used for the optional KMS key name. The BigQuery service account of your project must be granted permissions to use the key. Read methods will return the key name applied in effect. Write methods will apply the key if it is present, or otherwise try to apply project default keys if it is absent.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryDataTransferConfigSpecEncryptionConfiguration
 {
     /// <summary>The KMS key used for encrypting BigQuery data.</summary>
@@ -57,6 +61,7 @@ public partial class V1alpha1BigQueryDataTransferConfigSpecEncryptionConfigurati
 }
 
 /// <summary>The Project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryDataTransferConfigSpecProjectRef
 {
     /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
@@ -77,6 +82,7 @@ public partial class V1alpha1BigQueryDataTransferConfigSpecProjectRef
 }
 
 /// <summary>Pub/Sub topic where notifications will be sent after transfer runs associated with this transfer config finish.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryDataTransferConfigSpecPubSubTopicRef
 {
     /// <summary>If provided must be in the format `projects/[project_id]/topics/[topic_id]`.</summary>
@@ -93,6 +99,7 @@ public partial class V1alpha1BigQueryDataTransferConfigSpecPubSubTopicRef
 }
 
 /// <summary>Options customizing the data transfer schedule.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryDataTransferConfigSpecScheduleOptions
 {
     /// <summary>If true, automatic scheduling of data transfer runs for this configuration will be disabled. The runs can be started on ad-hoc basis using StartManualTransferRuns API. When automatic scheduling is disabled, the TransferConfig.schedule field will be ignored.</summary>
@@ -109,6 +116,7 @@ public partial class V1alpha1BigQueryDataTransferConfigSpecScheduleOptions
 }
 
 /// <summary>Service account email. If this field is set, the transfer config will be created with this service account's credentials. It requires that the requesting user calling this API has permissions to act as this service account. Note that not all data sources support service account credentials when creating a transfer config. For the latest list of data sources, please refer to https://cloud.google.com/bigquery/docs/use-service-accounts.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryDataTransferConfigSpecServiceAccountRef
 {
     /// <summary>The `email` field of an `IAMServiceAccount` resource.</summary>
@@ -125,6 +133,7 @@ public partial class V1alpha1BigQueryDataTransferConfigSpecServiceAccountRef
 }
 
 /// <summary>BigQueryDataTransferConfigSpec defines the desired state of BigQueryDataTransferConfig</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryDataTransferConfigSpec
 {
     /// <summary>The number of days to look back to automatically refresh the data. For example, if `data_refresh_window_days = 10`, then every day BigQuery reingests data for [today-10, today-1], rather than ingesting data for just [today-1]. Only valid if the data source supports the feature. Set the value to 0 to use the default value.</summary>
@@ -189,6 +198,7 @@ public partial class V1alpha1BigQueryDataTransferConfigSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryDataTransferConfigStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -213,6 +223,7 @@ public partial class V1alpha1BigQueryDataTransferConfigStatusConditions
 }
 
 /// <summary>Output only. Information about the user whose credentials are used to transfer data. Populated only for `transferConfigs.get` requests. In case the user information is not available, this field will not be populated.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryDataTransferConfigStatusObservedStateOwnerInfo
 {
     /// <summary>E-mail address of the user.</summary>
@@ -221,6 +232,7 @@ public partial class V1alpha1BigQueryDataTransferConfigStatusObservedStateOwnerI
 }
 
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryDataTransferConfigStatusObservedState
 {
     /// <summary>Output only. Region in which BigQuery dataset is located.</summary>
@@ -253,6 +265,7 @@ public partial class V1alpha1BigQueryDataTransferConfigStatusObservedState
 }
 
 /// <summary>BigQueryDataTransferConfigStatus defines the config connector machine state of BigQueryDataTransferConfig</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryDataTransferConfigStatus
 {
     /// <summary>Conditions represent the latest available observations of the object's current state.</summary>
@@ -272,8 +285,9 @@ public partial class V1alpha1BigQueryDataTransferConfigStatus
     public V1alpha1BigQueryDataTransferConfigStatusObservedState? ObservedState { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>BigQueryDataTransferConfig is the Schema for the BigQueryDataTransferConfig API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1BigQueryDataTransferConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1BigQueryDataTransferConfigSpec>, IStatus<V1alpha1BigQueryDataTransferConfigStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

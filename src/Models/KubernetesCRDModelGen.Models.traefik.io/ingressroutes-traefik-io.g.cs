@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.traefik.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1IngressRouteSpecRoutesKindEnum
 {
     [EnumMember(Value = "Rule"), JsonStringEnumMemberName("Rule")]
@@ -16,6 +17,7 @@ public enum V1alpha1IngressRouteSpecRoutesKindEnum
 }
 
 /// <summary>MiddlewareRef is a reference to a Middleware resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpecRoutesMiddlewares
 {
     /// <summary>Name defines the name of the referenced Middleware resource.</summary>
@@ -28,6 +30,7 @@ public partial class V1alpha1IngressRouteSpecRoutesMiddlewares
 }
 
 /// <summary>Healthcheck defines health checks for ExternalName services.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpecRoutesServicesHealthCheck
 {
     /// <summary>FollowRedirects defines whether redirects should be followed during the health check calls. Default: true</summary>
@@ -75,6 +78,7 @@ public partial class V1alpha1IngressRouteSpecRoutesServicesHealthCheck
     public IntstrIntOrString? Timeout { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1IngressRouteSpecRoutesServicesKindEnum
 {
     [EnumMember(Value = "Service"), JsonStringEnumMemberName("Service")]
@@ -86,6 +90,7 @@ public enum V1alpha1IngressRouteSpecRoutesServicesKindEnum
 }
 
 /// <summary>ResponseForwarding defines how Traefik forwards the response from the upstream Kubernetes Service to the client.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpecRoutesServicesResponseForwarding
 {
     /// <summary>FlushInterval defines the interval, in milliseconds, in between flushes to the client while copying the response body. A negative value means to flush immediately after each write to the client. This configuration is ignored when ReverseProxy recognizes a response as a streaming response; for such responses, writes are flushed to the client immediately. Default: 100ms</summary>
@@ -94,6 +99,7 @@ public partial class V1alpha1IngressRouteSpecRoutesServicesResponseForwarding
 }
 
 /// <summary>Cookie defines the sticky cookie configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpecRoutesServicesStickyCookie
 {
     /// <summary>HTTPOnly defines whether the cookie can be accessed by client-side APIs, such as JavaScript.</summary>
@@ -118,6 +124,7 @@ public partial class V1alpha1IngressRouteSpecRoutesServicesStickyCookie
 }
 
 /// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.1/routing/services/#sticky-sessions</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpecRoutesServicesSticky
 {
     /// <summary>Cookie defines the sticky cookie configuration.</summary>
@@ -126,6 +133,7 @@ public partial class V1alpha1IngressRouteSpecRoutesServicesSticky
 }
 
 /// <summary>Service defines an upstream HTTP service to proxy traffic to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpecRoutesServices
 {
     /// <summary>Healthcheck defines health checks for ExternalName services.</summary>
@@ -187,6 +195,7 @@ public partial class V1alpha1IngressRouteSpecRoutesServices
 }
 
 /// <summary>Route holds the HTTP route configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpecRoutes
 {
     /// <summary>Kind defines the kind of the route. Rule is the only supported kind.</summary>
@@ -216,6 +225,7 @@ public partial class V1alpha1IngressRouteSpecRoutes
 }
 
 /// <summary>Domain holds a domain name with SANs.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpecTlsDomains
 {
     /// <summary>Main defines the main domain name.</summary>
@@ -228,6 +238,7 @@ public partial class V1alpha1IngressRouteSpecTlsDomains
 }
 
 /// <summary>Options defines the reference to a TLSOption, that specifies the parameters of the TLS connection. If not defined, the `default` TLSOption is used. More info: https://doc.traefik.io/traefik/v3.1/https/tls/#tls-options</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpecTlsOptions
 {
     /// <summary>Name defines the name of the referenced TLSOption. More info: https://doc.traefik.io/traefik/v3.1/routing/providers/kubernetes-crd/#kind-tlsoption</summary>
@@ -240,6 +251,7 @@ public partial class V1alpha1IngressRouteSpecTlsOptions
 }
 
 /// <summary>Store defines the reference to the TLSStore, that will be used to store certificates. Please note that only `default` TLSStore can be used.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpecTlsStore
 {
     /// <summary>Name defines the name of the referenced TLSStore. More info: https://doc.traefik.io/traefik/v3.1/routing/providers/kubernetes-crd/#kind-tlsstore</summary>
@@ -252,6 +264,7 @@ public partial class V1alpha1IngressRouteSpecTlsStore
 }
 
 /// <summary>TLS defines the TLS configuration. More info: https://doc.traefik.io/traefik/v3.1/routing/routers/#tls</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpecTls
 {
     /// <summary>CertResolver defines the name of the certificate resolver to use. Cert resolvers have to be configured in the static configuration. More info: https://doc.traefik.io/traefik/v3.1/https/acme/#certificate-resolvers</summary>
@@ -276,6 +289,7 @@ public partial class V1alpha1IngressRouteSpecTls
 }
 
 /// <summary>IngressRouteSpec defines the desired state of IngressRoute.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpec
 {
     /// <summary>EntryPoints defines the list of entry point names to bind to. Entry points have to be configured in the static configuration. More info: https://doc.traefik.io/traefik/v3.1/routing/entrypoints/ Default: all.</summary>
@@ -291,8 +305,9 @@ public partial class V1alpha1IngressRouteSpec
     public V1alpha1IngressRouteSpecTls? Tls { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>IngressRoute is the CRD implementation of a Traefik HTTP Router.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1IngressRoute : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1IngressRouteSpec>
 {
     public const string KubeApiVersion = "v1alpha1";

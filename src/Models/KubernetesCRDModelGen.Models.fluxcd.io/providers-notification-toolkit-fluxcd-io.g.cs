@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.notification.toolkit.fluxcd.io;
 /// <summary>CertSecretRef specifies the Secret containing a PEM-encoded CA certificate (in the `ca.crt` key).   Note: Support for the `caFile` key has been deprecated.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta3ProviderSpecCertSecretRef
 {
     /// <summary>Name of the referent.</summary>
@@ -17,6 +18,7 @@ public partial class V1beta3ProviderSpecCertSecretRef
 }
 
 /// <summary>SecretRef specifies the Secret containing the authentication credentials for this Provider.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta3ProviderSpecSecretRef
 {
     /// <summary>Name of the referent.</summary>
@@ -24,6 +26,7 @@ public partial class V1beta3ProviderSpecSecretRef
     public string Name { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta3ProviderSpecTypeEnum
 {
     [EnumMember(Value = "slack"), JsonStringEnumMemberName("slack")]
@@ -110,6 +113,7 @@ public enum V1beta3ProviderSpecTypeEnum
 }
 
 /// <summary>ProviderSpec defines the desired state of the Provider.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta3ProviderSpec
 {
     /// <summary>Address specifies the endpoint, in a generic sense, to where alerts are sent. What kind of endpoint depends on the specific Provider type being used. For the generic Provider, for example, this is an HTTP/S address. For other Provider types this could be a project ID or a namespace.</summary>
@@ -154,8 +158,9 @@ public partial class V1beta3ProviderSpec
     public string? Username { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Provider is the Schema for the providers API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta3Provider : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta3ProviderSpec>
 {
     public const string KubeApiVersion = "v1beta3";

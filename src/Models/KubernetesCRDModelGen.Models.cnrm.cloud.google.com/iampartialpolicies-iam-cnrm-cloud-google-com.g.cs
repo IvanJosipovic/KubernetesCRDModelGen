@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iam.cnrm.cloud.google.com;
 /// <summary>Optional. The condition under which the binding applies.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPartialPolicySpecBindingsCondition
 {
     /// <summary></summary>
@@ -25,6 +26,7 @@ public partial class V1beta1IAMPartialPolicySpecBindingsCondition
 }
 
 /// <summary>The LoggingLogSink whose writer identity (i.e. its 'status.writerIdentity') is to be bound to the role.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPartialPolicySpecBindingsMembersMemberFromLogSinkRef
 {
     /// <summary></summary>
@@ -37,6 +39,7 @@ public partial class V1beta1IAMPartialPolicySpecBindingsMembersMemberFromLogSink
 }
 
 /// <summary>The IAMServiceAccount to be bound to the role.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPartialPolicySpecBindingsMembersMemberFromServiceAccountRef
 {
     /// <summary></summary>
@@ -49,6 +52,7 @@ public partial class V1beta1IAMPartialPolicySpecBindingsMembersMemberFromService
 }
 
 /// <summary>The ServiceIdentity whose service account (i.e., its 'status.email') is to be bound to the role.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPartialPolicySpecBindingsMembersMemberFromServiceIdentityRef
 {
     /// <summary></summary>
@@ -61,6 +65,7 @@ public partial class V1beta1IAMPartialPolicySpecBindingsMembersMemberFromService
 }
 
 /// <summary>The SQLInstance whose service account (i.e. its 'status.serviceAccountEmailAddress') is to be bound to the role.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPartialPolicySpecBindingsMembersMemberFromSqlInstanceRef
 {
     /// <summary></summary>
@@ -73,6 +78,7 @@ public partial class V1beta1IAMPartialPolicySpecBindingsMembersMemberFromSqlInst
 }
 
 /// <summary>The IAM identity to be bound to the role. Exactly one of 'member' or 'memberFrom' must be used, and only one subfield within 'memberFrom' can be used.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPartialPolicySpecBindingsMembersMemberFrom
 {
     /// <summary>The LoggingLogSink whose writer identity (i.e. its 'status.writerIdentity') is to be bound to the role.</summary>
@@ -93,6 +99,7 @@ public partial class V1beta1IAMPartialPolicySpecBindingsMembersMemberFrom
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPartialPolicySpecBindingsMembers
 {
     /// <summary>The IAM identity to be bound to the role. Exactly one of 'member' or 'memberFrom' must be used.</summary>
@@ -105,6 +112,7 @@ public partial class V1beta1IAMPartialPolicySpecBindingsMembers
 }
 
 /// <summary>Specifies the members to bind to an IAM role.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPartialPolicySpecBindings
 {
     /// <summary>Optional. The condition under which the binding applies.</summary>
@@ -121,6 +129,7 @@ public partial class V1beta1IAMPartialPolicySpecBindings
 }
 
 /// <summary>Immutable. Required. The GCP resource to set the IAM policy on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPartialPolicySpecResourceRef
 {
     /// <summary></summary>
@@ -145,6 +154,7 @@ public partial class V1beta1IAMPartialPolicySpecResourceRef
 }
 
 /// <summary>IAMPartialPolicySpec defines the desired state of IAMPartialPolicy</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPartialPolicySpec
 {
     /// <summary>Optional. The list of IAM bindings managed by Config Connector.</summary>
@@ -157,6 +167,7 @@ public partial class V1beta1IAMPartialPolicySpec
 }
 
 /// <summary>Optional. The condition under which the binding applies.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPartialPolicyStatusAllBindingsCondition
 {
     /// <summary></summary>
@@ -173,6 +184,7 @@ public partial class V1beta1IAMPartialPolicyStatusAllBindingsCondition
 }
 
 /// <summary>Specifies the members to bind to an IAM role.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPartialPolicyStatusAllBindings
 {
     /// <summary>Optional. The condition under which the binding applies.</summary>
@@ -189,6 +201,7 @@ public partial class V1beta1IAMPartialPolicyStatusAllBindings
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPartialPolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -213,6 +226,7 @@ public partial class V1beta1IAMPartialPolicyStatusConditions
 }
 
 /// <summary>Optional. The condition under which the binding applies.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPartialPolicyStatusLastAppliedBindingsCondition
 {
     /// <summary></summary>
@@ -229,6 +243,7 @@ public partial class V1beta1IAMPartialPolicyStatusLastAppliedBindingsCondition
 }
 
 /// <summary>Specifies the members to bind to an IAM role.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPartialPolicyStatusLastAppliedBindings
 {
     /// <summary>Optional. The condition under which the binding applies.</summary>
@@ -245,6 +260,7 @@ public partial class V1beta1IAMPartialPolicyStatusLastAppliedBindings
 }
 
 /// <summary>IAMPartialPolicyStatus defines the observed state of IAMPartialPolicy</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPartialPolicyStatus
 {
     /// <summary>AllBindings surfaces all IAM bindings for the referenced resource.</summary>
@@ -264,8 +280,9 @@ public partial class V1beta1IAMPartialPolicyStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>IAMPartialPolicy is the Schema for the iampartialpolicy API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1IAMPartialPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IAMPartialPolicySpec>, IStatus<V1beta1IAMPartialPolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

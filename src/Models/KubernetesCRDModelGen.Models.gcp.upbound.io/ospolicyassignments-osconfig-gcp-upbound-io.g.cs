@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.osconfig.gcp.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OsPolicyAssignmentSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1OsPolicyAssignmentSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderInstanceFilterExclusionLabels
 {
     /// <summary>Labels are identified by key/value pairs in this map. A VM should contain all the key/value pairs specified in this map to be selected.</summary>
@@ -27,6 +29,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderInstanceFilterExclu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderInstanceFilterInclusionLabels
 {
     /// <summary>Labels are identified by key/value pairs in this map. A VM should contain all the key/value pairs specified in this map to be selected.</summary>
@@ -35,6 +38,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderInstanceFilterInclu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderInstanceFilterInventories
 {
     /// <summary>The OS short name</summary>
@@ -47,6 +51,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderInstanceFilterInven
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderInstanceFilter
 {
     /// <summary>Target all VMs in the project. If true, no other criteria is permitted.</summary>
@@ -67,6 +72,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderInstanceFilter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsInventoryFilters
 {
     /// <summary>The OS short name</summary>
@@ -79,6 +85,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesExecEnforceFileGcs
 {
     /// <summary>Bucket of the Cloud Storage object.</summary>
@@ -95,6 +102,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesExecEnforceFileRemote
 {
     /// <summary>SHA256 checksum of the remote file.</summary>
@@ -107,6 +115,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesExecEnforceFile
 {
     /// <summary>Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.</summary>
@@ -127,6 +136,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesExecEnforce
 {
     /// <summary>Optional arguments to pass to the source during execution.</summary>
@@ -151,6 +161,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesExecValidateFileGcs
 {
     /// <summary>Bucket of the Cloud Storage object.</summary>
@@ -167,6 +178,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesExecValidateFileRemote
 {
     /// <summary>SHA256 checksum of the remote file.</summary>
@@ -179,6 +191,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesExecValidateFile
 {
     /// <summary>Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.</summary>
@@ -199,6 +212,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesExecValidate
 {
     /// <summary>Optional arguments to pass to the source during execution.</summary>
@@ -223,6 +237,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesExec
 {
     /// <summary>What to run to bring this resource into the desired state. An exit code of 100 indicates "success", any other exit code indicates a failure running enforce. Structure is documented below.</summary>
@@ -235,6 +250,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesFileFileGcs
 {
     /// <summary>Bucket of the Cloud Storage object.</summary>
@@ -251,6 +267,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesFileFileRemote
 {
     /// <summary>SHA256 checksum of the remote file.</summary>
@@ -263,6 +280,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesFileFile
 {
     /// <summary>Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.</summary>
@@ -283,6 +301,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesFile
 {
     /// <summary>A a file with this content. The size of the content is limited to 1024 characters.</summary>
@@ -303,6 +322,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgApt
 {
     /// <summary>Package name.</summary>
@@ -311,6 +331,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgDebSourceGcs
 {
     /// <summary>Bucket of the Cloud Storage object.</summary>
@@ -327,6 +348,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgDebSourceRemote
 {
     /// <summary>SHA256 checksum of the remote file.</summary>
@@ -339,6 +361,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgDebSource
 {
     /// <summary>Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.</summary>
@@ -359,6 +382,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgDeb
 {
     /// <summary>Whether dependencies should also be installed. - install when false: rpm --upgrade --replacepkgs package.rpm - install when true: yum -y install package.rpm or zypper -y install package.rpm</summary>
@@ -371,6 +395,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgGooget
 {
     /// <summary>Package name.</summary>
@@ -379,6 +404,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgMsiSourceGcs
 {
     /// <summary>Bucket of the Cloud Storage object.</summary>
@@ -395,6 +421,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgMsiSourceRemote
 {
     /// <summary>SHA256 checksum of the remote file.</summary>
@@ -407,6 +434,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgMsiSource
 {
     /// <summary>Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.</summary>
@@ -427,6 +455,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgMsi
 {
     /// <summary>Additional properties to use during installation. This should be in the format of Property=Setting. Appended to the defaults of ACTION=INSTALL REBOOT=ReallySuppress.</summary>
@@ -439,6 +468,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgRpmSourceGcs
 {
     /// <summary>Bucket of the Cloud Storage object.</summary>
@@ -455,6 +485,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgRpmSourceRemote
 {
     /// <summary>SHA256 checksum of the remote file.</summary>
@@ -467,6 +498,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgRpmSource
 {
     /// <summary>Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.</summary>
@@ -487,6 +519,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgRpm
 {
     /// <summary>Whether dependencies should also be installed. - install when false: rpm --upgrade --replacepkgs package.rpm - install when true: yum -y install package.rpm or zypper -y install package.rpm</summary>
@@ -499,6 +532,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgYum
 {
     /// <summary>Package name.</summary>
@@ -507,6 +541,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgZypper
 {
     /// <summary>Package name.</summary>
@@ -515,6 +550,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkg
 {
     /// <summary>An Apt Repository. Structure is documented below.</summary>
@@ -551,6 +587,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesRepositoryApt
 {
     /// <summary>Type of archive files in this repository. Possible values are: ARCHIVE_TYPE_UNSPECIFIED, DEB, DEB_SRC.</summary>
@@ -575,6 +612,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesRepositoryGoo
 {
     /// <summary>Package name.</summary>
@@ -587,6 +625,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesRepositoryYum
 {
     /// <summary>The location of the repository directory.</summary>
@@ -607,6 +646,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesRepositoryZypper
 {
     /// <summary>The location of the repository directory.</summary>
@@ -627,6 +667,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesRepository
 {
     /// <summary>An Apt Repository. Structure is documented below.</summary>
@@ -647,6 +688,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResources
 {
     /// <summary>Exec resource Structure is documented below.</summary>
@@ -671,6 +713,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroups
 {
     /// <summary>List of inventory filters for the resource group. The resources in this resource group are applied to the target VM if it satisfies at least one of the following inventory filters. For example, to apply this resource group to VMs running either RHEL or CentOS operating systems, specify 2 items for the list with following values: inventory_filters[0].os_short_name='rhel' and inventory_filters[1].os_short_name='centos' If the list is empty, this resource group will be applied to the target VM unconditionally. Structure is documented below.</summary>
@@ -683,6 +726,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPolicies
 {
     /// <summary>This flag determines the OS policy compliance status when none of the resource groups within the policy are applicable for a VM. Set this value to true if the policy needs to be reported as compliant even if the policy has nothing to validate or enforce.</summary>
@@ -707,6 +751,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPolicies
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderRolloutDisruptionBudget
 {
     /// <summary>Specifies a fixed value.</summary>
@@ -719,6 +764,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderRolloutDisruptionBu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderRollout
 {
     /// <summary>The maximum number (or percentage) of VMs per zone to disrupt at any given moment. Structure is documented below.</summary>
@@ -731,6 +777,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderRollout
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProvider
 {
     /// <summary>Policy description. Length of the description is limited to 1024 characters.</summary>
@@ -763,6 +810,7 @@ public partial class V1beta1OsPolicyAssignmentSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderInstanceFilterExclusionLabels
 {
     /// <summary>Labels are identified by key/value pairs in this map. A VM should contain all the key/value pairs specified in this map to be selected.</summary>
@@ -771,6 +819,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderInstanceFilterExcl
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderInstanceFilterInclusionLabels
 {
     /// <summary>Labels are identified by key/value pairs in this map. A VM should contain all the key/value pairs specified in this map to be selected.</summary>
@@ -779,6 +828,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderInstanceFilterIncl
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderInstanceFilterInventories
 {
     /// <summary>The OS short name</summary>
@@ -791,6 +841,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderInstanceFilterInve
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderInstanceFilter
 {
     /// <summary>Target all VMs in the project. If true, no other criteria is permitted.</summary>
@@ -811,6 +862,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderInstanceFilter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsInventoryFilters
 {
     /// <summary>The OS short name</summary>
@@ -823,6 +875,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesExecEnforceFileGcs
 {
     /// <summary>Bucket of the Cloud Storage object.</summary>
@@ -839,6 +892,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesExecEnforceFileRemote
 {
     /// <summary>SHA256 checksum of the remote file.</summary>
@@ -851,6 +905,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesExecEnforceFile
 {
     /// <summary>Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.</summary>
@@ -871,6 +926,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesExecEnforce
 {
     /// <summary>Optional arguments to pass to the source during execution.</summary>
@@ -895,6 +951,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesExecValidateFileGcs
 {
     /// <summary>Bucket of the Cloud Storage object.</summary>
@@ -911,6 +968,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesExecValidateFileRemote
 {
     /// <summary>SHA256 checksum of the remote file.</summary>
@@ -923,6 +981,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesExecValidateFile
 {
     /// <summary>Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.</summary>
@@ -943,6 +1002,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesExecValidate
 {
     /// <summary>Optional arguments to pass to the source during execution.</summary>
@@ -967,6 +1027,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesExec
 {
     /// <summary>What to run to bring this resource into the desired state. An exit code of 100 indicates "success", any other exit code indicates a failure running enforce. Structure is documented below.</summary>
@@ -979,6 +1040,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesFileFileGcs
 {
     /// <summary>Bucket of the Cloud Storage object.</summary>
@@ -995,6 +1057,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesFileFileRemote
 {
     /// <summary>SHA256 checksum of the remote file.</summary>
@@ -1007,6 +1070,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesFileFile
 {
     /// <summary>Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.</summary>
@@ -1027,6 +1091,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesFile
 {
     /// <summary>A a file with this content. The size of the content is limited to 1024 characters.</summary>
@@ -1047,6 +1112,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgApt
 {
     /// <summary>Package name.</summary>
@@ -1055,6 +1121,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgDebSourceGcs
 {
     /// <summary>Bucket of the Cloud Storage object.</summary>
@@ -1071,6 +1138,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgDebSourceRemote
 {
     /// <summary>SHA256 checksum of the remote file.</summary>
@@ -1083,6 +1151,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgDebSource
 {
     /// <summary>Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.</summary>
@@ -1103,6 +1172,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgDeb
 {
     /// <summary>Whether dependencies should also be installed. - install when false: rpm --upgrade --replacepkgs package.rpm - install when true: yum -y install package.rpm or zypper -y install package.rpm</summary>
@@ -1115,6 +1185,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgGooget
 {
     /// <summary>Package name.</summary>
@@ -1123,6 +1194,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgMsiSourceGcs
 {
     /// <summary>Bucket of the Cloud Storage object.</summary>
@@ -1139,6 +1211,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgMsiSourceRemote
 {
     /// <summary>SHA256 checksum of the remote file.</summary>
@@ -1151,6 +1224,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgMsiSource
 {
     /// <summary>Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.</summary>
@@ -1171,6 +1245,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgMsi
 {
     /// <summary>Additional properties to use during installation. This should be in the format of Property=Setting. Appended to the defaults of ACTION=INSTALL REBOOT=ReallySuppress.</summary>
@@ -1183,6 +1258,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgRpmSourceGcs
 {
     /// <summary>Bucket of the Cloud Storage object.</summary>
@@ -1199,6 +1275,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgRpmSourceRemote
 {
     /// <summary>SHA256 checksum of the remote file.</summary>
@@ -1211,6 +1288,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgRpmSource
 {
     /// <summary>Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.</summary>
@@ -1231,6 +1309,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgRpm
 {
     /// <summary>Whether dependencies should also be installed. - install when false: rpm --upgrade --replacepkgs package.rpm - install when true: yum -y install package.rpm or zypper -y install package.rpm</summary>
@@ -1243,6 +1322,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgYum
 {
     /// <summary>Package name.</summary>
@@ -1251,6 +1331,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgZypper
 {
     /// <summary>Package name.</summary>
@@ -1259,6 +1340,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkg
 {
     /// <summary>An Apt Repository. Structure is documented below.</summary>
@@ -1295,6 +1377,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesRepositoryApt
 {
     /// <summary>Type of archive files in this repository. Possible values are: ARCHIVE_TYPE_UNSPECIFIED, DEB, DEB_SRC.</summary>
@@ -1319,6 +1402,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesRepositoryGoo
 {
     /// <summary>Package name.</summary>
@@ -1331,6 +1415,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesRepositoryYum
 {
     /// <summary>The location of the repository directory.</summary>
@@ -1351,6 +1436,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesRepositoryZypper
 {
     /// <summary>The location of the repository directory.</summary>
@@ -1371,6 +1457,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesRepository
 {
     /// <summary>An Apt Repository. Structure is documented below.</summary>
@@ -1391,6 +1478,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResources
 {
     /// <summary>Exec resource Structure is documented below.</summary>
@@ -1415,6 +1503,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroups
 {
     /// <summary>List of inventory filters for the resource group. The resources in this resource group are applied to the target VM if it satisfies at least one of the following inventory filters. For example, to apply this resource group to VMs running either RHEL or CentOS operating systems, specify 2 items for the list with following values: inventory_filters[0].os_short_name='rhel' and inventory_filters[1].os_short_name='centos' If the list is empty, this resource group will be applied to the target VM unconditionally. Structure is documented below.</summary>
@@ -1427,6 +1516,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPolicies
 {
     /// <summary>This flag determines the OS policy compliance status when none of the resource groups within the policy are applicable for a VM. Set this value to true if the policy needs to be reported as compliant even if the policy has nothing to validate or enforce.</summary>
@@ -1451,6 +1541,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPolicies
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderRolloutDisruptionBudget
 {
     /// <summary>Specifies a fixed value.</summary>
@@ -1463,6 +1554,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderRolloutDisruptionB
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderRollout
 {
     /// <summary>The maximum number (or percentage) of VMs per zone to disrupt at any given moment. Structure is documented below.</summary>
@@ -1475,6 +1567,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderRollout
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProvider
 {
     /// <summary>Policy description. Length of the description is limited to 1024 characters.</summary>
@@ -1502,6 +1595,7 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProvider
     public bool? SkipAwaitRollout { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OsPolicyAssignmentSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -1524,6 +1618,7 @@ public enum V1beta1OsPolicyAssignmentSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OsPolicyAssignmentSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1534,6 +1629,7 @@ public enum V1beta1OsPolicyAssignmentSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OsPolicyAssignmentSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1545,6 +1641,7 @@ public enum V1beta1OsPolicyAssignmentSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1559,6 +1656,7 @@ public partial class V1beta1OsPolicyAssignmentSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1570,6 +1668,7 @@ public partial class V1beta1OsPolicyAssignmentSpecProviderConfigRef
     public V1beta1OsPolicyAssignmentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OsPolicyAssignmentSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1580,6 +1679,7 @@ public enum V1beta1OsPolicyAssignmentSpecPublishConnectionDetailsToConfigRefPoli
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OsPolicyAssignmentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1591,6 +1691,7 @@ public enum V1beta1OsPolicyAssignmentSpecPublishConnectionDetailsToConfigRefPoli
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1605,6 +1706,7 @@ public partial class V1beta1OsPolicyAssignmentSpecPublishConnectionDetailsToConf
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1617,6 +1719,7 @@ public partial class V1beta1OsPolicyAssignmentSpecPublishConnectionDetailsToConf
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1633,6 +1736,7 @@ public partial class V1beta1OsPolicyAssignmentSpecPublishConnectionDetailsToMeta
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1649,6 +1753,7 @@ public partial class V1beta1OsPolicyAssignmentSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1661,6 +1766,7 @@ public partial class V1beta1OsPolicyAssignmentSpecWriteConnectionSecretToRef
 }
 
 /// <summary>OsPolicyAssignmentSpec defines the desired state of OsPolicyAssignment</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1694,6 +1800,7 @@ public partial class V1beta1OsPolicyAssignmentSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderInstanceFilterExclusionLabels
 {
     /// <summary>Labels are identified by key/value pairs in this map. A VM should contain all the key/value pairs specified in this map to be selected.</summary>
@@ -1702,6 +1809,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderInstanceFilterExcl
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderInstanceFilterInclusionLabels
 {
     /// <summary>Labels are identified by key/value pairs in this map. A VM should contain all the key/value pairs specified in this map to be selected.</summary>
@@ -1710,6 +1818,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderInstanceFilterIncl
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderInstanceFilterInventories
 {
     /// <summary>The OS short name</summary>
@@ -1722,6 +1831,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderInstanceFilterInve
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderInstanceFilter
 {
     /// <summary>Target all VMs in the project. If true, no other criteria is permitted.</summary>
@@ -1742,6 +1852,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderInstanceFilter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsInventoryFilters
 {
     /// <summary>The OS short name</summary>
@@ -1754,6 +1865,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesExecEnforceFileGcs
 {
     /// <summary>Bucket of the Cloud Storage object.</summary>
@@ -1770,6 +1882,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesExecEnforceFileRemote
 {
     /// <summary>SHA256 checksum of the remote file.</summary>
@@ -1782,6 +1895,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesExecEnforceFile
 {
     /// <summary>Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.</summary>
@@ -1802,6 +1916,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesExecEnforce
 {
     /// <summary>Optional arguments to pass to the source during execution.</summary>
@@ -1826,6 +1941,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesExecValidateFileGcs
 {
     /// <summary>Bucket of the Cloud Storage object.</summary>
@@ -1842,6 +1958,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesExecValidateFileRemote
 {
     /// <summary>SHA256 checksum of the remote file.</summary>
@@ -1854,6 +1971,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesExecValidateFile
 {
     /// <summary>Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.</summary>
@@ -1874,6 +1992,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesExecValidate
 {
     /// <summary>Optional arguments to pass to the source during execution.</summary>
@@ -1898,6 +2017,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesExec
 {
     /// <summary>What to run to bring this resource into the desired state. An exit code of 100 indicates "success", any other exit code indicates a failure running enforce. Structure is documented below.</summary>
@@ -1910,6 +2030,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesFileFileGcs
 {
     /// <summary>Bucket of the Cloud Storage object.</summary>
@@ -1926,6 +2047,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesFileFileRemote
 {
     /// <summary>SHA256 checksum of the remote file.</summary>
@@ -1938,6 +2060,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesFileFile
 {
     /// <summary>Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.</summary>
@@ -1958,6 +2081,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesFile
 {
     /// <summary>A a file with this content. The size of the content is limited to 1024 characters.</summary>
@@ -1982,6 +2106,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgApt
 {
     /// <summary>Package name.</summary>
@@ -1990,6 +2115,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgDebSourceGcs
 {
     /// <summary>Bucket of the Cloud Storage object.</summary>
@@ -2006,6 +2132,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgDebSourceRemote
 {
     /// <summary>SHA256 checksum of the remote file.</summary>
@@ -2018,6 +2145,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgDebSource
 {
     /// <summary>Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.</summary>
@@ -2038,6 +2166,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgDeb
 {
     /// <summary>Whether dependencies should also be installed. - install when false: rpm --upgrade --replacepkgs package.rpm - install when true: yum -y install package.rpm or zypper -y install package.rpm</summary>
@@ -2050,6 +2179,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgGooget
 {
     /// <summary>Package name.</summary>
@@ -2058,6 +2188,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgMsiSourceGcs
 {
     /// <summary>Bucket of the Cloud Storage object.</summary>
@@ -2074,6 +2205,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgMsiSourceRemote
 {
     /// <summary>SHA256 checksum of the remote file.</summary>
@@ -2086,6 +2218,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgMsiSource
 {
     /// <summary>Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.</summary>
@@ -2106,6 +2239,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgMsi
 {
     /// <summary>Additional properties to use during installation. This should be in the format of Property=Setting. Appended to the defaults of ACTION=INSTALL REBOOT=ReallySuppress.</summary>
@@ -2118,6 +2252,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgRpmSourceGcs
 {
     /// <summary>Bucket of the Cloud Storage object.</summary>
@@ -2134,6 +2269,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgRpmSourceRemote
 {
     /// <summary>SHA256 checksum of the remote file.</summary>
@@ -2146,6 +2282,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgRpmSource
 {
     /// <summary>Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.</summary>
@@ -2166,6 +2303,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgRpm
 {
     /// <summary>Whether dependencies should also be installed. - install when false: rpm --upgrade --replacepkgs package.rpm - install when true: yum -y install package.rpm or zypper -y install package.rpm</summary>
@@ -2178,6 +2316,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgYum
 {
     /// <summary>Package name.</summary>
@@ -2186,6 +2325,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgZypper
 {
     /// <summary>Package name.</summary>
@@ -2194,6 +2334,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkg
 {
     /// <summary>An Apt Repository. Structure is documented below.</summary>
@@ -2230,6 +2371,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesRepositoryApt
 {
     /// <summary>Type of archive files in this repository. Possible values are: ARCHIVE_TYPE_UNSPECIFIED, DEB, DEB_SRC.</summary>
@@ -2254,6 +2396,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesRepositoryGoo
 {
     /// <summary>Package name.</summary>
@@ -2266,6 +2409,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesRepositoryYum
 {
     /// <summary>The location of the repository directory.</summary>
@@ -2286,6 +2430,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesRepositoryZypper
 {
     /// <summary>The location of the repository directory.</summary>
@@ -2306,6 +2451,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesRepository
 {
     /// <summary>An Apt Repository. Structure is documented below.</summary>
@@ -2326,6 +2472,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResources
 {
     /// <summary>Exec resource Structure is documented below.</summary>
@@ -2350,6 +2497,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroups
 {
     /// <summary>List of inventory filters for the resource group. The resources in this resource group are applied to the target VM if it satisfies at least one of the following inventory filters. For example, to apply this resource group to VMs running either RHEL or CentOS operating systems, specify 2 items for the list with following values: inventory_filters[0].os_short_name='rhel' and inventory_filters[1].os_short_name='centos' If the list is empty, this resource group will be applied to the target VM unconditionally. Structure is documented below.</summary>
@@ -2362,6 +2510,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPolicies
 {
     /// <summary>This flag determines the OS policy compliance status when none of the resource groups within the policy are applicable for a VM. Set this value to true if the policy needs to be reported as compliant even if the policy has nothing to validate or enforce.</summary>
@@ -2386,6 +2535,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPolicies
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderRolloutDisruptionBudget
 {
     /// <summary>Specifies a fixed value.</summary>
@@ -2398,6 +2548,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderRolloutDisruptionB
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderRollout
 {
     /// <summary>The maximum number (or percentage) of VMs per zone to disrupt at any given moment. Structure is documented below.</summary>
@@ -2410,6 +2561,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderRollout
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProvider
 {
     /// <summary>Output only. Indicates that this revision has been successfully rolled out in this zone and new VMs will be assigned OS policies from this revision. For a given OS policy assignment, there is only one revision with a value of true for this field.</summary>
@@ -2478,6 +2630,7 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2506,6 +2659,7 @@ public partial class V1beta1OsPolicyAssignmentStatusConditions
 }
 
 /// <summary>OsPolicyAssignmentStatus defines the observed state of OsPolicyAssignment.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatus
 {
     /// <summary></summary>
@@ -2521,8 +2675,9 @@ public partial class V1beta1OsPolicyAssignmentStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>OsPolicyAssignment is the Schema for the OsPolicyAssignments API. OS policy assignment is an API resource that is used to apply a set of OS policies to a dynamically targeted group of Compute Engine VM instances.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1OsPolicyAssignment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1OsPolicyAssignmentSpec>, IStatus<V1beta1OsPolicyAssignmentStatus>
 {
     public const string KubeApiVersion = "v1beta1";

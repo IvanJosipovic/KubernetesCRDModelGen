@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.certificatemanager.cnrm.cloud.google.com;
 /// <summary>A set of Certificates defines for the given hostname. There can be defined up to fifteen certificates in each Certificate Map Entry. Each certificate must match pattern projects/*/locations/*/certificates/*.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CertificateManagerCertificateMapEntrySpecCertificatesRefs
 {
     /// <summary>Allowed value: string of the format `projects/{{project}}/locations/{{location}}/certificates/{{value}}`, where {{value}} is the `name` field of a `CertificateManagerCertificate` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1alpha1CertificateManagerCertificateMapEntrySpecCertificat
 }
 
 /// <summary>A map entry that is inputted into the certificate map.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CertificateManagerCertificateMapEntrySpecMapRef
 {
     /// <summary>Allowed value: The `name` field of a `CertificateManagerCertificateMap` resource.</summary>
@@ -41,6 +43,7 @@ public partial class V1alpha1CertificateManagerCertificateMapEntrySpecMapRef
 }
 
 /// <summary>The project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CertificateManagerCertificateMapEntrySpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -57,6 +60,7 @@ public partial class V1alpha1CertificateManagerCertificateMapEntrySpecProjectRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CertificateManagerCertificateMapEntrySpec
 {
     /// <summary></summary>
@@ -89,6 +93,7 @@ public partial class V1alpha1CertificateManagerCertificateMapEntrySpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CertificateManagerCertificateMapEntryStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -113,6 +118,7 @@ public partial class V1alpha1CertificateManagerCertificateMapEntryStatusConditio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CertificateManagerCertificateMapEntryStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -136,8 +142,9 @@ public partial class V1alpha1CertificateManagerCertificateMapEntryStatus
     public string? UpdateTime { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1CertificateManagerCertificateMapEntry : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1CertificateManagerCertificateMapEntrySpec>, IStatus<V1alpha1CertificateManagerCertificateMapEntryStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

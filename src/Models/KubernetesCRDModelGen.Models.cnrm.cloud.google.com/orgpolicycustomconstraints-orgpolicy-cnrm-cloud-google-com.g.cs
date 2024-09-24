@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.orgpolicy.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1OrgPolicyCustomConstraintSpec
 {
     /// <summary>The action to take if the condition is met. Possible values: ["ALLOW", "DENY"].</summary>
@@ -45,6 +46,7 @@ public partial class V1alpha1OrgPolicyCustomConstraintSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1OrgPolicyCustomConstraintStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -69,6 +71,7 @@ public partial class V1alpha1OrgPolicyCustomConstraintStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1OrgPolicyCustomConstraintStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -84,8 +87,9 @@ public partial class V1alpha1OrgPolicyCustomConstraintStatus
     public string? UpdateTime { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1OrgPolicyCustomConstraint : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1OrgPolicyCustomConstraintSpec>, IStatus<V1alpha1OrgPolicyCustomConstraintStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

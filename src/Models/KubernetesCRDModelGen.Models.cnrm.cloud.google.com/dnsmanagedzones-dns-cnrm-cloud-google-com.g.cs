@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dns.cnrm.cloud.google.com;
 /// <summary>Cloud logging configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSManagedZoneSpecCloudLoggingConfig
 {
     /// <summary>If set, enable query logging for this ManagedZone. False by default, making logging opt-in.</summary>
@@ -17,6 +18,7 @@ public partial class V1beta1DNSManagedZoneSpecCloudLoggingConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSManagedZoneSpecDnssecConfigDefaultKeySpecs
 {
     /// <summary>String mnemonic specifying the DNSSEC algorithm of this key Possible values: ["ecdsap256sha256", "ecdsap384sha384", "rsasha1", "rsasha256", "rsasha512"].</summary>
@@ -37,6 +39,7 @@ public partial class V1beta1DNSManagedZoneSpecDnssecConfigDefaultKeySpecs
 }
 
 /// <summary>DNSSEC configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSManagedZoneSpecDnssecConfig
 {
     /// <summary>Specifies parameters that will be used for generating initial DnsKeys for this ManagedZone. If you provide a spec for keySigning or zoneSigning, you must also provide one for the other. default_key_specs can only be updated when the state is 'off'.</summary>
@@ -57,6 +60,7 @@ public partial class V1beta1DNSManagedZoneSpecDnssecConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSManagedZoneSpecForwardingConfigTargetNameServers
 {
     /// <summary>Forwarding path for this TargetNameServer. If unset or 'default' Cloud DNS will make forwarding decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go to the Internet. When set to 'private', Cloud DNS will always send queries through VPC for this target Possible values: ["default", "private"].</summary>
@@ -69,6 +73,7 @@ public partial class V1beta1DNSManagedZoneSpecForwardingConfigTargetNameServers
 }
 
 /// <summary>The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field contains the set of destinations to forward to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSManagedZoneSpecForwardingConfig
 {
     /// <summary>List of target name servers to forward to. Cloud DNS will select the best available name server if more than one target is given.</summary>
@@ -77,6 +82,7 @@ public partial class V1beta1DNSManagedZoneSpecForwardingConfig
 }
 
 /// <summary>VPC network to forward queries to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSManagedZoneSpecPeeringConfigTargetNetworkNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -93,6 +99,7 @@ public partial class V1beta1DNSManagedZoneSpecPeeringConfigTargetNetworkNetworkR
 }
 
 /// <summary>The network with which to peer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSManagedZoneSpecPeeringConfigTargetNetwork
 {
     /// <summary>VPC network to forward queries to.</summary>
@@ -101,6 +108,7 @@ public partial class V1beta1DNSManagedZoneSpecPeeringConfigTargetNetwork
 }
 
 /// <summary>The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the network to peer with.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSManagedZoneSpecPeeringConfig
 {
     /// <summary>The network with which to peer.</summary>
@@ -109,6 +117,7 @@ public partial class V1beta1DNSManagedZoneSpecPeeringConfig
 }
 
 /// <summary>The resource name of the cluster to bind this ManagedZone to. This should be specified in the format like 'projects/*/locations/*/clusters/*'.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSManagedZoneSpecPrivateVisibilityConfigGkeClustersGkeClusterNameRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ContainerCluster` resource.</summary>
@@ -125,6 +134,7 @@ public partial class V1beta1DNSManagedZoneSpecPrivateVisibilityConfigGkeClusters
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSManagedZoneSpecPrivateVisibilityConfigGkeClusters
 {
     /// <summary>The resource name of the cluster to bind this ManagedZone to. This should be specified in the format like 'projects/*/locations/*/clusters/*'.</summary>
@@ -133,6 +143,7 @@ public partial class V1beta1DNSManagedZoneSpecPrivateVisibilityConfigGkeClusters
 }
 
 /// <summary>VPC network to bind to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSManagedZoneSpecPrivateVisibilityConfigNetworksNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -149,6 +160,7 @@ public partial class V1beta1DNSManagedZoneSpecPrivateVisibilityConfigNetworksNet
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSManagedZoneSpecPrivateVisibilityConfigNetworks
 {
     /// <summary>VPC network to bind to.</summary>
@@ -157,6 +169,7 @@ public partial class V1beta1DNSManagedZoneSpecPrivateVisibilityConfigNetworks
 }
 
 /// <summary>For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from. At least one of 'gke_clusters' or 'networks' must be specified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSManagedZoneSpecPrivateVisibilityConfig
 {
     /// <summary>The list of Google Kubernetes Engine clusters that can see this zone.</summary>
@@ -169,6 +182,7 @@ public partial class V1beta1DNSManagedZoneSpecPrivateVisibilityConfig
 }
 
 /// <summary>The namespace associated with the zone.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSManagedZoneSpecServiceDirectoryConfigNamespace
 {
     /// <summary>The fully qualified or partial URL of the service directory namespace that should be associated with the zone. This should be formatted like 'https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace_id}' or simply 'projects/{project}/locations/{location}/namespaces/{namespace_id}' Ignored for 'public' visibility zones.</summary>
@@ -177,6 +191,7 @@ public partial class V1beta1DNSManagedZoneSpecServiceDirectoryConfigNamespace
 }
 
 /// <summary>Immutable. The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSManagedZoneSpecServiceDirectoryConfig
 {
     /// <summary>The namespace associated with the zone.</summary>
@@ -185,6 +200,7 @@ public partial class V1beta1DNSManagedZoneSpecServiceDirectoryConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSManagedZoneSpec
 {
     /// <summary>Cloud logging configuration.</summary>
@@ -233,6 +249,7 @@ public partial class V1beta1DNSManagedZoneSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSManagedZoneStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -257,6 +274,7 @@ public partial class V1beta1DNSManagedZoneStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSManagedZoneStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -280,8 +298,9 @@ public partial class V1beta1DNSManagedZoneStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1DNSManagedZone : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DNSManagedZoneSpec>, IStatus<V1beta1DNSManagedZoneStatus>
 {
     public const string KubeApiVersion = "v1beta1";

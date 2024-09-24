@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataproc.cnrm.cloud.google.com;
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigAutoscalingConfigPolicyRef
 {
     /// <summary>Optional. The autoscaling policy used by the cluster. Only resource names including projectid and location (region) are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id]` * `projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id]` Note that the policy must be in the same project and Dataproc region.  Allowed value: The Google Cloud resource name of a `DataprocAutoscalingPolicy` resource (format: `projects/{{project}}/locations/{{location}}/autoscalingPolicies/{{name}}`).</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1DataprocClusterSpecConfigAutoscalingConfigPolicyRef
 }
 
 /// <summary>Immutable. Optional. Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigAutoscalingConfig
 {
     /// <summary>Immutable.</summary>
@@ -33,6 +35,7 @@ public partial class V1beta1DataprocClusterSpecConfigAutoscalingConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigDataprocMetricConfigMetrics
 {
     /// <summary>Immutable. Optional. Specify one or more [available OSS metrics] (https://cloud.google.com/dataproc/docs/guides/monitoring#available_oss_metrics) to collect for the metric course (for the `SPARK` metric source, any [Spark metric] (https://spark.apache.org/docs/latest/monitoring.html#metrics) can be specified). Provide metrics in the following format: `METRIC_SOURCE:INSTANCE:GROUP:METRIC` Use camelcase as appropriate. Examples: ``` yarn:ResourceManager:QueueMetrics:AppsCompleted spark:driver:DAGScheduler:job.allJobs sparkHistoryServer:JVM:Memory:NonHeapMemoryUsage.committed hiveserver2:JVM:Memory:NonHeapMemoryUsage.used ``` Notes: * Only the specified overridden metrics will be collected for the metric source. For example, if one or more `spark:executive` metrics are listed as metric overrides, other `SPARK` metrics will not be collected. The collection of the default metrics for other OSS metric sources is unaffected. For example, if both `SPARK` andd `YARN` metric sources are enabled, and overrides are provided for Spark metrics only, all default YARN metrics will be collected.</summary>
@@ -45,6 +48,7 @@ public partial class V1beta1DataprocClusterSpecConfigDataprocMetricConfigMetrics
 }
 
 /// <summary>Immutable. Optional. The config for Dataproc metrics.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigDataprocMetricConfig
 {
     /// <summary>Immutable. Required. Metrics sources to enable.</summary>
@@ -53,6 +57,7 @@ public partial class V1beta1DataprocClusterSpecConfigDataprocMetricConfig
 }
 
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigEncryptionConfigGcePdKmsKeyRef
 {
     /// <summary>Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.  Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
@@ -69,6 +74,7 @@ public partial class V1beta1DataprocClusterSpecConfigEncryptionConfigGcePdKmsKey
 }
 
 /// <summary>Immutable. Optional. Encryption settings for the cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigEncryptionConfig
 {
     /// <summary>Immutable.</summary>
@@ -77,6 +83,7 @@ public partial class V1beta1DataprocClusterSpecConfigEncryptionConfig
 }
 
 /// <summary>Immutable. Optional. Port/endpoint configuration for this cluster</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigEndpointConfig
 {
     /// <summary>Immutable. Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.</summary>
@@ -85,6 +92,7 @@ public partial class V1beta1DataprocClusterSpecConfigEndpointConfig
 }
 
 /// <summary>Immutable. Optional. Confidential Instance Config for clusters using [Confidential VMs](https://cloud.google.com/compute/confidential-vm/docs).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigGceClusterConfigConfidentialInstanceConfig
 {
     /// <summary>Immutable. Optional. Defines whether the instance should have confidential compute enabled.</summary>
@@ -93,6 +101,7 @@ public partial class V1beta1DataprocClusterSpecConfigGceClusterConfigConfidentia
 }
 
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigGceClusterConfigNetworkRef
 {
     /// <summary>Optional. The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork_uri. If neither `network_uri` nor `subnetwork_uri` is specified, the "default" network of the project is used, if it exists. Cannot be a "Custom Subnet Network" (see [Using Subnetworks](https://cloud.google.com/compute/docs/subnetworks) for more information). A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default` * `projects/[project_id]/regions/global/default` * `default`  Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -109,6 +118,7 @@ public partial class V1beta1DataprocClusterSpecConfigGceClusterConfigNetworkRef
 }
 
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigGceClusterConfigNodeGroupAffinityNodeGroupRef
 {
     /// <summary>Required. The URI of a sole-tenant [node group resource](https://cloud.google.com/compute/docs/reference/rest/v1/nodeGroups) that the cluster will be created on. A full URL, partial URI, or node group name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-central1-a/nodeGroups/node-group-1` * `projects/[project_id]/zones/us-central1-a/nodeGroups/node-group-1` * `node-group-1`  Allowed value: The `selfLink` field of a `ComputeNodeGroup` resource.</summary>
@@ -125,6 +135,7 @@ public partial class V1beta1DataprocClusterSpecConfigGceClusterConfigNodeGroupAf
 }
 
 /// <summary>Immutable. Optional. Node Group Affinity for sole-tenant clusters.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigGceClusterConfigNodeGroupAffinity
 {
     /// <summary>Immutable.</summary>
@@ -133,6 +144,7 @@ public partial class V1beta1DataprocClusterSpecConfigGceClusterConfigNodeGroupAf
 }
 
 /// <summary>Immutable. Optional. Reservation Affinity for consuming Zonal reservation.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigGceClusterConfigReservationAffinity
 {
     /// <summary>Immutable. Optional. Type of reservation to consume Possible values: TYPE_UNSPECIFIED, NO_RESERVATION, ANY_RESERVATION, SPECIFIC_RESERVATION</summary>
@@ -149,6 +161,7 @@ public partial class V1beta1DataprocClusterSpecConfigGceClusterConfigReservation
 }
 
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigGceClusterConfigServiceAccountRef
 {
     /// <summary>Optional. The [Dataproc service account](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/service-accounts#service_accounts_in_dataproc) (also see [VM Data Plane identity](https://cloud.google.com/dataproc/docs/concepts/iam/dataproc-principals#vm_service_account_data_plane_identity)) used by Dataproc cluster VM instances to access Google Cloud Platform services. If not specified, the [Compute Engine default service account](https://cloud.google.com/compute/docs/access/service-accounts#default_service_account) is used.  Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
@@ -165,6 +178,7 @@ public partial class V1beta1DataprocClusterSpecConfigGceClusterConfigServiceAcco
 }
 
 /// <summary>Immutable. Optional. Shielded Instance Config for clusters using [Compute Engine Shielded VMs](https://cloud.google.com/security/shielded-cloud/shielded-vm).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigGceClusterConfigShieldedInstanceConfig
 {
     /// <summary>Immutable. Optional. Defines whether instances have integrity monitoring enabled.</summary>
@@ -181,6 +195,7 @@ public partial class V1beta1DataprocClusterSpecConfigGceClusterConfigShieldedIns
 }
 
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigGceClusterConfigSubnetworkRef
 {
     /// <summary>Optional. The Compute Engine subnetwork to be used for machine communications. Cannot be specified with network_uri. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/subnetworks/sub0` * `projects/[project_id]/regions/us-east1/subnetworks/sub0` * `sub0`  Allowed value: The `selfLink` field of a `ComputeSubnetwork` resource.</summary>
@@ -197,6 +212,7 @@ public partial class V1beta1DataprocClusterSpecConfigGceClusterConfigSubnetworkR
 }
 
 /// <summary>Immutable. Optional. The shared Compute Engine config settings for all instances in a cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigGceClusterConfig
 {
     /// <summary>Immutable. Optional. Confidential Instance Config for clusters using [Confidential VMs](https://cloud.google.com/compute/confidential-vm/docs).</summary>
@@ -253,6 +269,7 @@ public partial class V1beta1DataprocClusterSpecConfigGceClusterConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigInitializationActions
 {
     /// <summary>Immutable. Required. Cloud Storage URI of executable file.</summary>
@@ -265,6 +282,7 @@ public partial class V1beta1DataprocClusterSpecConfigInitializationActions
 }
 
 /// <summary>Immutable. Optional. Lifecycle setting for the cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigLifecycleConfig
 {
     /// <summary>Immutable. Optional. The time when cluster will be auto-deleted (see JSON representation of [Timestamp](https://developers.google.com/protocol-buffers/docs/proto3#json)).</summary>
@@ -281,6 +299,7 @@ public partial class V1beta1DataprocClusterSpecConfigLifecycleConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigMasterConfigAccelerators
 {
     /// <summary>Immutable. The number of the accelerator cards of this type exposed to this instance.</summary>
@@ -293,6 +312,7 @@ public partial class V1beta1DataprocClusterSpecConfigMasterConfigAccelerators
 }
 
 /// <summary>Immutable. Optional. Disk option config settings.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigMasterConfigDiskConfig
 {
     /// <summary>Immutable. Optional. Size in GB of the boot disk (default is 500GB).</summary>
@@ -313,6 +333,7 @@ public partial class V1beta1DataprocClusterSpecConfigMasterConfigDiskConfig
 }
 
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigMasterConfigImageRef
 {
     /// <summary>Optional. The Compute Engine image resource used for cluster instances. The URI can represent an image or image family. Image examples: * `https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/[image-id]` * `projects/[project_id]/global/images/[image-id]` * `image-id` Image family examples. Dataproc will use the most recent image from the family: * `https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/family/[custom-image-family-name]` * `projects/[project_id]/global/images/family/[custom-image-family-name]` If the URI is unspecified, it will be inferred from `SoftwareConfig.image_version` or the system default.  Allowed value: The `selfLink` field of a `ComputeImage` resource.</summary>
@@ -329,6 +350,7 @@ public partial class V1beta1DataprocClusterSpecConfigMasterConfigImageRef
 }
 
 /// <summary>Immutable. Optional. The Compute Engine config settings for the master instance in a cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigMasterConfig
 {
     /// <summary>Immutable. Optional. The Compute Engine accelerator configuration for these instances.</summary>
@@ -361,6 +383,7 @@ public partial class V1beta1DataprocClusterSpecConfigMasterConfig
 }
 
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigMetastoreConfigDataprocMetastoreServiceRef
 {
     /// <summary>Required. Resource name of an existing Dataproc Metastore service. Example: * `projects/[project_id]/locations/[dataproc_region]/services/[service-name]`</summary>
@@ -377,6 +400,7 @@ public partial class V1beta1DataprocClusterSpecConfigMetastoreConfigDataprocMeta
 }
 
 /// <summary>Immutable. Optional. Metastore configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigMetastoreConfig
 {
     /// <summary>Immutable.</summary>
@@ -385,6 +409,7 @@ public partial class V1beta1DataprocClusterSpecConfigMetastoreConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigSecondaryWorkerConfigAccelerators
 {
     /// <summary>Immutable. The number of the accelerator cards of this type exposed to this instance.</summary>
@@ -397,6 +422,7 @@ public partial class V1beta1DataprocClusterSpecConfigSecondaryWorkerConfigAccele
 }
 
 /// <summary>Immutable. Optional. Disk option config settings.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigSecondaryWorkerConfigDiskConfig
 {
     /// <summary>Immutable. Optional. Size in GB of the boot disk (default is 500GB).</summary>
@@ -417,6 +443,7 @@ public partial class V1beta1DataprocClusterSpecConfigSecondaryWorkerConfigDiskCo
 }
 
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigSecondaryWorkerConfigImageRef
 {
     /// <summary>Optional. The Compute Engine image resource used for cluster instances. The URI can represent an image or image family. Image examples: * `https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/[image-id]` * `projects/[project_id]/global/images/[image-id]` * `image-id` Image family examples. Dataproc will use the most recent image from the family: * `https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/family/[custom-image-family-name]` * `projects/[project_id]/global/images/family/[custom-image-family-name]` If the URI is unspecified, it will be inferred from `SoftwareConfig.image_version` or the system default.  Allowed value: The `selfLink` field of a `ComputeImage` resource.</summary>
@@ -433,6 +460,7 @@ public partial class V1beta1DataprocClusterSpecConfigSecondaryWorkerConfigImageR
 }
 
 /// <summary>Immutable. Optional. The Compute Engine config settings for additional worker instances in a cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigSecondaryWorkerConfig
 {
     /// <summary>Immutable. Optional. The Compute Engine accelerator configuration for these instances.</summary>
@@ -465,6 +493,7 @@ public partial class V1beta1DataprocClusterSpecConfigSecondaryWorkerConfig
 }
 
 /// <summary>Immutable. Optional. Identity related configuration, including service account based secure multi-tenancy user mappings.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigSecurityConfigIdentityConfig
 {
     /// <summary>Immutable. Required. Map of user to service account.</summary>
@@ -473,6 +502,7 @@ public partial class V1beta1DataprocClusterSpecConfigSecurityConfigIdentityConfi
 }
 
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigSecurityConfigKerberosConfigKmsKeyRef
 {
     /// <summary>Optional. The uri of the KMS key used to encrypt various sensitive files.  Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
@@ -489,6 +519,7 @@ public partial class V1beta1DataprocClusterSpecConfigSecurityConfigKerberosConfi
 }
 
 /// <summary>Immutable. Optional. Kerberos related configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigSecurityConfigKerberosConfig
 {
     /// <summary>Immutable. Optional. The admin server (IP or hostname) for the remote trusted realm in a cross realm trust relationship.</summary>
@@ -553,6 +584,7 @@ public partial class V1beta1DataprocClusterSpecConfigSecurityConfigKerberosConfi
 }
 
 /// <summary>Immutable. Optional. Security settings for the cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigSecurityConfig
 {
     /// <summary>Immutable. Optional. Identity related configuration, including service account based secure multi-tenancy user mappings.</summary>
@@ -565,6 +597,7 @@ public partial class V1beta1DataprocClusterSpecConfigSecurityConfig
 }
 
 /// <summary>Immutable. Optional. The config settings for software inside the cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigSoftwareConfig
 {
     /// <summary>Immutable. Optional. The version of software inside the cluster. It must be one of the supported [Dataproc Versions](https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#supported_dataproc_versions), such as "1.2" (including a subminor version, such as "1.2.29"), or the ["preview" version](https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions). If unspecified, it defaults to the latest Debian version.</summary>
@@ -581,6 +614,7 @@ public partial class V1beta1DataprocClusterSpecConfigSoftwareConfig
 }
 
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigStagingBucketRef
 {
     /// <summary>Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see [Dataproc staging bucket](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). **This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.**  Allowed value: The Google Cloud resource name of a `StorageBucket` resource (format: `{{name}}`).</summary>
@@ -597,6 +631,7 @@ public partial class V1beta1DataprocClusterSpecConfigStagingBucketRef
 }
 
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigTempBucketRef
 {
     /// <summary>Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket. **This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.**  Allowed value: The Google Cloud resource name of a `StorageBucket` resource (format: `{{name}}`).</summary>
@@ -613,6 +648,7 @@ public partial class V1beta1DataprocClusterSpecConfigTempBucketRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigWorkerConfigAccelerators
 {
     /// <summary>Immutable. The number of the accelerator cards of this type exposed to this instance.</summary>
@@ -625,6 +661,7 @@ public partial class V1beta1DataprocClusterSpecConfigWorkerConfigAccelerators
 }
 
 /// <summary>Immutable. Optional. Disk option config settings.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigWorkerConfigDiskConfig
 {
     /// <summary>Immutable. Optional. Size in GB of the boot disk (default is 500GB).</summary>
@@ -645,6 +682,7 @@ public partial class V1beta1DataprocClusterSpecConfigWorkerConfigDiskConfig
 }
 
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigWorkerConfigImageRef
 {
     /// <summary>Optional. The Compute Engine image resource used for cluster instances. The URI can represent an image or image family. Image examples: * `https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/[image-id]` * `projects/[project_id]/global/images/[image-id]` * `image-id` Image family examples. Dataproc will use the most recent image from the family: * `https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/family/[custom-image-family-name]` * `projects/[project_id]/global/images/family/[custom-image-family-name]` If the URI is unspecified, it will be inferred from `SoftwareConfig.image_version` or the system default.  Allowed value: The `selfLink` field of a `ComputeImage` resource.</summary>
@@ -661,6 +699,7 @@ public partial class V1beta1DataprocClusterSpecConfigWorkerConfigImageRef
 }
 
 /// <summary>Immutable. Optional. The Compute Engine config settings for worker instances in a cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfigWorkerConfig
 {
     /// <summary>Immutable. Optional. The Compute Engine accelerator configuration for these instances.</summary>
@@ -693,6 +732,7 @@ public partial class V1beta1DataprocClusterSpecConfigWorkerConfig
 }
 
 /// <summary>Immutable. The cluster config. Note that Dataproc may set default values, and values may change when clusters are updated.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecConfig
 {
     /// <summary>Immutable. Optional. Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.</summary>
@@ -757,6 +797,7 @@ public partial class V1beta1DataprocClusterSpecConfig
 }
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecProjectRef
 {
     /// <summary>Required. The Google Cloud Platform project ID that the cluster belongs to.  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -773,6 +814,7 @@ public partial class V1beta1DataprocClusterSpecProjectRef
 }
 
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecVirtualClusterConfigAuxiliaryServicesConfigMetastoreConfigDataprocMetastoreServiceRef
 {
     /// <summary>Required. Resource name of an existing Dataproc Metastore service. Example: * `projects/[project_id]/locations/[dataproc_region]/services/[service-name]`</summary>
@@ -789,6 +831,7 @@ public partial class V1beta1DataprocClusterSpecVirtualClusterConfigAuxiliaryServ
 }
 
 /// <summary>Immutable. Optional. The Hive Metastore configuration for this workload.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecVirtualClusterConfigAuxiliaryServicesConfigMetastoreConfig
 {
     /// <summary>Immutable.</summary>
@@ -797,6 +840,7 @@ public partial class V1beta1DataprocClusterSpecVirtualClusterConfigAuxiliaryServ
 }
 
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecVirtualClusterConfigAuxiliaryServicesConfigSparkHistoryServerConfigDataprocClusterRef
 {
     /// <summary>Optional. Resource name of an existing Dataproc Cluster to act as a Spark History Server for the workload. Example: * `projects/[project_id]/regions/[region]/clusters/[cluster_name]`  Allowed value: The `selfLink` field of a `DataprocCluster` resource.</summary>
@@ -813,6 +857,7 @@ public partial class V1beta1DataprocClusterSpecVirtualClusterConfigAuxiliaryServ
 }
 
 /// <summary>Immutable. Optional. The Spark History Server configuration for the workload.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecVirtualClusterConfigAuxiliaryServicesConfigSparkHistoryServerConfig
 {
     /// <summary>Immutable.</summary>
@@ -821,6 +866,7 @@ public partial class V1beta1DataprocClusterSpecVirtualClusterConfigAuxiliaryServ
 }
 
 /// <summary>Immutable. Optional. Configuration of auxiliary services used by this cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecVirtualClusterConfigAuxiliaryServicesConfig
 {
     /// <summary>Immutable. Optional. The Hive Metastore configuration for this workload.</summary>
@@ -833,6 +879,7 @@ public partial class V1beta1DataprocClusterSpecVirtualClusterConfigAuxiliaryServ
 }
 
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigGkeClusterTargetRef
 {
     /// <summary>Optional. A target GKE cluster to deploy to. It must be in the same project and region as the Dataproc cluster (the GKE cluster can be zonal or regional). Format: 'projects/{project}/locations/{location}/clusters/{cluster_id}'  Allowed value: The `selfLink` field of a `ContainerCluster` resource.</summary>
@@ -849,6 +896,7 @@ public partial class V1beta1DataprocClusterSpecVirtualClusterConfigKubernetesClu
 }
 
 /// <summary>Immutable. Optional. The autoscaler configuration for this node pool. The autoscaler is enabled only when a valid configuration is present.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigAutoscaling
 {
     /// <summary>Immutable. The maximum number of nodes in the node pool. Must be &gt;= min_node_count, and must be &gt; 0. **Note:** Quota must be sufficient to scale up the cluster.</summary>
@@ -861,6 +909,7 @@ public partial class V1beta1DataprocClusterSpecVirtualClusterConfigKubernetesClu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfigAccelerators
 {
     /// <summary>Immutable. The number of accelerator cards exposed to an instance.</summary>
@@ -877,6 +926,7 @@ public partial class V1beta1DataprocClusterSpecVirtualClusterConfigKubernetesClu
 }
 
 /// <summary>Immutable. Optional. Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfigEphemeralStorageConfig
 {
     /// <summary>Immutable. Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.</summary>
@@ -885,6 +935,7 @@ public partial class V1beta1DataprocClusterSpecVirtualClusterConfigKubernetesClu
 }
 
 /// <summary>Immutable. Optional. The node pool configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfig
 {
     /// <summary>Immutable. Optional. A list of [hardware accelerators](https://cloud.google.com/compute/docs/gpus) to attach to each node.</summary>
@@ -921,6 +972,7 @@ public partial class V1beta1DataprocClusterSpecVirtualClusterConfigKubernetesClu
 }
 
 /// <summary>Immutable. Input only. The configuration for the GKE node pool. If specified, Dataproc attempts to create a node pool with the specified shape. If one with the same name already exists, it is verified against all specified fields. If a field differs, the virtual cluster creation will fail. If omitted, any node pool with the specified name is used. If a node pool with the specified name does not exist, Dataproc create a node pool with default values. This is an input only field. It will not be returned by the API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfig
 {
     /// <summary>Immutable. Optional. The autoscaler configuration for this node pool. The autoscaler is enabled only when a valid configuration is present.</summary>
@@ -937,6 +989,7 @@ public partial class V1beta1DataprocClusterSpecVirtualClusterConfigKubernetesClu
 }
 
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolRef
 {
     /// <summary>Required. The target GKE node pool. Format: 'projects/{project}/locations/{location}/clusters/{cluster}/nodePools/{node_pool}'  Allowed value: The `selfLink` field of a `ContainerNodePool` resource.</summary>
@@ -953,6 +1006,7 @@ public partial class V1beta1DataprocClusterSpecVirtualClusterConfigKubernetesClu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget
 {
     /// <summary>Immutable. Input only. The configuration for the GKE node pool. If specified, Dataproc attempts to create a node pool with the specified shape. If one with the same name already exists, it is verified against all specified fields. If a field differs, the virtual cluster creation will fail. If omitted, any node pool with the specified name is used. If a node pool with the specified name does not exist, Dataproc create a node pool with default values. This is an input only field. It will not be returned by the API.</summary>
@@ -969,6 +1023,7 @@ public partial class V1beta1DataprocClusterSpecVirtualClusterConfigKubernetesClu
 }
 
 /// <summary>Immutable. Required. The configuration for running the Dataproc cluster on GKE.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecVirtualClusterConfigKubernetesClusterConfigGkeClusterConfig
 {
     /// <summary>Immutable.</summary>
@@ -981,6 +1036,7 @@ public partial class V1beta1DataprocClusterSpecVirtualClusterConfigKubernetesClu
 }
 
 /// <summary>Immutable. Optional. The software configuration for this Dataproc cluster running on Kubernetes.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecVirtualClusterConfigKubernetesClusterConfigKubernetesSoftwareConfig
 {
     /// <summary>Immutable. The components that should be installed in this Dataproc cluster. The key must be a string from the KubernetesComponent enumeration. The value is the version of the software to be installed. At least one entry must be specified.</summary>
@@ -993,6 +1049,7 @@ public partial class V1beta1DataprocClusterSpecVirtualClusterConfigKubernetesClu
 }
 
 /// <summary>Immutable. Required. The configuration for running the Dataproc cluster on Kubernetes.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecVirtualClusterConfigKubernetesClusterConfig
 {
     /// <summary>Immutable. Required. The configuration for running the Dataproc cluster on GKE.</summary>
@@ -1009,6 +1066,7 @@ public partial class V1beta1DataprocClusterSpecVirtualClusterConfigKubernetesClu
 }
 
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecVirtualClusterConfigStagingBucketRef
 {
     /// <summary>Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see [Dataproc staging and temp buckets](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). **This field requires a Cloud Storage bucket name, not a `gs://...` URI to a Cloud Storage bucket.**  Allowed value: The Google Cloud resource name of a `StorageBucket` resource (format: `{{name}}`).</summary>
@@ -1025,6 +1083,7 @@ public partial class V1beta1DataprocClusterSpecVirtualClusterConfigStagingBucket
 }
 
 /// <summary>Immutable. Optional. The virtual cluster config is used when creating a Dataproc cluster that does not directly control the underlying compute resources, for example, when creating a [Dataproc-on-GKE cluster](https://cloud.google.com/dataproc/docs/guides/dpgke/dataproc-gke). Dataproc may set default values, and values may change when clusters are updated. Exactly one of config or virtual_cluster_config must be specified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpecVirtualClusterConfig
 {
     /// <summary>Immutable. Optional. Configuration of auxiliary services used by this cluster.</summary>
@@ -1041,6 +1100,7 @@ public partial class V1beta1DataprocClusterSpecVirtualClusterConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterSpec
 {
     /// <summary>Immutable. The cluster config. Note that Dataproc may set default values, and values may change when clusters are updated.</summary>
@@ -1065,6 +1125,7 @@ public partial class V1beta1DataprocClusterSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -1089,6 +1150,7 @@ public partial class V1beta1DataprocClusterStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterStatusConfigEndpointConfig
 {
     /// <summary>Output only. The map of port descriptions to URLs. Will only be populated if enable_http_port_access is true.</summary>
@@ -1097,6 +1159,7 @@ public partial class V1beta1DataprocClusterStatusConfigEndpointConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterStatusConfigLifecycleConfig
 {
     /// <summary>Output only. The time when cluster became idle (most recent job finished) and became eligible for deletion due to idleness (see JSON representation of [Timestamp](https://developers.google.com/protocol-buffers/docs/proto3#json)).</summary>
@@ -1105,6 +1168,7 @@ public partial class V1beta1DataprocClusterStatusConfigLifecycleConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterStatusConfigMasterConfigInstanceReferences
 {
     /// <summary>The unique identifier of the Compute Engine instance.</summary>
@@ -1125,6 +1189,7 @@ public partial class V1beta1DataprocClusterStatusConfigMasterConfigInstanceRefer
 }
 
 /// <summary>Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterStatusConfigMasterConfigManagedGroupConfig
 {
     /// <summary>Output only. The name of the Instance Group Manager for this group.</summary>
@@ -1137,6 +1202,7 @@ public partial class V1beta1DataprocClusterStatusConfigMasterConfigManagedGroupC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterStatusConfigMasterConfig
 {
     /// <summary>Output only. The list of instance names. Dataproc derives the names from `cluster_name`, `num_instances`, and the instance group.</summary>
@@ -1157,6 +1223,7 @@ public partial class V1beta1DataprocClusterStatusConfigMasterConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterStatusConfigSecondaryWorkerConfigInstanceReferences
 {
     /// <summary>The unique identifier of the Compute Engine instance.</summary>
@@ -1177,6 +1244,7 @@ public partial class V1beta1DataprocClusterStatusConfigSecondaryWorkerConfigInst
 }
 
 /// <summary>Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterStatusConfigSecondaryWorkerConfigManagedGroupConfig
 {
     /// <summary>Output only. The name of the Instance Group Manager for this group.</summary>
@@ -1189,6 +1257,7 @@ public partial class V1beta1DataprocClusterStatusConfigSecondaryWorkerConfigMana
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterStatusConfigSecondaryWorkerConfig
 {
     /// <summary>Output only. The list of instance names. Dataproc derives the names from `cluster_name`, `num_instances`, and the instance group.</summary>
@@ -1209,6 +1278,7 @@ public partial class V1beta1DataprocClusterStatusConfigSecondaryWorkerConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterStatusConfigWorkerConfigInstanceReferences
 {
     /// <summary>The unique identifier of the Compute Engine instance.</summary>
@@ -1229,6 +1299,7 @@ public partial class V1beta1DataprocClusterStatusConfigWorkerConfigInstanceRefer
 }
 
 /// <summary>Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterStatusConfigWorkerConfigManagedGroupConfig
 {
     /// <summary>Output only. The name of the Instance Group Manager for this group.</summary>
@@ -1241,6 +1312,7 @@ public partial class V1beta1DataprocClusterStatusConfigWorkerConfigManagedGroupC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterStatusConfigWorkerConfig
 {
     /// <summary>Output only. The list of instance names. Dataproc derives the names from `cluster_name`, `num_instances`, and the instance group.</summary>
@@ -1261,6 +1333,7 @@ public partial class V1beta1DataprocClusterStatusConfigWorkerConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterStatusConfig
 {
     /// <summary></summary>
@@ -1285,6 +1358,7 @@ public partial class V1beta1DataprocClusterStatusConfig
 }
 
 /// <summary>Output only. Contains cluster daemon metrics such as HDFS and YARN stats. **Beta Feature**: This report is available for testing purposes only. It may be changed before final release.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterStatusMetrics
 {
     /// <summary>The HDFS metrics.</summary>
@@ -1297,6 +1371,7 @@ public partial class V1beta1DataprocClusterStatusMetrics
 }
 
 /// <summary>Output only. Cluster status.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterStatusStatus
 {
     /// <summary>Optional. Output only. Details of cluster's state.</summary>
@@ -1317,6 +1392,7 @@ public partial class V1beta1DataprocClusterStatusStatus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterStatusStatusHistory
 {
     /// <summary>Optional. Output only. Details of cluster's state.</summary>
@@ -1337,6 +1413,7 @@ public partial class V1beta1DataprocClusterStatusStatusHistory
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocClusterStatus
 {
     /// <summary>Output only. A cluster UUID (Unique Universal Identifier). Dataproc generates this value when it creates the cluster.</summary>
@@ -1368,8 +1445,9 @@ public partial class V1beta1DataprocClusterStatus
     public IList<V1beta1DataprocClusterStatusStatusHistory>? StatusHistory { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1DataprocCluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DataprocClusterSpec>, IStatus<V1beta1DataprocClusterStatus>
 {
     public const string KubeApiVersion = "v1beta1";

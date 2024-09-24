@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iam.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMAccessBoundaryPolicySpecProjectRef
 {
     /// <summary>Allowed value: string of the format `cloudresourcemanager.googleapis.com%2Fprojects%2F{{value}}`, where {{value}} is the `name` field of a `Project` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1IAMAccessBoundaryPolicySpecProjectRef
 }
 
 /// <summary>The availability condition further constrains the access allowed by the access boundary rule.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMAccessBoundaryPolicySpecRulesAccessBoundaryRuleAvailabilityCondition
 {
     /// <summary>Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.</summary>
@@ -45,6 +47,7 @@ public partial class V1beta1IAMAccessBoundaryPolicySpecRulesAccessBoundaryRuleAv
 }
 
 /// <summary>An access boundary rule in an IAM policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMAccessBoundaryPolicySpecRulesAccessBoundaryRule
 {
     /// <summary>The availability condition further constrains the access allowed by the access boundary rule.</summary>
@@ -61,6 +64,7 @@ public partial class V1beta1IAMAccessBoundaryPolicySpecRulesAccessBoundaryRule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMAccessBoundaryPolicySpecRules
 {
     /// <summary>An access boundary rule in an IAM policy.</summary>
@@ -73,6 +77,7 @@ public partial class V1beta1IAMAccessBoundaryPolicySpecRules
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMAccessBoundaryPolicySpec
 {
     /// <summary>The display name of the rule.</summary>
@@ -93,6 +98,7 @@ public partial class V1beta1IAMAccessBoundaryPolicySpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMAccessBoundaryPolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -117,6 +123,7 @@ public partial class V1beta1IAMAccessBoundaryPolicyStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMAccessBoundaryPolicyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -132,8 +139,9 @@ public partial class V1beta1IAMAccessBoundaryPolicyStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1IAMAccessBoundaryPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IAMAccessBoundaryPolicySpec>, IStatus<V1beta1IAMAccessBoundaryPolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

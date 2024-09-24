@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.autoscaling.@internal.knative.dev;
 /// <summary>ScaleTargetRef defines the /scale-able resource that this PodAutoscaler is responsible for quickly right-sizing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PodAutoscalerSpecScaleTargetRef
 {
     /// <summary>API version of the referent.</summary>
@@ -25,6 +26,7 @@ public partial class V1alpha1PodAutoscalerSpecScaleTargetRef
 }
 
 /// <summary>Spec holds the desired state of the PodAutoscaler (from the client).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PodAutoscalerSpec
 {
     /// <summary>ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per container of the Revision. Defaults to `0` which means unlimited concurrency.</summary>
@@ -45,6 +47,7 @@ public partial class V1alpha1PodAutoscalerSpec
 }
 
 /// <summary>Condition defines a readiness condition for a Knative resource. See: https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#typical-status-properties</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PodAutoscalerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
@@ -73,6 +76,7 @@ public partial class V1alpha1PodAutoscalerStatusConditions
 }
 
 /// <summary>Status communicates the observed state of the PodAutoscaler (from the controller).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PodAutoscalerStatus
 {
     /// <summary>ActualScale shows the actual number of replicas for the revision.</summary>
@@ -104,8 +108,9 @@ public partial class V1alpha1PodAutoscalerStatus
     public string ServiceName { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>PodAutoscaler is a Knative abstraction that encapsulates the interface by which Knative components instantiate autoscalers.  This definition is an abstraction that may be backed by multiple definitions.  For more information, see the Knative Pluggability presentation: https://docs.google.com/presentation/d/19vW9HFZ6Puxt31biNZF3uLRejDmu82rxJIk1cWmxF7w/edit</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1PodAutoscaler : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1PodAutoscalerSpec>, IStatus<V1alpha1PodAutoscalerStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

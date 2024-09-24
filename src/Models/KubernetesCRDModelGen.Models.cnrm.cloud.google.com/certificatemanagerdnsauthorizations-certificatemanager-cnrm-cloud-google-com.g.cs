@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.certificatemanager.cnrm.cloud.google.com;
 /// <summary>The project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateManagerDNSAuthorizationSpecProjectRef
 {
     /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1CertificateManagerDNSAuthorizationSpecProjectRef
 }
 
 /// <summary>CertificateManagerDNSAuthorizationSpec defines the desired state of CertificateManagerDNSAuthorization</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateManagerDNSAuthorizationSpec
 {
     /// <summary>A human-readable description of the resource.</summary>
@@ -49,6 +51,7 @@ public partial class V1beta1CertificateManagerDNSAuthorizationSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateManagerDNSAuthorizationStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -73,6 +76,7 @@ public partial class V1beta1CertificateManagerDNSAuthorizationStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateManagerDNSAuthorizationStatusDnsResourceRecord
 {
     /// <summary>Data of the DNS Resource Record.</summary>
@@ -89,6 +93,7 @@ public partial class V1beta1CertificateManagerDNSAuthorizationStatusDnsResourceR
 }
 
 /// <summary>CertificateManagerDNSAuthorizationStatus defines the config connector machine state of CertificateManagerDNSAuthorization</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateManagerDNSAuthorizationStatus
 {
     /// <summary>Conditions represent the latest available observations of the CertificateManagerDNSAuthorization's current state.</summary>
@@ -104,8 +109,9 @@ public partial class V1beta1CertificateManagerDNSAuthorizationStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>CertificateManagerDNSAuthorization is the Schema for the CertificateManagerDNSAuthorization API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1CertificateManagerDNSAuthorization : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CertificateManagerDNSAuthorizationSpec>, IStatus<V1beta1CertificateManagerDNSAuthorizationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

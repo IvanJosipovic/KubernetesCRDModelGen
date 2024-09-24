@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.osconfig.gcp.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PatchDeploymentSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1PatchDeploymentSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderInstanceFilterGroupLabels
 {
     /// <summary>Compute Engine instance labels that must be present for a VM instance to be targeted by this filter</summary>
@@ -27,6 +29,7 @@ public partial class V1beta1PatchDeploymentSpecForProviderInstanceFilterGroupLab
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderInstanceFilter
 {
     /// <summary>Target all VM instances in the project. If true, no other criteria is permitted.</summary>
@@ -51,6 +54,7 @@ public partial class V1beta1PatchDeploymentSpecForProviderInstanceFilter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderOneTimeSchedule
 {
     /// <summary>The desired patch job execution time. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".</summary>
@@ -59,6 +63,7 @@ public partial class V1beta1PatchDeploymentSpecForProviderOneTimeSchedule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigApt
 {
     /// <summary>List of packages to exclude from update.</summary>
@@ -75,6 +80,7 @@ public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigApt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigGoo
 {
     /// <summary>goo update settings. Use this setting to override the default goo patch rules.</summary>
@@ -83,6 +89,7 @@ public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigGoo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPostStepLinuxExecStepConfigGcsObject
 {
     /// <summary>Bucket of the Cloud Storage object.</summary>
@@ -99,6 +106,7 @@ public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPostStepLin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPostStepLinuxExecStepConfig
 {
     /// <summary>Defaults to [0]. A list of possible return values that the execution can return to indicate a success.</summary>
@@ -119,6 +127,7 @@ public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPostStepLin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPostStepWindowsExecStepConfigGcsObject
 {
     /// <summary>Bucket of the Cloud Storage object.</summary>
@@ -135,6 +144,7 @@ public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPostStepWin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPostStepWindowsExecStepConfig
 {
     /// <summary>Defaults to [0]. A list of possible return values that the execution can return to indicate a success.</summary>
@@ -155,6 +165,7 @@ public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPostStepWin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPostStep
 {
     /// <summary>The ExecStepConfig for all Linux VMs targeted by the PatchJob. Structure is documented below.</summary>
@@ -167,6 +178,7 @@ public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPostStep
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPreStepLinuxExecStepConfigGcsObject
 {
     /// <summary>Bucket of the Cloud Storage object.</summary>
@@ -183,6 +195,7 @@ public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPreStepLinu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPreStepLinuxExecStepConfig
 {
     /// <summary>Defaults to [0]. A list of possible return values that the execution can return to indicate a success.</summary>
@@ -203,6 +216,7 @@ public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPreStepLinu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPreStepWindowsExecStepConfigGcsObject
 {
     /// <summary>Bucket of the Cloud Storage object.</summary>
@@ -219,6 +233,7 @@ public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPreStepWind
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPreStepWindowsExecStepConfig
 {
     /// <summary>Defaults to [0]. A list of possible return values that the execution can return to indicate a success.</summary>
@@ -239,6 +254,7 @@ public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPreStepWind
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPreStep
 {
     /// <summary>The ExecStepConfig for all Linux VMs targeted by the PatchJob. Structure is documented below.</summary>
@@ -251,6 +267,7 @@ public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPreStep
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigWindowsUpdate
 {
     /// <summary>Only apply updates of these windows update classifications. If empty, all updates are applied. Each value may be one of: CRITICAL, SECURITY, DEFINITION, DRIVER, FEATURE_PACK, SERVICE_PACK, TOOL, UPDATE_ROLLUP, UPDATE.</summary>
@@ -267,6 +284,7 @@ public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigWindowsUpda
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigYum
 {
     /// <summary>List of packages to exclude from update.</summary>
@@ -287,6 +305,7 @@ public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigYum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigZypper
 {
     /// <summary>Install only patches with these categories. Common categories include security, recommended, and feature.</summary>
@@ -315,6 +334,7 @@ public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigZypper
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderPatchConfig
 {
     /// <summary>Apt update settings. Use this setting to override the default apt patch rules. Structure is documented below.</summary>
@@ -355,6 +375,7 @@ public partial class V1beta1PatchDeploymentSpecForProviderPatchConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderRecurringScheduleMonthlyWeekDayOfMonth
 {
     /// <summary>IANA Time Zone Database time zone, e.g. "America/New_York". Possible values are: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.</summary>
@@ -371,6 +392,7 @@ public partial class V1beta1PatchDeploymentSpecForProviderRecurringScheduleMonth
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderRecurringScheduleMonthly
 {
     /// <summary>One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month. Months without the target day will be skipped. For example, a schedule to run "every month on the 31st" will not run in February, April, June, etc.</summary>
@@ -383,6 +405,7 @@ public partial class V1beta1PatchDeploymentSpecForProviderRecurringScheduleMonth
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderRecurringScheduleTimeOfDay
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
@@ -403,6 +426,7 @@ public partial class V1beta1PatchDeploymentSpecForProviderRecurringScheduleTimeO
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderRecurringScheduleTimeZone
 {
     /// <summary>IANA Time Zone Database time zone, e.g. "America/New_York".</summary>
@@ -415,6 +439,7 @@ public partial class V1beta1PatchDeploymentSpecForProviderRecurringScheduleTimeZ
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderRecurringScheduleWeekly
 {
     /// <summary>IANA Time Zone Database time zone, e.g. "America/New_York". Possible values are: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.</summary>
@@ -423,6 +448,7 @@ public partial class V1beta1PatchDeploymentSpecForProviderRecurringScheduleWeekl
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderRecurringSchedule
 {
     /// <summary>The end time at which a recurring patch deployment schedule is no longer active. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".</summary>
@@ -451,6 +477,7 @@ public partial class V1beta1PatchDeploymentSpecForProviderRecurringSchedule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderRolloutDisruptionBudget
 {
     /// <summary>Specifies a fixed value.</summary>
@@ -463,6 +490,7 @@ public partial class V1beta1PatchDeploymentSpecForProviderRolloutDisruptionBudge
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderRollout
 {
     /// <summary>The maximum number (or percentage) of VMs per zone to disrupt at any given moment. The number of VMs calculated from multiplying the percentage by the total number of VMs in a zone is rounded up. During patching, a VM is considered disrupted from the time the agent is notified to begin until patching has completed. This disruption time includes the time to complete reboot and any post-patch steps. A VM contributes to the disruption budget if its patching operation fails either when applying the patches, running pre or post patch steps, or if it fails to respond with a success notification before timing out. VMs that are not running or do not have an active agent do not count toward this disruption budget. For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the patch job stops, because continuing to the next zone requires completion of the patch process in the previous zone. For example, if the disruption budget has a fixed value of 10, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops. Structure is documented below.</summary>
@@ -475,6 +503,7 @@ public partial class V1beta1PatchDeploymentSpecForProviderRollout
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProvider
 {
     /// <summary>Description of the patch deployment. Length of the description is limited to 1024 characters.</summary>
@@ -511,6 +540,7 @@ public partial class V1beta1PatchDeploymentSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderInstanceFilterGroupLabels
 {
     /// <summary>Compute Engine instance labels that must be present for a VM instance to be targeted by this filter</summary>
@@ -519,6 +549,7 @@ public partial class V1beta1PatchDeploymentSpecInitProviderInstanceFilterGroupLa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderInstanceFilter
 {
     /// <summary>Target all VM instances in the project. If true, no other criteria is permitted.</summary>
@@ -543,6 +574,7 @@ public partial class V1beta1PatchDeploymentSpecInitProviderInstanceFilter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderOneTimeSchedule
 {
     /// <summary>The desired patch job execution time. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".</summary>
@@ -551,6 +583,7 @@ public partial class V1beta1PatchDeploymentSpecInitProviderOneTimeSchedule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigApt
 {
     /// <summary>List of packages to exclude from update.</summary>
@@ -567,6 +600,7 @@ public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigApt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigGoo
 {
     /// <summary>goo update settings. Use this setting to override the default goo patch rules.</summary>
@@ -575,6 +609,7 @@ public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigGoo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPostStepLinuxExecStepConfigGcsObject
 {
     /// <summary>Bucket of the Cloud Storage object.</summary>
@@ -591,6 +626,7 @@ public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPostStepLi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPostStepLinuxExecStepConfig
 {
     /// <summary>Defaults to [0]. A list of possible return values that the execution can return to indicate a success.</summary>
@@ -611,6 +647,7 @@ public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPostStepLi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPostStepWindowsExecStepConfigGcsObject
 {
     /// <summary>Bucket of the Cloud Storage object.</summary>
@@ -627,6 +664,7 @@ public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPostStepWi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPostStepWindowsExecStepConfig
 {
     /// <summary>Defaults to [0]. A list of possible return values that the execution can return to indicate a success.</summary>
@@ -647,6 +685,7 @@ public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPostStepWi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPostStep
 {
     /// <summary>The ExecStepConfig for all Linux VMs targeted by the PatchJob. Structure is documented below.</summary>
@@ -659,6 +698,7 @@ public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPostStep
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPreStepLinuxExecStepConfigGcsObject
 {
     /// <summary>Bucket of the Cloud Storage object.</summary>
@@ -675,6 +715,7 @@ public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPreStepLin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPreStepLinuxExecStepConfig
 {
     /// <summary>Defaults to [0]. A list of possible return values that the execution can return to indicate a success.</summary>
@@ -695,6 +736,7 @@ public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPreStepLin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPreStepWindowsExecStepConfigGcsObject
 {
     /// <summary>Bucket of the Cloud Storage object.</summary>
@@ -711,6 +753,7 @@ public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPreStepWin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPreStepWindowsExecStepConfig
 {
     /// <summary>Defaults to [0]. A list of possible return values that the execution can return to indicate a success.</summary>
@@ -731,6 +774,7 @@ public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPreStepWin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPreStep
 {
     /// <summary>The ExecStepConfig for all Linux VMs targeted by the PatchJob. Structure is documented below.</summary>
@@ -743,6 +787,7 @@ public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPreStep
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigWindowsUpdate
 {
     /// <summary>Only apply updates of these windows update classifications. If empty, all updates are applied. Each value may be one of: CRITICAL, SECURITY, DEFINITION, DRIVER, FEATURE_PACK, SERVICE_PACK, TOOL, UPDATE_ROLLUP, UPDATE.</summary>
@@ -759,6 +804,7 @@ public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigWindowsUpd
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigYum
 {
     /// <summary>List of packages to exclude from update.</summary>
@@ -779,6 +825,7 @@ public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigYum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigZypper
 {
     /// <summary>Install only patches with these categories. Common categories include security, recommended, and feature.</summary>
@@ -807,6 +854,7 @@ public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigZypper
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfig
 {
     /// <summary>Apt update settings. Use this setting to override the default apt patch rules. Structure is documented below.</summary>
@@ -847,6 +895,7 @@ public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderRecurringScheduleMonthlyWeekDayOfMonth
 {
     /// <summary>IANA Time Zone Database time zone, e.g. "America/New_York". Possible values are: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.</summary>
@@ -863,6 +912,7 @@ public partial class V1beta1PatchDeploymentSpecInitProviderRecurringScheduleMont
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderRecurringScheduleMonthly
 {
     /// <summary>One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month. Months without the target day will be skipped. For example, a schedule to run "every month on the 31st" will not run in February, April, June, etc.</summary>
@@ -875,6 +925,7 @@ public partial class V1beta1PatchDeploymentSpecInitProviderRecurringScheduleMont
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderRecurringScheduleTimeOfDay
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
@@ -895,6 +946,7 @@ public partial class V1beta1PatchDeploymentSpecInitProviderRecurringScheduleTime
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderRecurringScheduleTimeZone
 {
     /// <summary>IANA Time Zone Database time zone, e.g. "America/New_York".</summary>
@@ -907,6 +959,7 @@ public partial class V1beta1PatchDeploymentSpecInitProviderRecurringScheduleTime
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderRecurringScheduleWeekly
 {
     /// <summary>IANA Time Zone Database time zone, e.g. "America/New_York". Possible values are: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.</summary>
@@ -915,6 +968,7 @@ public partial class V1beta1PatchDeploymentSpecInitProviderRecurringScheduleWeek
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderRecurringSchedule
 {
     /// <summary>The end time at which a recurring patch deployment schedule is no longer active. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".</summary>
@@ -943,6 +997,7 @@ public partial class V1beta1PatchDeploymentSpecInitProviderRecurringSchedule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderRolloutDisruptionBudget
 {
     /// <summary>Specifies a fixed value.</summary>
@@ -955,6 +1010,7 @@ public partial class V1beta1PatchDeploymentSpecInitProviderRolloutDisruptionBudg
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderRollout
 {
     /// <summary>The maximum number (or percentage) of VMs per zone to disrupt at any given moment. The number of VMs calculated from multiplying the percentage by the total number of VMs in a zone is rounded up. During patching, a VM is considered disrupted from the time the agent is notified to begin until patching has completed. This disruption time includes the time to complete reboot and any post-patch steps. A VM contributes to the disruption budget if its patching operation fails either when applying the patches, running pre or post patch steps, or if it fails to respond with a success notification before timing out. VMs that are not running or do not have an active agent do not count toward this disruption budget. For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the patch job stops, because continuing to the next zone requires completion of the patch process in the previous zone. For example, if the disruption budget has a fixed value of 10, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops. Structure is documented below.</summary>
@@ -967,6 +1023,7 @@ public partial class V1beta1PatchDeploymentSpecInitProviderRollout
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProvider
 {
     /// <summary>Description of the patch deployment. Length of the description is limited to 1024 characters.</summary>
@@ -1002,6 +1059,7 @@ public partial class V1beta1PatchDeploymentSpecInitProvider
     public IList<V1beta1PatchDeploymentSpecInitProviderRollout>? Rollout { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PatchDeploymentSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -1024,6 +1082,7 @@ public enum V1beta1PatchDeploymentSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PatchDeploymentSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1034,6 +1093,7 @@ public enum V1beta1PatchDeploymentSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PatchDeploymentSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1045,6 +1105,7 @@ public enum V1beta1PatchDeploymentSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1059,6 +1120,7 @@ public partial class V1beta1PatchDeploymentSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1070,6 +1132,7 @@ public partial class V1beta1PatchDeploymentSpecProviderConfigRef
     public V1beta1PatchDeploymentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PatchDeploymentSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1080,6 +1143,7 @@ public enum V1beta1PatchDeploymentSpecPublishConnectionDetailsToConfigRefPolicyR
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PatchDeploymentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1091,6 +1155,7 @@ public enum V1beta1PatchDeploymentSpecPublishConnectionDetailsToConfigRefPolicyR
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1105,6 +1170,7 @@ public partial class V1beta1PatchDeploymentSpecPublishConnectionDetailsToConfigR
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1117,6 +1183,7 @@ public partial class V1beta1PatchDeploymentSpecPublishConnectionDetailsToConfigR
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1133,6 +1200,7 @@ public partial class V1beta1PatchDeploymentSpecPublishConnectionDetailsToMetadat
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1149,6 +1217,7 @@ public partial class V1beta1PatchDeploymentSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1161,6 +1230,7 @@ public partial class V1beta1PatchDeploymentSpecWriteConnectionSecretToRef
 }
 
 /// <summary>PatchDeploymentSpec defines the desired state of PatchDeployment</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1194,6 +1264,7 @@ public partial class V1beta1PatchDeploymentSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderInstanceFilterGroupLabels
 {
     /// <summary>Compute Engine instance labels that must be present for a VM instance to be targeted by this filter</summary>
@@ -1202,6 +1273,7 @@ public partial class V1beta1PatchDeploymentStatusAtProviderInstanceFilterGroupLa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderInstanceFilter
 {
     /// <summary>Target all VM instances in the project. If true, no other criteria is permitted.</summary>
@@ -1226,6 +1298,7 @@ public partial class V1beta1PatchDeploymentStatusAtProviderInstanceFilter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderOneTimeSchedule
 {
     /// <summary>The desired patch job execution time. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".</summary>
@@ -1234,6 +1307,7 @@ public partial class V1beta1PatchDeploymentStatusAtProviderOneTimeSchedule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigApt
 {
     /// <summary>List of packages to exclude from update.</summary>
@@ -1250,6 +1324,7 @@ public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigApt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigGoo
 {
     /// <summary>goo update settings. Use this setting to override the default goo patch rules.</summary>
@@ -1258,6 +1333,7 @@ public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigGoo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPostStepLinuxExecStepConfigGcsObject
 {
     /// <summary>Bucket of the Cloud Storage object.</summary>
@@ -1274,6 +1350,7 @@ public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPostStepLi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPostStepLinuxExecStepConfig
 {
     /// <summary>Defaults to [0]. A list of possible return values that the execution can return to indicate a success.</summary>
@@ -1294,6 +1371,7 @@ public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPostStepLi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPostStepWindowsExecStepConfigGcsObject
 {
     /// <summary>Bucket of the Cloud Storage object.</summary>
@@ -1310,6 +1388,7 @@ public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPostStepWi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPostStepWindowsExecStepConfig
 {
     /// <summary>Defaults to [0]. A list of possible return values that the execution can return to indicate a success.</summary>
@@ -1330,6 +1409,7 @@ public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPostStepWi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPostStep
 {
     /// <summary>The ExecStepConfig for all Linux VMs targeted by the PatchJob. Structure is documented below.</summary>
@@ -1342,6 +1422,7 @@ public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPostStep
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPreStepLinuxExecStepConfigGcsObject
 {
     /// <summary>Bucket of the Cloud Storage object.</summary>
@@ -1358,6 +1439,7 @@ public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPreStepLin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPreStepLinuxExecStepConfig
 {
     /// <summary>Defaults to [0]. A list of possible return values that the execution can return to indicate a success.</summary>
@@ -1378,6 +1460,7 @@ public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPreStepLin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPreStepWindowsExecStepConfigGcsObject
 {
     /// <summary>Bucket of the Cloud Storage object.</summary>
@@ -1394,6 +1477,7 @@ public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPreStepWin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPreStepWindowsExecStepConfig
 {
     /// <summary>Defaults to [0]. A list of possible return values that the execution can return to indicate a success.</summary>
@@ -1414,6 +1498,7 @@ public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPreStepWin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPreStep
 {
     /// <summary>The ExecStepConfig for all Linux VMs targeted by the PatchJob. Structure is documented below.</summary>
@@ -1426,6 +1511,7 @@ public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPreStep
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigWindowsUpdate
 {
     /// <summary>Only apply updates of these windows update classifications. If empty, all updates are applied. Each value may be one of: CRITICAL, SECURITY, DEFINITION, DRIVER, FEATURE_PACK, SERVICE_PACK, TOOL, UPDATE_ROLLUP, UPDATE.</summary>
@@ -1442,6 +1528,7 @@ public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigWindowsUpd
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigYum
 {
     /// <summary>List of packages to exclude from update.</summary>
@@ -1462,6 +1549,7 @@ public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigYum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigZypper
 {
     /// <summary>Install only patches with these categories. Common categories include security, recommended, and feature.</summary>
@@ -1490,6 +1578,7 @@ public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigZypper
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfig
 {
     /// <summary>Apt update settings. Use this setting to override the default apt patch rules. Structure is documented below.</summary>
@@ -1530,6 +1619,7 @@ public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderRecurringScheduleMonthlyWeekDayOfMonth
 {
     /// <summary>IANA Time Zone Database time zone, e.g. "America/New_York". Possible values are: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.</summary>
@@ -1546,6 +1636,7 @@ public partial class V1beta1PatchDeploymentStatusAtProviderRecurringScheduleMont
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderRecurringScheduleMonthly
 {
     /// <summary>One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month. Months without the target day will be skipped. For example, a schedule to run "every month on the 31st" will not run in February, April, June, etc.</summary>
@@ -1558,6 +1649,7 @@ public partial class V1beta1PatchDeploymentStatusAtProviderRecurringScheduleMont
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderRecurringScheduleTimeOfDay
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
@@ -1578,6 +1670,7 @@ public partial class V1beta1PatchDeploymentStatusAtProviderRecurringScheduleTime
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderRecurringScheduleTimeZone
 {
     /// <summary>IANA Time Zone Database time zone, e.g. "America/New_York".</summary>
@@ -1590,6 +1683,7 @@ public partial class V1beta1PatchDeploymentStatusAtProviderRecurringScheduleTime
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderRecurringScheduleWeekly
 {
     /// <summary>IANA Time Zone Database time zone, e.g. "America/New_York". Possible values are: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.</summary>
@@ -1598,6 +1692,7 @@ public partial class V1beta1PatchDeploymentStatusAtProviderRecurringScheduleWeek
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderRecurringSchedule
 {
     /// <summary>The end time at which a recurring patch deployment schedule is no longer active. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".</summary>
@@ -1634,6 +1729,7 @@ public partial class V1beta1PatchDeploymentStatusAtProviderRecurringSchedule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderRolloutDisruptionBudget
 {
     /// <summary>Specifies a fixed value.</summary>
@@ -1646,6 +1742,7 @@ public partial class V1beta1PatchDeploymentStatusAtProviderRolloutDisruptionBudg
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderRollout
 {
     /// <summary>The maximum number (or percentage) of VMs per zone to disrupt at any given moment. The number of VMs calculated from multiplying the percentage by the total number of VMs in a zone is rounded up. During patching, a VM is considered disrupted from the time the agent is notified to begin until patching has completed. This disruption time includes the time to complete reboot and any post-patch steps. A VM contributes to the disruption budget if its patching operation fails either when applying the patches, running pre or post patch steps, or if it fails to respond with a success notification before timing out. VMs that are not running or do not have an active agent do not count toward this disruption budget. For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the patch job stops, because continuing to the next zone requires completion of the patch process in the previous zone. For example, if the disruption budget has a fixed value of 10, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops. Structure is documented below.</summary>
@@ -1658,6 +1755,7 @@ public partial class V1beta1PatchDeploymentStatusAtProviderRollout
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProvider
 {
     /// <summary>Time the patch deployment was created. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".</summary>
@@ -1714,6 +1812,7 @@ public partial class V1beta1PatchDeploymentStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1742,6 +1841,7 @@ public partial class V1beta1PatchDeploymentStatusConditions
 }
 
 /// <summary>PatchDeploymentStatus defines the observed state of PatchDeployment.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatus
 {
     /// <summary></summary>
@@ -1757,8 +1857,9 @@ public partial class V1beta1PatchDeploymentStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>PatchDeployment is the Schema for the PatchDeployments API. Patch deployments are configurations that individual patch jobs use to complete a patch.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1PatchDeployment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1PatchDeploymentSpec>, IStatus<V1beta1PatchDeploymentStatus>
 {
     public const string KubeApiVersion = "v1beta1";

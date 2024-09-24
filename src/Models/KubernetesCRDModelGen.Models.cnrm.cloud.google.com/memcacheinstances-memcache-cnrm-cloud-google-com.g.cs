@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.memcache.cnrm.cloud.google.com;
 /// <summary>Required. Start time of the window in UTC time.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MemcacheInstanceSpecMaintenancePolicyWeeklyMaintenanceWindowStartTime
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1MemcacheInstanceSpecMaintenancePolicyWeeklyMaintenan
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MemcacheInstanceSpecMaintenancePolicyWeeklyMaintenanceWindow
 {
     /// <summary>Required. The day of week that maintenance updates occur. - DAY_OF_WEEK_UNSPECIFIED: The day of the week is unspecified. - MONDAY: Monday - TUESDAY: Tuesday - WEDNESDAY: Wednesday - THURSDAY: Thursday - FRIDAY: Friday - SATURDAY: Saturday - SUNDAY: Sunday Possible values: ["DAY_OF_WEEK_UNSPECIFIED", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"].</summary>
@@ -45,6 +47,7 @@ public partial class V1beta1MemcacheInstanceSpecMaintenancePolicyWeeklyMaintenan
 }
 
 /// <summary>Maintenance policy for an instance.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MemcacheInstanceSpecMaintenancePolicy
 {
     /// <summary>Output only. The time when the policy was created. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.</summary>
@@ -65,6 +68,7 @@ public partial class V1beta1MemcacheInstanceSpecMaintenancePolicy
 }
 
 /// <summary>Immutable. User-specified parameters for this memcache instance.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MemcacheInstanceSpecMemcacheParameters
 {
     /// <summary>This is a unique ID associated with this set of parameters.</summary>
@@ -77,6 +81,7 @@ public partial class V1beta1MemcacheInstanceSpecMemcacheParameters
 }
 
 /// <summary>The full name of the network to connect the instance to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MemcacheInstanceSpecNetworkRef
 {
     /// <summary>Allowed value: string of the format `projects/{{project}}/global/networks/{{value}}`, where {{value}} is the `name` field of a `ComputeNetwork` resource.</summary>
@@ -93,6 +98,7 @@ public partial class V1beta1MemcacheInstanceSpecNetworkRef
 }
 
 /// <summary>Immutable. Configuration for memcache nodes.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MemcacheInstanceSpecNodeConfig
 {
     /// <summary>Number of CPUs per node.</summary>
@@ -105,6 +111,7 @@ public partial class V1beta1MemcacheInstanceSpecNodeConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MemcacheInstanceSpec
 {
     /// <summary>A user-visible name for the instance.</summary>
@@ -149,6 +156,7 @@ public partial class V1beta1MemcacheInstanceSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MemcacheInstanceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -173,6 +181,7 @@ public partial class V1beta1MemcacheInstanceStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MemcacheInstanceStatusMaintenanceSchedule
 {
     /// <summary>Output only. The end time of any upcoming scheduled maintenance for this instance. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.</summary>
@@ -189,6 +198,7 @@ public partial class V1beta1MemcacheInstanceStatusMaintenanceSchedule
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MemcacheInstanceStatusMemcacheNodes
 {
     /// <summary>Hostname or IP address of the Memcached node used by the clients to connect to the Memcached server on this node.</summary>
@@ -213,6 +223,7 @@ public partial class V1beta1MemcacheInstanceStatusMemcacheNodes
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MemcacheInstanceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -244,8 +255,9 @@ public partial class V1beta1MemcacheInstanceStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1MemcacheInstance : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MemcacheInstanceSpec>, IStatus<V1beta1MemcacheInstanceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

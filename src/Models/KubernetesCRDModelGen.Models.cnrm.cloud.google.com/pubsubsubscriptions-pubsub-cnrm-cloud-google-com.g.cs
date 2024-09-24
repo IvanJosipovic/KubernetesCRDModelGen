@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.pubsub.cnrm.cloud.google.com;
 /// <summary>The name of the table to which to write data.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PubSubSubscriptionSpecBigqueryConfigTableRef
 {
     /// <summary>Allowed value: string of the format `{{project}}.{{dataset_id}}.{{value}}`, where {{value}} is the `name` field of a `BigQueryTable` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1PubSubSubscriptionSpecBigqueryConfigTableRef
 }
 
 /// <summary>If delivery to BigQuery is used with this subscription, this field is used to configure it. Either pushConfig, bigQueryConfig or cloudStorageConfig can be set, but not combined. If all three are empty, then the subscriber will pull and ack messages using API methods.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PubSubSubscriptionSpecBigqueryConfig
 {
     /// <summary>When true and useTopicSchema is true, any fields that are a part of the topic schema that are not part of the BigQuery table schema are dropped when writing to BigQuery. Otherwise, the schemas must be kept in sync and any messages with extra fields are not written and remain in the subscription's backlog.</summary>
@@ -45,6 +47,7 @@ public partial class V1beta1PubSubSubscriptionSpecBigqueryConfig
 }
 
 /// <summary>If set, message data will be written to Cloud Storage in Avro format.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PubSubSubscriptionSpecCloudStorageConfigAvroConfig
 {
     /// <summary>When true, write the subscription name, messageId, publishTime, attributes, and orderingKey as additional fields in the output.</summary>
@@ -53,6 +56,7 @@ public partial class V1beta1PubSubSubscriptionSpecCloudStorageConfigAvroConfig
 }
 
 /// <summary>User-provided name for the Cloud Storage bucket. The bucket must be created by the user. The bucket name must be without any prefix like "gs://".</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PubSubSubscriptionSpecCloudStorageConfigBucketRef
 {
     /// <summary>Allowed value: The `name` field of a `StorageBucket` resource.</summary>
@@ -69,6 +73,7 @@ public partial class V1beta1PubSubSubscriptionSpecCloudStorageConfigBucketRef
 }
 
 /// <summary>If delivery to Cloud Storage is used with this subscription, this field is used to configure it. Either pushConfig, bigQueryConfig or cloudStorageConfig can be set, but not combined. If all three are empty, then the subscriber will pull and ack messages using API methods.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PubSubSubscriptionSpecCloudStorageConfig
 {
     /// <summary>If set, message data will be written to Cloud Storage in Avro format.</summary>
@@ -101,6 +106,7 @@ public partial class V1beta1PubSubSubscriptionSpecCloudStorageConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PubSubSubscriptionSpecDeadLetterPolicyDeadLetterTopicRef
 {
     /// <summary>Allowed value: string of the format `projects/{{project}}/topics/{{value}}`, where {{value}} is the `name` field of a `PubSubTopic` resource.</summary>
@@ -117,6 +123,7 @@ public partial class V1beta1PubSubSubscriptionSpecDeadLetterPolicyDeadLetterTopi
 }
 
 /// <summary>A policy that specifies the conditions for dead lettering messages in this subscription. If dead_letter_policy is not set, dead lettering is disabled.  The Cloud Pub/Sub service account associated with this subscription's parent project (i.e., service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to Acknowledge() messages on this subscription.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PubSubSubscriptionSpecDeadLetterPolicy
 {
     /// <summary></summary>
@@ -129,6 +136,7 @@ public partial class V1beta1PubSubSubscriptionSpecDeadLetterPolicy
 }
 
 /// <summary>A policy that specifies the conditions for this subscription's expiration. A subscription is considered active as long as any connected subscriber is successfully consuming messages from the subscription or is issuing operations on the subscription. If expirationPolicy is not set, a default policy with ttl of 31 days will be used.  If it is set but ttl is "", the resource never expires.  The minimum allowed value for expirationPolicy.ttl is 1 day.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PubSubSubscriptionSpecExpirationPolicy
 {
     /// <summary>Specifies the "time-to-live" duration for an associated resource. The resource expires if it is not active for a period of ttl. If ttl is set to "", the associated resource never expires. A duration in seconds with up to nine fractional digits, terminated by 's'. Example - "3.5s".</summary>
@@ -137,6 +145,7 @@ public partial class V1beta1PubSubSubscriptionSpecExpirationPolicy
 }
 
 /// <summary>When set, the payload to the push endpoint is not wrapped.Sets the 'data' field as the HTTP body for delivery.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PubSubSubscriptionSpecPushConfigNoWrapper
 {
     /// <summary>When true, writes the Pub/Sub message metadata to 'x-goog-pubsub-&lt;KEY&gt;:&lt;VAL&gt;' headers of the HTTP request. Writes the Pub/Sub message attributes to '&lt;KEY&gt;:&lt;VAL&gt;' headers of the HTTP request.</summary>
@@ -145,6 +154,7 @@ public partial class V1beta1PubSubSubscriptionSpecPushConfigNoWrapper
 }
 
 /// <summary>If specified, Pub/Sub will generate and attach an OIDC JWT token as an Authorization header in the HTTP request for every pushed message.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PubSubSubscriptionSpecPushConfigOidcToken
 {
     /// <summary>Audience to be used when generating OIDC token. The audience claim identifies the recipients that the JWT is intended for. The audience value is a single case-sensitive string. Having multiple values (array) for the audience field is not supported. More info about the OIDC JWT token audience here: https://tools.ietf.org/html/rfc7519#section-4.1.3 Note: if not specified, the Push endpoint URL will be used.</summary>
@@ -157,6 +167,7 @@ public partial class V1beta1PubSubSubscriptionSpecPushConfigOidcToken
 }
 
 /// <summary>If push delivery is used with this subscription, this field is used to configure it. An empty pushConfig signifies that the subscriber will pull and ack messages using API methods.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PubSubSubscriptionSpecPushConfig
 {
     /// <summary>Endpoint configuration attributes.  Every endpoint has a set of API supported attributes that can be used to control different aspects of the message delivery.  The currently supported attribute is x-goog-version, which you can use to change the format of the pushed message. This attribute indicates the version of the data expected by the endpoint. This controls the shape of the pushed message (i.e., its fields and metadata). The endpoint version is based on the version of the Pub/Sub API.  If not present during the subscriptions.create call, it will default to the version of the API used to make such call. If not present during a subscriptions.modifyPushConfig call, its value will not be changed. subscriptions.get calls will always return a valid version, even if the subscription was created without this attribute.  The possible values for this attribute are:  - v1beta1: uses the push format defined in the v1beta1 Pub/Sub API. - v1 or v1beta2: uses the push format defined in the v1 Pub/Sub API.</summary>
@@ -177,6 +188,7 @@ public partial class V1beta1PubSubSubscriptionSpecPushConfig
 }
 
 /// <summary>A policy that specifies how Pub/Sub retries message delivery for this subscription.  If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers. RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PubSubSubscriptionSpecRetryPolicy
 {
     /// <summary>The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds. A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".</summary>
@@ -189,6 +201,7 @@ public partial class V1beta1PubSubSubscriptionSpecRetryPolicy
 }
 
 /// <summary>Reference to a PubSubTopic.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PubSubSubscriptionSpecTopicRef
 {
     /// <summary>Allowed value: string of the format `projects/{{project}}/topics/{{value}}`, where {{value}} is the `name` field of a `PubSubTopic` resource.</summary>
@@ -205,6 +218,7 @@ public partial class V1beta1PubSubSubscriptionSpecTopicRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PubSubSubscriptionSpec
 {
     /// <summary>This value is the maximum time after a subscriber receives a message before the subscriber should acknowledge the message. After message delivery but before the ack deadline expires and before the message is acknowledged, it is an outstanding message and will not be delivered again during that time (on a best-effort basis).  For pull subscriptions, this value is used as the initial value for the ack deadline. To override this value for a given message, call subscriptions.modifyAckDeadline with the corresponding ackId if using pull. The minimum custom deadline you can specify is 10 seconds. The maximum custom deadline you can specify is 600 seconds (10 minutes). If this parameter is 0, a default value of 10 seconds is used.  For push delivery, this value is also used to set the request timeout for the call to the push endpoint.  If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver the message.</summary>
@@ -265,6 +279,7 @@ public partial class V1beta1PubSubSubscriptionSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PubSubSubscriptionStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -289,6 +304,7 @@ public partial class V1beta1PubSubSubscriptionStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PubSubSubscriptionStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -300,8 +316,9 @@ public partial class V1beta1PubSubSubscriptionStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1PubSubSubscription : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1PubSubSubscriptionSpec>, IStatus<V1beta1PubSubSubscriptionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

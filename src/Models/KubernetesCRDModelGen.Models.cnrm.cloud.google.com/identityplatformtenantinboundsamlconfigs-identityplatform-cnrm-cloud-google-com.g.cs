@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.identityplatform.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigSpecIdpConfigIdpCertificates
 {
     /// <summary>The x509 certificate.</summary>
@@ -17,6 +18,7 @@ public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigSpecIdpConfi
 }
 
 /// <summary>SAML IdP configuration when the project acts as the relying party.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigSpecIdpConfig
 {
     /// <summary>The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.</summary>
@@ -37,6 +39,7 @@ public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigSpecIdpConfi
 }
 
 /// <summary>The project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -53,6 +56,7 @@ public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigSpecProjectR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigSpecSpConfigSpCertificates
 {
     /// <summary>The x509 certificate.</summary>
@@ -61,6 +65,7 @@ public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigSpecSpConfig
 }
 
 /// <summary>SAML SP (Service Provider) configuration when the project acts as the relying party to receive and accept an authentication assertion issued by a SAML identity provider.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigSpecSpConfig
 {
     /// <summary>Callback URI where responses from IDP are handled. Must start with 'https://'.</summary>
@@ -77,6 +82,7 @@ public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigSpecSpConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigSpec
 {
     /// <summary>Human friendly display name.</summary>
@@ -109,6 +115,7 @@ public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -133,6 +140,7 @@ public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigStatusCondit
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -144,8 +152,9 @@ public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1IdentityPlatformTenantInboundSAMLConfigSpec>, IStatus<V1alpha1IdentityPlatformTenantInboundSAMLConfigStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.com;
 /// <summary>Storage version of v1api20221001.EmailNotification Email notification of an autoscale event.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingSpecNotificationsEmail
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -29,6 +30,7 @@ public partial class V1api20221001storageAutoscaleSettingSpecNotificationsEmail
 }
 
 /// <summary>Storage version of v1api20221001.WebhookNotification Webhook notification of an autoscale event.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingSpecNotificationsWebhooks
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -45,6 +47,7 @@ public partial class V1api20221001storageAutoscaleSettingSpecNotificationsWebhoo
 }
 
 /// <summary>Storage version of v1api20221001.AutoscaleNotification Autoscale notification.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingSpecNotifications
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -65,6 +68,7 @@ public partial class V1api20221001storageAutoscaleSettingSpecNotifications
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingSpecOwner
 {
     /// <summary></summary>
@@ -77,6 +81,7 @@ public partial class V1api20221001storageAutoscaleSettingSpecOwner
 }
 
 /// <summary>Storage version of v1api20221001.PredictiveAutoscalePolicy The parameters for enabling predictive autoscale.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingSpecPredictiveAutoscalePolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -93,6 +98,7 @@ public partial class V1api20221001storageAutoscaleSettingSpecPredictiveAutoscale
 }
 
 /// <summary>Storage version of v1api20221001.ScaleCapacity The number of instances that can be used during this profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingSpecProfilesCapacity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -113,6 +119,7 @@ public partial class V1api20221001storageAutoscaleSettingSpecProfilesCapacity
 }
 
 /// <summary>Storage version of v1api20221001.TimeWindow A specific date-time for the profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingSpecProfilesFixedDate
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -133,6 +140,7 @@ public partial class V1api20221001storageAutoscaleSettingSpecProfilesFixedDate
 }
 
 /// <summary>Storage version of v1api20221001.RecurrentSchedule The scheduling constraints for when the profile begins.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingSpecProfilesRecurrenceSchedule
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -157,6 +165,7 @@ public partial class V1api20221001storageAutoscaleSettingSpecProfilesRecurrenceS
 }
 
 /// <summary>Storage version of v1api20221001.Recurrence The repeating times at which this profile begins. This element is not used if the FixedDate element is used.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingSpecProfilesRecurrence
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -173,6 +182,7 @@ public partial class V1api20221001storageAutoscaleSettingSpecProfilesRecurrence
 }
 
 /// <summary>Storage version of v1api20221001.ScaleRuleMetricDimension Specifies an auto scale rule metric dimension.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingSpecProfilesRulesMetricTriggerDimensions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -193,6 +203,7 @@ public partial class V1api20221001storageAutoscaleSettingSpecProfilesRulesMetric
 }
 
 /// <summary>MetricResourceUriReference: the resource identifier of the resource the rule monitors.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingSpecProfilesRulesMetricTriggerMetricResourceUriReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -213,6 +224,7 @@ public partial class V1api20221001storageAutoscaleSettingSpecProfilesRulesMetric
 }
 
 /// <summary>Storage version of v1api20221001.MetricTrigger The trigger that results in a scaling action.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingSpecProfilesRulesMetricTrigger
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -269,6 +281,7 @@ public partial class V1api20221001storageAutoscaleSettingSpecProfilesRulesMetric
 }
 
 /// <summary>Storage version of v1api20221001.ScaleAction The parameters for the scaling action.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingSpecProfilesRulesScaleAction
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -293,6 +306,7 @@ public partial class V1api20221001storageAutoscaleSettingSpecProfilesRulesScaleA
 }
 
 /// <summary>Storage version of v1api20221001.ScaleRule A rule that provide the triggers and parameters for the scaling action.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingSpecProfilesRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -309,6 +323,7 @@ public partial class V1api20221001storageAutoscaleSettingSpecProfilesRules
 }
 
 /// <summary>Storage version of v1api20221001.AutoscaleProfile Autoscale profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingSpecProfiles
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -337,6 +352,7 @@ public partial class V1api20221001storageAutoscaleSettingSpecProfiles
 }
 
 /// <summary>TargetResourceUriReference: the resource identifier of the resource that the autoscale setting should be added to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingSpecTargetResourceUriReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -357,6 +373,7 @@ public partial class V1api20221001storageAutoscaleSettingSpecTargetResourceUriRe
 }
 
 /// <summary>Storage version of v1api20221001.Autoscalesetting_Spec</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -413,6 +430,7 @@ public partial class V1api20221001storageAutoscaleSettingSpec
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -445,6 +463,7 @@ public partial class V1api20221001storageAutoscaleSettingStatusConditions
 }
 
 /// <summary>Storage version of v1api20221001.EmailNotification_STATUS Email notification of an autoscale event.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingStatusNotificationsEmail
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -465,6 +484,7 @@ public partial class V1api20221001storageAutoscaleSettingStatusNotificationsEmai
 }
 
 /// <summary>Storage version of v1api20221001.WebhookNotification_STATUS Webhook notification of an autoscale event.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingStatusNotificationsWebhooks
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -481,6 +501,7 @@ public partial class V1api20221001storageAutoscaleSettingStatusNotificationsWebh
 }
 
 /// <summary>Storage version of v1api20221001.AutoscaleNotification_STATUS Autoscale notification.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingStatusNotifications
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -501,6 +522,7 @@ public partial class V1api20221001storageAutoscaleSettingStatusNotifications
 }
 
 /// <summary>Storage version of v1api20221001.PredictiveAutoscalePolicy_STATUS The parameters for enabling predictive autoscale.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingStatusPredictiveAutoscalePolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -517,6 +539,7 @@ public partial class V1api20221001storageAutoscaleSettingStatusPredictiveAutosca
 }
 
 /// <summary>Storage version of v1api20221001.ScaleCapacity_STATUS The number of instances that can be used during this profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingStatusProfilesCapacity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -537,6 +560,7 @@ public partial class V1api20221001storageAutoscaleSettingStatusProfilesCapacity
 }
 
 /// <summary>Storage version of v1api20221001.TimeWindow_STATUS A specific date-time for the profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingStatusProfilesFixedDate
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -557,6 +581,7 @@ public partial class V1api20221001storageAutoscaleSettingStatusProfilesFixedDate
 }
 
 /// <summary>Storage version of v1api20221001.RecurrentSchedule_STATUS The scheduling constraints for when the profile begins.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingStatusProfilesRecurrenceSchedule
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -581,6 +606,7 @@ public partial class V1api20221001storageAutoscaleSettingStatusProfilesRecurrenc
 }
 
 /// <summary>Storage version of v1api20221001.Recurrence_STATUS The repeating times at which this profile begins. This element is not used if the FixedDate element is used.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingStatusProfilesRecurrence
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -597,6 +623,7 @@ public partial class V1api20221001storageAutoscaleSettingStatusProfilesRecurrenc
 }
 
 /// <summary>Storage version of v1api20221001.ScaleRuleMetricDimension_STATUS Specifies an auto scale rule metric dimension.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingStatusProfilesRulesMetricTriggerDimensions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -617,6 +644,7 @@ public partial class V1api20221001storageAutoscaleSettingStatusProfilesRulesMetr
 }
 
 /// <summary>Storage version of v1api20221001.MetricTrigger_STATUS The trigger that results in a scaling action.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingStatusProfilesRulesMetricTrigger
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -673,6 +701,7 @@ public partial class V1api20221001storageAutoscaleSettingStatusProfilesRulesMetr
 }
 
 /// <summary>Storage version of v1api20221001.ScaleAction_STATUS The parameters for the scaling action.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingStatusProfilesRulesScaleAction
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -697,6 +726,7 @@ public partial class V1api20221001storageAutoscaleSettingStatusProfilesRulesScal
 }
 
 /// <summary>Storage version of v1api20221001.ScaleRule_STATUS A rule that provide the triggers and parameters for the scaling action.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingStatusProfilesRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -713,6 +743,7 @@ public partial class V1api20221001storageAutoscaleSettingStatusProfilesRules
 }
 
 /// <summary>Storage version of v1api20221001.AutoscaleProfile_STATUS Autoscale profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingStatusProfiles
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -741,6 +772,7 @@ public partial class V1api20221001storageAutoscaleSettingStatusProfiles
 }
 
 /// <summary>Storage version of v1api20221001.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -773,6 +805,7 @@ public partial class V1api20221001storageAutoscaleSettingStatusSystemData
 }
 
 /// <summary>Storage version of v1api20221001.Autoscalesetting_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -836,8 +869,9 @@ public partial class V1api20221001storageAutoscaleSettingStatus
     public string? Type { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Storage version of v1api20221001.AutoscaleSetting Generator information: - Generated from: /monitor/resource-manager/Microsoft.Insights/stable/2022-10-01/autoscale_API.json - ARM URI: /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Insights/autoscalesettings/{autoscaleSettingName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1api20221001storageAutoscaleSetting : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20221001storageAutoscaleSettingSpec>, IStatus<V1api20221001storageAutoscaleSettingStatus>
 {
     public const string KubeApiVersion = "v1api20221001storage";

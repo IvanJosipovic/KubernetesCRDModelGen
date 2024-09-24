@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.vertexai.cnrm.cloud.google.com;
 /// <summary>If set, both of the online and offline data storage will be secured by this key.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIFeaturestoreSpecEncryptionSpec
 {
     /// <summary>The Cloud KMS resource identifier of the customer managed encryption key used to protect a resource. Has the form: projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key. The key needs to be in the same region as where the compute resource is created.</summary>
@@ -17,6 +18,7 @@ public partial class V1alpha1VertexAIFeaturestoreSpecEncryptionSpec
 }
 
 /// <summary>Online serving scaling configuration. Only one of fixedNodeCount and scaling can be set. Setting one will reset the other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIFeaturestoreSpecOnlineServingConfigScaling
 {
     /// <summary>The maximum number of nodes to scale up to. Must be greater than minNodeCount, and less than or equal to 10 times of 'minNodeCount'.</summary>
@@ -29,6 +31,7 @@ public partial class V1alpha1VertexAIFeaturestoreSpecOnlineServingConfigScaling
 }
 
 /// <summary>Config for online serving resources.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIFeaturestoreSpecOnlineServingConfig
 {
     /// <summary>The number of nodes for each cluster. The number of nodes will not scale automatically but can be scaled manually by providing different values when updating.</summary>
@@ -41,6 +44,7 @@ public partial class V1alpha1VertexAIFeaturestoreSpecOnlineServingConfig
 }
 
 /// <summary>The project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIFeaturestoreSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -57,6 +61,7 @@ public partial class V1alpha1VertexAIFeaturestoreSpecProjectRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIFeaturestoreSpec
 {
     /// <summary>If set, both of the online and offline data storage will be secured by this key.</summary>
@@ -89,6 +94,7 @@ public partial class V1alpha1VertexAIFeaturestoreSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIFeaturestoreStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -113,6 +119,7 @@ public partial class V1alpha1VertexAIFeaturestoreStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIFeaturestoreStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -136,8 +143,9 @@ public partial class V1alpha1VertexAIFeaturestoreStatus
     public string? UpdateTime { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1VertexAIFeaturestore : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1VertexAIFeaturestoreSpec>, IStatus<V1alpha1VertexAIFeaturestoreStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

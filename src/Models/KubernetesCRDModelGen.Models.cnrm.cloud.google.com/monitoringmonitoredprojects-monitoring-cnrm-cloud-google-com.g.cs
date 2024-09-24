@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.monitoring.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringMonitoredProjectSpec
 {
     /// <summary>Immutable. Required. The resource name of the existing Metrics Scope that will monitor this project. Example: locations/global/metricsScopes/{SCOPING_PROJECT_ID_OR_NUMBER}</summary>
@@ -21,6 +22,7 @@ public partial class V1beta1MonitoringMonitoredProjectSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringMonitoredProjectStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -45,6 +47,7 @@ public partial class V1beta1MonitoringMonitoredProjectStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringMonitoredProjectStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -60,8 +63,9 @@ public partial class V1beta1MonitoringMonitoredProjectStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1MonitoringMonitoredProject : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MonitoringMonitoredProjectSpec>, IStatus<V1beta1MonitoringMonitoredProjectStatus>
 {
     public const string KubeApiVersion = "v1beta1";

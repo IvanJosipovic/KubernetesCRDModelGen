@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.mlengine.cnrm.cloud.google.com;
 /// <summary>Immutable. The default version of the model. This version will be used to handle prediction requests that do not specify a version.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MLEngineModelSpecDefaultVersion
 {
     /// <summary>Immutable. The name specified for the version when it was created.</summary>
@@ -17,6 +18,7 @@ public partial class V1alpha1MLEngineModelSpecDefaultVersion
 }
 
 /// <summary>The project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MLEngineModelSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -33,6 +35,7 @@ public partial class V1alpha1MLEngineModelSpecProjectRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MLEngineModelSpec
 {
     /// <summary>Immutable. The default version of the model. This version will be used to handle prediction requests that do not specify a version.</summary>
@@ -65,6 +68,7 @@ public partial class V1alpha1MLEngineModelSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MLEngineModelStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -89,6 +93,7 @@ public partial class V1alpha1MLEngineModelStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MLEngineModelStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -100,8 +105,9 @@ public partial class V1alpha1MLEngineModelStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1MLEngineModel : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1MLEngineModelSpec>, IStatus<V1alpha1MLEngineModelStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

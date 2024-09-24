@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.acme.certmanager.io;
 /// <summary>IssuerRef references a properly configured ACME-type Issuer which should be used to create this Order. If the Issuer does not exist, processing will be retried. If the Issuer is not an 'ACME' Issuer, an error will be returned and the Order will be marked as failed.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1OrderSpecIssuerRef
 {
     /// <summary>Group of the resource being referred to.</summary>
@@ -25,6 +26,7 @@ public partial class V1OrderSpecIssuerRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1OrderSpec
 {
     /// <summary>CommonName is the common name as specified on the DER encoded CSR. If specified, this value must also be present in `dnsNames` or `ipAddresses`. This field must match the corresponding field on the DER encoded CSR.</summary>
@@ -53,6 +55,7 @@ public partial class V1OrderSpec
 }
 
 /// <summary>Challenge specifies a challenge offered by the ACME server for an Order. An appropriate Challenge resource can be created to perform the ACME challenge process.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1OrderStatusAuthorizationsChallenges
 {
     /// <summary>Token is the token that must be presented for this challenge. This is used to compute the 'key' that must also be presented.</summary>
@@ -68,6 +71,7 @@ public partial class V1OrderStatusAuthorizationsChallenges
     public string Url { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1OrderStatusAuthorizationsInitialStateEnum
 {
     [EnumMember(Value = "valid"), JsonStringEnumMemberName("valid")]
@@ -94,6 +98,7 @@ public enum V1OrderStatusAuthorizationsInitialStateEnum
 }
 
 /// <summary>ACMEAuthorization contains data returned from the ACME server on an authorization that must be completed in order validate a DNS name on an ACME Order resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1OrderStatusAuthorizations
 {
     /// <summary>Challenges specifies the challenge types offered by the ACME server. One of these challenge types will be selected when validating the DNS name and an appropriate Challenge resource will be created to perform the ACME challenge process.</summary>
@@ -118,6 +123,7 @@ public partial class V1OrderStatusAuthorizations
     public bool? Wildcard { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1OrderStatusStateEnum
 {
     [EnumMember(Value = "valid"), JsonStringEnumMemberName("valid")]
@@ -144,6 +150,7 @@ public enum V1OrderStatusStateEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1OrderStatus
 {
     /// <summary>Authorizations contains data returned from the ACME server on what authorizations must be completed in order to validate the DNS names specified on the Order.</summary>
@@ -176,8 +183,9 @@ public partial class V1OrderStatus
     public string? Url { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Order is a type to represent an Order with an ACME server</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1Order : IKubernetesObject<V1ObjectMeta>, ISpec<V1OrderSpec>, IStatus<V1OrderStatus>
 {
     public const string KubeApiVersion = "v1";

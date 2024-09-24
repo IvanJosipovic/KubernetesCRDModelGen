@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary>Immutable. Properties relevant to a managed certificate.  These will be used if the certificate is managed (as indicated by a value of 'MANAGED' in 'type').</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeManagedSSLCertificateSpecManaged
 {
     /// <summary>Immutable. Domains for which a managed SSL certificate will be valid.  Currently, there can be up to 100 domains in this list.</summary>
@@ -17,6 +18,7 @@ public partial class V1alpha1ComputeManagedSSLCertificateSpecManaged
 }
 
 /// <summary>The project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeManagedSSLCertificateSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -33,6 +35,7 @@ public partial class V1alpha1ComputeManagedSSLCertificateSpecProjectRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeManagedSSLCertificateSpec
 {
     /// <summary>Immutable. An optional description of this resource.</summary>
@@ -57,6 +60,7 @@ public partial class V1alpha1ComputeManagedSSLCertificateSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeManagedSSLCertificateStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -81,6 +85,7 @@ public partial class V1alpha1ComputeManagedSSLCertificateStatusConditions
 }
 
 /// <summary>The observed state of the underlying GCP resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeManagedSSLCertificateStatusObservedState
 {
     /// <summary>The unique identifier for the resource.</summary>
@@ -105,6 +110,7 @@ public partial class V1alpha1ComputeManagedSSLCertificateStatusObservedState
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeManagedSSLCertificateStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -120,8 +126,9 @@ public partial class V1alpha1ComputeManagedSSLCertificateStatus
     public V1alpha1ComputeManagedSSLCertificateStatusObservedState? ObservedState { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1ComputeManagedSSLCertificate : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputeManagedSSLCertificateSpec>, IStatus<V1alpha1ComputeManagedSSLCertificateStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

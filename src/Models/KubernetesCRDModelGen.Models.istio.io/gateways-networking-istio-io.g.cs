@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networking.istio.io;
 /// <summary>The Port on which the proxy should listen for incoming connections.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewaySpecServersPort
 {
     /// <summary>Label assigned to the port.</summary>
@@ -28,6 +29,7 @@ public partial class V1beta1GatewaySpecServersPort
     public int? TargetPort { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GatewaySpecServersTlsMaxProtocolVersionEnum
 {
     [EnumMember(Value = "TLS_AUTO"), JsonStringEnumMemberName("TLS_AUTO")]
@@ -47,6 +49,7 @@ public enum V1beta1GatewaySpecServersTlsMaxProtocolVersionEnum
     TLSV13
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GatewaySpecServersTlsMinProtocolVersionEnum
 {
     [EnumMember(Value = "TLS_AUTO"), JsonStringEnumMemberName("TLS_AUTO")]
@@ -66,6 +69,7 @@ public enum V1beta1GatewaySpecServersTlsMinProtocolVersionEnum
     TLSV13
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GatewaySpecServersTlsModeEnum
 {
     [EnumMember(Value = "PASSTHROUGH"), JsonStringEnumMemberName("PASSTHROUGH")]
@@ -89,6 +93,7 @@ public enum V1beta1GatewaySpecServersTlsModeEnum
 }
 
 /// <summary>Set of TLS related options that govern the server's behavior.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewaySpecServersTls
 {
     /// <summary>REQUIRED if mode is `MUTUAL` or `OPTIONAL_MUTUAL`.</summary>
@@ -148,6 +153,7 @@ public partial class V1beta1GatewaySpecServersTls
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewaySpecServers
 {
     /// <summary>The ip or the Unix domain socket to which the listener should be bound to.</summary>
@@ -176,6 +182,7 @@ public partial class V1beta1GatewaySpecServers
 }
 
 /// <summary>Configuration affecting edge load balancer. See more details at: https://istio.io/docs/reference/config/networking/gateway.html</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewaySpec
 {
     /// <summary>One or more labels that indicate a specific set of pods/VMs on which this gateway configuration should be applied.</summary>
@@ -187,8 +194,9 @@ public partial class V1beta1GatewaySpec
     public IList<V1beta1GatewaySpecServers>? Servers { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Gateway : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1GatewaySpec>, IStatus<JsonNode>
 {
     public const string KubeApiVersion = "v1beta1";

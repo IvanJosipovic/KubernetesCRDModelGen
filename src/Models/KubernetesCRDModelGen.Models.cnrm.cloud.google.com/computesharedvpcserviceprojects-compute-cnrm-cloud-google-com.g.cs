@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSharedVPCServiceProjectSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1ComputeSharedVPCServiceProjectSpecProjectRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSharedVPCServiceProjectSpec
 {
     /// <summary>The deletion policy for the shared VPC service. Setting ABANDON allows the resource 				to be abandoned rather than deleted. Possible values are: "ABANDON".</summary>
@@ -37,6 +39,7 @@ public partial class V1beta1ComputeSharedVPCServiceProjectSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSharedVPCServiceProjectStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -61,6 +64,7 @@ public partial class V1beta1ComputeSharedVPCServiceProjectStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSharedVPCServiceProjectStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -72,8 +76,9 @@ public partial class V1beta1ComputeSharedVPCServiceProjectStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ComputeSharedVPCServiceProject : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeSharedVPCServiceProjectSpec>, IStatus<V1beta1ComputeSharedVPCServiceProjectStatus>
 {
     public const string KubeApiVersion = "v1beta1";

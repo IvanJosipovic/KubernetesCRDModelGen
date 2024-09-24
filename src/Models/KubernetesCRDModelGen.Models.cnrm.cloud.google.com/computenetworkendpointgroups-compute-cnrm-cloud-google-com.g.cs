@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary>The network to which all network endpoints in the NEG belong. Uses "default" project network if unspecified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNetworkEndpointGroupSpecNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1ComputeNetworkEndpointGroupSpecNetworkRef
 }
 
 /// <summary>Optional subnetwork to which all network endpoints in the NEG belong.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNetworkEndpointGroupSpecSubnetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSubnetwork` resource.</summary>
@@ -41,6 +43,7 @@ public partial class V1beta1ComputeNetworkEndpointGroupSpecSubnetworkRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNetworkEndpointGroupSpec
 {
     /// <summary>Immutable. The default port used if the port number is not specified in the network endpoint.</summary>
@@ -73,6 +76,7 @@ public partial class V1beta1ComputeNetworkEndpointGroupSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNetworkEndpointGroupStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -97,6 +101,7 @@ public partial class V1beta1ComputeNetworkEndpointGroupStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNetworkEndpointGroupStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -116,8 +121,9 @@ public partial class V1beta1ComputeNetworkEndpointGroupStatus
     public int? Size { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ComputeNetworkEndpointGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeNetworkEndpointGroupSpec>, IStatus<V1beta1ComputeNetworkEndpointGroupStatus>
 {
     public const string KubeApiVersion = "v1beta1";

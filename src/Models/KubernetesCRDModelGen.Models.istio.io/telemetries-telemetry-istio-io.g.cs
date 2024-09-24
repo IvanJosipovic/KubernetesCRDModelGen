@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.telemetry.istio.io;
 /// <summary>Optional.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecAccessLoggingFilter
 {
     /// <summary>CEL expression for selecting when requests/connections should be logged.</summary>
@@ -16,6 +17,7 @@ public partial class V1alpha1TelemetrySpecAccessLoggingFilter
     public string? Expression { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1TelemetrySpecAccessLoggingMatchModeEnum
 {
     [EnumMember(Value = "CLIENT_AND_SERVER"), JsonStringEnumMemberName("CLIENT_AND_SERVER")]
@@ -30,6 +32,7 @@ public enum V1alpha1TelemetrySpecAccessLoggingMatchModeEnum
 }
 
 /// <summary>Allows tailoring of logging behavior to specific conditions.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecAccessLoggingMatch
 {
     /// <summary>This determines whether or not to apply the access logging configuration based on the direction of traffic relative to the proxied workload.  Valid Options: CLIENT_AND_SERVER, CLIENT, SERVER</summary>
@@ -39,6 +42,7 @@ public partial class V1alpha1TelemetrySpecAccessLoggingMatch
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecAccessLoggingProviders
 {
     /// <summary>Required.</summary>
@@ -47,6 +51,7 @@ public partial class V1alpha1TelemetrySpecAccessLoggingProviders
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecAccessLogging
 {
     /// <summary>Controls logging.</summary>
@@ -66,6 +71,7 @@ public partial class V1alpha1TelemetrySpecAccessLogging
     public IList<V1alpha1TelemetrySpecAccessLoggingProviders>? Providers { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1TelemetrySpecMetricsOverridesMatchMetricEnum
 {
     [EnumMember(Value = "ALL_METRICS"), JsonStringEnumMemberName("ALL_METRICS")]
@@ -103,6 +109,7 @@ public enum V1alpha1TelemetrySpecMetricsOverridesMatchMetricEnum
     GRPCRESPONSEMESSAGES
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1TelemetrySpecMetricsOverridesMatchModeEnum
 {
     [EnumMember(Value = "CLIENT_AND_SERVER"), JsonStringEnumMemberName("CLIENT_AND_SERVER")]
@@ -117,6 +124,7 @@ public enum V1alpha1TelemetrySpecMetricsOverridesMatchModeEnum
 }
 
 /// <summary>Match allows providing the scope of the override.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecMetricsOverridesMatch
 {
     /// <summary>Allows free-form specification of a metric.</summary>
@@ -134,6 +142,7 @@ public partial class V1alpha1TelemetrySpecMetricsOverridesMatch
     public V1alpha1TelemetrySpecMetricsOverridesMatchModeEnum? Mode { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1TelemetrySpecMetricsOverridesTagOverridesOperationEnum
 {
     [EnumMember(Value = "UPSERT"), JsonStringEnumMemberName("UPSERT")]
@@ -145,6 +154,7 @@ public enum V1alpha1TelemetrySpecMetricsOverridesTagOverridesOperationEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecMetricsOverridesTagOverrides
 {
     /// <summary>Operation controls whether or not to update/add a tag, or to remove it.  Valid Options: UPSERT, REMOVE</summary>
@@ -158,6 +168,7 @@ public partial class V1alpha1TelemetrySpecMetricsOverridesTagOverrides
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecMetricsOverrides
 {
     /// <summary>Optional.</summary>
@@ -174,6 +185,7 @@ public partial class V1alpha1TelemetrySpecMetricsOverrides
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecMetricsProviders
 {
     /// <summary>Required.</summary>
@@ -182,6 +194,7 @@ public partial class V1alpha1TelemetrySpecMetricsProviders
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecMetrics
 {
     /// <summary>Optional.</summary>
@@ -198,6 +211,7 @@ public partial class V1alpha1TelemetrySpecMetrics
 }
 
 /// <summary>Optional.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecSelector
 {
     /// <summary>One or more labels that indicate a specific set of pods/VMs on which a policy should be applied.</summary>
@@ -206,6 +220,7 @@ public partial class V1alpha1TelemetrySpecSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecTargetRef
 {
     /// <summary>group is the group of the target resource.</summary>
@@ -226,6 +241,7 @@ public partial class V1alpha1TelemetrySpecTargetRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecTargetRefs
 {
     /// <summary>group is the group of the target resource.</summary>
@@ -246,6 +262,7 @@ public partial class V1alpha1TelemetrySpecTargetRefs
 }
 
 /// <summary>Environment adds the value of an environment variable to each span.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecTracingCustomTagsEnvironment
 {
     /// <summary>Optional.</summary>
@@ -258,6 +275,7 @@ public partial class V1alpha1TelemetrySpecTracingCustomTagsEnvironment
 }
 
 /// <summary>RequestHeader adds the value of an header from the request to each span.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecTracingCustomTagsHeader
 {
     /// <summary>Optional.</summary>
@@ -270,6 +288,7 @@ public partial class V1alpha1TelemetrySpecTracingCustomTagsHeader
 }
 
 /// <summary>Literal adds the same, hard-coded value to each span.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecTracingCustomTagsLiteral
 {
     /// <summary>The tag value to use.</summary>
@@ -278,6 +297,7 @@ public partial class V1alpha1TelemetrySpecTracingCustomTagsLiteral
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecTracingCustomTags
 {
     /// <summary>Environment adds the value of an environment variable to each span.</summary>
@@ -293,6 +313,7 @@ public partial class V1alpha1TelemetrySpecTracingCustomTags
     public V1alpha1TelemetrySpecTracingCustomTagsLiteral? Literal { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1TelemetrySpecTracingMatchModeEnum
 {
     [EnumMember(Value = "CLIENT_AND_SERVER"), JsonStringEnumMemberName("CLIENT_AND_SERVER")]
@@ -307,6 +328,7 @@ public enum V1alpha1TelemetrySpecTracingMatchModeEnum
 }
 
 /// <summary>Allows tailoring of behavior to specific conditions.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecTracingMatch
 {
     /// <summary>This determines whether or not to apply the tracing configuration based on the direction of traffic relative to the proxied workload.  Valid Options: CLIENT_AND_SERVER, CLIENT, SERVER</summary>
@@ -316,6 +338,7 @@ public partial class V1alpha1TelemetrySpecTracingMatch
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecTracingProviders
 {
     /// <summary>Required.</summary>
@@ -324,6 +347,7 @@ public partial class V1alpha1TelemetrySpecTracingProviders
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecTracing
 {
     /// <summary>Optional.</summary>
@@ -352,6 +376,7 @@ public partial class V1alpha1TelemetrySpecTracing
 }
 
 /// <summary>Telemetry configuration for workloads. See more details at: https://istio.io/docs/reference/config/telemetry.html</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpec
 {
     /// <summary>Optional.</summary>
@@ -379,8 +404,9 @@ public partial class V1alpha1TelemetrySpec
     public IList<V1alpha1TelemetrySpecTracing>? Tracing { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1Telemetry : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1TelemetrySpec>, IStatus<JsonNode>
 {
     public const string KubeApiVersion = "v1alpha1";

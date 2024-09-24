@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networking.istio.io;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceEntrySpecEndpoints
 {
     /// <summary>Address associated with the network endpoint without the port.</summary>
@@ -40,6 +41,7 @@ public partial class V1beta1ServiceEntrySpecEndpoints
     public int? Weight { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServiceEntrySpecLocationEnum
 {
     [EnumMember(Value = "MESH_EXTERNAL"), JsonStringEnumMemberName("MESH_EXTERNAL")]
@@ -51,6 +53,7 @@ public enum V1beta1ServiceEntrySpecLocationEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceEntrySpecPorts
 {
     /// <summary>Label assigned to the port.</summary>
@@ -70,6 +73,7 @@ public partial class V1beta1ServiceEntrySpecPorts
     public int? TargetPort { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServiceEntrySpecResolutionEnum
 {
     [EnumMember(Value = "NONE"), JsonStringEnumMemberName("NONE")]
@@ -87,6 +91,7 @@ public enum V1beta1ServiceEntrySpecResolutionEnum
 }
 
 /// <summary>Applicable only for MESH_INTERNAL services.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceEntrySpecWorkloadSelector
 {
     /// <summary>One or more labels that indicate a specific set of pods/VMs on which the configuration should be applied.</summary>
@@ -95,6 +100,7 @@ public partial class V1beta1ServiceEntrySpecWorkloadSelector
 }
 
 /// <summary>Configuration affecting service registry. See more details at: https://istio.io/docs/reference/config/networking/service-entry.html</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceEntrySpec
 {
     /// <summary>The virtual IP addresses associated with the service.</summary>
@@ -136,8 +142,9 @@ public partial class V1beta1ServiceEntrySpec
     public V1beta1ServiceEntrySpecWorkloadSelector? WorkloadSelector { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ServiceEntry : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ServiceEntrySpec>, IStatus<JsonNode>
 {
     public const string KubeApiVersion = "v1beta1";

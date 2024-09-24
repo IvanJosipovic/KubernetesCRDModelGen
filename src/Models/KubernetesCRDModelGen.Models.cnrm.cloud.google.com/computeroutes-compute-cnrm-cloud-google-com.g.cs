@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary>The network that this route applies to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRouteSpecNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1ComputeRouteSpecNetworkRef
 }
 
 /// <summary>A forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets.  Note that this can only be used when the destinationRange is a public (non-RFC 1918) IP CIDR range.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRouteSpecNextHopILBRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeForwardingRule` resource.</summary>
@@ -41,6 +43,7 @@ public partial class V1beta1ComputeRouteSpecNextHopILBRef
 }
 
 /// <summary>Instance that should handle matching packets.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRouteSpecNextHopInstanceRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeInstance` resource.</summary>
@@ -57,6 +60,7 @@ public partial class V1beta1ComputeRouteSpecNextHopInstanceRef
 }
 
 /// <summary>The ComputeVPNTunnel that should handle matching packets</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRouteSpecNextHopVPNTunnelRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeVPNTunnel` resource.</summary>
@@ -73,6 +77,7 @@ public partial class V1beta1ComputeRouteSpecNextHopVPNTunnelRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRouteSpec
 {
     /// <summary>Immutable. An optional description of this resource. Provide this property when you create the resource.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1ComputeRouteSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRouteStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -145,6 +151,7 @@ public partial class V1beta1ComputeRouteStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRouteStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -164,8 +171,9 @@ public partial class V1beta1ComputeRouteStatus
     public string? SelfLink { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ComputeRoute : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeRouteSpec>, IStatus<V1beta1ComputeRouteStatus>
 {
     public const string KubeApiVersion = "v1beta1";

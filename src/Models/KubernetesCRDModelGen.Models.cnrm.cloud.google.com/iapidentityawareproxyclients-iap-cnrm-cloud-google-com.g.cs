@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iap.cnrm.cloud.google.com;
 /// <summary>Immutable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPIdentityAwareProxyClientSpecBrandRef
 {
     /// <summary>The brand for the resource  Allowed value: The Google Cloud resource name of an `IAPBrand` resource (format: `projects/{{project}}/brands/{{name}}`).</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1IAPIdentityAwareProxyClientSpecBrandRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPIdentityAwareProxyClientSpec
 {
     /// <summary>Immutable.</summary>
@@ -41,6 +43,7 @@ public partial class V1beta1IAPIdentityAwareProxyClientSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPIdentityAwareProxyClientStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -65,6 +68,7 @@ public partial class V1beta1IAPIdentityAwareProxyClientStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPIdentityAwareProxyClientStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -80,8 +84,9 @@ public partial class V1beta1IAPIdentityAwareProxyClientStatus
     public string? Secret { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1IAPIdentityAwareProxyClient : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IAPIdentityAwareProxyClientSpec>, IStatus<V1beta1IAPIdentityAwareProxyClientStatus>
 {
     public const string KubeApiVersion = "v1beta1";

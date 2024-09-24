@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.hub.traefik.io;
 /// <summary>OperationMatcher defines criteria for matching an OpenAPI operation.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APISpecOpenApiSpecOperationSetsMatchers
 {
     /// <summary>Methods specifies the HTTP methods to be included for selection.</summary>
@@ -29,6 +30,7 @@ public partial class V1alpha1APISpecOpenApiSpecOperationSetsMatchers
 }
 
 /// <summary>OperationSet gives a name to a set of matching OpenAPI operations. This set of operations can then be referenced for granular filtering in APIAccesses.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APISpecOpenApiSpecOperationSets
 {
     /// <summary>Matchers defines a list of alternative rules for matching OpenAPI operations.</summary>
@@ -41,6 +43,7 @@ public partial class V1alpha1APISpecOpenApiSpecOperationSets
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APISpecOpenApiSpecOverrideServers
 {
     /// <summary></summary>
@@ -49,6 +52,7 @@ public partial class V1alpha1APISpecOpenApiSpecOverrideServers
 }
 
 /// <summary>Override holds data used to override OpenAPI specification.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APISpecOpenApiSpecOverride
 {
     /// <summary></summary>
@@ -57,6 +61,7 @@ public partial class V1alpha1APISpecOpenApiSpecOverride
 }
 
 /// <summary>OpenAPISpec defines the API contract as an OpenAPI specification.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APISpecOpenApiSpec
 {
     /// <summary>OperationSets defines the sets of operations to be referenced for granular filtering in APIAccesses.</summary>
@@ -77,6 +82,7 @@ public partial class V1alpha1APISpecOpenApiSpec
 }
 
 /// <summary>APIVersionRef references an APIVersion.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APISpecVersions
 {
     /// <summary>Name of the APIVersion.</summary>
@@ -85,6 +91,7 @@ public partial class V1alpha1APISpecVersions
 }
 
 /// <summary>APISpec describes the API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APISpec
 {
     /// <summary>OpenAPISpec defines the API contract as an OpenAPI specification.</summary>
@@ -97,6 +104,7 @@ public partial class V1alpha1APISpec
 }
 
 /// <summary>The current status of this API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIStatus
 {
     /// <summary>Hash is a hash representing the API.</summary>
@@ -112,8 +120,9 @@ public partial class V1alpha1APIStatus
     public string? Version { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>API defines an HTTP interface that is exposed to external clients. It specifies the supported versions and provides instructions for accessing its documentation. Once instantiated, an API object is associated with an Ingress, IngressRoute, or HTTPRoute resource, enabling the exposure of the described API to the outside world.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1API : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1APISpec>, IStatus<V1alpha1APIStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

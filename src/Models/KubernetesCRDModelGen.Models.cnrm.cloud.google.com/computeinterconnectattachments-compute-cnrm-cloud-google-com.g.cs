@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary>Immutable. The addresses that have been reserved for the interconnect attachment. Used only for interconnect attachment that has the encryption option as IPSEC.  The addresses must be RFC 1918 IP address ranges. When creating HA VPN gateway over the interconnect attachment, if the attachment is configured to use an RFC 1918 IP address, then the VPN gateway's IP address will be allocated from the IP address range specified here.  For example, if the HA VPN gateway's interface 0 is paired to this interconnect attachment, then an RFC 1918 IP address for the VPN gateway interface 0 will be allocated from the IP address specified for this interconnect attachment.  If this field is not specified for interconnect attachment that has encryption option as IPSEC, later on when creating HA VPN gateway on this interconnect attachment, the HA VPN gateway's IP address will be allocated from regional external IP address pool.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInterconnectAttachmentSpecIpsecInternalAddresses
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeAddress` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1ComputeInterconnectAttachmentSpecIpsecInternalAddres
 }
 
 /// <summary>The Cloud Router to be used for dynamic routing. This router must be in the same region as this ComputeInterconnectAttachment. The ComputeInterconnectAttachment will automatically connect the interconnect to the network &amp; region within which the Cloud Router is configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInterconnectAttachmentSpecRouterRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeRouter` resource.</summary>
@@ -41,6 +43,7 @@ public partial class V1beta1ComputeInterconnectAttachmentSpecRouterRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInterconnectAttachmentSpec
 {
     /// <summary>Whether the VLAN attachment is enabled or disabled.  When using PARTNER type this will Pre-Activate the interconnect attachment.</summary>
@@ -101,6 +104,7 @@ public partial class V1beta1ComputeInterconnectAttachmentSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInterconnectAttachmentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -125,6 +129,7 @@ public partial class V1beta1ComputeInterconnectAttachmentStatusConditions
 }
 
 /// <summary>Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is attached to is of type DEDICATED.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInterconnectAttachmentStatusPrivateInterconnectInfo
 {
     /// <summary>802.1q encapsulation tag to be used for traffic between Google and the customer, going to and from this network and region.</summary>
@@ -133,6 +138,7 @@ public partial class V1beta1ComputeInterconnectAttachmentStatusPrivateInterconne
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInterconnectAttachmentStatus
 {
     /// <summary>IPv4 address + prefix length to be configured on Cloud Router Interface for this interconnect attachment.</summary>
@@ -180,8 +186,9 @@ public partial class V1beta1ComputeInterconnectAttachmentStatus
     public string? State { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ComputeInterconnectAttachment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeInterconnectAttachmentSpec>, IStatus<V1beta1ComputeInterconnectAttachmentStatus>
 {
     public const string KubeApiVersion = "v1beta1";

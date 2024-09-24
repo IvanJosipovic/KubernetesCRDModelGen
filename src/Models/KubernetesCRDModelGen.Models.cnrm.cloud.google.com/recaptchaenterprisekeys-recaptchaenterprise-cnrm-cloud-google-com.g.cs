@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.recaptchaenterprise.cnrm.cloud.google.com;
 /// <summary>Settings for keys that can be used by Android apps.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecaptchaEnterpriseKeySpecAndroidSettings
 {
     /// <summary>If set to true, it means allowed_package_names will not be enforced.</summary>
@@ -21,6 +22,7 @@ public partial class V1beta1RecaptchaEnterpriseKeySpecAndroidSettings
 }
 
 /// <summary>Settings for keys that can be used by iOS apps.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecaptchaEnterpriseKeySpecIosSettings
 {
     /// <summary>If set to true, it means allowed_bundle_ids will not be enforced.</summary>
@@ -33,6 +35,7 @@ public partial class V1beta1RecaptchaEnterpriseKeySpecIosSettings
 }
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecaptchaEnterpriseKeySpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -49,6 +52,7 @@ public partial class V1beta1RecaptchaEnterpriseKeySpecProjectRef
 }
 
 /// <summary>Immutable. Options for user acceptance testing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecaptchaEnterpriseKeySpecTestingOptions
 {
     /// <summary>Immutable. For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this site will return nocaptcha if NOCAPTCHA, or an unsolvable challenge if UNSOLVABLE_CHALLENGE. Possible values: TESTING_CHALLENGE_UNSPECIFIED, NOCAPTCHA, UNSOLVABLE_CHALLENGE</summary>
@@ -61,6 +65,7 @@ public partial class V1beta1RecaptchaEnterpriseKeySpecTestingOptions
 }
 
 /// <summary>Immutable. Settings specific to keys that can be used for WAF (Web Application Firewall).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecaptchaEnterpriseKeySpecWafSettings
 {
     /// <summary>Immutable. Supported WAF features. For more information, see https://cloud.google.com/recaptcha-enterprise/docs/usecase#comparison_of_features. Possible values: CHALLENGE_PAGE, SESSION_TOKEN, ACTION_TOKEN, EXPRESS</summary>
@@ -73,6 +78,7 @@ public partial class V1beta1RecaptchaEnterpriseKeySpecWafSettings
 }
 
 /// <summary>Settings for keys that can be used by websites.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecaptchaEnterpriseKeySpecWebSettings
 {
     /// <summary>If set to true, it means allowed_domains will not be enforced.</summary>
@@ -97,6 +103,7 @@ public partial class V1beta1RecaptchaEnterpriseKeySpecWebSettings
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecaptchaEnterpriseKeySpec
 {
     /// <summary>Settings for keys that can be used by Android apps.</summary>
@@ -133,6 +140,7 @@ public partial class V1beta1RecaptchaEnterpriseKeySpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecaptchaEnterpriseKeyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -157,6 +165,7 @@ public partial class V1beta1RecaptchaEnterpriseKeyStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecaptchaEnterpriseKeyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -172,8 +181,9 @@ public partial class V1beta1RecaptchaEnterpriseKeyStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1RecaptchaEnterpriseKey : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RecaptchaEnterpriseKeySpec>, IStatus<V1beta1RecaptchaEnterpriseKeyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

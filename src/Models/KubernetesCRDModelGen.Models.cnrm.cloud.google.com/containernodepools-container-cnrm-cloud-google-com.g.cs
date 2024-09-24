@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.container.cnrm.cloud.google.com;
 /// <summary>Configuration required by cluster autoscaler to adjust the size of the node pool to the current cluster usage. To disable autoscaling, set minNodeCount and maxNodeCount to 0.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecAutoscaling
 {
     /// <summary>Location policy specifies the algorithm used when scaling-up the node pool. "BALANCED" - Is a best effort policy that aims to balance the sizes of available zones. "ANY" - Instructs the cluster autoscaler to prioritize utilization of unused reservations, and reduces preemption risk for Spot VMs.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1ContainerNodePoolSpecAutoscaling
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecClusterRef
 {
     /// <summary>Allowed value: The `name` field of a `ContainerCluster` resource.</summary>
@@ -49,6 +51,7 @@ public partial class V1beta1ContainerNodePoolSpecClusterRef
 }
 
 /// <summary>Node management configuration, wherein auto-repair and auto-upgrade is configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecManagement
 {
     /// <summary>Whether the nodes will be automatically repaired.</summary>
@@ -61,6 +64,7 @@ public partial class V1beta1ContainerNodePoolSpecManagement
 }
 
 /// <summary>Immutable. Name of the VPC where the additional interface belongs.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecNetworkConfigAdditionalNodeNetworkConfigsNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -77,6 +81,7 @@ public partial class V1beta1ContainerNodePoolSpecNetworkConfigAdditionalNodeNetw
 }
 
 /// <summary>Immutable. Name of the subnetwork where the additional interface belongs.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecNetworkConfigAdditionalNodeNetworkConfigsSubnetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSubnetwork` resource.</summary>
@@ -93,6 +98,7 @@ public partial class V1beta1ContainerNodePoolSpecNetworkConfigAdditionalNodeNetw
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecNetworkConfigAdditionalNodeNetworkConfigs
 {
     /// <summary>Immutable. Name of the VPC where the additional interface belongs.</summary>
@@ -105,6 +111,7 @@ public partial class V1beta1ContainerNodePoolSpecNetworkConfigAdditionalNodeNetw
 }
 
 /// <summary>Immutable. Name of the subnetwork where the additional pod network belongs.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecNetworkConfigAdditionalPodNetworkConfigsSubnetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSubnetwork` resource.</summary>
@@ -121,6 +128,7 @@ public partial class V1beta1ContainerNodePoolSpecNetworkConfigAdditionalPodNetwo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecNetworkConfigAdditionalPodNetworkConfigs
 {
     /// <summary>Immutable. The maximum number of pods per node which use this pod network.</summary>
@@ -137,6 +145,7 @@ public partial class V1beta1ContainerNodePoolSpecNetworkConfigAdditionalPodNetwo
 }
 
 /// <summary>Immutable. Configuration for node-pool level pod cidr overprovision. If not set, the cluster level setting will be inherited.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecNetworkConfigPodCidrOverprovisionConfig
 {
     /// <summary></summary>
@@ -145,6 +154,7 @@ public partial class V1beta1ContainerNodePoolSpecNetworkConfigPodCidrOverprovisi
 }
 
 /// <summary>Networking configuration for this NodePool. If specified, it overrides the cluster-level defaults.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecNetworkConfig
 {
     /// <summary>Immutable. We specify the additional node networks for this node pool using this list. Each node network corresponds to an additional interface.</summary>
@@ -177,6 +187,7 @@ public partial class V1beta1ContainerNodePoolSpecNetworkConfig
 }
 
 /// <summary>Immutable. Specifies options for controlling advanced machine features.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecNodeConfigAdvancedMachineFeatures
 {
     /// <summary>Immutable. The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.</summary>
@@ -185,6 +196,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigAdvancedMachineFeatur
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecNodeConfigBootDiskKMSCryptoKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
@@ -201,6 +213,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigBootDiskKMSCryptoKeyR
 }
 
 /// <summary>Immutable. Configuration for the confidential nodes feature, which makes nodes run on confidential VMs. Warning: This configuration can't be changed (or added/removed) after pool creation without deleting and recreating the entire pool.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecNodeConfigConfidentialNodes
 {
     /// <summary>Immutable. Whether Confidential Nodes feature is enabled for all nodes in this pool.</summary>
@@ -209,6 +222,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigConfidentialNodes
 }
 
 /// <summary>Immutable. Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecNodeConfigEphemeralStorageConfig
 {
     /// <summary>Immutable. Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD must be 375 or 3000 GB in size, and all local SSDs must share the same size.</summary>
@@ -217,6 +231,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigEphemeralStorageConfi
 }
 
 /// <summary>Immutable. Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecNodeConfigEphemeralStorageLocalSsdConfig
 {
     /// <summary>Immutable. Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD must be 375 or 3000 GB in size, and all local SSDs must share the same size.</summary>
@@ -225,6 +240,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigEphemeralStorageLocal
 }
 
 /// <summary>Enable or disable NCCL Fast Socket in the node pool.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecNodeConfigFastSocket
 {
     /// <summary>Whether or not NCCL Fast Socket is enabled.</summary>
@@ -233,6 +249,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigFastSocket
 }
 
 /// <summary>Immutable. GCFS configuration for this node.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecNodeConfigGcfsConfig
 {
     /// <summary>Immutable. Whether or not GCFS is enabled.</summary>
@@ -241,6 +258,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigGcfsConfig
 }
 
 /// <summary>Immutable. Configuration for auto installation of GPU driver.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecNodeConfigGuestAcceleratorGpuDriverInstallationConfig
 {
     /// <summary>Immutable. Mode for how the GPU driver is installed.</summary>
@@ -249,6 +267,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigGuestAcceleratorGpuDr
 }
 
 /// <summary>Immutable. Configuration for GPU sharing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecNodeConfigGuestAcceleratorGpuSharingConfig
 {
     /// <summary>Immutable. The type of GPU sharing strategy to enable on the GPU node. Possible values are described in the API package (https://pkg.go.dev/google.golang.org/api/container/v1#GPUSharingConfig).</summary>
@@ -261,6 +280,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigGuestAcceleratorGpuSh
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecNodeConfigGuestAccelerator
 {
     /// <summary>Immutable. The number of the accelerator cards exposed to an instance.</summary>
@@ -285,6 +305,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigGuestAccelerator
 }
 
 /// <summary>Immutable. Enable or disable gvnic in the node pool.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecNodeConfigGvnic
 {
     /// <summary>Immutable. Whether or not gvnic is enabled.</summary>
@@ -293,6 +314,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigGvnic
 }
 
 /// <summary>Immutable. The maintenance policy for the hosts on which the GKE VMs run on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecNodeConfigHostMaintenancePolicy
 {
     /// <summary>Immutable. .</summary>
@@ -301,6 +323,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigHostMaintenancePolicy
 }
 
 /// <summary>Node kubelet configs.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecNodeConfigKubeletConfig
 {
     /// <summary>Enable CPU CFS quota enforcement for containers that specify CPU limits.</summary>
@@ -321,6 +344,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigKubeletConfig
 }
 
 /// <summary>Parameters that can be configured on Linux nodes.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecNodeConfigLinuxNodeConfig
 {
     /// <summary>cgroupMode specifies the cgroup mode to be used on the node.</summary>
@@ -333,6 +357,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigLinuxNodeConfig
 }
 
 /// <summary>Immutable. Parameters for raw-block local NVMe SSDs.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecNodeConfigLocalNvmeSsdBlockConfig
 {
     /// <summary>Immutable. Number of raw-block local NVMe SSD disks to be attached to the node. Each local SSD is 375 GB in size.</summary>
@@ -341,6 +366,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigLocalNvmeSsdBlockConf
 }
 
 /// <summary>Immutable. Setting this field will assign instances of this pool to run on the specified node group. This is useful for running workloads on sole tenant nodes.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecNodeConfigNodeGroupRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeNodeGroup` resource.</summary>
@@ -357,6 +383,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigNodeGroupRef
 }
 
 /// <summary>Immutable. The reservation affinity configuration for the node pool.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecNodeConfigReservationAffinity
 {
     /// <summary>Immutable. Corresponds to the type of reservation consumption.</summary>
@@ -373,6 +400,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigReservationAffinity
 }
 
 /// <summary>Immutable. Sandbox configuration for this node.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecNodeConfigSandboxConfig
 {
     /// <summary>Type of the sandbox to use for the node (e.g. 'gvisor').</summary>
@@ -381,6 +409,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigSandboxConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecNodeConfigServiceAccountRef
 {
     /// <summary>Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
@@ -397,6 +426,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigServiceAccountRef
 }
 
 /// <summary>Immutable. Shielded Instance options.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecNodeConfigShieldedInstanceConfig
 {
     /// <summary>Immutable. Defines whether the instance has integrity monitoring enabled.</summary>
@@ -409,6 +439,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigShieldedInstanceConfi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecNodeConfigSoleTenantConfigNodeAffinity
 {
     /// <summary>Immutable. .</summary>
@@ -425,6 +456,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigSoleTenantConfigNodeA
 }
 
 /// <summary>Immutable. Node affinity options for sole tenant node pools.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecNodeConfigSoleTenantConfig
 {
     /// <summary>Immutable. .</summary>
@@ -433,6 +465,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigSoleTenantConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecNodeConfigTaint
 {
     /// <summary>Effect for taint.</summary>
@@ -449,6 +482,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigTaint
 }
 
 /// <summary>The workload metadata configuration for this node.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecNodeConfigWorkloadMetadataConfig
 {
     /// <summary>Mode is the configuration for how to expose metadata to workloads running on the node.</summary>
@@ -461,6 +495,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigWorkloadMetadataConfi
 }
 
 /// <summary>Immutable. The configuration of the nodepool.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecNodeConfig
 {
     /// <summary>Immutable. Specifies options for controlling advanced machine features.</summary>
@@ -605,6 +640,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfig
 }
 
 /// <summary>Immutable. If set, refers to the name of a custom resource policy supplied by the user. The resource policy must be in the same project and region as the node pool. If not found, InvalidArgument error is returned.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecPlacementPolicyPolicyNameRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeResourcePolicy` resource.</summary>
@@ -621,6 +657,7 @@ public partial class V1beta1ContainerNodePoolSpecPlacementPolicyPolicyNameRef
 }
 
 /// <summary>Immutable. Specifies the node placement policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecPlacementPolicy
 {
     /// <summary>Immutable. If set, refers to the name of a custom resource policy supplied by the user. The resource policy must be in the same project and region as the node pool. If not found, InvalidArgument error is returned.</summary>
@@ -637,6 +674,7 @@ public partial class V1beta1ContainerNodePoolSpecPlacementPolicy
 }
 
 /// <summary>Standard rollout policy is the default policy for blue-green.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy
 {
     /// <summary>Number of blue nodes to drain in a batch.</summary>
@@ -653,6 +691,7 @@ public partial class V1beta1ContainerNodePoolSpecUpgradeSettingsBlueGreenSetting
 }
 
 /// <summary>Settings for BlueGreen node pool upgrade.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecUpgradeSettingsBlueGreenSettings
 {
     /// <summary>Time needed after draining entire blue pool. After this period, blue pool will be cleaned up.</summary>
@@ -665,6 +704,7 @@ public partial class V1beta1ContainerNodePoolSpecUpgradeSettingsBlueGreenSetting
 }
 
 /// <summary>Specify node upgrade settings to change how many nodes GKE attempts to upgrade at once. The number of nodes upgraded simultaneously is the sum of max_surge and max_unavailable. The maximum number of nodes upgraded simultaneously is limited to 20.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpecUpgradeSettings
 {
     /// <summary>Settings for BlueGreen node pool upgrade.</summary>
@@ -685,6 +725,7 @@ public partial class V1beta1ContainerNodePoolSpecUpgradeSettings
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolSpec
 {
     /// <summary>Configuration required by cluster autoscaler to adjust the size of the node pool to the current cluster usage. To disable autoscaling, set minNodeCount and maxNodeCount to 0.</summary>
@@ -749,6 +790,7 @@ public partial class V1beta1ContainerNodePoolSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -773,6 +815,7 @@ public partial class V1beta1ContainerNodePoolStatusConditions
 }
 
 /// <summary>The observed state of the underlying GCP resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolStatusObservedState
 {
     /// <summary></summary>
@@ -781,6 +824,7 @@ public partial class V1beta1ContainerNodePoolStatusObservedState
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerNodePoolStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -808,8 +852,9 @@ public partial class V1beta1ContainerNodePoolStatus
     public string? Operation { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ContainerNodePool : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ContainerNodePoolSpec>, IStatus<V1beta1ContainerNodePoolStatus>
 {
     public const string KubeApiVersion = "v1beta1";

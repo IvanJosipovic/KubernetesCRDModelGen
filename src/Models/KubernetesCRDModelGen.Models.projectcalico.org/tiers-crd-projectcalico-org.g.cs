@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1TierSpecDefaultActionEnum
 {
     [EnumMember(Value = "Pass"), JsonStringEnumMemberName("Pass")]
@@ -19,6 +20,7 @@ public enum V1TierSpecDefaultActionEnum
 }
 
 /// <summary>TierSpec contains the specification for a security policy tier resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1TierSpec
 {
     /// <summary>DefaultAction specifies the action applied to workloads selected by a policy in the tier, but not rule matched the workload's traffic. [Default: Deny]</summary>
@@ -31,8 +33,9 @@ public partial class V1TierSpec
     public double? Order { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1Tier : IKubernetesObject<V1ObjectMeta>, ISpec<V1TierSpec>
 {
     public const string KubeApiVersion = "v1";

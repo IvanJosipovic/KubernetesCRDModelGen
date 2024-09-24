@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.azure.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1VirtualMachineRunCommandSpecDeletionPolicyEnum
 }
 
 /// <summary>The client ID of the managed identity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobManagedIdentityClientIdSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -35,6 +37,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobMana
 }
 
 /// <summary>The object ID of the managed identity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobManagedIdentityObjectIdSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -51,6 +54,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobMana
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobManagedIdentity
 {
     /// <summary>The client ID of the managed identity.</summary>
@@ -62,6 +66,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobMana
     public V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobManagedIdentityObjectIdSecretRef? ObjectIdSecretRef { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -72,6 +77,7 @@ public enum V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriRefPolicyR
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -83,6 +89,7 @@ public enum V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriRefPolicyR
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -97,6 +104,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriR
 }
 
 /// <summary>Reference to a Blob in storage to populate errorBlobUri.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -108,6 +116,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriR
     public V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -118,6 +127,7 @@ public enum V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriSelectorPo
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -129,6 +139,7 @@ public enum V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriSelectorPo
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +154,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriS
 }
 
 /// <summary>Selector for a Blob in storage to populate errorBlobUri.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -159,6 +171,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriS
 }
 
 /// <summary>The client ID of the managed identity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobManagedIdentityClientIdSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -175,6 +188,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobMan
 }
 
 /// <summary>The object ID of the managed identity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobManagedIdentityObjectIdSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -191,6 +205,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobMan
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobManagedIdentity
 {
     /// <summary>The client ID of the managed identity.</summary>
@@ -202,6 +217,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobMan
     public V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobManagedIdentityObjectIdSecretRef? ObjectIdSecretRef { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -212,6 +228,7 @@ public enum V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriRefPolicy
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -223,6 +240,7 @@ public enum V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriRefPolicy
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -237,6 +255,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUri
 }
 
 /// <summary>Reference to a Blob in storage to populate outputBlobUri.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -248,6 +267,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUri
     public V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -258,6 +278,7 @@ public enum V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriSelectorP
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -269,6 +290,7 @@ public enum V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriSelectorP
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -283,6 +305,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUri
 }
 
 /// <summary>Selector for a Blob in storage to populate outputBlobUri.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -299,6 +322,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUri
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderParameter
 {
     /// <summary>The run parameter name.</summary>
@@ -311,6 +335,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderParameter
 }
 
 /// <summary>The run parameter name.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderProtectedParameterNameSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -327,6 +352,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderProtectedPara
 }
 
 /// <summary>The run parameter value.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderProtectedParameterValueSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -343,6 +369,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderProtectedPara
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderProtectedParameter
 {
     /// <summary>The run parameter name.</summary>
@@ -355,6 +382,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderProtectedPara
 }
 
 /// <summary>Specifies the user account password on the VM when executing the Virtual Machine Run Command.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderRunAsPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -371,6 +399,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderRunAsPassword
 }
 
 /// <summary>The client ID of the managed identity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriManagedIdentityClientIdSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -387,6 +416,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptU
 }
 
 /// <summary>The object ID of the managed identity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriManagedIdentityObjectIdSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -403,6 +433,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptU
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriManagedIdentity
 {
     /// <summary>The client ID of the managed identity.</summary>
@@ -414,6 +445,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptU
     public V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriManagedIdentityObjectIdSecretRef? ObjectIdSecretRef { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -424,6 +456,7 @@ public enum V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriRefPoli
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -435,6 +468,7 @@ public enum V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriRefPoli
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -449,6 +483,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptU
 }
 
 /// <summary>Reference to a Blob in storage to populate scriptUri.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -460,6 +495,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptU
     public V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -470,6 +506,7 @@ public enum V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriSelecto
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -481,6 +518,7 @@ public enum V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriSelecto
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -495,6 +533,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptU
 }
 
 /// <summary>Selector for a Blob in storage to populate scriptUri.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -511,6 +550,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptU
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderSource
 {
     /// <summary></summary>
@@ -538,6 +578,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderSource
     public V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriSelector? ScriptUriSelector { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -548,6 +589,7 @@ public enum V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdRefPol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -559,6 +601,7 @@ public enum V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdRefPol
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -573,6 +616,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachin
 }
 
 /// <summary>Reference to a LinuxVirtualMachine in compute to populate virtualMachineId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -584,6 +628,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachin
     public V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -594,6 +639,7 @@ public enum V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdSelect
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -605,6 +651,7 @@ public enum V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdSelect
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -619,6 +666,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachin
 }
 
 /// <summary>Selector for a LinuxVirtualMachine in compute to populate virtualMachineId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -635,6 +683,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProvider
 {
     /// <summary>An error_blob_managed_identity block as defined below. User-assigned managed Identity that has access to errorBlobUri storage blob.</summary>
@@ -711,10 +760,12 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobManagedIdentity
 {
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -725,6 +776,7 @@ public enum V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriRefPolicy
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -736,6 +788,7 @@ public enum V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriRefPolicy
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -750,6 +803,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUri
 }
 
 /// <summary>Reference to a Blob in storage to populate errorBlobUri.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -761,6 +815,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUri
     public V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -771,6 +826,7 @@ public enum V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriSelectorP
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -782,6 +838,7 @@ public enum V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriSelectorP
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -796,6 +853,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUri
 }
 
 /// <summary>Selector for a Blob in storage to populate errorBlobUri.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -812,10 +870,12 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUri
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobManagedIdentity
 {
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -826,6 +886,7 @@ public enum V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriRefPolic
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -837,6 +898,7 @@ public enum V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriRefPolic
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -851,6 +913,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUr
 }
 
 /// <summary>Reference to a Blob in storage to populate outputBlobUri.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -862,6 +925,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUr
     public V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -872,6 +936,7 @@ public enum V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriSelector
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -883,6 +948,7 @@ public enum V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriSelector
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -897,6 +963,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUr
 }
 
 /// <summary>Selector for a Blob in storage to populate outputBlobUri.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -913,6 +980,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderParameter
 {
     /// <summary>The run parameter name.</summary>
@@ -925,15 +993,18 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderParameter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderProtectedParameter
 {
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriManagedIdentity
 {
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -944,6 +1015,7 @@ public enum V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriRefPol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -955,6 +1027,7 @@ public enum V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriRefPol
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -969,6 +1042,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScript
 }
 
 /// <summary>Reference to a Blob in storage to populate scriptUri.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -980,6 +1054,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScript
     public V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -990,6 +1065,7 @@ public enum V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriSelect
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1001,6 +1077,7 @@ public enum V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriSelect
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1015,6 +1092,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScript
 }
 
 /// <summary>Selector for a Blob in storage to populate scriptUri.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1031,6 +1109,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScript
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSource
 {
     /// <summary></summary>
@@ -1059,6 +1138,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSource
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProvider
 {
     /// <summary>An error_blob_managed_identity block as defined below. User-assigned managed Identity that has access to errorBlobUri storage blob.</summary>
@@ -1118,6 +1198,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -1140,6 +1221,7 @@ public enum V1beta1VirtualMachineRunCommandSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1150,6 +1232,7 @@ public enum V1beta1VirtualMachineRunCommandSpecProviderConfigRefPolicyResolution
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1161,6 +1244,7 @@ public enum V1beta1VirtualMachineRunCommandSpecProviderConfigRefPolicyResolveEnu
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1175,6 +1259,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1186,6 +1271,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecProviderConfigRef
     public V1beta1VirtualMachineRunCommandSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1196,6 +1282,7 @@ public enum V1beta1VirtualMachineRunCommandSpecPublishConnectionDetailsToConfigR
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1207,6 +1294,7 @@ public enum V1beta1VirtualMachineRunCommandSpecPublishConnectionDetailsToConfigR
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1221,6 +1309,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecPublishConnectionDetails
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1233,6 +1322,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecPublishConnectionDetails
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1249,6 +1339,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecPublishConnectionDetails
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1265,6 +1356,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecPublishConnectionDetails
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1277,6 +1369,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecWriteConnectionSecretToR
 }
 
 /// <summary>VirtualMachineRunCommandSpec defines the desired state of VirtualMachineRunCommand</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1310,6 +1403,7 @@ public partial class V1beta1VirtualMachineRunCommandSpec
 }
 
 /// <summary>The client ID of the managed identity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderErrorBlobManagedIdentityClientIdSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1326,6 +1420,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderErrorBlobMan
 }
 
 /// <summary>The object ID of the managed identity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderErrorBlobManagedIdentityObjectIdSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1342,6 +1437,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderErrorBlobMan
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderErrorBlobManagedIdentity
 {
     /// <summary>The client ID of the managed identity.</summary>
@@ -1354,6 +1450,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderErrorBlobMan
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderInstanceView
 {
     /// <summary></summary>
@@ -1386,6 +1483,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderInstanceView
 }
 
 /// <summary>The client ID of the managed identity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderOutputBlobManagedIdentityClientIdSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1402,6 +1500,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderOutputBlobMa
 }
 
 /// <summary>The object ID of the managed identity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderOutputBlobManagedIdentityObjectIdSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1418,6 +1517,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderOutputBlobMa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderOutputBlobManagedIdentity
 {
     /// <summary>The client ID of the managed identity.</summary>
@@ -1430,6 +1530,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderOutputBlobMa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderParameter
 {
     /// <summary>The run parameter name.</summary>
@@ -1442,6 +1543,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderParameter
 }
 
 /// <summary>The run parameter name.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderProtectedParameterNameSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1458,6 +1560,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderProtectedPar
 }
 
 /// <summary>The run parameter value.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderProtectedParameterValueSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1474,6 +1577,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderProtectedPar
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderProtectedParameter
 {
     /// <summary>The run parameter name.</summary>
@@ -1486,6 +1590,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderProtectedPar
 }
 
 /// <summary>The client ID of the managed identity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderSourceScriptUriManagedIdentityClientIdSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1502,6 +1607,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderSourceScript
 }
 
 /// <summary>The object ID of the managed identity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderSourceScriptUriManagedIdentityObjectIdSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1518,6 +1624,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderSourceScript
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderSourceScriptUriManagedIdentity
 {
     /// <summary>The client ID of the managed identity.</summary>
@@ -1530,6 +1637,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderSourceScript
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderSource
 {
     /// <summary></summary>
@@ -1550,6 +1658,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderSource
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusAtProvider
 {
     /// <summary>An error_blob_managed_identity block as defined below. User-assigned managed Identity that has access to errorBlobUri storage blob.</summary>
@@ -1606,6 +1715,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1634,6 +1744,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusConditions
 }
 
 /// <summary>VirtualMachineRunCommandStatus defines the observed state of VirtualMachineRunCommand.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatus
 {
     /// <summary></summary>
@@ -1649,8 +1760,9 @@ public partial class V1beta1VirtualMachineRunCommandStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>VirtualMachineRunCommand is the Schema for the VirtualMachineRunCommands API. Manages a Virtual Machine Run Command.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1VirtualMachineRunCommand : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1VirtualMachineRunCommandSpec>, IStatus<V1beta1VirtualMachineRunCommandStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.accesscontextmanager.cnrm.cloud.google.com;
 /// <summary>The organization that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessContextManagerGCPUserAccessBindingSpecOrganizationRef
 {
     /// <summary>Allowed value: The `name` field of an `Organization` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1alpha1AccessContextManagerGCPUserAccessBindingSpecOrganiz
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessContextManagerGCPUserAccessBindingSpec
 {
     /// <summary>Required. Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: "accessPolicies/9522/accessLevels/device_trusted".</summary>
@@ -45,6 +47,7 @@ public partial class V1alpha1AccessContextManagerGCPUserAccessBindingSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessContextManagerGCPUserAccessBindingStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -69,6 +72,7 @@ public partial class V1alpha1AccessContextManagerGCPUserAccessBindingStatusCondi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessContextManagerGCPUserAccessBindingStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -84,8 +88,9 @@ public partial class V1alpha1AccessContextManagerGCPUserAccessBindingStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1AccessContextManagerGCPUserAccessBinding : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1AccessContextManagerGCPUserAccessBindingSpec>, IStatus<V1alpha1AccessContextManagerGCPUserAccessBindingStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

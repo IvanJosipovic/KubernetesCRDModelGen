@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary>Immutable. A user-defined name of the Cloud Function. The function name is case-sensitive and must be 1-63 characters long. Example value: "func1".</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecCloudFunctionFunctionRef
 {
     /// <summary>Allowed value: The `name` field of a `CloudFunctionsFunction` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecCloudFunctionFu
 }
 
 /// <summary>Immutable. Only valid when networkEndpointType is "SERVERLESS". Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecCloudFunction
 {
     /// <summary>Immutable. A user-defined name of the Cloud Function. The function name is case-sensitive and must be 1-63 characters long. Example value: "func1".</summary>
@@ -37,6 +39,7 @@ public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecCloudFunction
 }
 
 /// <summary>Immutable. Cloud Run service is the main resource of Cloud Run. The service must be 1-63 characters long, and comply with RFC1035. Example value: "run-service".</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecCloudRunServiceRef
 {
     /// <summary>Allowed value: The `name` field of a `RunService` resource.</summary>
@@ -53,6 +56,7 @@ public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecCloudRunService
 }
 
 /// <summary>Immutable. Only valid when networkEndpointType is "SERVERLESS". Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecCloudRun
 {
     /// <summary>Immutable. Cloud Run service is the main resource of Cloud Run. The service must be 1-63 characters long, and comply with RFC1035. Example value: "run-service".</summary>
@@ -69,6 +73,7 @@ public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecCloudRun
 }
 
 /// <summary>Immutable. This field is only used for PSC. The URL of the network to which all network endpoints in the NEG belong. Uses "default" project network if unspecified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -85,6 +90,7 @@ public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecNetworkRef
 }
 
 /// <summary>Immutable. This field is only used for PSC. Optional URL of the subnetwork to which all network endpoints in the NEG belong.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecSubnetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSubnetwork` resource.</summary>
@@ -101,6 +107,7 @@ public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecSubnetworkRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRegionNetworkEndpointGroupSpec
 {
     /// <summary>Immutable. Only valid when networkEndpointType is "SERVERLESS". Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set.</summary>
@@ -141,6 +148,7 @@ public partial class V1beta1ComputeRegionNetworkEndpointGroupSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRegionNetworkEndpointGroupStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -165,6 +173,7 @@ public partial class V1beta1ComputeRegionNetworkEndpointGroupStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRegionNetworkEndpointGroupStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -180,8 +189,9 @@ public partial class V1beta1ComputeRegionNetworkEndpointGroupStatus
     public string? SelfLink { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ComputeRegionNetworkEndpointGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeRegionNetworkEndpointGroupSpec>, IStatus<V1beta1ComputeRegionNetworkEndpointGroupStatus>
 {
     public const string KubeApiVersion = "v1beta1";

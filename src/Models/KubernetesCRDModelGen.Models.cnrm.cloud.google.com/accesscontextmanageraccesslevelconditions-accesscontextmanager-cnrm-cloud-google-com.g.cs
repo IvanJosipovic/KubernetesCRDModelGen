@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.accesscontextmanager.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessContextManagerAccessLevelConditionSpecAccessLevelRef
 {
     /// <summary>Allowed value: The `name` field of an `AccessContextManagerAccessLevel` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1alpha1AccessContextManagerAccessLevelConditionSpecAccessL
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessContextManagerAccessLevelConditionSpecDevicePolicyOsConstraints
 {
     /// <summary>Immutable. The minimum allowed OS version. If not set, any version of this OS satisfies the constraint. Format: "major.minor.patch" such as "10.5.301", "9.2.1".</summary>
@@ -37,6 +39,7 @@ public partial class V1alpha1AccessContextManagerAccessLevelConditionSpecDeviceP
 }
 
 /// <summary>Immutable. Device specific restrictions, all restrictions must hold for the Condition to be true. If not specified, all devices are allowed.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessContextManagerAccessLevelConditionSpecDevicePolicy
 {
     /// <summary>Immutable. A list of allowed device management levels. An empty list allows all management levels. Possible values: ["MANAGEMENT_UNSPECIFIED", "NONE", "BASIC", "COMPLETE"].</summary>
@@ -65,6 +68,7 @@ public partial class V1alpha1AccessContextManagerAccessLevelConditionSpecDeviceP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessContextManagerAccessLevelConditionSpec
 {
     /// <summary></summary>
@@ -101,6 +105,7 @@ public partial class V1alpha1AccessContextManagerAccessLevelConditionSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessContextManagerAccessLevelConditionStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -125,6 +130,7 @@ public partial class V1alpha1AccessContextManagerAccessLevelConditionStatusCondi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessContextManagerAccessLevelConditionStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -136,8 +142,9 @@ public partial class V1alpha1AccessContextManagerAccessLevelConditionStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1AccessContextManagerAccessLevelCondition : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1AccessContextManagerAccessLevelConditionSpec>, IStatus<V1alpha1AccessContextManagerAccessLevelConditionStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.source.toolkit.fluxcd.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1HelmChartSpecReconcileStrategyEnum
 {
     [EnumMember(Value = "ChartVersion"), JsonStringEnumMemberName("ChartVersion")]
@@ -18,6 +19,7 @@ public enum V1HelmChartSpecReconcileStrategyEnum
     Revision
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1HelmChartSpecSourceRefKindEnum
 {
     [EnumMember(Value = "HelmRepository"), JsonStringEnumMemberName("HelmRepository")]
@@ -32,6 +34,7 @@ public enum V1HelmChartSpecSourceRefKindEnum
 }
 
 /// <summary>SourceRef is the reference to the Source the chart is available at.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HelmChartSpecSourceRef
 {
     /// <summary>APIVersion of the referent.</summary>
@@ -49,6 +52,7 @@ public partial class V1HelmChartSpecSourceRef
 }
 
 /// <summary>OIDCIdentityMatch specifies options for verifying the certificate identity, i.e. the issuer and the subject of the certificate.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HelmChartSpecVerifyMatchOIDCIdentity
 {
     /// <summary>Issuer specifies the regex pattern to match against to verify the OIDC issuer in the Fulcio certificate. The pattern must be a valid Go regular expression.</summary>
@@ -60,6 +64,7 @@ public partial class V1HelmChartSpecVerifyMatchOIDCIdentity
     public string Subject { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1HelmChartSpecVerifyProviderEnum
 {
     [EnumMember(Value = "cosign"), JsonStringEnumMemberName("cosign")]
@@ -71,6 +76,7 @@ public enum V1HelmChartSpecVerifyProviderEnum
 }
 
 /// <summary>SecretRef specifies the Kubernetes Secret containing the trusted public keys.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HelmChartSpecVerifySecretRef
 {
     /// <summary>Name of the referent.</summary>
@@ -79,6 +85,7 @@ public partial class V1HelmChartSpecVerifySecretRef
 }
 
 /// <summary>Verify contains the secret name containing the trusted public keys used to verify the signature and specifies which provider to use to check whether OCI image is authentic. This field is only supported when using HelmRepository source with spec.type 'oci'. Chart dependencies, which are not bundled in the umbrella chart artifact, are not verified.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HelmChartSpecVerify
 {
     /// <summary>MatchOIDCIdentity specifies the identity matching criteria to use while verifying an OCI artifact which was signed using Cosign keyless signing. The artifact's identity is deemed to be verified if any of the specified matchers match against the identity.</summary>
@@ -96,6 +103,7 @@ public partial class V1HelmChartSpecVerify
 }
 
 /// <summary>HelmChartSpec specifies the desired state of a Helm chart.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HelmChartSpec
 {
     /// <summary>Chart is the name or path the Helm chart is available at in the SourceRef.</summary>
@@ -137,6 +145,7 @@ public partial class V1HelmChartSpec
 }
 
 /// <summary>Artifact represents the output of the last successful reconciliation.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HelmChartStatusArtifact
 {
     /// <summary>Digest is the digest of the file in the form of '&lt;algorithm&gt;:&lt;checksum&gt;'.</summary>
@@ -168,6 +177,7 @@ public partial class V1HelmChartStatusArtifact
     public string Url { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1HelmChartStatusConditionsStatusEnum
 {
     [EnumMember(Value = "true"), JsonStringEnumMemberName("true")]
@@ -182,6 +192,7 @@ public enum V1HelmChartStatusConditionsStatusEnum
 }
 
 /// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HelmChartStatusConditions
 {
     /// <summary>lastTransitionTime is the last time the condition transitioned from one status to another. This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.</summary>
@@ -211,6 +222,7 @@ public partial class V1HelmChartStatusConditions
 }
 
 /// <summary>HelmChartStatus records the observed state of the HelmChart.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HelmChartStatus
 {
     /// <summary>Artifact represents the output of the last successful reconciliation.</summary>
@@ -246,8 +258,9 @@ public partial class V1HelmChartStatus
     public string? Url { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>HelmChart is the Schema for the helmcharts API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1HelmChart : IKubernetesObject<V1ObjectMeta>, ISpec<V1HelmChartSpec>, IStatus<V1HelmChartStatus>
 {
     public const string KubeApiVersion = "v1";

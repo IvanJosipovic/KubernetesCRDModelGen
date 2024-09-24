@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iot.aws.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1TopicRuleSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderCloudwatchAlarm
 {
     /// <summary>The CloudWatch alarm name.</summary>
@@ -39,6 +41,7 @@ public partial class V1beta1TopicRuleSpecForProviderCloudwatchAlarm
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderCloudwatchLogs
 {
     /// <summary>The payload that contains a JSON array of records will be sent to CloudWatch via a batch call.</summary>
@@ -55,6 +58,7 @@ public partial class V1beta1TopicRuleSpecForProviderCloudwatchLogs
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderCloudwatchMetric
 {
     /// <summary>The CloudWatch metric name.</summary>
@@ -83,6 +87,7 @@ public partial class V1beta1TopicRuleSpecForProviderCloudwatchMetric
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderDynamodb
 {
     /// <summary>The hash key name.</summary>
@@ -127,6 +132,7 @@ public partial class V1beta1TopicRuleSpecForProviderDynamodb
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderDynamodbv2PutItem
 {
     /// <summary>The name of the DynamoDB table.</summary>
@@ -135,6 +141,7 @@ public partial class V1beta1TopicRuleSpecForProviderDynamodbv2PutItem
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderDynamodbv2
 {
     /// <summary>Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.</summary>
@@ -147,6 +154,7 @@ public partial class V1beta1TopicRuleSpecForProviderDynamodbv2
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderElasticsearch
 {
     /// <summary>The endpoint of your Elasticsearch domain.</summary>
@@ -171,6 +179,7 @@ public partial class V1beta1TopicRuleSpecForProviderElasticsearch
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionCloudwatchAlarm
 {
     /// <summary>The CloudWatch alarm name.</summary>
@@ -191,6 +200,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionCloudwatchAlarm
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionCloudwatchLogs
 {
     /// <summary>The payload that contains a JSON array of records will be sent to CloudWatch via a batch call.</summary>
@@ -207,6 +217,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionCloudwatchLogs
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionCloudwatchMetric
 {
     /// <summary>The CloudWatch metric name.</summary>
@@ -235,6 +246,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionCloudwatchMetric
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionDynamodb
 {
     /// <summary>The hash key name.</summary>
@@ -279,6 +291,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionDynamodb
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionDynamodbv2PutItem
 {
     /// <summary>The name of the DynamoDB table.</summary>
@@ -287,6 +300,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionDynamodbv2PutItem
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionDynamodbv2
 {
     /// <summary>Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.</summary>
@@ -299,6 +313,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionDynamodbv2
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionElasticsearch
 {
     /// <summary>The endpoint of your Elasticsearch domain.</summary>
@@ -323,6 +338,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionElasticsearch
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionFirehose
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -343,6 +359,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionFirehose
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionHttpHttpHeader
 {
     /// <summary>The name of the HTTP header.</summary>
@@ -355,6 +372,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionHttpHttpHeader
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionHttp
 {
     /// <summary>The HTTPS URL used to verify ownership of url.</summary>
@@ -371,6 +389,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionHttp
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionIotAnalytics
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -387,6 +406,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionIotAnalytics
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionIotEvents
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -407,6 +427,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionIotEvents
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionKafkaHeader
 {
     /// <summary>The name of the HTTP header.</summary>
@@ -419,6 +440,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionKafkaHeader
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionKafka
 {
     /// <summary>Properties of the Apache Kafka producer client. For more info, see the AWS documentation.</summary>
@@ -447,6 +469,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionKafka
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionKinesis
 {
     /// <summary>The partition key.</summary>
@@ -463,6 +486,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionKinesis
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionLambda
 {
     /// <summary>The ARN of the Lambda function.</summary>
@@ -471,6 +495,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionLambda
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionRepublish
 {
     /// <summary>The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0.</summary>
@@ -487,6 +512,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionRepublish
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionS3
 {
     /// <summary>The Amazon S3 bucket name.</summary>
@@ -506,6 +532,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionS3
     public string? RoleArn { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -516,6 +543,7 @@ public enum V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnRefPolicyResolut
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -527,6 +555,7 @@ public enum V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnRefPolicyResolve
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -541,6 +570,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnRefPoli
 }
 
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -552,6 +582,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnRef
     public V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -562,6 +593,7 @@ public enum V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnSelectorPolicyRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -573,6 +605,7 @@ public enum V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnSelectorPolicyRe
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -587,6 +620,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnSelecto
 }
 
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -602,6 +636,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnSelecto
     public V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -612,6 +647,7 @@ public enum V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnRefPolicyResol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -623,6 +659,7 @@ public enum V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnRefPolicyResol
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -637,6 +674,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnRefPo
 }
 
 /// <summary>Reference to a Topic in sns to populate targetArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -648,6 +686,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnRef
     public V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -658,6 +697,7 @@ public enum V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnSelectorPolicy
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -669,6 +709,7 @@ public enum V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnSelectorPolicy
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -683,6 +724,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnSelec
 }
 
 /// <summary>Selector for a Topic in sns to populate targetArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -699,6 +741,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnSelec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionSns
 {
     /// <summary>The message format of the message to publish. Accepted values are "JSON" and "RAW".</summary>
@@ -731,6 +774,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionSns
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionSqs
 {
     /// <summary>The URL of the Amazon SQS queue.</summary>
@@ -747,6 +791,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionSqs
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionStepFunctions
 {
     /// <summary>The prefix used to generate, along with a UUID, the unique state machine execution name.</summary>
@@ -763,6 +808,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionStepFunctions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionTimestreamDimension
 {
     /// <summary>The name of the rule.</summary>
@@ -775,6 +821,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionTimestreamDimensi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionTimestreamTimestamp
 {
     /// <summary>The precision of the timestamp value that results from the expression described in value. Valid values: SECONDS, MILLISECONDS, MICROSECONDS, NANOSECONDS.</summary>
@@ -787,6 +834,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionTimestreamTimesta
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionTimestream
 {
     /// <summary>The name of an Amazon Timestream database.</summary>
@@ -811,6 +859,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionTimestream
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorAction
 {
     /// <summary></summary>
@@ -891,6 +940,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorAction
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderFirehose
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -911,6 +961,7 @@ public partial class V1beta1TopicRuleSpecForProviderFirehose
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderHttpHttpHeader
 {
     /// <summary>The name of the HTTP header.</summary>
@@ -923,6 +974,7 @@ public partial class V1beta1TopicRuleSpecForProviderHttpHttpHeader
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderHttp
 {
     /// <summary>The HTTPS URL used to verify ownership of url.</summary>
@@ -939,6 +991,7 @@ public partial class V1beta1TopicRuleSpecForProviderHttp
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderIotAnalytics
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -955,6 +1008,7 @@ public partial class V1beta1TopicRuleSpecForProviderIotAnalytics
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderIotEvents
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -975,6 +1029,7 @@ public partial class V1beta1TopicRuleSpecForProviderIotEvents
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderKafkaHeader
 {
     /// <summary>The name of the HTTP header.</summary>
@@ -987,6 +1042,7 @@ public partial class V1beta1TopicRuleSpecForProviderKafkaHeader
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderKafka
 {
     /// <summary>Properties of the Apache Kafka producer client. For more info, see the AWS documentation.</summary>
@@ -1015,6 +1071,7 @@ public partial class V1beta1TopicRuleSpecForProviderKafka
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderKinesis
 {
     /// <summary>The partition key.</summary>
@@ -1031,6 +1088,7 @@ public partial class V1beta1TopicRuleSpecForProviderKinesis
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderLambda
 {
     /// <summary>The ARN of the Lambda function.</summary>
@@ -1039,6 +1097,7 @@ public partial class V1beta1TopicRuleSpecForProviderLambda
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderRepublish
 {
     /// <summary>The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0.</summary>
@@ -1055,6 +1114,7 @@ public partial class V1beta1TopicRuleSpecForProviderRepublish
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderS3
 {
     /// <summary>The Amazon S3 bucket name.</summary>
@@ -1074,6 +1134,7 @@ public partial class V1beta1TopicRuleSpecForProviderS3
     public string? RoleArn { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecForProviderSnsRoleArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1084,6 +1145,7 @@ public enum V1beta1TopicRuleSpecForProviderSnsRoleArnRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecForProviderSnsRoleArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1095,6 +1157,7 @@ public enum V1beta1TopicRuleSpecForProviderSnsRoleArnRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderSnsRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1109,6 +1172,7 @@ public partial class V1beta1TopicRuleSpecForProviderSnsRoleArnRefPolicy
 }
 
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderSnsRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1120,6 +1184,7 @@ public partial class V1beta1TopicRuleSpecForProviderSnsRoleArnRef
     public V1beta1TopicRuleSpecForProviderSnsRoleArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecForProviderSnsRoleArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1130,6 +1195,7 @@ public enum V1beta1TopicRuleSpecForProviderSnsRoleArnSelectorPolicyResolutionEnu
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecForProviderSnsRoleArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1141,6 +1207,7 @@ public enum V1beta1TopicRuleSpecForProviderSnsRoleArnSelectorPolicyResolveEnum
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderSnsRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1155,6 +1222,7 @@ public partial class V1beta1TopicRuleSpecForProviderSnsRoleArnSelectorPolicy
 }
 
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderSnsRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1170,6 +1238,7 @@ public partial class V1beta1TopicRuleSpecForProviderSnsRoleArnSelector
     public V1beta1TopicRuleSpecForProviderSnsRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecForProviderSnsTargetArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1180,6 +1249,7 @@ public enum V1beta1TopicRuleSpecForProviderSnsTargetArnRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecForProviderSnsTargetArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1191,6 +1261,7 @@ public enum V1beta1TopicRuleSpecForProviderSnsTargetArnRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderSnsTargetArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1205,6 +1276,7 @@ public partial class V1beta1TopicRuleSpecForProviderSnsTargetArnRefPolicy
 }
 
 /// <summary>Reference to a Topic in sns to populate targetArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderSnsTargetArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1216,6 +1288,7 @@ public partial class V1beta1TopicRuleSpecForProviderSnsTargetArnRef
     public V1beta1TopicRuleSpecForProviderSnsTargetArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecForProviderSnsTargetArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1226,6 +1299,7 @@ public enum V1beta1TopicRuleSpecForProviderSnsTargetArnSelectorPolicyResolutionE
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecForProviderSnsTargetArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1237,6 +1311,7 @@ public enum V1beta1TopicRuleSpecForProviderSnsTargetArnSelectorPolicyResolveEnum
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderSnsTargetArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1251,6 +1326,7 @@ public partial class V1beta1TopicRuleSpecForProviderSnsTargetArnSelectorPolicy
 }
 
 /// <summary>Selector for a Topic in sns to populate targetArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderSnsTargetArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1267,6 +1343,7 @@ public partial class V1beta1TopicRuleSpecForProviderSnsTargetArnSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderSns
 {
     /// <summary>The message format of the message to publish. Accepted values are "JSON" and "RAW".</summary>
@@ -1299,6 +1376,7 @@ public partial class V1beta1TopicRuleSpecForProviderSns
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderSqs
 {
     /// <summary>The URL of the Amazon SQS queue.</summary>
@@ -1315,6 +1393,7 @@ public partial class V1beta1TopicRuleSpecForProviderSqs
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderStepFunctions
 {
     /// <summary>The prefix used to generate, along with a UUID, the unique state machine execution name.</summary>
@@ -1331,6 +1410,7 @@ public partial class V1beta1TopicRuleSpecForProviderStepFunctions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderTimestreamDimension
 {
     /// <summary>The name of the rule.</summary>
@@ -1343,6 +1423,7 @@ public partial class V1beta1TopicRuleSpecForProviderTimestreamDimension
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderTimestreamTimestamp
 {
     /// <summary>The precision of the timestamp value that results from the expression described in value. Valid values: SECONDS, MILLISECONDS, MICROSECONDS, NANOSECONDS.</summary>
@@ -1355,6 +1436,7 @@ public partial class V1beta1TopicRuleSpecForProviderTimestreamTimestamp
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderTimestream
 {
     /// <summary>The name of an Amazon Timestream database.</summary>
@@ -1379,6 +1461,7 @@ public partial class V1beta1TopicRuleSpecForProviderTimestream
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProvider
 {
     /// <summary></summary>
@@ -1487,6 +1570,7 @@ public partial class V1beta1TopicRuleSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderCloudwatchAlarm
 {
     /// <summary>The CloudWatch alarm name.</summary>
@@ -1507,6 +1591,7 @@ public partial class V1beta1TopicRuleSpecInitProviderCloudwatchAlarm
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderCloudwatchLogs
 {
     /// <summary>The payload that contains a JSON array of records will be sent to CloudWatch via a batch call.</summary>
@@ -1523,6 +1608,7 @@ public partial class V1beta1TopicRuleSpecInitProviderCloudwatchLogs
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderCloudwatchMetric
 {
     /// <summary>The CloudWatch metric name.</summary>
@@ -1551,6 +1637,7 @@ public partial class V1beta1TopicRuleSpecInitProviderCloudwatchMetric
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderDynamodb
 {
     /// <summary>The hash key name.</summary>
@@ -1595,6 +1682,7 @@ public partial class V1beta1TopicRuleSpecInitProviderDynamodb
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderDynamodbv2PutItem
 {
     /// <summary>The name of the DynamoDB table.</summary>
@@ -1603,6 +1691,7 @@ public partial class V1beta1TopicRuleSpecInitProviderDynamodbv2PutItem
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderDynamodbv2
 {
     /// <summary>Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.</summary>
@@ -1615,6 +1704,7 @@ public partial class V1beta1TopicRuleSpecInitProviderDynamodbv2
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderElasticsearch
 {
     /// <summary>The endpoint of your Elasticsearch domain.</summary>
@@ -1639,6 +1729,7 @@ public partial class V1beta1TopicRuleSpecInitProviderElasticsearch
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionCloudwatchAlarm
 {
     /// <summary>The CloudWatch alarm name.</summary>
@@ -1659,6 +1750,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionCloudwatchAlarm
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionCloudwatchLogs
 {
     /// <summary>The payload that contains a JSON array of records will be sent to CloudWatch via a batch call.</summary>
@@ -1675,6 +1767,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionCloudwatchLogs
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionCloudwatchMetric
 {
     /// <summary>The CloudWatch metric name.</summary>
@@ -1703,6 +1796,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionCloudwatchMetric
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionDynamodb
 {
     /// <summary>The hash key name.</summary>
@@ -1747,6 +1841,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionDynamodb
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionDynamodbv2PutItem
 {
     /// <summary>The name of the DynamoDB table.</summary>
@@ -1755,6 +1850,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionDynamodbv2PutIte
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionDynamodbv2
 {
     /// <summary>Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.</summary>
@@ -1767,6 +1863,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionDynamodbv2
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionElasticsearch
 {
     /// <summary>The endpoint of your Elasticsearch domain.</summary>
@@ -1791,6 +1888,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionElasticsearch
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionFirehose
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -1811,6 +1909,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionFirehose
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionHttpHttpHeader
 {
     /// <summary>The name of the HTTP header.</summary>
@@ -1823,6 +1922,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionHttpHttpHeader
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionHttp
 {
     /// <summary>The HTTPS URL used to verify ownership of url.</summary>
@@ -1839,6 +1939,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionHttp
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionIotAnalytics
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -1855,6 +1956,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionIotAnalytics
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionIotEvents
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -1875,6 +1977,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionIotEvents
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionKafkaHeader
 {
     /// <summary>The name of the HTTP header.</summary>
@@ -1887,6 +1990,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionKafkaHeader
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionKafka
 {
     /// <summary>Properties of the Apache Kafka producer client. For more info, see the AWS documentation.</summary>
@@ -1915,6 +2019,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionKafka
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionKinesis
 {
     /// <summary>The partition key.</summary>
@@ -1931,6 +2036,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionKinesis
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionLambda
 {
     /// <summary>The ARN of the Lambda function.</summary>
@@ -1939,6 +2045,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionLambda
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionRepublish
 {
     /// <summary>The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0.</summary>
@@ -1955,6 +2062,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionRepublish
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionS3
 {
     /// <summary>The Amazon S3 bucket name.</summary>
@@ -1974,6 +2082,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionS3
     public string? RoleArn { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1984,6 +2093,7 @@ public enum V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnRefPolicyResolu
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1995,6 +2105,7 @@ public enum V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnRefPolicyResolv
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2009,6 +2120,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnRefPol
 }
 
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2020,6 +2132,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnRef
     public V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2030,6 +2143,7 @@ public enum V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnSelectorPolicyR
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2041,6 +2155,7 @@ public enum V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnSelectorPolicyR
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2055,6 +2170,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnSelect
 }
 
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2070,6 +2186,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnSelect
     public V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2080,6 +2197,7 @@ public enum V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnRefPolicyReso
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2091,6 +2209,7 @@ public enum V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnRefPolicyReso
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2105,6 +2224,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnRefP
 }
 
 /// <summary>Reference to a Topic in sns to populate targetArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2116,6 +2236,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnRef
     public V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2126,6 +2247,7 @@ public enum V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnSelectorPolic
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2137,6 +2259,7 @@ public enum V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnSelectorPolic
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2151,6 +2274,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnSele
 }
 
 /// <summary>Selector for a Topic in sns to populate targetArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2167,6 +2291,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnSele
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionSns
 {
     /// <summary>The message format of the message to publish. Accepted values are "JSON" and "RAW".</summary>
@@ -2199,6 +2324,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionSns
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionSqs
 {
     /// <summary>The URL of the Amazon SQS queue.</summary>
@@ -2215,6 +2341,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionSqs
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionStepFunctions
 {
     /// <summary>The prefix used to generate, along with a UUID, the unique state machine execution name.</summary>
@@ -2231,6 +2358,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionStepFunctions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionTimestreamDimension
 {
     /// <summary>The name of the rule.</summary>
@@ -2243,6 +2371,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionTimestreamDimens
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionTimestreamTimestamp
 {
     /// <summary>The precision of the timestamp value that results from the expression described in value. Valid values: SECONDS, MILLISECONDS, MICROSECONDS, NANOSECONDS.</summary>
@@ -2255,6 +2384,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionTimestreamTimest
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionTimestream
 {
     /// <summary>The name of an Amazon Timestream database.</summary>
@@ -2279,6 +2409,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionTimestream
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorAction
 {
     /// <summary></summary>
@@ -2359,6 +2490,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorAction
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderFirehose
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -2379,6 +2511,7 @@ public partial class V1beta1TopicRuleSpecInitProviderFirehose
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderHttpHttpHeader
 {
     /// <summary>The name of the HTTP header.</summary>
@@ -2391,6 +2524,7 @@ public partial class V1beta1TopicRuleSpecInitProviderHttpHttpHeader
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderHttp
 {
     /// <summary>The HTTPS URL used to verify ownership of url.</summary>
@@ -2407,6 +2541,7 @@ public partial class V1beta1TopicRuleSpecInitProviderHttp
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderIotAnalytics
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -2423,6 +2558,7 @@ public partial class V1beta1TopicRuleSpecInitProviderIotAnalytics
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderIotEvents
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -2443,6 +2579,7 @@ public partial class V1beta1TopicRuleSpecInitProviderIotEvents
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderKafkaHeader
 {
     /// <summary>The name of the HTTP header.</summary>
@@ -2455,6 +2592,7 @@ public partial class V1beta1TopicRuleSpecInitProviderKafkaHeader
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderKafka
 {
     /// <summary>Properties of the Apache Kafka producer client. For more info, see the AWS documentation.</summary>
@@ -2483,6 +2621,7 @@ public partial class V1beta1TopicRuleSpecInitProviderKafka
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderKinesis
 {
     /// <summary>The partition key.</summary>
@@ -2499,6 +2638,7 @@ public partial class V1beta1TopicRuleSpecInitProviderKinesis
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderLambda
 {
     /// <summary>The ARN of the Lambda function.</summary>
@@ -2507,6 +2647,7 @@ public partial class V1beta1TopicRuleSpecInitProviderLambda
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderRepublish
 {
     /// <summary>The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0.</summary>
@@ -2523,6 +2664,7 @@ public partial class V1beta1TopicRuleSpecInitProviderRepublish
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderS3
 {
     /// <summary>The Amazon S3 bucket name.</summary>
@@ -2542,6 +2684,7 @@ public partial class V1beta1TopicRuleSpecInitProviderS3
     public string? RoleArn { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecInitProviderSnsRoleArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2552,6 +2695,7 @@ public enum V1beta1TopicRuleSpecInitProviderSnsRoleArnRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecInitProviderSnsRoleArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2563,6 +2707,7 @@ public enum V1beta1TopicRuleSpecInitProviderSnsRoleArnRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderSnsRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2577,6 +2722,7 @@ public partial class V1beta1TopicRuleSpecInitProviderSnsRoleArnRefPolicy
 }
 
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderSnsRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2588,6 +2734,7 @@ public partial class V1beta1TopicRuleSpecInitProviderSnsRoleArnRef
     public V1beta1TopicRuleSpecInitProviderSnsRoleArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecInitProviderSnsRoleArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2598,6 +2745,7 @@ public enum V1beta1TopicRuleSpecInitProviderSnsRoleArnSelectorPolicyResolutionEn
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecInitProviderSnsRoleArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2609,6 +2757,7 @@ public enum V1beta1TopicRuleSpecInitProviderSnsRoleArnSelectorPolicyResolveEnum
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderSnsRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2623,6 +2772,7 @@ public partial class V1beta1TopicRuleSpecInitProviderSnsRoleArnSelectorPolicy
 }
 
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderSnsRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2638,6 +2788,7 @@ public partial class V1beta1TopicRuleSpecInitProviderSnsRoleArnSelector
     public V1beta1TopicRuleSpecInitProviderSnsRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecInitProviderSnsTargetArnRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2648,6 +2799,7 @@ public enum V1beta1TopicRuleSpecInitProviderSnsTargetArnRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecInitProviderSnsTargetArnRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2659,6 +2811,7 @@ public enum V1beta1TopicRuleSpecInitProviderSnsTargetArnRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderSnsTargetArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2673,6 +2826,7 @@ public partial class V1beta1TopicRuleSpecInitProviderSnsTargetArnRefPolicy
 }
 
 /// <summary>Reference to a Topic in sns to populate targetArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderSnsTargetArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2684,6 +2838,7 @@ public partial class V1beta1TopicRuleSpecInitProviderSnsTargetArnRef
     public V1beta1TopicRuleSpecInitProviderSnsTargetArnRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecInitProviderSnsTargetArnSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2694,6 +2849,7 @@ public enum V1beta1TopicRuleSpecInitProviderSnsTargetArnSelectorPolicyResolution
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecInitProviderSnsTargetArnSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2705,6 +2861,7 @@ public enum V1beta1TopicRuleSpecInitProviderSnsTargetArnSelectorPolicyResolveEnu
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderSnsTargetArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2719,6 +2876,7 @@ public partial class V1beta1TopicRuleSpecInitProviderSnsTargetArnSelectorPolicy
 }
 
 /// <summary>Selector for a Topic in sns to populate targetArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderSnsTargetArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2735,6 +2893,7 @@ public partial class V1beta1TopicRuleSpecInitProviderSnsTargetArnSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderSns
 {
     /// <summary>The message format of the message to publish. Accepted values are "JSON" and "RAW".</summary>
@@ -2767,6 +2926,7 @@ public partial class V1beta1TopicRuleSpecInitProviderSns
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderSqs
 {
     /// <summary>The URL of the Amazon SQS queue.</summary>
@@ -2783,6 +2943,7 @@ public partial class V1beta1TopicRuleSpecInitProviderSqs
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderStepFunctions
 {
     /// <summary>The prefix used to generate, along with a UUID, the unique state machine execution name.</summary>
@@ -2799,6 +2960,7 @@ public partial class V1beta1TopicRuleSpecInitProviderStepFunctions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderTimestreamDimension
 {
     /// <summary>The name of the rule.</summary>
@@ -2811,6 +2973,7 @@ public partial class V1beta1TopicRuleSpecInitProviderTimestreamDimension
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderTimestreamTimestamp
 {
     /// <summary>The precision of the timestamp value that results from the expression described in value. Valid values: SECONDS, MILLISECONDS, MICROSECONDS, NANOSECONDS.</summary>
@@ -2823,6 +2986,7 @@ public partial class V1beta1TopicRuleSpecInitProviderTimestreamTimestamp
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderTimestream
 {
     /// <summary>The name of an Amazon Timestream database.</summary>
@@ -2847,6 +3011,7 @@ public partial class V1beta1TopicRuleSpecInitProviderTimestream
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProvider
 {
     /// <summary></summary>
@@ -2950,6 +3115,7 @@ public partial class V1beta1TopicRuleSpecInitProvider
     public IList<V1beta1TopicRuleSpecInitProviderTimestream>? Timestream { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -2972,6 +3138,7 @@ public enum V1beta1TopicRuleSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2982,6 +3149,7 @@ public enum V1beta1TopicRuleSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2993,6 +3161,7 @@ public enum V1beta1TopicRuleSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3007,6 +3176,7 @@ public partial class V1beta1TopicRuleSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3018,6 +3188,7 @@ public partial class V1beta1TopicRuleSpecProviderConfigRef
     public V1beta1TopicRuleSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -3028,6 +3199,7 @@ public enum V1beta1TopicRuleSpecPublishConnectionDetailsToConfigRefPolicyResolut
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TopicRuleSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -3039,6 +3211,7 @@ public enum V1beta1TopicRuleSpecPublishConnectionDetailsToConfigRefPolicyResolve
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3053,6 +3226,7 @@ public partial class V1beta1TopicRuleSpecPublishConnectionDetailsToConfigRefPoli
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3065,6 +3239,7 @@ public partial class V1beta1TopicRuleSpecPublishConnectionDetailsToConfigRef
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -3081,6 +3256,7 @@ public partial class V1beta1TopicRuleSpecPublishConnectionDetailsToMetadata
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -3097,6 +3273,7 @@ public partial class V1beta1TopicRuleSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -3109,6 +3286,7 @@ public partial class V1beta1TopicRuleSpecWriteConnectionSecretToRef
 }
 
 /// <summary>TopicRuleSpec defines the desired state of TopicRule</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -3142,6 +3320,7 @@ public partial class V1beta1TopicRuleSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderCloudwatchAlarm
 {
     /// <summary>The CloudWatch alarm name.</summary>
@@ -3162,6 +3341,7 @@ public partial class V1beta1TopicRuleStatusAtProviderCloudwatchAlarm
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderCloudwatchLogs
 {
     /// <summary>The payload that contains a JSON array of records will be sent to CloudWatch via a batch call.</summary>
@@ -3178,6 +3358,7 @@ public partial class V1beta1TopicRuleStatusAtProviderCloudwatchLogs
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderCloudwatchMetric
 {
     /// <summary>The CloudWatch metric name.</summary>
@@ -3206,6 +3387,7 @@ public partial class V1beta1TopicRuleStatusAtProviderCloudwatchMetric
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderDynamodb
 {
     /// <summary>The hash key name.</summary>
@@ -3250,6 +3432,7 @@ public partial class V1beta1TopicRuleStatusAtProviderDynamodb
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderDynamodbv2PutItem
 {
     /// <summary>The name of the DynamoDB table.</summary>
@@ -3258,6 +3441,7 @@ public partial class V1beta1TopicRuleStatusAtProviderDynamodbv2PutItem
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderDynamodbv2
 {
     /// <summary>Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.</summary>
@@ -3270,6 +3454,7 @@ public partial class V1beta1TopicRuleStatusAtProviderDynamodbv2
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderElasticsearch
 {
     /// <summary>The endpoint of your Elasticsearch domain.</summary>
@@ -3294,6 +3479,7 @@ public partial class V1beta1TopicRuleStatusAtProviderElasticsearch
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionCloudwatchAlarm
 {
     /// <summary>The CloudWatch alarm name.</summary>
@@ -3314,6 +3500,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionCloudwatchAlarm
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionCloudwatchLogs
 {
     /// <summary>The payload that contains a JSON array of records will be sent to CloudWatch via a batch call.</summary>
@@ -3330,6 +3517,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionCloudwatchLogs
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionCloudwatchMetric
 {
     /// <summary>The CloudWatch metric name.</summary>
@@ -3358,6 +3546,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionCloudwatchMetric
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionDynamodb
 {
     /// <summary>The hash key name.</summary>
@@ -3402,6 +3591,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionDynamodb
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionDynamodbv2PutItem
 {
     /// <summary>The name of the DynamoDB table.</summary>
@@ -3410,6 +3600,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionDynamodbv2PutIte
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionDynamodbv2
 {
     /// <summary>Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.</summary>
@@ -3422,6 +3613,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionDynamodbv2
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionElasticsearch
 {
     /// <summary>The endpoint of your Elasticsearch domain.</summary>
@@ -3446,6 +3638,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionElasticsearch
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionFirehose
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -3466,6 +3659,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionFirehose
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionHttpHttpHeader
 {
     /// <summary>The name of the HTTP header.</summary>
@@ -3478,6 +3672,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionHttpHttpHeader
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionHttp
 {
     /// <summary>The HTTPS URL used to verify ownership of url.</summary>
@@ -3494,6 +3689,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionHttp
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionIotAnalytics
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -3510,6 +3706,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionIotAnalytics
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionIotEvents
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -3530,6 +3727,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionIotEvents
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionKafkaHeader
 {
     /// <summary>The name of the HTTP header.</summary>
@@ -3542,6 +3740,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionKafkaHeader
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionKafka
 {
     /// <summary>Properties of the Apache Kafka producer client. For more info, see the AWS documentation.</summary>
@@ -3570,6 +3769,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionKafka
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionKinesis
 {
     /// <summary>The partition key.</summary>
@@ -3586,6 +3786,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionKinesis
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionLambda
 {
     /// <summary>The ARN of the Lambda function.</summary>
@@ -3594,6 +3795,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionLambda
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionRepublish
 {
     /// <summary>The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0.</summary>
@@ -3610,6 +3812,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionRepublish
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionS3
 {
     /// <summary>The Amazon S3 bucket name.</summary>
@@ -3630,6 +3833,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionS3
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionSns
 {
     /// <summary>The message format of the message to publish. Accepted values are "JSON" and "RAW".</summary>
@@ -3646,6 +3850,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionSns
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionSqs
 {
     /// <summary>The URL of the Amazon SQS queue.</summary>
@@ -3662,6 +3867,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionSqs
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionStepFunctions
 {
     /// <summary>The prefix used to generate, along with a UUID, the unique state machine execution name.</summary>
@@ -3678,6 +3884,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionStepFunctions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionTimestreamDimension
 {
     /// <summary>The name of the rule.</summary>
@@ -3690,6 +3897,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionTimestreamDimens
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionTimestreamTimestamp
 {
     /// <summary>The precision of the timestamp value that results from the expression described in value. Valid values: SECONDS, MILLISECONDS, MICROSECONDS, NANOSECONDS.</summary>
@@ -3702,6 +3910,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionTimestreamTimest
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionTimestream
 {
     /// <summary>The name of an Amazon Timestream database.</summary>
@@ -3726,6 +3935,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionTimestream
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorAction
 {
     /// <summary></summary>
@@ -3806,6 +4016,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorAction
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderFirehose
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -3826,6 +4037,7 @@ public partial class V1beta1TopicRuleStatusAtProviderFirehose
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderHttpHttpHeader
 {
     /// <summary>The name of the HTTP header.</summary>
@@ -3838,6 +4050,7 @@ public partial class V1beta1TopicRuleStatusAtProviderHttpHttpHeader
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderHttp
 {
     /// <summary>The HTTPS URL used to verify ownership of url.</summary>
@@ -3854,6 +4067,7 @@ public partial class V1beta1TopicRuleStatusAtProviderHttp
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderIotAnalytics
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -3870,6 +4084,7 @@ public partial class V1beta1TopicRuleStatusAtProviderIotAnalytics
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderIotEvents
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -3890,6 +4105,7 @@ public partial class V1beta1TopicRuleStatusAtProviderIotEvents
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderKafkaHeader
 {
     /// <summary>The name of the HTTP header.</summary>
@@ -3902,6 +4118,7 @@ public partial class V1beta1TopicRuleStatusAtProviderKafkaHeader
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderKafka
 {
     /// <summary>Properties of the Apache Kafka producer client. For more info, see the AWS documentation.</summary>
@@ -3930,6 +4147,7 @@ public partial class V1beta1TopicRuleStatusAtProviderKafka
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderKinesis
 {
     /// <summary>The partition key.</summary>
@@ -3946,6 +4164,7 @@ public partial class V1beta1TopicRuleStatusAtProviderKinesis
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderLambda
 {
     /// <summary>The ARN of the Lambda function.</summary>
@@ -3954,6 +4173,7 @@ public partial class V1beta1TopicRuleStatusAtProviderLambda
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderRepublish
 {
     /// <summary>The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0.</summary>
@@ -3970,6 +4190,7 @@ public partial class V1beta1TopicRuleStatusAtProviderRepublish
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderS3
 {
     /// <summary>The Amazon S3 bucket name.</summary>
@@ -3990,6 +4211,7 @@ public partial class V1beta1TopicRuleStatusAtProviderS3
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderSns
 {
     /// <summary>The message format of the message to publish. Accepted values are "JSON" and "RAW".</summary>
@@ -4006,6 +4228,7 @@ public partial class V1beta1TopicRuleStatusAtProviderSns
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderSqs
 {
     /// <summary>The URL of the Amazon SQS queue.</summary>
@@ -4022,6 +4245,7 @@ public partial class V1beta1TopicRuleStatusAtProviderSqs
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderStepFunctions
 {
     /// <summary>The prefix used to generate, along with a UUID, the unique state machine execution name.</summary>
@@ -4038,6 +4262,7 @@ public partial class V1beta1TopicRuleStatusAtProviderStepFunctions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderTimestreamDimension
 {
     /// <summary>The name of the rule.</summary>
@@ -4050,6 +4275,7 @@ public partial class V1beta1TopicRuleStatusAtProviderTimestreamDimension
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderTimestreamTimestamp
 {
     /// <summary>The precision of the timestamp value that results from the expression described in value. Valid values: SECONDS, MILLISECONDS, MICROSECONDS, NANOSECONDS.</summary>
@@ -4062,6 +4288,7 @@ public partial class V1beta1TopicRuleStatusAtProviderTimestreamTimestamp
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderTimestream
 {
     /// <summary>The name of an Amazon Timestream database.</summary>
@@ -4086,6 +4313,7 @@ public partial class V1beta1TopicRuleStatusAtProviderTimestream
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProvider
 {
     /// <summary>The ARN of the topic rule</summary>
@@ -4202,6 +4430,7 @@ public partial class V1beta1TopicRuleStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -4230,6 +4459,7 @@ public partial class V1beta1TopicRuleStatusConditions
 }
 
 /// <summary>TopicRuleStatus defines the observed state of TopicRule.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatus
 {
     /// <summary></summary>
@@ -4245,8 +4475,9 @@ public partial class V1beta1TopicRuleStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>TopicRule is the Schema for the TopicRules API. Creates and manages an AWS IoT topic rule</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1TopicRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TopicRuleSpec>, IStatus<V1beta1TopicRuleStatus>
 {
     public const string KubeApiVersion = "v1beta1";

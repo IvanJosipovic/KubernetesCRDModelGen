@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.extensions.istio.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1WasmPluginSpecFailStrategyEnum
 {
     [EnumMember(Value = "FAIL_CLOSE"), JsonStringEnumMemberName("FAIL_CLOSE")]
@@ -18,6 +19,7 @@ public enum V1alpha1WasmPluginSpecFailStrategyEnum
     FAILOPEN
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1WasmPluginSpecImagePullPolicyEnum
 {
     [EnumMember(Value = "UNSPECIFIED_POLICY"), JsonStringEnumMemberName("UNSPECIFIED_POLICY")]
@@ -31,6 +33,7 @@ public enum V1alpha1WasmPluginSpecImagePullPolicyEnum
     Always
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1WasmPluginSpecMatchModeEnum
 {
     [EnumMember(Value = "UNDEFINED"), JsonStringEnumMemberName("UNDEFINED")]
@@ -48,6 +51,7 @@ public enum V1alpha1WasmPluginSpecMatchModeEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WasmPluginSpecMatchPorts
 {
     /// <summary></summary>
@@ -56,6 +60,7 @@ public partial class V1alpha1WasmPluginSpecMatchPorts
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WasmPluginSpecMatch
 {
     /// <summary>Criteria for selecting traffic by their direction.  Valid Options: CLIENT, SERVER, CLIENT_AND_SERVER</summary>
@@ -68,6 +73,7 @@ public partial class V1alpha1WasmPluginSpecMatch
     public IList<V1alpha1WasmPluginSpecMatchPorts>? Ports { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1WasmPluginSpecPhaseEnum
 {
     [EnumMember(Value = "UNSPECIFIED_PHASE"), JsonStringEnumMemberName("UNSPECIFIED_PHASE")]
@@ -85,6 +91,7 @@ public enum V1alpha1WasmPluginSpecPhaseEnum
 }
 
 /// <summary>Criteria used to select the specific set of pods/VMs on which this plugin configuration should be applied.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WasmPluginSpecSelector
 {
     /// <summary>One or more labels that indicate a specific set of pods/VMs on which a policy should be applied.</summary>
@@ -93,6 +100,7 @@ public partial class V1alpha1WasmPluginSpecSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WasmPluginSpecTargetRef
 {
     /// <summary>group is the group of the target resource.</summary>
@@ -113,6 +121,7 @@ public partial class V1alpha1WasmPluginSpecTargetRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WasmPluginSpecTargetRefs
 {
     /// <summary>group is the group of the target resource.</summary>
@@ -132,6 +141,7 @@ public partial class V1alpha1WasmPluginSpecTargetRefs
     public string? Namespace { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1WasmPluginSpecTypeEnum
 {
     [EnumMember(Value = "UNSPECIFIED_PLUGIN_TYPE"), JsonStringEnumMemberName("UNSPECIFIED_PLUGIN_TYPE")]
@@ -145,6 +155,7 @@ public enum V1alpha1WasmPluginSpecTypeEnum
     NETWORK
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1WasmPluginSpecVmConfigEnvValueFromEnum
 {
     [EnumMember(Value = "INLINE"), JsonStringEnumMemberName("INLINE")]
@@ -156,6 +167,7 @@ public enum V1alpha1WasmPluginSpecVmConfigEnvValueFromEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WasmPluginSpecVmConfigEnv
 {
     /// <summary>Name of the environment variable.</summary>
@@ -173,6 +185,7 @@ public partial class V1alpha1WasmPluginSpecVmConfigEnv
 }
 
 /// <summary>Configuration for a Wasm VM.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WasmPluginSpecVmConfig
 {
     /// <summary>Specifies environment variables to be injected to this VM.</summary>
@@ -181,6 +194,7 @@ public partial class V1alpha1WasmPluginSpecVmConfig
 }
 
 /// <summary>Extend the functionality provided by the Istio proxy through WebAssembly filters. See more details at: https://istio.io/docs/reference/config/proxy_extensions/wasm-plugin.html</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WasmPluginSpec
 {
     /// <summary>Specifies the failure behavior for the plugin due to fatal errors.  Valid Options: FAIL_CLOSE, FAIL_OPEN</summary>
@@ -252,8 +266,9 @@ public partial class V1alpha1WasmPluginSpec
     public V1alpha1WasmPluginSpecVmConfig? VmConfig { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1WasmPlugin : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1WasmPluginSpec>, IStatus<JsonNode>
 {
     public const string KubeApiVersion = "v1alpha1";

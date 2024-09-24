@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dialogflowcx.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXIntentSpecParameters
 {
     /// <summary>The entity type of the parameter. Format: projects/-/locations/-/agents/-/entityTypes/&lt;System Entity Type ID&gt; for system entity types (for example, projects/-/locations/-/agents/-/entityTypes/sys.date), or projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/entityTypes/&lt;Entity Type ID&gt; for developer entity types.</summary>
@@ -29,6 +30,7 @@ public partial class V1alpha1DialogflowCXIntentSpecParameters
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXIntentSpecTrainingPhrasesParts
 {
     /// <summary>The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.</summary>
@@ -41,6 +43,7 @@ public partial class V1alpha1DialogflowCXIntentSpecTrainingPhrasesParts
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXIntentSpecTrainingPhrases
 {
     /// <summary>The unique identifier of the training phrase.</summary>
@@ -57,6 +60,7 @@ public partial class V1alpha1DialogflowCXIntentSpecTrainingPhrases
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXIntentSpec
 {
     /// <summary>Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.</summary>
@@ -97,6 +101,7 @@ public partial class V1alpha1DialogflowCXIntentSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXIntentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -121,6 +126,7 @@ public partial class V1alpha1DialogflowCXIntentStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXIntentStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -136,8 +142,9 @@ public partial class V1alpha1DialogflowCXIntentStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1DialogflowCXIntent : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DialogflowCXIntentSpec>, IStatus<V1alpha1DialogflowCXIntentStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary>The target that the firewall policy is attached to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNetworkFirewallPolicyAssociationSpecAttachmentTargetRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1ComputeNetworkFirewallPolicyAssociationSpecAttachmen
 }
 
 /// <summary>The firewall policy ID of the association.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNetworkFirewallPolicyAssociationSpecFirewallPolicyRef
 {
     /// <summary>Allowed value: The `networkFirewallPolicyId` field of a `ComputeNetworkFirewallPolicy` resource.</summary>
@@ -41,6 +43,7 @@ public partial class V1beta1ComputeNetworkFirewallPolicyAssociationSpecFirewallP
 }
 
 /// <summary>The project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNetworkFirewallPolicyAssociationSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -57,6 +60,7 @@ public partial class V1beta1ComputeNetworkFirewallPolicyAssociationSpecProjectRe
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNetworkFirewallPolicyAssociationSpec
 {
     /// <summary>The target that the firewall policy is attached to.</summary>
@@ -77,6 +81,7 @@ public partial class V1beta1ComputeNetworkFirewallPolicyAssociationSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNetworkFirewallPolicyAssociationStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -101,6 +106,7 @@ public partial class V1beta1ComputeNetworkFirewallPolicyAssociationStatusConditi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNetworkFirewallPolicyAssociationStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -116,8 +122,9 @@ public partial class V1beta1ComputeNetworkFirewallPolicyAssociationStatus
     public string? ShortName { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ComputeNetworkFirewallPolicyAssociation : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeNetworkFirewallPolicyAssociationSpec>, IStatus<V1beta1ComputeNetworkFirewallPolicyAssociationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

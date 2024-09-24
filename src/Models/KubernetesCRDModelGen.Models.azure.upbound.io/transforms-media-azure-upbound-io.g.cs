@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.media.azure.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransformSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -18,6 +19,7 @@ public enum V1beta1TransformSpecDeletionPolicyEnum
     Delete
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransformSpecForProviderMediaServicesAccountNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -28,6 +30,7 @@ public enum V1beta1TransformSpecForProviderMediaServicesAccountNameRefPolicyReso
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransformSpecForProviderMediaServicesAccountNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -39,6 +42,7 @@ public enum V1beta1TransformSpecForProviderMediaServicesAccountNameRefPolicyReso
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderMediaServicesAccountNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -53,6 +57,7 @@ public partial class V1beta1TransformSpecForProviderMediaServicesAccountNameRefP
 }
 
 /// <summary>Reference to a ServicesAccount in media to populate mediaServicesAccountName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderMediaServicesAccountNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -64,6 +69,7 @@ public partial class V1beta1TransformSpecForProviderMediaServicesAccountNameRef
     public V1beta1TransformSpecForProviderMediaServicesAccountNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransformSpecForProviderMediaServicesAccountNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -74,6 +80,7 @@ public enum V1beta1TransformSpecForProviderMediaServicesAccountNameSelectorPolic
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransformSpecForProviderMediaServicesAccountNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -85,6 +92,7 @@ public enum V1beta1TransformSpecForProviderMediaServicesAccountNameSelectorPolic
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderMediaServicesAccountNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -99,6 +107,7 @@ public partial class V1beta1TransformSpecForProviderMediaServicesAccountNameSele
 }
 
 /// <summary>Selector for a ServicesAccount in media to populate mediaServicesAccountName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderMediaServicesAccountNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -115,6 +124,7 @@ public partial class V1beta1TransformSpecForProviderMediaServicesAccountNameSele
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputAudioAnalyzerPreset
 {
     /// <summary>Possible values are Basic or Standard. Determines the set of audio analysis operations to be performed. Default to Standard.</summary>
@@ -131,6 +141,7 @@ public partial class V1beta1TransformSpecForProviderOutputAudioAnalyzerPreset
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputBuiltinPresetPresetConfiguration
 {
     /// <summary>The complexity of the encoding. Possible values are Balanced, Speed or Quality.</summary>
@@ -167,6 +178,7 @@ public partial class V1beta1TransformSpecForProviderOutputBuiltinPresetPresetCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputBuiltinPreset
 {
     /// <summary>A preset_configuration block as defined below.</summary>
@@ -179,6 +191,7 @@ public partial class V1beta1TransformSpecForProviderOutputBuiltinPreset
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputCustomPresetCodecAacAudio
 {
     /// <summary>The average bitrate in bits per second at which to encode the input video when generating this layer.</summary>
@@ -203,6 +216,7 @@ public partial class V1beta1TransformSpecForProviderOutputCustomPresetCodecAacAu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputCustomPresetCodecCopyAudio
 {
     /// <summary>Specifies the label for the codec. The label can be used to control muxing behavior.</summary>
@@ -211,6 +225,7 @@ public partial class V1beta1TransformSpecForProviderOutputCustomPresetCodecCopyA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputCustomPresetCodecCopyVideo
 {
     /// <summary>Specifies the label for the codec. The label can be used to control muxing behavior.</summary>
@@ -219,6 +234,7 @@ public partial class V1beta1TransformSpecForProviderOutputCustomPresetCodecCopyV
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputCustomPresetCodecDdAudio
 {
     /// <summary>The average bitrate in bits per second at which to encode the input video when generating this layer.</summary>
@@ -239,6 +255,7 @@ public partial class V1beta1TransformSpecForProviderOutputCustomPresetCodecDdAud
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputCustomPresetCodecH264VideoLayer
 {
     /// <summary>Whether adaptive B-frames are used when encoding this layer. If not specified, the encoder will turn it on whenever the video profile permits its use. Default to true.</summary>
@@ -303,6 +320,7 @@ public partial class V1beta1TransformSpecForProviderOutputCustomPresetCodecH264V
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputCustomPresetCodecH264Video
 {
     /// <summary>The complexity of the encoding. Possible values are Balanced, Speed or Quality.</summary>
@@ -339,6 +357,7 @@ public partial class V1beta1TransformSpecForProviderOutputCustomPresetCodecH264V
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputCustomPresetCodecH265VideoLayer
 {
     /// <summary>Whether adaptive B-frames are used when encoding this layer. If not specified, the encoder will turn it on whenever the video profile permits its use. Default to true.</summary>
@@ -399,6 +418,7 @@ public partial class V1beta1TransformSpecForProviderOutputCustomPresetCodecH265V
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputCustomPresetCodecH265Video
 {
     /// <summary>The complexity of the encoding. Possible values are Balanced, Speed or Quality.</summary>
@@ -431,6 +451,7 @@ public partial class V1beta1TransformSpecForProviderOutputCustomPresetCodecH265V
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputCustomPresetCodecJpgImageLayer
 {
     /// <summary>The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).</summary>
@@ -451,6 +472,7 @@ public partial class V1beta1TransformSpecForProviderOutputCustomPresetCodecJpgIm
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputCustomPresetCodecJpgImage
 {
     /// <summary>The distance between two key frames. The value should be non-zero in the range 0.5 to 20 seconds, specified in ISO 8601 format. Note that this setting is ignored if sync_mode is set to Passthrough, where the KeyFrameInterval value will follow the input source setting. Defaults to PT2S.</summary>
@@ -491,6 +513,7 @@ public partial class V1beta1TransformSpecForProviderOutputCustomPresetCodecJpgIm
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputCustomPresetCodecPngImageLayer
 {
     /// <summary>The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).</summary>
@@ -507,6 +530,7 @@ public partial class V1beta1TransformSpecForProviderOutputCustomPresetCodecPngIm
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputCustomPresetCodecPngImage
 {
     /// <summary>The distance between two key frames. The value should be non-zero in the range 0.5 to 20 seconds, specified in ISO 8601 format. Note that this setting is ignored if sync_mode is set to Passthrough, where the KeyFrameInterval value will follow the input source setting. Defaults to PT2S.</summary>
@@ -543,6 +567,7 @@ public partial class V1beta1TransformSpecForProviderOutputCustomPresetCodecPngIm
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputCustomPresetCodec
 {
     /// <summary>A aac_audio block as defined above.</summary>
@@ -579,6 +604,7 @@ public partial class V1beta1TransformSpecForProviderOutputCustomPresetCodec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputCustomPresetFilterCropRectangle
 {
     /// <summary>The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).</summary>
@@ -599,6 +625,7 @@ public partial class V1beta1TransformSpecForProviderOutputCustomPresetFilterCrop
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputCustomPresetFilterDeinterlace
 {
     /// <summary>The deinterlacing mode. Possible values are AutoPixelAdaptive or Off. Default to AutoPixelAdaptive.</summary>
@@ -611,6 +638,7 @@ public partial class V1beta1TransformSpecForProviderOutputCustomPresetFilterDein
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputCustomPresetFilterFadeIn
 {
     /// <summary>The duration of the fade effect in the video. The value can be in ISO 8601 format (For example, PT05S to fade In/Out a color during 5 seconds), or a frame count (For example, 10 to fade 10 frames from the start time), or a relative value to stream duration (For example, 10% to fade 10% of stream duration).</summary>
@@ -627,6 +655,7 @@ public partial class V1beta1TransformSpecForProviderOutputCustomPresetFilterFade
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputCustomPresetFilterFadeOut
 {
     /// <summary>The duration of the fade effect in the video. The value can be in ISO 8601 format (For example, PT05S to fade In/Out a color during 5 seconds), or a frame count (For example, 10 to fade 10 frames from the start time), or a relative value to stream duration (For example, 10% to fade 10% of stream duration).</summary>
@@ -643,6 +672,7 @@ public partial class V1beta1TransformSpecForProviderOutputCustomPresetFilterFade
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputCustomPresetFilterOverlayAudio
 {
     /// <summary>The gain level of audio in the overlay. The value should be in range between 0 to 1.0. The default is 1.0.</summary>
@@ -671,6 +701,7 @@ public partial class V1beta1TransformSpecForProviderOutputCustomPresetFilterOver
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputCustomPresetFilterOverlayVideoCropRectangle
 {
     /// <summary>The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).</summary>
@@ -691,6 +722,7 @@ public partial class V1beta1TransformSpecForProviderOutputCustomPresetFilterOver
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputCustomPresetFilterOverlayVideoPosition
 {
     /// <summary>The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).</summary>
@@ -711,6 +743,7 @@ public partial class V1beta1TransformSpecForProviderOutputCustomPresetFilterOver
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputCustomPresetFilterOverlayVideo
 {
     /// <summary>The gain level of audio in the overlay. The value should be in range between 0 to 1.0. The default is 1.0.</summary>
@@ -751,6 +784,7 @@ public partial class V1beta1TransformSpecForProviderOutputCustomPresetFilterOver
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputCustomPresetFilterOverlay
 {
     /// <summary>An audio block as defined above.</summary>
@@ -763,6 +797,7 @@ public partial class V1beta1TransformSpecForProviderOutputCustomPresetFilterOver
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputCustomPresetFilter
 {
     /// <summary>A crop_rectangle block as defined above.</summary>
@@ -791,6 +826,7 @@ public partial class V1beta1TransformSpecForProviderOutputCustomPresetFilter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputCustomPresetFormatJpg
 {
     /// <summary>The file naming pattern used for the creation of output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {AudioStream} - string "Audio" plus audio stream number(start from 1). {Bitrate} - The audio/video bitrate in kbps. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.</summary>
@@ -799,6 +835,7 @@ public partial class V1beta1TransformSpecForProviderOutputCustomPresetFormatJpg
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputCustomPresetFormatMp4OutputFile
 {
     /// <summary>The list of labels that describe how the encoder should multiplex video and audio into an output file. For example, if the encoder is producing two video layers with labels v1 and v2, and one audio layer with label a1, then an array like ["v1", "a1"] tells the encoder to produce an output file with the video track represented by v1 and the audio track represented by a1.</summary>
@@ -807,6 +844,7 @@ public partial class V1beta1TransformSpecForProviderOutputCustomPresetFormatMp4O
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputCustomPresetFormatMp4
 {
     /// <summary>The file naming pattern used for the creation of output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {AudioStream} - string "Audio" plus audio stream number(start from 1). {Bitrate} - The audio/video bitrate in kbps. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.</summary>
@@ -819,6 +857,7 @@ public partial class V1beta1TransformSpecForProviderOutputCustomPresetFormatMp4
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputCustomPresetFormatPng
 {
     /// <summary>The file naming pattern used for the creation of output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {AudioStream} - string "Audio" plus audio stream number(start from 1). {Bitrate} - The audio/video bitrate in kbps. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.</summary>
@@ -827,6 +866,7 @@ public partial class V1beta1TransformSpecForProviderOutputCustomPresetFormatPng
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputCustomPresetFormatTransportStreamOutputFile
 {
     /// <summary>The list of labels that describe how the encoder should multiplex video and audio into an output file. For example, if the encoder is producing two video layers with labels v1 and v2, and one audio layer with label a1, then an array like ["v1", "a1"] tells the encoder to produce an output file with the video track represented by v1 and the audio track represented by a1.</summary>
@@ -835,6 +875,7 @@ public partial class V1beta1TransformSpecForProviderOutputCustomPresetFormatTran
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputCustomPresetFormatTransportStream
 {
     /// <summary>The file naming pattern used for the creation of output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {AudioStream} - string "Audio" plus audio stream number(start from 1). {Bitrate} - The audio/video bitrate in kbps. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.</summary>
@@ -847,6 +888,7 @@ public partial class V1beta1TransformSpecForProviderOutputCustomPresetFormatTran
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputCustomPresetFormat
 {
     /// <summary>A jpg block as defined below.</summary>
@@ -867,6 +909,7 @@ public partial class V1beta1TransformSpecForProviderOutputCustomPresetFormat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputCustomPreset
 {
     /// <summary>One or more codec blocks as defined above.</summary>
@@ -887,6 +930,7 @@ public partial class V1beta1TransformSpecForProviderOutputCustomPreset
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputFaceDetectorPreset
 {
     /// <summary>Possible values are SourceResolution or StandardDefinition. Specifies the maximum resolution at which your video is analyzed. which will keep the input video at its original resolution when analyzed. Using StandardDefinition will resize input videos to standard definition while preserving the appropriate aspect ratio. It will only resize if the video is of higher resolution. For example, a 1920x1080 input would be scaled to 640x360 before processing. Switching to StandardDefinition will reduce the time it takes to process high resolution video. It may also reduce the cost of using this component (see https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics for details). However, faces that end up being too small in the resized video may not be detected. Default to SourceResolution.</summary>
@@ -907,6 +951,7 @@ public partial class V1beta1TransformSpecForProviderOutputFaceDetectorPreset
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutputVideoAnalyzerPreset
 {
     /// <summary>Possible values are Basic or Standard. Determines the set of audio analysis operations to be performed. Default to Standard.</summary>
@@ -927,6 +972,7 @@ public partial class V1beta1TransformSpecForProviderOutputVideoAnalyzerPreset
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderOutput
 {
     /// <summary>An audio_analyzer_preset block as defined above.</summary>
@@ -958,6 +1004,7 @@ public partial class V1beta1TransformSpecForProviderOutput
     public IList<V1beta1TransformSpecForProviderOutputVideoAnalyzerPreset>? VideoAnalyzerPreset { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransformSpecForProviderResourceGroupNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -968,6 +1015,7 @@ public enum V1beta1TransformSpecForProviderResourceGroupNameRefPolicyResolutionE
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransformSpecForProviderResourceGroupNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -979,6 +1027,7 @@ public enum V1beta1TransformSpecForProviderResourceGroupNameRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -993,6 +1042,7 @@ public partial class V1beta1TransformSpecForProviderResourceGroupNameRefPolicy
 }
 
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1004,6 +1054,7 @@ public partial class V1beta1TransformSpecForProviderResourceGroupNameRef
     public V1beta1TransformSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransformSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1014,6 +1065,7 @@ public enum V1beta1TransformSpecForProviderResourceGroupNameSelectorPolicyResolu
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransformSpecForProviderResourceGroupNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1025,6 +1077,7 @@ public enum V1beta1TransformSpecForProviderResourceGroupNameSelectorPolicyResolv
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1039,6 +1092,7 @@ public partial class V1beta1TransformSpecForProviderResourceGroupNameSelectorPol
 }
 
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1055,6 +1109,7 @@ public partial class V1beta1TransformSpecForProviderResourceGroupNameSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecForProvider
 {
     /// <summary>An optional verbose description of the Transform.</summary>
@@ -1091,6 +1146,7 @@ public partial class V1beta1TransformSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputAudioAnalyzerPreset
 {
     /// <summary>Possible values are Basic or Standard. Determines the set of audio analysis operations to be performed. Default to Standard.</summary>
@@ -1107,6 +1163,7 @@ public partial class V1beta1TransformSpecInitProviderOutputAudioAnalyzerPreset
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputBuiltinPresetPresetConfiguration
 {
     /// <summary>The complexity of the encoding. Possible values are Balanced, Speed or Quality.</summary>
@@ -1143,6 +1200,7 @@ public partial class V1beta1TransformSpecInitProviderOutputBuiltinPresetPresetCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputBuiltinPreset
 {
     /// <summary>A preset_configuration block as defined below.</summary>
@@ -1155,6 +1213,7 @@ public partial class V1beta1TransformSpecInitProviderOutputBuiltinPreset
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputCustomPresetCodecAacAudio
 {
     /// <summary>The average bitrate in bits per second at which to encode the input video when generating this layer.</summary>
@@ -1179,6 +1238,7 @@ public partial class V1beta1TransformSpecInitProviderOutputCustomPresetCodecAacA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputCustomPresetCodecCopyAudio
 {
     /// <summary>Specifies the label for the codec. The label can be used to control muxing behavior.</summary>
@@ -1187,6 +1247,7 @@ public partial class V1beta1TransformSpecInitProviderOutputCustomPresetCodecCopy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputCustomPresetCodecCopyVideo
 {
     /// <summary>Specifies the label for the codec. The label can be used to control muxing behavior.</summary>
@@ -1195,6 +1256,7 @@ public partial class V1beta1TransformSpecInitProviderOutputCustomPresetCodecCopy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputCustomPresetCodecDdAudio
 {
     /// <summary>The average bitrate in bits per second at which to encode the input video when generating this layer.</summary>
@@ -1215,6 +1277,7 @@ public partial class V1beta1TransformSpecInitProviderOutputCustomPresetCodecDdAu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputCustomPresetCodecH264VideoLayer
 {
     /// <summary>Whether adaptive B-frames are used when encoding this layer. If not specified, the encoder will turn it on whenever the video profile permits its use. Default to true.</summary>
@@ -1279,6 +1342,7 @@ public partial class V1beta1TransformSpecInitProviderOutputCustomPresetCodecH264
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputCustomPresetCodecH264Video
 {
     /// <summary>The complexity of the encoding. Possible values are Balanced, Speed or Quality.</summary>
@@ -1315,6 +1379,7 @@ public partial class V1beta1TransformSpecInitProviderOutputCustomPresetCodecH264
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputCustomPresetCodecH265VideoLayer
 {
     /// <summary>Whether adaptive B-frames are used when encoding this layer. If not specified, the encoder will turn it on whenever the video profile permits its use. Default to true.</summary>
@@ -1375,6 +1440,7 @@ public partial class V1beta1TransformSpecInitProviderOutputCustomPresetCodecH265
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputCustomPresetCodecH265Video
 {
     /// <summary>The complexity of the encoding. Possible values are Balanced, Speed or Quality.</summary>
@@ -1407,6 +1473,7 @@ public partial class V1beta1TransformSpecInitProviderOutputCustomPresetCodecH265
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputCustomPresetCodecJpgImageLayer
 {
     /// <summary>The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).</summary>
@@ -1427,6 +1494,7 @@ public partial class V1beta1TransformSpecInitProviderOutputCustomPresetCodecJpgI
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputCustomPresetCodecJpgImage
 {
     /// <summary>The distance between two key frames. The value should be non-zero in the range 0.5 to 20 seconds, specified in ISO 8601 format. Note that this setting is ignored if sync_mode is set to Passthrough, where the KeyFrameInterval value will follow the input source setting. Defaults to PT2S.</summary>
@@ -1467,6 +1535,7 @@ public partial class V1beta1TransformSpecInitProviderOutputCustomPresetCodecJpgI
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputCustomPresetCodecPngImageLayer
 {
     /// <summary>The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).</summary>
@@ -1483,6 +1552,7 @@ public partial class V1beta1TransformSpecInitProviderOutputCustomPresetCodecPngI
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputCustomPresetCodecPngImage
 {
     /// <summary>The distance between two key frames. The value should be non-zero in the range 0.5 to 20 seconds, specified in ISO 8601 format. Note that this setting is ignored if sync_mode is set to Passthrough, where the KeyFrameInterval value will follow the input source setting. Defaults to PT2S.</summary>
@@ -1519,6 +1589,7 @@ public partial class V1beta1TransformSpecInitProviderOutputCustomPresetCodecPngI
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputCustomPresetCodec
 {
     /// <summary>A aac_audio block as defined above.</summary>
@@ -1555,6 +1626,7 @@ public partial class V1beta1TransformSpecInitProviderOutputCustomPresetCodec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFilterCropRectangle
 {
     /// <summary>The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).</summary>
@@ -1575,6 +1647,7 @@ public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFilterCro
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFilterDeinterlace
 {
     /// <summary>The deinterlacing mode. Possible values are AutoPixelAdaptive or Off. Default to AutoPixelAdaptive.</summary>
@@ -1587,6 +1660,7 @@ public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFilterDei
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFilterFadeIn
 {
     /// <summary>The duration of the fade effect in the video. The value can be in ISO 8601 format (For example, PT05S to fade In/Out a color during 5 seconds), or a frame count (For example, 10 to fade 10 frames from the start time), or a relative value to stream duration (For example, 10% to fade 10% of stream duration).</summary>
@@ -1603,6 +1677,7 @@ public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFilterFad
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFilterFadeOut
 {
     /// <summary>The duration of the fade effect in the video. The value can be in ISO 8601 format (For example, PT05S to fade In/Out a color during 5 seconds), or a frame count (For example, 10 to fade 10 frames from the start time), or a relative value to stream duration (For example, 10% to fade 10% of stream duration).</summary>
@@ -1619,6 +1694,7 @@ public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFilterFad
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFilterOverlayAudio
 {
     /// <summary>The gain level of audio in the overlay. The value should be in range between 0 to 1.0. The default is 1.0.</summary>
@@ -1647,6 +1723,7 @@ public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFilterOve
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFilterOverlayVideoCropRectangle
 {
     /// <summary>The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).</summary>
@@ -1667,6 +1744,7 @@ public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFilterOve
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFilterOverlayVideoPosition
 {
     /// <summary>The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).</summary>
@@ -1687,6 +1765,7 @@ public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFilterOve
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFilterOverlayVideo
 {
     /// <summary>The gain level of audio in the overlay. The value should be in range between 0 to 1.0. The default is 1.0.</summary>
@@ -1727,6 +1806,7 @@ public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFilterOve
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFilterOverlay
 {
     /// <summary>An audio block as defined above.</summary>
@@ -1739,6 +1819,7 @@ public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFilterOve
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFilter
 {
     /// <summary>A crop_rectangle block as defined above.</summary>
@@ -1767,6 +1848,7 @@ public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFilter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFormatJpg
 {
     /// <summary>The file naming pattern used for the creation of output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {AudioStream} - string "Audio" plus audio stream number(start from 1). {Bitrate} - The audio/video bitrate in kbps. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.</summary>
@@ -1775,6 +1857,7 @@ public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFormatJpg
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFormatMp4OutputFile
 {
     /// <summary>The list of labels that describe how the encoder should multiplex video and audio into an output file. For example, if the encoder is producing two video layers with labels v1 and v2, and one audio layer with label a1, then an array like ["v1", "a1"] tells the encoder to produce an output file with the video track represented by v1 and the audio track represented by a1.</summary>
@@ -1783,6 +1866,7 @@ public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFormatMp4
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFormatMp4
 {
     /// <summary>The file naming pattern used for the creation of output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {AudioStream} - string "Audio" plus audio stream number(start from 1). {Bitrate} - The audio/video bitrate in kbps. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.</summary>
@@ -1795,6 +1879,7 @@ public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFormatMp4
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFormatPng
 {
     /// <summary>The file naming pattern used for the creation of output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {AudioStream} - string "Audio" plus audio stream number(start from 1). {Bitrate} - The audio/video bitrate in kbps. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.</summary>
@@ -1803,6 +1888,7 @@ public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFormatPng
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFormatTransportStreamOutputFile
 {
     /// <summary>The list of labels that describe how the encoder should multiplex video and audio into an output file. For example, if the encoder is producing two video layers with labels v1 and v2, and one audio layer with label a1, then an array like ["v1", "a1"] tells the encoder to produce an output file with the video track represented by v1 and the audio track represented by a1.</summary>
@@ -1811,6 +1897,7 @@ public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFormatTra
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFormatTransportStream
 {
     /// <summary>The file naming pattern used for the creation of output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {AudioStream} - string "Audio" plus audio stream number(start from 1). {Bitrate} - The audio/video bitrate in kbps. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.</summary>
@@ -1823,6 +1910,7 @@ public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFormatTra
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFormat
 {
     /// <summary>A jpg block as defined below.</summary>
@@ -1843,6 +1931,7 @@ public partial class V1beta1TransformSpecInitProviderOutputCustomPresetFormat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputCustomPreset
 {
     /// <summary>One or more codec blocks as defined above.</summary>
@@ -1863,6 +1952,7 @@ public partial class V1beta1TransformSpecInitProviderOutputCustomPreset
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputFaceDetectorPreset
 {
     /// <summary>Possible values are SourceResolution or StandardDefinition. Specifies the maximum resolution at which your video is analyzed. which will keep the input video at its original resolution when analyzed. Using StandardDefinition will resize input videos to standard definition while preserving the appropriate aspect ratio. It will only resize if the video is of higher resolution. For example, a 1920x1080 input would be scaled to 640x360 before processing. Switching to StandardDefinition will reduce the time it takes to process high resolution video. It may also reduce the cost of using this component (see https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics for details). However, faces that end up being too small in the resized video may not be detected. Default to SourceResolution.</summary>
@@ -1883,6 +1973,7 @@ public partial class V1beta1TransformSpecInitProviderOutputFaceDetectorPreset
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutputVideoAnalyzerPreset
 {
     /// <summary>Possible values are Basic or Standard. Determines the set of audio analysis operations to be performed. Default to Standard.</summary>
@@ -1903,6 +1994,7 @@ public partial class V1beta1TransformSpecInitProviderOutputVideoAnalyzerPreset
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProviderOutput
 {
     /// <summary>An audio_analyzer_preset block as defined above.</summary>
@@ -1935,6 +2027,7 @@ public partial class V1beta1TransformSpecInitProviderOutput
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecInitProvider
 {
     /// <summary>An optional verbose description of the Transform.</summary>
@@ -1946,6 +2039,7 @@ public partial class V1beta1TransformSpecInitProvider
     public IList<V1beta1TransformSpecInitProviderOutput>? Output { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransformSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -1968,6 +2062,7 @@ public enum V1beta1TransformSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransformSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1978,6 +2073,7 @@ public enum V1beta1TransformSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransformSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1989,6 +2085,7 @@ public enum V1beta1TransformSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2003,6 +2100,7 @@ public partial class V1beta1TransformSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2014,6 +2112,7 @@ public partial class V1beta1TransformSpecProviderConfigRef
     public V1beta1TransformSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransformSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2024,6 +2123,7 @@ public enum V1beta1TransformSpecPublishConnectionDetailsToConfigRefPolicyResolut
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransformSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2035,6 +2135,7 @@ public enum V1beta1TransformSpecPublishConnectionDetailsToConfigRefPolicyResolve
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2049,6 +2150,7 @@ public partial class V1beta1TransformSpecPublishConnectionDetailsToConfigRefPoli
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2061,6 +2163,7 @@ public partial class V1beta1TransformSpecPublishConnectionDetailsToConfigRef
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -2077,6 +2180,7 @@ public partial class V1beta1TransformSpecPublishConnectionDetailsToMetadata
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -2093,6 +2197,7 @@ public partial class V1beta1TransformSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -2105,6 +2210,7 @@ public partial class V1beta1TransformSpecWriteConnectionSecretToRef
 }
 
 /// <summary>TransformSpec defines the desired state of Transform</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -2138,6 +2244,7 @@ public partial class V1beta1TransformSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputAudioAnalyzerPreset
 {
     /// <summary>Possible values are Basic or Standard. Determines the set of audio analysis operations to be performed. Default to Standard.</summary>
@@ -2154,6 +2261,7 @@ public partial class V1beta1TransformStatusAtProviderOutputAudioAnalyzerPreset
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputBuiltinPresetPresetConfiguration
 {
     /// <summary>The complexity of the encoding. Possible values are Balanced, Speed or Quality.</summary>
@@ -2190,6 +2298,7 @@ public partial class V1beta1TransformStatusAtProviderOutputBuiltinPresetPresetCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputBuiltinPreset
 {
     /// <summary>A preset_configuration block as defined below.</summary>
@@ -2202,6 +2311,7 @@ public partial class V1beta1TransformStatusAtProviderOutputBuiltinPreset
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputCustomPresetCodecAacAudio
 {
     /// <summary>The average bitrate in bits per second at which to encode the input video when generating this layer.</summary>
@@ -2226,6 +2336,7 @@ public partial class V1beta1TransformStatusAtProviderOutputCustomPresetCodecAacA
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputCustomPresetCodecCopyAudio
 {
     /// <summary>Specifies the label for the codec. The label can be used to control muxing behavior.</summary>
@@ -2234,6 +2345,7 @@ public partial class V1beta1TransformStatusAtProviderOutputCustomPresetCodecCopy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputCustomPresetCodecCopyVideo
 {
     /// <summary>Specifies the label for the codec. The label can be used to control muxing behavior.</summary>
@@ -2242,6 +2354,7 @@ public partial class V1beta1TransformStatusAtProviderOutputCustomPresetCodecCopy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputCustomPresetCodecDdAudio
 {
     /// <summary>The average bitrate in bits per second at which to encode the input video when generating this layer.</summary>
@@ -2262,6 +2375,7 @@ public partial class V1beta1TransformStatusAtProviderOutputCustomPresetCodecDdAu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputCustomPresetCodecH264VideoLayer
 {
     /// <summary>Whether adaptive B-frames are used when encoding this layer. If not specified, the encoder will turn it on whenever the video profile permits its use. Default to true.</summary>
@@ -2326,6 +2440,7 @@ public partial class V1beta1TransformStatusAtProviderOutputCustomPresetCodecH264
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputCustomPresetCodecH264Video
 {
     /// <summary>The complexity of the encoding. Possible values are Balanced, Speed or Quality.</summary>
@@ -2362,6 +2477,7 @@ public partial class V1beta1TransformStatusAtProviderOutputCustomPresetCodecH264
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputCustomPresetCodecH265VideoLayer
 {
     /// <summary>Whether adaptive B-frames are used when encoding this layer. If not specified, the encoder will turn it on whenever the video profile permits its use. Default to true.</summary>
@@ -2422,6 +2538,7 @@ public partial class V1beta1TransformStatusAtProviderOutputCustomPresetCodecH265
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputCustomPresetCodecH265Video
 {
     /// <summary>The complexity of the encoding. Possible values are Balanced, Speed or Quality.</summary>
@@ -2454,6 +2571,7 @@ public partial class V1beta1TransformStatusAtProviderOutputCustomPresetCodecH265
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputCustomPresetCodecJpgImageLayer
 {
     /// <summary>The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).</summary>
@@ -2474,6 +2592,7 @@ public partial class V1beta1TransformStatusAtProviderOutputCustomPresetCodecJpgI
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputCustomPresetCodecJpgImage
 {
     /// <summary>The distance between two key frames. The value should be non-zero in the range 0.5 to 20 seconds, specified in ISO 8601 format. Note that this setting is ignored if sync_mode is set to Passthrough, where the KeyFrameInterval value will follow the input source setting. Defaults to PT2S.</summary>
@@ -2514,6 +2633,7 @@ public partial class V1beta1TransformStatusAtProviderOutputCustomPresetCodecJpgI
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputCustomPresetCodecPngImageLayer
 {
     /// <summary>The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).</summary>
@@ -2530,6 +2650,7 @@ public partial class V1beta1TransformStatusAtProviderOutputCustomPresetCodecPngI
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputCustomPresetCodecPngImage
 {
     /// <summary>The distance between two key frames. The value should be non-zero in the range 0.5 to 20 seconds, specified in ISO 8601 format. Note that this setting is ignored if sync_mode is set to Passthrough, where the KeyFrameInterval value will follow the input source setting. Defaults to PT2S.</summary>
@@ -2566,6 +2687,7 @@ public partial class V1beta1TransformStatusAtProviderOutputCustomPresetCodecPngI
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputCustomPresetCodec
 {
     /// <summary>A aac_audio block as defined above.</summary>
@@ -2602,6 +2724,7 @@ public partial class V1beta1TransformStatusAtProviderOutputCustomPresetCodec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFilterCropRectangle
 {
     /// <summary>The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).</summary>
@@ -2622,6 +2745,7 @@ public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFilterCro
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFilterDeinterlace
 {
     /// <summary>The deinterlacing mode. Possible values are AutoPixelAdaptive or Off. Default to AutoPixelAdaptive.</summary>
@@ -2634,6 +2758,7 @@ public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFilterDei
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFilterFadeIn
 {
     /// <summary>The duration of the fade effect in the video. The value can be in ISO 8601 format (For example, PT05S to fade In/Out a color during 5 seconds), or a frame count (For example, 10 to fade 10 frames from the start time), or a relative value to stream duration (For example, 10% to fade 10% of stream duration).</summary>
@@ -2650,6 +2775,7 @@ public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFilterFad
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFilterFadeOut
 {
     /// <summary>The duration of the fade effect in the video. The value can be in ISO 8601 format (For example, PT05S to fade In/Out a color during 5 seconds), or a frame count (For example, 10 to fade 10 frames from the start time), or a relative value to stream duration (For example, 10% to fade 10% of stream duration).</summary>
@@ -2666,6 +2792,7 @@ public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFilterFad
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFilterOverlayAudio
 {
     /// <summary>The gain level of audio in the overlay. The value should be in range between 0 to 1.0. The default is 1.0.</summary>
@@ -2694,6 +2821,7 @@ public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFilterOve
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFilterOverlayVideoCropRectangle
 {
     /// <summary>The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).</summary>
@@ -2714,6 +2842,7 @@ public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFilterOve
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFilterOverlayVideoPosition
 {
     /// <summary>The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).</summary>
@@ -2734,6 +2863,7 @@ public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFilterOve
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFilterOverlayVideo
 {
     /// <summary>The gain level of audio in the overlay. The value should be in range between 0 to 1.0. The default is 1.0.</summary>
@@ -2774,6 +2904,7 @@ public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFilterOve
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFilterOverlay
 {
     /// <summary>An audio block as defined above.</summary>
@@ -2786,6 +2917,7 @@ public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFilterOve
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFilter
 {
     /// <summary>A crop_rectangle block as defined above.</summary>
@@ -2814,6 +2946,7 @@ public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFilter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFormatJpg
 {
     /// <summary>The file naming pattern used for the creation of output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {AudioStream} - string "Audio" plus audio stream number(start from 1). {Bitrate} - The audio/video bitrate in kbps. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.</summary>
@@ -2822,6 +2955,7 @@ public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFormatJpg
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFormatMp4OutputFile
 {
     /// <summary>The list of labels that describe how the encoder should multiplex video and audio into an output file. For example, if the encoder is producing two video layers with labels v1 and v2, and one audio layer with label a1, then an array like ["v1", "a1"] tells the encoder to produce an output file with the video track represented by v1 and the audio track represented by a1.</summary>
@@ -2830,6 +2964,7 @@ public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFormatMp4
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFormatMp4
 {
     /// <summary>The file naming pattern used for the creation of output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {AudioStream} - string "Audio" plus audio stream number(start from 1). {Bitrate} - The audio/video bitrate in kbps. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.</summary>
@@ -2842,6 +2977,7 @@ public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFormatMp4
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFormatPng
 {
     /// <summary>The file naming pattern used for the creation of output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {AudioStream} - string "Audio" plus audio stream number(start from 1). {Bitrate} - The audio/video bitrate in kbps. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.</summary>
@@ -2850,6 +2986,7 @@ public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFormatPng
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFormatTransportStreamOutputFile
 {
     /// <summary>The list of labels that describe how the encoder should multiplex video and audio into an output file. For example, if the encoder is producing two video layers with labels v1 and v2, and one audio layer with label a1, then an array like ["v1", "a1"] tells the encoder to produce an output file with the video track represented by v1 and the audio track represented by a1.</summary>
@@ -2858,6 +2995,7 @@ public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFormatTra
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFormatTransportStream
 {
     /// <summary>The file naming pattern used for the creation of output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {AudioStream} - string "Audio" plus audio stream number(start from 1). {Bitrate} - The audio/video bitrate in kbps. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.</summary>
@@ -2870,6 +3008,7 @@ public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFormatTra
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFormat
 {
     /// <summary>A jpg block as defined below.</summary>
@@ -2890,6 +3029,7 @@ public partial class V1beta1TransformStatusAtProviderOutputCustomPresetFormat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputCustomPreset
 {
     /// <summary>One or more codec blocks as defined above.</summary>
@@ -2910,6 +3050,7 @@ public partial class V1beta1TransformStatusAtProviderOutputCustomPreset
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputFaceDetectorPreset
 {
     /// <summary>Possible values are SourceResolution or StandardDefinition. Specifies the maximum resolution at which your video is analyzed. which will keep the input video at its original resolution when analyzed. Using StandardDefinition will resize input videos to standard definition while preserving the appropriate aspect ratio. It will only resize if the video is of higher resolution. For example, a 1920x1080 input would be scaled to 640x360 before processing. Switching to StandardDefinition will reduce the time it takes to process high resolution video. It may also reduce the cost of using this component (see https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics for details). However, faces that end up being too small in the resized video may not be detected. Default to SourceResolution.</summary>
@@ -2930,6 +3071,7 @@ public partial class V1beta1TransformStatusAtProviderOutputFaceDetectorPreset
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutputVideoAnalyzerPreset
 {
     /// <summary>Possible values are Basic or Standard. Determines the set of audio analysis operations to be performed. Default to Standard.</summary>
@@ -2950,6 +3092,7 @@ public partial class V1beta1TransformStatusAtProviderOutputVideoAnalyzerPreset
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProviderOutput
 {
     /// <summary>An audio_analyzer_preset block as defined above.</summary>
@@ -2982,6 +3125,7 @@ public partial class V1beta1TransformStatusAtProviderOutput
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusAtProvider
 {
     /// <summary>An optional verbose description of the Transform.</summary>
@@ -3006,6 +3150,7 @@ public partial class V1beta1TransformStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -3034,6 +3179,7 @@ public partial class V1beta1TransformStatusConditions
 }
 
 /// <summary>TransformStatus defines the observed state of Transform.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransformStatus
 {
     /// <summary></summary>
@@ -3049,8 +3195,9 @@ public partial class V1beta1TransformStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Transform is the Schema for the Transforms API. Manages a Transform.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Transform : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TransformSpec>, IStatus<V1beta1TransformStatus>
 {
     public const string KubeApiVersion = "v1beta1";

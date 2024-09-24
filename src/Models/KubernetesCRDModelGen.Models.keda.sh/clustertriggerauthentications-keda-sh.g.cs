@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.keda.sh;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCredentialsAccessKeyValueFromSecretKeyRef
 {
     /// <summary></summary>
@@ -21,6 +22,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCre
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCredentialsAccessKeyValueFrom
 {
     /// <summary></summary>
@@ -29,6 +31,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCre
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCredentialsAccessKey
 {
     /// <summary></summary>
@@ -37,6 +40,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCre
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCredentialsAccessSecretKeyValueFromSecretKeyRef
 {
     /// <summary></summary>
@@ -49,6 +53,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCre
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCredentialsAccessSecretKeyValueFrom
 {
     /// <summary></summary>
@@ -57,6 +62,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCre
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCredentialsAccessSecretKey
 {
     /// <summary></summary>
@@ -65,6 +71,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCre
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCredentialsAccessTokenValueFromSecretKeyRef
 {
     /// <summary></summary>
@@ -77,6 +84,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCre
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCredentialsAccessTokenValueFrom
 {
     /// <summary></summary>
@@ -85,6 +93,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCre
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCredentialsAccessToken
 {
     /// <summary></summary>
@@ -93,6 +102,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCre
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCredentials
 {
     /// <summary></summary>
@@ -108,6 +118,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCre
     public V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCredentialsAccessToken? AccessToken { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerPodIdentityIdentityOwnerEnum
 {
     [EnumMember(Value = "keda"), JsonStringEnumMemberName("keda")]
@@ -118,6 +129,7 @@ public enum V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerPodIdentityI
     Workload
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerPodIdentityProviderEnum
 {
     [EnumMember(Value = "azure-workload"), JsonStringEnumMemberName("azure-workload")]
@@ -138,6 +150,7 @@ public enum V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerPodIdentityP
 }
 
 /// <summary>AuthPodIdentity allows users to select the platform native identity mechanism</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerPodIdentity
 {
     /// <summary>Set identityAuthorityHost to override the default Azure authority host. If this is set, then the IdentityTenantID must also be set</summary>
@@ -168,6 +181,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerPod
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerSecrets
 {
     /// <summary></summary>
@@ -188,6 +202,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerSec
 }
 
 /// <summary>AwsSecretManager is used to authenticate using AwsSecretManager</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManager
 {
     /// <summary></summary>
@@ -208,6 +223,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManager
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultCloud
 {
     /// <summary></summary>
@@ -224,6 +240,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultCloud
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultCredentialsClientSecretValueFromSecretKeyRef
 {
     /// <summary></summary>
@@ -236,6 +253,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultCreden
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultCredentialsClientSecretValueFrom
 {
     /// <summary></summary>
@@ -244,6 +262,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultCreden
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultCredentialsClientSecret
 {
     /// <summary></summary>
@@ -252,6 +271,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultCreden
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultCredentials
 {
     /// <summary></summary>
@@ -267,6 +287,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultCreden
     public string TenantId { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultPodIdentityIdentityOwnerEnum
 {
     [EnumMember(Value = "keda"), JsonStringEnumMemberName("keda")]
@@ -277,6 +298,7 @@ public enum V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultPodIdentityIden
     Workload
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultPodIdentityProviderEnum
 {
     [EnumMember(Value = "azure-workload"), JsonStringEnumMemberName("azure-workload")]
@@ -297,6 +319,7 @@ public enum V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultPodIdentityProv
 }
 
 /// <summary>AuthPodIdentity allows users to select the platform native identity mechanism</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultPodIdentity
 {
     /// <summary>Set identityAuthorityHost to override the default Azure authority host. If this is set, then the IdentityTenantID must also be set</summary>
@@ -327,6 +350,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultPodIde
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultSecrets
 {
     /// <summary></summary>
@@ -343,6 +367,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultSecret
 }
 
 /// <summary>AzureKeyVault is used to authenticate using Azure Key Vault</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVault
 {
     /// <summary></summary>
@@ -367,6 +392,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVault
 }
 
 /// <summary>AuthConfigMapTargetRef is used to authenticate using a reference to a config map</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecConfigMapTargetRef
 {
     /// <summary></summary>
@@ -383,6 +409,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecConfigMapTargetRef
 }
 
 /// <summary>AuthEnvironment is used to authenticate using environment variables in the destination ScaleTarget spec</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecEnv
 {
     /// <summary></summary>
@@ -399,6 +426,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecEnv
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerCredentialsClientSecretValueFromSecretKeyRef
 {
     /// <summary></summary>
@@ -411,6 +439,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerCre
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerCredentialsClientSecretValueFrom
 {
     /// <summary></summary>
@@ -419,6 +448,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerCre
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerCredentialsClientSecret
 {
     /// <summary></summary>
@@ -427,6 +457,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerCre
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerCredentials
 {
     /// <summary></summary>
@@ -434,6 +465,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerCre
     public V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerCredentialsClientSecret ClientSecret { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerPodIdentityIdentityOwnerEnum
 {
     [EnumMember(Value = "keda"), JsonStringEnumMemberName("keda")]
@@ -444,6 +476,7 @@ public enum V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerPodIdentityI
     Workload
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerPodIdentityProviderEnum
 {
     [EnumMember(Value = "azure-workload"), JsonStringEnumMemberName("azure-workload")]
@@ -464,6 +497,7 @@ public enum V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerPodIdentityP
 }
 
 /// <summary>AuthPodIdentity allows users to select the platform native identity mechanism</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerPodIdentity
 {
     /// <summary>Set identityAuthorityHost to override the default Azure authority host. If this is set, then the IdentityTenantID must also be set</summary>
@@ -494,6 +528,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerPod
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerSecrets
 {
     /// <summary></summary>
@@ -510,6 +545,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerSec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManager
 {
     /// <summary></summary>
@@ -526,6 +562,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManager
 }
 
 /// <summary>Credential defines the Hashicorp Vault credentials depending on the authentication method</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecHashiCorpVaultCredential
 {
     /// <summary></summary>
@@ -538,6 +575,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecHashiCorpVaultCrede
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecHashiCorpVaultSecretsPkiData
 {
     /// <summary></summary>
@@ -570,6 +608,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecHashiCorpVaultSecre
 }
 
 /// <summary>VaultSecret defines the mapping between the path of the secret in Vault to the parameter</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecHashiCorpVaultSecrets
 {
     /// <summary></summary>
@@ -594,6 +633,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecHashiCorpVaultSecre
 }
 
 /// <summary>HashiCorpVault is used to authenticate using Hashicorp Vault</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecHashiCorpVault
 {
     /// <summary></summary>
@@ -625,6 +665,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecHashiCorpVault
     public IList<V1alpha1ClusterTriggerAuthenticationSpecHashiCorpVaultSecrets> Secrets { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1ClusterTriggerAuthenticationSpecPodIdentityIdentityOwnerEnum
 {
     [EnumMember(Value = "keda"), JsonStringEnumMemberName("keda")]
@@ -635,6 +676,7 @@ public enum V1alpha1ClusterTriggerAuthenticationSpecPodIdentityIdentityOwnerEnum
     Workload
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1ClusterTriggerAuthenticationSpecPodIdentityProviderEnum
 {
     [EnumMember(Value = "azure-workload"), JsonStringEnumMemberName("azure-workload")]
@@ -655,6 +697,7 @@ public enum V1alpha1ClusterTriggerAuthenticationSpecPodIdentityProviderEnum
 }
 
 /// <summary>AuthPodIdentity allows users to select the platform native identity mechanism</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecPodIdentity
 {
     /// <summary>Set identityAuthorityHost to override the default Azure authority host. If this is set, then the IdentityTenantID must also be set</summary>
@@ -685,6 +728,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecPodIdentity
 }
 
 /// <summary>AuthSecretTargetRef is used to authenticate using a reference to a secret</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpecSecretTargetRef
 {
     /// <summary></summary>
@@ -701,6 +745,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecSecretTargetRef
 }
 
 /// <summary>TriggerAuthenticationSpec defines the various ways to authenticate</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationSpec
 {
     /// <summary>AwsSecretManager is used to authenticate using AwsSecretManager</summary>
@@ -737,6 +782,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpec
 }
 
 /// <summary>TriggerAuthenticationStatus defines the observed state of TriggerAuthentication</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterTriggerAuthenticationStatus
 {
     /// <summary></summary>
@@ -748,8 +794,9 @@ public partial class V1alpha1ClusterTriggerAuthenticationStatus
     public string? Scaledobjects { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>ClusterTriggerAuthentication defines how a trigger can authenticate globally</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1ClusterTriggerAuthentication : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ClusterTriggerAuthenticationSpec>, IStatus<V1alpha1ClusterTriggerAuthenticationStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.documentai.cnrm.cloud.google.com;
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DocumentAIProcessorDefaultVersionSpec
 {
     /// <summary>Immutable. Optional. The processor of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
@@ -21,6 +22,7 @@ public partial class V1alpha1DocumentAIProcessorDefaultVersionSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DocumentAIProcessorDefaultVersionStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -45,6 +47,7 @@ public partial class V1alpha1DocumentAIProcessorDefaultVersionStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DocumentAIProcessorDefaultVersionStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -56,8 +59,9 @@ public partial class V1alpha1DocumentAIProcessorDefaultVersionStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1DocumentAIProcessorDefaultVersion : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DocumentAIProcessorDefaultVersionSpec>, IStatus<V1alpha1DocumentAIProcessorDefaultVersionStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigquery.cnrm.cloud.google.com;
 /// <summary>Immutable. The dataset this entry applies to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryDatasetAccessSpecDatasetDataset
 {
     /// <summary>Immutable. The ID of the dataset containing this table.</summary>
@@ -21,6 +22,7 @@ public partial class V1alpha1BigQueryDatasetAccessSpecDatasetDataset
 }
 
 /// <summary>Immutable. Grants all resources of particular types in a particular dataset read access to the current dataset.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryDatasetAccessSpecDataset
 {
     /// <summary>Immutable. The dataset this entry applies to.</summary>
@@ -33,6 +35,7 @@ public partial class V1alpha1BigQueryDatasetAccessSpecDataset
 }
 
 /// <summary>The project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryDatasetAccessSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -49,6 +52,7 @@ public partial class V1alpha1BigQueryDatasetAccessSpecProjectRef
 }
 
 /// <summary>Immutable. A view from a different dataset to grant access to. Queries executed against that view will have read access to tables in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to the view needs to be granted again via an update operation.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryDatasetAccessSpecView
 {
     /// <summary>Immutable. The ID of the dataset containing this table.</summary>
@@ -65,6 +69,7 @@ public partial class V1alpha1BigQueryDatasetAccessSpecView
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryDatasetAccessSpec
 {
     /// <summary>Immutable. Grants all resources of particular types in a particular dataset read access to the current dataset.</summary>
@@ -113,6 +118,7 @@ public partial class V1alpha1BigQueryDatasetAccessSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryDatasetAccessStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -137,6 +143,7 @@ public partial class V1alpha1BigQueryDatasetAccessStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryDatasetAccessStatus
 {
     /// <summary>If true, represents that that the iam_member in the config was translated to a different member type by the API, and is stored in state as a different member type.</summary>
@@ -152,8 +159,9 @@ public partial class V1alpha1BigQueryDatasetAccessStatus
     public int? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1BigQueryDatasetAccess : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1BigQueryDatasetAccessSpec>, IStatus<V1alpha1BigQueryDatasetAccessStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

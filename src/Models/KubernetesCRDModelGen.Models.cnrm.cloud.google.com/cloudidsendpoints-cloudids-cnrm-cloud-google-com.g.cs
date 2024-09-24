@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudids.cnrm.cloud.google.com;
 /// <summary>Immutable. Name of the VPC network that is connected to the IDS endpoint. This can either contain the VPC network name itself (like "src-net") or the full URL to the network (like "projects/{project_id}/global/networks/src-net").</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudIDSEndpointSpecNetworkRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeNetwork` resource.</summary>
@@ -25,6 +26,7 @@ public partial class V1alpha1CloudIDSEndpointSpecNetworkRef
 }
 
 /// <summary>The project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudIDSEndpointSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -41,6 +43,7 @@ public partial class V1alpha1CloudIDSEndpointSpecProjectRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudIDSEndpointSpec
 {
     /// <summary>Immutable. An optional description of the endpoint.</summary>
@@ -73,6 +76,7 @@ public partial class V1alpha1CloudIDSEndpointSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudIDSEndpointStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -97,6 +101,7 @@ public partial class V1alpha1CloudIDSEndpointStatusConditions
 }
 
 /// <summary>The observed state of the underlying GCP resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudIDSEndpointStatusObservedState
 {
     /// <summary>Creation timestamp in RFC 3339 text format.</summary>
@@ -117,6 +122,7 @@ public partial class V1alpha1CloudIDSEndpointStatusObservedState
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudIDSEndpointStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -132,8 +138,9 @@ public partial class V1alpha1CloudIDSEndpointStatus
     public V1alpha1CloudIDSEndpointStatusObservedState? ObservedState { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1CloudIDSEndpoint : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1CloudIDSEndpointSpec>, IStatus<V1alpha1CloudIDSEndpointStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.container.gcp.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1ClusterSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderAddonsConfigCloudrunConfig
 {
     /// <summary>The status of the Istio addon, which makes it easy to set up Istio for services in a cluster. It is disabled by default. Set disabled = false to enable.</summary>
@@ -31,6 +33,7 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfigCloudrunConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderAddonsConfigConfigConnectorConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -39,6 +42,7 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfigConfigConnectorCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderAddonsConfigDnsCacheConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -47,6 +51,7 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfigDnsCacheConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderAddonsConfigGcePersistentDiskCsiDriverConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -55,6 +60,7 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfigGcePersistentDiskC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderAddonsConfigGcpFilestoreCsiDriverConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -63,6 +69,7 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfigGcpFilestoreCsiDri
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderAddonsConfigGcsFuseCsiDriverConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -71,6 +78,7 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfigGcsFuseCsiDriverCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderAddonsConfigGkeBackupAgentConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -79,6 +87,7 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfigGkeBackupAgentConf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderAddonsConfigHorizontalPodAutoscaling
 {
     /// <summary>The status of the Istio addon, which makes it easy to set up Istio for services in a cluster. It is disabled by default. Set disabled = false to enable.</summary>
@@ -87,6 +96,7 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfigHorizontalPodAutos
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderAddonsConfigHttpLoadBalancing
 {
     /// <summary>The status of the Istio addon, which makes it easy to set up Istio for services in a cluster. It is disabled by default. Set disabled = false to enable.</summary>
@@ -95,6 +105,7 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfigHttpLoadBalancing
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderAddonsConfigNetworkPolicyConfig
 {
     /// <summary>The status of the Istio addon, which makes it easy to set up Istio for services in a cluster. It is disabled by default. Set disabled = false to enable.</summary>
@@ -103,6 +114,7 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfigNetworkPolicyConfi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderAddonsConfigRayOperatorConfigRayClusterLoggingConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -111,6 +123,7 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfigRayOperatorConfigR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderAddonsConfigRayOperatorConfigRayClusterMonitoringConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -119,6 +132,7 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfigRayOperatorConfigR
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderAddonsConfigRayOperatorConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -135,6 +149,7 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfigRayOperatorConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderAddonsConfigStatefulHaConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -143,6 +158,7 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfigStatefulHaConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderAddonsConfig
 {
     /// <summary>. Structure is documented below.</summary>
@@ -195,6 +211,7 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderAuthenticatorGroupsConfig
 {
     /// <summary>The name of the RBAC security group for use with Google security groups in Kubernetes RBAC. Group name must be in format gke-security-groups@yourdomain.com.</summary>
@@ -203,6 +220,7 @@ public partial class V1beta1ClusterSpecForProviderAuthenticatorGroupsConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderBinaryAuthorization
 {
     /// <summary>(DEPRECATED) Enable Binary Authorization for this cluster. Deprecated in favor of evaluation_mode.</summary>
@@ -215,6 +233,7 @@ public partial class V1beta1ClusterSpecForProviderBinaryAuthorization
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterAutoscalingAutoProvisioningDefaultsManagement
 {
     /// <summary>Specifies whether the node auto-repair is enabled for the node pool. If enabled, the nodes in this node pool will be monitored and, if they fail health checks too many times, an automatic repair action will be triggered.</summary>
@@ -227,6 +246,7 @@ public partial class V1beta1ClusterSpecForProviderClusterAutoscalingAutoProvisio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterAutoscalingAutoProvisioningDefaultsShieldedInstanceConfig
 {
     /// <summary>Defines if the instance has integrity monitoring enabled.</summary>
@@ -239,6 +259,7 @@ public partial class V1beta1ClusterSpecForProviderClusterAutoscalingAutoProvisio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy
 {
     /// <summary>Number of blue nodes to drain in a batch. Only one of the batch_percentage or batch_node_count can be specified.</summary>
@@ -255,6 +276,7 @@ public partial class V1beta1ClusterSpecForProviderClusterAutoscalingAutoProvisio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettings
 {
     /// <summary>Time needed after draining entire blue pool. After this period, blue pool will be cleaned up. A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".</summary>
@@ -267,6 +289,7 @@ public partial class V1beta1ClusterSpecForProviderClusterAutoscalingAutoProvisio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterAutoscalingAutoProvisioningDefaultsUpgradeSettings
 {
     /// <summary>Settings for blue-green upgrade strategy. To be specified when strategy is set to BLUE_GREEN. Structure is documented below.</summary>
@@ -287,6 +310,7 @@ public partial class V1beta1ClusterSpecForProviderClusterAutoscalingAutoProvisio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterAutoscalingAutoProvisioningDefaults
 {
     /// <summary>The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption</summary>
@@ -331,6 +355,7 @@ public partial class V1beta1ClusterSpecForProviderClusterAutoscalingAutoProvisio
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterAutoscalingResourceLimits
 {
     /// <summary>Maximum amount of the resource in the cluster.</summary>
@@ -347,6 +372,7 @@ public partial class V1beta1ClusterSpecForProviderClusterAutoscalingResourceLimi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterAutoscaling
 {
     /// <summary>Contains defaults for a node pool created by NAP. A subset of fields also apply to GKE Autopilot clusters. Structure is documented below.</summary>
@@ -367,6 +393,7 @@ public partial class V1beta1ClusterSpecForProviderClusterAutoscaling
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderConfidentialNodes
 {
     /// <summary>Enable Confidential GKE Nodes for this cluster, to enforce encryption of data in-use.</summary>
@@ -375,6 +402,7 @@ public partial class V1beta1ClusterSpecForProviderConfidentialNodes
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderCostManagementConfig
 {
     /// <summary>Whether to enable the cost allocation feature.</summary>
@@ -383,6 +411,7 @@ public partial class V1beta1ClusterSpecForProviderCostManagementConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderDatabaseEncryption
 {
     /// <summary>the key to use to encrypt/decrypt secrets.  See the DatabaseEncryption definition for more information.</summary>
@@ -395,6 +424,7 @@ public partial class V1beta1ClusterSpecForProviderDatabaseEncryption
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderDefaultSnatStatus
 {
     /// <summary>Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled when defaultSnatStatus is disabled.When disabled is set to false, default IP masquerade rules will be applied to the nodes to prevent sNAT on cluster internal traffic</summary>
@@ -403,6 +433,7 @@ public partial class V1beta1ClusterSpecForProviderDefaultSnatStatus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderDnsConfig
 {
     /// <summary>Which in-cluster DNS provider should be used. PROVIDER_UNSPECIFIED (default) or PLATFORM_DEFAULT or CLOUD_DNS.</summary>
@@ -419,6 +450,7 @@ public partial class V1beta1ClusterSpecForProviderDnsConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderEnableK8SBetaApis
 {
     /// <summary>Enabled Kubernetes Beta APIs. To list a Beta API resource, use the representation {group}/{version}/{resource}. The version must be a Beta version. Note that you cannot disable beta APIs that are already enabled on a cluster without recreating it. See the Configure beta APIs for more information.</summary>
@@ -427,6 +459,7 @@ public partial class V1beta1ClusterSpecForProviderEnableK8SBetaApis
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderFleet
 {
     /// <summary>The name of the Fleet host project where this cluster will be registered.</summary>
@@ -435,6 +468,7 @@ public partial class V1beta1ClusterSpecForProviderFleet
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderGatewayApiConfig
 {
     /// <summary>Which Gateway Api channel should be used. CHANNEL_DISABLED, CHANNEL_EXPERIMENTAL or CHANNEL_STANDARD.</summary>
@@ -443,6 +477,7 @@ public partial class V1beta1ClusterSpecForProviderGatewayApiConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderIdentityServiceConfig
 {
     /// <summary>Whether to enable the Identity Service component. It is disabled by default. Set enabled=true to enable.</summary>
@@ -451,6 +486,7 @@ public partial class V1beta1ClusterSpecForProviderIdentityServiceConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderIpAllocationPolicyAdditionalPodRangesConfig
 {
     /// <summary>The names of the Pod ranges to add to the cluster.</summary>
@@ -459,6 +495,7 @@ public partial class V1beta1ClusterSpecForProviderIpAllocationPolicyAdditionalPo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderIpAllocationPolicyPodCidrOverprovisionConfig
 {
     /// <summary>The status of the Istio addon, which makes it easy to set up Istio for services in a cluster. It is disabled by default. Set disabled = false to enable.</summary>
@@ -467,6 +504,7 @@ public partial class V1beta1ClusterSpecForProviderIpAllocationPolicyPodCidrOverp
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderIpAllocationPolicy
 {
     /// <summary>The configuration for additional pod secondary ranges at the cluster level. Used for Autopilot clusters and Standard clusters with which control of the secondary Pod IP address assignment to node pools isn't needed. Structure is documented below.</summary>
@@ -499,6 +537,7 @@ public partial class V1beta1ClusterSpecForProviderIpAllocationPolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderLoggingConfig
 {
     /// <summary>The GKE components exposing logs. Supported values include: SYSTEM_COMPONENTS, APISERVER, CONTROLLER_MANAGER, SCHEDULER, and WORKLOADS.</summary>
@@ -507,6 +546,7 @@ public partial class V1beta1ClusterSpecForProviderLoggingConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderMaintenancePolicyDailyMaintenanceWindow
 {
     /// <summary></summary>
@@ -515,6 +555,7 @@ public partial class V1beta1ClusterSpecForProviderMaintenancePolicyDailyMaintena
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderMaintenancePolicyMaintenanceExclusionExclusionOptions
 {
     /// <summary>The scope of automatic upgrades to restrict in the exclusion window. One of: NO_UPGRADES | NO_MINOR_UPGRADES | NO_MINOR_OR_NODE_UPGRADES</summary>
@@ -523,6 +564,7 @@ public partial class V1beta1ClusterSpecForProviderMaintenancePolicyMaintenanceEx
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderMaintenancePolicyMaintenanceExclusion
 {
     /// <summary></summary>
@@ -543,6 +585,7 @@ public partial class V1beta1ClusterSpecForProviderMaintenancePolicyMaintenanceEx
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderMaintenancePolicyRecurringWindow
 {
     /// <summary></summary>
@@ -559,6 +602,7 @@ public partial class V1beta1ClusterSpecForProviderMaintenancePolicyRecurringWind
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderMaintenancePolicy
 {
     /// <summary>structure documented below.</summary>
@@ -575,6 +619,7 @@ public partial class V1beta1ClusterSpecForProviderMaintenancePolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderMasterAuthClientCertificateConfig
 {
     /// <summary></summary>
@@ -583,6 +628,7 @@ public partial class V1beta1ClusterSpecForProviderMasterAuthClientCertificateCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderMasterAuth
 {
     /// <summary>Whether client certificate authorization is enabled for this cluster.  For example:</summary>
@@ -591,6 +637,7 @@ public partial class V1beta1ClusterSpecForProviderMasterAuth
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderMasterAuthorizedNetworksConfigCidrBlocks
 {
     /// <summary>External network that can access Kubernetes master through HTTPS. Must be specified in CIDR notation.</summary>
@@ -603,6 +650,7 @@ public partial class V1beta1ClusterSpecForProviderMasterAuthorizedNetworksConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderMasterAuthorizedNetworksConfig
 {
     /// <summary>External networks that can access the Kubernetes cluster master through HTTPS.</summary>
@@ -615,6 +663,7 @@ public partial class V1beta1ClusterSpecForProviderMasterAuthorizedNetworksConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderMeshCertificates
 {
     /// <summary>Controls the issuance of workload mTLS certificates. It is enabled by default. Workload Identity is required, see workload_config.</summary>
@@ -623,6 +672,7 @@ public partial class V1beta1ClusterSpecForProviderMeshCertificates
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderMonitoringConfigAdvancedDatapathObservabilityConfig
 {
     /// <summary>Whether or not to enable advanced datapath metrics.</summary>
@@ -639,6 +689,7 @@ public partial class V1beta1ClusterSpecForProviderMonitoringConfigAdvancedDatapa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderMonitoringConfigManagedPrometheus
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -647,6 +698,7 @@ public partial class V1beta1ClusterSpecForProviderMonitoringConfigManagedPrometh
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderMonitoringConfig
 {
     /// <summary>Configuration for Advanced Datapath Monitoring. Structure is documented below.</summary>
@@ -663,6 +715,7 @@ public partial class V1beta1ClusterSpecForProviderMonitoringConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNetworkPolicy
 {
     /// <summary>Whether network policy is enabled on the cluster.</summary>
@@ -674,6 +727,7 @@ public partial class V1beta1ClusterSpecForProviderNetworkPolicy
     public string? Provider { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecForProviderNetworkRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -684,6 +738,7 @@ public enum V1beta1ClusterSpecForProviderNetworkRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecForProviderNetworkRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -695,6 +750,7 @@ public enum V1beta1ClusterSpecForProviderNetworkRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -709,6 +765,7 @@ public partial class V1beta1ClusterSpecForProviderNetworkRefPolicy
 }
 
 /// <summary>Reference to a Network in compute to populate network.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -720,6 +777,7 @@ public partial class V1beta1ClusterSpecForProviderNetworkRef
     public V1beta1ClusterSpecForProviderNetworkRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecForProviderNetworkSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -730,6 +788,7 @@ public enum V1beta1ClusterSpecForProviderNetworkSelectorPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecForProviderNetworkSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -741,6 +800,7 @@ public enum V1beta1ClusterSpecForProviderNetworkSelectorPolicyResolveEnum
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -755,6 +815,7 @@ public partial class V1beta1ClusterSpecForProviderNetworkSelectorPolicy
 }
 
 /// <summary>Selector for a Network in compute to populate network.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -771,6 +832,7 @@ public partial class V1beta1ClusterSpecForProviderNetworkSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigAdvancedMachineFeatures
 {
     /// <summary>Defines whether the instance should have nested virtualization enabled. Defaults to false.</summary>
@@ -783,6 +845,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigAdvancedMachineFeatu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigConfidentialNodes
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -791,6 +854,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigConfidentialNodes
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigGcpSecretManagerCertificateConfig
 {
     /// <summary></summary>
@@ -799,6 +863,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigContainerdConfigPriv
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig
 {
     /// <summary></summary>
@@ -811,6 +876,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigContainerdConfigPriv
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigContainerdConfigPrivateRegistryAccessConfig
 {
     /// <summary>List of configuration objects for CA and domains. Each object identifies a certificate and its assigned domains. See how to configure for private container registries for more detail. Example:</summary>
@@ -823,6 +889,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigContainerdConfigPriv
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigContainerdConfig
 {
     /// <summary>Configuration for private container registries. There are two fields in this config:</summary>
@@ -831,6 +898,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigContainerdConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigEphemeralStorageLocalSsdConfig
 {
     /// <summary>The amount of local SSD disks that will be attached to each cluster node. Defaults to 0.</summary>
@@ -839,6 +907,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigEphemeralStorageLoca
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigFastSocket
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -847,6 +916,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigFastSocket
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigGcfsConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -855,6 +925,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigGcfsConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigGuestAcceleratorGpuDriverInstallationConfig
 {
     /// <summary>Mode for how the GPU driver is installed. Accepted values are:</summary>
@@ -863,6 +934,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigGuestAcceleratorGpuD
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigGuestAcceleratorGpuSharingConfig
 {
     /// <summary>The type of GPU sharing strategy to enable on the GPU node. Accepted values are:</summary>
@@ -875,6 +947,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigGuestAcceleratorGpuS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigGuestAccelerator
 {
     /// <summary>The number of the guest accelerator cards exposed to this instance.</summary>
@@ -899,6 +972,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigGuestAccelerator
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigGvnic
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -907,6 +981,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigGvnic
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigHostMaintenancePolicy
 {
     /// <summary></summary>
@@ -915,6 +990,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigHostMaintenancePolic
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigKubeletConfig
 {
     /// <summary>If true, enables CPU CFS quota enforcement for containers that specify CPU limits.</summary>
@@ -935,6 +1011,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigKubeletConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigLinuxNodeConfig
 {
     /// <summary>Possible cgroup modes that can be used. Accepted values are:</summary>
@@ -947,6 +1024,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigLinuxNodeConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigLocalNvmeSsdBlockConfig
 {
     /// <summary>The amount of local SSD disks that will be attached to each cluster node. Defaults to 0.</summary>
@@ -955,6 +1033,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigLocalNvmeSsdBlockCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigReservationAffinity
 {
     /// <summary>The type of reservation consumption Accepted values are:</summary>
@@ -971,6 +1050,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigReservationAffinity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigSecondaryBootDisks
 {
     /// <summary>Path to disk image to create the secondary boot disk from. After using the gke-disk-image-builder, this argument should be global/images/DISK_IMAGE_NAME.</summary>
@@ -982,6 +1062,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigSecondaryBootDisks
     public string? Mode { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecForProviderNodeConfigServiceAccountRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -992,6 +1073,7 @@ public enum V1beta1ClusterSpecForProviderNodeConfigServiceAccountRefPolicyResolu
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecForProviderNodeConfigServiceAccountRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1003,6 +1085,7 @@ public enum V1beta1ClusterSpecForProviderNodeConfigServiceAccountRefPolicyResolv
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigServiceAccountRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1017,6 +1100,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigServiceAccountRefPol
 }
 
 /// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigServiceAccountRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1028,6 +1112,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigServiceAccountRef
     public V1beta1ClusterSpecForProviderNodeConfigServiceAccountRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecForProviderNodeConfigServiceAccountSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1038,6 +1123,7 @@ public enum V1beta1ClusterSpecForProviderNodeConfigServiceAccountSelectorPolicyR
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecForProviderNodeConfigServiceAccountSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1049,6 +1135,7 @@ public enum V1beta1ClusterSpecForProviderNodeConfigServiceAccountSelectorPolicyR
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigServiceAccountSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1063,6 +1150,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigServiceAccountSelect
 }
 
 /// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigServiceAccountSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1079,6 +1167,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigServiceAccountSelect
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigShieldedInstanceConfig
 {
     /// <summary>Defines if the instance has integrity monitoring enabled.</summary>
@@ -1091,6 +1180,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigShieldedInstanceConf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigSoleTenantConfigNodeAffinity
 {
     /// <summary>Key for taint.</summary>
@@ -1107,6 +1197,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigSoleTenantConfigNode
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigSoleTenantConfig
 {
     /// <summary></summary>
@@ -1115,6 +1206,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigSoleTenantConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigTaint
 {
     /// <summary>Effect for taint. Accepted values are NO_SCHEDULE, PREFER_NO_SCHEDULE, and NO_EXECUTE.</summary>
@@ -1131,6 +1223,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigTaint
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigWorkloadMetadataConfig
 {
     /// <summary>How to expose the node metadata to the workload running on the node. Accepted values are:</summary>
@@ -1139,6 +1232,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigWorkloadMetadataConf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfig
 {
     /// <summary>Specifies options for controlling advanced machine features. Structure is documented below.</summary>
@@ -1303,6 +1397,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodePoolAutoConfigNetworkTags
 {
     /// <summary>List of network tags applied to auto-provisioned node pools.</summary>
@@ -1311,6 +1406,7 @@ public partial class V1beta1ClusterSpecForProviderNodePoolAutoConfigNetworkTags
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodePoolAutoConfig
 {
     /// <summary>The network tag config for the cluster's automatically provisioned node pools.</summary>
@@ -1323,6 +1419,7 @@ public partial class V1beta1ClusterSpecForProviderNodePoolAutoConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigGcpSecretManagerCertificateConfig
 {
     /// <summary></summary>
@@ -1331,6 +1428,7 @@ public partial class V1beta1ClusterSpecForProviderNodePoolDefaultsNodeConfigDefa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig
 {
     /// <summary></summary>
@@ -1343,6 +1441,7 @@ public partial class V1beta1ClusterSpecForProviderNodePoolDefaultsNodeConfigDefa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfigPrivateRegistryAccessConfig
 {
     /// <summary>List of configuration objects for CA and domains. Each object identifies a certificate and its assigned domains. See how to configure for private container registries for more detail. Example:</summary>
@@ -1355,6 +1454,7 @@ public partial class V1beta1ClusterSpecForProviderNodePoolDefaultsNodeConfigDefa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfig
 {
     /// <summary>Configuration for private container registries. There are two fields in this config:</summary>
@@ -1363,6 +1463,7 @@ public partial class V1beta1ClusterSpecForProviderNodePoolDefaultsNodeConfigDefa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodePoolDefaultsNodeConfigDefaults
 {
     /// <summary>Parameters to customize containerd runtime. Structure is documented below.</summary>
@@ -1375,6 +1476,7 @@ public partial class V1beta1ClusterSpecForProviderNodePoolDefaultsNodeConfigDefa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodePoolDefaults
 {
     /// <summary>Subset of NodeConfig message that has defaults.</summary>
@@ -1383,6 +1485,7 @@ public partial class V1beta1ClusterSpecForProviderNodePoolDefaults
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNotificationConfigPubsubFilter
 {
     /// <summary>Can be used to filter what notifications are sent. Accepted values are UPGRADE_AVAILABLE_EVENT, UPGRADE_EVENT and SECURITY_BULLETIN_EVENT. See Filtering notifications for more details.</summary>
@@ -1391,6 +1494,7 @@ public partial class V1beta1ClusterSpecForProviderNotificationConfigPubsubFilter
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNotificationConfigPubsub
 {
     /// <summary>Whether or not the notification config is enabled</summary>
@@ -1407,6 +1511,7 @@ public partial class V1beta1ClusterSpecForProviderNotificationConfigPubsub
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNotificationConfig
 {
     /// <summary>The pubsub config for the cluster's upgrade notifications.</summary>
@@ -1415,6 +1520,7 @@ public partial class V1beta1ClusterSpecForProviderNotificationConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderPrivateClusterConfigMasterGlobalAccessConfig
 {
     /// <summary>Whether the cluster master is accessible globally or not.</summary>
@@ -1423,6 +1529,7 @@ public partial class V1beta1ClusterSpecForProviderPrivateClusterConfigMasterGlob
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderPrivateClusterConfig
 {
     /// <summary>When true, the cluster's private endpoint is used as the cluster endpoint and access through the public endpoint is disabled. When false, either endpoint can be used. This field only applies to private clusters, when enable_private_nodes is true.</summary>
@@ -1447,6 +1554,7 @@ public partial class V1beta1ClusterSpecForProviderPrivateClusterConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderReleaseChannel
 {
     /// <summary>The selected release channel. Accepted values are:</summary>
@@ -1455,6 +1563,7 @@ public partial class V1beta1ClusterSpecForProviderReleaseChannel
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderResourceUsageExportConfigBigqueryDestination
 {
     /// <summary>The ID of a BigQuery Dataset. For Example:</summary>
@@ -1463,6 +1572,7 @@ public partial class V1beta1ClusterSpecForProviderResourceUsageExportConfigBigqu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderResourceUsageExportConfig
 {
     /// <summary>Parameters for using BigQuery as the destination of resource usage export.</summary>
@@ -1479,6 +1589,7 @@ public partial class V1beta1ClusterSpecForProviderResourceUsageExportConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderSecurityPostureConfig
 {
     /// <summary>Sets the mode of the Kubernetes security posture API's off-cluster features. Available options include DISABLED and BASIC.</summary>
@@ -1491,6 +1602,7 @@ public partial class V1beta1ClusterSpecForProviderSecurityPostureConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderServiceExternalIpsConfig
 {
     /// <summary>Controls whether external ips specified by a service will be allowed. It is enabled by default.</summary>
@@ -1498,6 +1610,7 @@ public partial class V1beta1ClusterSpecForProviderServiceExternalIpsConfig
     public bool? Enabled { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecForProviderSubnetworkRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1508,6 +1621,7 @@ public enum V1beta1ClusterSpecForProviderSubnetworkRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecForProviderSubnetworkRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1519,6 +1633,7 @@ public enum V1beta1ClusterSpecForProviderSubnetworkRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderSubnetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1533,6 +1648,7 @@ public partial class V1beta1ClusterSpecForProviderSubnetworkRefPolicy
 }
 
 /// <summary>Reference to a Subnetwork in compute to populate subnetwork.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderSubnetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1544,6 +1660,7 @@ public partial class V1beta1ClusterSpecForProviderSubnetworkRef
     public V1beta1ClusterSpecForProviderSubnetworkRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecForProviderSubnetworkSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1554,6 +1671,7 @@ public enum V1beta1ClusterSpecForProviderSubnetworkSelectorPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecForProviderSubnetworkSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1565,6 +1683,7 @@ public enum V1beta1ClusterSpecForProviderSubnetworkSelectorPolicyResolveEnum
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderSubnetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1579,6 +1698,7 @@ public partial class V1beta1ClusterSpecForProviderSubnetworkSelectorPolicy
 }
 
 /// <summary>Selector for a Subnetwork in compute to populate subnetwork.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderSubnetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1595,6 +1715,7 @@ public partial class V1beta1ClusterSpecForProviderSubnetworkSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVerticalPodAutoscaling
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -1603,6 +1724,7 @@ public partial class V1beta1ClusterSpecForProviderVerticalPodAutoscaling
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderWorkloadIdentityConfig
 {
     /// <summary>The workload pool to attach all Kubernetes service accounts to.</summary>
@@ -1611,6 +1733,7 @@ public partial class V1beta1ClusterSpecForProviderWorkloadIdentityConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProvider
 {
     /// <summary>The configuration for addons supported by GKE. Structure is documented below.</summary>
@@ -1871,6 +1994,7 @@ public partial class V1beta1ClusterSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderAddonsConfigCloudrunConfig
 {
     /// <summary>The status of the Istio addon, which makes it easy to set up Istio for services in a cluster. It is disabled by default. Set disabled = false to enable.</summary>
@@ -1883,6 +2007,7 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfigCloudrunConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderAddonsConfigConfigConnectorConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -1891,6 +2016,7 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfigConfigConnectorCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderAddonsConfigDnsCacheConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -1899,6 +2025,7 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfigDnsCacheConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderAddonsConfigGcePersistentDiskCsiDriverConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -1907,6 +2034,7 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfigGcePersistentDisk
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderAddonsConfigGcpFilestoreCsiDriverConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -1915,6 +2043,7 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfigGcpFilestoreCsiDr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderAddonsConfigGcsFuseCsiDriverConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -1923,6 +2052,7 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfigGcsFuseCsiDriverC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderAddonsConfigGkeBackupAgentConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -1931,6 +2061,7 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfigGkeBackupAgentCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderAddonsConfigHorizontalPodAutoscaling
 {
     /// <summary>The status of the Istio addon, which makes it easy to set up Istio for services in a cluster. It is disabled by default. Set disabled = false to enable.</summary>
@@ -1939,6 +2070,7 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfigHorizontalPodAuto
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderAddonsConfigHttpLoadBalancing
 {
     /// <summary>The status of the Istio addon, which makes it easy to set up Istio for services in a cluster. It is disabled by default. Set disabled = false to enable.</summary>
@@ -1947,6 +2079,7 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfigHttpLoadBalancing
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderAddonsConfigNetworkPolicyConfig
 {
     /// <summary>The status of the Istio addon, which makes it easy to set up Istio for services in a cluster. It is disabled by default. Set disabled = false to enable.</summary>
@@ -1955,6 +2088,7 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfigNetworkPolicyConf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderAddonsConfigRayOperatorConfigRayClusterLoggingConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -1963,6 +2097,7 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfigRayOperatorConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderAddonsConfigRayOperatorConfigRayClusterMonitoringConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -1971,6 +2106,7 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfigRayOperatorConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderAddonsConfigRayOperatorConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -1987,6 +2123,7 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfigRayOperatorConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderAddonsConfigStatefulHaConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -1995,6 +2132,7 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfigStatefulHaConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderAddonsConfig
 {
     /// <summary>. Structure is documented below.</summary>
@@ -2047,6 +2185,7 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderAuthenticatorGroupsConfig
 {
     /// <summary>The name of the RBAC security group for use with Google security groups in Kubernetes RBAC. Group name must be in format gke-security-groups@yourdomain.com.</summary>
@@ -2055,6 +2194,7 @@ public partial class V1beta1ClusterSpecInitProviderAuthenticatorGroupsConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderBinaryAuthorization
 {
     /// <summary>(DEPRECATED) Enable Binary Authorization for this cluster. Deprecated in favor of evaluation_mode.</summary>
@@ -2067,6 +2207,7 @@ public partial class V1beta1ClusterSpecInitProviderBinaryAuthorization
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterAutoscalingAutoProvisioningDefaultsManagement
 {
     /// <summary>Specifies whether the node auto-repair is enabled for the node pool. If enabled, the nodes in this node pool will be monitored and, if they fail health checks too many times, an automatic repair action will be triggered.</summary>
@@ -2079,6 +2220,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterAutoscalingAutoProvisi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterAutoscalingAutoProvisioningDefaultsShieldedInstanceConfig
 {
     /// <summary>Defines if the instance has integrity monitoring enabled.</summary>
@@ -2091,6 +2233,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterAutoscalingAutoProvisi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy
 {
     /// <summary>Number of blue nodes to drain in a batch. Only one of the batch_percentage or batch_node_count can be specified.</summary>
@@ -2107,6 +2250,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterAutoscalingAutoProvisi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettings
 {
     /// <summary>Time needed after draining entire blue pool. After this period, blue pool will be cleaned up. A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".</summary>
@@ -2119,6 +2263,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterAutoscalingAutoProvisi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterAutoscalingAutoProvisioningDefaultsUpgradeSettings
 {
     /// <summary>Settings for blue-green upgrade strategy. To be specified when strategy is set to BLUE_GREEN. Structure is documented below.</summary>
@@ -2139,6 +2284,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterAutoscalingAutoProvisi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterAutoscalingAutoProvisioningDefaults
 {
     /// <summary>The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption</summary>
@@ -2183,6 +2329,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterAutoscalingAutoProvisi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterAutoscalingResourceLimits
 {
     /// <summary>Maximum amount of the resource in the cluster.</summary>
@@ -2199,6 +2346,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterAutoscalingResourceLim
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterAutoscaling
 {
     /// <summary>Contains defaults for a node pool created by NAP. A subset of fields also apply to GKE Autopilot clusters. Structure is documented below.</summary>
@@ -2219,6 +2367,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterAutoscaling
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderConfidentialNodes
 {
     /// <summary>Enable Confidential GKE Nodes for this cluster, to enforce encryption of data in-use.</summary>
@@ -2227,6 +2376,7 @@ public partial class V1beta1ClusterSpecInitProviderConfidentialNodes
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderCostManagementConfig
 {
     /// <summary>Whether to enable the cost allocation feature.</summary>
@@ -2235,6 +2385,7 @@ public partial class V1beta1ClusterSpecInitProviderCostManagementConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderDatabaseEncryption
 {
     /// <summary>the key to use to encrypt/decrypt secrets.  See the DatabaseEncryption definition for more information.</summary>
@@ -2247,6 +2398,7 @@ public partial class V1beta1ClusterSpecInitProviderDatabaseEncryption
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderDefaultSnatStatus
 {
     /// <summary>Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled when defaultSnatStatus is disabled.When disabled is set to false, default IP masquerade rules will be applied to the nodes to prevent sNAT on cluster internal traffic</summary>
@@ -2255,6 +2407,7 @@ public partial class V1beta1ClusterSpecInitProviderDefaultSnatStatus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderDnsConfig
 {
     /// <summary>Which in-cluster DNS provider should be used. PROVIDER_UNSPECIFIED (default) or PLATFORM_DEFAULT or CLOUD_DNS.</summary>
@@ -2271,6 +2424,7 @@ public partial class V1beta1ClusterSpecInitProviderDnsConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderEnableK8SBetaApis
 {
     /// <summary>Enabled Kubernetes Beta APIs. To list a Beta API resource, use the representation {group}/{version}/{resource}. The version must be a Beta version. Note that you cannot disable beta APIs that are already enabled on a cluster without recreating it. See the Configure beta APIs for more information.</summary>
@@ -2279,6 +2433,7 @@ public partial class V1beta1ClusterSpecInitProviderEnableK8SBetaApis
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderFleet
 {
     /// <summary>The name of the Fleet host project where this cluster will be registered.</summary>
@@ -2287,6 +2442,7 @@ public partial class V1beta1ClusterSpecInitProviderFleet
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderGatewayApiConfig
 {
     /// <summary>Which Gateway Api channel should be used. CHANNEL_DISABLED, CHANNEL_EXPERIMENTAL or CHANNEL_STANDARD.</summary>
@@ -2295,6 +2451,7 @@ public partial class V1beta1ClusterSpecInitProviderGatewayApiConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderIdentityServiceConfig
 {
     /// <summary>Whether to enable the Identity Service component. It is disabled by default. Set enabled=true to enable.</summary>
@@ -2303,6 +2460,7 @@ public partial class V1beta1ClusterSpecInitProviderIdentityServiceConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderIpAllocationPolicyAdditionalPodRangesConfig
 {
     /// <summary>The names of the Pod ranges to add to the cluster.</summary>
@@ -2311,6 +2469,7 @@ public partial class V1beta1ClusterSpecInitProviderIpAllocationPolicyAdditionalP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderIpAllocationPolicyPodCidrOverprovisionConfig
 {
     /// <summary>The status of the Istio addon, which makes it easy to set up Istio for services in a cluster. It is disabled by default. Set disabled = false to enable.</summary>
@@ -2319,6 +2478,7 @@ public partial class V1beta1ClusterSpecInitProviderIpAllocationPolicyPodCidrOver
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderIpAllocationPolicy
 {
     /// <summary>The configuration for additional pod secondary ranges at the cluster level. Used for Autopilot clusters and Standard clusters with which control of the secondary Pod IP address assignment to node pools isn't needed. Structure is documented below.</summary>
@@ -2351,6 +2511,7 @@ public partial class V1beta1ClusterSpecInitProviderIpAllocationPolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderLoggingConfig
 {
     /// <summary>The GKE components exposing logs. Supported values include: SYSTEM_COMPONENTS, APISERVER, CONTROLLER_MANAGER, SCHEDULER, and WORKLOADS.</summary>
@@ -2359,6 +2520,7 @@ public partial class V1beta1ClusterSpecInitProviderLoggingConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderMaintenancePolicyDailyMaintenanceWindow
 {
     /// <summary></summary>
@@ -2367,6 +2529,7 @@ public partial class V1beta1ClusterSpecInitProviderMaintenancePolicyDailyMainten
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderMaintenancePolicyMaintenanceExclusionExclusionOptions
 {
     /// <summary>The scope of automatic upgrades to restrict in the exclusion window. One of: NO_UPGRADES | NO_MINOR_UPGRADES | NO_MINOR_OR_NODE_UPGRADES</summary>
@@ -2375,6 +2538,7 @@ public partial class V1beta1ClusterSpecInitProviderMaintenancePolicyMaintenanceE
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderMaintenancePolicyMaintenanceExclusion
 {
     /// <summary></summary>
@@ -2395,6 +2559,7 @@ public partial class V1beta1ClusterSpecInitProviderMaintenancePolicyMaintenanceE
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderMaintenancePolicyRecurringWindow
 {
     /// <summary></summary>
@@ -2411,6 +2576,7 @@ public partial class V1beta1ClusterSpecInitProviderMaintenancePolicyRecurringWin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderMaintenancePolicy
 {
     /// <summary>structure documented below.</summary>
@@ -2427,6 +2593,7 @@ public partial class V1beta1ClusterSpecInitProviderMaintenancePolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderMasterAuthClientCertificateConfig
 {
     /// <summary></summary>
@@ -2435,6 +2602,7 @@ public partial class V1beta1ClusterSpecInitProviderMasterAuthClientCertificateCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderMasterAuth
 {
     /// <summary>Whether client certificate authorization is enabled for this cluster.  For example:</summary>
@@ -2443,6 +2611,7 @@ public partial class V1beta1ClusterSpecInitProviderMasterAuth
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderMasterAuthorizedNetworksConfigCidrBlocks
 {
     /// <summary>External network that can access Kubernetes master through HTTPS. Must be specified in CIDR notation.</summary>
@@ -2455,6 +2624,7 @@ public partial class V1beta1ClusterSpecInitProviderMasterAuthorizedNetworksConfi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderMasterAuthorizedNetworksConfig
 {
     /// <summary>External networks that can access the Kubernetes cluster master through HTTPS.</summary>
@@ -2467,6 +2637,7 @@ public partial class V1beta1ClusterSpecInitProviderMasterAuthorizedNetworksConfi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderMeshCertificates
 {
     /// <summary>Controls the issuance of workload mTLS certificates. It is enabled by default. Workload Identity is required, see workload_config.</summary>
@@ -2475,6 +2646,7 @@ public partial class V1beta1ClusterSpecInitProviderMeshCertificates
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderMonitoringConfigAdvancedDatapathObservabilityConfig
 {
     /// <summary>Whether or not to enable advanced datapath metrics.</summary>
@@ -2491,6 +2663,7 @@ public partial class V1beta1ClusterSpecInitProviderMonitoringConfigAdvancedDatap
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderMonitoringConfigManagedPrometheus
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -2499,6 +2672,7 @@ public partial class V1beta1ClusterSpecInitProviderMonitoringConfigManagedPromet
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderMonitoringConfig
 {
     /// <summary>Configuration for Advanced Datapath Monitoring. Structure is documented below.</summary>
@@ -2515,6 +2689,7 @@ public partial class V1beta1ClusterSpecInitProviderMonitoringConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNetworkPolicy
 {
     /// <summary>Whether network policy is enabled on the cluster.</summary>
@@ -2526,6 +2701,7 @@ public partial class V1beta1ClusterSpecInitProviderNetworkPolicy
     public string? Provider { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecInitProviderNetworkRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2536,6 +2712,7 @@ public enum V1beta1ClusterSpecInitProviderNetworkRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecInitProviderNetworkRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2547,6 +2724,7 @@ public enum V1beta1ClusterSpecInitProviderNetworkRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2561,6 +2739,7 @@ public partial class V1beta1ClusterSpecInitProviderNetworkRefPolicy
 }
 
 /// <summary>Reference to a Network in compute to populate network.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2572,6 +2751,7 @@ public partial class V1beta1ClusterSpecInitProviderNetworkRef
     public V1beta1ClusterSpecInitProviderNetworkRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecInitProviderNetworkSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2582,6 +2762,7 @@ public enum V1beta1ClusterSpecInitProviderNetworkSelectorPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecInitProviderNetworkSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2593,6 +2774,7 @@ public enum V1beta1ClusterSpecInitProviderNetworkSelectorPolicyResolveEnum
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2607,6 +2789,7 @@ public partial class V1beta1ClusterSpecInitProviderNetworkSelectorPolicy
 }
 
 /// <summary>Selector for a Network in compute to populate network.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2623,6 +2806,7 @@ public partial class V1beta1ClusterSpecInitProviderNetworkSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigAdvancedMachineFeatures
 {
     /// <summary>Defines whether the instance should have nested virtualization enabled. Defaults to false.</summary>
@@ -2635,6 +2819,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigAdvancedMachineFeat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigConfidentialNodes
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -2643,6 +2828,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigConfidentialNodes
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigGcpSecretManagerCertificateConfig
 {
     /// <summary></summary>
@@ -2651,6 +2837,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigContainerdConfigPri
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig
 {
     /// <summary></summary>
@@ -2663,6 +2850,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigContainerdConfigPri
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigContainerdConfigPrivateRegistryAccessConfig
 {
     /// <summary>List of configuration objects for CA and domains. Each object identifies a certificate and its assigned domains. See how to configure for private container registries for more detail. Example:</summary>
@@ -2675,6 +2863,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigContainerdConfigPri
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigContainerdConfig
 {
     /// <summary>Configuration for private container registries. There are two fields in this config:</summary>
@@ -2683,6 +2872,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigContainerdConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigEphemeralStorageLocalSsdConfig
 {
     /// <summary>The amount of local SSD disks that will be attached to each cluster node. Defaults to 0.</summary>
@@ -2691,6 +2881,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigEphemeralStorageLoc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigFastSocket
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -2699,6 +2890,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigFastSocket
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigGcfsConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -2707,6 +2899,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigGcfsConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigGuestAcceleratorGpuDriverInstallationConfig
 {
     /// <summary>Mode for how the GPU driver is installed. Accepted values are:</summary>
@@ -2715,6 +2908,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigGuestAcceleratorGpu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigGuestAcceleratorGpuSharingConfig
 {
     /// <summary>The type of GPU sharing strategy to enable on the GPU node. Accepted values are:</summary>
@@ -2727,6 +2921,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigGuestAcceleratorGpu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigGuestAccelerator
 {
     /// <summary>The number of the guest accelerator cards exposed to this instance.</summary>
@@ -2751,6 +2946,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigGuestAccelerator
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigGvnic
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -2759,6 +2955,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigGvnic
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigHostMaintenancePolicy
 {
     /// <summary></summary>
@@ -2767,6 +2964,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigHostMaintenancePoli
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigKubeletConfig
 {
     /// <summary>If true, enables CPU CFS quota enforcement for containers that specify CPU limits.</summary>
@@ -2787,6 +2985,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigKubeletConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigLinuxNodeConfig
 {
     /// <summary>Possible cgroup modes that can be used. Accepted values are:</summary>
@@ -2799,6 +2998,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigLinuxNodeConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigLocalNvmeSsdBlockConfig
 {
     /// <summary>The amount of local SSD disks that will be attached to each cluster node. Defaults to 0.</summary>
@@ -2807,6 +3007,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigLocalNvmeSsdBlockCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigReservationAffinity
 {
     /// <summary>The type of reservation consumption Accepted values are:</summary>
@@ -2823,6 +3024,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigReservationAffinity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigSecondaryBootDisks
 {
     /// <summary>Path to disk image to create the secondary boot disk from. After using the gke-disk-image-builder, this argument should be global/images/DISK_IMAGE_NAME.</summary>
@@ -2834,6 +3036,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigSecondaryBootDisks
     public string? Mode { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecInitProviderNodeConfigServiceAccountRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2844,6 +3047,7 @@ public enum V1beta1ClusterSpecInitProviderNodeConfigServiceAccountRefPolicyResol
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecInitProviderNodeConfigServiceAccountRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2855,6 +3059,7 @@ public enum V1beta1ClusterSpecInitProviderNodeConfigServiceAccountRefPolicyResol
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigServiceAccountRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2869,6 +3074,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigServiceAccountRefPo
 }
 
 /// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigServiceAccountRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2880,6 +3086,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigServiceAccountRef
     public V1beta1ClusterSpecInitProviderNodeConfigServiceAccountRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecInitProviderNodeConfigServiceAccountSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2890,6 +3097,7 @@ public enum V1beta1ClusterSpecInitProviderNodeConfigServiceAccountSelectorPolicy
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecInitProviderNodeConfigServiceAccountSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2901,6 +3109,7 @@ public enum V1beta1ClusterSpecInitProviderNodeConfigServiceAccountSelectorPolicy
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigServiceAccountSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2915,6 +3124,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigServiceAccountSelec
 }
 
 /// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigServiceAccountSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2931,6 +3141,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigServiceAccountSelec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigShieldedInstanceConfig
 {
     /// <summary>Defines if the instance has integrity monitoring enabled.</summary>
@@ -2943,6 +3154,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigShieldedInstanceCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigSoleTenantConfigNodeAffinity
 {
     /// <summary>Key for taint.</summary>
@@ -2959,6 +3171,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigSoleTenantConfigNod
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigSoleTenantConfig
 {
     /// <summary></summary>
@@ -2967,6 +3180,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigSoleTenantConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigTaint
 {
     /// <summary>Effect for taint. Accepted values are NO_SCHEDULE, PREFER_NO_SCHEDULE, and NO_EXECUTE.</summary>
@@ -2983,6 +3197,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigTaint
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigWorkloadMetadataConfig
 {
     /// <summary>How to expose the node metadata to the workload running on the node. Accepted values are:</summary>
@@ -2991,6 +3206,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigWorkloadMetadataCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfig
 {
     /// <summary>Specifies options for controlling advanced machine features. Structure is documented below.</summary>
@@ -3155,6 +3371,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodePoolAutoConfigNetworkTags
 {
     /// <summary>List of network tags applied to auto-provisioned node pools.</summary>
@@ -3163,6 +3380,7 @@ public partial class V1beta1ClusterSpecInitProviderNodePoolAutoConfigNetworkTags
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodePoolAutoConfig
 {
     /// <summary>The network tag config for the cluster's automatically provisioned node pools.</summary>
@@ -3175,6 +3393,7 @@ public partial class V1beta1ClusterSpecInitProviderNodePoolAutoConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigGcpSecretManagerCertificateConfig
 {
     /// <summary></summary>
@@ -3183,6 +3402,7 @@ public partial class V1beta1ClusterSpecInitProviderNodePoolDefaultsNodeConfigDef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig
 {
     /// <summary></summary>
@@ -3195,6 +3415,7 @@ public partial class V1beta1ClusterSpecInitProviderNodePoolDefaultsNodeConfigDef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfigPrivateRegistryAccessConfig
 {
     /// <summary>List of configuration objects for CA and domains. Each object identifies a certificate and its assigned domains. See how to configure for private container registries for more detail. Example:</summary>
@@ -3207,6 +3428,7 @@ public partial class V1beta1ClusterSpecInitProviderNodePoolDefaultsNodeConfigDef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfig
 {
     /// <summary>Configuration for private container registries. There are two fields in this config:</summary>
@@ -3215,6 +3437,7 @@ public partial class V1beta1ClusterSpecInitProviderNodePoolDefaultsNodeConfigDef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodePoolDefaultsNodeConfigDefaults
 {
     /// <summary>Parameters to customize containerd runtime. Structure is documented below.</summary>
@@ -3227,6 +3450,7 @@ public partial class V1beta1ClusterSpecInitProviderNodePoolDefaultsNodeConfigDef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodePoolDefaults
 {
     /// <summary>Subset of NodeConfig message that has defaults.</summary>
@@ -3235,6 +3459,7 @@ public partial class V1beta1ClusterSpecInitProviderNodePoolDefaults
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNotificationConfigPubsubFilter
 {
     /// <summary>Can be used to filter what notifications are sent. Accepted values are UPGRADE_AVAILABLE_EVENT, UPGRADE_EVENT and SECURITY_BULLETIN_EVENT. See Filtering notifications for more details.</summary>
@@ -3243,6 +3468,7 @@ public partial class V1beta1ClusterSpecInitProviderNotificationConfigPubsubFilte
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNotificationConfigPubsub
 {
     /// <summary>Whether or not the notification config is enabled</summary>
@@ -3259,6 +3485,7 @@ public partial class V1beta1ClusterSpecInitProviderNotificationConfigPubsub
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNotificationConfig
 {
     /// <summary>The pubsub config for the cluster's upgrade notifications.</summary>
@@ -3267,6 +3494,7 @@ public partial class V1beta1ClusterSpecInitProviderNotificationConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderPrivateClusterConfigMasterGlobalAccessConfig
 {
     /// <summary>Whether the cluster master is accessible globally or not.</summary>
@@ -3275,6 +3503,7 @@ public partial class V1beta1ClusterSpecInitProviderPrivateClusterConfigMasterGlo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderPrivateClusterConfig
 {
     /// <summary>When true, the cluster's private endpoint is used as the cluster endpoint and access through the public endpoint is disabled. When false, either endpoint can be used. This field only applies to private clusters, when enable_private_nodes is true.</summary>
@@ -3299,6 +3528,7 @@ public partial class V1beta1ClusterSpecInitProviderPrivateClusterConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderReleaseChannel
 {
     /// <summary>The selected release channel. Accepted values are:</summary>
@@ -3307,6 +3537,7 @@ public partial class V1beta1ClusterSpecInitProviderReleaseChannel
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderResourceUsageExportConfigBigqueryDestination
 {
     /// <summary>The ID of a BigQuery Dataset. For Example:</summary>
@@ -3315,6 +3546,7 @@ public partial class V1beta1ClusterSpecInitProviderResourceUsageExportConfigBigq
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderResourceUsageExportConfig
 {
     /// <summary>Parameters for using BigQuery as the destination of resource usage export.</summary>
@@ -3331,6 +3563,7 @@ public partial class V1beta1ClusterSpecInitProviderResourceUsageExportConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderSecurityPostureConfig
 {
     /// <summary>Sets the mode of the Kubernetes security posture API's off-cluster features. Available options include DISABLED and BASIC.</summary>
@@ -3343,6 +3576,7 @@ public partial class V1beta1ClusterSpecInitProviderSecurityPostureConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderServiceExternalIpsConfig
 {
     /// <summary>Controls whether external ips specified by a service will be allowed. It is enabled by default.</summary>
@@ -3350,6 +3584,7 @@ public partial class V1beta1ClusterSpecInitProviderServiceExternalIpsConfig
     public bool? Enabled { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecInitProviderSubnetworkRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -3360,6 +3595,7 @@ public enum V1beta1ClusterSpecInitProviderSubnetworkRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecInitProviderSubnetworkRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -3371,6 +3607,7 @@ public enum V1beta1ClusterSpecInitProviderSubnetworkRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderSubnetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3385,6 +3622,7 @@ public partial class V1beta1ClusterSpecInitProviderSubnetworkRefPolicy
 }
 
 /// <summary>Reference to a Subnetwork in compute to populate subnetwork.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderSubnetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3396,6 +3634,7 @@ public partial class V1beta1ClusterSpecInitProviderSubnetworkRef
     public V1beta1ClusterSpecInitProviderSubnetworkRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecInitProviderSubnetworkSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -3406,6 +3645,7 @@ public enum V1beta1ClusterSpecInitProviderSubnetworkSelectorPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecInitProviderSubnetworkSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -3417,6 +3657,7 @@ public enum V1beta1ClusterSpecInitProviderSubnetworkSelectorPolicyResolveEnum
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderSubnetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3431,6 +3672,7 @@ public partial class V1beta1ClusterSpecInitProviderSubnetworkSelectorPolicy
 }
 
 /// <summary>Selector for a Subnetwork in compute to populate subnetwork.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderSubnetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -3447,6 +3689,7 @@ public partial class V1beta1ClusterSpecInitProviderSubnetworkSelector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVerticalPodAutoscaling
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -3455,6 +3698,7 @@ public partial class V1beta1ClusterSpecInitProviderVerticalPodAutoscaling
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderWorkloadIdentityConfig
 {
     /// <summary>The workload pool to attach all Kubernetes service accounts to.</summary>
@@ -3463,6 +3707,7 @@ public partial class V1beta1ClusterSpecInitProviderWorkloadIdentityConfig
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProvider
 {
     /// <summary>The configuration for addons supported by GKE. Structure is documented below.</summary>
@@ -3718,6 +3963,7 @@ public partial class V1beta1ClusterSpecInitProvider
     public IList<V1beta1ClusterSpecInitProviderWorkloadIdentityConfig>? WorkloadIdentityConfig { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -3740,6 +3986,7 @@ public enum V1beta1ClusterSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -3750,6 +3997,7 @@ public enum V1beta1ClusterSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -3761,6 +4009,7 @@ public enum V1beta1ClusterSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3775,6 +4024,7 @@ public partial class V1beta1ClusterSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3786,6 +4036,7 @@ public partial class V1beta1ClusterSpecProviderConfigRef
     public V1beta1ClusterSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -3796,6 +4047,7 @@ public enum V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicyResolutio
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -3807,6 +4059,7 @@ public enum V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicyResolveEn
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3821,6 +4074,7 @@ public partial class V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicy
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3833,6 +4087,7 @@ public partial class V1beta1ClusterSpecPublishConnectionDetailsToConfigRef
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -3849,6 +4104,7 @@ public partial class V1beta1ClusterSpecPublishConnectionDetailsToMetadata
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -3865,6 +4121,7 @@ public partial class V1beta1ClusterSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -3877,6 +4134,7 @@ public partial class V1beta1ClusterSpecWriteConnectionSecretToRef
 }
 
 /// <summary>ClusterSpec defines the desired state of Cluster</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -3910,6 +4168,7 @@ public partial class V1beta1ClusterSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderAddonsConfigCloudrunConfig
 {
     /// <summary>The status of the Istio addon, which makes it easy to set up Istio for services in a cluster. It is disabled by default. Set disabled = false to enable.</summary>
@@ -3922,6 +4181,7 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfigCloudrunConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderAddonsConfigConfigConnectorConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -3930,6 +4190,7 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfigConfigConnectorCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderAddonsConfigDnsCacheConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -3938,6 +4199,7 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfigDnsCacheConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderAddonsConfigGcePersistentDiskCsiDriverConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -3946,6 +4208,7 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfigGcePersistentDisk
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderAddonsConfigGcpFilestoreCsiDriverConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -3954,6 +4217,7 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfigGcpFilestoreCsiDr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderAddonsConfigGcsFuseCsiDriverConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -3962,6 +4226,7 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfigGcsFuseCsiDriverC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderAddonsConfigGkeBackupAgentConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -3970,6 +4235,7 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfigGkeBackupAgentCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderAddonsConfigHorizontalPodAutoscaling
 {
     /// <summary>The status of the Istio addon, which makes it easy to set up Istio for services in a cluster. It is disabled by default. Set disabled = false to enable.</summary>
@@ -3978,6 +4244,7 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfigHorizontalPodAuto
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderAddonsConfigHttpLoadBalancing
 {
     /// <summary>The status of the Istio addon, which makes it easy to set up Istio for services in a cluster. It is disabled by default. Set disabled = false to enable.</summary>
@@ -3986,6 +4253,7 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfigHttpLoadBalancing
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderAddonsConfigNetworkPolicyConfig
 {
     /// <summary>The status of the Istio addon, which makes it easy to set up Istio for services in a cluster. It is disabled by default. Set disabled = false to enable.</summary>
@@ -3994,6 +4262,7 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfigNetworkPolicyConf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderAddonsConfigRayOperatorConfigRayClusterLoggingConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -4002,6 +4271,7 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfigRayOperatorConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderAddonsConfigRayOperatorConfigRayClusterMonitoringConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -4010,6 +4280,7 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfigRayOperatorConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderAddonsConfigRayOperatorConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -4026,6 +4297,7 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfigRayOperatorConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderAddonsConfigStatefulHaConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -4034,6 +4306,7 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfigStatefulHaConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderAddonsConfig
 {
     /// <summary>. Structure is documented below.</summary>
@@ -4086,6 +4359,7 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderAuthenticatorGroupsConfig
 {
     /// <summary>The name of the RBAC security group for use with Google security groups in Kubernetes RBAC. Group name must be in format gke-security-groups@yourdomain.com.</summary>
@@ -4094,6 +4368,7 @@ public partial class V1beta1ClusterStatusAtProviderAuthenticatorGroupsConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderBinaryAuthorization
 {
     /// <summary>(DEPRECATED) Enable Binary Authorization for this cluster. Deprecated in favor of evaluation_mode.</summary>
@@ -4106,6 +4381,7 @@ public partial class V1beta1ClusterStatusAtProviderBinaryAuthorization
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterAutoscalingAutoProvisioningDefaultsManagementUpgradeOptions
 {
     /// <summary></summary>
@@ -4118,6 +4394,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterAutoscalingAutoProvisi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterAutoscalingAutoProvisioningDefaultsManagement
 {
     /// <summary>Specifies whether the node auto-repair is enabled for the node pool. If enabled, the nodes in this node pool will be monitored and, if they fail health checks too many times, an automatic repair action will be triggered.</summary>
@@ -4134,6 +4411,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterAutoscalingAutoProvisi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterAutoscalingAutoProvisioningDefaultsShieldedInstanceConfig
 {
     /// <summary>Defines if the instance has integrity monitoring enabled.</summary>
@@ -4146,6 +4424,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterAutoscalingAutoProvisi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy
 {
     /// <summary>Number of blue nodes to drain in a batch. Only one of the batch_percentage or batch_node_count can be specified.</summary>
@@ -4162,6 +4441,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterAutoscalingAutoProvisi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettings
 {
     /// <summary>Time needed after draining entire blue pool. After this period, blue pool will be cleaned up. A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".</summary>
@@ -4174,6 +4454,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterAutoscalingAutoProvisi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterAutoscalingAutoProvisioningDefaultsUpgradeSettings
 {
     /// <summary>Settings for blue-green upgrade strategy. To be specified when strategy is set to BLUE_GREEN. Structure is documented below.</summary>
@@ -4194,6 +4475,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterAutoscalingAutoProvisi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterAutoscalingAutoProvisioningDefaults
 {
     /// <summary>The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption</summary>
@@ -4238,6 +4520,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterAutoscalingAutoProvisi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterAutoscalingResourceLimits
 {
     /// <summary>Maximum amount of the resource in the cluster.</summary>
@@ -4254,6 +4537,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterAutoscalingResourceLim
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterAutoscaling
 {
     /// <summary>Contains defaults for a node pool created by NAP. A subset of fields also apply to GKE Autopilot clusters. Structure is documented below.</summary>
@@ -4274,6 +4558,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterAutoscaling
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderConfidentialNodes
 {
     /// <summary>Enable Confidential GKE Nodes for this cluster, to enforce encryption of data in-use.</summary>
@@ -4282,6 +4567,7 @@ public partial class V1beta1ClusterStatusAtProviderConfidentialNodes
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderCostManagementConfig
 {
     /// <summary>Whether to enable the cost allocation feature.</summary>
@@ -4290,6 +4576,7 @@ public partial class V1beta1ClusterStatusAtProviderCostManagementConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderDatabaseEncryption
 {
     /// <summary>the key to use to encrypt/decrypt secrets.  See the DatabaseEncryption definition for more information.</summary>
@@ -4302,6 +4589,7 @@ public partial class V1beta1ClusterStatusAtProviderDatabaseEncryption
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderDefaultSnatStatus
 {
     /// <summary>Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled when defaultSnatStatus is disabled.When disabled is set to false, default IP masquerade rules will be applied to the nodes to prevent sNAT on cluster internal traffic</summary>
@@ -4310,6 +4598,7 @@ public partial class V1beta1ClusterStatusAtProviderDefaultSnatStatus
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderDnsConfig
 {
     /// <summary>Which in-cluster DNS provider should be used. PROVIDER_UNSPECIFIED (default) or PLATFORM_DEFAULT or CLOUD_DNS.</summary>
@@ -4326,6 +4615,7 @@ public partial class V1beta1ClusterStatusAtProviderDnsConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderEnableK8SBetaApis
 {
     /// <summary>Enabled Kubernetes Beta APIs. To list a Beta API resource, use the representation {group}/{version}/{resource}. The version must be a Beta version. Note that you cannot disable beta APIs that are already enabled on a cluster without recreating it. See the Configure beta APIs for more information.</summary>
@@ -4334,6 +4624,7 @@ public partial class V1beta1ClusterStatusAtProviderEnableK8SBetaApis
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderFleet
 {
     /// <summary>The resource name of the fleet Membership resource associated to this cluster with format //gkehub.googleapis.com/projects/{{project}}/locations/{{location}}/memberships/{{name}}. See the official doc for fleet management.</summary>
@@ -4358,6 +4649,7 @@ public partial class V1beta1ClusterStatusAtProviderFleet
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderGatewayApiConfig
 {
     /// <summary>Which Gateway Api channel should be used. CHANNEL_DISABLED, CHANNEL_EXPERIMENTAL or CHANNEL_STANDARD.</summary>
@@ -4366,6 +4658,7 @@ public partial class V1beta1ClusterStatusAtProviderGatewayApiConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderIdentityServiceConfig
 {
     /// <summary>Whether to enable the Identity Service component. It is disabled by default. Set enabled=true to enable.</summary>
@@ -4374,6 +4667,7 @@ public partial class V1beta1ClusterStatusAtProviderIdentityServiceConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderIpAllocationPolicyAdditionalPodRangesConfig
 {
     /// <summary>The names of the Pod ranges to add to the cluster.</summary>
@@ -4382,6 +4676,7 @@ public partial class V1beta1ClusterStatusAtProviderIpAllocationPolicyAdditionalP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderIpAllocationPolicyPodCidrOverprovisionConfig
 {
     /// <summary>The status of the Istio addon, which makes it easy to set up Istio for services in a cluster. It is disabled by default. Set disabled = false to enable.</summary>
@@ -4390,6 +4685,7 @@ public partial class V1beta1ClusterStatusAtProviderIpAllocationPolicyPodCidrOver
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderIpAllocationPolicy
 {
     /// <summary>The configuration for additional pod secondary ranges at the cluster level. Used for Autopilot clusters and Standard clusters with which control of the secondary Pod IP address assignment to node pools isn't needed. Structure is documented below.</summary>
@@ -4422,6 +4718,7 @@ public partial class V1beta1ClusterStatusAtProviderIpAllocationPolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderLoggingConfig
 {
     /// <summary>The GKE components exposing logs. Supported values include: SYSTEM_COMPONENTS, APISERVER, CONTROLLER_MANAGER, SCHEDULER, and WORKLOADS.</summary>
@@ -4430,6 +4727,7 @@ public partial class V1beta1ClusterStatusAtProviderLoggingConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderMaintenancePolicyDailyMaintenanceWindow
 {
     /// <summary>Duration of the time window, automatically chosen to be smallest possible in the given scenario. Duration will be in RFC3339 format "PTnHnMnS".</summary>
@@ -4442,6 +4740,7 @@ public partial class V1beta1ClusterStatusAtProviderMaintenancePolicyDailyMainten
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderMaintenancePolicyMaintenanceExclusionExclusionOptions
 {
     /// <summary>The scope of automatic upgrades to restrict in the exclusion window. One of: NO_UPGRADES | NO_MINOR_UPGRADES | NO_MINOR_OR_NODE_UPGRADES</summary>
@@ -4450,6 +4749,7 @@ public partial class V1beta1ClusterStatusAtProviderMaintenancePolicyMaintenanceE
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderMaintenancePolicyMaintenanceExclusion
 {
     /// <summary></summary>
@@ -4470,6 +4770,7 @@ public partial class V1beta1ClusterStatusAtProviderMaintenancePolicyMaintenanceE
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderMaintenancePolicyRecurringWindow
 {
     /// <summary></summary>
@@ -4486,6 +4787,7 @@ public partial class V1beta1ClusterStatusAtProviderMaintenancePolicyRecurringWin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderMaintenancePolicy
 {
     /// <summary>structure documented below.</summary>
@@ -4502,6 +4804,7 @@ public partial class V1beta1ClusterStatusAtProviderMaintenancePolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderMasterAuthClientCertificateConfig
 {
     /// <summary></summary>
@@ -4510,6 +4813,7 @@ public partial class V1beta1ClusterStatusAtProviderMasterAuthClientCertificateCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderMasterAuth
 {
     /// <summary>Base64 encoded public certificate used by clients to authenticate to the cluster endpoint.</summary>
@@ -4526,6 +4830,7 @@ public partial class V1beta1ClusterStatusAtProviderMasterAuth
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderMasterAuthorizedNetworksConfigCidrBlocks
 {
     /// <summary>External network that can access Kubernetes master through HTTPS. Must be specified in CIDR notation.</summary>
@@ -4538,6 +4843,7 @@ public partial class V1beta1ClusterStatusAtProviderMasterAuthorizedNetworksConfi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderMasterAuthorizedNetworksConfig
 {
     /// <summary>External networks that can access the Kubernetes cluster master through HTTPS.</summary>
@@ -4550,6 +4856,7 @@ public partial class V1beta1ClusterStatusAtProviderMasterAuthorizedNetworksConfi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderMeshCertificates
 {
     /// <summary>Controls the issuance of workload mTLS certificates. It is enabled by default. Workload Identity is required, see workload_config.</summary>
@@ -4558,6 +4865,7 @@ public partial class V1beta1ClusterStatusAtProviderMeshCertificates
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderMonitoringConfigAdvancedDatapathObservabilityConfig
 {
     /// <summary>Whether or not to enable advanced datapath metrics.</summary>
@@ -4574,6 +4882,7 @@ public partial class V1beta1ClusterStatusAtProviderMonitoringConfigAdvancedDatap
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderMonitoringConfigManagedPrometheus
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -4582,6 +4891,7 @@ public partial class V1beta1ClusterStatusAtProviderMonitoringConfigManagedPromet
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderMonitoringConfig
 {
     /// <summary>Configuration for Advanced Datapath Monitoring. Structure is documented below.</summary>
@@ -4598,6 +4908,7 @@ public partial class V1beta1ClusterStatusAtProviderMonitoringConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNetworkPolicy
 {
     /// <summary>Whether network policy is enabled on the cluster.</summary>
@@ -4610,6 +4921,7 @@ public partial class V1beta1ClusterStatusAtProviderNetworkPolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeConfigAdvancedMachineFeatures
 {
     /// <summary>Defines whether the instance should have nested virtualization enabled. Defaults to false.</summary>
@@ -4622,6 +4934,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigAdvancedMachineFeat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeConfigConfidentialNodes
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -4630,6 +4943,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigConfidentialNodes
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigGcpSecretManagerCertificateConfig
 {
     /// <summary></summary>
@@ -4638,6 +4952,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigContainerdConfigPri
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig
 {
     /// <summary></summary>
@@ -4650,6 +4965,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigContainerdConfigPri
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeConfigContainerdConfigPrivateRegistryAccessConfig
 {
     /// <summary>List of configuration objects for CA and domains. Each object identifies a certificate and its assigned domains. See how to configure for private container registries for more detail. Example:</summary>
@@ -4662,6 +4978,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigContainerdConfigPri
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeConfigContainerdConfig
 {
     /// <summary>Configuration for private container registries. There are two fields in this config:</summary>
@@ -4670,6 +4987,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigContainerdConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeConfigEffectiveTaints
 {
     /// <summary>Effect for taint. Accepted values are NO_SCHEDULE, PREFER_NO_SCHEDULE, and NO_EXECUTE.</summary>
@@ -4686,6 +5004,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigEffectiveTaints
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeConfigEphemeralStorageLocalSsdConfig
 {
     /// <summary>The amount of local SSD disks that will be attached to each cluster node. Defaults to 0.</summary>
@@ -4694,6 +5013,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigEphemeralStorageLoc
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeConfigFastSocket
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -4702,6 +5022,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigFastSocket
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeConfigGcfsConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -4710,6 +5031,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigGcfsConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeConfigGuestAcceleratorGpuDriverInstallationConfig
 {
     /// <summary>Mode for how the GPU driver is installed. Accepted values are:</summary>
@@ -4718,6 +5040,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigGuestAcceleratorGpu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeConfigGuestAcceleratorGpuSharingConfig
 {
     /// <summary>The type of GPU sharing strategy to enable on the GPU node. Accepted values are:</summary>
@@ -4730,6 +5053,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigGuestAcceleratorGpu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeConfigGuestAccelerator
 {
     /// <summary>The number of the guest accelerator cards exposed to this instance.</summary>
@@ -4754,6 +5078,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigGuestAccelerator
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeConfigGvnic
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -4762,6 +5087,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigGvnic
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeConfigHostMaintenancePolicy
 {
     /// <summary></summary>
@@ -4770,6 +5096,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigHostMaintenancePoli
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeConfigKubeletConfig
 {
     /// <summary>If true, enables CPU CFS quota enforcement for containers that specify CPU limits.</summary>
@@ -4790,6 +5117,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigKubeletConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeConfigLinuxNodeConfig
 {
     /// <summary>Possible cgroup modes that can be used. Accepted values are:</summary>
@@ -4802,6 +5130,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigLinuxNodeConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeConfigLocalNvmeSsdBlockConfig
 {
     /// <summary>The amount of local SSD disks that will be attached to each cluster node. Defaults to 0.</summary>
@@ -4810,6 +5139,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigLocalNvmeSsdBlockCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeConfigReservationAffinity
 {
     /// <summary>The type of reservation consumption Accepted values are:</summary>
@@ -4826,6 +5156,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigReservationAffinity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeConfigSecondaryBootDisks
 {
     /// <summary>Path to disk image to create the secondary boot disk from. After using the gke-disk-image-builder, this argument should be global/images/DISK_IMAGE_NAME.</summary>
@@ -4838,6 +5169,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigSecondaryBootDisks
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeConfigShieldedInstanceConfig
 {
     /// <summary>Defines if the instance has integrity monitoring enabled.</summary>
@@ -4850,6 +5182,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigShieldedInstanceCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeConfigSoleTenantConfigNodeAffinity
 {
     /// <summary>Key for taint.</summary>
@@ -4866,6 +5199,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigSoleTenantConfigNod
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeConfigSoleTenantConfig
 {
     /// <summary></summary>
@@ -4874,6 +5208,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigSoleTenantConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeConfigTaint
 {
     /// <summary>Effect for taint. Accepted values are NO_SCHEDULE, PREFER_NO_SCHEDULE, and NO_EXECUTE.</summary>
@@ -4890,6 +5225,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigTaint
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeConfigWorkloadMetadataConfig
 {
     /// <summary>How to expose the node metadata to the workload running on the node. Accepted values are:</summary>
@@ -4898,6 +5234,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigWorkloadMetadataCon
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeConfig
 {
     /// <summary>Specifies options for controlling advanced machine features. Structure is documented below.</summary>
@@ -5058,6 +5395,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolAutoscaling
 {
     /// <summary></summary>
@@ -5082,6 +5420,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolAutoscaling
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolManagement
 {
     /// <summary>Specifies whether the node auto-repair is enabled for the node pool. If enabled, the nodes in this node pool will be monitored and, if they fail health checks too many times, an automatic repair action will be triggered.</summary>
@@ -5094,6 +5433,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolManagement
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNetworkConfigNetworkPerformanceConfig
 {
     /// <summary>Specifies the total network bandwidth tier for the NodePool.</summary>
@@ -5102,6 +5442,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNetworkConfigNetworkP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNetworkConfigPodCidrOverprovisionConfig
 {
     /// <summary>The status of the Istio addon, which makes it easy to set up Istio for services in a cluster. It is disabled by default. Set disabled = false to enable.</summary>
@@ -5110,6 +5451,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNetworkConfigPodCidrO
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNetworkConfig
 {
     /// <summary></summary>
@@ -5138,6 +5480,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNetworkConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigAdvancedMachineFeatures
 {
     /// <summary>Defines whether the instance should have nested virtualization enabled. Defaults to false.</summary>
@@ -5150,6 +5493,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigAdvancedMac
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigConfidentialNodes
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -5158,6 +5502,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigConfidentia
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigGcpSecretManagerCertificateConfig
 {
     /// <summary></summary>
@@ -5166,6 +5511,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigContainerdC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig
 {
     /// <summary></summary>
@@ -5178,6 +5524,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigContainerdC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfig
 {
     /// <summary>List of configuration objects for CA and domains. Each object identifies a certificate and its assigned domains. See how to configure for private container registries for more detail. Example:</summary>
@@ -5190,6 +5537,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigContainerdC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigContainerdConfig
 {
     /// <summary>Configuration for private container registries. There are two fields in this config:</summary>
@@ -5198,6 +5546,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigContainerdC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigEffectiveTaints
 {
     /// <summary>Effect for taint. Accepted values are NO_SCHEDULE, PREFER_NO_SCHEDULE, and NO_EXECUTE.</summary>
@@ -5214,6 +5563,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigEffectiveTa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigEphemeralStorageLocalSsdConfig
 {
     /// <summary>The amount of local SSD disks that will be attached to each cluster node. Defaults to 0.</summary>
@@ -5222,6 +5572,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigEphemeralSt
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigFastSocket
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -5230,6 +5581,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigFastSocket
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigGcfsConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -5238,6 +5590,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigGcfsConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigGuestAcceleratorGpuDriverInstallationConfig
 {
     /// <summary>Mode for how the GPU driver is installed. Accepted values are:</summary>
@@ -5246,6 +5599,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigGuestAccele
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigGuestAcceleratorGpuSharingConfig
 {
     /// <summary>The type of GPU sharing strategy to enable on the GPU node. Accepted values are:</summary>
@@ -5258,6 +5612,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigGuestAccele
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigGuestAccelerator
 {
     /// <summary>The number of the guest accelerator cards exposed to this instance.</summary>
@@ -5282,6 +5637,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigGuestAccele
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigGvnic
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -5290,6 +5646,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigGvnic
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigHostMaintenancePolicy
 {
     /// <summary></summary>
@@ -5298,6 +5655,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigHostMainten
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigKubeletConfig
 {
     /// <summary>If true, enables CPU CFS quota enforcement for containers that specify CPU limits.</summary>
@@ -5318,6 +5676,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigKubeletConf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigLinuxNodeConfig
 {
     /// <summary>Possible cgroup modes that can be used. Accepted values are:</summary>
@@ -5330,6 +5689,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigLinuxNodeCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigLocalNvmeSsdBlockConfig
 {
     /// <summary>The amount of local SSD disks that will be attached to each cluster node. Defaults to 0.</summary>
@@ -5338,6 +5698,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigLocalNvmeSs
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigReservationAffinity
 {
     /// <summary>The type of reservation consumption Accepted values are:</summary>
@@ -5354,6 +5715,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigReservation
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigSecondaryBootDisks
 {
     /// <summary>Path to disk image to create the secondary boot disk from. After using the gke-disk-image-builder, this argument should be global/images/DISK_IMAGE_NAME.</summary>
@@ -5366,6 +5728,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigSecondaryBo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigShieldedInstanceConfig
 {
     /// <summary>Defines if the instance has integrity monitoring enabled.</summary>
@@ -5378,6 +5741,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigShieldedIns
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigSoleTenantConfigNodeAffinity
 {
     /// <summary>Key for taint.</summary>
@@ -5394,6 +5758,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigSoleTenantC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigSoleTenantConfig
 {
     /// <summary></summary>
@@ -5402,6 +5767,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigSoleTenantC
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigTaint
 {
     /// <summary>Effect for taint. Accepted values are NO_SCHEDULE, PREFER_NO_SCHEDULE, and NO_EXECUTE.</summary>
@@ -5418,6 +5784,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigTaint
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigWorkloadMetadataConfig
 {
     /// <summary>How to expose the node metadata to the workload running on the node. Accepted values are:</summary>
@@ -5426,6 +5793,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigWorkloadMet
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfig
 {
     /// <summary>Specifies options for controlling advanced machine features. Structure is documented below.</summary>
@@ -5582,6 +5950,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolPlacementPolicy
 {
     /// <summary>The name of the cluster, unique within the project and location.</summary>
@@ -5598,6 +5967,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolPlacementPolicy
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolQueuedProvisioning
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -5606,6 +5976,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolQueuedProvisioning
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy
 {
     /// <summary>Number of blue nodes to drain in a batch. Only one of the batch_percentage or batch_node_count can be specified.</summary>
@@ -5622,6 +5993,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolUpgradeSettingsBlueGr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolUpgradeSettingsBlueGreenSettings
 {
     /// <summary>Time needed after draining entire blue pool. After this period, blue pool will be cleaned up. A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".</summary>
@@ -5634,6 +6006,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolUpgradeSettingsBlueGr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolUpgradeSettings
 {
     /// <summary>Settings for blue-green upgrade strategy. To be specified when strategy is set to BLUE_GREEN. Structure is documented below.</summary>
@@ -5654,6 +6027,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolUpgradeSettings
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePool
 {
     /// <summary></summary>
@@ -5722,6 +6096,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePool
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolAutoConfigNetworkTags
 {
     /// <summary>List of network tags applied to auto-provisioned node pools.</summary>
@@ -5730,6 +6105,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolAutoConfigNetworkTags
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolAutoConfig
 {
     /// <summary>The network tag config for the cluster's automatically provisioned node pools.</summary>
@@ -5742,6 +6118,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolAutoConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigGcpSecretManagerCertificateConfig
 {
     /// <summary></summary>
@@ -5750,6 +6127,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolDefaultsNodeConfigDef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig
 {
     /// <summary></summary>
@@ -5762,6 +6140,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolDefaultsNodeConfigDef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfigPrivateRegistryAccessConfig
 {
     /// <summary>List of configuration objects for CA and domains. Each object identifies a certificate and its assigned domains. See how to configure for private container registries for more detail. Example:</summary>
@@ -5774,6 +6153,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolDefaultsNodeConfigDef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfig
 {
     /// <summary>Configuration for private container registries. There are two fields in this config:</summary>
@@ -5782,6 +6162,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolDefaultsNodeConfigDef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolDefaultsNodeConfigDefaults
 {
     /// <summary>Parameters to customize containerd runtime. Structure is documented below.</summary>
@@ -5794,6 +6175,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolDefaultsNodeConfigDef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolDefaults
 {
     /// <summary>Subset of NodeConfig message that has defaults.</summary>
@@ -5802,6 +6184,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolDefaults
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNotificationConfigPubsubFilter
 {
     /// <summary>Can be used to filter what notifications are sent. Accepted values are UPGRADE_AVAILABLE_EVENT, UPGRADE_EVENT and SECURITY_BULLETIN_EVENT. See Filtering notifications for more details.</summary>
@@ -5810,6 +6193,7 @@ public partial class V1beta1ClusterStatusAtProviderNotificationConfigPubsubFilte
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNotificationConfigPubsub
 {
     /// <summary>Whether or not the notification config is enabled</summary>
@@ -5826,6 +6210,7 @@ public partial class V1beta1ClusterStatusAtProviderNotificationConfigPubsub
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNotificationConfig
 {
     /// <summary>The pubsub config for the cluster's upgrade notifications.</summary>
@@ -5834,6 +6219,7 @@ public partial class V1beta1ClusterStatusAtProviderNotificationConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderPrivateClusterConfigMasterGlobalAccessConfig
 {
     /// <summary>Whether the cluster master is accessible globally or not.</summary>
@@ -5842,6 +6228,7 @@ public partial class V1beta1ClusterStatusAtProviderPrivateClusterConfigMasterGlo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderPrivateClusterConfig
 {
     /// <summary>When true, the cluster's private endpoint is used as the cluster endpoint and access through the public endpoint is disabled. When false, either endpoint can be used. This field only applies to private clusters, when enable_private_nodes is true.</summary>
@@ -5878,6 +6265,7 @@ public partial class V1beta1ClusterStatusAtProviderPrivateClusterConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderReleaseChannel
 {
     /// <summary>The selected release channel. Accepted values are:</summary>
@@ -5886,6 +6274,7 @@ public partial class V1beta1ClusterStatusAtProviderReleaseChannel
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderResourceUsageExportConfigBigqueryDestination
 {
     /// <summary>The ID of a BigQuery Dataset. For Example:</summary>
@@ -5894,6 +6283,7 @@ public partial class V1beta1ClusterStatusAtProviderResourceUsageExportConfigBigq
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderResourceUsageExportConfig
 {
     /// <summary>Parameters for using BigQuery as the destination of resource usage export.</summary>
@@ -5910,6 +6300,7 @@ public partial class V1beta1ClusterStatusAtProviderResourceUsageExportConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderSecurityPostureConfig
 {
     /// <summary>Sets the mode of the Kubernetes security posture API's off-cluster features. Available options include DISABLED and BASIC.</summary>
@@ -5922,6 +6313,7 @@ public partial class V1beta1ClusterStatusAtProviderSecurityPostureConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderServiceExternalIpsConfig
 {
     /// <summary>Controls whether external ips specified by a service will be allowed. It is enabled by default.</summary>
@@ -5930,6 +6322,7 @@ public partial class V1beta1ClusterStatusAtProviderServiceExternalIpsConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderVerticalPodAutoscaling
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -5938,6 +6331,7 @@ public partial class V1beta1ClusterStatusAtProviderVerticalPodAutoscaling
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderWorkloadIdentityConfig
 {
     /// <summary>The workload pool to attach all Kubernetes service accounts to.</summary>
@@ -5946,6 +6340,7 @@ public partial class V1beta1ClusterStatusAtProviderWorkloadIdentityConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProvider
 {
     /// <summary>The configuration for addons supported by GKE. Structure is documented below.</summary>
@@ -6226,6 +6621,7 @@ public partial class V1beta1ClusterStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -6254,6 +6650,7 @@ public partial class V1beta1ClusterStatusConditions
 }
 
 /// <summary>ClusterStatus defines the observed state of Cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatus
 {
     /// <summary></summary>
@@ -6269,8 +6666,9 @@ public partial class V1beta1ClusterStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>Cluster is the Schema for the Clusters API. Creates a Google Kubernetes Engine (GKE) cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Cluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ClusterSpec>, IStatus<V1beta1ClusterStatus>
 {
     public const string KubeApiVersion = "v1beta1";

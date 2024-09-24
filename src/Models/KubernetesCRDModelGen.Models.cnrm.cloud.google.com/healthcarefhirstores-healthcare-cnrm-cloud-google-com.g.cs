@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.healthcare.cnrm.cloud.google.com;
 /// <summary>A nested object resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareFHIRStoreSpecNotificationConfig
 {
     /// <summary>The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client. PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message. It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a project. service-PROJECT_NUMBER@gcp-sa-healthcare.iam.gserviceaccount.com must have publisher permissions on the given Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.</summary>
@@ -17,6 +18,7 @@ public partial class V1alpha1HealthcareFHIRStoreSpecNotificationConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareFHIRStoreSpecNotificationConfigs
 {
     /// <summary>The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client. PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message. It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a project. service-PROJECT_NUMBER@gcp-sa-healthcare.iam.gserviceaccount.com must have publisher permissions on the given Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.</summary>
@@ -33,6 +35,7 @@ public partial class V1alpha1HealthcareFHIRStoreSpecNotificationConfigs
 }
 
 /// <summary>The configuration for exported BigQuery tables to be partitioned by FHIR resource's last updated time column.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareFHIRStoreSpecStreamConfigsBigqueryDestinationSchemaConfigLastUpdatedPartitionConfig
 {
     /// <summary>Number of milliseconds for which to keep the storage for a partition.</summary>
@@ -45,6 +48,7 @@ public partial class V1alpha1HealthcareFHIRStoreSpecStreamConfigsBigqueryDestina
 }
 
 /// <summary>The configuration for the exported BigQuery schema.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareFHIRStoreSpecStreamConfigsBigqueryDestinationSchemaConfig
 {
     /// <summary>The configuration for exported BigQuery tables to be partitioned by FHIR resource's last updated time column.</summary>
@@ -61,6 +65,7 @@ public partial class V1alpha1HealthcareFHIRStoreSpecStreamConfigsBigqueryDestina
 }
 
 /// <summary>The destination BigQuery structure that contains both the dataset location and corresponding schema config. The output is organized in one table per resource type. The server reuses the existing tables (if any) that are named after the resource types, e.g. "Patient", "Observation". When there is no existing table for a given resource type, the server attempts to create one. See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareFHIRStoreSpecStreamConfigsBigqueryDestination
 {
     /// <summary>BigQuery URI to a dataset, up to 2000 characters long, in the format bq://projectId.bqDatasetId.</summary>
@@ -73,6 +78,7 @@ public partial class V1alpha1HealthcareFHIRStoreSpecStreamConfigsBigqueryDestina
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareFHIRStoreSpecStreamConfigs
 {
     /// <summary>The destination BigQuery structure that contains both the dataset location and corresponding schema config. The output is organized in one table per resource type. The server reuses the existing tables (if any) that are named after the resource types, e.g. "Patient", "Observation". When there is no existing table for a given resource type, the server attempts to create one. See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details.</summary>
@@ -85,6 +91,7 @@ public partial class V1alpha1HealthcareFHIRStoreSpecStreamConfigs
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareFHIRStoreSpec
 {
     /// <summary>Enable parsing of references within complex FHIR data types such as Extensions. If this value is set to ENABLED, then features like referential integrity and Bundle reference rewriting apply to all references. If this flag has not been specified the behavior of the FHIR store will not change, references in complex data types will not be parsed. New stores will have this value set to ENABLED by default after a notification period. Warning: turning on this flag causes processing existing resources to fail if they contain references to non-existent resources. Possible values: ["COMPLEX_DATA_TYPE_REFERENCE_PARSING_UNSPECIFIED", "DISABLED", "ENABLED"].</summary>
@@ -137,6 +144,7 @@ public partial class V1alpha1HealthcareFHIRStoreSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareFHIRStoreStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -161,6 +169,7 @@ public partial class V1alpha1HealthcareFHIRStoreStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareFHIRStoreStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -176,8 +185,9 @@ public partial class V1alpha1HealthcareFHIRStoreStatus
     public string? SelfLink { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1HealthcareFHIRStore : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1HealthcareFHIRStoreSpec>, IStatus<V1alpha1HealthcareFHIRStoreStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

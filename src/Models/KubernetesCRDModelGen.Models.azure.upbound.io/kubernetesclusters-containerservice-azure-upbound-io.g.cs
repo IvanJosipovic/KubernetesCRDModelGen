@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerservice.azure.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -18,6 +19,7 @@ public enum V1beta1KubernetesClusterSpecDeletionPolicyEnum
     Delete
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecForProviderAciConnectorLinuxSubnetNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -28,6 +30,7 @@ public enum V1beta1KubernetesClusterSpecForProviderAciConnectorLinuxSubnetNameRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecForProviderAciConnectorLinuxSubnetNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -39,6 +42,7 @@ public enum V1beta1KubernetesClusterSpecForProviderAciConnectorLinuxSubnetNameRe
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderAciConnectorLinuxSubnetNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -53,6 +57,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderAciConnectorLinuxSub
 }
 
 /// <summary>Reference to a Subnet in network to populate subnetName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderAciConnectorLinuxSubnetNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -64,6 +69,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderAciConnectorLinuxSub
     public V1beta1KubernetesClusterSpecForProviderAciConnectorLinuxSubnetNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecForProviderAciConnectorLinuxSubnetNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -74,6 +80,7 @@ public enum V1beta1KubernetesClusterSpecForProviderAciConnectorLinuxSubnetNameSe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecForProviderAciConnectorLinuxSubnetNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -85,6 +92,7 @@ public enum V1beta1KubernetesClusterSpecForProviderAciConnectorLinuxSubnetNameSe
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderAciConnectorLinuxSubnetNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -99,6 +107,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderAciConnectorLinuxSub
 }
 
 /// <summary>Selector for a Subnet in network to populate subnetName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderAciConnectorLinuxSubnetNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -115,6 +124,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderAciConnectorLinuxSub
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderAciConnectorLinux
 {
     /// <summary>The subnet name for the virtual nodes to run.</summary>
@@ -130,6 +140,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderAciConnectorLinux
     public V1beta1KubernetesClusterSpecForProviderAciConnectorLinuxSubnetNameSelector? SubnetNameSelector { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecForProviderApiServerAccessProfileSubnetIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -140,6 +151,7 @@ public enum V1beta1KubernetesClusterSpecForProviderApiServerAccessProfileSubnetI
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecForProviderApiServerAccessProfileSubnetIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -151,6 +163,7 @@ public enum V1beta1KubernetesClusterSpecForProviderApiServerAccessProfileSubnetI
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderApiServerAccessProfileSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -165,6 +178,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderApiServerAccessProfi
 }
 
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderApiServerAccessProfileSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -176,6 +190,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderApiServerAccessProfi
     public V1beta1KubernetesClusterSpecForProviderApiServerAccessProfileSubnetIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecForProviderApiServerAccessProfileSubnetIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -186,6 +201,7 @@ public enum V1beta1KubernetesClusterSpecForProviderApiServerAccessProfileSubnetI
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecForProviderApiServerAccessProfileSubnetIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -197,6 +213,7 @@ public enum V1beta1KubernetesClusterSpecForProviderApiServerAccessProfileSubnetI
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderApiServerAccessProfileSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -211,6 +228,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderApiServerAccessProfi
 }
 
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderApiServerAccessProfileSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -227,6 +245,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderApiServerAccessProfi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderApiServerAccessProfile
 {
     /// <summary>Set of authorized IP ranges to allow access to API server, e.g. ["198.51.100.0/24"].</summary>
@@ -251,6 +270,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderApiServerAccessProfi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderAutoScalerProfile
 {
     /// <summary>Detect similar node groups and balance the number of nodes between them. Defaults to false.</summary>
@@ -323,6 +343,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderAutoScalerProfile
 }
 
 /// <summary>The Server Secret of an Azure Active Directory Application.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderAzureActiveDirectoryRoleBasedAccessControlServerAppSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -339,6 +360,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderAzureActiveDirectory
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderAzureActiveDirectoryRoleBasedAccessControl
 {
     /// <summary>A list of Object IDs of Azure Active Directory Groups which should have Admin Role on the Cluster.</summary>
@@ -371,6 +393,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderAzureActiveDirectory
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderConfidentialComputing
 {
     /// <summary>Should the SGX quote helper be enabled?</summary>
@@ -379,6 +402,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderConfidentialComputin
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolKubeletConfig
 {
     /// <summary>Specifies the allow list of unsafe sysctls command or patterns (ending in *).</summary>
@@ -423,6 +447,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolKubel
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolLinuxOsConfigSysctlConfig
 {
     /// <summary>The sysctl setting fs.aio-max-nr. Must be between 65536 and 6553500.</summary>
@@ -543,6 +568,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolLinux
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolLinuxOsConfig
 {
     /// <summary>Specifies the size of the swap file on each node in MB.</summary>
@@ -563,6 +589,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolLinux
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolNodeNetworkProfileAllowedHostPorts
 {
     /// <summary>Specifies the end of the port range.</summary>
@@ -579,6 +606,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolNodeN
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolNodeNetworkProfile
 {
     /// <summary>One or more allowed_host_ports blocks as defined below.</summary>
@@ -594,6 +622,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolNodeN
     public IDictionary<string, string>? NodePublicIpTags { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecForProviderDefaultNodePoolPodSubnetIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -604,6 +633,7 @@ public enum V1beta1KubernetesClusterSpecForProviderDefaultNodePoolPodSubnetIdRef
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecForProviderDefaultNodePoolPodSubnetIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -615,6 +645,7 @@ public enum V1beta1KubernetesClusterSpecForProviderDefaultNodePoolPodSubnetIdRef
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolPodSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -629,6 +660,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolPodSu
 }
 
 /// <summary>Reference to a Subnet in network to populate podSubnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolPodSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -640,6 +672,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolPodSu
     public V1beta1KubernetesClusterSpecForProviderDefaultNodePoolPodSubnetIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecForProviderDefaultNodePoolPodSubnetIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -650,6 +683,7 @@ public enum V1beta1KubernetesClusterSpecForProviderDefaultNodePoolPodSubnetIdSel
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecForProviderDefaultNodePoolPodSubnetIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -661,6 +695,7 @@ public enum V1beta1KubernetesClusterSpecForProviderDefaultNodePoolPodSubnetIdSel
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolPodSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -675,6 +710,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolPodSu
 }
 
 /// <summary>Selector for a Subnet in network to populate podSubnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolPodSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -691,6 +727,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolPodSu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolUpgradeSettings
 {
     /// <summary>The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.</summary>
@@ -698,6 +735,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolUpgra
     public string? MaxSurge { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecForProviderDefaultNodePoolVnetSubnetIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -708,6 +746,7 @@ public enum V1beta1KubernetesClusterSpecForProviderDefaultNodePoolVnetSubnetIdRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecForProviderDefaultNodePoolVnetSubnetIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -719,6 +758,7 @@ public enum V1beta1KubernetesClusterSpecForProviderDefaultNodePoolVnetSubnetIdRe
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolVnetSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -733,6 +773,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolVnetS
 }
 
 /// <summary>Reference to a Subnet in network to populate vnetSubnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolVnetSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -744,6 +785,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolVnetS
     public V1beta1KubernetesClusterSpecForProviderDefaultNodePoolVnetSubnetIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecForProviderDefaultNodePoolVnetSubnetIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -754,6 +796,7 @@ public enum V1beta1KubernetesClusterSpecForProviderDefaultNodePoolVnetSubnetIdSe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecForProviderDefaultNodePoolVnetSubnetIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -765,6 +808,7 @@ public enum V1beta1KubernetesClusterSpecForProviderDefaultNodePoolVnetSubnetIdSe
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolVnetSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -779,6 +823,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolVnetS
 }
 
 /// <summary>Selector for a Subnet in network to populate vnetSubnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolVnetSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -795,6 +840,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolVnetS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePool
 {
     /// <summary>Specifies the ID of the Capacity Reservation Group within which this AKS Cluster should be created. Changing this forces a new resource to be created.</summary>
@@ -971,6 +1017,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePool
 }
 
 /// <summary>The base64 encoded alternative CA certificate content in PEM format.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderHttpProxyConfigTrustedCaSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -987,6 +1034,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderHttpProxyConfigTrust
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderHttpProxyConfig
 {
     /// <summary>The proxy address to be used when communicating over HTTP.</summary>
@@ -1007,6 +1055,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderHttpProxyConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Kubernetes Cluster.</summary>
@@ -1018,6 +1067,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderIdentity
     public string? Type { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecForProviderIngressApplicationGatewaySubnetIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1028,6 +1078,7 @@ public enum V1beta1KubernetesClusterSpecForProviderIngressApplicationGatewaySubn
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecForProviderIngressApplicationGatewaySubnetIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1039,6 +1090,7 @@ public enum V1beta1KubernetesClusterSpecForProviderIngressApplicationGatewaySubn
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderIngressApplicationGatewaySubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1053,6 +1105,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderIngressApplicationGa
 }
 
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderIngressApplicationGatewaySubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1064,6 +1117,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderIngressApplicationGa
     public V1beta1KubernetesClusterSpecForProviderIngressApplicationGatewaySubnetIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecForProviderIngressApplicationGatewaySubnetIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1074,6 +1128,7 @@ public enum V1beta1KubernetesClusterSpecForProviderIngressApplicationGatewaySubn
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecForProviderIngressApplicationGatewaySubnetIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1085,6 +1140,7 @@ public enum V1beta1KubernetesClusterSpecForProviderIngressApplicationGatewaySubn
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderIngressApplicationGatewaySubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1099,6 +1155,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderIngressApplicationGa
 }
 
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderIngressApplicationGatewaySubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1115,6 +1172,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderIngressApplicationGa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderIngressApplicationGateway
 {
     /// <summary>The ID of the Application Gateway to integrate with the ingress controller of this Kubernetes Cluster. See this page for further details.</summary>
@@ -1143,6 +1201,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderIngressApplicationGa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderKeyManagementService
 {
     /// <summary>Identifier of Azure Key Vault key. See key identifier format for more details.</summary>
@@ -1155,6 +1214,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderKeyManagementService
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderKeyVaultSecretsProvider
 {
     /// <summary>Should the secret store CSI driver on the AKS cluster be enabled?</summary>
@@ -1167,6 +1227,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderKeyVaultSecretsProvi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderKubeletIdentity
 {
     /// <summary>The Client ID of the user-defined Managed Identity to be assigned to the Kubelets. If not specified a Managed Identity is created automatically. Changing this forces a new resource to be created.</summary>
@@ -1183,6 +1244,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderKubeletIdentity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderLinuxProfileSshKey
 {
     /// <summary>The Public SSH Key used to access the cluster.</summary>
@@ -1191,6 +1253,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderLinuxProfileSshKey
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderLinuxProfile
 {
     /// <summary>The Admin Username for the Cluster. Changing this forces a new resource to be created.</summary>
@@ -1203,6 +1266,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderLinuxProfile
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindowAllowed
 {
     /// <summary>A day in a week. Possible values are Sunday, Monday, Tuesday, Wednesday, Thursday, Friday and Saturday.</summary>
@@ -1215,6 +1279,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindowAll
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindowNotAllowed
 {
     /// <summary>The end of a time span, formatted as an RFC3339 string.</summary>
@@ -1227,6 +1292,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindowNot
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindow
 {
     /// <summary>One or more allowed blocks as defined below.</summary>
@@ -1239,6 +1305,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindow
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindowAutoUpgradeNotAllowed
 {
     /// <summary>The end of a time span, formatted as an RFC3339 string.</summary>
@@ -1251,6 +1318,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindowAut
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindowAutoUpgrade
 {
     /// <summary>The day of the month for the maintenance run. Required in combination with RelativeMonthly frequency. Value between 0 and 31 (inclusive).</summary>
@@ -1295,6 +1363,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindowAut
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindowNodeOsNotAllowed
 {
     /// <summary>The end of a time span, formatted as an RFC3339 string.</summary>
@@ -1307,6 +1376,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindowNod
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindowNodeOs
 {
     /// <summary>The day of the month for the maintenance run. Required in combination with RelativeMonthly frequency. Value between 0 and 31 (inclusive).</summary>
@@ -1351,6 +1421,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindowNod
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderMicrosoftDefender
 {
     /// <summary>Specifies the ID of the Log Analytics Workspace where the audit logs collected by Microsoft Defender should be sent to.</summary>
@@ -1359,6 +1430,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderMicrosoftDefender
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderMonitorMetrics
 {
     /// <summary>Specifies a comma-separated list of Kubernetes annotation keys that will be used in the resource's labels metric.</summary>
@@ -1371,6 +1443,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderMonitorMetrics
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderNetworkProfileLoadBalancerProfile
 {
     /// <summary>Desired outbound flow idle timeout in minutes for the cluster load balancer. Must be between 4 and 120 inclusive. Defaults to 4.</summary>
@@ -1399,6 +1472,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderNetworkProfileLoadBa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderNetworkProfileNatGatewayProfile
 {
     /// <summary>Desired outbound flow idle timeout in minutes for the cluster load balancer. Must be between 4 and 120 inclusive. Defaults to 4.</summary>
@@ -1411,6 +1485,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderNetworkProfileNatGat
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderNetworkProfile
 {
     /// <summary>IP address within the Kubernetes service address range that will be used by cluster service discovery (kube-dns). Changing this forces a new resource to be created.</summary>
@@ -1479,6 +1554,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderNetworkProfile
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderOmsAgent
 {
     /// <summary>The ID of the Log Analytics Workspace which the OMS Agent should send data to.</summary>
@@ -1490,6 +1566,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderOmsAgent
     public bool? MsiAuthForMonitoringEnabled { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecForProviderPrivateDnsZoneIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1500,6 +1577,7 @@ public enum V1beta1KubernetesClusterSpecForProviderPrivateDnsZoneIdRefPolicyReso
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecForProviderPrivateDnsZoneIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1511,6 +1589,7 @@ public enum V1beta1KubernetesClusterSpecForProviderPrivateDnsZoneIdRefPolicyReso
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderPrivateDnsZoneIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1525,6 +1604,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderPrivateDnsZoneIdRefP
 }
 
 /// <summary>Reference to a PrivateDNSZone in network to populate privateDnsZoneId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderPrivateDnsZoneIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1536,6 +1616,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderPrivateDnsZoneIdRef
     public V1beta1KubernetesClusterSpecForProviderPrivateDnsZoneIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecForProviderPrivateDnsZoneIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1546,6 +1627,7 @@ public enum V1beta1KubernetesClusterSpecForProviderPrivateDnsZoneIdSelectorPolic
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecForProviderPrivateDnsZoneIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1557,6 +1639,7 @@ public enum V1beta1KubernetesClusterSpecForProviderPrivateDnsZoneIdSelectorPolic
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderPrivateDnsZoneIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1571,6 +1654,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderPrivateDnsZoneIdSele
 }
 
 /// <summary>Selector for a PrivateDNSZone in network to populate privateDnsZoneId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderPrivateDnsZoneIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1586,6 +1670,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderPrivateDnsZoneIdSele
     public V1beta1KubernetesClusterSpecForProviderPrivateDnsZoneIdSelectorPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecForProviderResourceGroupNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1596,6 +1681,7 @@ public enum V1beta1KubernetesClusterSpecForProviderResourceGroupNameRefPolicyRes
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecForProviderResourceGroupNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1607,6 +1693,7 @@ public enum V1beta1KubernetesClusterSpecForProviderResourceGroupNameRefPolicyRes
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1621,6 +1708,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderResourceGroupNameRef
 }
 
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1632,6 +1720,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderResourceGroupNameRef
     public V1beta1KubernetesClusterSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1642,6 +1731,7 @@ public enum V1beta1KubernetesClusterSpecForProviderResourceGroupNameSelectorPoli
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecForProviderResourceGroupNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1653,6 +1743,7 @@ public enum V1beta1KubernetesClusterSpecForProviderResourceGroupNameSelectorPoli
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1667,6 +1758,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderResourceGroupNameSel
 }
 
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1683,6 +1775,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderResourceGroupNameSel
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderServiceMeshProfile
 {
     /// <summary>Is Istio External Ingress Gateway enabled?</summary>
@@ -1699,6 +1792,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderServiceMeshProfile
 }
 
 /// <summary>The Client Secret for the Service Principal.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderServicePrincipalClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1715,6 +1809,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderServicePrincipalClie
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderServicePrincipal
 {
     /// <summary>The Client ID for the Service Principal.</summary>
@@ -1727,6 +1822,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderServicePrincipal
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderStorageProfile
 {
     /// <summary>Is the Blob CSI driver enabled? Defaults to false.</summary>
@@ -1751,6 +1847,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderStorageProfile
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderWebAppRouting
 {
     /// <summary>Specifies the ID of the DNS Zone in which DNS entries are created for applications deployed to the cluster when Web App Routing is enabled. For Bring-Your-Own DNS zones this property should be set to an empty string "".</summary>
@@ -1759,6 +1856,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderWebAppRouting
 }
 
 /// <summary>The Admin Password for Windows VMs. Length must be between 14 and 123 characters.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderWindowsProfileAdminPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1775,6 +1873,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderWindowsProfileAdminP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderWindowsProfileGmsa
 {
     /// <summary>Specifies the DNS server for Windows gMSA. Set this to an empty string if you have configured the DNS server in the VNet which was used to create the managed cluster.</summary>
@@ -1787,6 +1886,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderWindowsProfileGmsa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderWindowsProfile
 {
     /// <summary>The Admin Password for Windows VMs. Length must be between 14 and 123 characters.</summary>
@@ -1807,6 +1907,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderWindowsProfile
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderWorkloadAutoscalerProfile
 {
     /// <summary>Specifies whether KEDA Autoscaler can be used for workloads.</summary>
@@ -1819,6 +1920,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderWorkloadAutoscalerPr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProvider
 {
     /// <summary>A aci_connector_linux block as defined below. For more details, please visit Create and configure an AKS cluster to use virtual nodes.</summary>
@@ -2062,6 +2164,7 @@ public partial class V1beta1KubernetesClusterSpecForProvider
     public bool? WorkloadIdentityEnabled { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecInitProviderAciConnectorLinuxSubnetNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2072,6 +2175,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderAciConnectorLinuxSubnetNameR
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecInitProviderAciConnectorLinuxSubnetNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2083,6 +2187,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderAciConnectorLinuxSubnetNameR
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderAciConnectorLinuxSubnetNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2097,6 +2202,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderAciConnectorLinuxSu
 }
 
 /// <summary>Reference to a Subnet in network to populate subnetName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderAciConnectorLinuxSubnetNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2108,6 +2214,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderAciConnectorLinuxSu
     public V1beta1KubernetesClusterSpecInitProviderAciConnectorLinuxSubnetNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecInitProviderAciConnectorLinuxSubnetNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2118,6 +2225,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderAciConnectorLinuxSubnetNameS
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecInitProviderAciConnectorLinuxSubnetNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2129,6 +2237,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderAciConnectorLinuxSubnetNameS
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderAciConnectorLinuxSubnetNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2143,6 +2252,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderAciConnectorLinuxSu
 }
 
 /// <summary>Selector for a Subnet in network to populate subnetName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderAciConnectorLinuxSubnetNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2159,6 +2269,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderAciConnectorLinuxSu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderAciConnectorLinux
 {
     /// <summary>The subnet name for the virtual nodes to run.</summary>
@@ -2174,6 +2285,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderAciConnectorLinux
     public V1beta1KubernetesClusterSpecInitProviderAciConnectorLinuxSubnetNameSelector? SubnetNameSelector { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfileSubnetIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2184,6 +2296,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfileSubnet
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfileSubnetIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2195,6 +2308,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfileSubnet
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfileSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2209,6 +2323,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderApiServerAccessProf
 }
 
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfileSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2220,6 +2335,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderApiServerAccessProf
     public V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfileSubnetIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfileSubnetIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2230,6 +2346,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfileSubnet
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfileSubnetIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2241,6 +2358,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfileSubnet
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfileSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2255,6 +2373,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderApiServerAccessProf
 }
 
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfileSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2271,6 +2390,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderApiServerAccessProf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfile
 {
     /// <summary>Set of authorized IP ranges to allow access to API server, e.g. ["198.51.100.0/24"].</summary>
@@ -2295,6 +2415,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderApiServerAccessProf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderAutoScalerProfile
 {
     /// <summary>Detect similar node groups and balance the number of nodes between them. Defaults to false.</summary>
@@ -2367,6 +2488,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderAutoScalerProfile
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderAzureActiveDirectoryRoleBasedAccessControl
 {
     /// <summary>A list of Object IDs of Azure Active Directory Groups which should have Admin Role on the Cluster.</summary>
@@ -2395,6 +2517,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderAzureActiveDirector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderConfidentialComputing
 {
     /// <summary>Should the SGX quote helper be enabled?</summary>
@@ -2403,6 +2526,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderConfidentialComputi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolKubeletConfig
 {
     /// <summary>Specifies the allow list of unsafe sysctls command or patterns (ending in *).</summary>
@@ -2447,6 +2571,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolKube
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolLinuxOsConfigSysctlConfig
 {
     /// <summary>The sysctl setting fs.aio-max-nr. Must be between 65536 and 6553500.</summary>
@@ -2567,6 +2692,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolLinu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolLinuxOsConfig
 {
     /// <summary>Specifies the size of the swap file on each node in MB.</summary>
@@ -2587,6 +2713,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolLinu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolNodeNetworkProfileAllowedHostPorts
 {
     /// <summary>Specifies the end of the port range.</summary>
@@ -2603,6 +2730,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolNode
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolNodeNetworkProfile
 {
     /// <summary>One or more allowed_host_ports blocks as defined below.</summary>
@@ -2618,6 +2746,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolNode
     public IDictionary<string, string>? NodePublicIpTags { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolPodSubnetIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2628,6 +2757,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolPodSubnetIdRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolPodSubnetIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2639,6 +2769,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolPodSubnetIdRe
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolPodSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2653,6 +2784,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolPodS
 }
 
 /// <summary>Reference to a Subnet in network to populate podSubnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolPodSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2664,6 +2796,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolPodS
     public V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolPodSubnetIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolPodSubnetIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2674,6 +2807,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolPodSubnetIdSe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolPodSubnetIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2685,6 +2819,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolPodSubnetIdSe
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolPodSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2699,6 +2834,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolPodS
 }
 
 /// <summary>Selector for a Subnet in network to populate podSubnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolPodSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2715,6 +2851,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolPodS
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolUpgradeSettings
 {
     /// <summary>The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.</summary>
@@ -2722,6 +2859,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolUpgr
     public string? MaxSurge { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolVnetSubnetIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2732,6 +2870,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolVnetSubnetIdR
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolVnetSubnetIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2743,6 +2882,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolVnetSubnetIdR
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolVnetSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2757,6 +2897,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolVnet
 }
 
 /// <summary>Reference to a Subnet in network to populate vnetSubnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolVnetSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2768,6 +2909,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolVnet
     public V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolVnetSubnetIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolVnetSubnetIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -2778,6 +2920,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolVnetSubnetIdS
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolVnetSubnetIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -2789,6 +2932,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolVnetSubnetIdS
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolVnetSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2803,6 +2947,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolVnet
 }
 
 /// <summary>Selector for a Subnet in network to populate vnetSubnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolVnetSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2819,6 +2964,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolVnet
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePool
 {
     /// <summary>Specifies the ID of the Capacity Reservation Group within which this AKS Cluster should be created. Changing this forces a new resource to be created.</summary>
@@ -2995,6 +3141,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePool
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderHttpProxyConfig
 {
     /// <summary>The proxy address to be used when communicating over HTTP.</summary>
@@ -3011,6 +3158,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderHttpProxyConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Kubernetes Cluster.</summary>
@@ -3022,6 +3170,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderIdentity
     public string? Type { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecInitProviderIngressApplicationGatewaySubnetIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -3032,6 +3181,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderIngressApplicationGatewaySub
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecInitProviderIngressApplicationGatewaySubnetIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -3043,6 +3193,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderIngressApplicationGatewaySub
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderIngressApplicationGatewaySubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3057,6 +3208,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderIngressApplicationG
 }
 
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderIngressApplicationGatewaySubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3068,6 +3220,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderIngressApplicationG
     public V1beta1KubernetesClusterSpecInitProviderIngressApplicationGatewaySubnetIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecInitProviderIngressApplicationGatewaySubnetIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -3078,6 +3231,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderIngressApplicationGatewaySub
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecInitProviderIngressApplicationGatewaySubnetIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -3089,6 +3243,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderIngressApplicationGatewaySub
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderIngressApplicationGatewaySubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3103,6 +3258,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderIngressApplicationG
 }
 
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderIngressApplicationGatewaySubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -3119,6 +3275,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderIngressApplicationG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderIngressApplicationGateway
 {
     /// <summary>The ID of the Application Gateway to integrate with the ingress controller of this Kubernetes Cluster. See this page for further details.</summary>
@@ -3147,6 +3304,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderIngressApplicationG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderKeyManagementService
 {
     /// <summary>Identifier of Azure Key Vault key. See key identifier format for more details.</summary>
@@ -3159,6 +3317,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderKeyManagementServic
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderKeyVaultSecretsProvider
 {
     /// <summary>Should the secret store CSI driver on the AKS cluster be enabled?</summary>
@@ -3171,6 +3330,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderKeyVaultSecretsProv
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderKubeletIdentity
 {
     /// <summary>The Client ID of the user-defined Managed Identity to be assigned to the Kubelets. If not specified a Managed Identity is created automatically. Changing this forces a new resource to be created.</summary>
@@ -3187,6 +3347,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderKubeletIdentity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderLinuxProfileSshKey
 {
     /// <summary>The Public SSH Key used to access the cluster.</summary>
@@ -3195,6 +3356,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderLinuxProfileSshKey
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderLinuxProfile
 {
     /// <summary>The Admin Username for the Cluster. Changing this forces a new resource to be created.</summary>
@@ -3207,6 +3369,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderLinuxProfile
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindowAllowed
 {
     /// <summary>A day in a week. Possible values are Sunday, Monday, Tuesday, Wednesday, Thursday, Friday and Saturday.</summary>
@@ -3219,6 +3382,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindowAl
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindowNotAllowed
 {
     /// <summary>The end of a time span, formatted as an RFC3339 string.</summary>
@@ -3231,6 +3395,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindowNo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindow
 {
     /// <summary>One or more allowed blocks as defined below.</summary>
@@ -3243,6 +3408,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindow
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindowAutoUpgradeNotAllowed
 {
     /// <summary>The end of a time span, formatted as an RFC3339 string.</summary>
@@ -3255,6 +3421,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindowAu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindowAutoUpgrade
 {
     /// <summary>The day of the month for the maintenance run. Required in combination with RelativeMonthly frequency. Value between 0 and 31 (inclusive).</summary>
@@ -3299,6 +3466,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindowAu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindowNodeOsNotAllowed
 {
     /// <summary>The end of a time span, formatted as an RFC3339 string.</summary>
@@ -3311,6 +3479,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindowNo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindowNodeOs
 {
     /// <summary>The day of the month for the maintenance run. Required in combination with RelativeMonthly frequency. Value between 0 and 31 (inclusive).</summary>
@@ -3355,6 +3524,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindowNo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderMicrosoftDefender
 {
     /// <summary>Specifies the ID of the Log Analytics Workspace where the audit logs collected by Microsoft Defender should be sent to.</summary>
@@ -3363,6 +3533,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderMicrosoftDefender
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderMonitorMetrics
 {
     /// <summary>Specifies a comma-separated list of Kubernetes annotation keys that will be used in the resource's labels metric.</summary>
@@ -3375,6 +3546,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderMonitorMetrics
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderNetworkProfileLoadBalancerProfile
 {
     /// <summary>Desired outbound flow idle timeout in minutes for the cluster load balancer. Must be between 4 and 120 inclusive. Defaults to 4.</summary>
@@ -3403,6 +3575,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderNetworkProfileLoadB
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderNetworkProfileNatGatewayProfile
 {
     /// <summary>Desired outbound flow idle timeout in minutes for the cluster load balancer. Must be between 4 and 120 inclusive. Defaults to 4.</summary>
@@ -3415,6 +3588,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderNetworkProfileNatGa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderNetworkProfile
 {
     /// <summary>IP address within the Kubernetes service address range that will be used by cluster service discovery (kube-dns). Changing this forces a new resource to be created.</summary>
@@ -3483,6 +3657,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderNetworkProfile
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderOmsAgent
 {
     /// <summary>The ID of the Log Analytics Workspace which the OMS Agent should send data to.</summary>
@@ -3494,6 +3669,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderOmsAgent
     public bool? MsiAuthForMonitoringEnabled { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecInitProviderPrivateDnsZoneIdRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -3504,6 +3680,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderPrivateDnsZoneIdRefPolicyRes
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecInitProviderPrivateDnsZoneIdRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -3515,6 +3692,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderPrivateDnsZoneIdRefPolicyRes
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderPrivateDnsZoneIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3529,6 +3707,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderPrivateDnsZoneIdRef
 }
 
 /// <summary>Reference to a PrivateDNSZone in network to populate privateDnsZoneId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderPrivateDnsZoneIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3540,6 +3719,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderPrivateDnsZoneIdRef
     public V1beta1KubernetesClusterSpecInitProviderPrivateDnsZoneIdRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecInitProviderPrivateDnsZoneIdSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -3550,6 +3730,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderPrivateDnsZoneIdSelectorPoli
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecInitProviderPrivateDnsZoneIdSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -3561,6 +3742,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderPrivateDnsZoneIdSelectorPoli
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderPrivateDnsZoneIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3575,6 +3757,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderPrivateDnsZoneIdSel
 }
 
 /// <summary>Selector for a PrivateDNSZone in network to populate privateDnsZoneId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderPrivateDnsZoneIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -3591,6 +3774,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderPrivateDnsZoneIdSel
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderServiceMeshProfile
 {
     /// <summary>Is Istio External Ingress Gateway enabled?</summary>
@@ -3607,6 +3791,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderServiceMeshProfile
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderServicePrincipal
 {
     /// <summary>The Client ID for the Service Principal.</summary>
@@ -3615,6 +3800,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderServicePrincipal
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderStorageProfile
 {
     /// <summary>Is the Blob CSI driver enabled? Defaults to false.</summary>
@@ -3639,6 +3825,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderStorageProfile
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderWebAppRouting
 {
     /// <summary>Specifies the ID of the DNS Zone in which DNS entries are created for applications deployed to the cluster when Web App Routing is enabled. For Bring-Your-Own DNS zones this property should be set to an empty string "".</summary>
@@ -3647,6 +3834,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderWebAppRouting
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderWindowsProfileGmsa
 {
     /// <summary>Specifies the DNS server for Windows gMSA. Set this to an empty string if you have configured the DNS server in the VNet which was used to create the managed cluster.</summary>
@@ -3659,6 +3847,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderWindowsProfileGmsa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderWindowsProfile
 {
     /// <summary>The Admin Username for Windows VMs. Changing this forces a new resource to be created.</summary>
@@ -3675,6 +3864,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderWindowsProfile
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderWorkloadAutoscalerProfile
 {
     /// <summary>Specifies whether KEDA Autoscaler can be used for workloads.</summary>
@@ -3687,6 +3877,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderWorkloadAutoscalerP
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProvider
 {
     /// <summary>A aci_connector_linux block as defined below. For more details, please visit Create and configure an AKS cluster to use virtual nodes.</summary>
@@ -3918,6 +4109,7 @@ public partial class V1beta1KubernetesClusterSpecInitProvider
     public bool? WorkloadIdentityEnabled { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -3940,6 +4132,7 @@ public enum V1beta1KubernetesClusterSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -3950,6 +4143,7 @@ public enum V1beta1KubernetesClusterSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -3961,6 +4155,7 @@ public enum V1beta1KubernetesClusterSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3975,6 +4170,7 @@ public partial class V1beta1KubernetesClusterSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3986,6 +4182,7 @@ public partial class V1beta1KubernetesClusterSpecProviderConfigRef
     public V1beta1KubernetesClusterSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -3996,6 +4193,7 @@ public enum V1beta1KubernetesClusterSpecPublishConnectionDetailsToConfigRefPolic
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KubernetesClusterSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -4007,6 +4205,7 @@ public enum V1beta1KubernetesClusterSpecPublishConnectionDetailsToConfigRefPolic
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -4021,6 +4220,7 @@ public partial class V1beta1KubernetesClusterSpecPublishConnectionDetailsToConfi
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -4033,6 +4233,7 @@ public partial class V1beta1KubernetesClusterSpecPublishConnectionDetailsToConfi
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -4049,6 +4250,7 @@ public partial class V1beta1KubernetesClusterSpecPublishConnectionDetailsToMetad
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -4065,6 +4267,7 @@ public partial class V1beta1KubernetesClusterSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -4077,6 +4280,7 @@ public partial class V1beta1KubernetesClusterSpecWriteConnectionSecretToRef
 }
 
 /// <summary>KubernetesClusterSpec defines the desired state of KubernetesCluster</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -4110,6 +4314,7 @@ public partial class V1beta1KubernetesClusterSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderAciConnectorLinuxConnectorIdentity
 {
     /// <summary>The Client ID of the user-defined Managed Identity used by the ACI Connector.</summary>
@@ -4126,6 +4331,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderAciConnectorLinuxCo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderAciConnectorLinux
 {
     /// <summary>A connector_identity block is exported. The exported attributes are defined below.</summary>
@@ -4138,6 +4344,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderAciConnectorLinux
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderApiServerAccessProfile
 {
     /// <summary>Set of authorized IP ranges to allow access to API server, e.g. ["198.51.100.0/24"].</summary>
@@ -4154,6 +4361,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderApiServerAccessProf
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderAutoScalerProfile
 {
     /// <summary>Detect similar node groups and balance the number of nodes between them. Defaults to false.</summary>
@@ -4226,6 +4434,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderAutoScalerProfile
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderAzureActiveDirectoryRoleBasedAccessControl
 {
     /// <summary>A list of Object IDs of Azure Active Directory Groups which should have Admin Role on the Cluster.</summary>
@@ -4254,6 +4463,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderAzureActiveDirector
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderConfidentialComputing
 {
     /// <summary>Should the SGX quote helper be enabled?</summary>
@@ -4262,6 +4472,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderConfidentialComputi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePoolKubeletConfig
 {
     /// <summary>Specifies the allow list of unsafe sysctls command or patterns (ending in *).</summary>
@@ -4306,6 +4517,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePoolKube
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePoolLinuxOsConfigSysctlConfig
 {
     /// <summary>The sysctl setting fs.aio-max-nr. Must be between 65536 and 6553500.</summary>
@@ -4426,6 +4638,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePoolLinu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePoolLinuxOsConfig
 {
     /// <summary>Specifies the size of the swap file on each node in MB.</summary>
@@ -4446,6 +4659,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePoolLinu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePoolNodeNetworkProfileAllowedHostPorts
 {
     /// <summary>Specifies the end of the port range.</summary>
@@ -4462,6 +4676,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePoolNode
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePoolNodeNetworkProfile
 {
     /// <summary>One or more allowed_host_ports blocks as defined below.</summary>
@@ -4478,6 +4693,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePoolNode
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePoolUpgradeSettings
 {
     /// <summary>The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.</summary>
@@ -4486,6 +4702,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePoolUpgr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePool
 {
     /// <summary>Specifies the ID of the Capacity Reservation Group within which this AKS Cluster should be created. Changing this forces a new resource to be created.</summary>
@@ -4646,6 +4863,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePool
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderHttpProxyConfig
 {
     /// <summary>The proxy address to be used when communicating over HTTP.</summary>
@@ -4662,6 +4880,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderHttpProxyConfig
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Kubernetes Cluster.</summary>
@@ -4682,6 +4901,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderIdentity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderIngressApplicationGatewayIngressApplicationGatewayIdentity
 {
     /// <summary>The Client ID of the user-defined Managed Identity used for Web App Routing.</summary>
@@ -4698,6 +4918,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderIngressApplicationG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderIngressApplicationGateway
 {
     /// <summary>The ID of the Application Gateway associated with the ingress controller deployed to this Kubernetes Cluster.</summary>
@@ -4726,6 +4947,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderIngressApplicationG
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderKeyManagementService
 {
     /// <summary>Identifier of Azure Key Vault key. See key identifier format for more details.</summary>
@@ -4738,6 +4960,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderKeyManagementServic
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderKeyVaultSecretsProviderSecretIdentity
 {
     /// <summary>The Client ID of the user-defined Managed Identity used by the Secret Provider.</summary>
@@ -4754,6 +4977,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderKeyVaultSecretsProv
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderKeyVaultSecretsProvider
 {
     /// <summary>An secret_identity block is exported. The exported attributes are defined below.</summary>
@@ -4770,6 +4994,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderKeyVaultSecretsProv
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderKubeletIdentity
 {
     /// <summary>The Client ID of the user-defined Managed Identity to be assigned to the Kubelets. If not specified a Managed Identity is created automatically. Changing this forces a new resource to be created.</summary>
@@ -4786,6 +5011,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderKubeletIdentity
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderLinuxProfileSshKey
 {
     /// <summary>The Public SSH Key used to access the cluster.</summary>
@@ -4794,6 +5020,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderLinuxProfileSshKey
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderLinuxProfile
 {
     /// <summary>The Admin Username for the Cluster. Changing this forces a new resource to be created.</summary>
@@ -4806,6 +5033,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderLinuxProfile
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindowAllowed
 {
     /// <summary>A day in a week. Possible values are Sunday, Monday, Tuesday, Wednesday, Thursday, Friday and Saturday.</summary>
@@ -4818,6 +5046,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindowAl
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindowNotAllowed
 {
     /// <summary>The end of a time span, formatted as an RFC3339 string.</summary>
@@ -4830,6 +5059,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindowNo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindow
 {
     /// <summary>One or more allowed blocks as defined below.</summary>
@@ -4842,6 +5072,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindow
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindowAutoUpgradeNotAllowed
 {
     /// <summary>The end of a time span, formatted as an RFC3339 string.</summary>
@@ -4854,6 +5085,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindowAu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindowAutoUpgrade
 {
     /// <summary>The day of the month for the maintenance run. Required in combination with RelativeMonthly frequency. Value between 0 and 31 (inclusive).</summary>
@@ -4898,6 +5130,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindowAu
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindowNodeOsNotAllowed
 {
     /// <summary>The end of a time span, formatted as an RFC3339 string.</summary>
@@ -4910,6 +5143,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindowNo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindowNodeOs
 {
     /// <summary>The day of the month for the maintenance run. Required in combination with RelativeMonthly frequency. Value between 0 and 31 (inclusive).</summary>
@@ -4954,6 +5188,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindowNo
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderMicrosoftDefender
 {
     /// <summary>Specifies the ID of the Log Analytics Workspace where the audit logs collected by Microsoft Defender should be sent to.</summary>
@@ -4962,6 +5197,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderMicrosoftDefender
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderMonitorMetrics
 {
     /// <summary>Specifies a comma-separated list of Kubernetes annotation keys that will be used in the resource's labels metric.</summary>
@@ -4974,6 +5210,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderMonitorMetrics
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderNetworkProfileLoadBalancerProfile
 {
     /// <summary>The outcome (resource IDs) of the specified arguments.</summary>
@@ -5006,6 +5243,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderNetworkProfileLoadB
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderNetworkProfileNatGatewayProfile
 {
     /// <summary>The outcome (resource IDs) of the specified arguments.</summary>
@@ -5022,6 +5260,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderNetworkProfileNatGa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderNetworkProfile
 {
     /// <summary>IP address within the Kubernetes service address range that will be used by cluster service discovery (kube-dns). Changing this forces a new resource to be created.</summary>
@@ -5090,6 +5329,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderNetworkProfile
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderOmsAgentOmsAgentIdentity
 {
     /// <summary>The Client ID of the user-defined Managed Identity used by the OMS Agents.</summary>
@@ -5106,6 +5346,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderOmsAgentOmsAgentIde
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderOmsAgent
 {
     /// <summary>The ID of the Log Analytics Workspace which the OMS Agent should send data to.</summary>
@@ -5122,6 +5363,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderOmsAgent
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderServiceMeshProfile
 {
     /// <summary>Is Istio External Ingress Gateway enabled?</summary>
@@ -5138,6 +5380,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderServiceMeshProfile
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderServicePrincipal
 {
     /// <summary>The Client ID for the Service Principal.</summary>
@@ -5146,6 +5389,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderServicePrincipal
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderStorageProfile
 {
     /// <summary>Is the Blob CSI driver enabled? Defaults to false.</summary>
@@ -5170,6 +5414,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderStorageProfile
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderWebAppRoutingWebAppRoutingIdentity
 {
     /// <summary>The Client ID of the user-defined Managed Identity used for Web App Routing.</summary>
@@ -5186,6 +5431,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderWebAppRoutingWebApp
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderWebAppRouting
 {
     /// <summary>Specifies the ID of the DNS Zone in which DNS entries are created for applications deployed to the cluster when Web App Routing is enabled. For Bring-Your-Own DNS zones this property should be set to an empty string "".</summary>
@@ -5198,6 +5444,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderWebAppRouting
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderWindowsProfileGmsa
 {
     /// <summary>Specifies the DNS server for Windows gMSA. Set this to an empty string if you have configured the DNS server in the VNet which was used to create the managed cluster.</summary>
@@ -5210,6 +5457,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderWindowsProfileGmsa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderWindowsProfile
 {
     /// <summary>The Admin Username for Windows VMs. Changing this forces a new resource to be created.</summary>
@@ -5226,6 +5474,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderWindowsProfile
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderWorkloadAutoscalerProfile
 {
     /// <summary>Specifies whether KEDA Autoscaler can be used for workloads.</summary>
@@ -5246,6 +5495,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderWorkloadAutoscalerP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProvider
 {
     /// <summary>A aci_connector_linux block as defined below. For more details, please visit Create and configure an AKS cluster to use virtual nodes.</summary>
@@ -5506,6 +5756,7 @@ public partial class V1beta1KubernetesClusterStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -5534,6 +5785,7 @@ public partial class V1beta1KubernetesClusterStatusConditions
 }
 
 /// <summary>KubernetesClusterStatus defines the observed state of KubernetesCluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatus
 {
     /// <summary></summary>
@@ -5549,8 +5801,9 @@ public partial class V1beta1KubernetesClusterStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>KubernetesCluster is the Schema for the KubernetesClusters API. Manages a managed Kubernetes Cluster (also known as AKS / Azure Kubernetes Service)</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1KubernetesCluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1KubernetesClusterSpec>, IStatus<V1beta1KubernetesClusterStatus>
 {
     public const string KubeApiVersion = "v1beta1";

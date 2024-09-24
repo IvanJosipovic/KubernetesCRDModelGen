@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.workstations.cnrm.cloud.google.com;
 /// <summary>Configuration for private cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkstationsWorkstationClusterSpecPrivateClusterConfig
 {
     /// <summary>Additional project IDs that are allowed to attach to the workstation cluster's service attachment. By default, the workstation cluster's project and the VPC host project (if different) are allowed.</summary>
@@ -29,6 +30,7 @@ public partial class V1alpha1WorkstationsWorkstationClusterSpecPrivateClusterCon
 }
 
 /// <summary>The project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkstationsWorkstationClusterSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -45,6 +47,7 @@ public partial class V1alpha1WorkstationsWorkstationClusterSpecProjectRef
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkstationsWorkstationClusterSpec
 {
     /// <summary>Client-specified annotations. This is distinct from labels.</summary>
@@ -81,6 +84,7 @@ public partial class V1alpha1WorkstationsWorkstationClusterSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkstationsWorkstationClusterStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -105,6 +109,7 @@ public partial class V1alpha1WorkstationsWorkstationClusterStatusConditions
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkstationsWorkstationClusterStatusResourceConditions
 {
     /// <summary>The status code, which should be an enum value of google.rpc.Code.</summary>
@@ -121,6 +126,7 @@ public partial class V1alpha1WorkstationsWorkstationClusterStatusResourceConditi
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkstationsWorkstationClusterStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -156,8 +162,9 @@ public partial class V1alpha1WorkstationsWorkstationClusterStatus
     public string? Uid { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1WorkstationsWorkstationCluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1WorkstationsWorkstationClusterSpec>, IStatus<V1alpha1WorkstationsWorkstationClusterStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appmesh.aws.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GatewayRouteSpecDeletionPolicyEnum
 {
     [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
@@ -19,6 +20,7 @@ public enum V1beta1GatewayRouteSpecDeletionPolicyEnum
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecGrpcRouteActionTargetVirtualService
 {
     /// <summary>Name of the virtual service that traffic is routed to. Must be between 1 and 255 characters in length.</summary>
@@ -27,6 +29,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecGrpcRouteActionTarget
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecGrpcRouteActionTarget
 {
     /// <summary>The port number that corresponds to the target for Virtual Service provider port. This is required when the provider (router or node) of the Virtual Service has multiple listeners.</summary>
@@ -39,6 +42,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecGrpcRouteActionTarget
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecGrpcRouteAction
 {
     /// <summary>Target that traffic is routed to when a request matches the gateway route.</summary>
@@ -47,6 +51,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecGrpcRouteAction
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecGrpcRouteMatch
 {
     /// <summary>The port number that corresponds to the target for Virtual Service provider port. This is required when the provider (router or node) of the Virtual Service has multiple listeners.</summary>
@@ -59,6 +64,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecGrpcRouteMatch
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecGrpcRoute
 {
     /// <summary>Action to take if a match is determined.</summary>
@@ -71,6 +77,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecGrpcRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteActionRewriteHostname
 {
     /// <summary>Default target host name to write to. Valid values: ENABLED, DISABLED.</summary>
@@ -79,6 +86,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteActionRewri
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteActionRewritePath
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -87,6 +95,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteActionRewri
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteActionRewritePrefix
 {
     /// <summary>Default prefix used to replace the incoming route prefix when rewritten. Valid values: ENABLED, DISABLED.</summary>
@@ -99,6 +108,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteActionRewri
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteActionRewrite
 {
     /// <summary>Host name to rewrite.</summary>
@@ -115,6 +125,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteActionRewri
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteActionTargetVirtualService
 {
     /// <summary>Name of the virtual service that traffic is routed to. Must be between 1 and 255 characters in length.</summary>
@@ -123,6 +134,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteActionTarge
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteActionTarget
 {
     /// <summary>The port number that corresponds to the target for Virtual Service provider port. This is required when the provider (router or node) of the Virtual Service has multiple listeners.</summary>
@@ -135,6 +147,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteActionTarge
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteAction
 {
     /// <summary>Gateway route action to rewrite.</summary>
@@ -147,6 +160,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteAction
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatchHeaderMatchRange
 {
     /// <summary>End of the range.</summary>
@@ -159,6 +173,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatchHeader
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatchHeaderMatch
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -183,6 +198,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatchHeader
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatchHeader
 {
     /// <summary>If true, the match is on the opposite of the match method and value. Default is false.</summary>
@@ -199,6 +215,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatchHeader
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatchHostname
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -211,6 +228,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatchHostna
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatchPath
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -223,6 +241,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatchPath
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatchQueryParameterMatch
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -231,6 +250,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatchQueryP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatchQueryParameter
 {
     /// <summary>Criteria for determining a request match.</summary>
@@ -243,6 +263,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatchQueryP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatch
 {
     /// <summary>Client request headers to match on.</summary>
@@ -271,6 +292,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatch
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2Route
 {
     /// <summary>Action to take if a match is determined.</summary>
@@ -283,6 +305,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2Route
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionRewriteHostname
 {
     /// <summary>Default target host name to write to. Valid values: ENABLED, DISABLED.</summary>
@@ -291,6 +314,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionRewrit
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionRewritePath
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -299,6 +323,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionRewrit
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionRewritePrefix
 {
     /// <summary>Default prefix used to replace the incoming route prefix when rewritten. Valid values: ENABLED, DISABLED.</summary>
@@ -311,6 +336,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionRewrit
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionRewrite
 {
     /// <summary>Host name to rewrite.</summary>
@@ -326,6 +352,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionRewrit
     public IList<V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionRewritePrefix>? Prefix { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -336,6 +363,7 @@ public enum V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTargetVirtualSe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -347,6 +375,7 @@ public enum V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTargetVirtualSe
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -361,6 +390,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTarget
 }
 
 /// <summary>Reference to a VirtualService in appmesh to populate virtualServiceName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -372,6 +402,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTarget
     public V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -382,6 +413,7 @@ public enum V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTargetVirtualSe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -393,6 +425,7 @@ public enum V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTargetVirtualSe
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -407,6 +440,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTarget
 }
 
 /// <summary>Selector for a VirtualService in appmesh to populate virtualServiceName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -423,6 +457,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTarget
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTargetVirtualService
 {
     /// <summary>Name of the virtual service that traffic is routed to. Must be between 1 and 255 characters in length.</summary>
@@ -439,6 +474,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTarget
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTarget
 {
     /// <summary>The port number that corresponds to the target for Virtual Service provider port. This is required when the provider (router or node) of the Virtual Service has multiple listeners.</summary>
@@ -451,6 +487,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTarget
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteAction
 {
     /// <summary>Gateway route action to rewrite.</summary>
@@ -463,6 +500,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteAction
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatchHeaderMatchRange
 {
     /// <summary>End of the range.</summary>
@@ -475,6 +513,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatchHeaderM
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatchHeaderMatch
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -499,6 +538,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatchHeaderM
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatchHeader
 {
     /// <summary>If true, the match is on the opposite of the match method and value. Default is false.</summary>
@@ -515,6 +555,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatchHeader
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatchHostname
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -527,6 +568,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatchHostnam
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatchPath
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -539,6 +581,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatchPath
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatchQueryParameterMatch
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -547,6 +590,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatchQueryPa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatchQueryParameter
 {
     /// <summary>Criteria for determining a request match.</summary>
@@ -559,6 +603,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatchQueryPa
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatch
 {
     /// <summary>Client request headers to match on.</summary>
@@ -587,6 +632,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatch
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRoute
 {
     /// <summary>Action to take if a match is determined.</summary>
@@ -599,6 +645,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpec
 {
     /// <summary>Specification of a gRPC gateway route.</summary>
@@ -618,6 +665,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpec
     public double? Priority { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GatewayRouteSpecForProviderVirtualGatewayNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -628,6 +676,7 @@ public enum V1beta1GatewayRouteSpecForProviderVirtualGatewayNameRefPolicyResolut
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GatewayRouteSpecForProviderVirtualGatewayNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -639,6 +688,7 @@ public enum V1beta1GatewayRouteSpecForProviderVirtualGatewayNameRefPolicyResolve
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderVirtualGatewayNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -653,6 +703,7 @@ public partial class V1beta1GatewayRouteSpecForProviderVirtualGatewayNameRefPoli
 }
 
 /// <summary>Reference to a VirtualGateway in appmesh to populate virtualGatewayName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderVirtualGatewayNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -664,6 +715,7 @@ public partial class V1beta1GatewayRouteSpecForProviderVirtualGatewayNameRef
     public V1beta1GatewayRouteSpecForProviderVirtualGatewayNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GatewayRouteSpecForProviderVirtualGatewayNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -674,6 +726,7 @@ public enum V1beta1GatewayRouteSpecForProviderVirtualGatewayNameSelectorPolicyRe
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GatewayRouteSpecForProviderVirtualGatewayNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -685,6 +738,7 @@ public enum V1beta1GatewayRouteSpecForProviderVirtualGatewayNameSelectorPolicyRe
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderVirtualGatewayNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -699,6 +753,7 @@ public partial class V1beta1GatewayRouteSpecForProviderVirtualGatewayNameSelecto
 }
 
 /// <summary>Selector for a VirtualGateway in appmesh to populate virtualGatewayName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderVirtualGatewayNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -715,6 +770,7 @@ public partial class V1beta1GatewayRouteSpecForProviderVirtualGatewayNameSelecto
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProvider
 {
     /// <summary>Name of the service mesh in which to create the gateway route. Must be between 1 and 255 characters in length.</summary>
@@ -755,6 +811,7 @@ public partial class V1beta1GatewayRouteSpecForProvider
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecGrpcRouteActionTargetVirtualService
 {
     /// <summary>Name of the virtual service that traffic is routed to. Must be between 1 and 255 characters in length.</summary>
@@ -763,6 +820,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecGrpcRouteActionTarge
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecGrpcRouteActionTarget
 {
     /// <summary>The port number that corresponds to the target for Virtual Service provider port. This is required when the provider (router or node) of the Virtual Service has multiple listeners.</summary>
@@ -775,6 +833,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecGrpcRouteActionTarge
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecGrpcRouteAction
 {
     /// <summary>Target that traffic is routed to when a request matches the gateway route.</summary>
@@ -783,6 +842,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecGrpcRouteAction
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecGrpcRouteMatch
 {
     /// <summary>The port number that corresponds to the target for Virtual Service provider port. This is required when the provider (router or node) of the Virtual Service has multiple listeners.</summary>
@@ -795,6 +855,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecGrpcRouteMatch
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecGrpcRoute
 {
     /// <summary>Action to take if a match is determined.</summary>
@@ -807,6 +868,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecGrpcRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteActionRewriteHostname
 {
     /// <summary>Default target host name to write to. Valid values: ENABLED, DISABLED.</summary>
@@ -815,6 +877,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteActionRewr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteActionRewritePath
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -823,6 +886,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteActionRewr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteActionRewritePrefix
 {
     /// <summary>Default prefix used to replace the incoming route prefix when rewritten. Valid values: ENABLED, DISABLED.</summary>
@@ -835,6 +899,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteActionRewr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteActionRewrite
 {
     /// <summary>Host name to rewrite.</summary>
@@ -851,6 +916,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteActionRewr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteActionTargetVirtualService
 {
     /// <summary>Name of the virtual service that traffic is routed to. Must be between 1 and 255 characters in length.</summary>
@@ -859,6 +925,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteActionTarg
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteActionTarget
 {
     /// <summary>The port number that corresponds to the target for Virtual Service provider port. This is required when the provider (router or node) of the Virtual Service has multiple listeners.</summary>
@@ -871,6 +938,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteActionTarg
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteAction
 {
     /// <summary>Gateway route action to rewrite.</summary>
@@ -883,6 +951,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteAction
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatchHeaderMatchRange
 {
     /// <summary>End of the range.</summary>
@@ -895,6 +964,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatchHeade
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatchHeaderMatch
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -919,6 +989,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatchHeade
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatchHeader
 {
     /// <summary>If true, the match is on the opposite of the match method and value. Default is false.</summary>
@@ -935,6 +1006,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatchHeade
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatchHostname
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -947,6 +1019,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatchHostn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatchPath
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -959,6 +1032,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatchPath
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatchQueryParameterMatch
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -967,6 +1041,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatchQuery
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatchQueryParameter
 {
     /// <summary>Criteria for determining a request match.</summary>
@@ -979,6 +1054,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatchQuery
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatch
 {
     /// <summary>Client request headers to match on.</summary>
@@ -1007,6 +1083,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatch
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2Route
 {
     /// <summary>Action to take if a match is determined.</summary>
@@ -1019,6 +1096,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2Route
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionRewriteHostname
 {
     /// <summary>Default target host name to write to. Valid values: ENABLED, DISABLED.</summary>
@@ -1027,6 +1105,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionRewri
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionRewritePath
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -1035,6 +1114,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionRewri
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionRewritePrefix
 {
     /// <summary>Default prefix used to replace the incoming route prefix when rewritten. Valid values: ENABLED, DISABLED.</summary>
@@ -1047,6 +1127,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionRewri
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionRewrite
 {
     /// <summary>Host name to rewrite.</summary>
@@ -1062,6 +1143,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionRewri
     public IList<V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionRewritePrefix>? Prefix { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1072,6 +1154,7 @@ public enum V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTargetVirtualS
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1083,6 +1166,7 @@ public enum V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTargetVirtualS
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1097,6 +1181,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTarge
 }
 
 /// <summary>Reference to a VirtualService in appmesh to populate virtualServiceName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1108,6 +1193,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTarge
     public V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1118,6 +1204,7 @@ public enum V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTargetVirtualS
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1129,6 +1216,7 @@ public enum V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTargetVirtualS
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1143,6 +1231,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTarge
 }
 
 /// <summary>Selector for a VirtualService in appmesh to populate virtualServiceName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1159,6 +1248,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTarge
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTargetVirtualService
 {
     /// <summary>Name of the virtual service that traffic is routed to. Must be between 1 and 255 characters in length.</summary>
@@ -1175,6 +1265,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTarge
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTarget
 {
     /// <summary>The port number that corresponds to the target for Virtual Service provider port. This is required when the provider (router or node) of the Virtual Service has multiple listeners.</summary>
@@ -1187,6 +1278,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTarge
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteAction
 {
     /// <summary>Gateway route action to rewrite.</summary>
@@ -1199,6 +1291,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteAction
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatchHeaderMatchRange
 {
     /// <summary>End of the range.</summary>
@@ -1211,6 +1304,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatchHeader
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatchHeaderMatch
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -1235,6 +1329,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatchHeader
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatchHeader
 {
     /// <summary>If true, the match is on the opposite of the match method and value. Default is false.</summary>
@@ -1251,6 +1346,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatchHeader
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatchHostname
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -1263,6 +1359,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatchHostna
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatchPath
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -1275,6 +1372,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatchPath
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatchQueryParameterMatch
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -1283,6 +1381,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatchQueryP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatchQueryParameter
 {
     /// <summary>Criteria for determining a request match.</summary>
@@ -1295,6 +1394,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatchQueryP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatch
 {
     /// <summary>Client request headers to match on.</summary>
@@ -1323,6 +1423,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatch
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRoute
 {
     /// <summary>Action to take if a match is determined.</summary>
@@ -1335,6 +1436,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderSpec
 {
     /// <summary>Specification of a gRPC gateway route.</summary>
@@ -1354,6 +1456,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpec
     public double? Priority { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GatewayRouteSpecInitProviderVirtualGatewayNameRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1364,6 +1467,7 @@ public enum V1beta1GatewayRouteSpecInitProviderVirtualGatewayNameRefPolicyResolu
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GatewayRouteSpecInitProviderVirtualGatewayNameRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1375,6 +1479,7 @@ public enum V1beta1GatewayRouteSpecInitProviderVirtualGatewayNameRefPolicyResolv
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderVirtualGatewayNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1389,6 +1494,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderVirtualGatewayNameRefPol
 }
 
 /// <summary>Reference to a VirtualGateway in appmesh to populate virtualGatewayName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderVirtualGatewayNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1400,6 +1506,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderVirtualGatewayNameRef
     public V1beta1GatewayRouteSpecInitProviderVirtualGatewayNameRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GatewayRouteSpecInitProviderVirtualGatewayNameSelectorPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1410,6 +1517,7 @@ public enum V1beta1GatewayRouteSpecInitProviderVirtualGatewayNameSelectorPolicyR
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GatewayRouteSpecInitProviderVirtualGatewayNameSelectorPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1421,6 +1529,7 @@ public enum V1beta1GatewayRouteSpecInitProviderVirtualGatewayNameSelectorPolicyR
 }
 
 /// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderVirtualGatewayNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1435,6 +1544,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderVirtualGatewayNameSelect
 }
 
 /// <summary>Selector for a VirtualGateway in appmesh to populate virtualGatewayName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProviderVirtualGatewayNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1451,6 +1561,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderVirtualGatewayNameSelect
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecInitProvider
 {
     /// <summary>Name of the service mesh in which to create the gateway route. Must be between 1 and 255 characters in length.</summary>
@@ -1486,6 +1597,7 @@ public partial class V1beta1GatewayRouteSpecInitProvider
     public V1beta1GatewayRouteSpecInitProviderVirtualGatewayNameSelector? VirtualGatewayNameSelector { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GatewayRouteSpecManagementPoliciesEnum
 {
     [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
@@ -1508,6 +1620,7 @@ public enum V1beta1GatewayRouteSpecManagementPoliciesEnum
     Option5
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GatewayRouteSpecProviderConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1518,6 +1631,7 @@ public enum V1beta1GatewayRouteSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GatewayRouteSpecProviderConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1529,6 +1643,7 @@ public enum V1beta1GatewayRouteSpecProviderConfigRefPolicyResolveEnum
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1543,6 +1658,7 @@ public partial class V1beta1GatewayRouteSpecProviderConfigRefPolicy
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1554,6 +1670,7 @@ public partial class V1beta1GatewayRouteSpecProviderConfigRef
     public V1beta1GatewayRouteSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GatewayRouteSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
     [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
@@ -1564,6 +1681,7 @@ public enum V1beta1GatewayRouteSpecPublishConnectionDetailsToConfigRefPolicyReso
     Optional
 }
 
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GatewayRouteSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
     [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
@@ -1575,6 +1693,7 @@ public enum V1beta1GatewayRouteSpecPublishConnectionDetailsToConfigRefPolicyReso
 }
 
 /// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1589,6 +1708,7 @@ public partial class V1beta1GatewayRouteSpecPublishConnectionDetailsToConfigRefP
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1601,6 +1721,7 @@ public partial class V1beta1GatewayRouteSpecPublishConnectionDetailsToConfigRef
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1617,6 +1738,7 @@ public partial class V1beta1GatewayRouteSpecPublishConnectionDetailsToMetadata
 }
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1633,6 +1755,7 @@ public partial class V1beta1GatewayRouteSpecPublishConnectionDetailsTo
 }
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1645,6 +1768,7 @@ public partial class V1beta1GatewayRouteSpecWriteConnectionSecretToRef
 }
 
 /// <summary>GatewayRouteSpec defines the desired state of GatewayRoute</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1678,6 +1802,7 @@ public partial class V1beta1GatewayRouteSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecGrpcRouteActionTargetVirtualService
 {
     /// <summary>Name of the virtual service that traffic is routed to. Must be between 1 and 255 characters in length.</summary>
@@ -1686,6 +1811,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecGrpcRouteActionTarge
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecGrpcRouteActionTarget
 {
     /// <summary>The port number that corresponds to the target for Virtual Service provider port. This is required when the provider (router or node) of the Virtual Service has multiple listeners.</summary>
@@ -1698,6 +1824,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecGrpcRouteActionTarge
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecGrpcRouteAction
 {
     /// <summary>Target that traffic is routed to when a request matches the gateway route.</summary>
@@ -1706,6 +1833,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecGrpcRouteAction
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecGrpcRouteMatch
 {
     /// <summary>The port number that corresponds to the target for Virtual Service provider port. This is required when the provider (router or node) of the Virtual Service has multiple listeners.</summary>
@@ -1718,6 +1846,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecGrpcRouteMatch
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecGrpcRoute
 {
     /// <summary>Action to take if a match is determined.</summary>
@@ -1730,6 +1859,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecGrpcRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteActionRewriteHostname
 {
     /// <summary>Default target host name to write to. Valid values: ENABLED, DISABLED.</summary>
@@ -1738,6 +1868,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteActionRewr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteActionRewritePath
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -1746,6 +1877,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteActionRewr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteActionRewritePrefix
 {
     /// <summary>Default prefix used to replace the incoming route prefix when rewritten. Valid values: ENABLED, DISABLED.</summary>
@@ -1758,6 +1890,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteActionRewr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteActionRewrite
 {
     /// <summary>Host name to rewrite.</summary>
@@ -1774,6 +1907,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteActionRewr
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteActionTargetVirtualService
 {
     /// <summary>Name of the virtual service that traffic is routed to. Must be between 1 and 255 characters in length.</summary>
@@ -1782,6 +1916,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteActionTarg
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteActionTarget
 {
     /// <summary>The port number that corresponds to the target for Virtual Service provider port. This is required when the provider (router or node) of the Virtual Service has multiple listeners.</summary>
@@ -1794,6 +1929,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteActionTarg
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteAction
 {
     /// <summary>Gateway route action to rewrite.</summary>
@@ -1806,6 +1942,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteAction
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatchHeaderMatchRange
 {
     /// <summary>End of the range.</summary>
@@ -1818,6 +1955,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatchHeade
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatchHeaderMatch
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -1842,6 +1980,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatchHeade
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatchHeader
 {
     /// <summary>If true, the match is on the opposite of the match method and value. Default is false.</summary>
@@ -1858,6 +1997,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatchHeade
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatchHostname
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -1870,6 +2010,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatchHostn
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatchPath
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -1882,6 +2023,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatchPath
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatchQueryParameterMatch
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -1890,6 +2032,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatchQuery
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatchQueryParameter
 {
     /// <summary>Criteria for determining a request match.</summary>
@@ -1902,6 +2045,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatchQuery
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatch
 {
     /// <summary>Client request headers to match on.</summary>
@@ -1930,6 +2074,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatch
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2Route
 {
     /// <summary>Action to take if a match is determined.</summary>
@@ -1942,6 +2087,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2Route
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteActionRewriteHostname
 {
     /// <summary>Default target host name to write to. Valid values: ENABLED, DISABLED.</summary>
@@ -1950,6 +2096,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteActionRewri
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteActionRewritePath
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -1958,6 +2105,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteActionRewri
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteActionRewritePrefix
 {
     /// <summary>Default prefix used to replace the incoming route prefix when rewritten. Valid values: ENABLED, DISABLED.</summary>
@@ -1970,6 +2118,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteActionRewri
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteActionRewrite
 {
     /// <summary>Host name to rewrite.</summary>
@@ -1986,6 +2135,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteActionRewri
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteActionTargetVirtualService
 {
     /// <summary>Name of the virtual service that traffic is routed to. Must be between 1 and 255 characters in length.</summary>
@@ -1994,6 +2144,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteActionTarge
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteActionTarget
 {
     /// <summary>The port number that corresponds to the target for Virtual Service provider port. This is required when the provider (router or node) of the Virtual Service has multiple listeners.</summary>
@@ -2006,6 +2157,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteActionTarge
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteAction
 {
     /// <summary>Gateway route action to rewrite.</summary>
@@ -2018,6 +2170,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteAction
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatchHeaderMatchRange
 {
     /// <summary>End of the range.</summary>
@@ -2030,6 +2183,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatchHeader
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatchHeaderMatch
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -2054,6 +2208,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatchHeader
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatchHeader
 {
     /// <summary>If true, the match is on the opposite of the match method and value. Default is false.</summary>
@@ -2070,6 +2225,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatchHeader
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatchHostname
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -2082,6 +2238,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatchHostna
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatchPath
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -2094,6 +2251,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatchPath
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatchQueryParameterMatch
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -2102,6 +2260,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatchQueryP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatchQueryParameter
 {
     /// <summary>Criteria for determining a request match.</summary>
@@ -2114,6 +2273,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatchQueryP
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatch
 {
     /// <summary>Client request headers to match on.</summary>
@@ -2142,6 +2302,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatch
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRoute
 {
     /// <summary>Action to take if a match is determined.</summary>
@@ -2154,6 +2315,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRoute
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProviderSpec
 {
     /// <summary>Specification of a gRPC gateway route.</summary>
@@ -2174,6 +2336,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpec
 }
 
 /// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusAtProvider
 {
     /// <summary>ARN of the gateway route.</summary>
@@ -2226,6 +2389,7 @@ public partial class V1beta1GatewayRouteStatusAtProvider
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2254,6 +2418,7 @@ public partial class V1beta1GatewayRouteStatusConditions
 }
 
 /// <summary>GatewayRouteStatus defines the observed state of GatewayRoute.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteStatus
 {
     /// <summary></summary>
@@ -2269,8 +2434,9 @@ public partial class V1beta1GatewayRouteStatus
     public long? ObservedGeneration { get; set; }
 }
 
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 /// <summary>GatewayRoute is the Schema for the GatewayRoutes API. Provides an AWS App Mesh gateway route resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1GatewayRoute : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1GatewayRouteSpec>, IStatus<V1beta1GatewayRouteStatus>
 {
     public const string KubeApiVersion = "v1beta1";
