@@ -550,7 +550,7 @@ public partial class V1beta1FunctionURLStatusAtProvider
     [JsonPropertyName("functionName")]
     public string? FunctionName { get; set; }
 
-    /// <summary>The HTTP URL endpoint for the function in the format https://<url_id>.lambda-url.<region>.on.aws/.</summary>
+    /// <summary>The HTTP URL endpoint for the function in the format https://&lt;url_id&gt;.lambda-url.&lt;region&gt;.on.aws/.</summary>
     [JsonPropertyName("functionUrl")]
     public string? FunctionUrl { get; set; }
 

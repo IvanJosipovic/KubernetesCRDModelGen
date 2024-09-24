@@ -239,7 +239,7 @@ public partial class V1beta1V2ServiceSpecForProviderTemplateContainersLivenessPr
 
 public partial class V1beta1V2ServiceSpecForProviderTemplateContainersPorts
 {
-    /// <summary>Port number the container listens on. This must be a valid TCP port number, 0 < containerPort < 65536.</summary>
+    /// <summary>Port number the container listens on. This must be a valid TCP port number, 0 &lt; containerPort &lt; 65536.</summary>
     [JsonPropertyName("containerPort")]
     public double? ContainerPort { get; set; }
 
@@ -1077,7 +1077,7 @@ public partial class V1beta1V2ServiceSpecInitProviderTemplateContainersLivenessP
 
 public partial class V1beta1V2ServiceSpecInitProviderTemplateContainersPorts
 {
-    /// <summary>Port number the container listens on. This must be a valid TCP port number, 0 < containerPort < 65536.</summary>
+    /// <summary>Port number the container listens on. This must be a valid TCP port number, 0 &lt; containerPort &lt; 65536.</summary>
     [JsonPropertyName("containerPort")]
     public double? ContainerPort { get; set; }
 
@@ -2029,7 +2029,7 @@ public partial class V1beta1V2ServiceStatusAtProviderTemplateContainersLivenessP
 
 public partial class V1beta1V2ServiceStatusAtProviderTemplateContainersPorts
 {
-    /// <summary>Port number the container listens on. This must be a valid TCP port number, 0 < containerPort < 65536.</summary>
+    /// <summary>Port number the container listens on. This must be a valid TCP port number, 0 &lt; containerPort &lt; 65536.</summary>
     [JsonPropertyName("containerPort")]
     public double? ContainerPort { get; set; }
 

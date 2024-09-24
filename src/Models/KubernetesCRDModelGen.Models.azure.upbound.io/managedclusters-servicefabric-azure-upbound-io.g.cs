@@ -121,7 +121,7 @@ public partial class V1beta1ManagedClusterSpecForProviderNodeTypeVmSecrets
 
 public partial class V1beta1ManagedClusterSpecForProviderNodeType
 {
-    /// <summary>Sets the port range available for applications. Format is <from_port>-<to_port>, for example 10000-20000.</summary>
+    /// <summary>Sets the port range available for applications. Format is &lt;from_port&gt;-&lt;to_port&gt;, for example 10000-20000.</summary>
     [JsonPropertyName("applicationPortRange")]
     public string? ApplicationPortRange { get; set; }
 
@@ -137,7 +137,7 @@ public partial class V1beta1ManagedClusterSpecForProviderNodeType
     [JsonPropertyName("dataDiskType")]
     public string? DataDiskType { get; set; }
 
-    /// <summary>Sets the port range available for the OS. Format is <from_port>-<to_port>, for example 10000-20000. There has to be at least 255 ports available and cannot overlap with application_port_range..</summary>
+    /// <summary>Sets the port range available for the OS. Format is &lt;from_port&gt;-&lt;to_port&gt;, for example 10000-20000. There has to be at least 255 ports available and cannot overlap with application_port_range..</summary>
     [JsonPropertyName("ephemeralPortRange")]
     public string? EphemeralPortRange { get; set; }
 
@@ -475,7 +475,7 @@ public partial class V1beta1ManagedClusterSpecInitProviderNodeTypeVmSecrets
 
 public partial class V1beta1ManagedClusterSpecInitProviderNodeType
 {
-    /// <summary>Sets the port range available for applications. Format is <from_port>-<to_port>, for example 10000-20000.</summary>
+    /// <summary>Sets the port range available for applications. Format is &lt;from_port&gt;-&lt;to_port&gt;, for example 10000-20000.</summary>
     [JsonPropertyName("applicationPortRange")]
     public string? ApplicationPortRange { get; set; }
 
@@ -491,7 +491,7 @@ public partial class V1beta1ManagedClusterSpecInitProviderNodeType
     [JsonPropertyName("dataDiskType")]
     public string? DataDiskType { get; set; }
 
-    /// <summary>Sets the port range available for the OS. Format is <from_port>-<to_port>, for example 10000-20000. There has to be at least 255 ports available and cannot overlap with application_port_range..</summary>
+    /// <summary>Sets the port range available for the OS. Format is &lt;from_port&gt;-&lt;to_port&gt;, for example 10000-20000. There has to be at least 255 ports available and cannot overlap with application_port_range..</summary>
     [JsonPropertyName("ephemeralPortRange")]
     public string? EphemeralPortRange { get; set; }
 
@@ -889,7 +889,7 @@ public partial class V1beta1ManagedClusterStatusAtProviderNodeTypeVmSecrets
 
 public partial class V1beta1ManagedClusterStatusAtProviderNodeType
 {
-    /// <summary>Sets the port range available for applications. Format is <from_port>-<to_port>, for example 10000-20000.</summary>
+    /// <summary>Sets the port range available for applications. Format is &lt;from_port&gt;-&lt;to_port&gt;, for example 10000-20000.</summary>
     [JsonPropertyName("applicationPortRange")]
     public string? ApplicationPortRange { get; set; }
 
@@ -905,7 +905,7 @@ public partial class V1beta1ManagedClusterStatusAtProviderNodeType
     [JsonPropertyName("dataDiskType")]
     public string? DataDiskType { get; set; }
 
-    /// <summary>Sets the port range available for the OS. Format is <from_port>-<to_port>, for example 10000-20000. There has to be at least 255 ports available and cannot overlap with application_port_range..</summary>
+    /// <summary>Sets the port range available for the OS. Format is &lt;from_port&gt;-&lt;to_port&gt;, for example 10000-20000. There has to be at least 255 ports available and cannot overlap with application_port_range..</summary>
     [JsonPropertyName("ephemeralPortRange")]
     public string? EphemeralPortRange { get; set; }
 

@@ -186,7 +186,7 @@ public partial class V1alpha1AccessControlPolicySpecOAuthIntro
     [JsonPropertyName("forwardHeaders")]
     public IDictionary<string, string>? ForwardHeaders { get; set; }
 
-    /// <summary>TokenSource describes how to extract tokens from HTTP requests. If multiple sources are set, the order is the following: header > query > cookie.</summary>
+    /// <summary>TokenSource describes how to extract tokens from HTTP requests. If multiple sources are set, the order is the following: header &gt; query &gt; cookie.</summary>
     [JsonPropertyName("tokenSource")]
     public V1alpha1AccessControlPolicySpecOAuthIntroTokenSource TokenSource { get; set; }
 }

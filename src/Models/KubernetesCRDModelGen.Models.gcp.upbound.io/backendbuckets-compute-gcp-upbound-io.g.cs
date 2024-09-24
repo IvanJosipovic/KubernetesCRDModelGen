@@ -123,7 +123,7 @@ public partial class V1beta1BackendBucketSpecForProviderCdnPolicyCacheKeyPolicy
     [JsonPropertyName("includeHttpHeaders")]
     public IList<string>? IncludeHttpHeaders { get; set; }
 
-    /// <summary>Names of query string parameters to include in cache keys. Default parameters are always included. '&' and '=' will be percent encoded and not treated as delimiters.</summary>
+    /// <summary>Names of query string parameters to include in cache keys. Default parameters are always included. '&amp;' and '=' will be percent encoded and not treated as delimiters.</summary>
     [JsonPropertyName("queryStringWhitelist")]
     public IList<string>? QueryStringWhitelist { get; set; }
 }
@@ -434,7 +434,7 @@ public partial class V1beta1BackendBucketSpecInitProviderCdnPolicyCacheKeyPolicy
     [JsonPropertyName("includeHttpHeaders")]
     public IList<string>? IncludeHttpHeaders { get; set; }
 
-    /// <summary>Names of query string parameters to include in cache keys. Default parameters are always included. '&' and '=' will be percent encoded and not treated as delimiters.</summary>
+    /// <summary>Names of query string parameters to include in cache keys. Default parameters are always included. '&amp;' and '=' will be percent encoded and not treated as delimiters.</summary>
     [JsonPropertyName("queryStringWhitelist")]
     public IList<string>? QueryStringWhitelist { get; set; }
 }
@@ -836,7 +836,7 @@ public partial class V1beta1BackendBucketStatusAtProviderCdnPolicyCacheKeyPolicy
     [JsonPropertyName("includeHttpHeaders")]
     public IList<string>? IncludeHttpHeaders { get; set; }
 
-    /// <summary>Names of query string parameters to include in cache keys. Default parameters are always included. '&' and '=' will be percent encoded and not treated as delimiters.</summary>
+    /// <summary>Names of query string parameters to include in cache keys. Default parameters are always included. '&amp;' and '=' will be percent encoded and not treated as delimiters.</summary>
     [JsonPropertyName("queryStringWhitelist")]
     public IList<string>? QueryStringWhitelist { get; set; }
 }

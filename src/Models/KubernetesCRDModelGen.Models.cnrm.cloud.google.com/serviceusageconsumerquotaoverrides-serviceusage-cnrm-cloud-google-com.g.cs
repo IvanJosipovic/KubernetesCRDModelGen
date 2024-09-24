@@ -33,7 +33,7 @@ public partial class V1alpha1ServiceUsageConsumerQuotaOverrideSpec
     [JsonPropertyName("force")]
     public bool? Force { get; set; }
 
-    /// <summary>Immutable. The limit on the metric, e.g. '/project/region'.  ~> Make sure that 'limit' is in a format that doesn't start with '1/' or contain curly braces. E.g. use '/project/user' instead of '1/{project}/{user}'.</summary>
+    /// <summary>Immutable. The limit on the metric, e.g. '/project/region'.  ~&gt; Make sure that 'limit' is in a format that doesn't start with '1/' or contain curly braces. E.g. use '/project/user' instead of '1/{project}/{user}'.</summary>
     [JsonPropertyName("limit")]
     public string Limit { get; set; }
 

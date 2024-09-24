@@ -85,7 +85,7 @@ public partial class V1beta1ClassifierSpecForProviderXmlClassifier
     [JsonPropertyName("classification")]
     public string? Classification { get; set; }
 
-    /// <summary>The XML tag designating the element that contains each record in an XML document being parsed. Note that this cannot identify a self-closing element (closed by />). An empty row element that contains only attributes can be parsed as long as it ends with a closing tag (for example, <row item_a="A" item_b="B"></row> is okay, but <row item_a="A" item_b="B" /> is not).</summary>
+    /// <summary>The XML tag designating the element that contains each record in an XML document being parsed. Note that this cannot identify a self-closing element (closed by /&gt;). An empty row element that contains only attributes can be parsed as long as it ends with a closing tag (for example, &lt;row item_a="A" item_b="B"&gt;&lt;/row&gt; is okay, but &lt;row item_a="A" item_b="B" /&gt; is not).</summary>
     [JsonPropertyName("rowTag")]
     public string? RowTag { get; set; }
 }
@@ -180,7 +180,7 @@ public partial class V1beta1ClassifierSpecInitProviderXmlClassifier
     [JsonPropertyName("classification")]
     public string? Classification { get; set; }
 
-    /// <summary>The XML tag designating the element that contains each record in an XML document being parsed. Note that this cannot identify a self-closing element (closed by />). An empty row element that contains only attributes can be parsed as long as it ends with a closing tag (for example, <row item_a="A" item_b="B"></row> is okay, but <row item_a="A" item_b="B" /> is not).</summary>
+    /// <summary>The XML tag designating the element that contains each record in an XML document being parsed. Note that this cannot identify a self-closing element (closed by /&gt;). An empty row element that contains only attributes can be parsed as long as it ends with a closing tag (for example, &lt;row item_a="A" item_b="B"&gt;&lt;/row&gt; is okay, but &lt;row item_a="A" item_b="B" /&gt; is not).</summary>
     [JsonPropertyName("rowTag")]
     public string? RowTag { get; set; }
 }
@@ -454,7 +454,7 @@ public partial class V1beta1ClassifierStatusAtProviderXmlClassifier
     [JsonPropertyName("classification")]
     public string? Classification { get; set; }
 
-    /// <summary>The XML tag designating the element that contains each record in an XML document being parsed. Note that this cannot identify a self-closing element (closed by />). An empty row element that contains only attributes can be parsed as long as it ends with a closing tag (for example, <row item_a="A" item_b="B"></row> is okay, but <row item_a="A" item_b="B" /> is not).</summary>
+    /// <summary>The XML tag designating the element that contains each record in an XML document being parsed. Note that this cannot identify a self-closing element (closed by /&gt;). An empty row element that contains only attributes can be parsed as long as it ends with a closing tag (for example, &lt;row item_a="A" item_b="B"&gt;&lt;/row&gt; is okay, but &lt;row item_a="A" item_b="B" /&gt; is not).</summary>
     [JsonPropertyName("rowTag")]
     public string? RowTag { get; set; }
 }

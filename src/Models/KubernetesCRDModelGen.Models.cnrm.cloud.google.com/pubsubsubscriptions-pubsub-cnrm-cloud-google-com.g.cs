@@ -130,7 +130,7 @@ public partial class V1beta1PubSubSubscriptionSpecExpirationPolicy
 
 public partial class V1beta1PubSubSubscriptionSpecPushConfigNoWrapper
 {
-    /// <summary>When true, writes the Pub/Sub message metadata to 'x-goog-pubsub-<KEY>:<VAL>' headers of the HTTP request. Writes the Pub/Sub message attributes to '<KEY>:<VAL>' headers of the HTTP request.</summary>
+    /// <summary>When true, writes the Pub/Sub message metadata to 'x-goog-pubsub-&lt;KEY&gt;:&lt;VAL&gt;' headers of the HTTP request. Writes the Pub/Sub message attributes to '&lt;KEY&gt;:&lt;VAL&gt;' headers of the HTTP request.</summary>
     [JsonPropertyName("writeMetadata")]
     public bool WriteMetadata { get; set; }
 }

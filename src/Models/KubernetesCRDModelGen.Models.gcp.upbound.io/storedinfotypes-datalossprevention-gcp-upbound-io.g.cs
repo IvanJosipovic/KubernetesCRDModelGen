@@ -78,7 +78,7 @@ public partial class V1beta1StoredInfoTypeSpecForProviderLargeCustomDictionaryBi
 
 public partial class V1beta1StoredInfoTypeSpecForProviderLargeCustomDictionaryCloudStorageFileSet
 {
-    /// <summary>The url, in the format gs://<bucket>/<path>. Trailing wildcard in the path is allowed.</summary>
+    /// <summary>The url, in the format gs://&lt;bucket&gt;/&lt;path&gt;. Trailing wildcard in the path is allowed.</summary>
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
@@ -207,7 +207,7 @@ public partial class V1beta1StoredInfoTypeSpecInitProviderLargeCustomDictionaryB
 
 public partial class V1beta1StoredInfoTypeSpecInitProviderLargeCustomDictionaryCloudStorageFileSet
 {
-    /// <summary>The url, in the format gs://<bucket>/<path>. Trailing wildcard in the path is allowed.</summary>
+    /// <summary>The url, in the format gs://&lt;bucket&gt;/&lt;path&gt;. Trailing wildcard in the path is allowed.</summary>
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
@@ -519,7 +519,7 @@ public partial class V1beta1StoredInfoTypeStatusAtProviderLargeCustomDictionaryB
 
 public partial class V1beta1StoredInfoTypeStatusAtProviderLargeCustomDictionaryCloudStorageFileSet
 {
-    /// <summary>The url, in the format gs://<bucket>/<path>. Trailing wildcard in the path is allowed.</summary>
+    /// <summary>The url, in the format gs://&lt;bucket&gt;/&lt;path&gt;. Trailing wildcard in the path is allowed.</summary>
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }

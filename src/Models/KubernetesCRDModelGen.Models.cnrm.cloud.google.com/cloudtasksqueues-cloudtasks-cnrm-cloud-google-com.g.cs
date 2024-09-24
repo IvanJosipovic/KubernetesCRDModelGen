@@ -59,7 +59,7 @@ public partial class V1alpha1CloudTasksQueueSpecRateLimits
 
 public partial class V1alpha1CloudTasksQueueSpecRetryConfig
 {
-    /// <summary>Number of attempts per task.  Cloud Tasks will attempt the task maxAttempts times (that is, if the first attempt fails, then there will be maxAttempts - 1 retries). Must be >= -1.  If unspecified when the queue is created, Cloud Tasks will pick the default.  -1 indicates unlimited attempts.</summary>
+    /// <summary>Number of attempts per task.  Cloud Tasks will attempt the task maxAttempts times (that is, if the first attempt fails, then there will be maxAttempts - 1 retries). Must be &gt;= -1.  If unspecified when the queue is created, Cloud Tasks will pick the default.  -1 indicates unlimited attempts.</summary>
     [JsonPropertyName("maxAttempts")]
     public int? MaxAttempts { get; set; }
 

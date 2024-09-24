@@ -72,7 +72,7 @@ public partial class V1beta1SLOSpecForProviderRequestBasedSliDistributionCut
     [JsonPropertyName("distributionFilter")]
     public string? DistributionFilter { get; set; }
 
-    /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min <= x <= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min <= X <= range.max for a good window. Structure is documented below.</summary>
+    /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min &lt;= x &lt;= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
     [JsonPropertyName("range")]
     public IList<V1beta1SLOSpecForProviderRequestBasedSliDistributionCutRange>? Range { get; set; }
 }
@@ -249,7 +249,7 @@ public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThres
     [JsonPropertyName("distributionFilter")]
     public string? DistributionFilter { get; set; }
 
-    /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min <= x <= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min <= X <= range.max for a good window. Structure is documented below.</summary>
+    /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min &lt;= x &lt;= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
     [JsonPropertyName("range")]
     public IList<V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange>? Range { get; set; }
 }
@@ -308,11 +308,11 @@ public partial class V1beta1SLOSpecForProviderWindowsBasedSliMetricMeanInRangeRa
 
 public partial class V1beta1SLOSpecForProviderWindowsBasedSliMetricMeanInRange
 {
-    /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min <= x <= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min <= X <= range.max for a good window. Structure is documented below.</summary>
+    /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min &lt;= x &lt;= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
     [JsonPropertyName("range")]
     public IList<V1beta1SLOSpecForProviderWindowsBasedSliMetricMeanInRangeRange>? Range { get; set; }
 
-    /// <summary>A monitoring filter specifying the TimeSeries to use for evaluating window quality. The provided TimeSeries must have ValueType = INT64 or ValueType = DOUBLE and MetricKind = GAUGE. Summed value X should satisfy range.min <= X <= range.max for a good window.</summary>
+    /// <summary>A monitoring filter specifying the TimeSeries to use for evaluating window quality. The provided TimeSeries must have ValueType = INT64 or ValueType = DOUBLE and MetricKind = GAUGE. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window.</summary>
     [JsonPropertyName("timeSeries")]
     public string? TimeSeries { get; set; }
 }
@@ -330,11 +330,11 @@ public partial class V1beta1SLOSpecForProviderWindowsBasedSliMetricSumInRangeRan
 
 public partial class V1beta1SLOSpecForProviderWindowsBasedSliMetricSumInRange
 {
-    /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min <= x <= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min <= X <= range.max for a good window. Structure is documented below.</summary>
+    /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min &lt;= x &lt;= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
     [JsonPropertyName("range")]
     public IList<V1beta1SLOSpecForProviderWindowsBasedSliMetricSumInRangeRange>? Range { get; set; }
 
-    /// <summary>A monitoring filter specifying the TimeSeries to use for evaluating window quality. The provided TimeSeries must have ValueType = INT64 or ValueType = DOUBLE and MetricKind = GAUGE. Summed value X should satisfy range.min <= X <= range.max for a good window.</summary>
+    /// <summary>A monitoring filter specifying the TimeSeries to use for evaluating window quality. The provided TimeSeries must have ValueType = INT64 or ValueType = DOUBLE and MetricKind = GAUGE. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window.</summary>
     [JsonPropertyName("timeSeries")]
     public string? TimeSeries { get; set; }
 }
@@ -349,11 +349,11 @@ public partial class V1beta1SLOSpecForProviderWindowsBasedSli
     [JsonPropertyName("goodTotalRatioThreshold")]
     public IList<V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThreshold>? GoodTotalRatioThreshold { get; set; }
 
-    /// <summary>Criterion that describes a window as good if the metric's value is in a good range, averaged across returned streams. One of good_bad_metric_filter, good_total_ratio_threshold, metric_mean_in_range, metric_sum_in_range must be set for windows_based_sli. Average value X of time_series should satisfy range.min <= X <= range.max for a good window. Structure is documented below.</summary>
+    /// <summary>Criterion that describes a window as good if the metric's value is in a good range, averaged across returned streams. One of good_bad_metric_filter, good_total_ratio_threshold, metric_mean_in_range, metric_sum_in_range must be set for windows_based_sli. Average value X of time_series should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
     [JsonPropertyName("metricMeanInRange")]
     public IList<V1beta1SLOSpecForProviderWindowsBasedSliMetricMeanInRange>? MetricMeanInRange { get; set; }
 
-    /// <summary>Criterion that describes a window as good if the metric's value is in a good range, summed across returned streams. Summed value X of time_series should satisfy range.min <= X <= range.max for a good window. One of good_bad_metric_filter, good_total_ratio_threshold, metric_mean_in_range, metric_sum_in_range must be set for windows_based_sli. Structure is documented below.</summary>
+    /// <summary>Criterion that describes a window as good if the metric's value is in a good range, summed across returned streams. Summed value X of time_series should satisfy range.min &lt;= X &lt;= range.max for a good window. One of good_bad_metric_filter, good_total_ratio_threshold, metric_mean_in_range, metric_sum_in_range must be set for windows_based_sli. Structure is documented below.</summary>
     [JsonPropertyName("metricSumInRange")]
     public IList<V1beta1SLOSpecForProviderWindowsBasedSliMetricSumInRange>? MetricSumInRange { get; set; }
 
@@ -376,7 +376,7 @@ public partial class V1beta1SLOSpecForProvider
     [JsonPropertyName("displayName")]
     public string? DisplayName { get; set; }
 
-    /// <summary>The fraction of service that must be good in order for this objective to be met. 0 < goal <= 0.999</summary>
+    /// <summary>The fraction of service that must be good in order for this objective to be met. 0 &lt; goal &lt;= 0.999</summary>
     [JsonPropertyName("goal")]
     public double? Goal { get; set; }
 
@@ -471,7 +471,7 @@ public partial class V1beta1SLOSpecInitProviderRequestBasedSliDistributionCut
     [JsonPropertyName("distributionFilter")]
     public string? DistributionFilter { get; set; }
 
-    /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min <= x <= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min <= X <= range.max for a good window. Structure is documented below.</summary>
+    /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min &lt;= x &lt;= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
     [JsonPropertyName("range")]
     public IList<V1beta1SLOSpecInitProviderRequestBasedSliDistributionCutRange>? Range { get; set; }
 }
@@ -648,7 +648,7 @@ public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThre
     [JsonPropertyName("distributionFilter")]
     public string? DistributionFilter { get; set; }
 
-    /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min <= x <= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min <= X <= range.max for a good window. Structure is documented below.</summary>
+    /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min &lt;= x &lt;= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
     [JsonPropertyName("range")]
     public IList<V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange>? Range { get; set; }
 }
@@ -707,11 +707,11 @@ public partial class V1beta1SLOSpecInitProviderWindowsBasedSliMetricMeanInRangeR
 
 public partial class V1beta1SLOSpecInitProviderWindowsBasedSliMetricMeanInRange
 {
-    /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min <= x <= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min <= X <= range.max for a good window. Structure is documented below.</summary>
+    /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min &lt;= x &lt;= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
     [JsonPropertyName("range")]
     public IList<V1beta1SLOSpecInitProviderWindowsBasedSliMetricMeanInRangeRange>? Range { get; set; }
 
-    /// <summary>A monitoring filter specifying the TimeSeries to use for evaluating window quality. The provided TimeSeries must have ValueType = INT64 or ValueType = DOUBLE and MetricKind = GAUGE. Summed value X should satisfy range.min <= X <= range.max for a good window.</summary>
+    /// <summary>A monitoring filter specifying the TimeSeries to use for evaluating window quality. The provided TimeSeries must have ValueType = INT64 or ValueType = DOUBLE and MetricKind = GAUGE. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window.</summary>
     [JsonPropertyName("timeSeries")]
     public string? TimeSeries { get; set; }
 }
@@ -729,11 +729,11 @@ public partial class V1beta1SLOSpecInitProviderWindowsBasedSliMetricSumInRangeRa
 
 public partial class V1beta1SLOSpecInitProviderWindowsBasedSliMetricSumInRange
 {
-    /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min <= x <= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min <= X <= range.max for a good window. Structure is documented below.</summary>
+    /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min &lt;= x &lt;= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
     [JsonPropertyName("range")]
     public IList<V1beta1SLOSpecInitProviderWindowsBasedSliMetricSumInRangeRange>? Range { get; set; }
 
-    /// <summary>A monitoring filter specifying the TimeSeries to use for evaluating window quality. The provided TimeSeries must have ValueType = INT64 or ValueType = DOUBLE and MetricKind = GAUGE. Summed value X should satisfy range.min <= X <= range.max for a good window.</summary>
+    /// <summary>A monitoring filter specifying the TimeSeries to use for evaluating window quality. The provided TimeSeries must have ValueType = INT64 or ValueType = DOUBLE and MetricKind = GAUGE. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window.</summary>
     [JsonPropertyName("timeSeries")]
     public string? TimeSeries { get; set; }
 }
@@ -748,11 +748,11 @@ public partial class V1beta1SLOSpecInitProviderWindowsBasedSli
     [JsonPropertyName("goodTotalRatioThreshold")]
     public IList<V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThreshold>? GoodTotalRatioThreshold { get; set; }
 
-    /// <summary>Criterion that describes a window as good if the metric's value is in a good range, averaged across returned streams. One of good_bad_metric_filter, good_total_ratio_threshold, metric_mean_in_range, metric_sum_in_range must be set for windows_based_sli. Average value X of time_series should satisfy range.min <= X <= range.max for a good window. Structure is documented below.</summary>
+    /// <summary>Criterion that describes a window as good if the metric's value is in a good range, averaged across returned streams. One of good_bad_metric_filter, good_total_ratio_threshold, metric_mean_in_range, metric_sum_in_range must be set for windows_based_sli. Average value X of time_series should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
     [JsonPropertyName("metricMeanInRange")]
     public IList<V1beta1SLOSpecInitProviderWindowsBasedSliMetricMeanInRange>? MetricMeanInRange { get; set; }
 
-    /// <summary>Criterion that describes a window as good if the metric's value is in a good range, summed across returned streams. Summed value X of time_series should satisfy range.min <= X <= range.max for a good window. One of good_bad_metric_filter, good_total_ratio_threshold, metric_mean_in_range, metric_sum_in_range must be set for windows_based_sli. Structure is documented below.</summary>
+    /// <summary>Criterion that describes a window as good if the metric's value is in a good range, summed across returned streams. Summed value X of time_series should satisfy range.min &lt;= X &lt;= range.max for a good window. One of good_bad_metric_filter, good_total_ratio_threshold, metric_mean_in_range, metric_sum_in_range must be set for windows_based_sli. Structure is documented below.</summary>
     [JsonPropertyName("metricSumInRange")]
     public IList<V1beta1SLOSpecInitProviderWindowsBasedSliMetricSumInRange>? MetricSumInRange { get; set; }
 
@@ -775,7 +775,7 @@ public partial class V1beta1SLOSpecInitProvider
     [JsonPropertyName("displayName")]
     public string? DisplayName { get; set; }
 
-    /// <summary>The fraction of service that must be good in order for this objective to be met. 0 < goal <= 0.999</summary>
+    /// <summary>The fraction of service that must be good in order for this objective to be met. 0 &lt; goal &lt;= 0.999</summary>
     [JsonPropertyName("goal")]
     public double? Goal { get; set; }
 
@@ -1053,7 +1053,7 @@ public partial class V1beta1SLOStatusAtProviderRequestBasedSliDistributionCut
     [JsonPropertyName("distributionFilter")]
     public string? DistributionFilter { get; set; }
 
-    /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min <= x <= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min <= X <= range.max for a good window. Structure is documented below.</summary>
+    /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min &lt;= x &lt;= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
     [JsonPropertyName("range")]
     public IList<V1beta1SLOStatusAtProviderRequestBasedSliDistributionCutRange>? Range { get; set; }
 }
@@ -1138,7 +1138,7 @@ public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThre
     [JsonPropertyName("distributionFilter")]
     public string? DistributionFilter { get; set; }
 
-    /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min <= x <= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min <= X <= range.max for a good window. Structure is documented below.</summary>
+    /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min &lt;= x &lt;= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
     [JsonPropertyName("range")]
     public IList<V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange>? Range { get; set; }
 }
@@ -1197,11 +1197,11 @@ public partial class V1beta1SLOStatusAtProviderWindowsBasedSliMetricMeanInRangeR
 
 public partial class V1beta1SLOStatusAtProviderWindowsBasedSliMetricMeanInRange
 {
-    /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min <= x <= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min <= X <= range.max for a good window. Structure is documented below.</summary>
+    /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min &lt;= x &lt;= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
     [JsonPropertyName("range")]
     public IList<V1beta1SLOStatusAtProviderWindowsBasedSliMetricMeanInRangeRange>? Range { get; set; }
 
-    /// <summary>A monitoring filter specifying the TimeSeries to use for evaluating window quality. The provided TimeSeries must have ValueType = INT64 or ValueType = DOUBLE and MetricKind = GAUGE. Summed value X should satisfy range.min <= X <= range.max for a good window.</summary>
+    /// <summary>A monitoring filter specifying the TimeSeries to use for evaluating window quality. The provided TimeSeries must have ValueType = INT64 or ValueType = DOUBLE and MetricKind = GAUGE. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window.</summary>
     [JsonPropertyName("timeSeries")]
     public string? TimeSeries { get; set; }
 }
@@ -1219,11 +1219,11 @@ public partial class V1beta1SLOStatusAtProviderWindowsBasedSliMetricSumInRangeRa
 
 public partial class V1beta1SLOStatusAtProviderWindowsBasedSliMetricSumInRange
 {
-    /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min <= x <= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min <= X <= range.max for a good window. Structure is documented below.</summary>
+    /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min &lt;= x &lt;= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
     [JsonPropertyName("range")]
     public IList<V1beta1SLOStatusAtProviderWindowsBasedSliMetricSumInRangeRange>? Range { get; set; }
 
-    /// <summary>A monitoring filter specifying the TimeSeries to use for evaluating window quality. The provided TimeSeries must have ValueType = INT64 or ValueType = DOUBLE and MetricKind = GAUGE. Summed value X should satisfy range.min <= X <= range.max for a good window.</summary>
+    /// <summary>A monitoring filter specifying the TimeSeries to use for evaluating window quality. The provided TimeSeries must have ValueType = INT64 or ValueType = DOUBLE and MetricKind = GAUGE. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window.</summary>
     [JsonPropertyName("timeSeries")]
     public string? TimeSeries { get; set; }
 }
@@ -1238,11 +1238,11 @@ public partial class V1beta1SLOStatusAtProviderWindowsBasedSli
     [JsonPropertyName("goodTotalRatioThreshold")]
     public IList<V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThreshold>? GoodTotalRatioThreshold { get; set; }
 
-    /// <summary>Criterion that describes a window as good if the metric's value is in a good range, averaged across returned streams. One of good_bad_metric_filter, good_total_ratio_threshold, metric_mean_in_range, metric_sum_in_range must be set for windows_based_sli. Average value X of time_series should satisfy range.min <= X <= range.max for a good window. Structure is documented below.</summary>
+    /// <summary>Criterion that describes a window as good if the metric's value is in a good range, averaged across returned streams. One of good_bad_metric_filter, good_total_ratio_threshold, metric_mean_in_range, metric_sum_in_range must be set for windows_based_sli. Average value X of time_series should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
     [JsonPropertyName("metricMeanInRange")]
     public IList<V1beta1SLOStatusAtProviderWindowsBasedSliMetricMeanInRange>? MetricMeanInRange { get; set; }
 
-    /// <summary>Criterion that describes a window as good if the metric's value is in a good range, summed across returned streams. Summed value X of time_series should satisfy range.min <= X <= range.max for a good window. One of good_bad_metric_filter, good_total_ratio_threshold, metric_mean_in_range, metric_sum_in_range must be set for windows_based_sli. Structure is documented below.</summary>
+    /// <summary>Criterion that describes a window as good if the metric's value is in a good range, summed across returned streams. Summed value X of time_series should satisfy range.min &lt;= X &lt;= range.max for a good window. One of good_bad_metric_filter, good_total_ratio_threshold, metric_mean_in_range, metric_sum_in_range must be set for windows_based_sli. Structure is documented below.</summary>
     [JsonPropertyName("metricSumInRange")]
     public IList<V1beta1SLOStatusAtProviderWindowsBasedSliMetricSumInRange>? MetricSumInRange { get; set; }
 
@@ -1265,7 +1265,7 @@ public partial class V1beta1SLOStatusAtProvider
     [JsonPropertyName("displayName")]
     public string? DisplayName { get; set; }
 
-    /// <summary>The fraction of service that must be good in order for this objective to be met. 0 < goal <= 0.999</summary>
+    /// <summary>The fraction of service that must be good in order for this objective to be met. 0 &lt; goal &lt;= 0.999</summary>
     [JsonPropertyName("goal")]
     public double? Goal { get; set; }
 

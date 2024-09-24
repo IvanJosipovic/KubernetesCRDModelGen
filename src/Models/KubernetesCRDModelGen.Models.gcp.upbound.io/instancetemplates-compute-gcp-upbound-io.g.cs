@@ -219,11 +219,11 @@ public partial class V1beta1InstanceTemplateSpecForProviderDisk
     [JsonPropertyName("resourcePolicies")]
     public IList<string>? ResourcePolicies { get; set; }
 
-    /// <summary>The name (not self_link) of the disk (such as those managed by google_compute_disk) to attach. ~> Note: Either source, source_image, or source_snapshot is required in a disk block unless the disk type is local-ssd. Check the API docs for details.</summary>
+    /// <summary>The name (not self_link) of the disk (such as those managed by google_compute_disk) to attach. ~&gt; Note: Either source, source_image, or source_snapshot is required in a disk block unless the disk type is local-ssd. Check the API docs for details.</summary>
     [JsonPropertyName("source")]
     public string? Source { get; set; }
 
-    /// <summary>The image from which to initialize this disk. This can be one of: the image's self_link, projects/{project}/global/images/{image}, projects/{project}/global/images/family/{family}, global/images/{image}, global/images/family/{family}, family/{family}, {project}/{family}, {project}/{image}, {family}, or {image}. ~> Note: Either source, source_image, or source_snapshot is required in a disk block unless the disk type is local-ssd. Check the API docs for details.</summary>
+    /// <summary>The image from which to initialize this disk. This can be one of: the image's self_link, projects/{project}/global/images/{image}, projects/{project}/global/images/family/{family}, global/images/{image}, global/images/family/{family}, family/{family}, {project}/{family}, {project}/{image}, {family}, or {image}. ~&gt; Note: Either source, source_image, or source_snapshot is required in a disk block unless the disk type is local-ssd. Check the API docs for details.</summary>
     [JsonPropertyName("sourceImage")]
     public string? SourceImage { get; set; }
 
@@ -239,7 +239,7 @@ public partial class V1beta1InstanceTemplateSpecForProviderDisk
     [JsonPropertyName("sourceSelector")]
     public V1beta1InstanceTemplateSpecForProviderDiskSourceSelector? SourceSelector { get; set; }
 
-    /// <summary>The source snapshot to create this disk. ~> Note: Either source, source_image, or source_snapshot is required in a disk block unless the disk type is local-ssd. Check the API docs for details.</summary>
+    /// <summary>The source snapshot to create this disk. ~&gt; Note: Either source, source_image, or source_snapshot is required in a disk block unless the disk type is local-ssd. Check the API docs for details.</summary>
     [JsonPropertyName("sourceSnapshot")]
     public string? SourceSnapshot { get; set; }
 
@@ -1089,11 +1089,11 @@ public partial class V1beta1InstanceTemplateSpecInitProviderDisk
     [JsonPropertyName("resourcePolicies")]
     public IList<string>? ResourcePolicies { get; set; }
 
-    /// <summary>The name (not self_link) of the disk (such as those managed by google_compute_disk) to attach. ~> Note: Either source, source_image, or source_snapshot is required in a disk block unless the disk type is local-ssd. Check the API docs for details.</summary>
+    /// <summary>The name (not self_link) of the disk (such as those managed by google_compute_disk) to attach. ~&gt; Note: Either source, source_image, or source_snapshot is required in a disk block unless the disk type is local-ssd. Check the API docs for details.</summary>
     [JsonPropertyName("source")]
     public string? Source { get; set; }
 
-    /// <summary>The image from which to initialize this disk. This can be one of: the image's self_link, projects/{project}/global/images/{image}, projects/{project}/global/images/family/{family}, global/images/{image}, global/images/family/{family}, family/{family}, {project}/{family}, {project}/{image}, {family}, or {image}. ~> Note: Either source, source_image, or source_snapshot is required in a disk block unless the disk type is local-ssd. Check the API docs for details.</summary>
+    /// <summary>The image from which to initialize this disk. This can be one of: the image's self_link, projects/{project}/global/images/{image}, projects/{project}/global/images/family/{family}, global/images/{image}, global/images/family/{family}, family/{family}, {project}/{family}, {project}/{image}, {family}, or {image}. ~&gt; Note: Either source, source_image, or source_snapshot is required in a disk block unless the disk type is local-ssd. Check the API docs for details.</summary>
     [JsonPropertyName("sourceImage")]
     public string? SourceImage { get; set; }
 
@@ -1109,7 +1109,7 @@ public partial class V1beta1InstanceTemplateSpecInitProviderDisk
     [JsonPropertyName("sourceSelector")]
     public V1beta1InstanceTemplateSpecInitProviderDiskSourceSelector? SourceSelector { get; set; }
 
-    /// <summary>The source snapshot to create this disk. ~> Note: Either source, source_image, or source_snapshot is required in a disk block unless the disk type is local-ssd. Check the API docs for details.</summary>
+    /// <summary>The source snapshot to create this disk. ~&gt; Note: Either source, source_image, or source_snapshot is required in a disk block unless the disk type is local-ssd. Check the API docs for details.</summary>
     [JsonPropertyName("sourceSnapshot")]
     public string? SourceSnapshot { get; set; }
 
@@ -2050,11 +2050,11 @@ public partial class V1beta1InstanceTemplateStatusAtProviderDisk
     [JsonPropertyName("resourcePolicies")]
     public IList<string>? ResourcePolicies { get; set; }
 
-    /// <summary>The name (not self_link) of the disk (such as those managed by google_compute_disk) to attach. ~> Note: Either source, source_image, or source_snapshot is required in a disk block unless the disk type is local-ssd. Check the API docs for details.</summary>
+    /// <summary>The name (not self_link) of the disk (such as those managed by google_compute_disk) to attach. ~&gt; Note: Either source, source_image, or source_snapshot is required in a disk block unless the disk type is local-ssd. Check the API docs for details.</summary>
     [JsonPropertyName("source")]
     public string? Source { get; set; }
 
-    /// <summary>The image from which to initialize this disk. This can be one of: the image's self_link, projects/{project}/global/images/{image}, projects/{project}/global/images/family/{family}, global/images/{image}, global/images/family/{family}, family/{family}, {project}/{family}, {project}/{image}, {family}, or {image}. ~> Note: Either source, source_image, or source_snapshot is required in a disk block unless the disk type is local-ssd. Check the API docs for details.</summary>
+    /// <summary>The image from which to initialize this disk. This can be one of: the image's self_link, projects/{project}/global/images/{image}, projects/{project}/global/images/family/{family}, global/images/{image}, global/images/family/{family}, family/{family}, {project}/{family}, {project}/{image}, {family}, or {image}. ~&gt; Note: Either source, source_image, or source_snapshot is required in a disk block unless the disk type is local-ssd. Check the API docs for details.</summary>
     [JsonPropertyName("sourceImage")]
     public string? SourceImage { get; set; }
 
@@ -2062,7 +2062,7 @@ public partial class V1beta1InstanceTemplateStatusAtProviderDisk
     [JsonPropertyName("sourceImageEncryptionKey")]
     public IList<V1beta1InstanceTemplateStatusAtProviderDiskSourceImageEncryptionKey>? SourceImageEncryptionKey { get; set; }
 
-    /// <summary>The source snapshot to create this disk. ~> Note: Either source, source_image, or source_snapshot is required in a disk block unless the disk type is local-ssd. Check the API docs for details.</summary>
+    /// <summary>The source snapshot to create this disk. ~&gt; Note: Either source, source_image, or source_snapshot is required in a disk block unless the disk type is local-ssd. Check the API docs for details.</summary>
     [JsonPropertyName("sourceSnapshot")]
     public string? SourceSnapshot { get; set; }
 

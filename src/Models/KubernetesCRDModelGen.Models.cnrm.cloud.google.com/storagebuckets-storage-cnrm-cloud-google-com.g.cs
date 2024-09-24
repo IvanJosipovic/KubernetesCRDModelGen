@@ -213,7 +213,7 @@ public partial class V1beta1StorageBucketSpec
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>The bucket's Access & Storage Logs configuration.</summary>
+    /// <summary>The bucket's Access &amp; Storage Logs configuration.</summary>
     [JsonPropertyName("logging")]
     public V1beta1StorageBucketSpecLogging? Logging { get; set; }
 
@@ -313,7 +313,7 @@ public partial class V1beta1StorageBucketStatus
     [JsonPropertyName("selfLink")]
     public string? SelfLink { get; set; }
 
-    /// <summary>The base URL of the bucket, in the format gs://<bucket-name>.</summary>
+    /// <summary>The base URL of the bucket, in the format gs://&lt;bucket-name&gt;.</summary>
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }

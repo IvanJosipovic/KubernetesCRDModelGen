@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.networkconnectivity.cnrm.cloud.google.com;
 public partial class V1alpha1NetworkConnectivityServiceConnectionPolicySpecNetworkRef
 {
-    /// <summary>A reference to an externally managed Compute Network resource. Should be in the format `projects/<projectID>/global/networks/<network>`.</summary>
+    /// <summary>A reference to an externally managed Compute Network resource. Should be in the format `projects/&lt;projectID&gt;/global/networks/&lt;network&gt;`.</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 

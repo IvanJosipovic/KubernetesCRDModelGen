@@ -594,7 +594,7 @@ public partial class V1beta1CertificateAuthoritySpecForProvider
     [JsonPropertyName("subordinateConfig")]
     public IList<V1beta1CertificateAuthoritySpecForProviderSubordinateConfig>? SubordinateConfig { get; set; }
 
-    /// <summary>The Type of this CertificateAuthority. ~> Note: For SUBORDINATE Certificate Authorities, they need to be activated before they can issue certificates. Default value is SELF_SIGNED. Possible values are: SELF_SIGNED, SUBORDINATE.</summary>
+    /// <summary>The Type of this CertificateAuthority. ~&gt; Note: For SUBORDINATE Certificate Authorities, they need to be activated before they can issue certificates. Default value is SELF_SIGNED. Possible values are: SELF_SIGNED, SUBORDINATE.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -1067,7 +1067,7 @@ public partial class V1beta1CertificateAuthoritySpecInitProvider
     [JsonPropertyName("subordinateConfig")]
     public IList<V1beta1CertificateAuthoritySpecInitProviderSubordinateConfig>? SubordinateConfig { get; set; }
 
-    /// <summary>The Type of this CertificateAuthority. ~> Note: For SUBORDINATE Certificate Authorities, they need to be activated before they can issue certificates. Default value is SELF_SIGNED. Possible values are: SELF_SIGNED, SUBORDINATE.</summary>
+    /// <summary>The Type of this CertificateAuthority. ~&gt; Note: For SUBORDINATE Certificate Authorities, they need to be activated before they can issue certificates. Default value is SELF_SIGNED. Possible values are: SELF_SIGNED, SUBORDINATE.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -1674,7 +1674,7 @@ public partial class V1beta1CertificateAuthorityStatusAtProvider
     [JsonPropertyName("terraformLabels")]
     public IDictionary<string, string>? TerraformLabels { get; set; }
 
-    /// <summary>The Type of this CertificateAuthority. ~> Note: For SUBORDINATE Certificate Authorities, they need to be activated before they can issue certificates. Default value is SELF_SIGNED. Possible values are: SELF_SIGNED, SUBORDINATE.</summary>
+    /// <summary>The Type of this CertificateAuthority. ~&gt; Note: For SUBORDINATE Certificate Authorities, they need to be activated before they can issue certificates. Default value is SELF_SIGNED. Possible values are: SELF_SIGNED, SUBORDINATE.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 

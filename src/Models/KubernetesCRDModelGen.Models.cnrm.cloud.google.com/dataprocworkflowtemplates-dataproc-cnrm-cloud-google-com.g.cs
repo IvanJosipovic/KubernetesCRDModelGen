@@ -734,7 +734,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("machineType")]
     public string? MachineType { get; set; }
 
-    /// <summary>Immutable. Optional. Specifies the minimum cpu platform for the Instance Group. See [Dataproc -> Minimum CPU Platform](https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).</summary>
+    /// <summary>Immutable. Optional. Specifies the minimum cpu platform for the Instance Group. See [Dataproc -&gt; Minimum CPU Platform](https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).</summary>
     [JsonPropertyName("minCpuPlatform")]
     public string? MinCpuPlatform { get; set; }
 
@@ -806,7 +806,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("machineType")]
     public string? MachineType { get; set; }
 
-    /// <summary>Immutable. Optional. Specifies the minimum cpu platform for the Instance Group. See [Dataproc -> Minimum CPU Platform](https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).</summary>
+    /// <summary>Immutable. Optional. Specifies the minimum cpu platform for the Instance Group. See [Dataproc -&gt; Minimum CPU Platform](https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).</summary>
     [JsonPropertyName("minCpuPlatform")]
     public string? MinCpuPlatform { get; set; }
 
@@ -1008,7 +1008,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("machineType")]
     public string? MachineType { get; set; }
 
-    /// <summary>Immutable. Optional. Specifies the minimum cpu platform for the Instance Group. See [Dataproc -> Minimum CPU Platform](https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).</summary>
+    /// <summary>Immutable. Optional. Specifies the minimum cpu platform for the Instance Group. See [Dataproc -&gt; Minimum CPU Platform](https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).</summary>
     [JsonPropertyName("minCpuPlatform")]
     public string? MinCpuPlatform { get; set; }
 

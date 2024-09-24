@@ -56,7 +56,7 @@ public partial class V1alpha1DialogflowCXEntityTypeSpec
     [JsonPropertyName("languageCode")]
     public string? LanguageCode { get; set; }
 
-    /// <summary>Immutable. The agent to create a entity type for. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.</summary>
+    /// <summary>Immutable. The agent to create a entity type for. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;.</summary>
     [JsonPropertyName("parent")]
     public string? Parent { get; set; }
 
@@ -98,7 +98,7 @@ public partial class V1alpha1DialogflowCXEntityTypeStatus
     [JsonPropertyName("conditions")]
     public IList<V1alpha1DialogflowCXEntityTypeStatusConditions>? Conditions { get; set; }
 
-    /// <summary>The unique identifier of the entity type. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/entityTypes/<Entity Type ID>.</summary>
+    /// <summary>The unique identifier of the entity type. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/entityTypes/&lt;Entity Type ID&gt;.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 

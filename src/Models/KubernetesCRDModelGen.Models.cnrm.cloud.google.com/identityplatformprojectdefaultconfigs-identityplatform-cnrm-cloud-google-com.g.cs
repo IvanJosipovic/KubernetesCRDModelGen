@@ -70,7 +70,7 @@ public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpecSignInPhone
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
-    /// <summary>A map of <test phone number, fake code> that can be used for phone auth testing.</summary>
+    /// <summary>A map of &lt;test phone number, fake code&gt; that can be used for phone auth testing.</summary>
     [JsonPropertyName("testPhoneNumbers")]
     public IDictionary<string, string>? TestPhoneNumbers { get; set; }
 }

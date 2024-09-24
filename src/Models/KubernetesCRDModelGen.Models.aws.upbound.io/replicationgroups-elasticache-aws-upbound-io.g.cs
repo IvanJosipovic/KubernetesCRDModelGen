@@ -598,7 +598,7 @@ public partial class V1beta2ReplicationGroupSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>Whether to enable encryption in transit. Changing this argument with an engine_version < 7.0.5 will force a replacement. Engine versions prior to 7.0.5 only allow this transit encryption to be configured during creation of the replication group.</summary>
+    /// <summary>Whether to enable encryption in transit. Changing this argument with an engine_version &lt; 7.0.5 will force a replacement. Engine versions prior to 7.0.5 only allow this transit encryption to be configured during creation of the replication group.</summary>
     [JsonPropertyName("transitEncryptionEnabled")]
     public bool? TransitEncryptionEnabled { get; set; }
 
@@ -1183,7 +1183,7 @@ public partial class V1beta2ReplicationGroupSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>Whether to enable encryption in transit. Changing this argument with an engine_version < 7.0.5 will force a replacement. Engine versions prior to 7.0.5 only allow this transit encryption to be configured during creation of the replication group.</summary>
+    /// <summary>Whether to enable encryption in transit. Changing this argument with an engine_version &lt; 7.0.5 will force a replacement. Engine versions prior to 7.0.5 only allow this transit encryption to be configured during creation of the replication group.</summary>
     [JsonPropertyName("transitEncryptionEnabled")]
     public bool? TransitEncryptionEnabled { get; set; }
 
@@ -1568,7 +1568,7 @@ public partial class V1beta2ReplicationGroupStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 
-    /// <summary>Whether to enable encryption in transit. Changing this argument with an engine_version < 7.0.5 will force a replacement. Engine versions prior to 7.0.5 only allow this transit encryption to be configured during creation of the replication group.</summary>
+    /// <summary>Whether to enable encryption in transit. Changing this argument with an engine_version &lt; 7.0.5 will force a replacement. Engine versions prior to 7.0.5 only allow this transit encryption to be configured during creation of the replication group.</summary>
     [JsonPropertyName("transitEncryptionEnabled")]
     public bool? TransitEncryptionEnabled { get; set; }
 

@@ -122,7 +122,7 @@ public partial class V1beta1ComputeURLMapSpecDefaultRouteActionRetryPolicyPerTry
 
 public partial class V1beta1ComputeURLMapSpecDefaultRouteActionRetryPolicy
 {
-    /// <summary>Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.</summary>
+    /// <summary>Specifies the allowed number retries. This number must be &gt; 0. If not specified, defaults to 1.</summary>
     [JsonPropertyName("numRetries")]
     public int? NumRetries { get; set; }
 
@@ -513,7 +513,7 @@ public partial class V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionRetryP
 
 public partial class V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionRetryPolicy
 {
-    /// <summary>Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.</summary>
+    /// <summary>Specifies the allowed number retries. This number must be &gt; 0. If not specified, defaults to 1.</summary>
     [JsonPropertyName("numRetries")]
     public int? NumRetries { get; set; }
 
@@ -889,7 +889,7 @@ public partial class V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionRetry
 
 public partial class V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionRetryPolicy
 {
-    /// <summary>Specifies the allowed number retries. This number must be > 0.</summary>
+    /// <summary>Specifies the allowed number retries. This number must be &gt; 0.</summary>
     [JsonPropertyName("numRetries")]
     public int? NumRetries { get; set; }
 
@@ -1406,7 +1406,7 @@ public partial class V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionRet
 
 public partial class V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionRetryPolicy
 {
-    /// <summary>Specifies the allowed number retries. This number must be > 0.</summary>
+    /// <summary>Specifies the allowed number retries. This number must be &gt; 0.</summary>
     [JsonPropertyName("numRetries")]
     public int NumRetries { get; set; }
 

@@ -306,7 +306,7 @@ public partial class V1beta1BackupPolicyVMSpecForProviderRetentionYearly
 
 public partial class V1beta1BackupPolicyVMSpecForProvider
 {
-    /// <summary>Configures the Policy backup frequency, times & days as documented in the backup block below.</summary>
+    /// <summary>Configures the Policy backup frequency, times &amp; days as documented in the backup block below.</summary>
     [JsonPropertyName("backup")]
     public IList<V1beta1BackupPolicyVMSpecForProviderBackup>? Backup { get; set; }
 
@@ -471,7 +471,7 @@ public partial class V1beta1BackupPolicyVMSpecInitProviderRetentionYearly
 
 public partial class V1beta1BackupPolicyVMSpecInitProvider
 {
-    /// <summary>Configures the Policy backup frequency, times & days as documented in the backup block below.</summary>
+    /// <summary>Configures the Policy backup frequency, times &amp; days as documented in the backup block below.</summary>
     [JsonPropertyName("backup")]
     public IList<V1beta1BackupPolicyVMSpecInitProviderBackup>? Backup { get; set; }
 
@@ -795,7 +795,7 @@ public partial class V1beta1BackupPolicyVMStatusAtProviderRetentionYearly
 
 public partial class V1beta1BackupPolicyVMStatusAtProvider
 {
-    /// <summary>Configures the Policy backup frequency, times & days as documented in the backup block below.</summary>
+    /// <summary>Configures the Policy backup frequency, times &amp; days as documented in the backup block below.</summary>
     [JsonPropertyName("backup")]
     public IList<V1beta1BackupPolicyVMStatusAtProviderBackup>? Backup { get; set; }
 

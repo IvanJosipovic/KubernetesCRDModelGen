@@ -1503,7 +1503,7 @@ public partial class V1beta1BrokerStatusAtProviderInstances
     [JsonPropertyName("consoleUrl")]
     public string? ConsoleUrl { get; set; }
 
-    /// <summary>Broker's wire-level protocol endpoints in the following order & format referenceable e.g., as instances.0.endpoints.0 (SSL):</summary>
+    /// <summary>Broker's wire-level protocol endpoints in the following order &amp; format referenceable e.g., as instances.0.endpoints.0 (SSL):</summary>
     [JsonPropertyName("endpoints")]
     public IList<string>? Endpoints { get; set; }
 
@@ -1658,7 +1658,7 @@ public partial class V1beta1BrokerStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>List of information about allocated brokers (both active & standby).</summary>
+    /// <summary>List of information about allocated brokers (both active &amp; standby).</summary>
     [JsonPropertyName("instances")]
     public IList<V1beta1BrokerStatusAtProviderInstances>? Instances { get; set; }
 

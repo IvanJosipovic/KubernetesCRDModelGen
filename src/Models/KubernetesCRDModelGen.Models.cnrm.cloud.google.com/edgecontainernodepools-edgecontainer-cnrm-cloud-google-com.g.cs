@@ -89,7 +89,7 @@ public partial class V1beta1EdgeContainerNodePoolSpec
     [JsonPropertyName("location")]
     public string Location { get; set; }
 
-    /// <summary>Only machines matching this filter will be allowed to join the node pool. The filtering language accepts strings like "name=<name>", and is documented in more detail in [AIP-160](https://google.aip.dev/160).</summary>
+    /// <summary>Only machines matching this filter will be allowed to join the node pool. The filtering language accepts strings like "name=&lt;name&gt;", and is documented in more detail in [AIP-160](https://google.aip.dev/160).</summary>
     [JsonPropertyName("machineFilter")]
     public string? MachineFilter { get; set; }
 

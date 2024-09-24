@@ -158,7 +158,7 @@ public partial class V1beta1TrailSpecForProviderEventSelectorDataResource
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>List of ARN strings or partial ARN strings to specify selectors for data audit events over data resources. ARN list is specific to single-valued type. For example, arn:aws:s3:::<bucket name>/ for all objects in a bucket, arn:aws:s3:::<bucket name>/key for specific objects, arn:aws:lambda for all lambda events within an account, arn:aws:lambda:<region>:<account number>:function:<function name> for a specific Lambda function, arn:aws:dynamodb for all DDB events for all tables within an account, or arn:aws:dynamodb:<region>:<account number>:table/<table name> for a specific DynamoDB table.</summary>
+    /// <summary>List of ARN strings or partial ARN strings to specify selectors for data audit events over data resources. ARN list is specific to single-valued type. For example, arn:aws:s3:::&lt;bucket name&gt;/ for all objects in a bucket, arn:aws:s3:::&lt;bucket name&gt;/key for specific objects, arn:aws:lambda for all lambda events within an account, arn:aws:lambda:&lt;region&gt;:&lt;account number&gt;:function:&lt;function name&gt; for a specific Lambda function, arn:aws:dynamodb for all DDB events for all tables within an account, or arn:aws:dynamodb:&lt;region&gt;:&lt;account number&gt;:table/&lt;table name&gt; for a specific DynamoDB table.</summary>
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
@@ -604,7 +604,7 @@ public partial class V1beta1TrailSpecInitProviderEventSelectorDataResource
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>List of ARN strings or partial ARN strings to specify selectors for data audit events over data resources. ARN list is specific to single-valued type. For example, arn:aws:s3:::<bucket name>/ for all objects in a bucket, arn:aws:s3:::<bucket name>/key for specific objects, arn:aws:lambda for all lambda events within an account, arn:aws:lambda:<region>:<account number>:function:<function name> for a specific Lambda function, arn:aws:dynamodb for all DDB events for all tables within an account, or arn:aws:dynamodb:<region>:<account number>:table/<table name> for a specific DynamoDB table.</summary>
+    /// <summary>List of ARN strings or partial ARN strings to specify selectors for data audit events over data resources. ARN list is specific to single-valued type. For example, arn:aws:s3:::&lt;bucket name&gt;/ for all objects in a bucket, arn:aws:s3:::&lt;bucket name&gt;/key for specific objects, arn:aws:lambda for all lambda events within an account, arn:aws:lambda:&lt;region&gt;:&lt;account number&gt;:function:&lt;function name&gt; for a specific Lambda function, arn:aws:dynamodb for all DDB events for all tables within an account, or arn:aws:dynamodb:&lt;region&gt;:&lt;account number&gt;:table/&lt;table name&gt; for a specific DynamoDB table.</summary>
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
@@ -1137,7 +1137,7 @@ public partial class V1beta1TrailStatusAtProviderEventSelectorDataResource
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>List of ARN strings or partial ARN strings to specify selectors for data audit events over data resources. ARN list is specific to single-valued type. For example, arn:aws:s3:::<bucket name>/ for all objects in a bucket, arn:aws:s3:::<bucket name>/key for specific objects, arn:aws:lambda for all lambda events within an account, arn:aws:lambda:<region>:<account number>:function:<function name> for a specific Lambda function, arn:aws:dynamodb for all DDB events for all tables within an account, or arn:aws:dynamodb:<region>:<account number>:table/<table name> for a specific DynamoDB table.</summary>
+    /// <summary>List of ARN strings or partial ARN strings to specify selectors for data audit events over data resources. ARN list is specific to single-valued type. For example, arn:aws:s3:::&lt;bucket name&gt;/ for all objects in a bucket, arn:aws:s3:::&lt;bucket name&gt;/key for specific objects, arn:aws:lambda for all lambda events within an account, arn:aws:lambda:&lt;region&gt;:&lt;account number&gt;:function:&lt;function name&gt; for a specific Lambda function, arn:aws:dynamodb for all DDB events for all tables within an account, or arn:aws:dynamodb:&lt;region&gt;:&lt;account number&gt;:table/&lt;table name&gt; for a specific DynamoDB table.</summary>
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }

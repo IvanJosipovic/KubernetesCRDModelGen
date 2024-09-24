@@ -316,7 +316,7 @@ public partial class V1beta1InstanceSpecForProvider
     [JsonPropertyName("gceZone")]
     public string? GceZone { get; set; }
 
-    /// <summary>The type of the instance. If the instance type is READ_POOL, provide the associated PRIMARY/SECONDARY instance in the depends_on meta-data attribute. If the instance type is SECONDARY, point to the cluster_type of the associated secondary cluster instead of mentioning SECONDARY. Example: {instance_type = google_alloydb_cluster.<secondary_cluster_name>. Use deletion_policy = "FORCE" in the associated secondary cluster and delete the cluster forcefully to delete the secondary cluster as well its associated secondary instance. Possible values are: PRIMARY, READ_POOL, SECONDARY.</summary>
+    /// <summary>The type of the instance. If the instance type is READ_POOL, provide the associated PRIMARY/SECONDARY instance in the depends_on meta-data attribute. If the instance type is SECONDARY, point to the cluster_type of the associated secondary cluster instead of mentioning SECONDARY. Example: {instance_type = google_alloydb_cluster.&lt;secondary_cluster_name&gt;. Use deletion_policy = "FORCE" in the associated secondary cluster and delete the cluster forcefully to delete the secondary cluster as well its associated secondary instance. Possible values are: PRIMARY, READ_POOL, SECONDARY.</summary>
     [JsonPropertyName("instanceType")]
     public string? InstanceType { get; set; }
 
@@ -547,7 +547,7 @@ public partial class V1beta1InstanceSpecInitProvider
     [JsonPropertyName("gceZone")]
     public string? GceZone { get; set; }
 
-    /// <summary>The type of the instance. If the instance type is READ_POOL, provide the associated PRIMARY/SECONDARY instance in the depends_on meta-data attribute. If the instance type is SECONDARY, point to the cluster_type of the associated secondary cluster instead of mentioning SECONDARY. Example: {instance_type = google_alloydb_cluster.<secondary_cluster_name>. Use deletion_policy = "FORCE" in the associated secondary cluster and delete the cluster forcefully to delete the secondary cluster as well its associated secondary instance. Possible values are: PRIMARY, READ_POOL, SECONDARY.</summary>
+    /// <summary>The type of the instance. If the instance type is READ_POOL, provide the associated PRIMARY/SECONDARY instance in the depends_on meta-data attribute. If the instance type is SECONDARY, point to the cluster_type of the associated secondary cluster instead of mentioning SECONDARY. Example: {instance_type = google_alloydb_cluster.&lt;secondary_cluster_name&gt;. Use deletion_policy = "FORCE" in the associated secondary cluster and delete the cluster forcefully to delete the secondary cluster as well its associated secondary instance. Possible values are: PRIMARY, READ_POOL, SECONDARY.</summary>
     [JsonPropertyName("instanceType")]
     public string? InstanceType { get; set; }
 
@@ -820,7 +820,7 @@ public partial class V1beta1InstanceStatusAtProviderPscInstanceConfig
     [JsonPropertyName("pscDnsName")]
     public string? PscDnsName { get; set; }
 
-    /// <summary>(Output) The service attachment created when Private Service Connect (PSC) is enabled for the instance. The name of the resource will be in the format of projects/<alloydb-tenant-project-number>/regions/<region-name>/serviceAttachments/<service-attachment-name></summary>
+    /// <summary>(Output) The service attachment created when Private Service Connect (PSC) is enabled for the instance. The name of the resource will be in the format of projects/&lt;alloydb-tenant-project-number&gt;/regions/&lt;region-name&gt;/serviceAttachments/&lt;service-attachment-name&gt;</summary>
     [JsonPropertyName("serviceAttachmentLink")]
     public string? ServiceAttachmentLink { get; set; }
 }
@@ -897,7 +897,7 @@ public partial class V1beta1InstanceStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The type of the instance. If the instance type is READ_POOL, provide the associated PRIMARY/SECONDARY instance in the depends_on meta-data attribute. If the instance type is SECONDARY, point to the cluster_type of the associated secondary cluster instead of mentioning SECONDARY. Example: {instance_type = google_alloydb_cluster.<secondary_cluster_name>. Use deletion_policy = "FORCE" in the associated secondary cluster and delete the cluster forcefully to delete the secondary cluster as well its associated secondary instance. Possible values are: PRIMARY, READ_POOL, SECONDARY.</summary>
+    /// <summary>The type of the instance. If the instance type is READ_POOL, provide the associated PRIMARY/SECONDARY instance in the depends_on meta-data attribute. If the instance type is SECONDARY, point to the cluster_type of the associated secondary cluster instead of mentioning SECONDARY. Example: {instance_type = google_alloydb_cluster.&lt;secondary_cluster_name&gt;. Use deletion_policy = "FORCE" in the associated secondary cluster and delete the cluster forcefully to delete the secondary cluster as well its associated secondary instance. Possible values are: PRIMARY, READ_POOL, SECONDARY.</summary>
     [JsonPropertyName("instanceType")]
     public string? InstanceType { get; set; }
 

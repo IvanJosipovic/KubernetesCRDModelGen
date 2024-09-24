@@ -162,7 +162,7 @@ public partial class V1beta1MonitorActionGroupSpecForProviderItsmReceiver
     [JsonPropertyName("ticketConfiguration")]
     public string? TicketConfiguration { get; set; }
 
-    /// <summary>The Azure Log Analytics workspace ID where this connection is defined. Format is <subscription id>|<workspace id>, for example 00000000-0000-0000-0000-000000000000|00000000-0000-0000-0000-000000000000.</summary>
+    /// <summary>The Azure Log Analytics workspace ID where this connection is defined. Format is &lt;subscription id&gt;|&lt;workspace id&gt;, for example 00000000-0000-0000-0000-000000000000|00000000-0000-0000-0000-000000000000.</summary>
     [JsonPropertyName("workspaceId")]
     public string? WorkspaceId { get; set; }
 }
@@ -561,7 +561,7 @@ public partial class V1beta1MonitorActionGroupSpecInitProviderItsmReceiver
     [JsonPropertyName("ticketConfiguration")]
     public string? TicketConfiguration { get; set; }
 
-    /// <summary>The Azure Log Analytics workspace ID where this connection is defined. Format is <subscription id>|<workspace id>, for example 00000000-0000-0000-0000-000000000000|00000000-0000-0000-0000-000000000000.</summary>
+    /// <summary>The Azure Log Analytics workspace ID where this connection is defined. Format is &lt;subscription id&gt;|&lt;workspace id&gt;, for example 00000000-0000-0000-0000-000000000000|00000000-0000-0000-0000-000000000000.</summary>
     [JsonPropertyName("workspaceId")]
     public string? WorkspaceId { get; set; }
 }
@@ -1039,7 +1039,7 @@ public partial class V1beta1MonitorActionGroupStatusAtProviderItsmReceiver
     [JsonPropertyName("ticketConfiguration")]
     public string? TicketConfiguration { get; set; }
 
-    /// <summary>The Azure Log Analytics workspace ID where this connection is defined. Format is <subscription id>|<workspace id>, for example 00000000-0000-0000-0000-000000000000|00000000-0000-0000-0000-000000000000.</summary>
+    /// <summary>The Azure Log Analytics workspace ID where this connection is defined. Format is &lt;subscription id&gt;|&lt;workspace id&gt;, for example 00000000-0000-0000-0000-000000000000|00000000-0000-0000-0000-000000000000.</summary>
     [JsonPropertyName("workspaceId")]
     public string? WorkspaceId { get; set; }
 }

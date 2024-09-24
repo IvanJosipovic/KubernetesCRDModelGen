@@ -80,7 +80,7 @@ public partial class V1beta1IAMWorkforcePoolProviderSpecOidc
     [JsonPropertyName("issuerUri")]
     public string IssuerUri { get; set; }
 
-    /// <summary>OIDC JWKs in JSON String format. For details on definition of a JWK, see https:tools.ietf.org/html/rfc7517. If not set, then we use the `jwks_uri` from the discovery document fetched from the .well-known path for the `issuer_uri`. Currently, RSA and EC asymmetric keys are supported. The JWK must use following format and include only the following fields: ```{"keys": [{"kty": "RSA/EC", "alg": "<algorithm>", "use": "sig", "kid": "<key-id>", "n": "", "e": "", "x": "", "y": "", "crv": ""}]}```</summary>
+    /// <summary>OIDC JWKs in JSON String format. For details on definition of a JWK, see https:tools.ietf.org/html/rfc7517. If not set, then we use the `jwks_uri` from the discovery document fetched from the .well-known path for the `issuer_uri`. Currently, RSA and EC asymmetric keys are supported. The JWK must use following format and include only the following fields: ```{"keys": [{"kty": "RSA/EC", "alg": "&lt;algorithm&gt;", "use": "sig", "kid": "&lt;key-id&gt;", "n": "", "e": "", "x": "", "y": "", "crv": ""}]}```</summary>
     [JsonPropertyName("jwksJson")]
     public string? JwksJson { get; set; }
 

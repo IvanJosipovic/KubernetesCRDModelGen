@@ -358,7 +358,7 @@ public partial class V1KustomizationStatusConditions
 
 public partial class V1KustomizationStatusInventoryEntries
 {
-    /// <summary>ID is the string representation of the Kubernetes resource object's metadata, in the format '<namespace>_<name>_<group>_<kind>'.</summary>
+    /// <summary>ID is the string representation of the Kubernetes resource object's metadata, in the format '&lt;namespace&gt;_&lt;name&gt;_&lt;group&gt;_&lt;kind&gt;'.</summary>
     [JsonPropertyName("id")]
     public string Id { get; set; }
 

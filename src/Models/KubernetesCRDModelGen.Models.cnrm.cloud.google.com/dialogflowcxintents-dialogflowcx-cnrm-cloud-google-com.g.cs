@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.dialogflowcx.cnrm.cloud.google.com;
 public partial class V1alpha1DialogflowCXIntentSpecParameters
 {
-    /// <summary>The entity type of the parameter. Format: projects/-/locations/-/agents/-/entityTypes/<System Entity Type ID> for system entity types (for example, projects/-/locations/-/agents/-/entityTypes/sys.date), or projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/entityTypes/<Entity Type ID> for developer entity types.</summary>
+    /// <summary>The entity type of the parameter. Format: projects/-/locations/-/agents/-/entityTypes/&lt;System Entity Type ID&gt; for system entity types (for example, projects/-/locations/-/agents/-/entityTypes/sys.date), or projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/entityTypes/&lt;Entity Type ID&gt; for developer entity types.</summary>
     [JsonPropertyName("entityType")]
     public string EntityType { get; set; }
 
@@ -75,7 +75,7 @@ public partial class V1alpha1DialogflowCXIntentSpec
     [JsonPropertyName("parameters")]
     public IList<V1alpha1DialogflowCXIntentSpecParameters>? Parameters { get; set; }
 
-    /// <summary>Immutable. The agent to create an intent for. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.</summary>
+    /// <summary>Immutable. The agent to create an intent for. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;.</summary>
     [JsonPropertyName("parent")]
     public string? Parent { get; set; }
 
@@ -121,7 +121,7 @@ public partial class V1alpha1DialogflowCXIntentStatus
     [JsonPropertyName("conditions")]
     public IList<V1alpha1DialogflowCXIntentStatusConditions>? Conditions { get; set; }
 
-    /// <summary>The unique identifier of the intent. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/intents/<Intent ID>.</summary>
+    /// <summary>The unique identifier of the intent. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/intents/&lt;Intent ID&gt;.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 

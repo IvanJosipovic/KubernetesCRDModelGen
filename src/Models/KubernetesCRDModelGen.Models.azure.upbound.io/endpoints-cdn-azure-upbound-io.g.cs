@@ -346,7 +346,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleUrlRedirectAction
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 
-    /// <summary>Specifies the query string part of the URL. This value must not start with a ? or & and must be in <key>=<value> format separated by &.</summary>
+    /// <summary>Specifies the query string part of the URL. This value must not start with a ? or &amp; and must be in &lt;key&gt;=&lt;value&gt; format separated by &amp;.</summary>
     [JsonPropertyName("queryString")]
     public string? QueryString { get; set; }
 
@@ -546,7 +546,7 @@ public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleUrlRedirect
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 
-    /// <summary>Specifies the query string part of the URL. This value must not start with a ? or & and must be in <key>=<value> format separated by &.</summary>
+    /// <summary>Specifies the query string part of the URL. This value must not start with a ? or &amp; and must be in &lt;key&gt;=&lt;value&gt; format separated by &amp;.</summary>
     [JsonPropertyName("queryString")]
     public string? QueryString { get; set; }
 
@@ -1215,7 +1215,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleUrlRedirectActio
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 
-    /// <summary>Specifies the query string part of the URL. This value must not start with a ? or & and must be in <key>=<value> format separated by &.</summary>
+    /// <summary>Specifies the query string part of the URL. This value must not start with a ? or &amp; and must be in &lt;key&gt;=&lt;value&gt; format separated by &amp;.</summary>
     [JsonPropertyName("queryString")]
     public string? QueryString { get; set; }
 
@@ -1415,7 +1415,7 @@ public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleUrlRedirec
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 
-    /// <summary>Specifies the query string part of the URL. This value must not start with a ? or & and must be in <key>=<value> format separated by &.</summary>
+    /// <summary>Specifies the query string part of the URL. This value must not start with a ? or &amp; and must be in &lt;key&gt;=&lt;value&gt; format separated by &amp;.</summary>
     [JsonPropertyName("queryString")]
     public string? QueryString { get; set; }
 
@@ -2059,7 +2059,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleUrlRedirectActio
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 
-    /// <summary>Specifies the query string part of the URL. This value must not start with a ? or & and must be in <key>=<value> format separated by &.</summary>
+    /// <summary>Specifies the query string part of the URL. This value must not start with a ? or &amp; and must be in &lt;key&gt;=&lt;value&gt; format separated by &amp;.</summary>
     [JsonPropertyName("queryString")]
     public string? QueryString { get; set; }
 
@@ -2259,7 +2259,7 @@ public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleUrlRedirec
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 
-    /// <summary>Specifies the query string part of the URL. This value must not start with a ? or & and must be in <key>=<value> format separated by &.</summary>
+    /// <summary>Specifies the query string part of the URL. This value must not start with a ? or &amp; and must be in &lt;key&gt;=&lt;value&gt; format separated by &amp;.</summary>
     [JsonPropertyName("queryString")]
     public string? QueryString { get; set; }
 

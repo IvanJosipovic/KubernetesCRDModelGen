@@ -20,11 +20,11 @@ public enum V1beta1NodePoolSpecDeletionPolicyEnum
 
 public partial class V1beta1NodePoolSpecForProviderAutoscaling
 {
-    /// <summary>Maximum number of nodes in the node pool. Must be >= min_node_count.</summary>
+    /// <summary>Maximum number of nodes in the node pool. Must be &gt;= min_node_count.</summary>
     [JsonPropertyName("maxNodeCount")]
     public double? MaxNodeCount { get; set; }
 
-    /// <summary>Minimum number of nodes in the node pool. Must be >= 1 and <= max_node_count.</summary>
+    /// <summary>Minimum number of nodes in the node pool. Must be &gt;= 1 and &lt;= max_node_count.</summary>
     [JsonPropertyName("minNodeCount")]
     public double? MinNodeCount { get; set; }
 }
@@ -123,11 +123,11 @@ public partial class V1beta1NodePoolSpecForProviderClusterSelector
 
 public partial class V1beta1NodePoolSpecForProviderConfigProxyConfig
 {
-    /// <summary>The ARM ID the of the resource group containing proxy keyvault. Resource group ids are formatted as /subscriptions/<subscription-id>/resourceGroups/<resource-group-name></summary>
+    /// <summary>The ARM ID the of the resource group containing proxy keyvault. Resource group ids are formatted as /subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;resource-group-name&gt;</summary>
     [JsonPropertyName("resourceGroupId")]
     public string? ResourceGroupId { get; set; }
 
-    /// <summary>The URL the of the proxy setting secret with its version. Secret ids are formatted as https:<key-vault-name>.vault.azure.net/secrets/<secret-name>/<secret-version>.</summary>
+    /// <summary>The URL the of the proxy setting secret with its version. Secret ids are formatted as https:&lt;key-vault-name&gt;.vault.azure.net/secrets/&lt;secret-name&gt;/&lt;secret-version&gt;.</summary>
     [JsonPropertyName("secretId")]
     public string? SecretId { get; set; }
 }
@@ -244,22 +244,22 @@ public partial class V1beta1NodePoolSpecForProvider
 
 public partial class V1beta1NodePoolSpecInitProviderAutoscaling
 {
-    /// <summary>Maximum number of nodes in the node pool. Must be >= min_node_count.</summary>
+    /// <summary>Maximum number of nodes in the node pool. Must be &gt;= min_node_count.</summary>
     [JsonPropertyName("maxNodeCount")]
     public double? MaxNodeCount { get; set; }
 
-    /// <summary>Minimum number of nodes in the node pool. Must be >= 1 and <= max_node_count.</summary>
+    /// <summary>Minimum number of nodes in the node pool. Must be &gt;= 1 and &lt;= max_node_count.</summary>
     [JsonPropertyName("minNodeCount")]
     public double? MinNodeCount { get; set; }
 }
 
 public partial class V1beta1NodePoolSpecInitProviderConfigProxyConfig
 {
-    /// <summary>The ARM ID the of the resource group containing proxy keyvault. Resource group ids are formatted as /subscriptions/<subscription-id>/resourceGroups/<resource-group-name></summary>
+    /// <summary>The ARM ID the of the resource group containing proxy keyvault. Resource group ids are formatted as /subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;resource-group-name&gt;</summary>
     [JsonPropertyName("resourceGroupId")]
     public string? ResourceGroupId { get; set; }
 
-    /// <summary>The URL the of the proxy setting secret with its version. Secret ids are formatted as https:<key-vault-name>.vault.azure.net/secrets/<secret-name>/<secret-version>.</summary>
+    /// <summary>The URL the of the proxy setting secret with its version. Secret ids are formatted as https:&lt;key-vault-name&gt;.vault.azure.net/secrets/&lt;secret-name&gt;/&lt;secret-version&gt;.</summary>
     [JsonPropertyName("secretId")]
     public string? SecretId { get; set; }
 }
@@ -543,22 +543,22 @@ public partial class V1beta1NodePoolSpec
 
 public partial class V1beta1NodePoolStatusAtProviderAutoscaling
 {
-    /// <summary>Maximum number of nodes in the node pool. Must be >= min_node_count.</summary>
+    /// <summary>Maximum number of nodes in the node pool. Must be &gt;= min_node_count.</summary>
     [JsonPropertyName("maxNodeCount")]
     public double? MaxNodeCount { get; set; }
 
-    /// <summary>Minimum number of nodes in the node pool. Must be >= 1 and <= max_node_count.</summary>
+    /// <summary>Minimum number of nodes in the node pool. Must be &gt;= 1 and &lt;= max_node_count.</summary>
     [JsonPropertyName("minNodeCount")]
     public double? MinNodeCount { get; set; }
 }
 
 public partial class V1beta1NodePoolStatusAtProviderConfigProxyConfig
 {
-    /// <summary>The ARM ID the of the resource group containing proxy keyvault. Resource group ids are formatted as /subscriptions/<subscription-id>/resourceGroups/<resource-group-name></summary>
+    /// <summary>The ARM ID the of the resource group containing proxy keyvault. Resource group ids are formatted as /subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;resource-group-name&gt;</summary>
     [JsonPropertyName("resourceGroupId")]
     public string? ResourceGroupId { get; set; }
 
-    /// <summary>The URL the of the proxy setting secret with its version. Secret ids are formatted as https:<key-vault-name>.vault.azure.net/secrets/<secret-name>/<secret-version>.</summary>
+    /// <summary>The URL the of the proxy setting secret with its version. Secret ids are formatted as https:&lt;key-vault-name&gt;.vault.azure.net/secrets/&lt;secret-name&gt;/&lt;secret-version&gt;.</summary>
     [JsonPropertyName("secretId")]
     public string? SecretId { get; set; }
 }

@@ -114,7 +114,7 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionFaultInjectio
 
 public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionRetryPolicy
 {
-    /// <summary>Specifies the allowed number of retries. This number must be > 0. If not specpfied, default to 1.</summary>
+    /// <summary>Specifies the allowed number of retries. This number must be &gt; 0. If not specpfied, default to 1.</summary>
     [JsonPropertyName("numRetries")]
     public long? NumRetries { get; set; }
 

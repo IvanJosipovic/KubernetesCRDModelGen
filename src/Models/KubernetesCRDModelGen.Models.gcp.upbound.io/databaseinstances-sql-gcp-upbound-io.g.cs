@@ -78,7 +78,7 @@ public partial class V1beta1DatabaseInstanceSpecForProviderReplicaConfiguration
     [JsonPropertyName("dumpFilePath")]
     public string? DumpFilePath { get; set; }
 
-    /// <summary>Specifies if the replica is the failover target. If the field is set to true the replica will be designated as a failover replica. If the master instance fails, the replica instance will be promoted as the new master instance. ~> NOTE: Not supported for Postgres database.</summary>
+    /// <summary>Specifies if the replica is the failover target. If the field is set to true the replica will be designated as a failover replica. If the master instance fails, the replica instance will be promoted as the new master instance. ~&gt; NOTE: Not supported for Postgres database.</summary>
     [JsonPropertyName("failoverTarget")]
     public bool? FailoverTarget { get; set; }
 
@@ -603,7 +603,7 @@ public partial class V1beta1DatabaseInstanceSpecForProvider
     [JsonPropertyName("deletionProtection")]
     public bool? DeletionProtection { get; set; }
 
-    /// <summary>The full path to the encryption key used for the CMEK disk encryption. The provided key must be in the same region as the SQL instance.  In order to use this feature, a special kind of service account must be created and granted permission on this key.  This step can currently only be done manually, please see this step. That service account needs the Cloud KMS > Cloud KMS CryptoKey Encrypter/Decrypter role on your key - please see this step.</summary>
+    /// <summary>The full path to the encryption key used for the CMEK disk encryption. The provided key must be in the same region as the SQL instance.  In order to use this feature, a special kind of service account must be created and granted permission on this key.  This step can currently only be done manually, please see this step. That service account needs the Cloud KMS &gt; Cloud KMS CryptoKey Encrypter/Decrypter role on your key - please see this step.</summary>
     [JsonPropertyName("encryptionKeyName")]
     public string? EncryptionKeyName { get; set; }
 
@@ -700,7 +700,7 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderReplicaConfiguration
     [JsonPropertyName("dumpFilePath")]
     public string? DumpFilePath { get; set; }
 
-    /// <summary>Specifies if the replica is the failover target. If the field is set to true the replica will be designated as a failover replica. If the master instance fails, the replica instance will be promoted as the new master instance. ~> NOTE: Not supported for Postgres database.</summary>
+    /// <summary>Specifies if the replica is the failover target. If the field is set to true the replica will be designated as a failover replica. If the master instance fails, the replica instance will be promoted as the new master instance. ~&gt; NOTE: Not supported for Postgres database.</summary>
     [JsonPropertyName("failoverTarget")]
     public bool? FailoverTarget { get; set; }
 
@@ -1225,7 +1225,7 @@ public partial class V1beta1DatabaseInstanceSpecInitProvider
     [JsonPropertyName("deletionProtection")]
     public bool? DeletionProtection { get; set; }
 
-    /// <summary>The full path to the encryption key used for the CMEK disk encryption. The provided key must be in the same region as the SQL instance.  In order to use this feature, a special kind of service account must be created and granted permission on this key.  This step can currently only be done manually, please see this step. That service account needs the Cloud KMS > Cloud KMS CryptoKey Encrypter/Decrypter role on your key - please see this step.</summary>
+    /// <summary>The full path to the encryption key used for the CMEK disk encryption. The provided key must be in the same region as the SQL instance.  In order to use this feature, a special kind of service account must be created and granted permission on this key.  This step can currently only be done manually, please see this step. That service account needs the Cloud KMS &gt; Cloud KMS CryptoKey Encrypter/Decrypter role on your key - please see this step.</summary>
     [JsonPropertyName("encryptionKeyName")]
     public string? EncryptionKeyName { get; set; }
 
@@ -1505,7 +1505,7 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderReplicaConfiguration
     [JsonPropertyName("dumpFilePath")]
     public string? DumpFilePath { get; set; }
 
-    /// <summary>Specifies if the replica is the failover target. If the field is set to true the replica will be designated as a failover replica. If the master instance fails, the replica instance will be promoted as the new master instance. ~> NOTE: Not supported for Postgres database.</summary>
+    /// <summary>Specifies if the replica is the failover target. If the field is set to true the replica will be designated as a failover replica. If the master instance fails, the replica instance will be promoted as the new master instance. ~&gt; NOTE: Not supported for Postgres database.</summary>
     [JsonPropertyName("failoverTarget")]
     public bool? FailoverTarget { get; set; }
 
@@ -1927,7 +1927,7 @@ public partial class V1beta1DatabaseInstanceStatusAtProvider
     [JsonPropertyName("dnsName")]
     public string? DnsName { get; set; }
 
-    /// <summary>The full path to the encryption key used for the CMEK disk encryption. The provided key must be in the same region as the SQL instance.  In order to use this feature, a special kind of service account must be created and granted permission on this key.  This step can currently only be done manually, please see this step. That service account needs the Cloud KMS > Cloud KMS CryptoKey Encrypter/Decrypter role on your key - please see this step.</summary>
+    /// <summary>The full path to the encryption key used for the CMEK disk encryption. The provided key must be in the same region as the SQL instance.  In order to use this feature, a special kind of service account must be created and granted permission on this key.  This step can currently only be done manually, please see this step. That service account needs the Cloud KMS &gt; Cloud KMS CryptoKey Encrypter/Decrypter role on your key - please see this step.</summary>
     [JsonPropertyName("encryptionKeyName")]
     public string? EncryptionKeyName { get; set; }
 

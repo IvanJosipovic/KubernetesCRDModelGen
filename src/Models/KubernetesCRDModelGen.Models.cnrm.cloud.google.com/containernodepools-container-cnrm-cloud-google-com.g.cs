@@ -14,19 +14,19 @@ public partial class V1beta1ContainerNodePoolSpecAutoscaling
     [JsonPropertyName("locationPolicy")]
     public string? LocationPolicy { get; set; }
 
-    /// <summary>Maximum number of nodes per zone in the node pool. Must be >= min_node_count. Cannot be used with total limits.</summary>
+    /// <summary>Maximum number of nodes per zone in the node pool. Must be &gt;= min_node_count. Cannot be used with total limits.</summary>
     [JsonPropertyName("maxNodeCount")]
     public int? MaxNodeCount { get; set; }
 
-    /// <summary>Minimum number of nodes per zone in the node pool. Must be >=0 and <= max_node_count. Cannot be used with total limits.</summary>
+    /// <summary>Minimum number of nodes per zone in the node pool. Must be &gt;=0 and &lt;= max_node_count. Cannot be used with total limits.</summary>
     [JsonPropertyName("minNodeCount")]
     public int? MinNodeCount { get; set; }
 
-    /// <summary>Maximum number of all nodes in the node pool. Must be >= total_min_node_count. Cannot be used with per zone limits.</summary>
+    /// <summary>Maximum number of all nodes in the node pool. Must be &gt;= total_min_node_count. Cannot be used with per zone limits.</summary>
     [JsonPropertyName("totalMaxNodeCount")]
     public int? TotalMaxNodeCount { get; set; }
 
-    /// <summary>Minimum number of all nodes in the node pool. Must be >=0 and <= total_max_node_count. Cannot be used with per zone limits.</summary>
+    /// <summary>Minimum number of all nodes in the node pool. Must be &gt;=0 and &lt;= total_max_node_count. Cannot be used with per zone limits.</summary>
     [JsonPropertyName("totalMinNodeCount")]
     public int? TotalMinNodeCount { get; set; }
 }

@@ -134,7 +134,7 @@ public partial class V1beta1VirtualNetworkSpecForProvider
     [JsonPropertyName("addressSpace")]
     public IList<string>? AddressSpace { get; set; }
 
-    /// <summary>The BGP community attribute in format <as-number>:<community-value>.</summary>
+    /// <summary>The BGP community attribute in format &lt;as-number&gt;:&lt;community-value&gt;.</summary>
     [JsonPropertyName("bgpCommunity")]
     public string? BgpCommunity { get; set; }
 
@@ -203,7 +203,7 @@ public partial class V1beta1VirtualNetworkSpecInitProvider
     [JsonPropertyName("addressSpace")]
     public IList<string>? AddressSpace { get; set; }
 
-    /// <summary>The BGP community attribute in format <as-number>:<community-value>.</summary>
+    /// <summary>The BGP community attribute in format &lt;as-number&gt;:&lt;community-value&gt;.</summary>
     [JsonPropertyName("bgpCommunity")]
     public string? BgpCommunity { get; set; }
 
@@ -462,7 +462,7 @@ public partial class V1beta1VirtualNetworkStatusAtProvider
     [JsonPropertyName("addressSpace")]
     public IList<string>? AddressSpace { get; set; }
 
-    /// <summary>The BGP community attribute in format <as-number>:<community-value>.</summary>
+    /// <summary>The BGP community attribute in format &lt;as-number&gt;:&lt;community-value&gt;.</summary>
     [JsonPropertyName("bgpCommunity")]
     public string? BgpCommunity { get; set; }
 

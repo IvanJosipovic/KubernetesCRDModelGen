@@ -923,7 +923,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfigApplicati
     [JsonPropertyName("dotnetVersion")]
     public string? DotnetVersion { get; set; }
 
-    /// <summary>The Version of Java to use. Supported versions include 1.8, 11 & 17 (In-Preview). The version of Java to use. Possible values are `1.8`, `11` and `17`</summary>
+    /// <summary>The Version of Java to use. Supported versions include 1.8, 11 &amp; 17 (In-Preview). The version of Java to use. Possible values are `1.8`, `11` and `17`</summary>
     [JsonPropertyName("javaVersion")]
     public string? JavaVersion { get; set; }
 
@@ -2429,7 +2429,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfigApplicat
     [JsonPropertyName("dotnetVersion")]
     public string? DotnetVersion { get; set; }
 
-    /// <summary>The Version of Java to use. Supported versions include 1.8, 11 & 17 (In-Preview). The version of Java to use. Possible values are `1.8`, `11` and `17`</summary>
+    /// <summary>The Version of Java to use. Supported versions include 1.8, 11 &amp; 17 (In-Preview). The version of Java to use. Possible values are `1.8`, `11` and `17`</summary>
     [JsonPropertyName("javaVersion")]
     public string? JavaVersion { get; set; }
 
@@ -4023,7 +4023,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderSiteConfigApplicat
     [JsonPropertyName("dotnetVersion")]
     public string? DotnetVersion { get; set; }
 
-    /// <summary>The Version of Java to use. Supported versions include 1.8, 11 & 17 (In-Preview). The version of Java to use. Possible values are `1.8`, `11` and `17`</summary>
+    /// <summary>The Version of Java to use. Supported versions include 1.8, 11 &amp; 17 (In-Preview). The version of Java to use. Possible values are `1.8`, `11` and `17`</summary>
     [JsonPropertyName("javaVersion")]
     public string? JavaVersion { get; set; }
 

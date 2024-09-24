@@ -193,7 +193,7 @@ public partial class V1beta1FrontdoorRuleSpecForProviderActionsUrlRedirectAction
     [JsonPropertyName("destinationPath")]
     public string? DestinationPath { get; set; }
 
-    /// <summary>The query string used in the redirect URL. The value must be in the <key>=<value> or <key>={action_server_variable} format and must not include the leading ?, leave blank to preserve the incoming query string. Maximum allowed length for this field is 2048 characters. Defaults to "".</summary>
+    /// <summary>The query string used in the redirect URL. The value must be in the &lt;key&gt;=&lt;value&gt; or &lt;key&gt;={action_server_variable} format and must not include the leading ?, leave blank to preserve the incoming query string. Maximum allowed length for this field is 2048 characters. Defaults to "".</summary>
     [JsonPropertyName("queryString")]
     public string? QueryString { get; set; }
 
@@ -958,7 +958,7 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderActionsUrlRedirectActio
     [JsonPropertyName("destinationPath")]
     public string? DestinationPath { get; set; }
 
-    /// <summary>The query string used in the redirect URL. The value must be in the <key>=<value> or <key>={action_server_variable} format and must not include the leading ?, leave blank to preserve the incoming query string. Maximum allowed length for this field is 2048 characters. Defaults to "".</summary>
+    /// <summary>The query string used in the redirect URL. The value must be in the &lt;key&gt;=&lt;value&gt; or &lt;key&gt;={action_server_variable} format and must not include the leading ?, leave blank to preserve the incoming query string. Maximum allowed length for this field is 2048 characters. Defaults to "".</summary>
     [JsonPropertyName("queryString")]
     public string? QueryString { get; set; }
 
@@ -1702,7 +1702,7 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderActionsUrlRedirectActio
     [JsonPropertyName("destinationPath")]
     public string? DestinationPath { get; set; }
 
-    /// <summary>The query string used in the redirect URL. The value must be in the <key>=<value> or <key>={action_server_variable} format and must not include the leading ?, leave blank to preserve the incoming query string. Maximum allowed length for this field is 2048 characters. Defaults to "".</summary>
+    /// <summary>The query string used in the redirect URL. The value must be in the &lt;key&gt;=&lt;value&gt; or &lt;key&gt;={action_server_variable} format and must not include the leading ?, leave blank to preserve the incoming query string. Maximum allowed length for this field is 2048 characters. Defaults to "".</summary>
     [JsonPropertyName("queryString")]
     public string? QueryString { get; set; }
 

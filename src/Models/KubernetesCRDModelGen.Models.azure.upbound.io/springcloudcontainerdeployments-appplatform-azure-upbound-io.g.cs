@@ -143,7 +143,7 @@ public partial class V1beta1SpringCloudContainerDeploymentSpecForProvider
     [JsonPropertyName("environmentVariables")]
     public IDictionary<string, string>? EnvironmentVariables { get; set; }
 
-    /// <summary>Container image of the custom container. This should be in the form of <repository>:<tag> without the server name of the registry.</summary>
+    /// <summary>Container image of the custom container. This should be in the form of &lt;repository&gt;:&lt;tag&gt; without the server name of the registry.</summary>
     [JsonPropertyName("image")]
     public string? Image { get; set; }
 
@@ -209,7 +209,7 @@ public partial class V1beta1SpringCloudContainerDeploymentSpecInitProvider
     [JsonPropertyName("environmentVariables")]
     public IDictionary<string, string>? EnvironmentVariables { get; set; }
 
-    /// <summary>Container image of the custom container. This should be in the form of <repository>:<tag> without the server name of the registry.</summary>
+    /// <summary>Container image of the custom container. This should be in the form of &lt;repository&gt;:&lt;tag&gt; without the server name of the registry.</summary>
     [JsonPropertyName("image")]
     public string? Image { get; set; }
 
@@ -450,7 +450,7 @@ public partial class V1beta1SpringCloudContainerDeploymentStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Container image of the custom container. This should be in the form of <repository>:<tag> without the server name of the registry.</summary>
+    /// <summary>Container image of the custom container. This should be in the form of &lt;repository&gt;:&lt;tag&gt; without the server name of the registry.</summary>
     [JsonPropertyName("image")]
     public string? Image { get; set; }
 

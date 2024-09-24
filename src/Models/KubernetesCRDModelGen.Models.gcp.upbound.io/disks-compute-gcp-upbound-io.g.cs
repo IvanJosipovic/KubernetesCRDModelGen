@@ -237,7 +237,7 @@ public partial class V1beta1DiskSpecForProvider
     [JsonPropertyName("image")]
     public string? Image { get; set; }
 
-    /// <summary>Labels to apply to this disk.  A list of key->value pairs.</summary>
+    /// <summary>Labels to apply to this disk.  A list of key-&gt;value pairs.</summary>
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 
@@ -513,7 +513,7 @@ public partial class V1beta1DiskSpecInitProvider
     [JsonPropertyName("image")]
     public string? Image { get; set; }
 
-    /// <summary>Labels to apply to this disk.  A list of key->value pairs.</summary>
+    /// <summary>Labels to apply to this disk.  A list of key-&gt;value pairs.</summary>
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 
@@ -862,7 +862,7 @@ public partial class V1beta1DiskStatusAtProvider
     [JsonPropertyName("labelFingerprint")]
     public string? LabelFingerprint { get; set; }
 
-    /// <summary>Labels to apply to this disk.  A list of key->value pairs.</summary>
+    /// <summary>Labels to apply to this disk.  A list of key-&gt;value pairs.</summary>
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 

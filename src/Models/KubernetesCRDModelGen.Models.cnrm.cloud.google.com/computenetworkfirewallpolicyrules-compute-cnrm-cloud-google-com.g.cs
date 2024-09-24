@@ -87,7 +87,7 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecMatch
     [JsonPropertyName("srcRegionCodes")]
     public IList<string>? SrcRegionCodes { get; set; }
 
-    /// <summary>List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the <code>srcSecureTag</code> are INEFFECTIVE, and there is no <code>srcIpRange</code>, this rule will be ignored. Maximum number of source tag values allowed is 256.</summary>
+    /// <summary>List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the &lt;code&gt;srcSecureTag&lt;/code&gt; are INEFFECTIVE, and there is no &lt;code&gt;srcIpRange&lt;/code&gt;, this rule will be ignored. Maximum number of source tag values allowed is 256.</summary>
     [JsonPropertyName("srcSecureTags")]
     public IList<V1alpha1ComputeNetworkFirewallPolicyRuleSpecMatchSrcSecureTags>? SrcSecureTags { get; set; }
 
@@ -179,7 +179,7 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpec
     [JsonPropertyName("ruleName")]
     public string? RuleName { get; set; }
 
-    /// <summary>A list of secure tags that controls which instances the firewall rule applies to. If <code>targetSecureTag</code> are specified, then the firewall rule applies only to instances in the VPC network that have one of those EFFECTIVE secure tags, if all the target_secure_tag are in INEFFECTIVE state, then this rule will be ignored. <code>targetSecureTag</code> may not be set at the same time as <code>targetServiceAccounts</code>. If neither <code>targetServiceAccounts</code> nor <code>targetSecureTag</code> are specified, the firewall rule applies to all instances on the specified network. Maximum number of target label tags allowed is 256.</summary>
+    /// <summary>A list of secure tags that controls which instances the firewall rule applies to. If &lt;code&gt;targetSecureTag&lt;/code&gt; are specified, then the firewall rule applies only to instances in the VPC network that have one of those EFFECTIVE secure tags, if all the target_secure_tag are in INEFFECTIVE state, then this rule will be ignored. &lt;code&gt;targetSecureTag&lt;/code&gt; may not be set at the same time as &lt;code&gt;targetServiceAccounts&lt;/code&gt;. If neither &lt;code&gt;targetServiceAccounts&lt;/code&gt; nor &lt;code&gt;targetSecureTag&lt;/code&gt; are specified, the firewall rule applies to all instances on the specified network. Maximum number of target label tags allowed is 256.</summary>
     [JsonPropertyName("targetSecureTags")]
     public IList<V1alpha1ComputeNetworkFirewallPolicyRuleSpecTargetSecureTags>? TargetSecureTags { get; set; }
 

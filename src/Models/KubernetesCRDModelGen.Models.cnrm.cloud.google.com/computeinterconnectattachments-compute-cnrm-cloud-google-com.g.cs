@@ -84,7 +84,7 @@ public partial class V1beta1ComputeInterconnectAttachmentSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 
-    /// <summary>The Cloud Router to be used for dynamic routing. This router must be in the same region as this ComputeInterconnectAttachment. The ComputeInterconnectAttachment will automatically connect the interconnect to the network & region within which the Cloud Router is configured.</summary>
+    /// <summary>The Cloud Router to be used for dynamic routing. This router must be in the same region as this ComputeInterconnectAttachment. The ComputeInterconnectAttachment will automatically connect the interconnect to the network &amp; region within which the Cloud Router is configured.</summary>
     [JsonPropertyName("routerRef")]
     public V1beta1ComputeInterconnectAttachmentSpecRouterRef RouterRef { get; set; }
 

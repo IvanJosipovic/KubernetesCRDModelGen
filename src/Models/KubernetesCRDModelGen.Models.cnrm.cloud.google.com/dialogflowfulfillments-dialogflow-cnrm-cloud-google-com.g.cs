@@ -105,7 +105,7 @@ public partial class V1alpha1DialogflowFulfillmentStatus
     [JsonPropertyName("conditions")]
     public IList<V1alpha1DialogflowFulfillmentStatusConditions>? Conditions { get; set; }
 
-    /// <summary>The unique identifier of the fulfillment. Format: projects/<Project ID>/agent/fulfillment - projects/<Project ID>/locations/<Location ID>/agent/fulfillment.</summary>
+    /// <summary>The unique identifier of the fulfillment. Format: projects/&lt;Project ID&gt;/agent/fulfillment - projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/fulfillment.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 

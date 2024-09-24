@@ -261,7 +261,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderVal
     [JsonPropertyName("content")]
     public IList<V1beta1ApplicationInsightsStandardWebTestSpecForProviderValidationRulesContent>? Content { get; set; }
 
-    /// <summary>The expected status code of the response. Default is '200', '0' means 'response code < 400'</summary>
+    /// <summary>The expected status code of the response. Default is '200', '0' means 'response code &lt; 400'</summary>
     [JsonPropertyName("expectedStatusCode")]
     public double? ExpectedStatusCode { get; set; }
 
@@ -492,7 +492,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProviderVa
     [JsonPropertyName("content")]
     public IList<V1beta1ApplicationInsightsStandardWebTestSpecInitProviderValidationRulesContent>? Content { get; set; }
 
-    /// <summary>The expected status code of the response. Default is '200', '0' means 'response code < 400'</summary>
+    /// <summary>The expected status code of the response. Default is '200', '0' means 'response code &lt; 400'</summary>
     [JsonPropertyName("expectedStatusCode")]
     public double? ExpectedStatusCode { get; set; }
 
@@ -802,7 +802,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestStatusAtProviderVa
     [JsonPropertyName("content")]
     public IList<V1beta1ApplicationInsightsStandardWebTestStatusAtProviderValidationRulesContent>? Content { get; set; }
 
-    /// <summary>The expected status code of the response. Default is '200', '0' means 'response code < 400'</summary>
+    /// <summary>The expected status code of the response. Default is '200', '0' means 'response code &lt; 400'</summary>
     [JsonPropertyName("expectedStatusCode")]
     public double? ExpectedStatusCode { get; set; }
 

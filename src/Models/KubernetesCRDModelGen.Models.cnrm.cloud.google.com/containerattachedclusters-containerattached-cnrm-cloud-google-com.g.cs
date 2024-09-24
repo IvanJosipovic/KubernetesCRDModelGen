@@ -39,7 +39,7 @@ public partial class V1beta1ContainerAttachedClusterSpecFleetProjectRef
 
 public partial class V1beta1ContainerAttachedClusterSpecFleet
 {
-    /// <summary>The name of the managed Hub Membership resource associated to this cluster. Membership names are formatted as projects/<project-number>/locations/global/membership/<cluster-id>.</summary>
+    /// <summary>The name of the managed Hub Membership resource associated to this cluster. Membership names are formatted as projects/&lt;project-number&gt;/locations/global/membership/&lt;cluster-id&gt;.</summary>
     [JsonPropertyName("membership")]
     public string? Membership { get; set; }
 

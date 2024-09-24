@@ -3,6 +3,7 @@ using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Xml;
+using System.Xml.Linq;
 using Humanizer;
 using k8s;
 using k8s.Models;
@@ -354,7 +355,7 @@ public class Generator : IGenerator
                     SyntaxFactory.EnumMemberDeclaration(SyntaxFactory.Identifier(identifier))
                         .WithLeadingTrivia(
                             SyntaxFactory.TriviaList(
-                                SyntaxFactory.Comment($"/// <summary>{openApiString.Value?.Replace("\n", " ").Replace("\r", " ")}</summary>"),
+                                SyntaxFactory.Comment($"/// <summary>{XmlString(openApiString.Value?.Replace("\n", " ").Replace("\r", " "))}</summary>"),
                                 SyntaxFactory.CarriageReturnLineFeed))
                         .WithAttributeLists(
                             SyntaxFactory.SingletonList(
@@ -445,7 +446,7 @@ public class Generator : IGenerator
 
         propDecleration = propDecleration.WithLeadingTrivia(
             SyntaxFactory.TriviaList(
-                SyntaxFactory.Comment($"/// <summary>{comment?.Replace("\n", " ").Replace("\r", " ")}</summary>"),
+                SyntaxFactory.Comment($"/// <summary>{XmlString(comment?.Replace("\n", " ").Replace("\r", " "))}</summary>"),
                 SyntaxFactory.CarriageReturnLineFeed));
 
 
@@ -588,5 +589,14 @@ public class Generator : IGenerator
         var code = GenerateCompilationUnit(crd, @namespace);
 
         return code.NormalizeWhitespace().ToString();
+    }
+
+    public static string XmlString(string text)
+    {
+        if (string.IsNullOrEmpty(text))
+        {
+            return text;
+        }
+        return new XElement("t", text).LastNode.ToString();
     }
 }

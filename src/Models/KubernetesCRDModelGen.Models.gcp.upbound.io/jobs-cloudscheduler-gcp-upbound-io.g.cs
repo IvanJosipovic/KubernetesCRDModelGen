@@ -207,7 +207,7 @@ public partial class V1beta1JobSpecForProviderPubsubTarget
     [JsonPropertyName("data")]
     public string? Data { get; set; }
 
-    /// <summary>The full resource name for the Cloud Pub/Sub topic to which messages will be published when a job is delivered. ~>NOTE: The topic name must be in the same format as required by PubSub's PublishRequest.name, e.g. projects/my-project/topics/my-topic.</summary>
+    /// <summary>The full resource name for the Cloud Pub/Sub topic to which messages will be published when a job is delivered. ~&gt;NOTE: The topic name must be in the same format as required by PubSub's PublishRequest.name, e.g. projects/my-project/topics/my-topic.</summary>
     [JsonPropertyName("topicName")]
     public string? TopicName { get; set; }
 
@@ -479,7 +479,7 @@ public partial class V1beta1JobSpecInitProviderPubsubTarget
     [JsonPropertyName("data")]
     public string? Data { get; set; }
 
-    /// <summary>The full resource name for the Cloud Pub/Sub topic to which messages will be published when a job is delivered. ~>NOTE: The topic name must be in the same format as required by PubSub's PublishRequest.name, e.g. projects/my-project/topics/my-topic.</summary>
+    /// <summary>The full resource name for the Cloud Pub/Sub topic to which messages will be published when a job is delivered. ~&gt;NOTE: The topic name must be in the same format as required by PubSub's PublishRequest.name, e.g. projects/my-project/topics/my-topic.</summary>
     [JsonPropertyName("topicName")]
     public string? TopicName { get; set; }
 
@@ -838,7 +838,7 @@ public partial class V1beta1JobStatusAtProviderPubsubTarget
     [JsonPropertyName("data")]
     public string? Data { get; set; }
 
-    /// <summary>The full resource name for the Cloud Pub/Sub topic to which messages will be published when a job is delivered. ~>NOTE: The topic name must be in the same format as required by PubSub's PublishRequest.name, e.g. projects/my-project/topics/my-topic.</summary>
+    /// <summary>The full resource name for the Cloud Pub/Sub topic to which messages will be published when a job is delivered. ~&gt;NOTE: The topic name must be in the same format as required by PubSub's PublishRequest.name, e.g. projects/my-project/topics/my-topic.</summary>
     [JsonPropertyName("topicName")]
     public string? TopicName { get; set; }
 }

@@ -56,7 +56,7 @@ public partial class V1beta1ClusterSpecForProviderAzureServicesAuthentication
 
 public partial class V1beta1ClusterSpecForProviderControlPlaneDatabaseEncryption
 {
-    /// <summary>The ARM ID of the Azure Key Vault key to encrypt / decrypt data. For example: /subscriptions/<subscription-id>/resourceGroups/<resource-group-id>/providers/Microsoft.KeyVault/vaults/<key-vault-id>/keys/<key-name> Encryption will always take the latest version of the key and hence specific version is not supported.</summary>
+    /// <summary>The ARM ID of the Azure Key Vault key to encrypt / decrypt data. For example: /subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;resource-group-id&gt;/providers/Microsoft.KeyVault/vaults/&lt;key-vault-id&gt;/keys/&lt;key-name&gt; Encryption will always take the latest version of the key and hence specific version is not supported.</summary>
     [JsonPropertyName("keyId")]
     public string? KeyId { get; set; }
 }
@@ -74,7 +74,7 @@ public partial class V1beta1ClusterSpecForProviderControlPlaneProxyConfig
     [JsonPropertyName("resourceGroupId")]
     public string? ResourceGroupId { get; set; }
 
-    /// <summary>The URL the of the proxy setting secret with its version. Secret ids are formatted as https:<key-vault-name>.vault.azure.net/secrets/<secret-name>/<secret-version>.</summary>
+    /// <summary>The URL the of the proxy setting secret with its version. Secret ids are formatted as https:&lt;key-vault-name&gt;.vault.azure.net/secrets/&lt;secret-name&gt;/&lt;secret-version&gt;.</summary>
     [JsonPropertyName("secretId")]
     public string? SecretId { get; set; }
 }
@@ -187,7 +187,7 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("azureServicesAuthentication")]
     public IList<V1beta1ClusterSpecForProviderAzureServicesAuthentication>? AzureServicesAuthentication { get; set; }
 
-    /// <summary>Name of the AzureClient. The AzureClient resource must reside on the same GCP project and region as the AzureCluster. AzureClient names are formatted as projects/<project-number>/locations/<region>/azureClients/<client-id>. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.</summary>
+    /// <summary>Name of the AzureClient. The AzureClient resource must reside on the same GCP project and region as the AzureCluster. AzureClient names are formatted as projects/&lt;project-number&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.</summary>
     [JsonPropertyName("client")]
     public string? Client { get; set; }
 
@@ -258,7 +258,7 @@ public partial class V1beta1ClusterSpecInitProviderAzureServicesAuthentication
 
 public partial class V1beta1ClusterSpecInitProviderControlPlaneDatabaseEncryption
 {
-    /// <summary>The ARM ID of the Azure Key Vault key to encrypt / decrypt data. For example: /subscriptions/<subscription-id>/resourceGroups/<resource-group-id>/providers/Microsoft.KeyVault/vaults/<key-vault-id>/keys/<key-name> Encryption will always take the latest version of the key and hence specific version is not supported.</summary>
+    /// <summary>The ARM ID of the Azure Key Vault key to encrypt / decrypt data. For example: /subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;resource-group-id&gt;/providers/Microsoft.KeyVault/vaults/&lt;key-vault-id&gt;/keys/&lt;key-name&gt; Encryption will always take the latest version of the key and hence specific version is not supported.</summary>
     [JsonPropertyName("keyId")]
     public string? KeyId { get; set; }
 }
@@ -276,7 +276,7 @@ public partial class V1beta1ClusterSpecInitProviderControlPlaneProxyConfig
     [JsonPropertyName("resourceGroupId")]
     public string? ResourceGroupId { get; set; }
 
-    /// <summary>The URL the of the proxy setting secret with its version. Secret ids are formatted as https:<key-vault-name>.vault.azure.net/secrets/<secret-name>/<secret-version>.</summary>
+    /// <summary>The URL the of the proxy setting secret with its version. Secret ids are formatted as https:&lt;key-vault-name&gt;.vault.azure.net/secrets/&lt;secret-name&gt;/&lt;secret-version&gt;.</summary>
     [JsonPropertyName("secretId")]
     public string? SecretId { get; set; }
 }
@@ -389,7 +389,7 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("azureServicesAuthentication")]
     public IList<V1beta1ClusterSpecInitProviderAzureServicesAuthentication>? AzureServicesAuthentication { get; set; }
 
-    /// <summary>Name of the AzureClient. The AzureClient resource must reside on the same GCP project and region as the AzureCluster. AzureClient names are formatted as projects/<project-number>/locations/<region>/azureClients/<client-id>. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.</summary>
+    /// <summary>Name of the AzureClient. The AzureClient resource must reside on the same GCP project and region as the AzureCluster. AzureClient names are formatted as projects/&lt;project-number&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.</summary>
     [JsonPropertyName("client")]
     public string? Client { get; set; }
 
@@ -639,7 +639,7 @@ public partial class V1beta1ClusterStatusAtProviderAzureServicesAuthentication
 
 public partial class V1beta1ClusterStatusAtProviderControlPlaneDatabaseEncryption
 {
-    /// <summary>The ARM ID of the Azure Key Vault key to encrypt / decrypt data. For example: /subscriptions/<subscription-id>/resourceGroups/<resource-group-id>/providers/Microsoft.KeyVault/vaults/<key-vault-id>/keys/<key-name> Encryption will always take the latest version of the key and hence specific version is not supported.</summary>
+    /// <summary>The ARM ID of the Azure Key Vault key to encrypt / decrypt data. For example: /subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;resource-group-id&gt;/providers/Microsoft.KeyVault/vaults/&lt;key-vault-id&gt;/keys/&lt;key-name&gt; Encryption will always take the latest version of the key and hence specific version is not supported.</summary>
     [JsonPropertyName("keyId")]
     public string? KeyId { get; set; }
 }
@@ -657,7 +657,7 @@ public partial class V1beta1ClusterStatusAtProviderControlPlaneProxyConfig
     [JsonPropertyName("resourceGroupId")]
     public string? ResourceGroupId { get; set; }
 
-    /// <summary>The URL the of the proxy setting secret with its version. Secret ids are formatted as https:<key-vault-name>.vault.azure.net/secrets/<secret-name>/<secret-version>.</summary>
+    /// <summary>The URL the of the proxy setting secret with its version. Secret ids are formatted as https:&lt;key-vault-name&gt;.vault.azure.net/secrets/&lt;secret-name&gt;/&lt;secret-version&gt;.</summary>
     [JsonPropertyName("secretId")]
     public string? SecretId { get; set; }
 }
@@ -789,7 +789,7 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("azureServicesAuthentication")]
     public IList<V1beta1ClusterStatusAtProviderAzureServicesAuthentication>? AzureServicesAuthentication { get; set; }
 
-    /// <summary>Name of the AzureClient. The AzureClient resource must reside on the same GCP project and region as the AzureCluster. AzureClient names are formatted as projects/<project-number>/locations/<region>/azureClients/<client-id>. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.</summary>
+    /// <summary>Name of the AzureClient. The AzureClient resource must reside on the same GCP project and region as the AzureCluster. AzureClient names are formatted as projects/&lt;project-number&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.</summary>
     [JsonPropertyName("client")]
     public string? Client { get; set; }
 

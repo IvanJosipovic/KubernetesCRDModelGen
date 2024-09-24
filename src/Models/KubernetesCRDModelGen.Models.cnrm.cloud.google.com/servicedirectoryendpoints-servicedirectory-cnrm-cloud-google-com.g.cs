@@ -59,7 +59,7 @@ public partial class V1beta1ServiceDirectoryEndpointSpec
     [JsonPropertyName("addressRef")]
     public V1beta1ServiceDirectoryEndpointSpecAddressRef? AddressRef { get; set; }
 
-    /// <summary>Only the `external` field is supported to configure the reference.  Immutable. The Google Compute Engine network (VPC) of the endpoint in the format projects/<project number>/locations/global/networks/*.  The project must be specified by project number (project id is rejected). Incorrectly formatted networks are rejected, but no other validation is performed on this field (ex. network or project existence, reachability, or permissions).</summary>
+    /// <summary>Only the `external` field is supported to configure the reference.  Immutable. The Google Compute Engine network (VPC) of the endpoint in the format projects/&lt;project number&gt;/locations/global/networks/*.  The project must be specified by project number (project id is rejected). Incorrectly formatted networks are rejected, but no other validation is performed on this field (ex. network or project existence, reachability, or permissions).</summary>
     [JsonPropertyName("networkRef")]
     public V1beta1ServiceDirectoryEndpointSpecNetworkRef? NetworkRef { get; set; }
 

@@ -56,7 +56,7 @@ public partial class V1alpha1DialogflowCXAgentSpec
     [JsonPropertyName("enableStackdriverLogging")]
     public bool? EnableStackdriverLogging { get; set; }
 
-    /// <summary>Immutable. The name of the location this agent is located in.  ~> **Note:** The first time you are deploying an Agent in your project you must configure location settings.  This is a one time step but at the moment you can only [configure location settings](https://cloud.google.com/dialogflow/cx/docs/concept/region#location-settings) via the Dialogflow CX console.  Another options is to use global location so you don't need to manually configure location settings.</summary>
+    /// <summary>Immutable. The name of the location this agent is located in.  ~&gt; **Note:** The first time you are deploying an Agent in your project you must configure location settings.  This is a one time step but at the moment you can only [configure location settings](https://cloud.google.com/dialogflow/cx/docs/concept/region#location-settings) via the Dialogflow CX console.  Another options is to use global location so you don't need to manually configure location settings.</summary>
     [JsonPropertyName("location")]
     public string Location { get; set; }
 
@@ -68,7 +68,7 @@ public partial class V1alpha1DialogflowCXAgentSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 
-    /// <summary>Name of the SecuritySettings reference for the agent. Format: projects/<Project ID>/locations/<Location ID>/securitySettings/<Security Settings ID>.</summary>
+    /// <summary>Name of the SecuritySettings reference for the agent. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/securitySettings/&lt;Security Settings ID&gt;.</summary>
     [JsonPropertyName("securitySettings")]
     public string? SecuritySettings { get; set; }
 
@@ -122,7 +122,7 @@ public partial class V1alpha1DialogflowCXAgentStatus
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
 
-    /// <summary>Name of the start flow in this agent. A start flow will be automatically created when the agent is created, and can only be deleted by deleting the agent. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.</summary>
+    /// <summary>Name of the start flow in this agent. A start flow will be automatically created when the agent is created, and can only be deleted by deleting the agent. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;.</summary>
     [JsonPropertyName("startFlow")]
     public string? StartFlow { get; set; }
 }

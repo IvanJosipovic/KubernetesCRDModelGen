@@ -980,7 +980,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigApplication
     [JsonPropertyName("dotnetVersion")]
     public string? DotnetVersion { get; set; }
 
-    /// <summary>The Version of Java to use. Supported versions include 8, 11 & 17. The version of Java to use. Possible values are `8`, `11`, and `17`</summary>
+    /// <summary>The Version of Java to use. Supported versions include 8, 11 &amp; 17. The version of Java to use. Possible values are `8`, `11`, and `17`</summary>
     [JsonPropertyName("javaVersion")]
     public string? JavaVersion { get; set; }
 
@@ -2613,7 +2613,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfigApplicatio
     [JsonPropertyName("dotnetVersion")]
     public string? DotnetVersion { get; set; }
 
-    /// <summary>The Version of Java to use. Supported versions include 8, 11 & 17. The version of Java to use. Possible values are `8`, `11`, and `17`</summary>
+    /// <summary>The Version of Java to use. Supported versions include 8, 11 &amp; 17. The version of Java to use. Possible values are `8`, `11`, and `17`</summary>
     [JsonPropertyName("javaVersion")]
     public string? JavaVersion { get; set; }
 
@@ -4254,7 +4254,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderSiteConfigApplicatio
     [JsonPropertyName("dotnetVersion")]
     public string? DotnetVersion { get; set; }
 
-    /// <summary>The Version of Java to use. Supported versions include 8, 11 & 17. The version of Java to use. Possible values are `8`, `11`, and `17`</summary>
+    /// <summary>The Version of Java to use. Supported versions include 8, 11 &amp; 17. The version of Java to use. Possible values are `8`, `11`, and `17`</summary>
     [JsonPropertyName("javaVersion")]
     public string? JavaVersion { get; set; }
 

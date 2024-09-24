@@ -52,7 +52,7 @@ public partial class V1alpha1MiddlewareSpecBuffering
     [JsonPropertyName("memResponseBodyBytes")]
     public long? MemResponseBodyBytes { get; set; }
 
-    /// <summary>RetryExpression defines the retry conditions. It is a logical combination of functions with operators AND (&&) and OR (||). More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/buffering/#retryexpression</summary>
+    /// <summary>RetryExpression defines the retry conditions. It is a logical combination of functions with operators AND (&amp;&amp;) and OR (||). More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/buffering/#retryexpression</summary>
     [JsonPropertyName("retryExpression")]
     public string? RetryExpression { get; set; }
 }

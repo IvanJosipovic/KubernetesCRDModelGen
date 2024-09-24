@@ -43,7 +43,7 @@ public partial class V1beta1SubscriptionSpecForProviderBigqueryConfig
 
 public partial class V1beta1SubscriptionSpecForProviderCloudStorageConfigAvroConfig
 {
-    /// <summary>When true, writes the Pub/Sub message metadata to x-goog-pubsub-<KEY>:<VAL> headers of the HTTP request. Writes the Pub/Sub message attributes to <KEY>:<VAL> headers of the HTTP request.</summary>
+    /// <summary>When true, writes the Pub/Sub message metadata to x-goog-pubsub-&lt;KEY&gt;:&lt;VAL&gt; headers of the HTTP request. Writes the Pub/Sub message attributes to &lt;KEY&gt;:&lt;VAL&gt; headers of the HTTP request.</summary>
     [JsonPropertyName("writeMetadata")]
     public bool? WriteMetadata { get; set; }
 }
@@ -199,7 +199,7 @@ public partial class V1beta1SubscriptionSpecForProviderExpirationPolicy
 
 public partial class V1beta1SubscriptionSpecForProviderPushConfigNoWrapper
 {
-    /// <summary>When true, writes the Pub/Sub message metadata to x-goog-pubsub-<KEY>:<VAL> headers of the HTTP request. Writes the Pub/Sub message attributes to <KEY>:<VAL> headers of the HTTP request.</summary>
+    /// <summary>When true, writes the Pub/Sub message metadata to x-goog-pubsub-&lt;KEY&gt;:&lt;VAL&gt; headers of the HTTP request. Writes the Pub/Sub message attributes to &lt;KEY&gt;:&lt;VAL&gt; headers of the HTTP request.</summary>
     [JsonPropertyName("writeMetadata")]
     public bool? WriteMetadata { get; set; }
 }
@@ -433,7 +433,7 @@ public partial class V1beta1SubscriptionSpecInitProviderBigqueryConfig
 
 public partial class V1beta1SubscriptionSpecInitProviderCloudStorageConfigAvroConfig
 {
-    /// <summary>When true, writes the Pub/Sub message metadata to x-goog-pubsub-<KEY>:<VAL> headers of the HTTP request. Writes the Pub/Sub message attributes to <KEY>:<VAL> headers of the HTTP request.</summary>
+    /// <summary>When true, writes the Pub/Sub message metadata to x-goog-pubsub-&lt;KEY&gt;:&lt;VAL&gt; headers of the HTTP request. Writes the Pub/Sub message attributes to &lt;KEY&gt;:&lt;VAL&gt; headers of the HTTP request.</summary>
     [JsonPropertyName("writeMetadata")]
     public bool? WriteMetadata { get; set; }
 }
@@ -589,7 +589,7 @@ public partial class V1beta1SubscriptionSpecInitProviderExpirationPolicy
 
 public partial class V1beta1SubscriptionSpecInitProviderPushConfigNoWrapper
 {
-    /// <summary>When true, writes the Pub/Sub message metadata to x-goog-pubsub-<KEY>:<VAL> headers of the HTTP request. Writes the Pub/Sub message attributes to <KEY>:<VAL> headers of the HTTP request.</summary>
+    /// <summary>When true, writes the Pub/Sub message metadata to x-goog-pubsub-&lt;KEY&gt;:&lt;VAL&gt; headers of the HTTP request. Writes the Pub/Sub message attributes to &lt;KEY&gt;:&lt;VAL&gt; headers of the HTTP request.</summary>
     [JsonPropertyName("writeMetadata")]
     public bool? WriteMetadata { get; set; }
 }
@@ -1006,7 +1006,7 @@ public partial class V1beta1SubscriptionStatusAtProviderBigqueryConfig
 
 public partial class V1beta1SubscriptionStatusAtProviderCloudStorageConfigAvroConfig
 {
-    /// <summary>When true, writes the Pub/Sub message metadata to x-goog-pubsub-<KEY>:<VAL> headers of the HTTP request. Writes the Pub/Sub message attributes to <KEY>:<VAL> headers of the HTTP request.</summary>
+    /// <summary>When true, writes the Pub/Sub message metadata to x-goog-pubsub-&lt;KEY&gt;:&lt;VAL&gt; headers of the HTTP request. Writes the Pub/Sub message attributes to &lt;KEY&gt;:&lt;VAL&gt; headers of the HTTP request.</summary>
     [JsonPropertyName("writeMetadata")]
     public bool? WriteMetadata { get; set; }
 }
@@ -1066,7 +1066,7 @@ public partial class V1beta1SubscriptionStatusAtProviderExpirationPolicy
 
 public partial class V1beta1SubscriptionStatusAtProviderPushConfigNoWrapper
 {
-    /// <summary>When true, writes the Pub/Sub message metadata to x-goog-pubsub-<KEY>:<VAL> headers of the HTTP request. Writes the Pub/Sub message attributes to <KEY>:<VAL> headers of the HTTP request.</summary>
+    /// <summary>When true, writes the Pub/Sub message metadata to x-goog-pubsub-&lt;KEY&gt;:&lt;VAL&gt; headers of the HTTP request. Writes the Pub/Sub message attributes to &lt;KEY&gt;:&lt;VAL&gt; headers of the HTTP request.</summary>
     [JsonPropertyName("writeMetadata")]
     public bool? WriteMetadata { get; set; }
 }

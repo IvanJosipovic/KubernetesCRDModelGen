@@ -199,7 +199,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatch
     [JsonPropertyName("tokenQueryParameter")]
     public string? TokenQueryParameter { get; set; }
 
-    /// <summary>The duration the token is valid starting from the moment the token is first generated.  Defaults to '86400s' (1 day).  The TTL must be >= 0 and <= 604,800 seconds (1 week).  This field may only be specified when the GENERATE_COOKIE or GENERATE_TOKEN_HLS_COOKIELESS actions are specified.  A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".</summary>
+    /// <summary>The duration the token is valid starting from the moment the token is first generated.  Defaults to '86400s' (1 day).  The TTL must be &gt;= 0 and &lt;= 604,800 seconds (1 week).  This field may only be specified when the GENERATE_COOKIE or GENERATE_TOKEN_HLS_COOKIELESS actions are specified.  A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".</summary>
     [JsonPropertyName("tokenTtl")]
     public string? TokenTtl { get; set; }
 }
@@ -214,7 +214,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatch
     [JsonPropertyName("excludeQueryString")]
     public bool? ExcludeQueryString { get; set; }
 
-    /// <summary>Names of query string parameters to exclude from cache keys. All other parameters will be included.  Either specify includedQueryParameters or excludedQueryParameters, not both. '&' and '=' will be percent encoded and not treated as delimiters.</summary>
+    /// <summary>Names of query string parameters to exclude from cache keys. All other parameters will be included.  Either specify includedQueryParameters or excludedQueryParameters, not both. '&amp;' and '=' will be percent encoded and not treated as delimiters.</summary>
     [JsonPropertyName("excludedQueryParameters")]
     public IList<string>? ExcludedQueryParameters { get; set; }
 
@@ -230,7 +230,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatch
     [JsonPropertyName("includedHeaderNames")]
     public IList<string>? IncludedHeaderNames { get; set; }
 
-    /// <summary>Names of query string parameters to include in cache keys. All other parameters will be excluded.  Either specify includedQueryParameters or excludedQueryParameters, not both. '&' and '=' will be percent encoded and not treated as delimiters.</summary>
+    /// <summary>Names of query string parameters to include in cache keys. All other parameters will be excluded.  Either specify includedQueryParameters or excludedQueryParameters, not both. '&amp;' and '=' will be percent encoded and not treated as delimiters.</summary>
     [JsonPropertyName("includedQueryParameters")]
     public IList<string>? IncludedQueryParameters { get; set; }
 }
@@ -260,15 +260,15 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatch
     [JsonPropertyName("cacheMode")]
     public string? CacheMode { get; set; }
 
-    /// <summary>Specifies a separate client (e.g. browser client) TTL, separate from the TTL used by the edge caches. Leaving this empty will use the same cache TTL for both the CDN and the client-facing response.  - The TTL must be > 0 and <= 86400s (1 day) - The clientTtl cannot be larger than the defaultTtl (if set) - Fractions of a second are not allowed.  Omit this field to use the defaultTtl, or the max-age set by the origin, as the client-facing TTL.  When the cache mode is set to "USE_ORIGIN_HEADERS" or "BYPASS_CACHE", you must omit this field. A duration in seconds terminated by 's'. Example: "3s".</summary>
+    /// <summary>Specifies a separate client (e.g. browser client) TTL, separate from the TTL used by the edge caches. Leaving this empty will use the same cache TTL for both the CDN and the client-facing response.  - The TTL must be &gt; 0 and &lt;= 86400s (1 day) - The clientTtl cannot be larger than the defaultTtl (if set) - Fractions of a second are not allowed.  Omit this field to use the defaultTtl, or the max-age set by the origin, as the client-facing TTL.  When the cache mode is set to "USE_ORIGIN_HEADERS" or "BYPASS_CACHE", you must omit this field. A duration in seconds terminated by 's'. Example: "3s".</summary>
     [JsonPropertyName("clientTtl")]
     public string? ClientTtl { get; set; }
 
-    /// <summary>Specifies the default TTL for cached content served by this origin for responses that do not have an existing valid TTL (max-age or s-max-age).  Defaults to 3600s (1 hour).  - The TTL must be >= 0 and <= 31,536,000 seconds (1 year) - Setting a TTL of "0" means "always revalidate" (equivalent to must-revalidate) - The value of defaultTTL cannot be set to a value greater than that of maxTTL. - Fractions of a second are not allowed. - When the cacheMode is set to FORCE_CACHE_ALL, the defaultTTL will overwrite the TTL set in all responses.  Note that infrequently accessed objects may be evicted from the cache before the defined TTL. Objects that expire will be revalidated with the origin.  When the cache mode is set to "USE_ORIGIN_HEADERS" or "BYPASS_CACHE", you must omit this field.  A duration in seconds terminated by 's'. Example: "3s".</summary>
+    /// <summary>Specifies the default TTL for cached content served by this origin for responses that do not have an existing valid TTL (max-age or s-max-age).  Defaults to 3600s (1 hour).  - The TTL must be &gt;= 0 and &lt;= 31,536,000 seconds (1 year) - Setting a TTL of "0" means "always revalidate" (equivalent to must-revalidate) - The value of defaultTTL cannot be set to a value greater than that of maxTTL. - Fractions of a second are not allowed. - When the cacheMode is set to FORCE_CACHE_ALL, the defaultTTL will overwrite the TTL set in all responses.  Note that infrequently accessed objects may be evicted from the cache before the defined TTL. Objects that expire will be revalidated with the origin.  When the cache mode is set to "USE_ORIGIN_HEADERS" or "BYPASS_CACHE", you must omit this field.  A duration in seconds terminated by 's'. Example: "3s".</summary>
     [JsonPropertyName("defaultTtl")]
     public string? DefaultTtl { get; set; }
 
-    /// <summary>Specifies the maximum allowed TTL for cached content served by this origin.  Defaults to 86400s (1 day).  Cache directives that attempt to set a max-age or s-maxage higher than this, or an Expires header more than maxTtl seconds in the future will be capped at the value of maxTTL, as if it were the value of an s-maxage Cache-Control directive.  - The TTL must be >= 0 and <= 31,536,000 seconds (1 year) - Setting a TTL of "0" means "always revalidate" - The value of maxTtl must be equal to or greater than defaultTtl. - Fractions of a second are not allowed.  When the cache mode is set to "USE_ORIGIN_HEADERS", "FORCE_CACHE_ALL", or "BYPASS_CACHE", you must omit this field.  A duration in seconds terminated by 's'. Example: "3s".</summary>
+    /// <summary>Specifies the maximum allowed TTL for cached content served by this origin.  Defaults to 86400s (1 day).  Cache directives that attempt to set a max-age or s-maxage higher than this, or an Expires header more than maxTtl seconds in the future will be capped at the value of maxTTL, as if it were the value of an s-maxage Cache-Control directive.  - The TTL must be &gt;= 0 and &lt;= 31,536,000 seconds (1 year) - Setting a TTL of "0" means "always revalidate" - The value of maxTtl must be equal to or greater than defaultTtl. - Fractions of a second are not allowed.  When the cache mode is set to "USE_ORIGIN_HEADERS", "FORCE_CACHE_ALL", or "BYPASS_CACHE", you must omit this field.  A duration in seconds terminated by 's'. Example: "3s".</summary>
     [JsonPropertyName("maxTtl")]
     public string? MaxTtl { get; set; }
 
@@ -276,7 +276,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatch
     [JsonPropertyName("negativeCaching")]
     public bool? NegativeCaching { get; set; }
 
-    /// <summary>Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy.  - Omitting the policy and leaving negativeCaching enabled will use the default TTLs for each status code, defined in negativeCaching. - TTLs must be >= 0 (where 0 is "always revalidate") and <= 86400s (1 day)  Note that when specifying an explicit negativeCachingPolicy, you should take care to specify a cache TTL for all response codes that you wish to cache. The CDNPolicy will not apply any default negative caching when a policy exists.</summary>
+    /// <summary>Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy.  - Omitting the policy and leaving negativeCaching enabled will use the default TTLs for each status code, defined in negativeCaching. - TTLs must be &gt;= 0 (where 0 is "always revalidate") and &lt;= 86400s (1 day)  Note that when specifying an explicit negativeCachingPolicy, you should take care to specify a cache TTL for all response codes that you wish to cache. The CDNPolicy will not apply any default negative caching when a policy exists.</summary>
     [JsonPropertyName("negativeCachingPolicy")]
     public IDictionary<string, string>? NegativeCachingPolicy { get; set; }
 
@@ -284,7 +284,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatch
     [JsonPropertyName("signedRequestKeyset")]
     public string? SignedRequestKeyset { get; set; }
 
-    /// <summary>Limit how far into the future the expiration time of a signed request may be.  When set, a signed request is rejected if its expiration time is later than now + signedRequestMaximumExpirationTtl, where now is the time at which the signed request is first handled by the CDN.  - The TTL must be > 0. - Fractions of a second are not allowed.  By default, signedRequestMaximumExpirationTtl is not set and the expiration time of a signed request may be arbitrarily far into future.</summary>
+    /// <summary>Limit how far into the future the expiration time of a signed request may be.  When set, a signed request is rejected if its expiration time is later than now + signedRequestMaximumExpirationTtl, where now is the time at which the signed request is first handled by the CDN.  - The TTL must be &gt; 0. - Fractions of a second are not allowed.  By default, signedRequestMaximumExpirationTtl is not set and the expiration time of a signed request may be arbitrarily far into future.</summary>
     [JsonPropertyName("signedRequestMaximumExpirationTtl")]
     public string? SignedRequestMaximumExpirationTtl { get; set; }
 
@@ -391,7 +391,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatch
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>The header actions, including adding & removing headers, for requests that match this route.</summary>
+    /// <summary>The header actions, including adding &amp; removing headers, for requests that match this route.</summary>
     [JsonPropertyName("headerAction")]
     public V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleHeaderAction? HeaderAction { get; set; }
 

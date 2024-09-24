@@ -163,7 +163,7 @@ public partial class V1beta1RunServiceSpecTemplateContainersLivenessProbe
 
 public partial class V1beta1RunServiceSpecTemplateContainersPorts
 {
-    /// <summary>Port number the container listens on. This must be a valid TCP port number, 0 < containerPort < 65536.</summary>
+    /// <summary>Port number the container listens on. This must be a valid TCP port number, 0 &lt; containerPort &lt; 65536.</summary>
     [JsonPropertyName("containerPort")]
     public int? ContainerPort { get; set; }
 

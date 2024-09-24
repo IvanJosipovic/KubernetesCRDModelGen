@@ -246,7 +246,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderCriteriaServic
     [JsonPropertyName("locations")]
     public IList<string>? Locations { get; set; }
 
-    /// <summary>Services this alert will monitor. For example, Activity Logs & Alerts, Action Groups. Defaults to all Services.</summary>
+    /// <summary>Services this alert will monitor. For example, Activity Logs &amp; Alerts, Action Groups. Defaults to all Services.</summary>
     [JsonPropertyName("services")]
     public IList<string>? Services { get; set; }
 }
@@ -269,7 +269,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderCriteria
     [JsonPropertyName("levels")]
     public IList<string>? Levels { get; set; }
 
-    /// <summary>The Resource Manager Role-Based Access Control operation name. Supported operation should be of the form: <resourceProvider>/<resourceType>/<operation>.</summary>
+    /// <summary>The Resource Manager Role-Based Access Control operation name. Supported operation should be of the form: &lt;resourceProvider&gt;/&lt;resourceType&gt;/&lt;operation&gt;.</summary>
     [JsonPropertyName("operationName")]
     public string? OperationName { get; set; }
 
@@ -813,7 +813,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderCriteriaServi
     [JsonPropertyName("locations")]
     public IList<string>? Locations { get; set; }
 
-    /// <summary>Services this alert will monitor. For example, Activity Logs & Alerts, Action Groups. Defaults to all Services.</summary>
+    /// <summary>Services this alert will monitor. For example, Activity Logs &amp; Alerts, Action Groups. Defaults to all Services.</summary>
     [JsonPropertyName("services")]
     public IList<string>? Services { get; set; }
 }
@@ -836,7 +836,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderCriteria
     [JsonPropertyName("levels")]
     public IList<string>? Levels { get; set; }
 
-    /// <summary>The Resource Manager Role-Based Access Control operation name. Supported operation should be of the form: <resourceProvider>/<resourceType>/<operation>.</summary>
+    /// <summary>The Resource Manager Role-Based Access Control operation name. Supported operation should be of the form: &lt;resourceProvider&gt;/&lt;resourceType&gt;/&lt;operation&gt;.</summary>
     [JsonPropertyName("operationName")]
     public string? OperationName { get; set; }
 
@@ -1371,7 +1371,7 @@ public partial class V1beta1MonitorActivityLogAlertStatusAtProviderCriteriaServi
     [JsonPropertyName("locations")]
     public IList<string>? Locations { get; set; }
 
-    /// <summary>Services this alert will monitor. For example, Activity Logs & Alerts, Action Groups. Defaults to all Services.</summary>
+    /// <summary>Services this alert will monitor. For example, Activity Logs &amp; Alerts, Action Groups. Defaults to all Services.</summary>
     [JsonPropertyName("services")]
     public IList<string>? Services { get; set; }
 }
@@ -1394,7 +1394,7 @@ public partial class V1beta1MonitorActivityLogAlertStatusAtProviderCriteria
     [JsonPropertyName("levels")]
     public IList<string>? Levels { get; set; }
 
-    /// <summary>The Resource Manager Role-Based Access Control operation name. Supported operation should be of the form: <resourceProvider>/<resourceType>/<operation>.</summary>
+    /// <summary>The Resource Manager Role-Based Access Control operation name. Supported operation should be of the form: &lt;resourceProvider&gt;/&lt;resourceType&gt;/&lt;operation&gt;.</summary>
     [JsonPropertyName("operationName")]
     public string? OperationName { get; set; }
 

@@ -20,7 +20,7 @@ public enum V1beta1MembershipSpecDeletionPolicyEnum
 
 public partial class V1beta1MembershipSpecForProviderAuthority
 {
-    /// <summary>A JSON Web Token (JWT) issuer URI. issuer must start with https:// and // be a valid with length <2000 characters. For example: https://container.googleapis.com/v1/projects/my-project/locations/us-west1/clusters/my-cluster (must be locations rather than zones).googleapis.com/v1/${google_container_cluster.my-cluster.id}".</summary>
+    /// <summary>A JSON Web Token (JWT) issuer URI. issuer must start with https:// and // be a valid with length &lt;2000 characters. For example: https://container.googleapis.com/v1/projects/my-project/locations/us-west1/clusters/my-cluster (must be locations rather than zones).googleapis.com/v1/${google_container_cluster.my-cluster.id}".</summary>
     [JsonPropertyName("issuer")]
     public string? Issuer { get; set; }
 }
@@ -164,7 +164,7 @@ public partial class V1beta1MembershipSpecForProvider
 
 public partial class V1beta1MembershipSpecInitProviderAuthority
 {
-    /// <summary>A JSON Web Token (JWT) issuer URI. issuer must start with https:// and // be a valid with length <2000 characters. For example: https://container.googleapis.com/v1/projects/my-project/locations/us-west1/clusters/my-cluster (must be locations rather than zones).googleapis.com/v1/${google_container_cluster.my-cluster.id}".</summary>
+    /// <summary>A JSON Web Token (JWT) issuer URI. issuer must start with https:// and // be a valid with length &lt;2000 characters. For example: https://container.googleapis.com/v1/projects/my-project/locations/us-west1/clusters/my-cluster (must be locations rather than zones).googleapis.com/v1/${google_container_cluster.my-cluster.id}".</summary>
     [JsonPropertyName("issuer")]
     public string? Issuer { get; set; }
 }
@@ -487,7 +487,7 @@ public partial class V1beta1MembershipSpec
 
 public partial class V1beta1MembershipStatusAtProviderAuthority
 {
-    /// <summary>A JSON Web Token (JWT) issuer URI. issuer must start with https:// and // be a valid with length <2000 characters. For example: https://container.googleapis.com/v1/projects/my-project/locations/us-west1/clusters/my-cluster (must be locations rather than zones).googleapis.com/v1/${google_container_cluster.my-cluster.id}".</summary>
+    /// <summary>A JSON Web Token (JWT) issuer URI. issuer must start with https:// and // be a valid with length &lt;2000 characters. For example: https://container.googleapis.com/v1/projects/my-project/locations/us-west1/clusters/my-cluster (must be locations rather than zones).googleapis.com/v1/${google_container_cluster.my-cluster.id}".</summary>
     [JsonPropertyName("issuer")]
     public string? Issuer { get; set; }
 }

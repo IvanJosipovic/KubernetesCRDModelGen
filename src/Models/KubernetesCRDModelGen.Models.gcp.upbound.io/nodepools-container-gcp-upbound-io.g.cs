@@ -24,19 +24,19 @@ public partial class V1beta1NodePoolSpecForProviderAutoscaling
     [JsonPropertyName("locationPolicy")]
     public string? LocationPolicy { get; set; }
 
-    /// <summary>Maximum number of nodes per zone in the NodePool. Must be >= min_node_count. Cannot be used with total limits.</summary>
+    /// <summary>Maximum number of nodes per zone in the NodePool. Must be &gt;= min_node_count. Cannot be used with total limits.</summary>
     [JsonPropertyName("maxNodeCount")]
     public double? MaxNodeCount { get; set; }
 
-    /// <summary>Minimum number of nodes per zone in the NodePool. Must be >=0 and <= max_node_count. Cannot be used with total limits.</summary>
+    /// <summary>Minimum number of nodes per zone in the NodePool. Must be &gt;=0 and &lt;= max_node_count. Cannot be used with total limits.</summary>
     [JsonPropertyName("minNodeCount")]
     public double? MinNodeCount { get; set; }
 
-    /// <summary>Total maximum number of nodes in the NodePool. Must be >= total_min_node_count. Cannot be used with per zone limits. Total size limits are supported only in 1.24.1+ clusters.</summary>
+    /// <summary>Total maximum number of nodes in the NodePool. Must be &gt;= total_min_node_count. Cannot be used with per zone limits. Total size limits are supported only in 1.24.1+ clusters.</summary>
     [JsonPropertyName("totalMaxNodeCount")]
     public double? TotalMaxNodeCount { get; set; }
 
-    /// <summary>Total minimum number of nodes in the NodePool. Must be >=0 and <= total_max_node_count. Cannot be used with per zone limits. Total size limits are supported only in 1.24.1+ clusters.</summary>
+    /// <summary>Total minimum number of nodes in the NodePool. Must be &gt;=0 and &lt;= total_max_node_count. Cannot be used with per zone limits. Total size limits are supported only in 1.24.1+ clusters.</summary>
     [JsonPropertyName("totalMinNodeCount")]
     public double? TotalMinNodeCount { get; set; }
 }
@@ -832,19 +832,19 @@ public partial class V1beta1NodePoolSpecInitProviderAutoscaling
     [JsonPropertyName("locationPolicy")]
     public string? LocationPolicy { get; set; }
 
-    /// <summary>Maximum number of nodes per zone in the NodePool. Must be >= min_node_count. Cannot be used with total limits.</summary>
+    /// <summary>Maximum number of nodes per zone in the NodePool. Must be &gt;= min_node_count. Cannot be used with total limits.</summary>
     [JsonPropertyName("maxNodeCount")]
     public double? MaxNodeCount { get; set; }
 
-    /// <summary>Minimum number of nodes per zone in the NodePool. Must be >=0 and <= max_node_count. Cannot be used with total limits.</summary>
+    /// <summary>Minimum number of nodes per zone in the NodePool. Must be &gt;=0 and &lt;= max_node_count. Cannot be used with total limits.</summary>
     [JsonPropertyName("minNodeCount")]
     public double? MinNodeCount { get; set; }
 
-    /// <summary>Total maximum number of nodes in the NodePool. Must be >= total_min_node_count. Cannot be used with per zone limits. Total size limits are supported only in 1.24.1+ clusters.</summary>
+    /// <summary>Total maximum number of nodes in the NodePool. Must be &gt;= total_min_node_count. Cannot be used with per zone limits. Total size limits are supported only in 1.24.1+ clusters.</summary>
     [JsonPropertyName("totalMaxNodeCount")]
     public double? TotalMaxNodeCount { get; set; }
 
-    /// <summary>Total minimum number of nodes in the NodePool. Must be >=0 and <= total_max_node_count. Cannot be used with per zone limits. Total size limits are supported only in 1.24.1+ clusters.</summary>
+    /// <summary>Total minimum number of nodes in the NodePool. Must be &gt;=0 and &lt;= total_max_node_count. Cannot be used with per zone limits. Total size limits are supported only in 1.24.1+ clusters.</summary>
     [JsonPropertyName("totalMinNodeCount")]
     public double? TotalMinNodeCount { get; set; }
 }
@@ -1715,19 +1715,19 @@ public partial class V1beta1NodePoolStatusAtProviderAutoscaling
     [JsonPropertyName("locationPolicy")]
     public string? LocationPolicy { get; set; }
 
-    /// <summary>Maximum number of nodes per zone in the NodePool. Must be >= min_node_count. Cannot be used with total limits.</summary>
+    /// <summary>Maximum number of nodes per zone in the NodePool. Must be &gt;= min_node_count. Cannot be used with total limits.</summary>
     [JsonPropertyName("maxNodeCount")]
     public double? MaxNodeCount { get; set; }
 
-    /// <summary>Minimum number of nodes per zone in the NodePool. Must be >=0 and <= max_node_count. Cannot be used with total limits.</summary>
+    /// <summary>Minimum number of nodes per zone in the NodePool. Must be &gt;=0 and &lt;= max_node_count. Cannot be used with total limits.</summary>
     [JsonPropertyName("minNodeCount")]
     public double? MinNodeCount { get; set; }
 
-    /// <summary>Total maximum number of nodes in the NodePool. Must be >= total_min_node_count. Cannot be used with per zone limits. Total size limits are supported only in 1.24.1+ clusters.</summary>
+    /// <summary>Total maximum number of nodes in the NodePool. Must be &gt;= total_min_node_count. Cannot be used with per zone limits. Total size limits are supported only in 1.24.1+ clusters.</summary>
     [JsonPropertyName("totalMaxNodeCount")]
     public double? TotalMaxNodeCount { get; set; }
 
-    /// <summary>Total minimum number of nodes in the NodePool. Must be >=0 and <= total_max_node_count. Cannot be used with per zone limits. Total size limits are supported only in 1.24.1+ clusters.</summary>
+    /// <summary>Total minimum number of nodes in the NodePool. Must be &gt;=0 and &lt;= total_max_node_count. Cannot be used with per zone limits. Total size limits are supported only in 1.24.1+ clusters.</summary>
     [JsonPropertyName("totalMinNodeCount")]
     public double? TotalMinNodeCount { get; set; }
 }

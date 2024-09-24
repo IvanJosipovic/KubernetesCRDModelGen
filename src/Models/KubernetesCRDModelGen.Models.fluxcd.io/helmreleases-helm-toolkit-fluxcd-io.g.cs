@@ -799,7 +799,7 @@ public partial class V2HelmReleaseStatusHistory
     [JsonPropertyName("chartVersion")]
     public string ChartVersion { get; set; }
 
-    /// <summary>ConfigDigest is the checksum of the config (better known as "values") of the release object in storage. It has the format of `<algo>:<checksum>`.</summary>
+    /// <summary>ConfigDigest is the checksum of the config (better known as "values") of the release object in storage. It has the format of `&lt;algo&gt;:&lt;checksum&gt;`.</summary>
     [JsonPropertyName("configDigest")]
     public string ConfigDigest { get; set; }
 
@@ -807,7 +807,7 @@ public partial class V2HelmReleaseStatusHistory
     [JsonPropertyName("deleted")]
     public string? Deleted { get; set; }
 
-    /// <summary>Digest is the checksum of the release object in storage. It has the format of `<algo>:<checksum>`.</summary>
+    /// <summary>Digest is the checksum of the release object in storage. It has the format of `&lt;algo&gt;:&lt;checksum&gt;`.</summary>
     [JsonPropertyName("digest")]
     public string Digest { get; set; }
 

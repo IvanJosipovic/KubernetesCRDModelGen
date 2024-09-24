@@ -224,7 +224,7 @@ public partial class V1beta1AddressSpecForProvider
     [JsonPropertyName("ipv6EndpointType")]
     public string? Ipv6EndpointType { get; set; }
 
-    /// <summary>Labels to apply to this address.  A list of key->value pairs.</summary>
+    /// <summary>Labels to apply to this address.  A list of key-&gt;value pairs.</summary>
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 
@@ -479,7 +479,7 @@ public partial class V1beta1AddressSpecInitProvider
     [JsonPropertyName("ipv6EndpointType")]
     public string? Ipv6EndpointType { get; set; }
 
-    /// <summary>Labels to apply to this address.  A list of key->value pairs.</summary>
+    /// <summary>Labels to apply to this address.  A list of key-&gt;value pairs.</summary>
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 
@@ -745,7 +745,7 @@ public partial class V1beta1AddressStatusAtProvider
     [JsonPropertyName("labelFingerprint")]
     public string? LabelFingerprint { get; set; }
 
-    /// <summary>Labels to apply to this address.  A list of key->value pairs.</summary>
+    /// <summary>Labels to apply to this address.  A list of key-&gt;value pairs.</summary>
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 

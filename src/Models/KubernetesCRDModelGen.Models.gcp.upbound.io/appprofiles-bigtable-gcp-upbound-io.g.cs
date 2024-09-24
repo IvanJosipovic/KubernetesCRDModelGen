@@ -480,7 +480,7 @@ public partial class V1beta1AppProfileStatusAtProvider
     [JsonPropertyName("multiClusterRoutingUseAny")]
     public bool? MultiClusterRoutingUseAny { get; set; }
 
-    /// <summary>The unique name of the requested app profile. Values are of the form projects/<project>/instances/<instance>/appProfiles/<appProfileId>.</summary>
+    /// <summary>The unique name of the requested app profile. Values are of the form projects/&lt;project&gt;/instances/&lt;instance&gt;/appProfiles/&lt;appProfileId&gt;.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 

@@ -741,7 +741,7 @@ public partial class V1beta1LogAnalyticsLinkedServiceStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The generated name of the Linked Service. The format for this attribute is always <workspace name>/<linked service type>(e.g. workspace1/Automation or workspace1/Cluster)</summary>
+    /// <summary>The generated name of the Linked Service. The format for this attribute is always &lt;workspace name&gt;/&lt;linked service type&gt;(e.g. workspace1/Automation or workspace1/Cluster)</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 

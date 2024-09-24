@@ -164,7 +164,7 @@ public partial class V1beta1V2JobSpecForProviderTemplateTemplateContainersEnv
 
 public partial class V1beta1V2JobSpecForProviderTemplateTemplateContainersPorts
 {
-    /// <summary>Port number the container listens on. This must be a valid TCP port number, 0 < containerPort < 65536.</summary>
+    /// <summary>Port number the container listens on. This must be a valid TCP port number, 0 &lt; containerPort &lt; 65536.</summary>
     [JsonPropertyName("containerPort")]
     public double? ContainerPort { get; set; }
 
@@ -457,7 +457,7 @@ public partial class V1beta1V2JobSpecForProviderTemplate
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 
-    /// <summary>Specifies the maximum desired number of tasks the execution should run at given time. Must be <= taskCount. When the job is run, if this field is 0 or unset, the maximum possible value will be used for that execution. The actual number of tasks running in steady state will be less than this number when there are fewer tasks waiting to be completed remaining, i.e. when the work left to do is less than max parallelism.</summary>
+    /// <summary>Specifies the maximum desired number of tasks the execution should run at given time. Must be &lt;= taskCount. When the job is run, if this field is 0 or unset, the maximum possible value will be used for that execution. The actual number of tasks running in steady state will be less than this number when there are fewer tasks waiting to be completed remaining, i.e. when the work left to do is less than max parallelism.</summary>
     [JsonPropertyName("parallelism")]
     public double? Parallelism { get; set; }
 
@@ -655,7 +655,7 @@ public partial class V1beta1V2JobSpecInitProviderTemplateTemplateContainersEnv
 
 public partial class V1beta1V2JobSpecInitProviderTemplateTemplateContainersPorts
 {
-    /// <summary>Port number the container listens on. This must be a valid TCP port number, 0 < containerPort < 65536.</summary>
+    /// <summary>Port number the container listens on. This must be a valid TCP port number, 0 &lt; containerPort &lt; 65536.</summary>
     [JsonPropertyName("containerPort")]
     public double? ContainerPort { get; set; }
 
@@ -948,7 +948,7 @@ public partial class V1beta1V2JobSpecInitProviderTemplate
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 
-    /// <summary>Specifies the maximum desired number of tasks the execution should run at given time. Must be <= taskCount. When the job is run, if this field is 0 or unset, the maximum possible value will be used for that execution. The actual number of tasks running in steady state will be less than this number when there are fewer tasks waiting to be completed remaining, i.e. when the work left to do is less than max parallelism.</summary>
+    /// <summary>Specifies the maximum desired number of tasks the execution should run at given time. Must be &lt;= taskCount. When the job is run, if this field is 0 or unset, the maximum possible value will be used for that execution. The actual number of tasks running in steady state will be less than this number when there are fewer tasks waiting to be completed remaining, i.e. when the work left to do is less than max parallelism.</summary>
     [JsonPropertyName("parallelism")]
     public double? Parallelism { get; set; }
 
@@ -1275,7 +1275,7 @@ public partial class V1beta1V2JobStatusAtProviderTemplateTemplateContainersEnv
 
 public partial class V1beta1V2JobStatusAtProviderTemplateTemplateContainersPorts
 {
-    /// <summary>Port number the container listens on. This must be a valid TCP port number, 0 < containerPort < 65536.</summary>
+    /// <summary>Port number the container listens on. This must be a valid TCP port number, 0 &lt; containerPort &lt; 65536.</summary>
     [JsonPropertyName("containerPort")]
     public double? ContainerPort { get; set; }
 
@@ -1468,7 +1468,7 @@ public partial class V1beta1V2JobStatusAtProviderTemplate
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 
-    /// <summary>Specifies the maximum desired number of tasks the execution should run at given time. Must be <= taskCount. When the job is run, if this field is 0 or unset, the maximum possible value will be used for that execution. The actual number of tasks running in steady state will be less than this number when there are fewer tasks waiting to be completed remaining, i.e. when the work left to do is less than max parallelism.</summary>
+    /// <summary>Specifies the maximum desired number of tasks the execution should run at given time. Must be &lt;= taskCount. When the job is run, if this field is 0 or unset, the maximum possible value will be used for that execution. The actual number of tasks running in steady state will be less than this number when there are fewer tasks waiting to be completed remaining, i.e. when the work left to do is less than max parallelism.</summary>
     [JsonPropertyName("parallelism")]
     public double? Parallelism { get; set; }
 

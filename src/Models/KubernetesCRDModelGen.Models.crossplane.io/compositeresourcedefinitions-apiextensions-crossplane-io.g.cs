@@ -22,11 +22,11 @@ public partial class V1CompositeResourceDefinitionSpecClaimNames
     [JsonPropertyName("listKind")]
     public string? ListKind { get; set; }
 
-    /// <summary>plural is the plural name of the resource to serve. The custom resources are served under `/apis/<group>/<version>/.../<plural>`. Must match the name of the CustomResourceDefinition (in the form `<names.plural>.<group>`). Must be all lowercase.</summary>
+    /// <summary>plural is the plural name of the resource to serve. The custom resources are served under `/apis/&lt;group&gt;/&lt;version&gt;/.../&lt;plural&gt;`. Must match the name of the CustomResourceDefinition (in the form `&lt;names.plural&gt;.&lt;group&gt;`). Must be all lowercase.</summary>
     [JsonPropertyName("plural")]
     public string Plural { get; set; }
 
-    /// <summary>shortNames are short names for the resource, exposed in API discovery documents, and used by clients to support invocations like `kubectl get <shortname>`. It must be all lowercase.</summary>
+    /// <summary>shortNames are short names for the resource, exposed in API discovery documents, and used by clients to support invocations like `kubectl get &lt;shortname&gt;`. It must be all lowercase.</summary>
     [JsonPropertyName("shortNames")]
     public IList<string>? ShortNames { get; set; }
 
@@ -150,11 +150,11 @@ public partial class V1CompositeResourceDefinitionSpecNames
     [JsonPropertyName("listKind")]
     public string? ListKind { get; set; }
 
-    /// <summary>plural is the plural name of the resource to serve. The custom resources are served under `/apis/<group>/<version>/.../<plural>`. Must match the name of the CustomResourceDefinition (in the form `<names.plural>.<group>`). Must be all lowercase.</summary>
+    /// <summary>plural is the plural name of the resource to serve. The custom resources are served under `/apis/&lt;group&gt;/&lt;version&gt;/.../&lt;plural&gt;`. Must match the name of the CustomResourceDefinition (in the form `&lt;names.plural&gt;.&lt;group&gt;`). Must be all lowercase.</summary>
     [JsonPropertyName("plural")]
     public string Plural { get; set; }
 
-    /// <summary>shortNames are short names for the resource, exposed in API discovery documents, and used by clients to support invocations like `kubectl get <shortname>`. It must be all lowercase.</summary>
+    /// <summary>shortNames are short names for the resource, exposed in API discovery documents, and used by clients to support invocations like `kubectl get &lt;shortname&gt;`. It must be all lowercase.</summary>
     [JsonPropertyName("shortNames")]
     public IList<string>? ShortNames { get; set; }
 
@@ -211,7 +211,7 @@ public partial class V1CompositeResourceDefinitionSpecVersions
     [JsonPropertyName("deprecationWarning")]
     public string? DeprecationWarning { get; set; }
 
-    /// <summary>Name of this version, e.g. “v1”, “v2beta1”, etc. Composite resources are served under this version at `/apis/<group>/<version>/...` if `served` is true.</summary>
+    /// <summary>Name of this version, e.g. “v1”, “v2beta1”, etc. Composite resources are served under this version at `/apis/&lt;group&gt;/&lt;version&gt;/...` if `served` is true.</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
 
@@ -260,7 +260,7 @@ public partial class V1CompositeResourceDefinitionSpec
     [JsonPropertyName("enforcedCompositionRef")]
     public V1CompositeResourceDefinitionSpecEnforcedCompositionRef? EnforcedCompositionRef { get; set; }
 
-    /// <summary>Group specifies the API group of the defined composite resource. Composite resources are served under `/apis/<group>/...`. Must match the name of the XRD (in the form `<names.plural>.<group>`).</summary>
+    /// <summary>Group specifies the API group of the defined composite resource. Composite resources are served under `/apis/&lt;group&gt;/...`. Must match the name of the XRD (in the form `&lt;names.plural&gt;.&lt;group&gt;`).</summary>
     [JsonPropertyName("group")]
     public string Group { get; set; }
 
@@ -272,7 +272,7 @@ public partial class V1CompositeResourceDefinitionSpec
     [JsonPropertyName("names")]
     public V1CompositeResourceDefinitionSpecNames Names { get; set; }
 
-    /// <summary>Versions is the list of all API versions of the defined composite resource. Version names are used to compute the order in which served versions are listed in API discovery. If the version string is "kube-like", it will sort above non "kube-like" version strings, which are ordered lexicographically. "Kube-like" versions start with a "v", then are followed by a number (the major version), then optionally the string "alpha" or "beta" and another number (the minor version). These are sorted first by GA > beta > alpha (where GA is a version with no suffix such as beta or alpha), and then by comparing major version, then minor version. An example sorted list of versions: v10, v2, v1, v11beta2, v10beta3, v3beta1, v12alpha1, v11alpha2, foo1, foo10.</summary>
+    /// <summary>Versions is the list of all API versions of the defined composite resource. Version names are used to compute the order in which served versions are listed in API discovery. If the version string is "kube-like", it will sort above non "kube-like" version strings, which are ordered lexicographically. "Kube-like" versions start with a "v", then are followed by a number (the major version), then optionally the string "alpha" or "beta" and another number (the minor version). These are sorted first by GA &gt; beta &gt; alpha (where GA is a version with no suffix such as beta or alpha), and then by comparing major version, then minor version. An example sorted list of versions: v10, v2, v1, v11beta2, v10beta3, v3beta1, v12alpha1, v11alpha2, foo1, foo10.</summary>
     [JsonPropertyName("versions")]
     public IList<V1CompositeResourceDefinitionSpecVersions> Versions { get; set; }
 }

@@ -675,7 +675,7 @@ public partial class V1beta1RDSDBInstanceStatusAtProvider
     [JsonPropertyName("dbUser")]
     public string? DbUser { get; set; }
 
-    /// <summary>The computed id. Please note that this is only used internally to identify the stack <-> instance relation. This value is not used in aws.</summary>
+    /// <summary>The computed id. Please note that this is only used internally to identify the stack &lt;-&gt; instance relation. This value is not used in aws.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 

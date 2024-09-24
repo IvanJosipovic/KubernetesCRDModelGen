@@ -698,11 +698,11 @@ public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigAuxiliaryS
 
 public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigAutoscaling
 {
-    /// <summary>The maximum number of nodes in the node pool. Must be >= minNodeCount, and must be > 0.</summary>
+    /// <summary>The maximum number of nodes in the node pool. Must be &gt;= minNodeCount, and must be &gt; 0.</summary>
     [JsonPropertyName("maxNodeCount")]
     public double? MaxNodeCount { get; set; }
 
-    /// <summary>The minimum number of nodes in the node pool. Must be >= 0 and <= maxNodeCount.</summary>
+    /// <summary>The minimum number of nodes in the node pool. Must be &gt;= 0 and &lt;= maxNodeCount.</summary>
     [JsonPropertyName("minNodeCount")]
     public double? MinNodeCount { get; set; }
 }
@@ -1523,11 +1523,11 @@ public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigAuxiliary
 
 public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigAutoscaling
 {
-    /// <summary>The maximum number of nodes in the node pool. Must be >= minNodeCount, and must be > 0.</summary>
+    /// <summary>The maximum number of nodes in the node pool. Must be &gt;= minNodeCount, and must be &gt; 0.</summary>
     [JsonPropertyName("maxNodeCount")]
     public double? MaxNodeCount { get; set; }
 
-    /// <summary>The minimum number of nodes in the node pool. Must be >= 0 and <= maxNodeCount.</summary>
+    /// <summary>The minimum number of nodes in the node pool. Must be &gt;= 0 and &lt;= maxNodeCount.</summary>
     [JsonPropertyName("minNodeCount")]
     public double? MinNodeCount { get; set; }
 }
@@ -2482,11 +2482,11 @@ public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigAuxiliary
 
 public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigAutoscaling
 {
-    /// <summary>The maximum number of nodes in the node pool. Must be >= minNodeCount, and must be > 0.</summary>
+    /// <summary>The maximum number of nodes in the node pool. Must be &gt;= minNodeCount, and must be &gt; 0.</summary>
     [JsonPropertyName("maxNodeCount")]
     public double? MaxNodeCount { get; set; }
 
-    /// <summary>The minimum number of nodes in the node pool. Must be >= 0 and <= maxNodeCount.</summary>
+    /// <summary>The minimum number of nodes in the node pool. Must be &gt;= 0 and &lt;= maxNodeCount.</summary>
     [JsonPropertyName("minNodeCount")]
     public double? MinNodeCount { get; set; }
 }

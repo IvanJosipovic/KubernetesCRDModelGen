@@ -874,7 +874,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigClou
     [JsonPropertyName("regexFileSet")]
     public IList<V1beta1JobTriggerSpecForProviderInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet>? RegexFileSet { get; set; }
 
-    /// <summary>The Cloud Storage url of the file(s) to scan, in the format gs://<bucket>/<path>. Trailing wildcard in the path is allowed. If the url ends in a trailing slash, the bucket or directory represented by the url will be scanned non-recursively (content in sub-directories will not be scanned). This means that gs://mybucket/ is equivalent to gs://mybucket/*, and gs://mybucket/directory/ is equivalent to gs://mybucket/directory/*.</summary>
+    /// <summary>The Cloud Storage url of the file(s) to scan, in the format gs://&lt;bucket&gt;/&lt;path&gt;. Trailing wildcard in the path is allowed. If the url ends in a trailing slash, the bucket or directory represented by the url will be scanned non-recursively (content in sub-directories will not be scanned). This means that gs://mybucket/ is equivalent to gs://mybucket/*, and gs://mybucket/directory/ is equivalent to gs://mybucket/directory/*.</summary>
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
@@ -1945,7 +1945,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigClo
     [JsonPropertyName("regexFileSet")]
     public IList<V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet>? RegexFileSet { get; set; }
 
-    /// <summary>The Cloud Storage url of the file(s) to scan, in the format gs://<bucket>/<path>. Trailing wildcard in the path is allowed. If the url ends in a trailing slash, the bucket or directory represented by the url will be scanned non-recursively (content in sub-directories will not be scanned). This means that gs://mybucket/ is equivalent to gs://mybucket/*, and gs://mybucket/directory/ is equivalent to gs://mybucket/directory/*.</summary>
+    /// <summary>The Cloud Storage url of the file(s) to scan, in the format gs://&lt;bucket&gt;/&lt;path&gt;. Trailing wildcard in the path is allowed. If the url ends in a trailing slash, the bucket or directory represented by the url will be scanned non-recursively (content in sub-directories will not be scanned). This means that gs://mybucket/ is equivalent to gs://mybucket/*, and gs://mybucket/directory/ is equivalent to gs://mybucket/directory/*.</summary>
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
@@ -3003,7 +3003,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigClo
     [JsonPropertyName("regexFileSet")]
     public IList<V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet>? RegexFileSet { get; set; }
 
-    /// <summary>The Cloud Storage url of the file(s) to scan, in the format gs://<bucket>/<path>. Trailing wildcard in the path is allowed. If the url ends in a trailing slash, the bucket or directory represented by the url will be scanned non-recursively (content in sub-directories will not be scanned). This means that gs://mybucket/ is equivalent to gs://mybucket/*, and gs://mybucket/directory/ is equivalent to gs://mybucket/directory/*.</summary>
+    /// <summary>The Cloud Storage url of the file(s) to scan, in the format gs://&lt;bucket&gt;/&lt;path&gt;. Trailing wildcard in the path is allowed. If the url ends in a trailing slash, the bucket or directory represented by the url will be scanned non-recursively (content in sub-directories will not be scanned). This means that gs://mybucket/ is equivalent to gs://mybucket/*, and gs://mybucket/directory/ is equivalent to gs://mybucket/directory/*.</summary>
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }

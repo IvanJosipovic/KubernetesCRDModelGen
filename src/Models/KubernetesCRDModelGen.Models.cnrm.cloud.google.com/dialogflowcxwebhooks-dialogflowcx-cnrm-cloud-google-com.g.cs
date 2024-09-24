@@ -71,7 +71,7 @@ public partial class V1alpha1DialogflowCXWebhookSpec
     [JsonPropertyName("genericWebService")]
     public V1alpha1DialogflowCXWebhookSpecGenericWebService? GenericWebService { get; set; }
 
-    /// <summary>Immutable. The agent to create a webhook for. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.</summary>
+    /// <summary>Immutable. The agent to create a webhook for. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;.</summary>
     [JsonPropertyName("parent")]
     public string? Parent { get; set; }
 
@@ -79,7 +79,7 @@ public partial class V1alpha1DialogflowCXWebhookSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 
-    /// <summary>Name of the SecuritySettings reference for the agent. Format: projects/<Project ID>/locations/<Location ID>/securitySettings/<Security Settings ID>.</summary>
+    /// <summary>Name of the SecuritySettings reference for the agent. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/securitySettings/&lt;Security Settings ID&gt;.</summary>
     [JsonPropertyName("securitySettings")]
     public string? SecuritySettings { get; set; }
 
@@ -121,7 +121,7 @@ public partial class V1alpha1DialogflowCXWebhookStatus
     [JsonPropertyName("conditions")]
     public IList<V1alpha1DialogflowCXWebhookStatusConditions>? Conditions { get; set; }
 
-    /// <summary>The unique identifier of the webhook. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>.</summary>
+    /// <summary>The unique identifier of the webhook. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/webhooks/&lt;Webhook ID&gt;.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -129,7 +129,7 @@ public partial class V1alpha1DialogflowCXWebhookStatus
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
 
-    /// <summary>Name of the start flow in this agent. A start flow will be automatically created when the agent is created, and can only be deleted by deleting the agent. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.</summary>
+    /// <summary>Name of the start flow in this agent. A start flow will be automatically created when the agent is created, and can only be deleted by deleting the agent. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;.</summary>
     [JsonPropertyName("startFlow")]
     public string? StartFlow { get; set; }
 }

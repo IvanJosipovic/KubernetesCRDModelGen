@@ -1952,7 +1952,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpec
     [JsonPropertyName("owner")]
     public V1api20220301storageVirtualMachineScaleSetSpecOwner Owner { get; set; }
 
-    /// <summary>Storage version of v1api20220301.Plan Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use. In the Azure portal, find the marketplace image that you want to use and then click Want to deploy programmatically, Get Started ->. Enter any required information and then click Save.</summary>
+    /// <summary>Storage version of v1api20220301.Plan Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use. In the Azure portal, find the marketplace image that you want to use and then click Want to deploy programmatically, Get Started -&gt;. Enter any required information and then click Save.</summary>
     [JsonPropertyName("plan")]
     public V1api20220301storageVirtualMachineScaleSetSpecPlan? Plan { get; set; }
 
@@ -3549,7 +3549,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatus
     [JsonPropertyName("overprovision")]
     public bool? Overprovision { get; set; }
 
-    /// <summary>Storage version of v1api20220301.Plan_STATUS Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use. In the Azure portal, find the marketplace image that you want to use and then click Want to deploy programmatically, Get Started ->. Enter any required information and then click Save.</summary>
+    /// <summary>Storage version of v1api20220301.Plan_STATUS Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use. In the Azure portal, find the marketplace image that you want to use and then click Want to deploy programmatically, Get Started -&gt;. Enter any required information and then click Save.</summary>
     [JsonPropertyName("plan")]
     public V1api20220301storageVirtualMachineScaleSetStatusPlan? Plan { get; set; }
 

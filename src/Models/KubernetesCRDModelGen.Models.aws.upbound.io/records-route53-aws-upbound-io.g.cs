@@ -296,7 +296,7 @@ public partial class V1beta1RecordSpecForProviderZoneIdSelector
 
 public partial class V1beta1RecordSpecForProvider
 {
-    /// <summary>An alias block. Conflicts with ttl & records. Documented below.</summary>
+    /// <summary>An alias block. Conflicts with ttl &amp; records. Documented below.</summary>
     [JsonPropertyName("alias")]
     public IList<V1beta1RecordSpecForProviderAlias>? Alias { get; set; }
 
@@ -656,7 +656,7 @@ public partial class V1beta1RecordSpecInitProviderZoneIdSelector
 
 public partial class V1beta1RecordSpecInitProvider
 {
-    /// <summary>An alias block. Conflicts with ttl & records. Documented below.</summary>
+    /// <summary>An alias block. Conflicts with ttl &amp; records. Documented below.</summary>
     [JsonPropertyName("alias")]
     public IList<V1beta1RecordSpecInitProviderAlias>? Alias { get; set; }
 
@@ -1014,7 +1014,7 @@ public partial class V1beta1RecordStatusAtProviderWeightedRoutingPolicy
 
 public partial class V1beta1RecordStatusAtProvider
 {
-    /// <summary>An alias block. Conflicts with ttl & records. Documented below.</summary>
+    /// <summary>An alias block. Conflicts with ttl &amp; records. Documented below.</summary>
     [JsonPropertyName("alias")]
     public IList<V1beta1RecordStatusAtProviderAlias>? Alias { get; set; }
 

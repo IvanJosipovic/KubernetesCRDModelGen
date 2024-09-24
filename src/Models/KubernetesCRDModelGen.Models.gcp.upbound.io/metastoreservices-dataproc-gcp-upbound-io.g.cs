@@ -337,7 +337,7 @@ public partial class V1beta1MetastoreServiceSpecForProviderScalingConfig
 
 public partial class V1beta1MetastoreServiceSpecForProviderScheduledBackup
 {
-    /// <summary>A Cloud Storage URI of a folder, in the format gs://<bucket_name>/<path_inside_bucket>. A sub-folder <backup_folder> containing backup files will be stored below it.</summary>
+    /// <summary>A Cloud Storage URI of a folder, in the format gs://&lt;bucket_name&gt;/&lt;path_inside_bucket&gt;. A sub-folder &lt;backup_folder&gt; containing backup files will be stored below it.</summary>
     [JsonPropertyName("backupLocation")]
     public string? BackupLocation { get; set; }
 
@@ -747,7 +747,7 @@ public partial class V1beta1MetastoreServiceSpecInitProviderScalingConfig
 
 public partial class V1beta1MetastoreServiceSpecInitProviderScheduledBackup
 {
-    /// <summary>A Cloud Storage URI of a folder, in the format gs://<bucket_name>/<path_inside_bucket>. A sub-folder <backup_folder> containing backup files will be stored below it.</summary>
+    /// <summary>A Cloud Storage URI of a folder, in the format gs://&lt;bucket_name&gt;/&lt;path_inside_bucket&gt;. A sub-folder &lt;backup_folder&gt; containing backup files will be stored below it.</summary>
     [JsonPropertyName("backupLocation")]
     public string? BackupLocation { get; set; }
 
@@ -1140,7 +1140,7 @@ public partial class V1beta1MetastoreServiceStatusAtProviderScalingConfig
 
 public partial class V1beta1MetastoreServiceStatusAtProviderScheduledBackup
 {
-    /// <summary>A Cloud Storage URI of a folder, in the format gs://<bucket_name>/<path_inside_bucket>. A sub-folder <backup_folder> containing backup files will be stored below it.</summary>
+    /// <summary>A Cloud Storage URI of a folder, in the format gs://&lt;bucket_name&gt;/&lt;path_inside_bucket&gt;. A sub-folder &lt;backup_folder&gt; containing backup files will be stored below it.</summary>
     [JsonPropertyName("backupLocation")]
     public string? BackupLocation { get; set; }
 

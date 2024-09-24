@@ -499,7 +499,7 @@ public partial class V1KubeVirtSpecConfigurationNetworkBinding
     [JsonPropertyName("migration")]
     public V1KubeVirtSpecConfigurationNetworkBindingMigration? Migration { get; set; }
 
-    /// <summary>NetworkAttachmentDefinition references to a NetworkAttachmentDefinition CR object. Format: <name>, <namespace>/<name>. If namespace is not specified, VMI namespace is assumed. version: 1alphav1</summary>
+    /// <summary>NetworkAttachmentDefinition references to a NetworkAttachmentDefinition CR object. Format: &lt;name&gt;, &lt;namespace&gt;/&lt;name&gt;. If namespace is not specified, VMI namespace is assumed. version: 1alphav1</summary>
     [JsonPropertyName("networkAttachmentDefinition")]
     public string? NetworkAttachmentDefinition { get; set; }
 

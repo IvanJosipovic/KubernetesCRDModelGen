@@ -483,7 +483,7 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProvider
     [JsonPropertyName("connectionMode")]
     public string? ConnectionMode { get; set; }
 
-    /// <summary>The IKE protocol version to use. Possible values are IKEv1 and IKEv2, values are IKEv1 and IKEv2. Defaults to IKEv2. Changing this forces a new resource to be created. -> Note: Only valid for IPSec connections on virtual network gateways with SKU VpnGw1, VpnGw2, VpnGw3, VpnGw1AZ, VpnGw2AZ or VpnGw3AZ.</summary>
+    /// <summary>The IKE protocol version to use. Possible values are IKEv1 and IKEv2, values are IKEv1 and IKEv2. Defaults to IKEv2. Changing this forces a new resource to be created. -&gt; Note: Only valid for IPSec connections on virtual network gateways with SKU VpnGw1, VpnGw2, VpnGw3, VpnGw1AZ, VpnGw2AZ or VpnGw3AZ.</summary>
     [JsonPropertyName("connectionProtocol")]
     public string? ConnectionProtocol { get; set; }
 
@@ -939,7 +939,7 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProvider
     [JsonPropertyName("connectionMode")]
     public string? ConnectionMode { get; set; }
 
-    /// <summary>The IKE protocol version to use. Possible values are IKEv1 and IKEv2, values are IKEv1 and IKEv2. Defaults to IKEv2. Changing this forces a new resource to be created. -> Note: Only valid for IPSec connections on virtual network gateways with SKU VpnGw1, VpnGw2, VpnGw3, VpnGw1AZ, VpnGw2AZ or VpnGw3AZ.</summary>
+    /// <summary>The IKE protocol version to use. Possible values are IKEv1 and IKEv2, values are IKEv1 and IKEv2. Defaults to IKEv2. Changing this forces a new resource to be created. -&gt; Note: Only valid for IPSec connections on virtual network gateways with SKU VpnGw1, VpnGw2, VpnGw3, VpnGw1AZ, VpnGw2AZ or VpnGw3AZ.</summary>
     [JsonPropertyName("connectionProtocol")]
     public string? ConnectionProtocol { get; set; }
 
@@ -1286,7 +1286,7 @@ public partial class V1beta1VirtualNetworkGatewayConnectionStatusAtProvider
     [JsonPropertyName("connectionMode")]
     public string? ConnectionMode { get; set; }
 
-    /// <summary>The IKE protocol version to use. Possible values are IKEv1 and IKEv2, values are IKEv1 and IKEv2. Defaults to IKEv2. Changing this forces a new resource to be created. -> Note: Only valid for IPSec connections on virtual network gateways with SKU VpnGw1, VpnGw2, VpnGw3, VpnGw1AZ, VpnGw2AZ or VpnGw3AZ.</summary>
+    /// <summary>The IKE protocol version to use. Possible values are IKEv1 and IKEv2, values are IKEv1 and IKEv2. Defaults to IKEv2. Changing this forces a new resource to be created. -&gt; Note: Only valid for IPSec connections on virtual network gateways with SKU VpnGw1, VpnGw2, VpnGw3, VpnGw1AZ, VpnGw2AZ or VpnGw3AZ.</summary>
     [JsonPropertyName("connectionProtocol")]
     public string? ConnectionProtocol { get; set; }
 

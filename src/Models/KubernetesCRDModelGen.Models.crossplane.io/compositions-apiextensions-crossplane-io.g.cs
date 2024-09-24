@@ -241,7 +241,7 @@ public enum V1CompositionSpecEnvironmentPatchesTransformsConvertToTypeEnum
 
 public partial class V1CompositionSpecEnvironmentPatchesTransformsConvert
 {
-    /// <summary>The expected input format.   * `quantity` - parses the input as a K8s [`resource.Quantity`](https://pkg.go.dev/k8s.io/apimachinery/pkg/api/resource#Quantity). Only used during `string -> float64` conversions. * `json` - parses the input as a JSON string. Only used during `string -> object` or `string -> list` conversions.   If this property is null, the default conversion is applied.</summary>
+    /// <summary>The expected input format.   * `quantity` - parses the input as a K8s [`resource.Quantity`](https://pkg.go.dev/k8s.io/apimachinery/pkg/api/resource#Quantity). Only used during `string -&gt; float64` conversions. * `json` - parses the input as a JSON string. Only used during `string -&gt; object` or `string -&gt; list` conversions.   If this property is null, the default conversion is applied.</summary>
     [JsonPropertyName("format")]
     [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionSpecEnvironmentPatchesTransformsConvertFormatEnum>))]
     public V1CompositionSpecEnvironmentPatchesTransformsConvertFormatEnum? Format { get; set; }
@@ -704,7 +704,7 @@ public enum V1CompositionSpecPatchSetsPatchesTransformsConvertToTypeEnum
 
 public partial class V1CompositionSpecPatchSetsPatchesTransformsConvert
 {
-    /// <summary>The expected input format.   * `quantity` - parses the input as a K8s [`resource.Quantity`](https://pkg.go.dev/k8s.io/apimachinery/pkg/api/resource#Quantity). Only used during `string -> float64` conversions. * `json` - parses the input as a JSON string. Only used during `string -> object` or `string -> list` conversions.   If this property is null, the default conversion is applied.</summary>
+    /// <summary>The expected input format.   * `quantity` - parses the input as a K8s [`resource.Quantity`](https://pkg.go.dev/k8s.io/apimachinery/pkg/api/resource#Quantity). Only used during `string -&gt; float64` conversions. * `json` - parses the input as a JSON string. Only used during `string -&gt; object` or `string -&gt; list` conversions.   If this property is null, the default conversion is applied.</summary>
     [JsonPropertyName("format")]
     [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionSpecPatchSetsPatchesTransformsConvertFormatEnum>))]
     public V1CompositionSpecPatchSetsPatchesTransformsConvertFormatEnum? Format { get; set; }
@@ -1242,7 +1242,7 @@ public enum V1CompositionSpecResourcesPatchesTransformsConvertToTypeEnum
 
 public partial class V1CompositionSpecResourcesPatchesTransformsConvert
 {
-    /// <summary>The expected input format.   * `quantity` - parses the input as a K8s [`resource.Quantity`](https://pkg.go.dev/k8s.io/apimachinery/pkg/api/resource#Quantity). Only used during `string -> float64` conversions. * `json` - parses the input as a JSON string. Only used during `string -> object` or `string -> list` conversions.   If this property is null, the default conversion is applied.</summary>
+    /// <summary>The expected input format.   * `quantity` - parses the input as a K8s [`resource.Quantity`](https://pkg.go.dev/k8s.io/apimachinery/pkg/api/resource#Quantity). Only used during `string -&gt; float64` conversions. * `json` - parses the input as a JSON string. Only used during `string -&gt; object` or `string -&gt; list` conversions.   If this property is null, the default conversion is applied.</summary>
     [JsonPropertyName("format")]
     [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionSpecResourcesPatchesTransformsConvertFormatEnum>))]
     public V1CompositionSpecResourcesPatchesTransformsConvertFormatEnum? Format { get; set; }
@@ -1645,7 +1645,7 @@ public partial class V1CompositionSpec
     [JsonPropertyName("environment")]
     public V1CompositionSpecEnvironment? Environment { get; set; }
 
-    /// <summary>Mode controls what type or "mode" of Composition will be used.   "Pipeline" indicates that a Composition specifies a pipeline of Composition Functions, each of which is responsible for producing composed resources that Crossplane should create or update.   "Resources" indicates that a Composition uses what is commonly referred to as "Patch & Transform" or P&T composition. This mode of Composition uses an array of resources, each a template for a composed resource.   All Compositions should use Pipeline mode. Resources mode is deprecated. Resources mode won't be removed in Crossplane 1.x, and will remain the default to avoid breaking legacy Compositions. However, it's no longer accepting new features, and only accepting security related bug fixes.</summary>
+    /// <summary>Mode controls what type or "mode" of Composition will be used.   "Pipeline" indicates that a Composition specifies a pipeline of Composition Functions, each of which is responsible for producing composed resources that Crossplane should create or update.   "Resources" indicates that a Composition uses what is commonly referred to as "Patch &amp; Transform" or P&amp;T composition. This mode of Composition uses an array of resources, each a template for a composed resource.   All Compositions should use Pipeline mode. Resources mode is deprecated. Resources mode won't be removed in Crossplane 1.x, and will remain the default to avoid breaking legacy Compositions. However, it's no longer accepting new features, and only accepting security related bug fixes.</summary>
     [JsonPropertyName("mode")]
     [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionSpecModeEnum>))]
     public V1CompositionSpecModeEnum? Mode { get; set; }

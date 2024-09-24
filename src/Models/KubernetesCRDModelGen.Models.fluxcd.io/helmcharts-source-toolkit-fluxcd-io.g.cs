@@ -133,7 +133,7 @@ public partial class V1HelmChartSpec
 
 public partial class V1HelmChartStatusArtifact
 {
-    /// <summary>Digest is the digest of the file in the form of '<algorithm>:<checksum>'.</summary>
+    /// <summary>Digest is the digest of the file in the form of '&lt;algorithm&gt;:&lt;checksum&gt;'.</summary>
     [JsonPropertyName("digest")]
     public string? Digest { get; set; }
 

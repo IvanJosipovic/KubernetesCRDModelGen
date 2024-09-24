@@ -50,7 +50,7 @@ public partial class V1beta1ApigeeOrganizationSpecAuthorizedNetworkRef
 
 public partial class V1beta1ApigeeOrganizationSpecProjectRef
 {
-    /// <summary>Required. Name of the GCP project in which to associate the Apigee organization. Pass the information as a query parameter using the following structure in your request: projects/<project> Authorization requires the following IAM permission on the specified resource parent: apigee.organizations.create  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
+    /// <summary>Required. Name of the GCP project in which to associate the Apigee organization. Pass the information as a query parameter using the following structure in your request: projects/&lt;project&gt; Authorization requires the following IAM permission on the specified resource parent: apigee.organizations.create  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 

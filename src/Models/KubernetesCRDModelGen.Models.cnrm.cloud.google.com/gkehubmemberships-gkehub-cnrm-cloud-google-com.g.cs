@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.gkehub.cnrm.cloud.google.com;
 public partial class V1beta1GKEHubMembershipSpecAuthority
 {
-    /// <summary>Optional. A JSON Web Token (JWT) issuer URI. `issuer` must start with `https://` and be a valid URL with length <2000 characters. If set, then Google will allow valid OIDC tokens from this issuer to authenticate within the workload_identity_pool. OIDC discovery will be performed on this URI to validate tokens from the issuer. Clearing `issuer` disables Workload Identity. `issuer` cannot be directly modified; it must be cleared (and Workload Identity disabled) before using a new issuer (and re-enabling Workload Identity).</summary>
+    /// <summary>Optional. A JSON Web Token (JWT) issuer URI. `issuer` must start with `https://` and be a valid URL with length &lt;2000 characters. If set, then Google will allow valid OIDC tokens from this issuer to authenticate within the workload_identity_pool. OIDC discovery will be performed on this URI to validate tokens from the issuer. Clearing `issuer` disables Workload Identity. `issuer` cannot be directly modified; it must be cleared (and Workload Identity disabled) before using a new issuer (and re-enabling Workload Identity).</summary>
     [JsonPropertyName("issuer")]
     public string? Issuer { get; set; }
 }
@@ -43,7 +43,7 @@ public partial class V1beta1GKEHubMembershipSpecEndpointKubernetesResourceResour
     [JsonPropertyName("connectVersion")]
     public string? ConnectVersion { get; set; }
 
-    /// <summary>Optional. Use `apiextensions/v1beta1` instead of `apiextensions/v1` for CustomResourceDefinition resources. This option should be set for clusters with Kubernetes apiserver versions <1.16.</summary>
+    /// <summary>Optional. Use `apiextensions/v1beta1` instead of `apiextensions/v1` for CustomResourceDefinition resources. This option should be set for clusters with Kubernetes apiserver versions &lt;1.16.</summary>
     [JsonPropertyName("v1beta1Crd")]
     public bool? V1beta1Crd { get; set; }
 }

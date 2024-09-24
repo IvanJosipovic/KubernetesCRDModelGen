@@ -82,7 +82,7 @@ public partial class V1beta1IdentityPlatformConfigSpecMonitoring
 
 public partial class V1beta1IdentityPlatformConfigSpecMultiTenantDefaultTenantLocationRef
 {
-    /// <summary>The default cloud parent org or folder that the tenant project should be created under. The parent resource name should be in the format of "<type>/<number>", such as "folders/123" or "organizations/456". If the value is not set, the tenant will be created under the same organization or folder as the agent project.  Allowed values: * The Google Cloud resource name of a `Folder` resource (format: `folders/{{name}}`). * The Google Cloud resource name of a Google Cloud Organization (format: `organizations/{{name}}`).</summary>
+    /// <summary>The default cloud parent org or folder that the tenant project should be created under. The parent resource name should be in the format of "&lt;type&gt;/&lt;number&gt;", such as "folders/123" or "organizations/456". If the value is not set, the tenant will be created under the same organization or folder as the agent project.  Allowed values: * The Google Cloud resource name of a `Folder` resource (format: `folders/{{name}}`). * The Google Cloud resource name of a Google Cloud Organization (format: `organizations/{{name}}`).</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 

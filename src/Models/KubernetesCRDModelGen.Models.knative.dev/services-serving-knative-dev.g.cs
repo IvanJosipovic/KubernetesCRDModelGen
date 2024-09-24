@@ -213,7 +213,7 @@ public partial class V1ServiceSpecTemplateSpecContainersLivenessProbe
 
 public partial class V1ServiceSpecTemplateSpecContainersPorts
 {
-    /// <summary>Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x < 65536.</summary>
+    /// <summary>Number of port to expose on the pod's IP address. This must be a valid port number, 0 &lt; x &lt; 65536.</summary>
     [JsonPropertyName("containerPort")]
     public int ContainerPort { get; set; }
 
@@ -398,7 +398,7 @@ public partial class V1ServiceSpecTemplateSpecContainersSecurityContext
     [JsonPropertyName("runAsUser")]
     public long? RunAsUser { get; set; }
 
-    /// <summary>The seccomp options to use by this container. If seccomp options are provided at both the pod & container level, the container options override the pod options. Note that this field cannot be set when spec.os.name is windows.</summary>
+    /// <summary>The seccomp options to use by this container. If seccomp options are provided at both the pod &amp; container level, the container options override the pod options. Note that this field cannot be set when spec.os.name is windows.</summary>
     [JsonPropertyName("seccompProfile")]
     public V1ServiceSpecTemplateSpecContainersSecurityContextSeccompProfile? SeccompProfile { get; set; }
 }

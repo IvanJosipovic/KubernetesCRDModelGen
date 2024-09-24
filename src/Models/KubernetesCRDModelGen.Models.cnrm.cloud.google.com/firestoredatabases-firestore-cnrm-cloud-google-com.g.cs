@@ -87,7 +87,7 @@ public partial class V1alpha1FirestoreDatabaseStatusObservedState
     [JsonPropertyName("etag")]
     public string? Etag { get; set; }
 
-    /// <summary>Output only. The key_prefix for this database. This key_prefix is used, in  combination with the project id ("<key prefix>~<project id>") to construct  the application id that is returned from the Cloud Datastore APIs in Google  App Engine first generation runtimes.   This value may be empty in which case the appid to use for URL-encoded keys  is the project_id (eg: foo instead of v~foo).</summary>
+    /// <summary>Output only. The key_prefix for this database. This key_prefix is used, in  combination with the project id ("&lt;key prefix&gt;~&lt;project id&gt;") to construct  the application id that is returned from the Cloud Datastore APIs in Google  App Engine first generation runtimes.   This value may be empty in which case the appid to use for URL-encoded keys  is the project_id (eg: foo instead of v~foo).</summary>
     [JsonPropertyName("keyPrefix")]
     public string? KeyPrefix { get; set; }
 

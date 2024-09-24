@@ -235,7 +235,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
     [JsonPropertyName("performance")]
     public V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdPerformance? Performance { get; set; }
 
-    /// <summary>If window `performance >= threshold`, the window is counted as good.</summary>
+    /// <summary>If window `performance &gt;= threshold`, the window is counted as good.</summary>
     [JsonPropertyName("threshold")]
     public double? Threshold { get; set; }
 }
@@ -347,7 +347,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpec
     [JsonPropertyName("displayName")]
     public string? DisplayName { get; set; }
 
-    /// <summary>The fraction of service that must be good in order for this objective to be met. `0 < goal <= 0.999`.</summary>
+    /// <summary>The fraction of service that must be good in order for this objective to be met. `0 &lt; goal &lt;= 0.999`.</summary>
     [JsonPropertyName("goal")]
     public double Goal { get; set; }
 

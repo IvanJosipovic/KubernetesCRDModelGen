@@ -83,7 +83,7 @@ public partial class V1beta1UserPoolSpecForProviderEmailConfiguration
     [JsonPropertyName("emailSendingAccount")]
     public string? EmailSendingAccount { get; set; }
 
-    /// <summary>Sender’s email address or sender’s display name with their email address (e.g., john@example.com, John Smith <john@example.com> or \"John Smith Ph.D.\" <john@example.com>). Escaped double quotes are required around display names that contain certain characters as specified in RFC 5322.</summary>
+    /// <summary>Sender’s email address or sender’s display name with their email address (e.g., john@example.com, John Smith &lt;john@example.com&gt; or \"John Smith Ph.D.\" &lt;john@example.com&gt;). Escaped double quotes are required around display names that contain certain characters as specified in RFC 5322.</summary>
     [JsonPropertyName("fromEmailAddress")]
     public string? FromEmailAddress { get; set; }
 
@@ -1906,7 +1906,7 @@ public partial class V1beta1UserPoolSpecInitProviderEmailConfiguration
     [JsonPropertyName("emailSendingAccount")]
     public string? EmailSendingAccount { get; set; }
 
-    /// <summary>Sender’s email address or sender’s display name with their email address (e.g., john@example.com, John Smith <john@example.com> or \"John Smith Ph.D.\" <john@example.com>). Escaped double quotes are required around display names that contain certain characters as specified in RFC 5322.</summary>
+    /// <summary>Sender’s email address or sender’s display name with their email address (e.g., john@example.com, John Smith &lt;john@example.com&gt; or \"John Smith Ph.D.\" &lt;john@example.com&gt;). Escaped double quotes are required around display names that contain certain characters as specified in RFC 5322.</summary>
     [JsonPropertyName("fromEmailAddress")]
     public string? FromEmailAddress { get; set; }
 
@@ -3908,7 +3908,7 @@ public partial class V1beta1UserPoolStatusAtProviderEmailConfiguration
     [JsonPropertyName("emailSendingAccount")]
     public string? EmailSendingAccount { get; set; }
 
-    /// <summary>Sender’s email address or sender’s display name with their email address (e.g., john@example.com, John Smith <john@example.com> or \"John Smith Ph.D.\" <john@example.com>). Escaped double quotes are required around display names that contain certain characters as specified in RFC 5322.</summary>
+    /// <summary>Sender’s email address or sender’s display name with their email address (e.g., john@example.com, John Smith &lt;john@example.com&gt; or \"John Smith Ph.D.\" &lt;john@example.com&gt;). Escaped double quotes are required around display names that contain certain characters as specified in RFC 5322.</summary>
     [JsonPropertyName("fromEmailAddress")]
     public string? FromEmailAddress { get; set; }
 

@@ -151,7 +151,7 @@ public partial class V1GitRepositorySpec
 
 public partial class V1GitRepositoryStatusArtifact
 {
-    /// <summary>Digest is the digest of the file in the form of '<algorithm>:<checksum>'.</summary>
+    /// <summary>Digest is the digest of the file in the form of '&lt;algorithm&gt;:&lt;checksum&gt;'.</summary>
     [JsonPropertyName("digest")]
     public string? Digest { get; set; }
 
@@ -223,7 +223,7 @@ public partial class V1GitRepositoryStatusConditions
 
 public partial class V1GitRepositoryStatusIncludedArtifacts
 {
-    /// <summary>Digest is the digest of the file in the form of '<algorithm>:<checksum>'.</summary>
+    /// <summary>Digest is the digest of the file in the form of '&lt;algorithm&gt;:&lt;checksum&gt;'.</summary>
     [JsonPropertyName("digest")]
     public string? Digest { get; set; }
 

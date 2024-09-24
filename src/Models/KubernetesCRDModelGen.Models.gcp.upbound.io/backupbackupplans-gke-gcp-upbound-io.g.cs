@@ -247,7 +247,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConf
 
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConfig
 {
-    /// <summary>User specified time windows during which backup can NOT happen for this BackupPlan. Backups should start and finish outside of any given exclusion window. Note: backup jobs will be scheduled to start and finish outside the duration of the window as much as possible, but running jobs will not get canceled when it runs into the window. All the time and date values in exclusionWindows entry in the API are in UTC. We only allow <=1 recurrence (daily or weekly) exclusion window for a BackupPlan while no restriction on number of single occurrence windows. Structure is documented below.</summary>
+    /// <summary>User specified time windows during which backup can NOT happen for this BackupPlan. Backups should start and finish outside of any given exclusion window. Note: backup jobs will be scheduled to start and finish outside the duration of the window as much as possible, but running jobs will not get canceled when it runs into the window. All the time and date values in exclusionWindows entry in the API are in UTC. We only allow &lt;=1 recurrence (daily or weekly) exclusion window for a BackupPlan while no restriction on number of single occurrence windows. Structure is documented below.</summary>
     [JsonPropertyName("exclusionWindows")]
     public IList<V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConfigExclusionWindows>? ExclusionWindows { get; set; }
 
@@ -369,7 +369,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderRetentionPolicy
     [JsonPropertyName("backupDeleteLockDays")]
     public double? BackupDeleteLockDays { get; set; }
 
-    /// <summary>The default maximum age of a Backup created via this BackupPlan. This field MUST be an integer value >= 0 and <= 365. If specified, a Backup created under this BackupPlan will be automatically deleted after its age reaches (createTime + backupRetainDays). If not specified, Backups created under this BackupPlan will NOT be subject to automatic deletion. Updating this field does NOT affect existing Backups under it. Backups created AFTER a successful update will automatically pick up the new value. NOTE: backupRetainDays must be >= backupDeleteLockDays. If cronSchedule is defined, then this must be <= 360 * the creation interval.]</summary>
+    /// <summary>The default maximum age of a Backup created via this BackupPlan. This field MUST be an integer value &gt;= 0 and &lt;= 365. If specified, a Backup created under this BackupPlan will be automatically deleted after its age reaches (createTime + backupRetainDays). If not specified, Backups created under this BackupPlan will NOT be subject to automatic deletion. Updating this field does NOT affect existing Backups under it. Backups created AFTER a successful update will automatically pick up the new value. NOTE: backupRetainDays must be &gt;= backupDeleteLockDays. If cronSchedule is defined, then this must be &lt;= 360 * the creation interval.]</summary>
     [JsonPropertyName("backupRetainDays")]
     public double? BackupRetainDays { get; set; }
 
@@ -408,7 +408,7 @@ public partial class V1beta1BackupBackupPlanSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Description: A set of custom labels supplied by the user. A list of key->value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.</summary>
+    /// <summary>Description: A set of custom labels supplied by the user. A list of key-&gt;value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.</summary>
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 
@@ -654,7 +654,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoCon
 
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoConfig
 {
-    /// <summary>User specified time windows during which backup can NOT happen for this BackupPlan. Backups should start and finish outside of any given exclusion window. Note: backup jobs will be scheduled to start and finish outside the duration of the window as much as possible, but running jobs will not get canceled when it runs into the window. All the time and date values in exclusionWindows entry in the API are in UTC. We only allow <=1 recurrence (daily or weekly) exclusion window for a BackupPlan while no restriction on number of single occurrence windows. Structure is documented below.</summary>
+    /// <summary>User specified time windows during which backup can NOT happen for this BackupPlan. Backups should start and finish outside of any given exclusion window. Note: backup jobs will be scheduled to start and finish outside the duration of the window as much as possible, but running jobs will not get canceled when it runs into the window. All the time and date values in exclusionWindows entry in the API are in UTC. We only allow &lt;=1 recurrence (daily or weekly) exclusion window for a BackupPlan while no restriction on number of single occurrence windows. Structure is documented below.</summary>
     [JsonPropertyName("exclusionWindows")]
     public IList<V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoConfigExclusionWindows>? ExclusionWindows { get; set; }
 
@@ -776,7 +776,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderRetentionPolicy
     [JsonPropertyName("backupDeleteLockDays")]
     public double? BackupDeleteLockDays { get; set; }
 
-    /// <summary>The default maximum age of a Backup created via this BackupPlan. This field MUST be an integer value >= 0 and <= 365. If specified, a Backup created under this BackupPlan will be automatically deleted after its age reaches (createTime + backupRetainDays). If not specified, Backups created under this BackupPlan will NOT be subject to automatic deletion. Updating this field does NOT affect existing Backups under it. Backups created AFTER a successful update will automatically pick up the new value. NOTE: backupRetainDays must be >= backupDeleteLockDays. If cronSchedule is defined, then this must be <= 360 * the creation interval.]</summary>
+    /// <summary>The default maximum age of a Backup created via this BackupPlan. This field MUST be an integer value &gt;= 0 and &lt;= 365. If specified, a Backup created under this BackupPlan will be automatically deleted after its age reaches (createTime + backupRetainDays). If not specified, Backups created under this BackupPlan will NOT be subject to automatic deletion. Updating this field does NOT affect existing Backups under it. Backups created AFTER a successful update will automatically pick up the new value. NOTE: backupRetainDays must be &gt;= backupDeleteLockDays. If cronSchedule is defined, then this must be &lt;= 360 * the creation interval.]</summary>
     [JsonPropertyName("backupRetainDays")]
     public double? BackupRetainDays { get; set; }
 
@@ -815,7 +815,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Description: A set of custom labels supplied by the user. A list of key->value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.</summary>
+    /// <summary>Description: A set of custom labels supplied by the user. A list of key-&gt;value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.</summary>
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 
@@ -1140,7 +1140,7 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoCon
 
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoConfig
 {
-    /// <summary>User specified time windows during which backup can NOT happen for this BackupPlan. Backups should start and finish outside of any given exclusion window. Note: backup jobs will be scheduled to start and finish outside the duration of the window as much as possible, but running jobs will not get canceled when it runs into the window. All the time and date values in exclusionWindows entry in the API are in UTC. We only allow <=1 recurrence (daily or weekly) exclusion window for a BackupPlan while no restriction on number of single occurrence windows. Structure is documented below.</summary>
+    /// <summary>User specified time windows during which backup can NOT happen for this BackupPlan. Backups should start and finish outside of any given exclusion window. Note: backup jobs will be scheduled to start and finish outside the duration of the window as much as possible, but running jobs will not get canceled when it runs into the window. All the time and date values in exclusionWindows entry in the API are in UTC. We only allow &lt;=1 recurrence (daily or weekly) exclusion window for a BackupPlan while no restriction on number of single occurrence windows. Structure is documented below.</summary>
     [JsonPropertyName("exclusionWindows")]
     public IList<V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoConfigExclusionWindows>? ExclusionWindows { get; set; }
 
@@ -1170,7 +1170,7 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderRetentionPolicy
     [JsonPropertyName("backupDeleteLockDays")]
     public double? BackupDeleteLockDays { get; set; }
 
-    /// <summary>The default maximum age of a Backup created via this BackupPlan. This field MUST be an integer value >= 0 and <= 365. If specified, a Backup created under this BackupPlan will be automatically deleted after its age reaches (createTime + backupRetainDays). If not specified, Backups created under this BackupPlan will NOT be subject to automatic deletion. Updating this field does NOT affect existing Backups under it. Backups created AFTER a successful update will automatically pick up the new value. NOTE: backupRetainDays must be >= backupDeleteLockDays. If cronSchedule is defined, then this must be <= 360 * the creation interval.]</summary>
+    /// <summary>The default maximum age of a Backup created via this BackupPlan. This field MUST be an integer value &gt;= 0 and &lt;= 365. If specified, a Backup created under this BackupPlan will be automatically deleted after its age reaches (createTime + backupRetainDays). If not specified, Backups created under this BackupPlan will NOT be subject to automatic deletion. Updating this field does NOT affect existing Backups under it. Backups created AFTER a successful update will automatically pick up the new value. NOTE: backupRetainDays must be &gt;= backupDeleteLockDays. If cronSchedule is defined, then this must be &lt;= 360 * the creation interval.]</summary>
     [JsonPropertyName("backupRetainDays")]
     public double? BackupRetainDays { get; set; }
 
@@ -1213,7 +1213,7 @@ public partial class V1beta1BackupBackupPlanStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Description: A set of custom labels supplied by the user. A list of key->value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.</summary>
+    /// <summary>Description: A set of custom labels supplied by the user. A list of key-&gt;value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.</summary>
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 

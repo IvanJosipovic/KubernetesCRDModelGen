@@ -217,7 +217,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRetryPo
 
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRetryPolicy
 {
-    /// <summary>Specifies the allowed number retries. This number must be > 0.</summary>
+    /// <summary>Specifies the allowed number retries. This number must be &gt; 0.</summary>
     [JsonPropertyName("numRetries")]
     public double? NumRetries { get; set; }
 
@@ -899,7 +899,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
 
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRetryPolicy
 {
-    /// <summary>Specifies the allowed number retries. This number must be > 0.</summary>
+    /// <summary>Specifies the allowed number retries. This number must be &gt; 0.</summary>
     [JsonPropertyName("numRetries")]
     public double? NumRetries { get; set; }
 
@@ -1545,7 +1545,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
 
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionRetryPolicy
 {
-    /// <summary>Specifies the allowed number retries. This number must be > 0.</summary>
+    /// <summary>Specifies the allowed number retries. This number must be &gt; 0.</summary>
     [JsonPropertyName("numRetries")]
     public double? NumRetries { get; set; }
 
@@ -2233,7 +2233,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRetryP
 
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRetryPolicy
 {
-    /// <summary>Specifies the allowed number retries. This number must be > 0.</summary>
+    /// <summary>Specifies the allowed number retries. This number must be &gt; 0.</summary>
     [JsonPropertyName("numRetries")]
     public double? NumRetries { get; set; }
 
@@ -2915,7 +2915,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
 
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRetryPolicy
 {
-    /// <summary>Specifies the allowed number retries. This number must be > 0.</summary>
+    /// <summary>Specifies the allowed number retries. This number must be &gt; 0.</summary>
     [JsonPropertyName("numRetries")]
     public double? NumRetries { get; set; }
 
@@ -3561,7 +3561,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
 
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionRetryPolicy
 {
-    /// <summary>Specifies the allowed number retries. This number must be > 0.</summary>
+    /// <summary>Specifies the allowed number retries. This number must be &gt; 0.</summary>
     [JsonPropertyName("numRetries")]
     public double? NumRetries { get; set; }
 
@@ -4328,7 +4328,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionRetryP
 
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionRetryPolicy
 {
-    /// <summary>Specifies the allowed number retries. This number must be > 0.</summary>
+    /// <summary>Specifies the allowed number retries. This number must be &gt; 0.</summary>
     [JsonPropertyName("numRetries")]
     public double? NumRetries { get; set; }
 
@@ -4626,7 +4626,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
 
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionRetryPolicy
 {
-    /// <summary>Specifies the allowed number retries. This number must be > 0.</summary>
+    /// <summary>Specifies the allowed number retries. This number must be &gt; 0.</summary>
     [JsonPropertyName("numRetries")]
     public double? NumRetries { get; set; }
 
@@ -5072,7 +5072,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
 
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionRetryPolicy
 {
-    /// <summary>Specifies the allowed number retries. This number must be > 0.</summary>
+    /// <summary>Specifies the allowed number retries. This number must be &gt; 0.</summary>
     [JsonPropertyName("numRetries")]
     public double? NumRetries { get; set; }
 

@@ -141,7 +141,7 @@ public partial class V1alpha1DialogflowCXFlowSpecEventHandlersTriggerFulfillment
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 
-    /// <summary>The webhook to call. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>.</summary>
+    /// <summary>The webhook to call. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/webhooks/&lt;Webhook ID&gt;.</summary>
     [JsonPropertyName("webhook")]
     public string? Webhook { get; set; }
 }
@@ -156,11 +156,11 @@ public partial class V1alpha1DialogflowCXFlowSpecEventHandlers
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The target flow to transition to. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.</summary>
+    /// <summary>The target flow to transition to. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;.</summary>
     [JsonPropertyName("targetFlow")]
     public string? TargetFlow { get; set; }
 
-    /// <summary>The target page to transition to. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.</summary>
+    /// <summary>The target page to transition to. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/pages/&lt;Page ID&gt;.</summary>
     [JsonPropertyName("targetPage")]
     public string? TargetPage { get; set; }
 
@@ -317,7 +317,7 @@ public partial class V1alpha1DialogflowCXFlowSpecTransitionRoutesTriggerFulfillm
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 
-    /// <summary>The webhook to call. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>.</summary>
+    /// <summary>The webhook to call. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/webhooks/&lt;Webhook ID&gt;.</summary>
     [JsonPropertyName("webhook")]
     public string? Webhook { get; set; }
 }
@@ -328,7 +328,7 @@ public partial class V1alpha1DialogflowCXFlowSpecTransitionRoutes
     [JsonPropertyName("condition")]
     public string? Condition { get; set; }
 
-    /// <summary>The unique identifier of an Intent. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/intents/<Intent ID>. Indicates that the transition can only happen when the given intent is matched. At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.</summary>
+    /// <summary>The unique identifier of an Intent. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/intents/&lt;Intent ID&gt;. Indicates that the transition can only happen when the given intent is matched. At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.</summary>
     [JsonPropertyName("intent")]
     public string? Intent { get; set; }
 
@@ -336,11 +336,11 @@ public partial class V1alpha1DialogflowCXFlowSpecTransitionRoutes
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The target flow to transition to. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.</summary>
+    /// <summary>The target flow to transition to. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;.</summary>
     [JsonPropertyName("targetFlow")]
     public string? TargetFlow { get; set; }
 
-    /// <summary>The target page to transition to. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.</summary>
+    /// <summary>The target page to transition to. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/pages/&lt;Page ID&gt;.</summary>
     [JsonPropertyName("targetPage")]
     public string? TargetPage { get; set; }
 
@@ -371,7 +371,7 @@ public partial class V1alpha1DialogflowCXFlowSpec
     [JsonPropertyName("nluSettings")]
     public V1alpha1DialogflowCXFlowSpecNluSettings? NluSettings { get; set; }
 
-    /// <summary>Immutable. The agent to create a flow for. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.</summary>
+    /// <summary>Immutable. The agent to create a flow for. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;.</summary>
     [JsonPropertyName("parent")]
     public string? Parent { get; set; }
 
@@ -379,7 +379,7 @@ public partial class V1alpha1DialogflowCXFlowSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 
-    /// <summary>A flow's transition route group serve two purposes: They are responsible for matching the user's first utterances in the flow. They are inherited by every page's [transition route groups][Page.transition_route_groups]. Transition route groups defined in the page have higher priority than those defined in the flow. Format:projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/transitionRouteGroups/<TransitionRouteGroup ID>.</summary>
+    /// <summary>A flow's transition route group serve two purposes: They are responsible for matching the user's first utterances in the flow. They are inherited by every page's [transition route groups][Page.transition_route_groups]. Transition route groups defined in the page have higher priority than those defined in the flow. Format:projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/transitionRouteGroups/&lt;TransitionRouteGroup ID&gt;.</summary>
     [JsonPropertyName("transitionRouteGroups")]
     public IList<string>? TransitionRouteGroups { get; set; }
 
@@ -417,7 +417,7 @@ public partial class V1alpha1DialogflowCXFlowStatus
     [JsonPropertyName("conditions")]
     public IList<V1alpha1DialogflowCXFlowStatusConditions>? Conditions { get; set; }
 
-    /// <summary>The unique identifier of the flow. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.</summary>
+    /// <summary>The unique identifier of the flow. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 

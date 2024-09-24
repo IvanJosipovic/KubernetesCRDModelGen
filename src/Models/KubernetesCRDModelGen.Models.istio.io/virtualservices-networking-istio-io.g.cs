@@ -838,7 +838,7 @@ public partial class V1beta1VirtualServiceSpec
     [JsonPropertyName("tcp")]
     public IList<V1beta1VirtualServiceSpecTcp>? Tcp { get; set; }
 
-    /// <summary>An ordered list of route rule for non-terminated TLS & HTTPS traffic.</summary>
+    /// <summary>An ordered list of route rule for non-terminated TLS &amp; HTTPS traffic.</summary>
     [JsonPropertyName("tls")]
     public IList<V1beta1VirtualServiceSpecTls>? Tls { get; set; }
 }

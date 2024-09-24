@@ -195,7 +195,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecForProviderPreservedState
     [JsonPropertyName("internalIp")]
     public IList<V1beta1RegionPerInstanceConfigSpecForProviderPreservedStateInternalIp>? InternalIp { get; set; }
 
-    /// <summary>Preserved metadata defined for this instance. This is a list of key->value pairs.</summary>
+    /// <summary>Preserved metadata defined for this instance. This is a list of key-&gt;value pairs.</summary>
     [JsonPropertyName("metadata")]
     public IDictionary<string, string>? Metadata { get; set; }
 }
@@ -616,7 +616,7 @@ public partial class V1beta1RegionPerInstanceConfigSpecInitProviderPreservedStat
     [JsonPropertyName("internalIp")]
     public IList<V1beta1RegionPerInstanceConfigSpecInitProviderPreservedStateInternalIp>? InternalIp { get; set; }
 
-    /// <summary>Preserved metadata defined for this instance. This is a list of key->value pairs.</summary>
+    /// <summary>Preserved metadata defined for this instance. This is a list of key-&gt;value pairs.</summary>
     [JsonPropertyName("metadata")]
     public IDictionary<string, string>? Metadata { get; set; }
 }
@@ -1120,7 +1120,7 @@ public partial class V1beta1RegionPerInstanceConfigStatusAtProviderPreservedStat
     [JsonPropertyName("internalIp")]
     public IList<V1beta1RegionPerInstanceConfigStatusAtProviderPreservedStateInternalIp>? InternalIp { get; set; }
 
-    /// <summary>Preserved metadata defined for this instance. This is a list of key->value pairs.</summary>
+    /// <summary>Preserved metadata defined for this instance. This is a list of key-&gt;value pairs.</summary>
     [JsonPropertyName("metadata")]
     public IDictionary<string, string>? Metadata { get; set; }
 }

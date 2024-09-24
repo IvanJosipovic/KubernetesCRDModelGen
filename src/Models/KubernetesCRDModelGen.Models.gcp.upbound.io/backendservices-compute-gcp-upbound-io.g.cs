@@ -194,11 +194,11 @@ public partial class V1beta1BackendServiceSpecForProviderCdnPolicyCacheKeyPolicy
     [JsonPropertyName("includeQueryString")]
     public bool? IncludeQueryString { get; set; }
 
-    /// <summary>Names of query string parameters to exclude in cache keys. All other parameters will be included. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters.</summary>
+    /// <summary>Names of query string parameters to exclude in cache keys. All other parameters will be included. Either specify query_string_whitelist or query_string_blacklist, not both. '&amp;' and '=' will be percent encoded and not treated as delimiters.</summary>
     [JsonPropertyName("queryStringBlacklist")]
     public IList<string>? QueryStringBlacklist { get; set; }
 
-    /// <summary>Names of query string parameters to include in cache keys. All other parameters will be excluded. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters.</summary>
+    /// <summary>Names of query string parameters to include in cache keys. All other parameters will be excluded. Either specify query_string_whitelist or query_string_blacklist, not both. '&amp;' and '=' will be percent encoded and not treated as delimiters.</summary>
     [JsonPropertyName("queryStringWhitelist")]
     public IList<string>? QueryStringWhitelist { get; set; }
 }
@@ -892,11 +892,11 @@ public partial class V1beta1BackendServiceSpecInitProviderCdnPolicyCacheKeyPolic
     [JsonPropertyName("includeQueryString")]
     public bool? IncludeQueryString { get; set; }
 
-    /// <summary>Names of query string parameters to exclude in cache keys. All other parameters will be included. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters.</summary>
+    /// <summary>Names of query string parameters to exclude in cache keys. All other parameters will be included. Either specify query_string_whitelist or query_string_blacklist, not both. '&amp;' and '=' will be percent encoded and not treated as delimiters.</summary>
     [JsonPropertyName("queryStringBlacklist")]
     public IList<string>? QueryStringBlacklist { get; set; }
 
-    /// <summary>Names of query string parameters to include in cache keys. All other parameters will be excluded. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters.</summary>
+    /// <summary>Names of query string parameters to include in cache keys. All other parameters will be excluded. Either specify query_string_whitelist or query_string_blacklist, not both. '&amp;' and '=' will be percent encoded and not treated as delimiters.</summary>
     [JsonPropertyName("queryStringWhitelist")]
     public IList<string>? QueryStringWhitelist { get; set; }
 }
@@ -1654,11 +1654,11 @@ public partial class V1beta1BackendServiceStatusAtProviderCdnPolicyCacheKeyPolic
     [JsonPropertyName("includeQueryString")]
     public bool? IncludeQueryString { get; set; }
 
-    /// <summary>Names of query string parameters to exclude in cache keys. All other parameters will be included. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters.</summary>
+    /// <summary>Names of query string parameters to exclude in cache keys. All other parameters will be included. Either specify query_string_whitelist or query_string_blacklist, not both. '&amp;' and '=' will be percent encoded and not treated as delimiters.</summary>
     [JsonPropertyName("queryStringBlacklist")]
     public IList<string>? QueryStringBlacklist { get; set; }
 
-    /// <summary>Names of query string parameters to include in cache keys. All other parameters will be excluded. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters.</summary>
+    /// <summary>Names of query string parameters to include in cache keys. All other parameters will be excluded. Either specify query_string_whitelist or query_string_blacklist, not both. '&amp;' and '=' will be percent encoded and not treated as delimiters.</summary>
     [JsonPropertyName("queryStringWhitelist")]
     public IList<string>? QueryStringWhitelist { get; set; }
 }

@@ -112,7 +112,7 @@ public partial class V1beta1AgentSpecForProviderTextToSpeechSettings
 
 public partial class V1beta1AgentSpecForProvider
 {
-    /// <summary>Hierarchical advanced settings for this agent. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent->Flow->Page->Fulfillment/Parameter. Structure is documented below.</summary>
+    /// <summary>Hierarchical advanced settings for this agent. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent-&gt;Flow-&gt;Page-&gt;Fulfillment/Parameter. Structure is documented below.</summary>
     [JsonPropertyName("advancedSettings")]
     public IList<V1beta1AgentSpecForProviderAdvancedSettings>? AdvancedSettings { get; set; }
 
@@ -144,7 +144,7 @@ public partial class V1beta1AgentSpecForProvider
     [JsonPropertyName("gitIntegrationSettings")]
     public IList<V1beta1AgentSpecForProviderGitIntegrationSettings>? GitIntegrationSettings { get; set; }
 
-    /// <summary>The name of the location this agent is located in. ~> Note: The first time you are deploying an Agent in your project you must configure location settings. This is a one time step but at the moment you can only configure location settings via the Dialogflow CX console. Another options is to use global location so you don't need to manually configure location settings.</summary>
+    /// <summary>The name of the location this agent is located in. ~&gt; Note: The first time you are deploying an Agent in your project you must configure location settings. This is a one time step but at the moment you can only configure location settings via the Dialogflow CX console. Another options is to use global location so you don't need to manually configure location settings.</summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
@@ -267,7 +267,7 @@ public partial class V1beta1AgentSpecInitProviderTextToSpeechSettings
 
 public partial class V1beta1AgentSpecInitProvider
 {
-    /// <summary>Hierarchical advanced settings for this agent. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent->Flow->Page->Fulfillment/Parameter. Structure is documented below.</summary>
+    /// <summary>Hierarchical advanced settings for this agent. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent-&gt;Flow-&gt;Page-&gt;Fulfillment/Parameter. Structure is documented below.</summary>
     [JsonPropertyName("advancedSettings")]
     public IList<V1beta1AgentSpecInitProviderAdvancedSettings>? AdvancedSettings { get; set; }
 
@@ -299,7 +299,7 @@ public partial class V1beta1AgentSpecInitProvider
     [JsonPropertyName("gitIntegrationSettings")]
     public IList<V1beta1AgentSpecInitProviderGitIntegrationSettings>? GitIntegrationSettings { get; set; }
 
-    /// <summary>The name of the location this agent is located in. ~> Note: The first time you are deploying an Agent in your project you must configure location settings. This is a one time step but at the moment you can only configure location settings via the Dialogflow CX console. Another options is to use global location so you don't need to manually configure location settings.</summary>
+    /// <summary>The name of the location this agent is located in. ~&gt; Note: The first time you are deploying an Agent in your project you must configure location settings. This is a one time step but at the moment you can only configure location settings via the Dialogflow CX console. Another options is to use global location so you don't need to manually configure location settings.</summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
@@ -586,7 +586,7 @@ public partial class V1beta1AgentStatusAtProviderTextToSpeechSettings
 
 public partial class V1beta1AgentStatusAtProvider
 {
-    /// <summary>Hierarchical advanced settings for this agent. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent->Flow->Page->Fulfillment/Parameter. Structure is documented below.</summary>
+    /// <summary>Hierarchical advanced settings for this agent. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent-&gt;Flow-&gt;Page-&gt;Fulfillment/Parameter. Structure is documented below.</summary>
     [JsonPropertyName("advancedSettings")]
     public IList<V1beta1AgentStatusAtProviderAdvancedSettings>? AdvancedSettings { get; set; }
 
@@ -622,7 +622,7 @@ public partial class V1beta1AgentStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The name of the location this agent is located in. ~> Note: The first time you are deploying an Agent in your project you must configure location settings. This is a one time step but at the moment you can only configure location settings via the Dialogflow CX console. Another options is to use global location so you don't need to manually configure location settings.</summary>
+    /// <summary>The name of the location this agent is located in. ~&gt; Note: The first time you are deploying an Agent in your project you must configure location settings. This is a one time step but at the moment you can only configure location settings via the Dialogflow CX console. Another options is to use global location so you don't need to manually configure location settings.</summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 

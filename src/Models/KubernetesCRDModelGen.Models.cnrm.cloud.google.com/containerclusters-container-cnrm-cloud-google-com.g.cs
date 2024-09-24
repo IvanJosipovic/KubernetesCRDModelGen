@@ -1485,7 +1485,7 @@ public partial class V1beta1ContainerClusterSpec
     [JsonPropertyName("maintenancePolicy")]
     public V1beta1ContainerClusterSpecMaintenancePolicy? MaintenancePolicy { get; set; }
 
-    /// <summary>DEPRECATED. Basic authentication was removed for GKE cluster versions >= 1.19. The authentication information for accessing the Kubernetes master. Some values in this block are only returned by the API if your service account has permission to get credentials for your GKE cluster. If you see an unexpected diff unsetting your client cert, ensure you have the container.clusters.getCredentials permission.</summary>
+    /// <summary>DEPRECATED. Basic authentication was removed for GKE cluster versions &gt;= 1.19. The authentication information for accessing the Kubernetes master. Some values in this block are only returned by the API if your service account has permission to get credentials for your GKE cluster. If you see an unexpected diff unsetting your client cert, ensure you have the container.clusters.getCredentials permission.</summary>
     [JsonPropertyName("masterAuth")]
     public V1beta1ContainerClusterSpecMasterAuth? MasterAuth { get; set; }
 
@@ -1641,7 +1641,7 @@ public partial class V1beta1ContainerClusterStatusObservedStatePrivateClusterCon
 
 public partial class V1beta1ContainerClusterStatusObservedState
 {
-    /// <summary>DEPRECATED. Basic authentication was removed for GKE cluster versions >= 1.19. The authentication information for accessing the Kubernetes master. Some values in this block are only returned by the API if your service account has permission to get credentials for your GKE cluster. If you see an unexpected diff unsetting your client cert, ensure you have the container.clusters.getCredentials permission.</summary>
+    /// <summary>DEPRECATED. Basic authentication was removed for GKE cluster versions &gt;= 1.19. The authentication information for accessing the Kubernetes master. Some values in this block are only returned by the API if your service account has permission to get credentials for your GKE cluster. If you see an unexpected diff unsetting your client cert, ensure you have the container.clusters.getCredentials permission.</summary>
     [JsonPropertyName("masterAuth")]
     public V1beta1ContainerClusterStatusObservedStateMasterAuth? MasterAuth { get; set; }
 

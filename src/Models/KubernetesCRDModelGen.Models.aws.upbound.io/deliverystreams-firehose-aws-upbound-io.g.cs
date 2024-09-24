@@ -475,7 +475,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderElasticsearchConfigurat
     [JsonPropertyName("cloudwatchLoggingOptions")]
     public IList<V1beta1DeliveryStreamSpecForProviderElasticsearchConfigurationS3ConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
 
-    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, & HADOOP_SNAPPY.</summary>
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
     [JsonPropertyName("compressionFormat")]
     public string? CompressionFormat { get; set; }
 
@@ -1344,7 +1344,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderExtendedS3Configuration
     [JsonPropertyName("cloudwatchLoggingOptions")]
     public IList<V1beta1DeliveryStreamSpecForProviderExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
 
-    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, & HADOOP_SNAPPY.</summary>
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
     [JsonPropertyName("compressionFormat")]
     public string? CompressionFormat { get; set; }
 
@@ -1391,7 +1391,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderExtendedS3Configuration
     [JsonPropertyName("cloudwatchLoggingOptions")]
     public IList<V1beta1DeliveryStreamSpecForProviderExtendedS3ConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
 
-    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, & HADOOP_SNAPPY.</summary>
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
     [JsonPropertyName("compressionFormat")]
     public string? CompressionFormat { get; set; }
 
@@ -1850,7 +1850,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderHttpEndpointConfigurati
     [JsonPropertyName("cloudwatchLoggingOptions")]
     public IList<V1beta1DeliveryStreamSpecForProviderHttpEndpointConfigurationS3ConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
 
-    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, & HADOOP_SNAPPY.</summary>
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
     [JsonPropertyName("compressionFormat")]
     public string? CompressionFormat { get; set; }
 
@@ -2439,7 +2439,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderOpensearchConfiguration
     [JsonPropertyName("cloudwatchLoggingOptions")]
     public IList<V1beta1DeliveryStreamSpecForProviderOpensearchConfigurationS3ConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
 
-    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, & HADOOP_SNAPPY.</summary>
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
     [JsonPropertyName("compressionFormat")]
     public string? CompressionFormat { get; set; }
 
@@ -3119,7 +3119,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderOpensearchserverlessCon
     [JsonPropertyName("cloudwatchLoggingOptions")]
     public IList<V1beta1DeliveryStreamSpecForProviderOpensearchserverlessConfigurationS3ConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
 
-    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, & HADOOP_SNAPPY.</summary>
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
     [JsonPropertyName("compressionFormat")]
     public string? CompressionFormat { get; set; }
 
@@ -3606,7 +3606,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderRedshiftConfigurationS3
     [JsonPropertyName("cloudwatchLoggingOptions")]
     public IList<V1beta1DeliveryStreamSpecForProviderRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
 
-    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, & HADOOP_SNAPPY.</summary>
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
     [JsonPropertyName("compressionFormat")]
     public string? CompressionFormat { get; set; }
 
@@ -3860,7 +3860,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderRedshiftConfigurationS3
     [JsonPropertyName("cloudwatchLoggingOptions")]
     public IList<V1beta1DeliveryStreamSpecForProviderRedshiftConfigurationS3ConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
 
-    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, & HADOOP_SNAPPY.</summary>
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
     [JsonPropertyName("compressionFormat")]
     public string? CompressionFormat { get; set; }
 
@@ -4362,7 +4362,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderSnowflakeConfigurationS
     [JsonPropertyName("cloudwatchLoggingOptions")]
     public IList<V1beta1DeliveryStreamSpecForProviderSnowflakeConfigurationS3ConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
 
-    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, & HADOOP_SNAPPY.</summary>
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
     [JsonPropertyName("compressionFormat")]
     public string? CompressionFormat { get; set; }
 
@@ -4780,7 +4780,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderSplunkConfigurationS3Co
     [JsonPropertyName("cloudwatchLoggingOptions")]
     public IList<V1beta1DeliveryStreamSpecForProviderSplunkConfigurationS3ConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
 
-    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, & HADOOP_SNAPPY.</summary>
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
     [JsonPropertyName("compressionFormat")]
     public string? CompressionFormat { get; set; }
 
@@ -5384,7 +5384,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderElasticsearchConfigura
     [JsonPropertyName("cloudwatchLoggingOptions")]
     public IList<V1beta1DeliveryStreamSpecInitProviderElasticsearchConfigurationS3ConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
 
-    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, & HADOOP_SNAPPY.</summary>
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
     [JsonPropertyName("compressionFormat")]
     public string? CompressionFormat { get; set; }
 
@@ -6249,7 +6249,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderExtendedS3Configuratio
     [JsonPropertyName("cloudwatchLoggingOptions")]
     public IList<V1beta1DeliveryStreamSpecInitProviderExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
 
-    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, & HADOOP_SNAPPY.</summary>
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
     [JsonPropertyName("compressionFormat")]
     public string? CompressionFormat { get; set; }
 
@@ -6296,7 +6296,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderExtendedS3Configuratio
     [JsonPropertyName("cloudwatchLoggingOptions")]
     public IList<V1beta1DeliveryStreamSpecInitProviderExtendedS3ConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
 
-    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, & HADOOP_SNAPPY.</summary>
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
     [JsonPropertyName("compressionFormat")]
     public string? CompressionFormat { get; set; }
 
@@ -6755,7 +6755,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderHttpEndpointConfigurat
     [JsonPropertyName("cloudwatchLoggingOptions")]
     public IList<V1beta1DeliveryStreamSpecInitProviderHttpEndpointConfigurationS3ConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
 
-    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, & HADOOP_SNAPPY.</summary>
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
     [JsonPropertyName("compressionFormat")]
     public string? CompressionFormat { get; set; }
 
@@ -7344,7 +7344,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderOpensearchConfiguratio
     [JsonPropertyName("cloudwatchLoggingOptions")]
     public IList<V1beta1DeliveryStreamSpecInitProviderOpensearchConfigurationS3ConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
 
-    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, & HADOOP_SNAPPY.</summary>
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
     [JsonPropertyName("compressionFormat")]
     public string? CompressionFormat { get; set; }
 
@@ -8024,7 +8024,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderOpensearchserverlessCo
     [JsonPropertyName("cloudwatchLoggingOptions")]
     public IList<V1beta1DeliveryStreamSpecInitProviderOpensearchserverlessConfigurationS3ConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
 
-    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, & HADOOP_SNAPPY.</summary>
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
     [JsonPropertyName("compressionFormat")]
     public string? CompressionFormat { get; set; }
 
@@ -8511,7 +8511,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderRedshiftConfigurationS
     [JsonPropertyName("cloudwatchLoggingOptions")]
     public IList<V1beta1DeliveryStreamSpecInitProviderRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
 
-    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, & HADOOP_SNAPPY.</summary>
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
     [JsonPropertyName("compressionFormat")]
     public string? CompressionFormat { get; set; }
 
@@ -8765,7 +8765,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderRedshiftConfigurationS
     [JsonPropertyName("cloudwatchLoggingOptions")]
     public IList<V1beta1DeliveryStreamSpecInitProviderRedshiftConfigurationS3ConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
 
-    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, & HADOOP_SNAPPY.</summary>
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
     [JsonPropertyName("compressionFormat")]
     public string? CompressionFormat { get; set; }
 
@@ -9267,7 +9267,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderSnowflakeConfiguration
     [JsonPropertyName("cloudwatchLoggingOptions")]
     public IList<V1beta1DeliveryStreamSpecInitProviderSnowflakeConfigurationS3ConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
 
-    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, & HADOOP_SNAPPY.</summary>
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
     [JsonPropertyName("compressionFormat")]
     public string? CompressionFormat { get; set; }
 
@@ -9685,7 +9685,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderSplunkConfigurationS3C
     [JsonPropertyName("cloudwatchLoggingOptions")]
     public IList<V1beta1DeliveryStreamSpecInitProviderSplunkConfigurationS3ConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
 
-    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, & HADOOP_SNAPPY.</summary>
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
     [JsonPropertyName("compressionFormat")]
     public string? CompressionFormat { get; set; }
 
@@ -10092,7 +10092,7 @@ public partial class V1beta1DeliveryStreamStatusAtProviderElasticsearchConfigura
     [JsonPropertyName("cloudwatchLoggingOptions")]
     public IList<V1beta1DeliveryStreamStatusAtProviderElasticsearchConfigurationS3ConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
 
-    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, & HADOOP_SNAPPY.</summary>
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
     [JsonPropertyName("compressionFormat")]
     public string? CompressionFormat { get; set; }
 
@@ -10457,7 +10457,7 @@ public partial class V1beta1DeliveryStreamStatusAtProviderExtendedS3Configuratio
     [JsonPropertyName("cloudwatchLoggingOptions")]
     public IList<V1beta1DeliveryStreamStatusAtProviderExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
 
-    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, & HADOOP_SNAPPY.</summary>
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
     [JsonPropertyName("compressionFormat")]
     public string? CompressionFormat { get; set; }
 
@@ -10496,7 +10496,7 @@ public partial class V1beta1DeliveryStreamStatusAtProviderExtendedS3Configuratio
     [JsonPropertyName("cloudwatchLoggingOptions")]
     public IList<V1beta1DeliveryStreamStatusAtProviderExtendedS3ConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
 
-    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, & HADOOP_SNAPPY.</summary>
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
     [JsonPropertyName("compressionFormat")]
     public string? CompressionFormat { get; set; }
 
@@ -10648,7 +10648,7 @@ public partial class V1beta1DeliveryStreamStatusAtProviderHttpEndpointConfigurat
     [JsonPropertyName("cloudwatchLoggingOptions")]
     public IList<V1beta1DeliveryStreamStatusAtProviderHttpEndpointConfigurationS3ConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
 
-    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, & HADOOP_SNAPPY.</summary>
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
     [JsonPropertyName("compressionFormat")]
     public string? CompressionFormat { get; set; }
 
@@ -10841,7 +10841,7 @@ public partial class V1beta1DeliveryStreamStatusAtProviderOpensearchConfiguratio
     [JsonPropertyName("cloudwatchLoggingOptions")]
     public IList<V1beta1DeliveryStreamStatusAtProviderOpensearchConfigurationS3ConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
 
-    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, & HADOOP_SNAPPY.</summary>
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
     [JsonPropertyName("compressionFormat")]
     public string? CompressionFormat { get; set; }
 
@@ -11025,7 +11025,7 @@ public partial class V1beta1DeliveryStreamStatusAtProviderOpensearchserverlessCo
     [JsonPropertyName("cloudwatchLoggingOptions")]
     public IList<V1beta1DeliveryStreamStatusAtProviderOpensearchserverlessConfigurationS3ConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
 
-    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, & HADOOP_SNAPPY.</summary>
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
     [JsonPropertyName("compressionFormat")]
     public string? CompressionFormat { get; set; }
 
@@ -11193,7 +11193,7 @@ public partial class V1beta1DeliveryStreamStatusAtProviderRedshiftConfigurationS
     [JsonPropertyName("cloudwatchLoggingOptions")]
     public IList<V1beta1DeliveryStreamStatusAtProviderRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
 
-    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, & HADOOP_SNAPPY.</summary>
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
     [JsonPropertyName("compressionFormat")]
     public string? CompressionFormat { get; set; }
 
@@ -11247,7 +11247,7 @@ public partial class V1beta1DeliveryStreamStatusAtProviderRedshiftConfigurationS
     [JsonPropertyName("cloudwatchLoggingOptions")]
     public IList<V1beta1DeliveryStreamStatusAtProviderRedshiftConfigurationS3ConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
 
-    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, & HADOOP_SNAPPY.</summary>
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
     [JsonPropertyName("compressionFormat")]
     public string? CompressionFormat { get; set; }
 
@@ -11415,7 +11415,7 @@ public partial class V1beta1DeliveryStreamStatusAtProviderSnowflakeConfiguration
     [JsonPropertyName("cloudwatchLoggingOptions")]
     public IList<V1beta1DeliveryStreamStatusAtProviderSnowflakeConfigurationS3ConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
 
-    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, & HADOOP_SNAPPY.</summary>
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
     [JsonPropertyName("compressionFormat")]
     public string? CompressionFormat { get; set; }
 
@@ -11602,7 +11602,7 @@ public partial class V1beta1DeliveryStreamStatusAtProviderSplunkConfigurationS3C
     [JsonPropertyName("cloudwatchLoggingOptions")]
     public IList<V1beta1DeliveryStreamStatusAtProviderSplunkConfigurationS3ConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
 
-    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, & HADOOP_SNAPPY.</summary>
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
     [JsonPropertyName("compressionFormat")]
     public string? CompressionFormat { get; set; }
 

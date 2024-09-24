@@ -605,7 +605,7 @@ public partial class V1beta1MSSQLServerSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>The fully versioned Key Vault Key URL (e.g. 'https://<YourVaultName>.vault.azure.net/keys/<YourKeyName>/<YourKeyVersion>) to be used as the Customer Managed Key(CMK/BYOK) for the Transparent Data Encryption(TDE) layer.</summary>
+    /// <summary>The fully versioned Key Vault Key URL (e.g. 'https://&lt;YourVaultName&gt;.vault.azure.net/keys/&lt;YourKeyName&gt;/&lt;YourKeyVersion&gt;) to be used as the Customer Managed Key(CMK/BYOK) for the Transparent Data Encryption(TDE) layer.</summary>
     [JsonPropertyName("transparentDataEncryptionKeyVaultKeyId")]
     public string? TransparentDataEncryptionKeyVaultKeyId { get; set; }
 
@@ -1086,7 +1086,7 @@ public partial class V1beta1MSSQLServerSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>The fully versioned Key Vault Key URL (e.g. 'https://<YourVaultName>.vault.azure.net/keys/<YourKeyName>/<YourKeyVersion>) to be used as the Customer Managed Key(CMK/BYOK) for the Transparent Data Encryption(TDE) layer.</summary>
+    /// <summary>The fully versioned Key Vault Key URL (e.g. 'https://&lt;YourVaultName&gt;.vault.azure.net/keys/&lt;YourKeyName&gt;/&lt;YourKeyVersion&gt;) to be used as the Customer Managed Key(CMK/BYOK) for the Transparent Data Encryption(TDE) layer.</summary>
     [JsonPropertyName("transparentDataEncryptionKeyVaultKeyId")]
     public string? TransparentDataEncryptionKeyVaultKeyId { get; set; }
 
@@ -1382,7 +1382,7 @@ public partial class V1beta1MSSQLServerStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>The fully versioned Key Vault Key URL (e.g. 'https://<YourVaultName>.vault.azure.net/keys/<YourKeyName>/<YourKeyVersion>) to be used as the Customer Managed Key(CMK/BYOK) for the Transparent Data Encryption(TDE) layer.</summary>
+    /// <summary>The fully versioned Key Vault Key URL (e.g. 'https://&lt;YourVaultName&gt;.vault.azure.net/keys/&lt;YourKeyName&gt;/&lt;YourKeyVersion&gt;) to be used as the Customer Managed Key(CMK/BYOK) for the Transparent Data Encryption(TDE) layer.</summary>
     [JsonPropertyName("transparentDataEncryptionKeyVaultKeyId")]
     public string? TransparentDataEncryptionKeyVaultKeyId { get; set; }
 

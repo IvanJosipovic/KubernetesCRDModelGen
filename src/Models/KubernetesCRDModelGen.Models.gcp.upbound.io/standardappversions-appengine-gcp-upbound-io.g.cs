@@ -371,7 +371,7 @@ public partial class V1beta1StandardAppVersionSpecForProvider
     [JsonPropertyName("runtime")]
     public string? Runtime { get; set; }
 
-    /// <summary>The version of the API in the given runtime environment. Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard/<language>/config/appref Substitute <language> with python, java, php, ruby, go or nodejs.</summary>
+    /// <summary>The version of the API in the given runtime environment. Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard/&lt;language&gt;/config/appref Substitute &lt;language&gt; with python, java, php, ruby, go or nodejs.</summary>
     [JsonPropertyName("runtimeApiVersion")]
     public string? RuntimeApiVersion { get; set; }
 
@@ -753,7 +753,7 @@ public partial class V1beta1StandardAppVersionSpecInitProvider
     [JsonPropertyName("runtime")]
     public string? Runtime { get; set; }
 
-    /// <summary>The version of the API in the given runtime environment. Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard/<language>/config/appref Substitute <language> with python, java, php, ruby, go or nodejs.</summary>
+    /// <summary>The version of the API in the given runtime environment. Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard/&lt;language&gt;/config/appref Substitute &lt;language&gt; with python, java, php, ruby, go or nodejs.</summary>
     [JsonPropertyName("runtimeApiVersion")]
     public string? RuntimeApiVersion { get; set; }
 
@@ -1230,7 +1230,7 @@ public partial class V1beta1StandardAppVersionStatusAtProvider
     [JsonPropertyName("runtime")]
     public string? Runtime { get; set; }
 
-    /// <summary>The version of the API in the given runtime environment. Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard/<language>/config/appref Substitute <language> with python, java, php, ruby, go or nodejs.</summary>
+    /// <summary>The version of the API in the given runtime environment. Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard/&lt;language&gt;/config/appref Substitute &lt;language&gt; with python, java, php, ruby, go or nodejs.</summary>
     [JsonPropertyName("runtimeApiVersion")]
     public string? RuntimeApiVersion { get; set; }
 

@@ -41,7 +41,7 @@ public partial class V1alpha1DialogflowIntentSpec
     [JsonPropertyName("events")]
     public IList<string>? Events { get; set; }
 
-    /// <summary>The list of context names required for this intent to be triggered. Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.</summary>
+    /// <summary>The list of context names required for this intent to be triggered. Format: projects/&lt;Project ID&gt;/agent/sessions/-/contexts/&lt;Context ID&gt;.</summary>
     [JsonPropertyName("inputContextNames")]
     public IList<string>? InputContextNames { get; set; }
 
@@ -53,7 +53,7 @@ public partial class V1alpha1DialogflowIntentSpec
     [JsonPropertyName("mlDisabled")]
     public bool? MlDisabled { get; set; }
 
-    /// <summary>Immutable. The unique identifier of the parent intent in the chain of followup intents. Format: projects/<Project ID>/agent/intents/<Intent ID>.</summary>
+    /// <summary>Immutable. The unique identifier of the parent intent in the chain of followup intents. Format: projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;.</summary>
     [JsonPropertyName("parentFollowupIntentName")]
     public string? ParentFollowupIntentName { get; set; }
 
@@ -103,11 +103,11 @@ public partial class V1alpha1DialogflowIntentStatusConditions
 
 public partial class V1alpha1DialogflowIntentStatusFollowupIntentInfo
 {
-    /// <summary>The unique identifier of the followup intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.</summary>
+    /// <summary>The unique identifier of the followup intent. Format: projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;.</summary>
     [JsonPropertyName("followupIntentName")]
     public string? FollowupIntentName { get; set; }
 
-    /// <summary>The unique identifier of the followup intent's parent. Format: projects/<Project ID>/agent/intents/<Intent ID>.</summary>
+    /// <summary>The unique identifier of the followup intent's parent. Format: projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;.</summary>
     [JsonPropertyName("parentFollowupIntentName")]
     public string? ParentFollowupIntentName { get; set; }
 }
@@ -122,7 +122,7 @@ public partial class V1alpha1DialogflowIntentStatus
     [JsonPropertyName("followupIntentInfo")]
     public IList<V1alpha1DialogflowIntentStatusFollowupIntentInfo>? FollowupIntentInfo { get; set; }
 
-    /// <summary>The unique identifier of this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.</summary>
+    /// <summary>The unique identifier of this intent. Format: projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -130,7 +130,7 @@ public partial class V1alpha1DialogflowIntentStatus
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
 
-    /// <summary>The unique identifier of the root intent in the chain of followup intents. It identifies the correct followup intents chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.</summary>
+    /// <summary>The unique identifier of the root intent in the chain of followup intents. It identifies the correct followup intents chain for this intent. Format: projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;.</summary>
     [JsonPropertyName("rootFollowupIntentName")]
     public string? RootFollowupIntentName { get; set; }
 }

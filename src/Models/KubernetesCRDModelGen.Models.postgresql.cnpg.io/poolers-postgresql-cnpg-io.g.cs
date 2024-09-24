@@ -109,7 +109,7 @@ public enum V1PoolerSpecMonitoringPodMonitorMetricRelabelingsActionEnum
 
 public partial class V1PoolerSpecMonitoringPodMonitorMetricRelabelings
 {
-    /// <summary>Action to perform based on the regex matching.   `Uppercase` and `Lowercase` actions require Prometheus >= v2.36.0. `DropEqual` and `KeepEqual` actions require Prometheus >= v2.41.0.   Default: "Replace"</summary>
+    /// <summary>Action to perform based on the regex matching.   `Uppercase` and `Lowercase` actions require Prometheus &gt;= v2.36.0. `DropEqual` and `KeepEqual` actions require Prometheus &gt;= v2.41.0.   Default: "Replace"</summary>
     [JsonPropertyName("action")]
     [JsonConverter(typeof(JsonStringEnumConverter<V1PoolerSpecMonitoringPodMonitorMetricRelabelingsActionEnum>))]
     public V1PoolerSpecMonitoringPodMonitorMetricRelabelingsActionEnum? Action { get; set; }
@@ -211,7 +211,7 @@ public enum V1PoolerSpecMonitoringPodMonitorRelabelingsActionEnum
 
 public partial class V1PoolerSpecMonitoringPodMonitorRelabelings
 {
-    /// <summary>Action to perform based on the regex matching.   `Uppercase` and `Lowercase` actions require Prometheus >= v2.36.0. `DropEqual` and `KeepEqual` actions require Prometheus >= v2.41.0.   Default: "Replace"</summary>
+    /// <summary>Action to perform based on the regex matching.   `Uppercase` and `Lowercase` actions require Prometheus &gt;= v2.36.0. `DropEqual` and `KeepEqual` actions require Prometheus &gt;= v2.41.0.   Default: "Replace"</summary>
     [JsonPropertyName("action")]
     [JsonConverter(typeof(JsonStringEnumConverter<V1PoolerSpecMonitoringPodMonitorRelabelingsActionEnum>))]
     public V1PoolerSpecMonitoringPodMonitorRelabelingsActionEnum? Action { get; set; }
@@ -345,7 +345,7 @@ public partial class V1PoolerSpecServiceTemplateSpecPorts
 
 public partial class V1PoolerSpecServiceTemplateSpecSessionAffinityConfigClientIP
 {
-    /// <summary>timeoutSeconds specifies the seconds of ClientIP type session sticky time. The value must be >0 && <=86400(for 1 day) if ServiceAffinity == "ClientIP". Default value is 10800(for 3 hours).</summary>
+    /// <summary>timeoutSeconds specifies the seconds of ClientIP type session sticky time. The value must be &gt;0 &amp;&amp; &lt;=86400(for 1 day) if ServiceAffinity == "ClientIP". Default value is 10800(for 3 hours).</summary>
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
@@ -1014,7 +1014,7 @@ public partial class V1PoolerSpecTemplateSpecContainersEnvValueFrom
     [JsonPropertyName("configMapKeyRef")]
     public V1PoolerSpecTemplateSpecContainersEnvValueFromConfigMapKeyRef? ConfigMapKeyRef { get; set; }
 
-    /// <summary>Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['<KEY>']`, `metadata.annotations['<KEY>']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.</summary>
+    /// <summary>Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['&lt;KEY&gt;']`, `metadata.annotations['&lt;KEY&gt;']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.</summary>
     [JsonPropertyName("fieldRef")]
     public V1PoolerSpecTemplateSpecContainersEnvValueFromFieldRef? FieldRef { get; set; }
 
@@ -1354,7 +1354,7 @@ public partial class V1PoolerSpecTemplateSpecContainersLivenessProbe
 
 public partial class V1PoolerSpecTemplateSpecContainersPorts
 {
-    /// <summary>Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x < 65536.</summary>
+    /// <summary>Number of port to expose on the pod's IP address. This must be a valid port number, 0 &lt; x &lt; 65536.</summary>
     [JsonPropertyName("containerPort")]
     public int ContainerPort { get; set; }
 
@@ -1362,7 +1362,7 @@ public partial class V1PoolerSpecTemplateSpecContainersPorts
     [JsonPropertyName("hostIP")]
     public string? HostIP { get; set; }
 
-    /// <summary>Number of port to expose on the host. If specified, this must be a valid port number, 0 < x < 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this.</summary>
+    /// <summary>Number of port to expose on the host. If specified, this must be a valid port number, 0 &lt; x &lt; 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this.</summary>
     [JsonPropertyName("hostPort")]
     public int? HostPort { get; set; }
 
@@ -1627,7 +1627,7 @@ public partial class V1PoolerSpecTemplateSpecContainersSecurityContext
     [JsonPropertyName("seLinuxOptions")]
     public V1PoolerSpecTemplateSpecContainersSecurityContextSeLinuxOptions? SeLinuxOptions { get; set; }
 
-    /// <summary>The seccomp options to use by this container. If seccomp options are provided at both the pod & container level, the container options override the pod options. Note that this field cannot be set when spec.os.name is windows.</summary>
+    /// <summary>The seccomp options to use by this container. If seccomp options are provided at both the pod &amp; container level, the container options override the pod options. Note that this field cannot be set when spec.os.name is windows.</summary>
     [JsonPropertyName("seccompProfile")]
     public V1PoolerSpecTemplateSpecContainersSecurityContextSeccompProfile? SeccompProfile { get; set; }
 
@@ -1971,7 +1971,7 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersEnvValueFrom
     [JsonPropertyName("configMapKeyRef")]
     public V1PoolerSpecTemplateSpecEphemeralContainersEnvValueFromConfigMapKeyRef? ConfigMapKeyRef { get; set; }
 
-    /// <summary>Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['<KEY>']`, `metadata.annotations['<KEY>']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.</summary>
+    /// <summary>Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['&lt;KEY&gt;']`, `metadata.annotations['&lt;KEY&gt;']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.</summary>
     [JsonPropertyName("fieldRef")]
     public V1PoolerSpecTemplateSpecEphemeralContainersEnvValueFromFieldRef? FieldRef { get; set; }
 
@@ -2311,7 +2311,7 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersLivenessProbe
 
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersPorts
 {
-    /// <summary>Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x < 65536.</summary>
+    /// <summary>Number of port to expose on the pod's IP address. This must be a valid port number, 0 &lt; x &lt; 65536.</summary>
     [JsonPropertyName("containerPort")]
     public int ContainerPort { get; set; }
 
@@ -2319,7 +2319,7 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersPorts
     [JsonPropertyName("hostIP")]
     public string? HostIP { get; set; }
 
-    /// <summary>Number of port to expose on the host. If specified, this must be a valid port number, 0 < x < 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this.</summary>
+    /// <summary>Number of port to expose on the host. If specified, this must be a valid port number, 0 &lt; x &lt; 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this.</summary>
     [JsonPropertyName("hostPort")]
     public int? HostPort { get; set; }
 
@@ -2584,7 +2584,7 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersSecurityContext
     [JsonPropertyName("seLinuxOptions")]
     public V1PoolerSpecTemplateSpecEphemeralContainersSecurityContextSeLinuxOptions? SeLinuxOptions { get; set; }
 
-    /// <summary>The seccomp options to use by this container. If seccomp options are provided at both the pod & container level, the container options override the pod options. Note that this field cannot be set when spec.os.name is windows.</summary>
+    /// <summary>The seccomp options to use by this container. If seccomp options are provided at both the pod &amp; container level, the container options override the pod options. Note that this field cannot be set when spec.os.name is windows.</summary>
     [JsonPropertyName("seccompProfile")]
     public V1PoolerSpecTemplateSpecEphemeralContainersSecurityContextSeccompProfile? SeccompProfile { get; set; }
 
@@ -2924,7 +2924,7 @@ public partial class V1PoolerSpecTemplateSpecInitContainersEnvValueFrom
     [JsonPropertyName("configMapKeyRef")]
     public V1PoolerSpecTemplateSpecInitContainersEnvValueFromConfigMapKeyRef? ConfigMapKeyRef { get; set; }
 
-    /// <summary>Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['<KEY>']`, `metadata.annotations['<KEY>']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.</summary>
+    /// <summary>Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['&lt;KEY&gt;']`, `metadata.annotations['&lt;KEY&gt;']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.</summary>
     [JsonPropertyName("fieldRef")]
     public V1PoolerSpecTemplateSpecInitContainersEnvValueFromFieldRef? FieldRef { get; set; }
 
@@ -3264,7 +3264,7 @@ public partial class V1PoolerSpecTemplateSpecInitContainersLivenessProbe
 
 public partial class V1PoolerSpecTemplateSpecInitContainersPorts
 {
-    /// <summary>Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x < 65536.</summary>
+    /// <summary>Number of port to expose on the pod's IP address. This must be a valid port number, 0 &lt; x &lt; 65536.</summary>
     [JsonPropertyName("containerPort")]
     public int ContainerPort { get; set; }
 
@@ -3272,7 +3272,7 @@ public partial class V1PoolerSpecTemplateSpecInitContainersPorts
     [JsonPropertyName("hostIP")]
     public string? HostIP { get; set; }
 
-    /// <summary>Number of port to expose on the host. If specified, this must be a valid port number, 0 < x < 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this.</summary>
+    /// <summary>Number of port to expose on the host. If specified, this must be a valid port number, 0 &lt; x &lt; 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this.</summary>
     [JsonPropertyName("hostPort")]
     public int? HostPort { get; set; }
 
@@ -3537,7 +3537,7 @@ public partial class V1PoolerSpecTemplateSpecInitContainersSecurityContext
     [JsonPropertyName("seLinuxOptions")]
     public V1PoolerSpecTemplateSpecInitContainersSecurityContextSeLinuxOptions? SeLinuxOptions { get; set; }
 
-    /// <summary>The seccomp options to use by this container. If seccomp options are provided at both the pod & container level, the container options override the pod options. Note that this field cannot be set when spec.os.name is windows.</summary>
+    /// <summary>The seccomp options to use by this container. If seccomp options are provided at both the pod &amp; container level, the container options override the pod options. Note that this field cannot be set when spec.os.name is windows.</summary>
     [JsonPropertyName("seccompProfile")]
     public V1PoolerSpecTemplateSpecInitContainersSecurityContextSeccompProfile? SeccompProfile { get; set; }
 
@@ -4029,7 +4029,7 @@ public partial class V1PoolerSpecTemplateSpecTopologySpreadConstraints
     [JsonPropertyName("nodeTaintsPolicy")]
     public string? NodeTaintsPolicy { get; set; }
 
-    /// <summary>TopologyKey is the key of node labels. Nodes that have a label with this key and identical values are considered to be in the same topology. We consider each <key, value> as a "bucket", and try to put balanced number of pods into each bucket. We define a domain as a particular instance of a topology. Also, we define an eligible domain as a domain whose nodes meet the requirements of nodeAffinityPolicy and nodeTaintsPolicy. e.g. If TopologyKey is "kubernetes.io/hostname", each Node is a domain of that topology. And, if TopologyKey is "topology.kubernetes.io/zone", each zone is a domain of that topology. It's a required field.</summary>
+    /// <summary>TopologyKey is the key of node labels. Nodes that have a label with this key and identical values are considered to be in the same topology. We consider each &lt;key, value&gt; as a "bucket", and try to put balanced number of pods into each bucket. We define a domain as a particular instance of a topology. Also, we define an eligible domain as a domain whose nodes meet the requirements of nodeAffinityPolicy and nodeTaintsPolicy. e.g. If TopologyKey is "kubernetes.io/hostname", each Node is a domain of that topology. And, if TopologyKey is "topology.kubernetes.io/zone", each zone is a domain of that topology. It's a required field.</summary>
     [JsonPropertyName("topologyKey")]
     public string TopologyKey { get; set; }
 
@@ -4417,7 +4417,7 @@ public partial class V1PoolerSpecTemplateSpecVolumesEphemeralVolumeClaimTemplate
 
 public partial class V1PoolerSpecTemplateSpecVolumesEphemeral
 {
-    /// <summary>Will be used to create a stand-alone PVC to provision the volume. The pod in which this EphemeralVolumeSource is embedded will be the owner of the PVC, i.e. the PVC will be deleted together with the pod.  The name of the PVC will be `<pod name>-<volume name>` where `<volume name>` is the name from the `PodSpec.Volumes` array entry. Pod validation will reject the pod if the concatenated name is not valid for a PVC (for example, too long).   An existing PVC with that name that is not owned by the pod will *not* be used for the pod to avoid using an unrelated volume by mistake. Starting the pod is then blocked until the unrelated PVC is removed. If such a pre-created PVC is meant to be used by the pod, the PVC has to updated with an owner reference to the pod once the pod exists. Normally this should not be necessary, but it may be useful when manually reconstructing a broken cluster.   This field is read-only and no changes will be made by Kubernetes to the PVC after it has been created.   Required, must not be nil.</summary>
+    /// <summary>Will be used to create a stand-alone PVC to provision the volume. The pod in which this EphemeralVolumeSource is embedded will be the owner of the PVC, i.e. the PVC will be deleted together with the pod.  The name of the PVC will be `&lt;pod name&gt;-&lt;volume name&gt;` where `&lt;volume name&gt;` is the name from the `PodSpec.Volumes` array entry. Pod validation will reject the pod if the concatenated name is not valid for a PVC (for example, too long).   An existing PVC with that name that is not owned by the pod will *not* be used for the pod to avoid using an unrelated volume by mistake. Starting the pod is then blocked until the unrelated PVC is removed. If such a pre-created PVC is meant to be used by the pod, the PVC has to updated with an owner reference to the pod once the pod exists. Normally this should not be necessary, but it may be useful when manually reconstructing a broken cluster.   This field is read-only and no changes will be made by Kubernetes to the PVC after it has been created.   Required, must not be nil.</summary>
     [JsonPropertyName("volumeClaimTemplate")]
     public V1PoolerSpecTemplateSpecVolumesEphemeralVolumeClaimTemplate? VolumeClaimTemplate { get; set; }
 }
@@ -4477,7 +4477,7 @@ public partial class V1PoolerSpecTemplateSpecVolumesFlexVolume
 
 public partial class V1PoolerSpecTemplateSpecVolumesFlocker
 {
-    /// <summary>datasetName is Name of the dataset stored as metadata -> name on the dataset for Flocker should be considered as deprecated</summary>
+    /// <summary>datasetName is Name of the dataset stored as metadata -&gt; name on the dataset for Flocker should be considered as deprecated</summary>
     [JsonPropertyName("datasetName")]
     public string? DatasetName { get; set; }
 
@@ -4567,7 +4567,7 @@ public partial class V1PoolerSpecTemplateSpecVolumesIscsi
     [JsonPropertyName("fsType")]
     public string? FsType { get; set; }
 
-    /// <summary>initiatorName is the custom iSCSI Initiator Name. If initiatorName is specified with iscsiInterface simultaneously, new iSCSI interface <target portal>:<volume name> will be created for the connection.</summary>
+    /// <summary>initiatorName is the custom iSCSI Initiator Name. If initiatorName is specified with iscsiInterface simultaneously, new iSCSI interface &lt;target portal&gt;:&lt;volume name&gt; will be created for the connection.</summary>
     [JsonPropertyName("initiatorName")]
     public string? InitiatorName { get; set; }
 
@@ -5325,7 +5325,7 @@ public partial class V1PoolerSpecTemplateSpec
     [JsonPropertyName("shareProcessNamespace")]
     public bool? ShareProcessNamespace { get; set; }
 
-    /// <summary>If specified, the fully qualified Pod hostname will be "<hostname>.<subdomain>.<pod namespace>.svc.<cluster domain>". If not specified, the pod will not have a domainname at all.</summary>
+    /// <summary>If specified, the fully qualified Pod hostname will be "&lt;hostname&gt;.&lt;subdomain&gt;.&lt;pod namespace&gt;.svc.&lt;cluster domain&gt;". If not specified, the pod will not have a domainname at all.</summary>
     [JsonPropertyName("subdomain")]
     public string? Subdomain { get; set; }
 

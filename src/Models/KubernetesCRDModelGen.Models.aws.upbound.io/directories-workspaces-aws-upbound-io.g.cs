@@ -366,7 +366,7 @@ public partial class V1beta1DirectorySpecForProviderWorkspaceCreationProperties
     [JsonPropertyName("customSecurityGroupIdSelector")]
     public V1beta1DirectorySpecForProviderWorkspaceCreationPropertiesCustomSecurityGroupIdSelector? CustomSecurityGroupIdSelector { get; set; }
 
-    /// <summary>–  The default organizational unit (OU) for your WorkSpace directories. Should conform "OU=<value>,DC=<value>,...,DC=<value>" pattern.</summary>
+    /// <summary>–  The default organizational unit (OU) for your WorkSpace directories. Should conform "OU=&lt;value&gt;,DC=&lt;value&gt;,...,DC=&lt;value&gt;" pattern.</summary>
     [JsonPropertyName("defaultOu")]
     public string? DefaultOu { get; set; }
 
@@ -782,7 +782,7 @@ public partial class V1beta1DirectorySpecInitProviderWorkspaceCreationProperties
     [JsonPropertyName("customSecurityGroupIdSelector")]
     public V1beta1DirectorySpecInitProviderWorkspaceCreationPropertiesCustomSecurityGroupIdSelector? CustomSecurityGroupIdSelector { get; set; }
 
-    /// <summary>–  The default organizational unit (OU) for your WorkSpace directories. Should conform "OU=<value>,DC=<value>,...,DC=<value>" pattern.</summary>
+    /// <summary>–  The default organizational unit (OU) for your WorkSpace directories. Should conform "OU=&lt;value&gt;,DC=&lt;value&gt;,...,DC=&lt;value&gt;" pattern.</summary>
     [JsonPropertyName("defaultOu")]
     public string? DefaultOu { get; set; }
 
@@ -1093,7 +1093,7 @@ public partial class V1beta1DirectoryStatusAtProviderWorkspaceCreationProperties
     [JsonPropertyName("customSecurityGroupId")]
     public string? CustomSecurityGroupId { get; set; }
 
-    /// <summary>–  The default organizational unit (OU) for your WorkSpace directories. Should conform "OU=<value>,DC=<value>,...,DC=<value>" pattern.</summary>
+    /// <summary>–  The default organizational unit (OU) for your WorkSpace directories. Should conform "OU=&lt;value&gt;,DC=&lt;value&gt;,...,DC=&lt;value&gt;" pattern.</summary>
     [JsonPropertyName("defaultOu")]
     public string? DefaultOu { get; set; }
 

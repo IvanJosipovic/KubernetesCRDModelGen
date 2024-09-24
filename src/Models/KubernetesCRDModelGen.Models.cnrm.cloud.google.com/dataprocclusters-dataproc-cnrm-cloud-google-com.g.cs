@@ -325,7 +325,7 @@ public partial class V1beta1DataprocClusterSpecConfigMasterConfig
     [JsonPropertyName("machineType")]
     public string? MachineType { get; set; }
 
-    /// <summary>Immutable. Optional. Specifies the minimum cpu platform for the Instance Group. See [Dataproc -> Minimum CPU Platform](https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).</summary>
+    /// <summary>Immutable. Optional. Specifies the minimum cpu platform for the Instance Group. See [Dataproc -&gt; Minimum CPU Platform](https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).</summary>
     [JsonPropertyName("minCpuPlatform")]
     public string? MinCpuPlatform { get; set; }
 
@@ -423,7 +423,7 @@ public partial class V1beta1DataprocClusterSpecConfigSecondaryWorkerConfig
     [JsonPropertyName("machineType")]
     public string? MachineType { get; set; }
 
-    /// <summary>Immutable. Optional. Specifies the minimum cpu platform for the Instance Group. See [Dataproc -> Minimum CPU Platform](https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).</summary>
+    /// <summary>Immutable. Optional. Specifies the minimum cpu platform for the Instance Group. See [Dataproc -&gt; Minimum CPU Platform](https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).</summary>
     [JsonPropertyName("minCpuPlatform")]
     public string? MinCpuPlatform { get; set; }
 
@@ -640,7 +640,7 @@ public partial class V1beta1DataprocClusterSpecConfigWorkerConfig
     [JsonPropertyName("machineType")]
     public string? MachineType { get; set; }
 
-    /// <summary>Immutable. Optional. Specifies the minimum cpu platform for the Instance Group. See [Dataproc -> Minimum CPU Platform](https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).</summary>
+    /// <summary>Immutable. Optional. Specifies the minimum cpu platform for the Instance Group. See [Dataproc -&gt; Minimum CPU Platform](https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).</summary>
     [JsonPropertyName("minCpuPlatform")]
     public string? MinCpuPlatform { get; set; }
 
@@ -803,11 +803,11 @@ public partial class V1beta1DataprocClusterSpecVirtualClusterConfigKubernetesClu
 
 public partial class V1beta1DataprocClusterSpecVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigAutoscaling
 {
-    /// <summary>Immutable. The maximum number of nodes in the node pool. Must be >= min_node_count, and must be > 0. **Note:** Quota must be sufficient to scale up the cluster.</summary>
+    /// <summary>Immutable. The maximum number of nodes in the node pool. Must be &gt;= min_node_count, and must be &gt; 0. **Note:** Quota must be sufficient to scale up the cluster.</summary>
     [JsonPropertyName("maxNodeCount")]
     public long? MaxNodeCount { get; set; }
 
-    /// <summary>Immutable. The minimum number of nodes in the node pool. Must be >= 0 and <= max_node_count.</summary>
+    /// <summary>Immutable. The minimum number of nodes in the node pool. Must be &gt;= 0 and &lt;= max_node_count.</summary>
     [JsonPropertyName("minNodeCount")]
     public long? MinNodeCount { get; set; }
 }

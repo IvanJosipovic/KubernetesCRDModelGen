@@ -537,7 +537,7 @@ public partial class V1beta1GlobalForwardingRuleSpecForProvider
     [JsonPropertyName("ipVersion")]
     public string? IpVersion { get; set; }
 
-    /// <summary>Labels to apply to this forwarding rule.  A list of key->value pairs.</summary>
+    /// <summary>Labels to apply to this forwarding rule.  A list of key-&gt;value pairs.</summary>
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 
@@ -1133,7 +1133,7 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProvider
     [JsonPropertyName("ipVersion")]
     public string? IpVersion { get; set; }
 
-    /// <summary>Labels to apply to this forwarding rule.  A list of key->value pairs.</summary>
+    /// <summary>Labels to apply to this forwarding rule.  A list of key-&gt;value pairs.</summary>
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 
@@ -1460,7 +1460,7 @@ public partial class V1beta1GlobalForwardingRuleStatusAtProvider
     [JsonPropertyName("labelFingerprint")]
     public string? LabelFingerprint { get; set; }
 
-    /// <summary>Labels to apply to this forwarding rule.  A list of key->value pairs.</summary>
+    /// <summary>Labels to apply to this forwarding rule.  A list of key-&gt;value pairs.</summary>
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 

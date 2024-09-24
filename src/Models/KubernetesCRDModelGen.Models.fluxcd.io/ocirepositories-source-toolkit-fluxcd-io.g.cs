@@ -55,7 +55,7 @@ public enum V1beta2OCIRepositorySpecProviderEnum
 
 public partial class V1beta2OCIRepositorySpecRef
 {
-    /// <summary>Digest is the image digest to pull, takes precedence over SemVer. The value should be in the format 'sha256:<HASH>'.</summary>
+    /// <summary>Digest is the image digest to pull, takes precedence over SemVer. The value should be in the format 'sha256:&lt;HASH&gt;'.</summary>
     [JsonPropertyName("digest")]
     public string? Digest { get; set; }
 
@@ -181,7 +181,7 @@ public partial class V1beta2OCIRepositorySpec
 
 public partial class V1beta2OCIRepositoryStatusArtifact
 {
-    /// <summary>Digest is the digest of the file in the form of '<algorithm>:<checksum>'.</summary>
+    /// <summary>Digest is the digest of the file in the form of '&lt;algorithm&gt;:&lt;checksum&gt;'.</summary>
     [JsonPropertyName("digest")]
     public string? Digest { get; set; }
 
@@ -283,7 +283,7 @@ public partial class V1beta2OCIRepositoryStatus
     [JsonPropertyName("conditions")]
     public IList<V1beta2OCIRepositoryStatusConditions>? Conditions { get; set; }
 
-    /// <summary>ContentConfigChecksum is a checksum of all the configurations related to the content of the source artifact:  - .spec.ignore  - .spec.layerSelector observed in .status.observedGeneration version of the object. This can be used to determine if the content configuration has changed and the artifact needs to be rebuilt. It has the format of `<algo>:<checksum>`, for example: `sha256:<checksum>`.   Deprecated: Replaced with explicit fields for observed artifact content config in the status.</summary>
+    /// <summary>ContentConfigChecksum is a checksum of all the configurations related to the content of the source artifact:  - .spec.ignore  - .spec.layerSelector observed in .status.observedGeneration version of the object. This can be used to determine if the content configuration has changed and the artifact needs to be rebuilt. It has the format of `&lt;algo&gt;:&lt;checksum&gt;`, for example: `sha256:&lt;checksum&gt;`.   Deprecated: Replaced with explicit fields for observed artifact content config in the status.</summary>
     [JsonPropertyName("contentConfigChecksum")]
     public string? ContentConfigChecksum { get; set; }
 

@@ -888,7 +888,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigApplica
     [JsonPropertyName("dotnetVersion")]
     public string? DotnetVersion { get; set; }
 
-    /// <summary>The version of Java to use. Possible values are 8, 11 & 17 (In-Preview). The version of Java to use. Possible values are `8`, `11`, and `17`</summary>
+    /// <summary>The version of Java to use. Possible values are 8, 11 &amp; 17 (In-Preview). The version of Java to use. Possible values are `8`, `11`, and `17`</summary>
     [JsonPropertyName("javaVersion")]
     public string? JavaVersion { get; set; }
 
@@ -2306,7 +2306,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigApplic
     [JsonPropertyName("dotnetVersion")]
     public string? DotnetVersion { get; set; }
 
-    /// <summary>The version of Java to use. Possible values are 8, 11 & 17 (In-Preview). The version of Java to use. Possible values are `8`, `11`, and `17`</summary>
+    /// <summary>The version of Java to use. Possible values are 8, 11 &amp; 17 (In-Preview). The version of Java to use. Possible values are `8`, `11`, and `17`</summary>
     [JsonPropertyName("javaVersion")]
     public string? JavaVersion { get; set; }
 
@@ -3904,7 +3904,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderSiteConfigApplic
     [JsonPropertyName("dotnetVersion")]
     public string? DotnetVersion { get; set; }
 
-    /// <summary>The version of Java to use. Possible values are 8, 11 & 17 (In-Preview). The version of Java to use. Possible values are `8`, `11`, and `17`</summary>
+    /// <summary>The version of Java to use. Possible values are 8, 11 &amp; 17 (In-Preview). The version of Java to use. Possible values are `8`, `11`, and `17`</summary>
     [JsonPropertyName("javaVersion")]
     public string? JavaVersion { get; set; }
 

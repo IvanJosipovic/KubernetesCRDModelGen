@@ -22,7 +22,7 @@ public partial class V1beta1TagsTagKeySpec
     [JsonPropertyName("purpose")]
     public string? Purpose { get; set; }
 
-    /// <summary>Immutable. Optional. Purpose data cannot be changed once set.  Purpose data corresponds to the policy system that the tag is intended for. For example, the GCE_FIREWALL purpose expects data in the following format: 'network = "<project-name>/<vpc-name>"'.</summary>
+    /// <summary>Immutable. Optional. Purpose data cannot be changed once set.  Purpose data corresponds to the policy system that the tag is intended for. For example, the GCE_FIREWALL purpose expects data in the following format: 'network = "&lt;project-name&gt;/&lt;vpc-name&gt;"'.</summary>
     [JsonPropertyName("purposeData")]
     public IDictionary<string, string>? PurposeData { get; set; }
 

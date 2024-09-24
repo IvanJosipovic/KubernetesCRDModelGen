@@ -83,7 +83,7 @@ public partial class V1alpha1BigQueryConnectionConnectionStatusConditions
 
 public partial class V1alpha1BigQueryConnectionConnectionStatusObservedStateCloudResource
 {
-    /// <summary>Output only. The account ID of the service created for the purpose of this  connection.   The service account does not have any permissions associated with it  when it is created. After creation, customers delegate permissions  to the service account. When the connection is used in the context of an  operation in BigQuery, the service account will be used to connect to the  desired resources in GCP.   The account ID is in the form of:    <service-1234>@gcp-sa-bigquery-cloudresource.iam.gserviceaccount.com</summary>
+    /// <summary>Output only. The account ID of the service created for the purpose of this  connection.   The service account does not have any permissions associated with it  when it is created. After creation, customers delegate permissions  to the service account. When the connection is used in the context of an  operation in BigQuery, the service account will be used to connect to the  desired resources in GCP.   The account ID is in the form of:    &lt;service-1234&gt;@gcp-sa-bigquery-cloudresource.iam.gserviceaccount.com</summary>
     [JsonPropertyName("serviceAccountID")]
     public string? ServiceAccountID { get; set; }
 }

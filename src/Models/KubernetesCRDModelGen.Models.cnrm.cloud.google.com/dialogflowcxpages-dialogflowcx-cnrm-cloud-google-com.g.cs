@@ -141,7 +141,7 @@ public partial class V1alpha1DialogflowCXPageSpecEntryFulfillment
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 
-    /// <summary>The webhook to call. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>.</summary>
+    /// <summary>The webhook to call. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/webhooks/&lt;Webhook ID&gt;.</summary>
     [JsonPropertyName("webhook")]
     public string? Webhook { get; set; }
 }
@@ -279,7 +279,7 @@ public partial class V1alpha1DialogflowCXPageSpecEventHandlersTriggerFulfillment
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 
-    /// <summary>The webhook to call. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>.</summary>
+    /// <summary>The webhook to call. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/webhooks/&lt;Webhook ID&gt;.</summary>
     [JsonPropertyName("webhook")]
     public string? Webhook { get; set; }
 }
@@ -294,11 +294,11 @@ public partial class V1alpha1DialogflowCXPageSpecEventHandlers
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The target flow to transition to. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.</summary>
+    /// <summary>The target flow to transition to. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;.</summary>
     [JsonPropertyName("targetFlow")]
     public string? TargetFlow { get; set; }
 
-    /// <summary>The target page to transition to. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.</summary>
+    /// <summary>The target page to transition to. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/pages/&lt;Page ID&gt;.</summary>
     [JsonPropertyName("targetPage")]
     public string? TargetPage { get; set; }
 
@@ -440,7 +440,7 @@ public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorIniti
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 
-    /// <summary>The webhook to call. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>.</summary>
+    /// <summary>The webhook to call. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/webhooks/&lt;Webhook ID&gt;.</summary>
     [JsonPropertyName("webhook")]
     public string? Webhook { get; set; }
 }
@@ -578,7 +578,7 @@ public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorRepro
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 
-    /// <summary>The webhook to call. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>.</summary>
+    /// <summary>The webhook to call. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/webhooks/&lt;Webhook ID&gt;.</summary>
     [JsonPropertyName("webhook")]
     public string? Webhook { get; set; }
 }
@@ -593,11 +593,11 @@ public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorRepro
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The target flow to transition to. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.</summary>
+    /// <summary>The target flow to transition to. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;.</summary>
     [JsonPropertyName("targetFlow")]
     public string? TargetFlow { get; set; }
 
-    /// <summary>The target page to transition to. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.</summary>
+    /// <summary>The target page to transition to. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/pages/&lt;Page ID&gt;.</summary>
     [JsonPropertyName("targetPage")]
     public string? TargetPage { get; set; }
 
@@ -612,7 +612,7 @@ public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehavior
     [JsonPropertyName("initialPromptFulfillment")]
     public V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorInitialPromptFulfillment? InitialPromptFulfillment { get; set; }
 
-    /// <summary>The handlers for parameter-level events, used to provide reprompt for the parameter or transition to a different page/flow. The supported events are: * sys.no-match-<N>, where N can be from 1 to 6 * sys.no-match-default * sys.no-input-<N>, where N can be from 1 to 6 * sys.no-input-default * sys.invalid-parameter [initialPromptFulfillment][initialPromptFulfillment] provides the first prompt for the parameter. If the user's response does not fill the parameter, a no-match/no-input event will be triggered, and the fulfillment associated with the sys.no-match-1/sys.no-input-1 handler (if defined) will be called to provide a prompt. The sys.no-match-2/sys.no-input-2 handler (if defined) will respond to the next no-match/no-input event, and so on. A sys.no-match-default or sys.no-input-default handler will be used to handle all following no-match/no-input events after all numbered no-match/no-input handlers for the parameter are consumed. A sys.invalid-parameter handler can be defined to handle the case where the parameter values have been invalidated by webhook. For example, if the user's response fill the parameter, however the parameter was invalidated by webhook, the fulfillment associated with the sys.invalid-parameter handler (if defined) will be called to provide a prompt. If the event handler for the corresponding event can't be found on the parameter, initialPromptFulfillment will be re-prompted.</summary>
+    /// <summary>The handlers for parameter-level events, used to provide reprompt for the parameter or transition to a different page/flow. The supported events are: * sys.no-match-&lt;N&gt;, where N can be from 1 to 6 * sys.no-match-default * sys.no-input-&lt;N&gt;, where N can be from 1 to 6 * sys.no-input-default * sys.invalid-parameter [initialPromptFulfillment][initialPromptFulfillment] provides the first prompt for the parameter. If the user's response does not fill the parameter, a no-match/no-input event will be triggered, and the fulfillment associated with the sys.no-match-1/sys.no-input-1 handler (if defined) will be called to provide a prompt. The sys.no-match-2/sys.no-input-2 handler (if defined) will respond to the next no-match/no-input event, and so on. A sys.no-match-default or sys.no-input-default handler will be used to handle all following no-match/no-input events after all numbered no-match/no-input handlers for the parameter are consumed. A sys.invalid-parameter handler can be defined to handle the case where the parameter values have been invalidated by webhook. For example, if the user's response fill the parameter, however the parameter was invalidated by webhook, the fulfillment associated with the sys.invalid-parameter handler (if defined) will be called to provide a prompt. If the event handler for the corresponding event can't be found on the parameter, initialPromptFulfillment will be re-prompted.</summary>
     [JsonPropertyName("repromptEventHandlers")]
     public IList<V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorRepromptEventHandlers>? RepromptEventHandlers { get; set; }
 }
@@ -627,7 +627,7 @@ public partial class V1alpha1DialogflowCXPageSpecFormParameters
     [JsonPropertyName("displayName")]
     public string? DisplayName { get; set; }
 
-    /// <summary>The entity type of the parameter. Format: projects/-/locations/-/agents/-/entityTypes/<System Entity Type ID> for system entity types (for example, projects/-/locations/-/agents/-/entityTypes/sys.date), or projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/entityTypes/<Entity Type ID> for developer entity types.</summary>
+    /// <summary>The entity type of the parameter. Format: projects/-/locations/-/agents/-/entityTypes/&lt;System Entity Type ID&gt; for system entity types (for example, projects/-/locations/-/agents/-/entityTypes/sys.date), or projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/entityTypes/&lt;Entity Type ID&gt; for developer entity types.</summary>
     [JsonPropertyName("entityType")]
     public string? EntityType { get; set; }
 
@@ -788,7 +788,7 @@ public partial class V1alpha1DialogflowCXPageSpecTransitionRoutesTriggerFulfillm
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 
-    /// <summary>The webhook to call. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>.</summary>
+    /// <summary>The webhook to call. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/webhooks/&lt;Webhook ID&gt;.</summary>
     [JsonPropertyName("webhook")]
     public string? Webhook { get; set; }
 }
@@ -799,7 +799,7 @@ public partial class V1alpha1DialogflowCXPageSpecTransitionRoutes
     [JsonPropertyName("condition")]
     public string? Condition { get; set; }
 
-    /// <summary>The unique identifier of an Intent. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/intents/<Intent ID>. Indicates that the transition can only happen when the given intent is matched. At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.</summary>
+    /// <summary>The unique identifier of an Intent. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/intents/&lt;Intent ID&gt;. Indicates that the transition can only happen when the given intent is matched. At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.</summary>
     [JsonPropertyName("intent")]
     public string? Intent { get; set; }
 
@@ -807,11 +807,11 @@ public partial class V1alpha1DialogflowCXPageSpecTransitionRoutes
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The target flow to transition to. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.</summary>
+    /// <summary>The target flow to transition to. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;.</summary>
     [JsonPropertyName("targetFlow")]
     public string? TargetFlow { get; set; }
 
-    /// <summary>The target page to transition to. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.</summary>
+    /// <summary>The target page to transition to. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/pages/&lt;Page ID&gt;.</summary>
     [JsonPropertyName("targetPage")]
     public string? TargetPage { get; set; }
 
@@ -842,7 +842,7 @@ public partial class V1alpha1DialogflowCXPageSpec
     [JsonPropertyName("languageCode")]
     public string? LanguageCode { get; set; }
 
-    /// <summary>Immutable. The flow to create a page for. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.</summary>
+    /// <summary>Immutable. The flow to create a page for. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;.</summary>
     [JsonPropertyName("parent")]
     public string? Parent { get; set; }
 
@@ -850,7 +850,7 @@ public partial class V1alpha1DialogflowCXPageSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 
-    /// <summary>Ordered list of TransitionRouteGroups associated with the page. Transition route groups must be unique within a page. If multiple transition routes within a page scope refer to the same intent, then the precedence order is: page's transition route -> page's transition route group -> flow's transition routes. If multiple transition route groups within a page contain the same intent, then the first group in the ordered list takes precedence. Format:projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/transitionRouteGroups/<TransitionRouteGroup ID>.</summary>
+    /// <summary>Ordered list of TransitionRouteGroups associated with the page. Transition route groups must be unique within a page. If multiple transition routes within a page scope refer to the same intent, then the precedence order is: page's transition route -&gt; page's transition route group -&gt; flow's transition routes. If multiple transition route groups within a page contain the same intent, then the first group in the ordered list takes precedence. Format:projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/transitionRouteGroups/&lt;TransitionRouteGroup ID&gt;.</summary>
     [JsonPropertyName("transitionRouteGroups")]
     public IList<string>? TransitionRouteGroups { get; set; }
 
@@ -888,7 +888,7 @@ public partial class V1alpha1DialogflowCXPageStatus
     [JsonPropertyName("conditions")]
     public IList<V1alpha1DialogflowCXPageStatusConditions>? Conditions { get; set; }
 
-    /// <summary>The unique identifier of the page. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.</summary>
+    /// <summary>The unique identifier of the page. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/pages/&lt;Page ID&gt;.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 

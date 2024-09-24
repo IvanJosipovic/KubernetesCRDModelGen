@@ -75,7 +75,7 @@ public enum V1ScheduledBackupSpecTargetEnum
 
 public partial class V1ScheduledBackupSpec
 {
-    /// <summary>Indicates which ownerReference should be put inside the created backup resources.<br /> - none: no owner reference for created backup objects (same behavior as before the field was introduced)<br /> - self: sets the Scheduled backup object as owner of the backup<br /> - cluster: set the cluster as owner of the backup<br /></summary>
+    /// <summary>Indicates which ownerReference should be put inside the created backup resources.&lt;br /&gt; - none: no owner reference for created backup objects (same behavior as before the field was introduced)&lt;br /&gt; - self: sets the Scheduled backup object as owner of the backup&lt;br /&gt; - cluster: set the cluster as owner of the backup&lt;br /&gt;</summary>
     [JsonPropertyName("backupOwnerReference")]
     [JsonConverter(typeof(JsonStringEnumConverter<V1ScheduledBackupSpecBackupOwnerReferenceEnum>))]
     public V1ScheduledBackupSpecBackupOwnerReferenceEnum? BackupOwnerReference { get; set; }

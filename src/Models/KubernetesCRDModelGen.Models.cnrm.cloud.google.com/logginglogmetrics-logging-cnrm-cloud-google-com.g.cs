@@ -169,7 +169,7 @@ public partial class V1beta1LoggingLogMetricSpec
     [JsonPropertyName("disabled")]
     public bool? Disabled { get; set; }
 
-    /// <summary>Required. An [advanced logs filter](https://cloud.google.com/logging/docs/view/advanced_filters) which is used to match log entries. Example: "resource.type=gae_app AND severity>=ERROR" The maximum length of the filter is 20000 characters.</summary>
+    /// <summary>Required. An [advanced logs filter](https://cloud.google.com/logging/docs/view/advanced_filters) which is used to match log entries. Example: "resource.type=gae_app AND severity&gt;=ERROR" The maximum length of the filter is 20000 characters.</summary>
     [JsonPropertyName("filter")]
     public string Filter { get; set; }
 

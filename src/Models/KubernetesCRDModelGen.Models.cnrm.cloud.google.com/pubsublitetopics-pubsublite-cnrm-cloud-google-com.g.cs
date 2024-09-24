@@ -10,11 +10,11 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.pubsublite.cnrm.cloud.google.com;
 public partial class V1alpha1PubSubLiteTopicSpecPartitionConfigCapacity
 {
-    /// <summary>Subscribe throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.</summary>
+    /// <summary>Subscribe throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 16.</summary>
     [JsonPropertyName("publishMibPerSec")]
     public int PublishMibPerSec { get; set; }
 
-    /// <summary>Publish throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.</summary>
+    /// <summary>Publish throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 16.</summary>
     [JsonPropertyName("subscribeMibPerSec")]
     public int SubscribeMibPerSec { get; set; }
 }

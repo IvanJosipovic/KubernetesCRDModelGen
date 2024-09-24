@@ -917,7 +917,7 @@ public partial class V1beta1PageSpecForProviderFormParametersFillBehavior
 
 public partial class V1beta1PageSpecForProviderFormParameters
 {
-    /// <summary>Hierarchical advanced settings for this parameter. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent->Flow->Page->Fulfillment/Parameter. Structure is documented below.</summary>
+    /// <summary>Hierarchical advanced settings for this parameter. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent-&gt;Flow-&gt;Page-&gt;Fulfillment/Parameter. Structure is documented below.</summary>
     [JsonPropertyName("advancedSettings")]
     public IList<V1beta1PageSpecForProviderFormParametersAdvancedSettings>? AdvancedSettings { get; set; }
 
@@ -1300,7 +1300,7 @@ public partial class V1beta1PageSpecForProviderTransitionRoutes
 
 public partial class V1beta1PageSpecForProvider
 {
-    /// <summary>Hierarchical advanced settings for this page. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent->Flow->Page->Fulfillment/Parameter. Structure is documented below.</summary>
+    /// <summary>Hierarchical advanced settings for this page. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent-&gt;Flow-&gt;Page-&gt;Fulfillment/Parameter. Structure is documented below.</summary>
     [JsonPropertyName("advancedSettings")]
     public IList<V1beta1PageSpecForProviderAdvancedSettings>? AdvancedSettings { get; set; }
 
@@ -1336,7 +1336,7 @@ public partial class V1beta1PageSpecForProvider
     [JsonPropertyName("parentSelector")]
     public V1beta1PageSpecForProviderParentSelector? ParentSelector { get; set; }
 
-    /// <summary>Ordered list of TransitionRouteGroups associated with the page. Transition route groups must be unique within a page. If multiple transition routes within a page scope refer to the same intent, then the precedence order is: page's transition route -> page's transition route group -> flow's transition routes. If multiple transition route groups within a page contain the same intent, then the first group in the ordered list takes precedence. Format:projects//locations//agents//flows//transitionRouteGroups/.</summary>
+    /// <summary>Ordered list of TransitionRouteGroups associated with the page. Transition route groups must be unique within a page. If multiple transition routes within a page scope refer to the same intent, then the precedence order is: page's transition route -&gt; page's transition route group -&gt; flow's transition routes. If multiple transition route groups within a page contain the same intent, then the first group in the ordered list takes precedence. Format:projects//locations//agents//flows//transitionRouteGroups/.</summary>
     [JsonPropertyName("transitionRouteGroups")]
     public IList<string>? TransitionRouteGroups { get; set; }
 
@@ -2244,7 +2244,7 @@ public partial class V1beta1PageSpecInitProviderFormParametersFillBehavior
 
 public partial class V1beta1PageSpecInitProviderFormParameters
 {
-    /// <summary>Hierarchical advanced settings for this parameter. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent->Flow->Page->Fulfillment/Parameter. Structure is documented below.</summary>
+    /// <summary>Hierarchical advanced settings for this parameter. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent-&gt;Flow-&gt;Page-&gt;Fulfillment/Parameter. Structure is documented below.</summary>
     [JsonPropertyName("advancedSettings")]
     public IList<V1beta1PageSpecInitProviderFormParametersAdvancedSettings>? AdvancedSettings { get; set; }
 
@@ -2627,7 +2627,7 @@ public partial class V1beta1PageSpecInitProviderTransitionRoutes
 
 public partial class V1beta1PageSpecInitProvider
 {
-    /// <summary>Hierarchical advanced settings for this page. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent->Flow->Page->Fulfillment/Parameter. Structure is documented below.</summary>
+    /// <summary>Hierarchical advanced settings for this page. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent-&gt;Flow-&gt;Page-&gt;Fulfillment/Parameter. Structure is documented below.</summary>
     [JsonPropertyName("advancedSettings")]
     public IList<V1beta1PageSpecInitProviderAdvancedSettings>? AdvancedSettings { get; set; }
 
@@ -2663,7 +2663,7 @@ public partial class V1beta1PageSpecInitProvider
     [JsonPropertyName("parentSelector")]
     public V1beta1PageSpecInitProviderParentSelector? ParentSelector { get; set; }
 
-    /// <summary>Ordered list of TransitionRouteGroups associated with the page. Transition route groups must be unique within a page. If multiple transition routes within a page scope refer to the same intent, then the precedence order is: page's transition route -> page's transition route group -> flow's transition routes. If multiple transition route groups within a page contain the same intent, then the first group in the ordered list takes precedence. Format:projects//locations//agents//flows//transitionRouteGroups/.</summary>
+    /// <summary>Ordered list of TransitionRouteGroups associated with the page. Transition route groups must be unique within a page. If multiple transition routes within a page scope refer to the same intent, then the precedence order is: page's transition route -&gt; page's transition route group -&gt; flow's transition routes. If multiple transition route groups within a page contain the same intent, then the first group in the ordered list takes precedence. Format:projects//locations//agents//flows//transitionRouteGroups/.</summary>
     [JsonPropertyName("transitionRouteGroups")]
     public IList<string>? TransitionRouteGroups { get; set; }
 
@@ -3510,7 +3510,7 @@ public partial class V1beta1PageStatusAtProviderFormParametersFillBehavior
 
 public partial class V1beta1PageStatusAtProviderFormParameters
 {
-    /// <summary>Hierarchical advanced settings for this parameter. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent->Flow->Page->Fulfillment/Parameter. Structure is documented below.</summary>
+    /// <summary>Hierarchical advanced settings for this parameter. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent-&gt;Flow-&gt;Page-&gt;Fulfillment/Parameter. Structure is documented below.</summary>
     [JsonPropertyName("advancedSettings")]
     public IList<V1beta1PageStatusAtProviderFormParametersAdvancedSettings>? AdvancedSettings { get; set; }
 
@@ -3717,7 +3717,7 @@ public partial class V1beta1PageStatusAtProviderTransitionRoutes
 
 public partial class V1beta1PageStatusAtProvider
 {
-    /// <summary>Hierarchical advanced settings for this page. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent->Flow->Page->Fulfillment/Parameter. Structure is documented below.</summary>
+    /// <summary>Hierarchical advanced settings for this page. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent-&gt;Flow-&gt;Page-&gt;Fulfillment/Parameter. Structure is documented below.</summary>
     [JsonPropertyName("advancedSettings")]
     public IList<V1beta1PageStatusAtProviderAdvancedSettings>? AdvancedSettings { get; set; }
 
@@ -3753,7 +3753,7 @@ public partial class V1beta1PageStatusAtProvider
     [JsonPropertyName("parent")]
     public string? Parent { get; set; }
 
-    /// <summary>Ordered list of TransitionRouteGroups associated with the page. Transition route groups must be unique within a page. If multiple transition routes within a page scope refer to the same intent, then the precedence order is: page's transition route -> page's transition route group -> flow's transition routes. If multiple transition route groups within a page contain the same intent, then the first group in the ordered list takes precedence. Format:projects//locations//agents//flows//transitionRouteGroups/.</summary>
+    /// <summary>Ordered list of TransitionRouteGroups associated with the page. Transition route groups must be unique within a page. If multiple transition routes within a page scope refer to the same intent, then the precedence order is: page's transition route -&gt; page's transition route group -&gt; flow's transition routes. If multiple transition route groups within a page contain the same intent, then the first group in the ordered list takes precedence. Format:projects//locations//agents//flows//transitionRouteGroups/.</summary>
     [JsonPropertyName("transitionRouteGroups")]
     public IList<string>? TransitionRouteGroups { get; set; }
 

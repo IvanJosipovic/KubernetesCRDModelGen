@@ -64,7 +64,7 @@ public partial class V1BGPPeerSpec
     [JsonPropertyName("password")]
     public V1BGPPeerSpecPassword? Password { get; set; }
 
-    /// <summary>The IP address of the peer followed by an optional port number to peer with. If port number is given, format should be `[<IPv6>]:port` or `<IPv4>:<port>` for IPv4. If optional port number is not set, and this peer IP and ASNumber belongs to a calico/node with ListenPort set in BGPConfiguration, then we use that port to peer.</summary>
+    /// <summary>The IP address of the peer followed by an optional port number to peer with. If port number is given, format should be `[&lt;IPv6&gt;]:port` or `&lt;IPv4&gt;:&lt;port&gt;` for IPv4. If optional port number is not set, and this peer IP and ASNumber belongs to a calico/node with ListenPort set in BGPConfiguration, then we use that port to peer.</summary>
     [JsonPropertyName("peerIP")]
     public string? PeerIP { get; set; }
 

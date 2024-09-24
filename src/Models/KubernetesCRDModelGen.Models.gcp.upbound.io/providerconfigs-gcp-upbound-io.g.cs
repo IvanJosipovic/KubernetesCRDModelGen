@@ -74,7 +74,7 @@ public enum V1beta1ProviderConfigSpecCredentialsSourceEnum
 
 public partial class V1beta1ProviderConfigSpecCredentialsUpboundFederation
 {
-    /// <summary>ProviderID is the fully-qualified identifier for the identity provider on GCP. The format is `projects/<project-id>/locations/global/workloadIdentityPools/<identity-pool>/providers/<identity-provider>`.</summary>
+    /// <summary>ProviderID is the fully-qualified identifier for the identity provider on GCP. The format is `projects/&lt;project-id&gt;/locations/global/workloadIdentityPools/&lt;identity-pool&gt;/providers/&lt;identity-provider&gt;`.</summary>
     [JsonPropertyName("providerID")]
     public string ProviderID { get; set; }
 

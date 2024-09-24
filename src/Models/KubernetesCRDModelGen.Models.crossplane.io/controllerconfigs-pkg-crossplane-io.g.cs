@@ -556,7 +556,7 @@ public partial class V1alpha1ControllerConfigSpecEnvValueFrom
     [JsonPropertyName("configMapKeyRef")]
     public V1alpha1ControllerConfigSpecEnvValueFromConfigMapKeyRef? ConfigMapKeyRef { get; set; }
 
-    /// <summary>Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['<KEY>']`, `metadata.annotations['<KEY>']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.</summary>
+    /// <summary>Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['&lt;KEY&gt;']`, `metadata.annotations['&lt;KEY&gt;']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.</summary>
     [JsonPropertyName("fieldRef")]
     public V1alpha1ControllerConfigSpecEnvValueFromFieldRef? FieldRef { get; set; }
 
@@ -759,7 +759,7 @@ public partial class V1alpha1ControllerConfigSpecPodSecurityContext
 
 public partial class V1alpha1ControllerConfigSpecPorts
 {
-    /// <summary>Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x < 65536.</summary>
+    /// <summary>Number of port to expose on the pod's IP address. This must be a valid port number, 0 &lt; x &lt; 65536.</summary>
     [JsonPropertyName("containerPort")]
     public int ContainerPort { get; set; }
 
@@ -767,7 +767,7 @@ public partial class V1alpha1ControllerConfigSpecPorts
     [JsonPropertyName("hostIP")]
     public string? HostIP { get; set; }
 
-    /// <summary>Number of port to expose on the host. If specified, this must be a valid port number, 0 < x < 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this.</summary>
+    /// <summary>Number of port to expose on the host. If specified, this must be a valid port number, 0 &lt; x &lt; 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this.</summary>
     [JsonPropertyName("hostPort")]
     public int? HostPort { get; set; }
 
@@ -915,7 +915,7 @@ public partial class V1alpha1ControllerConfigSpecSecurityContext
     [JsonPropertyName("seLinuxOptions")]
     public V1alpha1ControllerConfigSpecSecurityContextSeLinuxOptions? SeLinuxOptions { get; set; }
 
-    /// <summary>The seccomp options to use by this container. If seccomp options are provided at both the pod & container level, the container options override the pod options. Note that this field cannot be set when spec.os.name is windows.</summary>
+    /// <summary>The seccomp options to use by this container. If seccomp options are provided at both the pod &amp; container level, the container options override the pod options. Note that this field cannot be set when spec.os.name is windows.</summary>
     [JsonPropertyName("seccompProfile")]
     public V1alpha1ControllerConfigSpecSecurityContextSeccompProfile? SeccompProfile { get; set; }
 
@@ -1376,7 +1376,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesEphemeralVolumeClaimTemp
 
 public partial class V1alpha1ControllerConfigSpecVolumesEphemeral
 {
-    /// <summary>Will be used to create a stand-alone PVC to provision the volume. The pod in which this EphemeralVolumeSource is embedded will be the owner of the PVC, i.e. the PVC will be deleted together with the pod.  The name of the PVC will be `<pod name>-<volume name>` where `<volume name>` is the name from the `PodSpec.Volumes` array entry. Pod validation will reject the pod if the concatenated name is not valid for a PVC (for example, too long).   An existing PVC with that name that is not owned by the pod will *not* be used for the pod to avoid using an unrelated volume by mistake. Starting the pod is then blocked until the unrelated PVC is removed. If such a pre-created PVC is meant to be used by the pod, the PVC has to updated with an owner reference to the pod once the pod exists. Normally this should not be necessary, but it may be useful when manually reconstructing a broken cluster.   This field is read-only and no changes will be made by Kubernetes to the PVC after it has been created.   Required, must not be nil.</summary>
+    /// <summary>Will be used to create a stand-alone PVC to provision the volume. The pod in which this EphemeralVolumeSource is embedded will be the owner of the PVC, i.e. the PVC will be deleted together with the pod.  The name of the PVC will be `&lt;pod name&gt;-&lt;volume name&gt;` where `&lt;volume name&gt;` is the name from the `PodSpec.Volumes` array entry. Pod validation will reject the pod if the concatenated name is not valid for a PVC (for example, too long).   An existing PVC with that name that is not owned by the pod will *not* be used for the pod to avoid using an unrelated volume by mistake. Starting the pod is then blocked until the unrelated PVC is removed. If such a pre-created PVC is meant to be used by the pod, the PVC has to updated with an owner reference to the pod once the pod exists. Normally this should not be necessary, but it may be useful when manually reconstructing a broken cluster.   This field is read-only and no changes will be made by Kubernetes to the PVC after it has been created.   Required, must not be nil.</summary>
     [JsonPropertyName("volumeClaimTemplate")]
     public V1alpha1ControllerConfigSpecVolumesEphemeralVolumeClaimTemplate? VolumeClaimTemplate { get; set; }
 }
@@ -1436,7 +1436,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesFlexVolume
 
 public partial class V1alpha1ControllerConfigSpecVolumesFlocker
 {
-    /// <summary>datasetName is Name of the dataset stored as metadata -> name on the dataset for Flocker should be considered as deprecated</summary>
+    /// <summary>datasetName is Name of the dataset stored as metadata -&gt; name on the dataset for Flocker should be considered as deprecated</summary>
     [JsonPropertyName("datasetName")]
     public string? DatasetName { get; set; }
 
@@ -1526,7 +1526,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesIscsi
     [JsonPropertyName("fsType")]
     public string? FsType { get; set; }
 
-    /// <summary>initiatorName is the custom iSCSI Initiator Name. If initiatorName is specified with iscsiInterface simultaneously, new iSCSI interface <target portal>:<volume name> will be created for the connection.</summary>
+    /// <summary>initiatorName is the custom iSCSI Initiator Name. If initiatorName is specified with iscsiInterface simultaneously, new iSCSI interface &lt;target portal&gt;:&lt;volume name&gt; will be created for the connection.</summary>
     [JsonPropertyName("initiatorName")]
     public string? InitiatorName { get; set; }
 

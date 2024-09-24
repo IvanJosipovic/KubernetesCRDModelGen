@@ -441,7 +441,7 @@ public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKin
     [JsonPropertyName("encryptionConfig")]
     public IList<V1beta1InstanceStorageConfigSpecForProviderStorageConfigKinesisVideoStreamConfigEncryptionConfig>? EncryptionConfig { get; set; }
 
-    /// <summary>The prefix of the video stream. Minimum length of 1. Maximum length of 128. When read from the state, the value returned is <prefix>-connect-<connect_instance_alias>-contact- since the API appends additional details to the prefix.</summary>
+    /// <summary>The prefix of the video stream. Minimum length of 1. Maximum length of 128. When read from the state, the value returned is &lt;prefix&gt;-connect-&lt;connect_instance_alias&gt;-contact- since the API appends additional details to the prefix.</summary>
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 
@@ -1149,7 +1149,7 @@ public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKi
     [JsonPropertyName("encryptionConfig")]
     public IList<V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKinesisVideoStreamConfigEncryptionConfig>? EncryptionConfig { get; set; }
 
-    /// <summary>The prefix of the video stream. Minimum length of 1. Maximum length of 128. When read from the state, the value returned is <prefix>-connect-<connect_instance_alias>-contact- since the API appends additional details to the prefix.</summary>
+    /// <summary>The prefix of the video stream. Minimum length of 1. Maximum length of 128. When read from the state, the value returned is &lt;prefix&gt;-connect-&lt;connect_instance_alias&gt;-contact- since the API appends additional details to the prefix.</summary>
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 
@@ -1644,7 +1644,7 @@ public partial class V1beta1InstanceStorageConfigStatusAtProviderStorageConfigKi
     [JsonPropertyName("encryptionConfig")]
     public IList<V1beta1InstanceStorageConfigStatusAtProviderStorageConfigKinesisVideoStreamConfigEncryptionConfig>? EncryptionConfig { get; set; }
 
-    /// <summary>The prefix of the video stream. Minimum length of 1. Maximum length of 128. When read from the state, the value returned is <prefix>-connect-<connect_instance_alias>-contact- since the API appends additional details to the prefix.</summary>
+    /// <summary>The prefix of the video stream. Minimum length of 1. Maximum length of 128. When read from the state, the value returned is &lt;prefix&gt;-connect-&lt;connect_instance_alias&gt;-contact- since the API appends additional details to the prefix.</summary>
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 

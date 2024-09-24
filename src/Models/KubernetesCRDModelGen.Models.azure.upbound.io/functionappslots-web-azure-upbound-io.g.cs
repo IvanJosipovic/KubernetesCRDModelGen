@@ -893,7 +893,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderSiteConfig
     [JsonPropertyName("ipRestriction")]
     public IList<V1beta1FunctionAppSlotSpecForProviderSiteConfigIpRestriction>? IpRestriction { get; set; }
 
-    /// <summary>Java version hosted by the function app in Azure. Possible values are 1.8, 11 & 17 (In-Preview).</summary>
+    /// <summary>Java version hosted by the function app in Azure. Possible values are 1.8, 11 &amp; 17 (In-Preview).</summary>
     [JsonPropertyName("javaVersion")]
     public string? JavaVersion { get; set; }
 
@@ -1729,7 +1729,7 @@ public partial class V1beta1FunctionAppSlotSpecInitProviderSiteConfig
     [JsonPropertyName("ipRestriction")]
     public IList<V1beta1FunctionAppSlotSpecInitProviderSiteConfigIpRestriction>? IpRestriction { get; set; }
 
-    /// <summary>Java version hosted by the function app in Azure. Possible values are 1.8, 11 & 17 (In-Preview).</summary>
+    /// <summary>Java version hosted by the function app in Azure. Possible values are 1.8, 11 &amp; 17 (In-Preview).</summary>
     [JsonPropertyName("javaVersion")]
     public string? JavaVersion { get; set; }
 
@@ -2421,7 +2421,7 @@ public partial class V1beta1FunctionAppSlotStatusAtProviderSiteConfig
     [JsonPropertyName("ipRestriction")]
     public IList<V1beta1FunctionAppSlotStatusAtProviderSiteConfigIpRestriction>? IpRestriction { get; set; }
 
-    /// <summary>Java version hosted by the function app in Azure. Possible values are 1.8, 11 & 17 (In-Preview).</summary>
+    /// <summary>Java version hosted by the function app in Azure. Possible values are 1.8, 11 &amp; 17 (In-Preview).</summary>
     [JsonPropertyName("javaVersion")]
     public string? JavaVersion { get; set; }
 

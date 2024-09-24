@@ -20,11 +20,11 @@ public enum V1beta1NodePoolSpecDeletionPolicyEnum
 
 public partial class V1beta1NodePoolSpecForProviderAutoscaling
 {
-    /// <summary>Maximum number of nodes in the NodePool. Must be >= min_node_count.</summary>
+    /// <summary>Maximum number of nodes in the NodePool. Must be &gt;= min_node_count.</summary>
     [JsonPropertyName("maxNodeCount")]
     public double? MaxNodeCount { get; set; }
 
-    /// <summary>Minimum number of nodes in the NodePool. Must be >= 1 and <= max_node_count.</summary>
+    /// <summary>Minimum number of nodes in the NodePool. Must be &gt;= 1 and &lt;= max_node_count.</summary>
     [JsonPropertyName("minNodeCount")]
     public double? MinNodeCount { get; set; }
 }
@@ -331,11 +331,11 @@ public partial class V1beta1NodePoolSpecForProvider
 
 public partial class V1beta1NodePoolSpecInitProviderAutoscaling
 {
-    /// <summary>Maximum number of nodes in the NodePool. Must be >= min_node_count.</summary>
+    /// <summary>Maximum number of nodes in the NodePool. Must be &gt;= min_node_count.</summary>
     [JsonPropertyName("maxNodeCount")]
     public double? MaxNodeCount { get; set; }
 
-    /// <summary>Minimum number of nodes in the NodePool. Must be >= 1 and <= max_node_count.</summary>
+    /// <summary>Minimum number of nodes in the NodePool. Must be &gt;= 1 and &lt;= max_node_count.</summary>
     [JsonPropertyName("minNodeCount")]
     public double? MinNodeCount { get; set; }
 }
@@ -717,11 +717,11 @@ public partial class V1beta1NodePoolSpec
 
 public partial class V1beta1NodePoolStatusAtProviderAutoscaling
 {
-    /// <summary>Maximum number of nodes in the NodePool. Must be >= min_node_count.</summary>
+    /// <summary>Maximum number of nodes in the NodePool. Must be &gt;= min_node_count.</summary>
     [JsonPropertyName("maxNodeCount")]
     public double? MaxNodeCount { get; set; }
 
-    /// <summary>Minimum number of nodes in the NodePool. Must be >= 1 and <= max_node_count.</summary>
+    /// <summary>Minimum number of nodes in the NodePool. Must be &gt;= 1 and &lt;= max_node_count.</summary>
     [JsonPropertyName("minNodeCount")]
     public double? MinNodeCount { get; set; }
 }

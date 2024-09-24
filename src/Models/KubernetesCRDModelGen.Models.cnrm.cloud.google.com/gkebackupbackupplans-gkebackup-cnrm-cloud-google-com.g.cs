@@ -99,7 +99,7 @@ public partial class V1alpha1GKEBackupBackupPlanSpecRetentionPolicy
     [JsonPropertyName("backupDeleteLockDays")]
     public int? BackupDeleteLockDays { get; set; }
 
-    /// <summary>The default maximum age of a Backup created via this BackupPlan. This field MUST be an integer value >= 0 and <= 365. If specified, a Backup created under this BackupPlan will be automatically deleted after its age reaches (createTime + backupRetainDays). If not specified, Backups created under this BackupPlan will NOT be subject to automatic deletion. Updating this field does NOT affect existing Backups under it. Backups created AFTER a successful update will automatically pick up the new value. NOTE: backupRetainDays must be >= backupDeleteLockDays. If cronSchedule is defined, then this must be <= 360 * the creation interval.].</summary>
+    /// <summary>The default maximum age of a Backup created via this BackupPlan. This field MUST be an integer value &gt;= 0 and &lt;= 365. If specified, a Backup created under this BackupPlan will be automatically deleted after its age reaches (createTime + backupRetainDays). If not specified, Backups created under this BackupPlan will NOT be subject to automatic deletion. Updating this field does NOT affect existing Backups under it. Backups created AFTER a successful update will automatically pick up the new value. NOTE: backupRetainDays must be &gt;= backupDeleteLockDays. If cronSchedule is defined, then this must be &lt;= 360 * the creation interval.].</summary>
     [JsonPropertyName("backupRetainDays")]
     public int? BackupRetainDays { get; set; }
 

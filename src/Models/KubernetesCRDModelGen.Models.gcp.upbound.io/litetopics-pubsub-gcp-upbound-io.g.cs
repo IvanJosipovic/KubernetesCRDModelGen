@@ -20,11 +20,11 @@ public enum V1beta1LiteTopicSpecDeletionPolicyEnum
 
 public partial class V1beta1LiteTopicSpecForProviderPartitionConfigCapacity
 {
-    /// <summary>Subscribe throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.</summary>
+    /// <summary>Subscribe throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 16.</summary>
     [JsonPropertyName("publishMibPerSec")]
     public double? PublishMibPerSec { get; set; }
 
-    /// <summary>Publish throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.</summary>
+    /// <summary>Publish throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 16.</summary>
     [JsonPropertyName("subscribeMibPerSec")]
     public double? SubscribeMibPerSec { get; set; }
 }
@@ -187,11 +187,11 @@ public partial class V1beta1LiteTopicSpecForProvider
 
 public partial class V1beta1LiteTopicSpecInitProviderPartitionConfigCapacity
 {
-    /// <summary>Subscribe throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.</summary>
+    /// <summary>Subscribe throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 16.</summary>
     [JsonPropertyName("publishMibPerSec")]
     public double? PublishMibPerSec { get; set; }
 
-    /// <summary>Publish throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.</summary>
+    /// <summary>Publish throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 16.</summary>
     [JsonPropertyName("subscribeMibPerSec")]
     public double? SubscribeMibPerSec { get; set; }
 }
@@ -533,11 +533,11 @@ public partial class V1beta1LiteTopicSpec
 
 public partial class V1beta1LiteTopicStatusAtProviderPartitionConfigCapacity
 {
-    /// <summary>Subscribe throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.</summary>
+    /// <summary>Subscribe throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 16.</summary>
     [JsonPropertyName("publishMibPerSec")]
     public double? PublishMibPerSec { get; set; }
 
-    /// <summary>Publish throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.</summary>
+    /// <summary>Publish throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 16.</summary>
     [JsonPropertyName("subscribeMibPerSec")]
     public double? SubscribeMibPerSec { get; set; }
 }

@@ -90,7 +90,7 @@ public partial class V1alpha1DialogflowEntityTypeStatus
     [JsonPropertyName("conditions")]
     public IList<V1alpha1DialogflowEntityTypeStatusConditions>? Conditions { get; set; }
 
-    /// <summary>The unique identifier of the entity type. Format: projects/<Project ID>/agent/entityTypes/<Entity type ID>.</summary>
+    /// <summary>The unique identifier of the entity type. Format: projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity type ID&gt;.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 

@@ -39,7 +39,7 @@ public partial class V1beta1EdgeContainerClusterSpecAuthorization
 
 public partial class V1beta1EdgeContainerClusterSpecControlPlaneLocal
 {
-    /// <summary>Only machines matching this filter will be allowed to host control plane nodes. The filtering language accepts strings like "name=<name>", and is documented here: [AIP-160](https://google.aip.dev/160).</summary>
+    /// <summary>Only machines matching this filter will be allowed to host control plane nodes. The filtering language accepts strings like "name=&lt;name&gt;", and is documented here: [AIP-160](https://google.aip.dev/160).</summary>
     [JsonPropertyName("machineFilter")]
     public string? MachineFilter { get; set; }
 
@@ -136,7 +136,7 @@ public partial class V1beta1EdgeContainerClusterSpecFleetProjectRef
 
 public partial class V1beta1EdgeContainerClusterSpecFleet
 {
-    /// <summary>The name of the managed Hub Membership resource associated to this cluster. Membership names are formatted as 'projects/<project-number>/locations/global/membership/<cluster-id>'.</summary>
+    /// <summary>The name of the managed Hub Membership resource associated to this cluster. Membership names are formatted as 'projects/&lt;project-number&gt;/locations/global/membership/&lt;cluster-id&gt;'.</summary>
     [JsonPropertyName("membership")]
     public string? Membership { get; set; }
 

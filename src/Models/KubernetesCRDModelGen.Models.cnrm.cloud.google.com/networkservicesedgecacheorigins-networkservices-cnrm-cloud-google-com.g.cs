@@ -142,7 +142,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginSpec
     [JsonPropertyName("projectRef")]
     public V1alpha1NetworkServicesEdgeCacheOriginSpecProjectRef ProjectRef { get; set; }
 
-    /// <summary>The protocol to use to connect to the configured origin. Defaults to HTTP2, and it is strongly recommended that users use HTTP2 for both security & performance.  When using HTTP2 or HTTPS as the protocol, a valid, publicly-signed, unexpired TLS (SSL) certificate must be presented by the origin server. Possible values: ["HTTP2", "HTTPS", "HTTP"].</summary>
+    /// <summary>The protocol to use to connect to the configured origin. Defaults to HTTP2, and it is strongly recommended that users use HTTP2 for both security &amp; performance.  When using HTTP2 or HTTPS as the protocol, a valid, publicly-signed, unexpired TLS (SSL) certificate must be presented by the origin server. Possible values: ["HTTP2", "HTTPS", "HTTP"].</summary>
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 

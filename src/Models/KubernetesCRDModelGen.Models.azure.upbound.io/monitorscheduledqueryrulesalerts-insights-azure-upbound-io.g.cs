@@ -361,7 +361,7 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertSpecForProvider
     [JsonPropertyName("authorizedResourceIds")]
     public IList<string>? AuthorizedResourceIds { get; set; }
 
-    /// <summary>Should the alerts in this Metric Alert be auto resolved? Defaults to false. -> NOTE auto_mitigation_enabled and throttling are mutually exclusive and cannot both be set.</summary>
+    /// <summary>Should the alerts in this Metric Alert be auto resolved? Defaults to false. -&gt; NOTE auto_mitigation_enabled and throttling are mutually exclusive and cannot both be set.</summary>
     [JsonPropertyName("autoMitigationEnabled")]
     public bool? AutoMitigationEnabled { get; set; }
 
@@ -781,7 +781,7 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertSpecInitProvider
     [JsonPropertyName("authorizedResourceIds")]
     public IList<string>? AuthorizedResourceIds { get; set; }
 
-    /// <summary>Should the alerts in this Metric Alert be auto resolved? Defaults to false. -> NOTE auto_mitigation_enabled and throttling are mutually exclusive and cannot both be set.</summary>
+    /// <summary>Should the alerts in this Metric Alert be auto resolved? Defaults to false. -&gt; NOTE auto_mitigation_enabled and throttling are mutually exclusive and cannot both be set.</summary>
     [JsonPropertyName("autoMitigationEnabled")]
     public bool? AutoMitigationEnabled { get; set; }
 
@@ -1100,7 +1100,7 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertStatusAtProvider
     [JsonPropertyName("authorizedResourceIds")]
     public IList<string>? AuthorizedResourceIds { get; set; }
 
-    /// <summary>Should the alerts in this Metric Alert be auto resolved? Defaults to false. -> NOTE auto_mitigation_enabled and throttling are mutually exclusive and cannot both be set.</summary>
+    /// <summary>Should the alerts in this Metric Alert be auto resolved? Defaults to false. -&gt; NOTE auto_mitigation_enabled and throttling are mutually exclusive and cannot both be set.</summary>
     [JsonPropertyName("autoMitigationEnabled")]
     public bool? AutoMitigationEnabled { get; set; }
 

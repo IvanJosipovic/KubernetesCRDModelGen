@@ -243,7 +243,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionResponseHeade
 
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRetryPolicy
 {
-    /// <summary>Specifies the allowed number of retries. This number must be > 0. If not specified, default to 1.</summary>
+    /// <summary>Specifies the allowed number of retries. This number must be &gt; 0. If not specified, default to 1.</summary>
     [JsonPropertyName("numRetries")]
     public long? NumRetries { get; set; }
 

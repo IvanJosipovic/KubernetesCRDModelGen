@@ -116,7 +116,7 @@ public partial class V1beta1ManagedDiskSASTokenSpecForProvider
     [JsonPropertyName("accessLevel")]
     public string? AccessLevel { get; set; }
 
-    /// <summary>The duration for which the export should be allowed. Should be between 30 & 4294967295 seconds. Changing this forces a new resource to be created.</summary>
+    /// <summary>The duration for which the export should be allowed. Should be between 30 &amp; 4294967295 seconds. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("durationInSeconds")]
     public double? DurationInSeconds { get; set; }
 
@@ -231,7 +231,7 @@ public partial class V1beta1ManagedDiskSASTokenSpecInitProvider
     [JsonPropertyName("accessLevel")]
     public string? AccessLevel { get; set; }
 
-    /// <summary>The duration for which the export should be allowed. Should be between 30 & 4294967295 seconds. Changing this forces a new resource to be created.</summary>
+    /// <summary>The duration for which the export should be allowed. Should be between 30 &amp; 4294967295 seconds. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("durationInSeconds")]
     public double? DurationInSeconds { get; set; }
 
@@ -437,7 +437,7 @@ public partial class V1beta1ManagedDiskSASTokenStatusAtProvider
     [JsonPropertyName("accessLevel")]
     public string? AccessLevel { get; set; }
 
-    /// <summary>The duration for which the export should be allowed. Should be between 30 & 4294967295 seconds. Changing this forces a new resource to be created.</summary>
+    /// <summary>The duration for which the export should be allowed. Should be between 30 &amp; 4294967295 seconds. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("durationInSeconds")]
     public double? DurationInSeconds { get; set; }
 

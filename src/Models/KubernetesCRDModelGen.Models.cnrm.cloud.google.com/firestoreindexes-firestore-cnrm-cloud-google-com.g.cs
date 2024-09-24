@@ -18,7 +18,7 @@ public partial class V1beta1FirestoreIndexSpecFields
     [JsonPropertyName("fieldPath")]
     public string? FieldPath { get; set; }
 
-    /// <summary>Immutable. Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=. Only one of 'order' and 'arrayConfig' can be specified. Possible values: ["ASCENDING", "DESCENDING"].</summary>
+    /// <summary>Immutable. Indicates that this field supports ordering by the specified order or comparing using =, &lt;, &lt;=, &gt;, &gt;=. Only one of 'order' and 'arrayConfig' can be specified. Possible values: ["ASCENDING", "DESCENDING"].</summary>
     [JsonPropertyName("order")]
     public string? Order { get; set; }
 }

@@ -389,7 +389,7 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInst
     [JsonPropertyName("burstablePerformance")]
     public string? BurstablePerformance { get; set; }
 
-    /// <summary>The CPU manufacturers to include. Default is any manufacturer. ~> NOTE: Don't confuse the CPU hardware manufacturer with the CPU hardware architecture. Instances will be launched with a compatible CPU architecture based on the Amazon Machine Image (AMI) that you specify in your launch template.</summary>
+    /// <summary>The CPU manufacturers to include. Default is any manufacturer. ~&gt; NOTE: Don't confuse the CPU hardware manufacturer with the CPU hardware architecture. Instances will be launched with a compatible CPU architecture based on the Amazon Machine Image (AMI) that you specify in your launch template.</summary>
     [JsonPropertyName("cpuManufacturers")]
     public IList<string>? CpuManufacturers { get; set; }
 
@@ -1032,7 +1032,7 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideIns
     [JsonPropertyName("burstablePerformance")]
     public string? BurstablePerformance { get; set; }
 
-    /// <summary>The CPU manufacturers to include. Default is any manufacturer. ~> NOTE: Don't confuse the CPU hardware manufacturer with the CPU hardware architecture. Instances will be launched with a compatible CPU architecture based on the Amazon Machine Image (AMI) that you specify in your launch template.</summary>
+    /// <summary>The CPU manufacturers to include. Default is any manufacturer. ~&gt; NOTE: Don't confuse the CPU hardware manufacturer with the CPU hardware architecture. Instances will be launched with a compatible CPU architecture based on the Amazon Machine Image (AMI) that you specify in your launch template.</summary>
     [JsonPropertyName("cpuManufacturers")]
     public IList<string>? CpuManufacturers { get; set; }
 
@@ -1654,7 +1654,7 @@ public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideIns
     [JsonPropertyName("burstablePerformance")]
     public string? BurstablePerformance { get; set; }
 
-    /// <summary>The CPU manufacturers to include. Default is any manufacturer. ~> NOTE: Don't confuse the CPU hardware manufacturer with the CPU hardware architecture. Instances will be launched with a compatible CPU architecture based on the Amazon Machine Image (AMI) that you specify in your launch template.</summary>
+    /// <summary>The CPU manufacturers to include. Default is any manufacturer. ~&gt; NOTE: Don't confuse the CPU hardware manufacturer with the CPU hardware architecture. Instances will be launched with a compatible CPU architecture based on the Amazon Machine Image (AMI) that you specify in your launch template.</summary>
     [JsonPropertyName("cpuManufacturers")]
     public IList<string>? CpuManufacturers { get; set; }
 

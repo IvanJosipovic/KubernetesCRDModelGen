@@ -124,7 +124,7 @@ public partial class V1beta1SecretSpecForProvider
     [JsonPropertyName("versionAliases")]
     public IDictionary<string, string>? VersionAliases { get; set; }
 
-    /// <summary>Secret Version TTL after destruction request. This is a part of the delayed delete feature on Secret Version. For secret with versionDestroyTtl>0, version destruction doesn't happen immediately on calling destroy instead the version goes to a disabled state and the actual destruction happens after this TTL expires.</summary>
+    /// <summary>Secret Version TTL after destruction request. This is a part of the delayed delete feature on Secret Version. For secret with versionDestroyTtl&gt;0, version destruction doesn't happen immediately on calling destroy instead the version goes to a disabled state and the actual destruction happens after this TTL expires.</summary>
     [JsonPropertyName("versionDestroyTtl")]
     public string? VersionDestroyTtl { get; set; }
 }
@@ -235,7 +235,7 @@ public partial class V1beta1SecretSpecInitProvider
     [JsonPropertyName("versionAliases")]
     public IDictionary<string, string>? VersionAliases { get; set; }
 
-    /// <summary>Secret Version TTL after destruction request. This is a part of the delayed delete feature on Secret Version. For secret with versionDestroyTtl>0, version destruction doesn't happen immediately on calling destroy instead the version goes to a disabled state and the actual destruction happens after this TTL expires.</summary>
+    /// <summary>Secret Version TTL after destruction request. This is a part of the delayed delete feature on Secret Version. For secret with versionDestroyTtl&gt;0, version destruction doesn't happen immediately on calling destroy instead the version goes to a disabled state and the actual destruction happens after this TTL expires.</summary>
     [JsonPropertyName("versionDestroyTtl")]
     public string? VersionDestroyTtl { get; set; }
 }
@@ -553,7 +553,7 @@ public partial class V1beta1SecretStatusAtProvider
     [JsonPropertyName("versionAliases")]
     public IDictionary<string, string>? VersionAliases { get; set; }
 
-    /// <summary>Secret Version TTL after destruction request. This is a part of the delayed delete feature on Secret Version. For secret with versionDestroyTtl>0, version destruction doesn't happen immediately on calling destroy instead the version goes to a disabled state and the actual destruction happens after this TTL expires.</summary>
+    /// <summary>Secret Version TTL after destruction request. This is a part of the delayed delete feature on Secret Version. For secret with versionDestroyTtl&gt;0, version destruction doesn't happen immediately on calling destroy instead the version goes to a disabled state and the actual destruction happens after this TTL expires.</summary>
     [JsonPropertyName("versionDestroyTtl")]
     public string? VersionDestroyTtl { get; set; }
 }

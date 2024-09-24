@@ -236,7 +236,7 @@ public partial class V1beta1BucketSpecForProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>The bucket's Access & Storage Logs configuration. Structure is documented below.</summary>
+    /// <summary>The bucket's Access &amp; Storage Logs configuration. Structure is documented below.</summary>
     [JsonPropertyName("logging")]
     public IList<V1beta1BucketSpecForProviderLogging>? Logging { get; set; }
 
@@ -499,7 +499,7 @@ public partial class V1beta1BucketSpecInitProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>The bucket's Access & Storage Logs configuration. Structure is documented below.</summary>
+    /// <summary>The bucket's Access &amp; Storage Logs configuration. Structure is documented below.</summary>
     [JsonPropertyName("logging")]
     public IList<V1beta1BucketSpecInitProviderLogging>? Logging { get; set; }
 
@@ -957,7 +957,7 @@ public partial class V1beta1BucketStatusAtProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>The bucket's Access & Storage Logs configuration. Structure is documented below.</summary>
+    /// <summary>The bucket's Access &amp; Storage Logs configuration. Structure is documented below.</summary>
     [JsonPropertyName("logging")]
     public IList<V1beta1BucketStatusAtProviderLogging>? Logging { get; set; }
 
@@ -1005,7 +1005,7 @@ public partial class V1beta1BucketStatusAtProvider
     [JsonPropertyName("uniformBucketLevelAccess")]
     public bool? UniformBucketLevelAccess { get; set; }
 
-    /// <summary>The base URL of the bucket, in the format gs://<bucket-name>.</summary>
+    /// <summary>The base URL of the bucket, in the format gs://&lt;bucket-name&gt;.</summary>
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 

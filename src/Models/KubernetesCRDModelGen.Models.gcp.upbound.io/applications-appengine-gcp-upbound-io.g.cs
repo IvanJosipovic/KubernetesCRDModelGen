@@ -169,7 +169,7 @@ public partial class V1beta1ApplicationSpecForProvider
     [JsonPropertyName("locationId")]
     public string? LocationId { get; set; }
 
-    /// <summary>The project ID to create the application under. ~>NOTE: GCP only accepts project ID, not project number. If you are using number, you may get a "Permission denied" error.</summary>
+    /// <summary>The project ID to create the application under. ~&gt;NOTE: GCP only accepts project ID, not project number. If you are using number, you may get a "Permission denied" error.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 
@@ -318,7 +318,7 @@ public partial class V1beta1ApplicationSpecInitProvider
     [JsonPropertyName("locationId")]
     public string? LocationId { get; set; }
 
-    /// <summary>The project ID to create the application under. ~>NOTE: GCP only accepts project ID, not project number. If you are using number, you may get a "Permission denied" error.</summary>
+    /// <summary>The project ID to create the application under. ~&gt;NOTE: GCP only accepts project ID, not project number. If you are using number, you may get a "Permission denied" error.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 
@@ -601,7 +601,7 @@ public partial class V1beta1ApplicationStatusAtProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The project ID to create the application under. ~>NOTE: GCP only accepts project ID, not project number. If you are using number, you may get a "Permission denied" error.</summary>
+    /// <summary>The project ID to create the application under. ~&gt;NOTE: GCP only accepts project ID, not project number. If you are using number, you may get a "Permission denied" error.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 

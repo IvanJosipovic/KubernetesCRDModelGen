@@ -21,7 +21,7 @@ public partial class V1IPAMBlockSpecAttributes
 
 public partial class V1IPAMBlockSpec
 {
-    /// <summary>Affinity of the block, if this block has one. If set, it will be of the form "host:<hostname>". If not set, this block is not affine to a host.</summary>
+    /// <summary>Affinity of the block, if this block has one. If set, it will be of the form "host:&lt;hostname&gt;". If not set, this block is not affine to a host.</summary>
     [JsonPropertyName("affinity")]
     public string? Affinity { get; set; }
 

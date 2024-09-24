@@ -543,7 +543,7 @@ public partial class V1beta1ForwardingRuleSpecForProvider
     [JsonPropertyName("isMirroringCollector")]
     public bool? IsMirroringCollector { get; set; }
 
-    /// <summary>Labels to apply to this forwarding rule.  A list of key->value pairs.</summary>
+    /// <summary>Labels to apply to this forwarding rule.  A list of key-&gt;value pairs.</summary>
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 
@@ -1153,7 +1153,7 @@ public partial class V1beta1ForwardingRuleSpecInitProvider
     [JsonPropertyName("isMirroringCollector")]
     public bool? IsMirroringCollector { get; set; }
 
-    /// <summary>Labels to apply to this forwarding rule.  A list of key->value pairs.</summary>
+    /// <summary>Labels to apply to this forwarding rule.  A list of key-&gt;value pairs.</summary>
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 
@@ -1486,7 +1486,7 @@ public partial class V1beta1ForwardingRuleStatusAtProvider
     [JsonPropertyName("labelFingerprint")]
     public string? LabelFingerprint { get; set; }
 
-    /// <summary>Labels to apply to this forwarding rule.  A list of key->value pairs.</summary>
+    /// <summary>Labels to apply to this forwarding rule.  A list of key-&gt;value pairs.</summary>
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 

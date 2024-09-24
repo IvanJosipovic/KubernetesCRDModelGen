@@ -332,7 +332,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
 
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesPkgDeb
 {
-    /// <summary>Whether dependencies should also be installed. - install when false: `dpkg -i package` - install when true: `apt-get update && apt-get -y install package.deb`</summary>
+    /// <summary>Whether dependencies should also be installed. - install when false: `dpkg -i package` - install when true: `apt-get update &amp;&amp; apt-get -y install package.deb`</summary>
     [JsonPropertyName("pullDeps")]
     public bool? PullDeps { get; set; }
 

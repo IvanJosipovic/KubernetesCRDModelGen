@@ -112,7 +112,7 @@ public partial class V1beta1AccountSpecForProviderCloudwatchRoleArnSelector
 
 public partial class V1beta1AccountSpecForProvider
 {
-    /// <summary>ARN of an IAM role for CloudWatch (to allow logging & monitoring). See more in AWS Docs. Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.</summary>
+    /// <summary>ARN of an IAM role for CloudWatch (to allow logging &amp; monitoring). See more in AWS Docs. Logging &amp; monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.</summary>
     [JsonPropertyName("cloudwatchRoleArn")]
     public string? CloudwatchRoleArn { get; set; }
 
@@ -223,7 +223,7 @@ public partial class V1beta1AccountSpecInitProviderCloudwatchRoleArnSelector
 
 public partial class V1beta1AccountSpecInitProvider
 {
-    /// <summary>ARN of an IAM role for CloudWatch (to allow logging & monitoring). See more in AWS Docs. Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.</summary>
+    /// <summary>ARN of an IAM role for CloudWatch (to allow logging &amp; monitoring). See more in AWS Docs. Logging &amp; monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.</summary>
     [JsonPropertyName("cloudwatchRoleArn")]
     public string? CloudwatchRoleArn { get; set; }
 
@@ -436,7 +436,7 @@ public partial class V1beta1AccountStatusAtProvider
     [JsonPropertyName("apiKeyVersion")]
     public string? ApiKeyVersion { get; set; }
 
-    /// <summary>ARN of an IAM role for CloudWatch (to allow logging & monitoring). See more in AWS Docs. Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.</summary>
+    /// <summary>ARN of an IAM role for CloudWatch (to allow logging &amp; monitoring). See more in AWS Docs. Logging &amp; monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.</summary>
     [JsonPropertyName("cloudwatchRoleArn")]
     public string? CloudwatchRoleArn { get; set; }
 

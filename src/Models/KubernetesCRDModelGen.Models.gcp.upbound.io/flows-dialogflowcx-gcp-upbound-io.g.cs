@@ -554,7 +554,7 @@ public partial class V1beta1FlowSpecForProviderTransitionRoutes
 
 public partial class V1beta1FlowSpecForProvider
 {
-    /// <summary>Hierarchical advanced settings for this flow. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent->Flow->Page->Fulfillment/Parameter. Structure is documented below.</summary>
+    /// <summary>Hierarchical advanced settings for this flow. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent-&gt;Flow-&gt;Page-&gt;Fulfillment/Parameter. Structure is documented below.</summary>
     [JsonPropertyName("advancedSettings")]
     public IList<V1beta1FlowSpecForProviderAdvancedSettings>? AdvancedSettings { get; set; }
 
@@ -1139,7 +1139,7 @@ public partial class V1beta1FlowSpecInitProviderTransitionRoutes
 
 public partial class V1beta1FlowSpecInitProvider
 {
-    /// <summary>Hierarchical advanced settings for this flow. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent->Flow->Page->Fulfillment/Parameter. Structure is documented below.</summary>
+    /// <summary>Hierarchical advanced settings for this flow. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent-&gt;Flow-&gt;Page-&gt;Fulfillment/Parameter. Structure is documented below.</summary>
     [JsonPropertyName("advancedSettings")]
     public IList<V1beta1FlowSpecInitProviderAdvancedSettings>? AdvancedSettings { get; set; }
 
@@ -1747,7 +1747,7 @@ public partial class V1beta1FlowStatusAtProviderTransitionRoutes
 
 public partial class V1beta1FlowStatusAtProvider
 {
-    /// <summary>Hierarchical advanced settings for this flow. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent->Flow->Page->Fulfillment/Parameter. Structure is documented below.</summary>
+    /// <summary>Hierarchical advanced settings for this flow. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent-&gt;Flow-&gt;Page-&gt;Fulfillment/Parameter. Structure is documented below.</summary>
     [JsonPropertyName("advancedSettings")]
     public IList<V1beta1FlowStatusAtProviderAdvancedSettings>? AdvancedSettings { get; set; }
 

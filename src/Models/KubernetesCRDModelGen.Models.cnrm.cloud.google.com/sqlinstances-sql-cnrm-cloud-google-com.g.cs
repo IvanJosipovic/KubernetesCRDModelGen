@@ -317,7 +317,7 @@ public partial class V1beta1SQLInstanceSpecSettingsIpConfigurationAuthorizedNetw
 
 public partial class V1beta1SQLInstanceSpecSettingsIpConfigurationPrivateNetworkRef
 {
-    /// <summary>A reference to an externally managed Compute Network resource. Should be in the format `projects/<projectID>/global/networks/<network>`.</summary>
+    /// <summary>A reference to an externally managed Compute Network resource. Should be in the format `projects/&lt;projectID&gt;/global/networks/&lt;network&gt;`.</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
