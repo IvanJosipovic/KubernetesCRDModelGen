@@ -577,14 +577,8 @@ public class Generator : IGenerator
             references.Add(ass);
         }
 
-        references.AddRange(Basic.Reference.Assemblies.Net80.References.All);
-
-        var dupe = references.Where(x => x.Display == "System.Text.Json (net80)").First();
-
-        if (dupe != null)
-        {
-            references.Remove(dupe);
-        }
+        references.Add(Basic.Reference.Assemblies.Net80.References.SystemRuntime);
+        references.Add(Basic.Reference.Assemblies.Net80.References.SystemRuntimeSerializationPrimitives);
 
         return [.. references];
     }
