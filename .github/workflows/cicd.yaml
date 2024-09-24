@@ -61,7 +61,7 @@ jobs:
         $projects = Get-ChildItem -Path $PWD\src\Models -Recurse -Filter *.csproj
         foreach($project in $projects){
 
-          dotnet run --project src\KubernetesCRDModelGen.Tool\KubernetesCRDModelGen.Tool.csproj --FolderPath $($project.FullName)
+          dotnet run --project src\KubernetesCRDModelGen.Tool\KubernetesCRDModelGen.Tool.csproj --FolderPath $($project.Directory)
           if (-not $?) {
             throw "CRD Generation Failed"
           }
