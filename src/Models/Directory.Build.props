@@ -1,34 +1,40 @@
 <Project>
-	<PropertyGroup>
-		<TargetFrameworks>netstandard2.0;net8.0</TargetFrameworks>
-		<Authors>Ivan Josipovic</Authors>
-		<Description>Kubernetes Custom Resource Definition Models</Description>
-		<PackageTags>Kubernetes Custom Resource Definition Models</PackageTags>
-		<ImplicitUsings>enable</ImplicitUsings>
-		<Nullable>enable</Nullable>
-		<LangVersion>latest</LangVersion>
-		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-		<RepositoryUrl>https://github.com/IvanJosipovic/KubernetesCRDModelGen</RepositoryUrl>
-		<RepositoryType>git</RepositoryType>
-		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<PublishRepositoryUrl>true</PublishRepositoryUrl>
-		<IncludeSymbols>true</IncludeSymbols>
-		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
-		<IsPackable>true</IsPackable>
-		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-		<NoWarn>1591,8669</NoWarn>
-		<WarningsAsErrors>CS8785,CS8604</WarningsAsErrors>
-		<!--<EmitCompilerGeneratedFiles Condition="'$(Configuration)' == 'Debug'">true</EmitCompilerGeneratedFiles>
+    <PropertyGroup>
+        <TargetFrameworks>netstandard2.0;net8.0</TargetFrameworks>
+        <Authors>Ivan Josipovic</Authors>
+        <Description>Kubernetes Custom Resource Definition Models</Description>
+        <PackageTags>Kubernetes Custom Resource Definition Models</PackageTags>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <LangVersion>latest</LangVersion>
+        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+        <RepositoryUrl>https://github.com/IvanJosipovic/KubernetesCRDModelGen</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <IsPackable>true</IsPackable>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <NoWarn>1591,8669</NoWarn>
+        <WarningsAsErrors>CS8785,CS8604</WarningsAsErrors>
+        <!--<EmitCompilerGeneratedFiles Condition="'$(Configuration)' == 'Debug'">true</EmitCompilerGeneratedFiles>
         <CompilerGeneratedFilesOutputPath Condition="'$(Configuration)' == 'Debug'">Generated</CompilerGeneratedFilesOutputPath>-->
-		<RestoreAdditionalProjectSources>
-			./../../KubernetesCRDModelGen.SourceGenerator/bin/Release;
-			./../../KubernetesCRDModelGen/bin/Release;
-			./../../KubernetesCRDModelGen.Models/bin/Release;
-		</RestoreAdditionalProjectSources>
-	</PropertyGroup>
-	<ItemGroup>
-		<PackageReference Include="KubernetesCRDModelGen.SourceGenerator" Version="{{Version}}" OutputItemType="Analyzer" ReferenceOutputAssembly="false" PrivateAssets="all" />
-		<PackageReference Include="KubernetesCRDModelGen.Models" Version="{{Version}}"/>
-		<AdditionalFiles Include="*.yaml" />
-	</ItemGroup>
+    </PropertyGroup>
+    <Choose>
+        <When Condition="'$(TargetFramework)' == 'netstandard2.0'">
+            <ItemGroup>
+                <PackageReference Include="KubernetesClient.Classic" Version="15.0.1" />
+            </ItemGroup>
+        </When>
+        <Otherwise>
+            <ItemGroup>
+                <PackageReference Include="KubernetesClient" Version="15.0.1" />
+            </ItemGroup>
+        </Otherwise>
+    </Choose>
+
+    <ItemGroup>
+        <PackageReference Include="System.Text.Json" Version="9.0.0-rc.1.24431.7" />
+    </ItemGroup>
 </Project>

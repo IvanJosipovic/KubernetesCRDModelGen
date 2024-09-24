@@ -60,10 +60,16 @@ jobs:
         (Get-Content src\Models\Directory.Build.props).Replace('{{Version}}', '${{ (steps.semantic.outputs.new_release_published && steps.semantic.outputs.new_release_version) || '1.0.0' }}') | Set-Content src\Models\Directory.Build.props
         $projects = Get-ChildItem -Path $PWD\src\Models -Recurse -Filter *.csproj
         foreach($project in $projects){
+
+          dotnet run --project src\KubernetesCRDModelGen.Tool --FolderPath $($project.FullName)
+          if (-not $?) {
+            throw "CRD Generation Failed"
+          }
+
           dotnet pack -c Release -p:Version=${{ (steps.semantic.outputs.new_release_published && steps.semantic.outputs.new_release_version) || '1.0.0' }} $($project.FullName)
-            if (-not $?) {
-                throw "CRD Generation Failed"
-            }
+          if (-not $?) {
+            throw "Pack Failed"
+          }
         }
 
     - name: Semantic Release
@@ -77,7 +83,7 @@ jobs:
 
     - name: .NET NuGet Push
       if: steps.semantic.outputs.new_release_published == 'true'
-      run: dotnet nuget push src/**/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }} --skip-duplicate
+      run: dotnet nuget push src/**/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
 
     - uses: actions/upload-artifact@v4
       with:

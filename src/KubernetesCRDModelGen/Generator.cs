@@ -577,11 +577,7 @@ public class Generator : IGenerator
             references.Add(ass);
         }
 
-#if NETSTANDARD2_0
-        references.AddRange(Basic.Reference.Assemblies.NetStandard20.References.All);
-#else
         references.AddRange(Basic.Reference.Assemblies.Net80.References.All);
-#endif
 
         var dupe = references.Where(x => x.Display == "System.Text.Json (net80)").First();
 

@@ -32,6 +32,18 @@ jobs:
       - name: Sync CRDs
         run: dotnet run --project ./src/KubernetesCRDModelGen.Sync/KubernetesCRDModelGen.Sync.csproj --ModelDir ../Models
 
+      - name: Build Model packages
+        shell: pwsh
+        run: |
+          $projects = Get-ChildItem -Path $PWD\src\Models -Recurse -Filter *.csproj
+          foreach($project in $projects){
+
+            dotnet run --project src\KubernetesCRDModelGen.Tool --FolderPath $($project.FullName)
+            if (-not $?) {
+              throw "CRD Generation Failed"
+            }
+          }
+
       - name: Validate Yamls
         working-directory: src/Models
         shell: pwsh

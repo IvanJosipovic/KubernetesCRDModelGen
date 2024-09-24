@@ -8,7 +8,7 @@ This project contains components which allow generation of C# Classes/Assemblies
 
 - KubernetesCRDModelGen
   - Custom Resource Definition to C# Class/Assembly Generator
-- KubernetesCRDModelGen.SourceGenerator
+- KubernetesCRDModelGen.Tool
   - Yaml to C# Source Generator
 - KubernetesCRDModelGen.Sync
   - Synchronizes Custom Resource Definitions from numerous sources
@@ -63,28 +63,3 @@ We publish the following premade packages
 | 'string' with format=date | ~~timestamp (google.protobuf.Timestamp)~~ |
 | 'string' with format=date-time | ~~timestamp (google.protobuf.Timestamp)~~ |
 | 'string' with format=duration | ~~duration (google.protobuf.Duration)~~ |
-
-
-## How to use the Source Generator
-Create a C# Class Library Project and add some CRD yaml files to the project.
-Update the .csproj with the following settings. The Models will be generated in the "KubernetesCRDModelGen.Models.{CRD Group Name}" namespace.
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net6.0;net7.0;net8.0</TargetFrameworks>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <LangVersion>latest</LangVersion>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="KubernetesCRDModelGen.SourceGenerator" Version="1.0.0-0" OutputItemType="Analyzer" ReferenceOutputAssembly="false" PrivateAssets="all" />
-    <PackageReference Include="KubernetesCRDModelGen.Models" Version="1.0.0-0"/>
-    <AdditionalFiles Include="*.yaml" />
-  </ItemGroup>
-
-</Project>
-```
- 
