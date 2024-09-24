@@ -1,0 +1,606 @@
+using k8s;
+using k8s.Models;
+using System;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+using System.Text.Json;
+using System.Text.Json.Nodes;
+using System.Text.Json.Serialization;
+
+namespace KubernetesCRDModelGen.Models.operationalinsights.azure.upbound.io;
+public enum V1beta1WorkspaceSpecDeletionPolicyEnum
+{
+    [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
+    /// <summary>Orphan</summary>
+    Orphan,
+    [EnumMember(Value = "Delete"), JsonStringEnumMemberName("Delete")]
+    /// <summary>Delete</summary>
+    Delete
+}
+
+public partial class V1beta1WorkspaceSpecForProviderIdentity
+{
+    /// <summary>Specifies a list of user managed identity ids to be assigned. Required if type is UserAssigned.</summary>
+    [JsonPropertyName("identityIds")]
+    public IList<string>? IdentityIds { get; set; }
+
+    /// <summary>Specifies the identity type of the Log Analytics Workspace. Possible values are SystemAssigned (where Azure will generate a Service Principal for you) and UserAssigned where you can specify the Service Principal IDs in the identity_ids field.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
+public enum V1beta1WorkspaceSpecForProviderResourceGroupNameRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1WorkspaceSpecForProviderResourceGroupNameRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1WorkspaceSpecForProviderResourceGroupNameRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1WorkspaceSpecForProviderResourceGroupNameRefPolicyResolutionEnum>))]
+    public V1beta1WorkspaceSpecForProviderResourceGroupNameRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1WorkspaceSpecForProviderResourceGroupNameRefPolicyResolveEnum>))]
+    public V1beta1WorkspaceSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1WorkspaceSpecForProviderResourceGroupNameRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1WorkspaceSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
+}
+
+public enum V1beta1WorkspaceSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1WorkspaceSpecForProviderResourceGroupNameSelectorPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1WorkspaceSpecForProviderResourceGroupNameSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1WorkspaceSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum>))]
+    public V1beta1WorkspaceSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1WorkspaceSpecForProviderResourceGroupNameSelectorPolicyResolveEnum>))]
+    public V1beta1WorkspaceSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1WorkspaceSpecForProviderResourceGroupNameSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1WorkspaceSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
+}
+
+public partial class V1beta1WorkspaceSpecForProvider
+{
+    /// <summary>Specifies if the log Analytics Workspace allow users accessing to data associated with resources they have permission to view, without permission to workspace. Defaults to true.</summary>
+    [JsonPropertyName("allowResourceOnlyPermissions")]
+    public bool? AllowResourceOnlyPermissions { get; set; }
+
+    /// <summary>Is Customer Managed Storage mandatory for query management?</summary>
+    [JsonPropertyName("cmkForQueryForced")]
+    public bool? CmkForQueryForced { get; set; }
+
+    /// <summary>The workspace daily quota for ingestion in GB. Defaults to -1 (unlimited) if omitted.</summary>
+    [JsonPropertyName("dailyQuotaGb")]
+    public double? DailyQuotaGb { get; set; }
+
+    /// <summary>The ID of the Data Collection Rule to use for this workspace.</summary>
+    [JsonPropertyName("dataCollectionRuleId")]
+    public string? DataCollectionRuleId { get; set; }
+
+    /// <summary>An identity block as defined below.</summary>
+    [JsonPropertyName("identity")]
+    public IList<V1beta1WorkspaceSpecForProviderIdentity>? Identity { get; set; }
+
+    /// <summary>Whether to remove the data in the Log Analytics Workspace immediately after 30 days.</summary>
+    [JsonPropertyName("immediateDataPurgeOn30DaysEnabled")]
+    public bool? ImmediateDataPurgeOn30DaysEnabled { get; set; }
+
+    /// <summary>Should the Log Analytics Workspace support ingestion over the Public Internet? Defaults to true.</summary>
+    [JsonPropertyName("internetIngestionEnabled")]
+    public bool? InternetIngestionEnabled { get; set; }
+
+    /// <summary>Should the Log Analytics Workspace support querying over the Public Internet? Defaults to true.</summary>
+    [JsonPropertyName("internetQueryEnabled")]
+    public bool? InternetQueryEnabled { get; set; }
+
+    /// <summary>Specifies if the log Analytics workspace should enforce authentication using Azure AD. Defaults to false.</summary>
+    [JsonPropertyName("localAuthenticationDisabled")]
+    public bool? LocalAuthenticationDisabled { get; set; }
+
+    /// <summary>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("location")]
+    public string? Location { get; set; }
+
+    /// <summary>The capacity reservation level in GB for this workspace. Possible values are 100, 200, 300, 400, 500, 1000, 2000 and 5000.</summary>
+    [JsonPropertyName("reservationCapacityInGbPerDay")]
+    public double? ReservationCapacityInGbPerDay { get; set; }
+
+    /// <summary>The name of the resource group in which the Log Analytics workspace is created. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("resourceGroupName")]
+    public string? ResourceGroupName { get; set; }
+
+    /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
+    [JsonPropertyName("resourceGroupNameRef")]
+    public V1beta1WorkspaceSpecForProviderResourceGroupNameRef? ResourceGroupNameRef { get; set; }
+
+    /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
+    [JsonPropertyName("resourceGroupNameSelector")]
+    public V1beta1WorkspaceSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
+
+    /// <summary>The workspace data retention in days. Possible values are either 7 (Free Tier only) or range between 30 and 730.</summary>
+    [JsonPropertyName("retentionInDays")]
+    public double? RetentionInDays { get; set; }
+
+    /// <summary>Specifies the SKU of the Log Analytics Workspace. Possible values are Free, PerNode, Premium, Standard, Standalone, Unlimited, CapacityReservation, and PerGB2018 (new SKU as of 2018-04-03). Defaults to PerGB2018.</summary>
+    [JsonPropertyName("sku")]
+    public string? Sku { get; set; }
+
+    /// <summary>A mapping of tags to assign to the resource.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+}
+
+public partial class V1beta1WorkspaceSpecInitProviderIdentity
+{
+    /// <summary>Specifies a list of user managed identity ids to be assigned. Required if type is UserAssigned.</summary>
+    [JsonPropertyName("identityIds")]
+    public IList<string>? IdentityIds { get; set; }
+
+    /// <summary>Specifies the identity type of the Log Analytics Workspace. Possible values are SystemAssigned (where Azure will generate a Service Principal for you) and UserAssigned where you can specify the Service Principal IDs in the identity_ids field.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
+public partial class V1beta1WorkspaceSpecInitProvider
+{
+    /// <summary>Specifies if the log Analytics Workspace allow users accessing to data associated with resources they have permission to view, without permission to workspace. Defaults to true.</summary>
+    [JsonPropertyName("allowResourceOnlyPermissions")]
+    public bool? AllowResourceOnlyPermissions { get; set; }
+
+    /// <summary>Is Customer Managed Storage mandatory for query management?</summary>
+    [JsonPropertyName("cmkForQueryForced")]
+    public bool? CmkForQueryForced { get; set; }
+
+    /// <summary>The workspace daily quota for ingestion in GB. Defaults to -1 (unlimited) if omitted.</summary>
+    [JsonPropertyName("dailyQuotaGb")]
+    public double? DailyQuotaGb { get; set; }
+
+    /// <summary>The ID of the Data Collection Rule to use for this workspace.</summary>
+    [JsonPropertyName("dataCollectionRuleId")]
+    public string? DataCollectionRuleId { get; set; }
+
+    /// <summary>An identity block as defined below.</summary>
+    [JsonPropertyName("identity")]
+    public IList<V1beta1WorkspaceSpecInitProviderIdentity>? Identity { get; set; }
+
+    /// <summary>Whether to remove the data in the Log Analytics Workspace immediately after 30 days.</summary>
+    [JsonPropertyName("immediateDataPurgeOn30DaysEnabled")]
+    public bool? ImmediateDataPurgeOn30DaysEnabled { get; set; }
+
+    /// <summary>Should the Log Analytics Workspace support ingestion over the Public Internet? Defaults to true.</summary>
+    [JsonPropertyName("internetIngestionEnabled")]
+    public bool? InternetIngestionEnabled { get; set; }
+
+    /// <summary>Should the Log Analytics Workspace support querying over the Public Internet? Defaults to true.</summary>
+    [JsonPropertyName("internetQueryEnabled")]
+    public bool? InternetQueryEnabled { get; set; }
+
+    /// <summary>Specifies if the log Analytics workspace should enforce authentication using Azure AD. Defaults to false.</summary>
+    [JsonPropertyName("localAuthenticationDisabled")]
+    public bool? LocalAuthenticationDisabled { get; set; }
+
+    /// <summary>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("location")]
+    public string? Location { get; set; }
+
+    /// <summary>The capacity reservation level in GB for this workspace. Possible values are 100, 200, 300, 400, 500, 1000, 2000 and 5000.</summary>
+    [JsonPropertyName("reservationCapacityInGbPerDay")]
+    public double? ReservationCapacityInGbPerDay { get; set; }
+
+    /// <summary>The workspace data retention in days. Possible values are either 7 (Free Tier only) or range between 30 and 730.</summary>
+    [JsonPropertyName("retentionInDays")]
+    public double? RetentionInDays { get; set; }
+
+    /// <summary>Specifies the SKU of the Log Analytics Workspace. Possible values are Free, PerNode, Premium, Standard, Standalone, Unlimited, CapacityReservation, and PerGB2018 (new SKU as of 2018-04-03). Defaults to PerGB2018.</summary>
+    [JsonPropertyName("sku")]
+    public string? Sku { get; set; }
+
+    /// <summary>A mapping of tags to assign to the resource.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+}
+
+public enum V1beta1WorkspaceSpecManagementPoliciesEnum
+{
+    [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
+    /// <summary>Observe</summary>
+    Observe,
+    [EnumMember(Value = "Create"), JsonStringEnumMemberName("Create")]
+    /// <summary>Create</summary>
+    Create,
+    [EnumMember(Value = "Update"), JsonStringEnumMemberName("Update")]
+    /// <summary>Update</summary>
+    Update,
+    [EnumMember(Value = "Delete"), JsonStringEnumMemberName("Delete")]
+    /// <summary>Delete</summary>
+    Delete,
+    [EnumMember(Value = "LateInitialize"), JsonStringEnumMemberName("LateInitialize")]
+    /// <summary>LateInitialize</summary>
+    LateInitialize,
+    [EnumMember(Value = "*"), JsonStringEnumMemberName("*")]
+    /// <summary>*</summary>
+    Option5
+}
+
+public enum V1beta1WorkspaceSpecProviderConfigRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1WorkspaceSpecProviderConfigRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1WorkspaceSpecProviderConfigRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1WorkspaceSpecProviderConfigRefPolicyResolutionEnum>))]
+    public V1beta1WorkspaceSpecProviderConfigRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1WorkspaceSpecProviderConfigRefPolicyResolveEnum>))]
+    public V1beta1WorkspaceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1WorkspaceSpecProviderConfigRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1WorkspaceSpecProviderConfigRefPolicy? Policy { get; set; }
+}
+
+public enum V1beta1WorkspaceSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1WorkspaceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1WorkspaceSpecPublishConnectionDetailsToConfigRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1WorkspaceSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum>))]
+    public V1beta1WorkspaceSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1WorkspaceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum>))]
+    public V1beta1WorkspaceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1WorkspaceSpecPublishConnectionDetailsToConfigRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1WorkspaceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
+}
+
+public partial class V1beta1WorkspaceSpecPublishConnectionDetailsToMetadata
+{
+    /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
+    [JsonPropertyName("annotations")]
+    public IDictionary<string, string>? Annotations { get; set; }
+
+    /// <summary>Labels are the labels/tags to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.labels". - It is up to Secret Store implementation for others store types.</summary>
+    [JsonPropertyName("labels")]
+    public IDictionary<string, string>? Labels { get; set; }
+
+    /// <summary>Type is the SecretType for the connection secret. - Only valid for Kubernetes Secret Stores.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
+public partial class V1beta1WorkspaceSpecPublishConnectionDetailsTo
+{
+    /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+    [JsonPropertyName("configRef")]
+    public V1beta1WorkspaceSpecPublishConnectionDetailsToConfigRef? ConfigRef { get; set; }
+
+    /// <summary>Metadata is the metadata for connection secret.</summary>
+    [JsonPropertyName("metadata")]
+    public V1beta1WorkspaceSpecPublishConnectionDetailsToMetadata? Metadata { get; set; }
+
+    /// <summary>Name is the name of the connection secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
+public partial class V1beta1WorkspaceSpecWriteConnectionSecretToRef
+{
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+public partial class V1beta1WorkspaceSpec
+{
+    /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
+    [JsonPropertyName("deletionPolicy")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1WorkspaceSpecDeletionPolicyEnum>))]
+    public V1beta1WorkspaceSpecDeletionPolicyEnum? DeletionPolicy { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("forProvider")]
+    public V1beta1WorkspaceSpecForProvider ForProvider { get; set; }
+
+    /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+    [JsonPropertyName("initProvider")]
+    public V1beta1WorkspaceSpecInitProvider? InitProvider { get; set; }
+
+    /// <summary>THIS IS A BETA FIELD. It is on by default but can be opted out through a Crossplane feature flag. ManagementPolicies specify the array of actions Crossplane is allowed to take on the managed and external resources. This field is planned to replace the DeletionPolicy field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. If both are custom, the DeletionPolicy field will be ignored. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223 and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md</summary>
+    [JsonPropertyName("managementPolicies")]
+    public IList<V1beta1WorkspaceSpecManagementPoliciesEnum>? ManagementPolicies { get; set; }
+
+    /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+    [JsonPropertyName("providerConfigRef")]
+    public V1beta1WorkspaceSpecProviderConfigRef? ProviderConfigRef { get; set; }
+
+    /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+    [JsonPropertyName("publishConnectionDetailsTo")]
+    public V1beta1WorkspaceSpecPublishConnectionDetailsTo? PublishConnectionDetailsTo { get; set; }
+
+    /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+    [JsonPropertyName("writeConnectionSecretToRef")]
+    public V1beta1WorkspaceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
+}
+
+public partial class V1beta1WorkspaceStatusAtProviderIdentity
+{
+    /// <summary>Specifies a list of user managed identity ids to be assigned. Required if type is UserAssigned.</summary>
+    [JsonPropertyName("identityIds")]
+    public IList<string>? IdentityIds { get; set; }
+
+    /// <summary>The Log Analytics Workspace ID.</summary>
+    [JsonPropertyName("principalId")]
+    public string? PrincipalId { get; set; }
+
+    /// <summary>The Log Analytics Workspace ID.</summary>
+    [JsonPropertyName("tenantId")]
+    public string? TenantId { get; set; }
+
+    /// <summary>Specifies the identity type of the Log Analytics Workspace. Possible values are SystemAssigned (where Azure will generate a Service Principal for you) and UserAssigned where you can specify the Service Principal IDs in the identity_ids field.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
+public partial class V1beta1WorkspaceStatusAtProvider
+{
+    /// <summary>Specifies if the log Analytics Workspace allow users accessing to data associated with resources they have permission to view, without permission to workspace. Defaults to true.</summary>
+    [JsonPropertyName("allowResourceOnlyPermissions")]
+    public bool? AllowResourceOnlyPermissions { get; set; }
+
+    /// <summary>Is Customer Managed Storage mandatory for query management?</summary>
+    [JsonPropertyName("cmkForQueryForced")]
+    public bool? CmkForQueryForced { get; set; }
+
+    /// <summary>The workspace daily quota for ingestion in GB. Defaults to -1 (unlimited) if omitted.</summary>
+    [JsonPropertyName("dailyQuotaGb")]
+    public double? DailyQuotaGb { get; set; }
+
+    /// <summary>The ID of the Data Collection Rule to use for this workspace.</summary>
+    [JsonPropertyName("dataCollectionRuleId")]
+    public string? DataCollectionRuleId { get; set; }
+
+    /// <summary>The Log Analytics Workspace ID.</summary>
+    [JsonPropertyName("id")]
+    public string? Id { get; set; }
+
+    /// <summary>An identity block as defined below.</summary>
+    [JsonPropertyName("identity")]
+    public IList<V1beta1WorkspaceStatusAtProviderIdentity>? Identity { get; set; }
+
+    /// <summary>Whether to remove the data in the Log Analytics Workspace immediately after 30 days.</summary>
+    [JsonPropertyName("immediateDataPurgeOn30DaysEnabled")]
+    public bool? ImmediateDataPurgeOn30DaysEnabled { get; set; }
+
+    /// <summary>Should the Log Analytics Workspace support ingestion over the Public Internet? Defaults to true.</summary>
+    [JsonPropertyName("internetIngestionEnabled")]
+    public bool? InternetIngestionEnabled { get; set; }
+
+    /// <summary>Should the Log Analytics Workspace support querying over the Public Internet? Defaults to true.</summary>
+    [JsonPropertyName("internetQueryEnabled")]
+    public bool? InternetQueryEnabled { get; set; }
+
+    /// <summary>Specifies if the log Analytics workspace should enforce authentication using Azure AD. Defaults to false.</summary>
+    [JsonPropertyName("localAuthenticationDisabled")]
+    public bool? LocalAuthenticationDisabled { get; set; }
+
+    /// <summary>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("location")]
+    public string? Location { get; set; }
+
+    /// <summary>The capacity reservation level in GB for this workspace. Possible values are 100, 200, 300, 400, 500, 1000, 2000 and 5000.</summary>
+    [JsonPropertyName("reservationCapacityInGbPerDay")]
+    public double? ReservationCapacityInGbPerDay { get; set; }
+
+    /// <summary>The name of the resource group in which the Log Analytics workspace is created. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("resourceGroupName")]
+    public string? ResourceGroupName { get; set; }
+
+    /// <summary>The workspace data retention in days. Possible values are either 7 (Free Tier only) or range between 30 and 730.</summary>
+    [JsonPropertyName("retentionInDays")]
+    public double? RetentionInDays { get; set; }
+
+    /// <summary>Specifies the SKU of the Log Analytics Workspace. Possible values are Free, PerNode, Premium, Standard, Standalone, Unlimited, CapacityReservation, and PerGB2018 (new SKU as of 2018-04-03). Defaults to PerGB2018.</summary>
+    [JsonPropertyName("sku")]
+    public string? Sku { get; set; }
+
+    /// <summary>A mapping of tags to assign to the resource.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>The Workspace (or Customer) ID for the Log Analytics Workspace.</summary>
+    [JsonPropertyName("workspaceId")]
+    public string? WorkspaceId { get; set; }
+}
+
+public partial class V1beta1WorkspaceStatusConditions
+{
+    /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
+    [JsonPropertyName("lastTransitionTime")]
+    public string LastTransitionTime { get; set; }
+
+    /// <summary>A Message containing details about this condition's last transition from one status to another, if any.</summary>
+    [JsonPropertyName("message")]
+    public string? Message { get; set; }
+
+    /// <summary>ObservedGeneration represents the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.</summary>
+    [JsonPropertyName("observedGeneration")]
+    public long? ObservedGeneration { get; set; }
+
+    /// <summary>A Reason for this condition's last transition from one status to another.</summary>
+    [JsonPropertyName("reason")]
+    public string Reason { get; set; }
+
+    /// <summary>Status of this condition; is it currently True, False, or Unknown?</summary>
+    [JsonPropertyName("status")]
+    public string Status { get; set; }
+
+    /// <summary>Type of this condition. At most one of each condition type may apply to a resource at any point in time.</summary>
+    [JsonPropertyName("type")]
+    public string Type { get; set; }
+}
+
+public partial class V1beta1WorkspaceStatus
+{
+    /// <summary></summary>
+    [JsonPropertyName("atProvider")]
+    public V1beta1WorkspaceStatusAtProvider? AtProvider { get; set; }
+
+    /// <summary>Conditions of the resource.</summary>
+    [JsonPropertyName("conditions")]
+    public IList<V1beta1WorkspaceStatusConditions>? Conditions { get; set; }
+
+    /// <summary>ObservedGeneration is the latest metadata.generation which resulted in either a ready state, or stalled due to error it can not recover from without human intervention.</summary>
+    [JsonPropertyName("observedGeneration")]
+    public long? ObservedGeneration { get; set; }
+}
+
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1Workspace : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1WorkspaceSpec>, IStatus<V1beta1WorkspaceStatus>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "Workspace";
+    public const string KubeGroup = "operationalinsights.azure.upbound.io";
+    public const string KubePluralName = "workspaces";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ObjectMeta Metadata { get; set; }
+
+    /// <summary>WorkspaceSpec defines the desired state of Workspace</summary>
+    [JsonPropertyName("spec")]
+    public V1beta1WorkspaceSpec Spec { get; set; }
+
+    /// <summary>WorkspaceStatus defines the observed state of Workspace.</summary>
+    [JsonPropertyName("status")]
+    public V1beta1WorkspaceStatus? Status { get; set; }
+}

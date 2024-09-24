@@ -1,0 +1,2249 @@
+using k8s;
+using k8s.Models;
+using System;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+using System.Text.Json;
+using System.Text.Json.Nodes;
+using System.Text.Json.Serialization;
+
+namespace KubernetesCRDModelGen.Models.alloydb.gcp.upbound.io;
+public enum V1beta1ClusterSpecDeletionPolicyEnum
+{
+    [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
+    /// <summary>Orphan</summary>
+    Orphan,
+    [EnumMember(Value = "Delete"), JsonStringEnumMemberName("Delete")]
+    /// <summary>Delete</summary>
+    Delete
+}
+
+public partial class V1beta1ClusterSpecForProviderAutomatedBackupPolicyEncryptionConfig
+{
+    /// <summary>The fully-qualified resource name of the KMS key. Each Cloud KMS key is regionalized and has the following format: projects/[PROJECT]/locations/[REGION]/keyRings/[RING]/cryptoKeys/[KEY_NAME].</summary>
+    [JsonPropertyName("kmsKeyName")]
+    public string? KmsKeyName { get; set; }
+}
+
+public partial class V1beta1ClusterSpecForProviderAutomatedBackupPolicyQuantityBasedRetention
+{
+    /// <summary>The number of backups to retain.</summary>
+    [JsonPropertyName("count")]
+    public double? Count { get; set; }
+}
+
+public partial class V1beta1ClusterSpecForProviderAutomatedBackupPolicyTimeBasedRetention
+{
+    /// <summary>The retention period. A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".</summary>
+    [JsonPropertyName("retentionPeriod")]
+    public string? RetentionPeriod { get; set; }
+}
+
+public partial class V1beta1ClusterSpecForProviderAutomatedBackupPolicyWeeklyScheduleStartTimes
+{
+    /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
+    [JsonPropertyName("hours")]
+    public double? Hours { get; set; }
+
+    /// <summary>Minutes of hour of day. Currently, only the value 0 is supported.</summary>
+    [JsonPropertyName("minutes")]
+    public double? Minutes { get; set; }
+
+    /// <summary>Fractions of seconds in nanoseconds. Currently, only the value 0 is supported.</summary>
+    [JsonPropertyName("nanos")]
+    public double? Nanos { get; set; }
+
+    /// <summary>Seconds of minutes of the time. Currently, only the value 0 is supported.</summary>
+    [JsonPropertyName("seconds")]
+    public double? Seconds { get; set; }
+}
+
+public partial class V1beta1ClusterSpecForProviderAutomatedBackupPolicyWeeklySchedule
+{
+    /// <summary>The days of the week to perform a backup. At least one day of the week must be provided. Each value may be one of: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.</summary>
+    [JsonPropertyName("daysOfWeek")]
+    public IList<string>? DaysOfWeek { get; set; }
+
+    /// <summary>The times during the day to start a backup. At least one start time must be provided. The start times are assumed to be in UTC and to be an exact hour (e.g., 04:00:00). Structure is documented below.</summary>
+    [JsonPropertyName("startTimes")]
+    public IList<V1beta1ClusterSpecForProviderAutomatedBackupPolicyWeeklyScheduleStartTimes>? StartTimes { get; set; }
+}
+
+public partial class V1beta1ClusterSpecForProviderAutomatedBackupPolicy
+{
+    /// <summary>The length of the time window during which a backup can be taken. If a backup does not succeed within this time window, it will be canceled and considered failed. The backup window must be at least 5 minutes long. There is no upper bound on the window. If not set, it will default to 1 hour. A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".</summary>
+    [JsonPropertyName("backupWindow")]
+    public string? BackupWindow { get; set; }
+
+    /// <summary>Whether automated backups are enabled.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key). Structure is documented below.</summary>
+    [JsonPropertyName("encryptionConfig")]
+    public IList<V1beta1ClusterSpecForProviderAutomatedBackupPolicyEncryptionConfig>? EncryptionConfig { get; set; }
+
+    /// <summary>Labels to apply to backups created using this configuration.</summary>
+    [JsonPropertyName("labels")]
+    public IDictionary<string, string>? Labels { get; set; }
+
+    /// <summary>The location where the backup will be stored. Currently, the only supported option is to store the backup in the same region as the cluster.</summary>
+    [JsonPropertyName("location")]
+    public string? Location { get; set; }
+
+    /// <summary>Quantity-based Backup retention policy to retain recent backups. Conflicts with 'time_based_retention', both can't be set together. Structure is documented below.</summary>
+    [JsonPropertyName("quantityBasedRetention")]
+    public IList<V1beta1ClusterSpecForProviderAutomatedBackupPolicyQuantityBasedRetention>? QuantityBasedRetention { get; set; }
+
+    /// <summary>Time-based Backup retention policy. Conflicts with 'quantity_based_retention', both can't be set together. Structure is documented below.</summary>
+    [JsonPropertyName("timeBasedRetention")]
+    public IList<V1beta1ClusterSpecForProviderAutomatedBackupPolicyTimeBasedRetention>? TimeBasedRetention { get; set; }
+
+    /// <summary>Weekly schedule for the Backup. Structure is documented below.</summary>
+    [JsonPropertyName("weeklySchedule")]
+    public IList<V1beta1ClusterSpecForProviderAutomatedBackupPolicyWeeklySchedule>? WeeklySchedule { get; set; }
+}
+
+public partial class V1beta1ClusterSpecForProviderContinuousBackupConfigEncryptionConfig
+{
+    /// <summary>The fully-qualified resource name of the KMS key. Each Cloud KMS key is regionalized and has the following format: projects/[PROJECT]/locations/[REGION]/keyRings/[RING]/cryptoKeys/[KEY_NAME].</summary>
+    [JsonPropertyName("kmsKeyName")]
+    public string? KmsKeyName { get; set; }
+}
+
+public partial class V1beta1ClusterSpecForProviderContinuousBackupConfig
+{
+    /// <summary>Whether continuous backup recovery is enabled. If not set, defaults to true.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key). Structure is documented below.</summary>
+    [JsonPropertyName("encryptionConfig")]
+    public IList<V1beta1ClusterSpecForProviderContinuousBackupConfigEncryptionConfig>? EncryptionConfig { get; set; }
+
+    /// <summary>The numbers of days that are eligible to restore from using PITR. To support the entire recovery window, backups and logs are retained for one day more than the recovery window. If not set, defaults to 14 days.</summary>
+    [JsonPropertyName("recoveryWindowDays")]
+    public double? RecoveryWindowDays { get; set; }
+}
+
+public partial class V1beta1ClusterSpecForProviderEncryptionConfig
+{
+    /// <summary>The fully-qualified resource name of the KMS key. Each Cloud KMS key is regionalized and has the following format: projects/[PROJECT]/locations/[REGION]/keyRings/[RING]/cryptoKeys/[KEY_NAME].</summary>
+    [JsonPropertyName("kmsKeyName")]
+    public string? KmsKeyName { get; set; }
+}
+
+public partial class V1beta1ClusterSpecForProviderInitialUserPasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+public partial class V1beta1ClusterSpecForProviderInitialUser
+{
+    /// <summary>The initial password for the user. Note: This property is sensitive and will not be displayed in the plan.</summary>
+    [JsonPropertyName("passwordSecretRef")]
+    public V1beta1ClusterSpecForProviderInitialUserPasswordSecretRef PasswordSecretRef { get; set; }
+
+    /// <summary>The database username.</summary>
+    [JsonPropertyName("user")]
+    public string? User { get; set; }
+}
+
+public partial class V1beta1ClusterSpecForProviderMaintenanceUpdatePolicyMaintenanceWindowsStartTime
+{
+    /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
+    [JsonPropertyName("hours")]
+    public double? Hours { get; set; }
+
+    /// <summary>Minutes of hour of day. Currently, only the value 0 is supported.</summary>
+    [JsonPropertyName("minutes")]
+    public double? Minutes { get; set; }
+
+    /// <summary>Fractions of seconds in nanoseconds. Currently, only the value 0 is supported.</summary>
+    [JsonPropertyName("nanos")]
+    public double? Nanos { get; set; }
+
+    /// <summary>Seconds of minutes of the time. Currently, only the value 0 is supported.</summary>
+    [JsonPropertyName("seconds")]
+    public double? Seconds { get; set; }
+}
+
+public partial class V1beta1ClusterSpecForProviderMaintenanceUpdatePolicyMaintenanceWindows
+{
+    /// <summary>Preferred day of the week for maintenance, e.g. MONDAY, TUESDAY, etc. Possible values are: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.</summary>
+    [JsonPropertyName("day")]
+    public string? Day { get; set; }
+
+    /// <summary>Preferred time to start the maintenance operation on the specified day. Maintenance will start within 1 hour of this time. Structure is documented below.</summary>
+    [JsonPropertyName("startTime")]
+    public IList<V1beta1ClusterSpecForProviderMaintenanceUpdatePolicyMaintenanceWindowsStartTime>? StartTime { get; set; }
+}
+
+public partial class V1beta1ClusterSpecForProviderMaintenanceUpdatePolicy
+{
+    /// <summary>Preferred windows to perform maintenance. Currently limited to 1. Structure is documented below.</summary>
+    [JsonPropertyName("maintenanceWindows")]
+    public IList<V1beta1ClusterSpecForProviderMaintenanceUpdatePolicyMaintenanceWindows>? MaintenanceWindows { get; set; }
+}
+
+public enum V1beta1ClusterSpecForProviderNetworkConfigNetworkRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1ClusterSpecForProviderNetworkConfigNetworkRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1ClusterSpecForProviderNetworkConfigNetworkRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecForProviderNetworkConfigNetworkRefPolicyResolutionEnum>))]
+    public V1beta1ClusterSpecForProviderNetworkConfigNetworkRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecForProviderNetworkConfigNetworkRefPolicyResolveEnum>))]
+    public V1beta1ClusterSpecForProviderNetworkConfigNetworkRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1ClusterSpecForProviderNetworkConfigNetworkRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ClusterSpecForProviderNetworkConfigNetworkRefPolicy? Policy { get; set; }
+}
+
+public enum V1beta1ClusterSpecForProviderNetworkConfigNetworkSelectorPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1ClusterSpecForProviderNetworkConfigNetworkSelectorPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1ClusterSpecForProviderNetworkConfigNetworkSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecForProviderNetworkConfigNetworkSelectorPolicyResolutionEnum>))]
+    public V1beta1ClusterSpecForProviderNetworkConfigNetworkSelectorPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecForProviderNetworkConfigNetworkSelectorPolicyResolveEnum>))]
+    public V1beta1ClusterSpecForProviderNetworkConfigNetworkSelectorPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1ClusterSpecForProviderNetworkConfigNetworkSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ClusterSpecForProviderNetworkConfigNetworkSelectorPolicy? Policy { get; set; }
+}
+
+public partial class V1beta1ClusterSpecForProviderNetworkConfig
+{
+    /// <summary>The name of the allocated IP range for the private IP AlloyDB cluster. For example: "google-managed-services-default". If set, the instance IPs for this cluster will be created in the allocated range.</summary>
+    [JsonPropertyName("allocatedIpRange")]
+    public string? AllocatedIpRange { get; set; }
+
+    /// <summary>The resource link for the VPC network in which cluster resources are created and from which they are accessible via Private IP. The network must belong to the same project as the cluster. It is specified in the form: "projects/{projectNumber}/global/networks/{network_id}".</summary>
+    [JsonPropertyName("network")]
+    public string? Network { get; set; }
+
+    /// <summary>Reference to a Network in compute to populate network.</summary>
+    [JsonPropertyName("networkRef")]
+    public V1beta1ClusterSpecForProviderNetworkConfigNetworkRef? NetworkRef { get; set; }
+
+    /// <summary>Selector for a Network in compute to populate network.</summary>
+    [JsonPropertyName("networkSelector")]
+    public V1beta1ClusterSpecForProviderNetworkConfigNetworkSelector? NetworkSelector { get; set; }
+}
+
+public enum V1beta1ClusterSpecForProviderNetworkRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1ClusterSpecForProviderNetworkRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1ClusterSpecForProviderNetworkRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecForProviderNetworkRefPolicyResolutionEnum>))]
+    public V1beta1ClusterSpecForProviderNetworkRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecForProviderNetworkRefPolicyResolveEnum>))]
+    public V1beta1ClusterSpecForProviderNetworkRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1ClusterSpecForProviderNetworkRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ClusterSpecForProviderNetworkRefPolicy? Policy { get; set; }
+}
+
+public enum V1beta1ClusterSpecForProviderNetworkSelectorPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1ClusterSpecForProviderNetworkSelectorPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1ClusterSpecForProviderNetworkSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecForProviderNetworkSelectorPolicyResolutionEnum>))]
+    public V1beta1ClusterSpecForProviderNetworkSelectorPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecForProviderNetworkSelectorPolicyResolveEnum>))]
+    public V1beta1ClusterSpecForProviderNetworkSelectorPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1ClusterSpecForProviderNetworkSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ClusterSpecForProviderNetworkSelectorPolicy? Policy { get; set; }
+}
+
+public partial class V1beta1ClusterSpecForProviderPscConfig
+{
+    /// <summary>Create an instance that allows connections from Private Service Connect endpoints to the instance.</summary>
+    [JsonPropertyName("pscEnabled")]
+    public bool? PscEnabled { get; set; }
+}
+
+public enum V1beta1ClusterSpecForProviderRestoreBackupSourceBackupNameRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1ClusterSpecForProviderRestoreBackupSourceBackupNameRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1ClusterSpecForProviderRestoreBackupSourceBackupNameRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecForProviderRestoreBackupSourceBackupNameRefPolicyResolutionEnum>))]
+    public V1beta1ClusterSpecForProviderRestoreBackupSourceBackupNameRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecForProviderRestoreBackupSourceBackupNameRefPolicyResolveEnum>))]
+    public V1beta1ClusterSpecForProviderRestoreBackupSourceBackupNameRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1ClusterSpecForProviderRestoreBackupSourceBackupNameRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ClusterSpecForProviderRestoreBackupSourceBackupNameRefPolicy? Policy { get; set; }
+}
+
+public enum V1beta1ClusterSpecForProviderRestoreBackupSourceBackupNameSelectorPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1ClusterSpecForProviderRestoreBackupSourceBackupNameSelectorPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1ClusterSpecForProviderRestoreBackupSourceBackupNameSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecForProviderRestoreBackupSourceBackupNameSelectorPolicyResolutionEnum>))]
+    public V1beta1ClusterSpecForProviderRestoreBackupSourceBackupNameSelectorPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecForProviderRestoreBackupSourceBackupNameSelectorPolicyResolveEnum>))]
+    public V1beta1ClusterSpecForProviderRestoreBackupSourceBackupNameSelectorPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1ClusterSpecForProviderRestoreBackupSourceBackupNameSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ClusterSpecForProviderRestoreBackupSourceBackupNameSelectorPolicy? Policy { get; set; }
+}
+
+public partial class V1beta1ClusterSpecForProviderRestoreBackupSource
+{
+    /// <summary>The name of the backup that this cluster is restored from.</summary>
+    [JsonPropertyName("backupName")]
+    public string? BackupName { get; set; }
+
+    /// <summary>Reference to a Backup in alloydb to populate backupName.</summary>
+    [JsonPropertyName("backupNameRef")]
+    public V1beta1ClusterSpecForProviderRestoreBackupSourceBackupNameRef? BackupNameRef { get; set; }
+
+    /// <summary>Selector for a Backup in alloydb to populate backupName.</summary>
+    [JsonPropertyName("backupNameSelector")]
+    public V1beta1ClusterSpecForProviderRestoreBackupSourceBackupNameSelector? BackupNameSelector { get; set; }
+}
+
+public enum V1beta1ClusterSpecForProviderRestoreContinuousBackupSourceClusterRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1ClusterSpecForProviderRestoreContinuousBackupSourceClusterRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1ClusterSpecForProviderRestoreContinuousBackupSourceClusterRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecForProviderRestoreContinuousBackupSourceClusterRefPolicyResolutionEnum>))]
+    public V1beta1ClusterSpecForProviderRestoreContinuousBackupSourceClusterRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecForProviderRestoreContinuousBackupSourceClusterRefPolicyResolveEnum>))]
+    public V1beta1ClusterSpecForProviderRestoreContinuousBackupSourceClusterRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1ClusterSpecForProviderRestoreContinuousBackupSourceClusterRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ClusterSpecForProviderRestoreContinuousBackupSourceClusterRefPolicy? Policy { get; set; }
+}
+
+public enum V1beta1ClusterSpecForProviderRestoreContinuousBackupSourceClusterSelectorPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1ClusterSpecForProviderRestoreContinuousBackupSourceClusterSelectorPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1ClusterSpecForProviderRestoreContinuousBackupSourceClusterSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecForProviderRestoreContinuousBackupSourceClusterSelectorPolicyResolutionEnum>))]
+    public V1beta1ClusterSpecForProviderRestoreContinuousBackupSourceClusterSelectorPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecForProviderRestoreContinuousBackupSourceClusterSelectorPolicyResolveEnum>))]
+    public V1beta1ClusterSpecForProviderRestoreContinuousBackupSourceClusterSelectorPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1ClusterSpecForProviderRestoreContinuousBackupSourceClusterSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ClusterSpecForProviderRestoreContinuousBackupSourceClusterSelectorPolicy? Policy { get; set; }
+}
+
+public partial class V1beta1ClusterSpecForProviderRestoreContinuousBackupSource
+{
+    /// <summary>The name of the source cluster that this cluster is restored from.</summary>
+    [JsonPropertyName("cluster")]
+    public string? Cluster { get; set; }
+
+    /// <summary>Reference to a Cluster in alloydb to populate cluster.</summary>
+    [JsonPropertyName("clusterRef")]
+    public V1beta1ClusterSpecForProviderRestoreContinuousBackupSourceClusterRef? ClusterRef { get; set; }
+
+    /// <summary>Selector for a Cluster in alloydb to populate cluster.</summary>
+    [JsonPropertyName("clusterSelector")]
+    public V1beta1ClusterSpecForProviderRestoreContinuousBackupSourceClusterSelector? ClusterSelector { get; set; }
+
+    /// <summary>The point in time that this cluster is restored to, in RFC 3339 format.</summary>
+    [JsonPropertyName("pointInTime")]
+    public string? PointInTime { get; set; }
+}
+
+public enum V1beta1ClusterSpecForProviderSecondaryConfigPrimaryClusterNameRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1ClusterSpecForProviderSecondaryConfigPrimaryClusterNameRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1ClusterSpecForProviderSecondaryConfigPrimaryClusterNameRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecForProviderSecondaryConfigPrimaryClusterNameRefPolicyResolutionEnum>))]
+    public V1beta1ClusterSpecForProviderSecondaryConfigPrimaryClusterNameRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecForProviderSecondaryConfigPrimaryClusterNameRefPolicyResolveEnum>))]
+    public V1beta1ClusterSpecForProviderSecondaryConfigPrimaryClusterNameRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1ClusterSpecForProviderSecondaryConfigPrimaryClusterNameRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ClusterSpecForProviderSecondaryConfigPrimaryClusterNameRefPolicy? Policy { get; set; }
+}
+
+public enum V1beta1ClusterSpecForProviderSecondaryConfigPrimaryClusterNameSelectorPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1ClusterSpecForProviderSecondaryConfigPrimaryClusterNameSelectorPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1ClusterSpecForProviderSecondaryConfigPrimaryClusterNameSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecForProviderSecondaryConfigPrimaryClusterNameSelectorPolicyResolutionEnum>))]
+    public V1beta1ClusterSpecForProviderSecondaryConfigPrimaryClusterNameSelectorPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecForProviderSecondaryConfigPrimaryClusterNameSelectorPolicyResolveEnum>))]
+    public V1beta1ClusterSpecForProviderSecondaryConfigPrimaryClusterNameSelectorPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1ClusterSpecForProviderSecondaryConfigPrimaryClusterNameSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ClusterSpecForProviderSecondaryConfigPrimaryClusterNameSelectorPolicy? Policy { get; set; }
+}
+
+public partial class V1beta1ClusterSpecForProviderSecondaryConfig
+{
+    /// <summary>Name of the primary cluster must be in the format 'projects/{project}/locations/{location}/clusters/{cluster_id}'</summary>
+    [JsonPropertyName("primaryClusterName")]
+    public string? PrimaryClusterName { get; set; }
+
+    /// <summary>Reference to a Cluster in alloydb to populate primaryClusterName.</summary>
+    [JsonPropertyName("primaryClusterNameRef")]
+    public V1beta1ClusterSpecForProviderSecondaryConfigPrimaryClusterNameRef? PrimaryClusterNameRef { get; set; }
+
+    /// <summary>Selector for a Cluster in alloydb to populate primaryClusterName.</summary>
+    [JsonPropertyName("primaryClusterNameSelector")]
+    public V1beta1ClusterSpecForProviderSecondaryConfigPrimaryClusterNameSelector? PrimaryClusterNameSelector { get; set; }
+}
+
+public partial class V1beta1ClusterSpecForProvider
+{
+    /// <summary>Annotations to allow client tools to store small amount of arbitrary data. This is distinct from labels. https://google.aip.dev/128 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.</summary>
+    [JsonPropertyName("annotations")]
+    public IDictionary<string, string>? Annotations { get; set; }
+
+    /// <summary>The automated backup policy for this cluster. AutomatedBackupPolicy is disabled by default. Structure is documented below.</summary>
+    [JsonPropertyName("automatedBackupPolicy")]
+    public IList<V1beta1ClusterSpecForProviderAutomatedBackupPolicy>? AutomatedBackupPolicy { get; set; }
+
+    /// <summary>The type of cluster. If not set, defaults to PRIMARY. Default value is PRIMARY. Possible values are: PRIMARY, SECONDARY.</summary>
+    [JsonPropertyName("clusterType")]
+    public string? ClusterType { get; set; }
+
+    /// <summary>The continuous backup config for this cluster. If no policy is provided then the default policy will be used. The default policy takes one backup a day and retains backups for 14 days. Structure is documented below.</summary>
+    [JsonPropertyName("continuousBackupConfig")]
+    public IList<V1beta1ClusterSpecForProviderContinuousBackupConfig>? ContinuousBackupConfig { get; set; }
+
+    /// <summary>The database engine major version. This is an optional field and it's populated at the Cluster creation time. This field cannot be changed after cluster creation.</summary>
+    [JsonPropertyName("databaseVersion")]
+    public string? DatabaseVersion { get; set; }
+
+    /// <summary>Policy to determine if the cluster should be deleted forcefully. Deleting a cluster forcefully, deletes the cluster and all its associated instances within the cluster. Deleting a Secondary cluster with a secondary instance REQUIRES setting deletion_policy = "FORCE" otherwise an error is returned. This is needed as there is no support to delete just the secondary instance, and the only way to delete secondary instance is to delete the associated secondary cluster forcefully which also deletes the secondary instance.</summary>
+    [JsonPropertyName("deletionPolicy")]
+    public string? DeletionPolicy { get; set; }
+
+    /// <summary>User-settable and human-readable display name for the Cluster.</summary>
+    [JsonPropertyName("displayName")]
+    public string? DisplayName { get; set; }
+
+    /// <summary>EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key). Structure is documented below.</summary>
+    [JsonPropertyName("encryptionConfig")]
+    public IList<V1beta1ClusterSpecForProviderEncryptionConfig>? EncryptionConfig { get; set; }
+
+    /// <summary>For Resource freshness validation (https://google.aip.dev/154)</summary>
+    [JsonPropertyName("etag")]
+    public string? Etag { get; set; }
+
+    /// <summary>Initial user to setup during cluster creation. Structure is documented below.</summary>
+    [JsonPropertyName("initialUser")]
+    public IList<V1beta1ClusterSpecForProviderInitialUser>? InitialUser { get; set; }
+
+    /// <summary>User-defined labels for the alloydb cluster. Note: This field is non-authoritative, and will only manage the labels present in your configuration. Please refer to the field effective_labels for all of the labels present on the resource.</summary>
+    [JsonPropertyName("labels")]
+    public IDictionary<string, string>? Labels { get; set; }
+
+    /// <summary>The location where the alloydb cluster should reside.</summary>
+    [JsonPropertyName("location")]
+    public string Location { get; set; }
+
+    /// <summary>MaintenanceUpdatePolicy defines the policy for system updates. Structure is documented below.</summary>
+    [JsonPropertyName("maintenanceUpdatePolicy")]
+    public IList<V1beta1ClusterSpecForProviderMaintenanceUpdatePolicy>? MaintenanceUpdatePolicy { get; set; }
+
+    /// <summary>The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form: "projects/{projectNumber}/global/networks/{network_id}".</summary>
+    [JsonPropertyName("network")]
+    public string? Network { get; set; }
+
+    /// <summary>Metadata related to network configuration. Structure is documented below.</summary>
+    [JsonPropertyName("networkConfig")]
+    public IList<V1beta1ClusterSpecForProviderNetworkConfig>? NetworkConfig { get; set; }
+
+    /// <summary>Reference to a Network in compute to populate network.</summary>
+    [JsonPropertyName("networkRef")]
+    public V1beta1ClusterSpecForProviderNetworkRef? NetworkRef { get; set; }
+
+    /// <summary>Selector for a Network in compute to populate network.</summary>
+    [JsonPropertyName("networkSelector")]
+    public V1beta1ClusterSpecForProviderNetworkSelector? NetworkSelector { get; set; }
+
+    /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
+    [JsonPropertyName("project")]
+    public string? Project { get; set; }
+
+    /// <summary>Configuration for Private Service Connect (PSC) for the cluster. Structure is documented below.</summary>
+    [JsonPropertyName("pscConfig")]
+    public IList<V1beta1ClusterSpecForProviderPscConfig>? PscConfig { get; set; }
+
+    /// <summary>The source when restoring from a backup. Conflicts with 'restore_continuous_backup_source', both can't be set together. Structure is documented below.</summary>
+    [JsonPropertyName("restoreBackupSource")]
+    public IList<V1beta1ClusterSpecForProviderRestoreBackupSource>? RestoreBackupSource { get; set; }
+
+    /// <summary>The source when restoring via point in time recovery (PITR). Conflicts with 'restore_backup_source', both can't be set together. Structure is documented below.</summary>
+    [JsonPropertyName("restoreContinuousBackupSource")]
+    public IList<V1beta1ClusterSpecForProviderRestoreContinuousBackupSource>? RestoreContinuousBackupSource { get; set; }
+
+    /// <summary>Configuration of the secondary cluster for Cross Region Replication. This should be set if and only if the cluster is of type SECONDARY. Structure is documented below.</summary>
+    [JsonPropertyName("secondaryConfig")]
+    public IList<V1beta1ClusterSpecForProviderSecondaryConfig>? SecondaryConfig { get; set; }
+}
+
+public partial class V1beta1ClusterSpecInitProviderAutomatedBackupPolicyEncryptionConfig
+{
+    /// <summary>The fully-qualified resource name of the KMS key. Each Cloud KMS key is regionalized and has the following format: projects/[PROJECT]/locations/[REGION]/keyRings/[RING]/cryptoKeys/[KEY_NAME].</summary>
+    [JsonPropertyName("kmsKeyName")]
+    public string? KmsKeyName { get; set; }
+}
+
+public partial class V1beta1ClusterSpecInitProviderAutomatedBackupPolicyQuantityBasedRetention
+{
+    /// <summary>The number of backups to retain.</summary>
+    [JsonPropertyName("count")]
+    public double? Count { get; set; }
+}
+
+public partial class V1beta1ClusterSpecInitProviderAutomatedBackupPolicyTimeBasedRetention
+{
+    /// <summary>The retention period. A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".</summary>
+    [JsonPropertyName("retentionPeriod")]
+    public string? RetentionPeriod { get; set; }
+}
+
+public partial class V1beta1ClusterSpecInitProviderAutomatedBackupPolicyWeeklyScheduleStartTimes
+{
+    /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
+    [JsonPropertyName("hours")]
+    public double? Hours { get; set; }
+
+    /// <summary>Minutes of hour of day. Currently, only the value 0 is supported.</summary>
+    [JsonPropertyName("minutes")]
+    public double? Minutes { get; set; }
+
+    /// <summary>Fractions of seconds in nanoseconds. Currently, only the value 0 is supported.</summary>
+    [JsonPropertyName("nanos")]
+    public double? Nanos { get; set; }
+
+    /// <summary>Seconds of minutes of the time. Currently, only the value 0 is supported.</summary>
+    [JsonPropertyName("seconds")]
+    public double? Seconds { get; set; }
+}
+
+public partial class V1beta1ClusterSpecInitProviderAutomatedBackupPolicyWeeklySchedule
+{
+    /// <summary>The days of the week to perform a backup. At least one day of the week must be provided. Each value may be one of: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.</summary>
+    [JsonPropertyName("daysOfWeek")]
+    public IList<string>? DaysOfWeek { get; set; }
+
+    /// <summary>The times during the day to start a backup. At least one start time must be provided. The start times are assumed to be in UTC and to be an exact hour (e.g., 04:00:00). Structure is documented below.</summary>
+    [JsonPropertyName("startTimes")]
+    public IList<V1beta1ClusterSpecInitProviderAutomatedBackupPolicyWeeklyScheduleStartTimes>? StartTimes { get; set; }
+}
+
+public partial class V1beta1ClusterSpecInitProviderAutomatedBackupPolicy
+{
+    /// <summary>The length of the time window during which a backup can be taken. If a backup does not succeed within this time window, it will be canceled and considered failed. The backup window must be at least 5 minutes long. There is no upper bound on the window. If not set, it will default to 1 hour. A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".</summary>
+    [JsonPropertyName("backupWindow")]
+    public string? BackupWindow { get; set; }
+
+    /// <summary>Whether automated backups are enabled.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key). Structure is documented below.</summary>
+    [JsonPropertyName("encryptionConfig")]
+    public IList<V1beta1ClusterSpecInitProviderAutomatedBackupPolicyEncryptionConfig>? EncryptionConfig { get; set; }
+
+    /// <summary>Labels to apply to backups created using this configuration.</summary>
+    [JsonPropertyName("labels")]
+    public IDictionary<string, string>? Labels { get; set; }
+
+    /// <summary>Quantity-based Backup retention policy to retain recent backups. Conflicts with 'time_based_retention', both can't be set together. Structure is documented below.</summary>
+    [JsonPropertyName("quantityBasedRetention")]
+    public IList<V1beta1ClusterSpecInitProviderAutomatedBackupPolicyQuantityBasedRetention>? QuantityBasedRetention { get; set; }
+
+    /// <summary>Time-based Backup retention policy. Conflicts with 'quantity_based_retention', both can't be set together. Structure is documented below.</summary>
+    [JsonPropertyName("timeBasedRetention")]
+    public IList<V1beta1ClusterSpecInitProviderAutomatedBackupPolicyTimeBasedRetention>? TimeBasedRetention { get; set; }
+
+    /// <summary>Weekly schedule for the Backup. Structure is documented below.</summary>
+    [JsonPropertyName("weeklySchedule")]
+    public IList<V1beta1ClusterSpecInitProviderAutomatedBackupPolicyWeeklySchedule>? WeeklySchedule { get; set; }
+}
+
+public partial class V1beta1ClusterSpecInitProviderContinuousBackupConfigEncryptionConfig
+{
+    /// <summary>The fully-qualified resource name of the KMS key. Each Cloud KMS key is regionalized and has the following format: projects/[PROJECT]/locations/[REGION]/keyRings/[RING]/cryptoKeys/[KEY_NAME].</summary>
+    [JsonPropertyName("kmsKeyName")]
+    public string? KmsKeyName { get; set; }
+}
+
+public partial class V1beta1ClusterSpecInitProviderContinuousBackupConfig
+{
+    /// <summary>Whether continuous backup recovery is enabled. If not set, defaults to true.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key). Structure is documented below.</summary>
+    [JsonPropertyName("encryptionConfig")]
+    public IList<V1beta1ClusterSpecInitProviderContinuousBackupConfigEncryptionConfig>? EncryptionConfig { get; set; }
+
+    /// <summary>The numbers of days that are eligible to restore from using PITR. To support the entire recovery window, backups and logs are retained for one day more than the recovery window. If not set, defaults to 14 days.</summary>
+    [JsonPropertyName("recoveryWindowDays")]
+    public double? RecoveryWindowDays { get; set; }
+}
+
+public partial class V1beta1ClusterSpecInitProviderEncryptionConfig
+{
+    /// <summary>The fully-qualified resource name of the KMS key. Each Cloud KMS key is regionalized and has the following format: projects/[PROJECT]/locations/[REGION]/keyRings/[RING]/cryptoKeys/[KEY_NAME].</summary>
+    [JsonPropertyName("kmsKeyName")]
+    public string? KmsKeyName { get; set; }
+}
+
+public partial class V1beta1ClusterSpecInitProviderInitialUser
+{
+    /// <summary>The database username.</summary>
+    [JsonPropertyName("user")]
+    public string? User { get; set; }
+}
+
+public partial class V1beta1ClusterSpecInitProviderMaintenanceUpdatePolicyMaintenanceWindowsStartTime
+{
+    /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
+    [JsonPropertyName("hours")]
+    public double? Hours { get; set; }
+
+    /// <summary>Minutes of hour of day. Currently, only the value 0 is supported.</summary>
+    [JsonPropertyName("minutes")]
+    public double? Minutes { get; set; }
+
+    /// <summary>Fractions of seconds in nanoseconds. Currently, only the value 0 is supported.</summary>
+    [JsonPropertyName("nanos")]
+    public double? Nanos { get; set; }
+
+    /// <summary>Seconds of minutes of the time. Currently, only the value 0 is supported.</summary>
+    [JsonPropertyName("seconds")]
+    public double? Seconds { get; set; }
+}
+
+public partial class V1beta1ClusterSpecInitProviderMaintenanceUpdatePolicyMaintenanceWindows
+{
+    /// <summary>Preferred day of the week for maintenance, e.g. MONDAY, TUESDAY, etc. Possible values are: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.</summary>
+    [JsonPropertyName("day")]
+    public string? Day { get; set; }
+
+    /// <summary>Preferred time to start the maintenance operation on the specified day. Maintenance will start within 1 hour of this time. Structure is documented below.</summary>
+    [JsonPropertyName("startTime")]
+    public IList<V1beta1ClusterSpecInitProviderMaintenanceUpdatePolicyMaintenanceWindowsStartTime>? StartTime { get; set; }
+}
+
+public partial class V1beta1ClusterSpecInitProviderMaintenanceUpdatePolicy
+{
+    /// <summary>Preferred windows to perform maintenance. Currently limited to 1. Structure is documented below.</summary>
+    [JsonPropertyName("maintenanceWindows")]
+    public IList<V1beta1ClusterSpecInitProviderMaintenanceUpdatePolicyMaintenanceWindows>? MaintenanceWindows { get; set; }
+}
+
+public enum V1beta1ClusterSpecInitProviderNetworkConfigNetworkRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1ClusterSpecInitProviderNetworkConfigNetworkRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1ClusterSpecInitProviderNetworkConfigNetworkRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecInitProviderNetworkConfigNetworkRefPolicyResolutionEnum>))]
+    public V1beta1ClusterSpecInitProviderNetworkConfigNetworkRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecInitProviderNetworkConfigNetworkRefPolicyResolveEnum>))]
+    public V1beta1ClusterSpecInitProviderNetworkConfigNetworkRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1ClusterSpecInitProviderNetworkConfigNetworkRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ClusterSpecInitProviderNetworkConfigNetworkRefPolicy? Policy { get; set; }
+}
+
+public enum V1beta1ClusterSpecInitProviderNetworkConfigNetworkSelectorPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1ClusterSpecInitProviderNetworkConfigNetworkSelectorPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1ClusterSpecInitProviderNetworkConfigNetworkSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecInitProviderNetworkConfigNetworkSelectorPolicyResolutionEnum>))]
+    public V1beta1ClusterSpecInitProviderNetworkConfigNetworkSelectorPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecInitProviderNetworkConfigNetworkSelectorPolicyResolveEnum>))]
+    public V1beta1ClusterSpecInitProviderNetworkConfigNetworkSelectorPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1ClusterSpecInitProviderNetworkConfigNetworkSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ClusterSpecInitProviderNetworkConfigNetworkSelectorPolicy? Policy { get; set; }
+}
+
+public partial class V1beta1ClusterSpecInitProviderNetworkConfig
+{
+    /// <summary>The name of the allocated IP range for the private IP AlloyDB cluster. For example: "google-managed-services-default". If set, the instance IPs for this cluster will be created in the allocated range.</summary>
+    [JsonPropertyName("allocatedIpRange")]
+    public string? AllocatedIpRange { get; set; }
+
+    /// <summary>The resource link for the VPC network in which cluster resources are created and from which they are accessible via Private IP. The network must belong to the same project as the cluster. It is specified in the form: "projects/{projectNumber}/global/networks/{network_id}".</summary>
+    [JsonPropertyName("network")]
+    public string? Network { get; set; }
+
+    /// <summary>Reference to a Network in compute to populate network.</summary>
+    [JsonPropertyName("networkRef")]
+    public V1beta1ClusterSpecInitProviderNetworkConfigNetworkRef? NetworkRef { get; set; }
+
+    /// <summary>Selector for a Network in compute to populate network.</summary>
+    [JsonPropertyName("networkSelector")]
+    public V1beta1ClusterSpecInitProviderNetworkConfigNetworkSelector? NetworkSelector { get; set; }
+}
+
+public enum V1beta1ClusterSpecInitProviderNetworkRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1ClusterSpecInitProviderNetworkRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1ClusterSpecInitProviderNetworkRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecInitProviderNetworkRefPolicyResolutionEnum>))]
+    public V1beta1ClusterSpecInitProviderNetworkRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecInitProviderNetworkRefPolicyResolveEnum>))]
+    public V1beta1ClusterSpecInitProviderNetworkRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1ClusterSpecInitProviderNetworkRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ClusterSpecInitProviderNetworkRefPolicy? Policy { get; set; }
+}
+
+public enum V1beta1ClusterSpecInitProviderNetworkSelectorPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1ClusterSpecInitProviderNetworkSelectorPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1ClusterSpecInitProviderNetworkSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecInitProviderNetworkSelectorPolicyResolutionEnum>))]
+    public V1beta1ClusterSpecInitProviderNetworkSelectorPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecInitProviderNetworkSelectorPolicyResolveEnum>))]
+    public V1beta1ClusterSpecInitProviderNetworkSelectorPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1ClusterSpecInitProviderNetworkSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ClusterSpecInitProviderNetworkSelectorPolicy? Policy { get; set; }
+}
+
+public partial class V1beta1ClusterSpecInitProviderPscConfig
+{
+    /// <summary>Create an instance that allows connections from Private Service Connect endpoints to the instance.</summary>
+    [JsonPropertyName("pscEnabled")]
+    public bool? PscEnabled { get; set; }
+}
+
+public enum V1beta1ClusterSpecInitProviderRestoreBackupSourceBackupNameRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1ClusterSpecInitProviderRestoreBackupSourceBackupNameRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1ClusterSpecInitProviderRestoreBackupSourceBackupNameRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecInitProviderRestoreBackupSourceBackupNameRefPolicyResolutionEnum>))]
+    public V1beta1ClusterSpecInitProviderRestoreBackupSourceBackupNameRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecInitProviderRestoreBackupSourceBackupNameRefPolicyResolveEnum>))]
+    public V1beta1ClusterSpecInitProviderRestoreBackupSourceBackupNameRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1ClusterSpecInitProviderRestoreBackupSourceBackupNameRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ClusterSpecInitProviderRestoreBackupSourceBackupNameRefPolicy? Policy { get; set; }
+}
+
+public enum V1beta1ClusterSpecInitProviderRestoreBackupSourceBackupNameSelectorPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1ClusterSpecInitProviderRestoreBackupSourceBackupNameSelectorPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1ClusterSpecInitProviderRestoreBackupSourceBackupNameSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecInitProviderRestoreBackupSourceBackupNameSelectorPolicyResolutionEnum>))]
+    public V1beta1ClusterSpecInitProviderRestoreBackupSourceBackupNameSelectorPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecInitProviderRestoreBackupSourceBackupNameSelectorPolicyResolveEnum>))]
+    public V1beta1ClusterSpecInitProviderRestoreBackupSourceBackupNameSelectorPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1ClusterSpecInitProviderRestoreBackupSourceBackupNameSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ClusterSpecInitProviderRestoreBackupSourceBackupNameSelectorPolicy? Policy { get; set; }
+}
+
+public partial class V1beta1ClusterSpecInitProviderRestoreBackupSource
+{
+    /// <summary>The name of the backup that this cluster is restored from.</summary>
+    [JsonPropertyName("backupName")]
+    public string? BackupName { get; set; }
+
+    /// <summary>Reference to a Backup in alloydb to populate backupName.</summary>
+    [JsonPropertyName("backupNameRef")]
+    public V1beta1ClusterSpecInitProviderRestoreBackupSourceBackupNameRef? BackupNameRef { get; set; }
+
+    /// <summary>Selector for a Backup in alloydb to populate backupName.</summary>
+    [JsonPropertyName("backupNameSelector")]
+    public V1beta1ClusterSpecInitProviderRestoreBackupSourceBackupNameSelector? BackupNameSelector { get; set; }
+}
+
+public enum V1beta1ClusterSpecInitProviderRestoreContinuousBackupSourceClusterRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1ClusterSpecInitProviderRestoreContinuousBackupSourceClusterRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1ClusterSpecInitProviderRestoreContinuousBackupSourceClusterRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecInitProviderRestoreContinuousBackupSourceClusterRefPolicyResolutionEnum>))]
+    public V1beta1ClusterSpecInitProviderRestoreContinuousBackupSourceClusterRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecInitProviderRestoreContinuousBackupSourceClusterRefPolicyResolveEnum>))]
+    public V1beta1ClusterSpecInitProviderRestoreContinuousBackupSourceClusterRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1ClusterSpecInitProviderRestoreContinuousBackupSourceClusterRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ClusterSpecInitProviderRestoreContinuousBackupSourceClusterRefPolicy? Policy { get; set; }
+}
+
+public enum V1beta1ClusterSpecInitProviderRestoreContinuousBackupSourceClusterSelectorPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1ClusterSpecInitProviderRestoreContinuousBackupSourceClusterSelectorPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1ClusterSpecInitProviderRestoreContinuousBackupSourceClusterSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecInitProviderRestoreContinuousBackupSourceClusterSelectorPolicyResolutionEnum>))]
+    public V1beta1ClusterSpecInitProviderRestoreContinuousBackupSourceClusterSelectorPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecInitProviderRestoreContinuousBackupSourceClusterSelectorPolicyResolveEnum>))]
+    public V1beta1ClusterSpecInitProviderRestoreContinuousBackupSourceClusterSelectorPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1ClusterSpecInitProviderRestoreContinuousBackupSourceClusterSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ClusterSpecInitProviderRestoreContinuousBackupSourceClusterSelectorPolicy? Policy { get; set; }
+}
+
+public partial class V1beta1ClusterSpecInitProviderRestoreContinuousBackupSource
+{
+    /// <summary>The name of the source cluster that this cluster is restored from.</summary>
+    [JsonPropertyName("cluster")]
+    public string? Cluster { get; set; }
+
+    /// <summary>Reference to a Cluster in alloydb to populate cluster.</summary>
+    [JsonPropertyName("clusterRef")]
+    public V1beta1ClusterSpecInitProviderRestoreContinuousBackupSourceClusterRef? ClusterRef { get; set; }
+
+    /// <summary>Selector for a Cluster in alloydb to populate cluster.</summary>
+    [JsonPropertyName("clusterSelector")]
+    public V1beta1ClusterSpecInitProviderRestoreContinuousBackupSourceClusterSelector? ClusterSelector { get; set; }
+
+    /// <summary>The point in time that this cluster is restored to, in RFC 3339 format.</summary>
+    [JsonPropertyName("pointInTime")]
+    public string? PointInTime { get; set; }
+}
+
+public enum V1beta1ClusterSpecInitProviderSecondaryConfigPrimaryClusterNameRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1ClusterSpecInitProviderSecondaryConfigPrimaryClusterNameRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1ClusterSpecInitProviderSecondaryConfigPrimaryClusterNameRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecInitProviderSecondaryConfigPrimaryClusterNameRefPolicyResolutionEnum>))]
+    public V1beta1ClusterSpecInitProviderSecondaryConfigPrimaryClusterNameRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecInitProviderSecondaryConfigPrimaryClusterNameRefPolicyResolveEnum>))]
+    public V1beta1ClusterSpecInitProviderSecondaryConfigPrimaryClusterNameRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1ClusterSpecInitProviderSecondaryConfigPrimaryClusterNameRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ClusterSpecInitProviderSecondaryConfigPrimaryClusterNameRefPolicy? Policy { get; set; }
+}
+
+public enum V1beta1ClusterSpecInitProviderSecondaryConfigPrimaryClusterNameSelectorPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1ClusterSpecInitProviderSecondaryConfigPrimaryClusterNameSelectorPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1ClusterSpecInitProviderSecondaryConfigPrimaryClusterNameSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecInitProviderSecondaryConfigPrimaryClusterNameSelectorPolicyResolutionEnum>))]
+    public V1beta1ClusterSpecInitProviderSecondaryConfigPrimaryClusterNameSelectorPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecInitProviderSecondaryConfigPrimaryClusterNameSelectorPolicyResolveEnum>))]
+    public V1beta1ClusterSpecInitProviderSecondaryConfigPrimaryClusterNameSelectorPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1ClusterSpecInitProviderSecondaryConfigPrimaryClusterNameSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ClusterSpecInitProviderSecondaryConfigPrimaryClusterNameSelectorPolicy? Policy { get; set; }
+}
+
+public partial class V1beta1ClusterSpecInitProviderSecondaryConfig
+{
+    /// <summary>Name of the primary cluster must be in the format 'projects/{project}/locations/{location}/clusters/{cluster_id}'</summary>
+    [JsonPropertyName("primaryClusterName")]
+    public string? PrimaryClusterName { get; set; }
+
+    /// <summary>Reference to a Cluster in alloydb to populate primaryClusterName.</summary>
+    [JsonPropertyName("primaryClusterNameRef")]
+    public V1beta1ClusterSpecInitProviderSecondaryConfigPrimaryClusterNameRef? PrimaryClusterNameRef { get; set; }
+
+    /// <summary>Selector for a Cluster in alloydb to populate primaryClusterName.</summary>
+    [JsonPropertyName("primaryClusterNameSelector")]
+    public V1beta1ClusterSpecInitProviderSecondaryConfigPrimaryClusterNameSelector? PrimaryClusterNameSelector { get; set; }
+}
+
+public partial class V1beta1ClusterSpecInitProvider
+{
+    /// <summary>Annotations to allow client tools to store small amount of arbitrary data. This is distinct from labels. https://google.aip.dev/128 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.</summary>
+    [JsonPropertyName("annotations")]
+    public IDictionary<string, string>? Annotations { get; set; }
+
+    /// <summary>The automated backup policy for this cluster. AutomatedBackupPolicy is disabled by default. Structure is documented below.</summary>
+    [JsonPropertyName("automatedBackupPolicy")]
+    public IList<V1beta1ClusterSpecInitProviderAutomatedBackupPolicy>? AutomatedBackupPolicy { get; set; }
+
+    /// <summary>The type of cluster. If not set, defaults to PRIMARY. Default value is PRIMARY. Possible values are: PRIMARY, SECONDARY.</summary>
+    [JsonPropertyName("clusterType")]
+    public string? ClusterType { get; set; }
+
+    /// <summary>The continuous backup config for this cluster. If no policy is provided then the default policy will be used. The default policy takes one backup a day and retains backups for 14 days. Structure is documented below.</summary>
+    [JsonPropertyName("continuousBackupConfig")]
+    public IList<V1beta1ClusterSpecInitProviderContinuousBackupConfig>? ContinuousBackupConfig { get; set; }
+
+    /// <summary>The database engine major version. This is an optional field and it's populated at the Cluster creation time. This field cannot be changed after cluster creation.</summary>
+    [JsonPropertyName("databaseVersion")]
+    public string? DatabaseVersion { get; set; }
+
+    /// <summary>Policy to determine if the cluster should be deleted forcefully. Deleting a cluster forcefully, deletes the cluster and all its associated instances within the cluster. Deleting a Secondary cluster with a secondary instance REQUIRES setting deletion_policy = "FORCE" otherwise an error is returned. This is needed as there is no support to delete just the secondary instance, and the only way to delete secondary instance is to delete the associated secondary cluster forcefully which also deletes the secondary instance.</summary>
+    [JsonPropertyName("deletionPolicy")]
+    public string? DeletionPolicy { get; set; }
+
+    /// <summary>User-settable and human-readable display name for the Cluster.</summary>
+    [JsonPropertyName("displayName")]
+    public string? DisplayName { get; set; }
+
+    /// <summary>EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key). Structure is documented below.</summary>
+    [JsonPropertyName("encryptionConfig")]
+    public IList<V1beta1ClusterSpecInitProviderEncryptionConfig>? EncryptionConfig { get; set; }
+
+    /// <summary>For Resource freshness validation (https://google.aip.dev/154)</summary>
+    [JsonPropertyName("etag")]
+    public string? Etag { get; set; }
+
+    /// <summary>Initial user to setup during cluster creation. Structure is documented below.</summary>
+    [JsonPropertyName("initialUser")]
+    public IList<V1beta1ClusterSpecInitProviderInitialUser>? InitialUser { get; set; }
+
+    /// <summary>User-defined labels for the alloydb cluster. Note: This field is non-authoritative, and will only manage the labels present in your configuration. Please refer to the field effective_labels for all of the labels present on the resource.</summary>
+    [JsonPropertyName("labels")]
+    public IDictionary<string, string>? Labels { get; set; }
+
+    /// <summary>MaintenanceUpdatePolicy defines the policy for system updates. Structure is documented below.</summary>
+    [JsonPropertyName("maintenanceUpdatePolicy")]
+    public IList<V1beta1ClusterSpecInitProviderMaintenanceUpdatePolicy>? MaintenanceUpdatePolicy { get; set; }
+
+    /// <summary>The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form: "projects/{projectNumber}/global/networks/{network_id}".</summary>
+    [JsonPropertyName("network")]
+    public string? Network { get; set; }
+
+    /// <summary>Metadata related to network configuration. Structure is documented below.</summary>
+    [JsonPropertyName("networkConfig")]
+    public IList<V1beta1ClusterSpecInitProviderNetworkConfig>? NetworkConfig { get; set; }
+
+    /// <summary>Reference to a Network in compute to populate network.</summary>
+    [JsonPropertyName("networkRef")]
+    public V1beta1ClusterSpecInitProviderNetworkRef? NetworkRef { get; set; }
+
+    /// <summary>Selector for a Network in compute to populate network.</summary>
+    [JsonPropertyName("networkSelector")]
+    public V1beta1ClusterSpecInitProviderNetworkSelector? NetworkSelector { get; set; }
+
+    /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
+    [JsonPropertyName("project")]
+    public string? Project { get; set; }
+
+    /// <summary>Configuration for Private Service Connect (PSC) for the cluster. Structure is documented below.</summary>
+    [JsonPropertyName("pscConfig")]
+    public IList<V1beta1ClusterSpecInitProviderPscConfig>? PscConfig { get; set; }
+
+    /// <summary>The source when restoring from a backup. Conflicts with 'restore_continuous_backup_source', both can't be set together. Structure is documented below.</summary>
+    [JsonPropertyName("restoreBackupSource")]
+    public IList<V1beta1ClusterSpecInitProviderRestoreBackupSource>? RestoreBackupSource { get; set; }
+
+    /// <summary>The source when restoring via point in time recovery (PITR). Conflicts with 'restore_backup_source', both can't be set together. Structure is documented below.</summary>
+    [JsonPropertyName("restoreContinuousBackupSource")]
+    public IList<V1beta1ClusterSpecInitProviderRestoreContinuousBackupSource>? RestoreContinuousBackupSource { get; set; }
+
+    /// <summary>Configuration of the secondary cluster for Cross Region Replication. This should be set if and only if the cluster is of type SECONDARY. Structure is documented below.</summary>
+    [JsonPropertyName("secondaryConfig")]
+    public IList<V1beta1ClusterSpecInitProviderSecondaryConfig>? SecondaryConfig { get; set; }
+}
+
+public enum V1beta1ClusterSpecManagementPoliciesEnum
+{
+    [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
+    /// <summary>Observe</summary>
+    Observe,
+    [EnumMember(Value = "Create"), JsonStringEnumMemberName("Create")]
+    /// <summary>Create</summary>
+    Create,
+    [EnumMember(Value = "Update"), JsonStringEnumMemberName("Update")]
+    /// <summary>Update</summary>
+    Update,
+    [EnumMember(Value = "Delete"), JsonStringEnumMemberName("Delete")]
+    /// <summary>Delete</summary>
+    Delete,
+    [EnumMember(Value = "LateInitialize"), JsonStringEnumMemberName("LateInitialize")]
+    /// <summary>LateInitialize</summary>
+    LateInitialize,
+    [EnumMember(Value = "*"), JsonStringEnumMemberName("*")]
+    /// <summary>*</summary>
+    Option5
+}
+
+public enum V1beta1ClusterSpecProviderConfigRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1ClusterSpecProviderConfigRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1ClusterSpecProviderConfigRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecProviderConfigRefPolicyResolutionEnum>))]
+    public V1beta1ClusterSpecProviderConfigRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecProviderConfigRefPolicyResolveEnum>))]
+    public V1beta1ClusterSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1ClusterSpecProviderConfigRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ClusterSpecProviderConfigRefPolicy? Policy { get; set; }
+}
+
+public enum V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum>))]
+    public V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum>))]
+    public V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1ClusterSpecPublishConnectionDetailsToConfigRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
+}
+
+public partial class V1beta1ClusterSpecPublishConnectionDetailsToMetadata
+{
+    /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
+    [JsonPropertyName("annotations")]
+    public IDictionary<string, string>? Annotations { get; set; }
+
+    /// <summary>Labels are the labels/tags to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.labels". - It is up to Secret Store implementation for others store types.</summary>
+    [JsonPropertyName("labels")]
+    public IDictionary<string, string>? Labels { get; set; }
+
+    /// <summary>Type is the SecretType for the connection secret. - Only valid for Kubernetes Secret Stores.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
+public partial class V1beta1ClusterSpecPublishConnectionDetailsTo
+{
+    /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+    [JsonPropertyName("configRef")]
+    public V1beta1ClusterSpecPublishConnectionDetailsToConfigRef? ConfigRef { get; set; }
+
+    /// <summary>Metadata is the metadata for connection secret.</summary>
+    [JsonPropertyName("metadata")]
+    public V1beta1ClusterSpecPublishConnectionDetailsToMetadata? Metadata { get; set; }
+
+    /// <summary>Name is the name of the connection secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
+public partial class V1beta1ClusterSpecWriteConnectionSecretToRef
+{
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+public partial class V1beta1ClusterSpec
+{
+    /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
+    [JsonPropertyName("deletionPolicy")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ClusterSpecDeletionPolicyEnum>))]
+    public V1beta1ClusterSpecDeletionPolicyEnum? DeletionPolicy { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("forProvider")]
+    public V1beta1ClusterSpecForProvider ForProvider { get; set; }
+
+    /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+    [JsonPropertyName("initProvider")]
+    public V1beta1ClusterSpecInitProvider? InitProvider { get; set; }
+
+    /// <summary>THIS IS A BETA FIELD. It is on by default but can be opted out through a Crossplane feature flag. ManagementPolicies specify the array of actions Crossplane is allowed to take on the managed and external resources. This field is planned to replace the DeletionPolicy field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. If both are custom, the DeletionPolicy field will be ignored. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223 and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md</summary>
+    [JsonPropertyName("managementPolicies")]
+    public IList<V1beta1ClusterSpecManagementPoliciesEnum>? ManagementPolicies { get; set; }
+
+    /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+    [JsonPropertyName("providerConfigRef")]
+    public V1beta1ClusterSpecProviderConfigRef? ProviderConfigRef { get; set; }
+
+    /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+    [JsonPropertyName("publishConnectionDetailsTo")]
+    public V1beta1ClusterSpecPublishConnectionDetailsTo? PublishConnectionDetailsTo { get; set; }
+
+    /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+    [JsonPropertyName("writeConnectionSecretToRef")]
+    public V1beta1ClusterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
+}
+
+public partial class V1beta1ClusterStatusAtProviderAutomatedBackupPolicyEncryptionConfig
+{
+    /// <summary>The fully-qualified resource name of the KMS key. Each Cloud KMS key is regionalized and has the following format: projects/[PROJECT]/locations/[REGION]/keyRings/[RING]/cryptoKeys/[KEY_NAME].</summary>
+    [JsonPropertyName("kmsKeyName")]
+    public string? KmsKeyName { get; set; }
+}
+
+public partial class V1beta1ClusterStatusAtProviderAutomatedBackupPolicyQuantityBasedRetention
+{
+    /// <summary>The number of backups to retain.</summary>
+    [JsonPropertyName("count")]
+    public double? Count { get; set; }
+}
+
+public partial class V1beta1ClusterStatusAtProviderAutomatedBackupPolicyTimeBasedRetention
+{
+    /// <summary>The retention period. A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".</summary>
+    [JsonPropertyName("retentionPeriod")]
+    public string? RetentionPeriod { get; set; }
+}
+
+public partial class V1beta1ClusterStatusAtProviderAutomatedBackupPolicyWeeklyScheduleStartTimes
+{
+    /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
+    [JsonPropertyName("hours")]
+    public double? Hours { get; set; }
+
+    /// <summary>Minutes of hour of day. Currently, only the value 0 is supported.</summary>
+    [JsonPropertyName("minutes")]
+    public double? Minutes { get; set; }
+
+    /// <summary>Fractions of seconds in nanoseconds. Currently, only the value 0 is supported.</summary>
+    [JsonPropertyName("nanos")]
+    public double? Nanos { get; set; }
+
+    /// <summary>Seconds of minutes of the time. Currently, only the value 0 is supported.</summary>
+    [JsonPropertyName("seconds")]
+    public double? Seconds { get; set; }
+}
+
+public partial class V1beta1ClusterStatusAtProviderAutomatedBackupPolicyWeeklySchedule
+{
+    /// <summary>The days of the week to perform a backup. At least one day of the week must be provided. Each value may be one of: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.</summary>
+    [JsonPropertyName("daysOfWeek")]
+    public IList<string>? DaysOfWeek { get; set; }
+
+    /// <summary>The times during the day to start a backup. At least one start time must be provided. The start times are assumed to be in UTC and to be an exact hour (e.g., 04:00:00). Structure is documented below.</summary>
+    [JsonPropertyName("startTimes")]
+    public IList<V1beta1ClusterStatusAtProviderAutomatedBackupPolicyWeeklyScheduleStartTimes>? StartTimes { get; set; }
+}
+
+public partial class V1beta1ClusterStatusAtProviderAutomatedBackupPolicy
+{
+    /// <summary>The length of the time window during which a backup can be taken. If a backup does not succeed within this time window, it will be canceled and considered failed. The backup window must be at least 5 minutes long. There is no upper bound on the window. If not set, it will default to 1 hour. A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".</summary>
+    [JsonPropertyName("backupWindow")]
+    public string? BackupWindow { get; set; }
+
+    /// <summary>Whether automated backups are enabled.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key). Structure is documented below.</summary>
+    [JsonPropertyName("encryptionConfig")]
+    public IList<V1beta1ClusterStatusAtProviderAutomatedBackupPolicyEncryptionConfig>? EncryptionConfig { get; set; }
+
+    /// <summary>Labels to apply to backups created using this configuration.</summary>
+    [JsonPropertyName("labels")]
+    public IDictionary<string, string>? Labels { get; set; }
+
+    /// <summary>The location where the backup will be stored. Currently, the only supported option is to store the backup in the same region as the cluster.</summary>
+    [JsonPropertyName("location")]
+    public string? Location { get; set; }
+
+    /// <summary>Quantity-based Backup retention policy to retain recent backups. Conflicts with 'time_based_retention', both can't be set together. Structure is documented below.</summary>
+    [JsonPropertyName("quantityBasedRetention")]
+    public IList<V1beta1ClusterStatusAtProviderAutomatedBackupPolicyQuantityBasedRetention>? QuantityBasedRetention { get; set; }
+
+    /// <summary>Time-based Backup retention policy. Conflicts with 'quantity_based_retention', both can't be set together. Structure is documented below.</summary>
+    [JsonPropertyName("timeBasedRetention")]
+    public IList<V1beta1ClusterStatusAtProviderAutomatedBackupPolicyTimeBasedRetention>? TimeBasedRetention { get; set; }
+
+    /// <summary>Weekly schedule for the Backup. Structure is documented below.</summary>
+    [JsonPropertyName("weeklySchedule")]
+    public IList<V1beta1ClusterStatusAtProviderAutomatedBackupPolicyWeeklySchedule>? WeeklySchedule { get; set; }
+}
+
+public partial class V1beta1ClusterStatusAtProviderBackupSource
+{
+    /// <summary>The name of the backup resource.</summary>
+    [JsonPropertyName("backupName")]
+    public string? BackupName { get; set; }
+}
+
+public partial class V1beta1ClusterStatusAtProviderContinuousBackupConfigEncryptionConfig
+{
+    /// <summary>The fully-qualified resource name of the KMS key. Each Cloud KMS key is regionalized and has the following format: projects/[PROJECT]/locations/[REGION]/keyRings/[RING]/cryptoKeys/[KEY_NAME].</summary>
+    [JsonPropertyName("kmsKeyName")]
+    public string? KmsKeyName { get; set; }
+}
+
+public partial class V1beta1ClusterStatusAtProviderContinuousBackupConfig
+{
+    /// <summary>Whether continuous backup recovery is enabled. If not set, defaults to true.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key). Structure is documented below.</summary>
+    [JsonPropertyName("encryptionConfig")]
+    public IList<V1beta1ClusterStatusAtProviderContinuousBackupConfigEncryptionConfig>? EncryptionConfig { get; set; }
+
+    /// <summary>The numbers of days that are eligible to restore from using PITR. To support the entire recovery window, backups and logs are retained for one day more than the recovery window. If not set, defaults to 14 days.</summary>
+    [JsonPropertyName("recoveryWindowDays")]
+    public double? RecoveryWindowDays { get; set; }
+}
+
+public partial class V1beta1ClusterStatusAtProviderContinuousBackupInfoEncryptionInfo
+{
+    /// <summary>(Output) Output only. Type of encryption.</summary>
+    [JsonPropertyName("encryptionType")]
+    public string? EncryptionType { get; set; }
+
+    /// <summary>(Output) Output only. Cloud KMS key versions that are being used to protect the database or the backup.</summary>
+    [JsonPropertyName("kmsKeyVersions")]
+    public IList<string>? KmsKeyVersions { get; set; }
+}
+
+public partial class V1beta1ClusterStatusAtProviderContinuousBackupInfo
+{
+    /// <summary>(Output) The earliest restorable time that can be restored to. Output only field.</summary>
+    [JsonPropertyName("earliestRestorableTime")]
+    public string? EarliestRestorableTime { get; set; }
+
+    /// <summary>(Output) When ContinuousBackup was most recently enabled. Set to null if ContinuousBackup is not enabled.</summary>
+    [JsonPropertyName("enabledTime")]
+    public string? EnabledTime { get; set; }
+
+    /// <summary>(Output) Output only. The encryption information for the WALs and backups required for ContinuousBackup. Structure is documented below.</summary>
+    [JsonPropertyName("encryptionInfo")]
+    public IList<V1beta1ClusterStatusAtProviderContinuousBackupInfoEncryptionInfo>? EncryptionInfo { get; set; }
+
+    /// <summary>(Output) Days of the week on which a continuous backup is taken. Output only field. Ignored if passed into the request.</summary>
+    [JsonPropertyName("schedule")]
+    public IList<string>? Schedule { get; set; }
+}
+
+public partial class V1beta1ClusterStatusAtProviderEncryptionConfig
+{
+    /// <summary>The fully-qualified resource name of the KMS key. Each Cloud KMS key is regionalized and has the following format: projects/[PROJECT]/locations/[REGION]/keyRings/[RING]/cryptoKeys/[KEY_NAME].</summary>
+    [JsonPropertyName("kmsKeyName")]
+    public string? KmsKeyName { get; set; }
+}
+
+public partial class V1beta1ClusterStatusAtProviderEncryptionInfo
+{
+    /// <summary>(Output) Output only. Type of encryption.</summary>
+    [JsonPropertyName("encryptionType")]
+    public string? EncryptionType { get; set; }
+
+    /// <summary>(Output) Output only. Cloud KMS key versions that are being used to protect the database or the backup.</summary>
+    [JsonPropertyName("kmsKeyVersions")]
+    public IList<string>? KmsKeyVersions { get; set; }
+}
+
+public partial class V1beta1ClusterStatusAtProviderInitialUser
+{
+    /// <summary>The database username.</summary>
+    [JsonPropertyName("user")]
+    public string? User { get; set; }
+}
+
+public partial class V1beta1ClusterStatusAtProviderMaintenanceUpdatePolicyMaintenanceWindowsStartTime
+{
+    /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
+    [JsonPropertyName("hours")]
+    public double? Hours { get; set; }
+
+    /// <summary>Minutes of hour of day. Currently, only the value 0 is supported.</summary>
+    [JsonPropertyName("minutes")]
+    public double? Minutes { get; set; }
+
+    /// <summary>Fractions of seconds in nanoseconds. Currently, only the value 0 is supported.</summary>
+    [JsonPropertyName("nanos")]
+    public double? Nanos { get; set; }
+
+    /// <summary>Seconds of minutes of the time. Currently, only the value 0 is supported.</summary>
+    [JsonPropertyName("seconds")]
+    public double? Seconds { get; set; }
+}
+
+public partial class V1beta1ClusterStatusAtProviderMaintenanceUpdatePolicyMaintenanceWindows
+{
+    /// <summary>Preferred day of the week for maintenance, e.g. MONDAY, TUESDAY, etc. Possible values are: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.</summary>
+    [JsonPropertyName("day")]
+    public string? Day { get; set; }
+
+    /// <summary>Preferred time to start the maintenance operation on the specified day. Maintenance will start within 1 hour of this time. Structure is documented below.</summary>
+    [JsonPropertyName("startTime")]
+    public IList<V1beta1ClusterStatusAtProviderMaintenanceUpdatePolicyMaintenanceWindowsStartTime>? StartTime { get; set; }
+}
+
+public partial class V1beta1ClusterStatusAtProviderMaintenanceUpdatePolicy
+{
+    /// <summary>Preferred windows to perform maintenance. Currently limited to 1. Structure is documented below.</summary>
+    [JsonPropertyName("maintenanceWindows")]
+    public IList<V1beta1ClusterStatusAtProviderMaintenanceUpdatePolicyMaintenanceWindows>? MaintenanceWindows { get; set; }
+}
+
+public partial class V1beta1ClusterStatusAtProviderMigrationSource
+{
+    /// <summary>The host and port of the on-premises instance in host:port format</summary>
+    [JsonPropertyName("hostPort")]
+    public string? HostPort { get; set; }
+
+    /// <summary>Place holder for the external source identifier(e.g DMS job name) that created the cluster.</summary>
+    [JsonPropertyName("referenceId")]
+    public string? ReferenceId { get; set; }
+
+    /// <summary>Type of migration source.</summary>
+    [JsonPropertyName("sourceType")]
+    public string? SourceType { get; set; }
+}
+
+public partial class V1beta1ClusterStatusAtProviderNetworkConfig
+{
+    /// <summary>The name of the allocated IP range for the private IP AlloyDB cluster. For example: "google-managed-services-default". If set, the instance IPs for this cluster will be created in the allocated range.</summary>
+    [JsonPropertyName("allocatedIpRange")]
+    public string? AllocatedIpRange { get; set; }
+
+    /// <summary>The resource link for the VPC network in which cluster resources are created and from which they are accessible via Private IP. The network must belong to the same project as the cluster. It is specified in the form: "projects/{projectNumber}/global/networks/{network_id}".</summary>
+    [JsonPropertyName("network")]
+    public string? Network { get; set; }
+}
+
+public partial class V1beta1ClusterStatusAtProviderPscConfig
+{
+    /// <summary>Create an instance that allows connections from Private Service Connect endpoints to the instance.</summary>
+    [JsonPropertyName("pscEnabled")]
+    public bool? PscEnabled { get; set; }
+}
+
+public partial class V1beta1ClusterStatusAtProviderRestoreBackupSource
+{
+    /// <summary>The name of the backup that this cluster is restored from.</summary>
+    [JsonPropertyName("backupName")]
+    public string? BackupName { get; set; }
+}
+
+public partial class V1beta1ClusterStatusAtProviderRestoreContinuousBackupSource
+{
+    /// <summary>The name of the source cluster that this cluster is restored from.</summary>
+    [JsonPropertyName("cluster")]
+    public string? Cluster { get; set; }
+
+    /// <summary>The point in time that this cluster is restored to, in RFC 3339 format.</summary>
+    [JsonPropertyName("pointInTime")]
+    public string? PointInTime { get; set; }
+}
+
+public partial class V1beta1ClusterStatusAtProviderSecondaryConfig
+{
+    /// <summary>Name of the primary cluster must be in the format 'projects/{project}/locations/{location}/clusters/{cluster_id}'</summary>
+    [JsonPropertyName("primaryClusterName")]
+    public string? PrimaryClusterName { get; set; }
+}
+
+public partial class V1beta1ClusterStatusAtProvider
+{
+    /// <summary>Annotations to allow client tools to store small amount of arbitrary data. This is distinct from labels. https://google.aip.dev/128 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.</summary>
+    [JsonPropertyName("annotations")]
+    public IDictionary<string, string>? Annotations { get; set; }
+
+    /// <summary>The automated backup policy for this cluster. AutomatedBackupPolicy is disabled by default. Structure is documented below.</summary>
+    [JsonPropertyName("automatedBackupPolicy")]
+    public IList<V1beta1ClusterStatusAtProviderAutomatedBackupPolicy>? AutomatedBackupPolicy { get; set; }
+
+    /// <summary>Cluster created from backup. Structure is documented below.</summary>
+    [JsonPropertyName("backupSource")]
+    public IList<V1beta1ClusterStatusAtProviderBackupSource>? BackupSource { get; set; }
+
+    /// <summary>The type of cluster. If not set, defaults to PRIMARY. Default value is PRIMARY. Possible values are: PRIMARY, SECONDARY.</summary>
+    [JsonPropertyName("clusterType")]
+    public string? ClusterType { get; set; }
+
+    /// <summary>The continuous backup config for this cluster. If no policy is provided then the default policy will be used. The default policy takes one backup a day and retains backups for 14 days. Structure is documented below.</summary>
+    [JsonPropertyName("continuousBackupConfig")]
+    public IList<V1beta1ClusterStatusAtProviderContinuousBackupConfig>? ContinuousBackupConfig { get; set; }
+
+    /// <summary>ContinuousBackupInfo describes the continuous backup properties of a cluster. Structure is documented below.</summary>
+    [JsonPropertyName("continuousBackupInfo")]
+    public IList<V1beta1ClusterStatusAtProviderContinuousBackupInfo>? ContinuousBackupInfo { get; set; }
+
+    /// <summary>The database engine major version. This is an optional field and it's populated at the Cluster creation time. This field cannot be changed after cluster creation.</summary>
+    [JsonPropertyName("databaseVersion")]
+    public string? DatabaseVersion { get; set; }
+
+    /// <summary>Policy to determine if the cluster should be deleted forcefully. Deleting a cluster forcefully, deletes the cluster and all its associated instances within the cluster. Deleting a Secondary cluster with a secondary instance REQUIRES setting deletion_policy = "FORCE" otherwise an error is returned. This is needed as there is no support to delete just the secondary instance, and the only way to delete secondary instance is to delete the associated secondary cluster forcefully which also deletes the secondary instance.</summary>
+    [JsonPropertyName("deletionPolicy")]
+    public string? DeletionPolicy { get; set; }
+
+    /// <summary>User-settable and human-readable display name for the Cluster.</summary>
+    [JsonPropertyName("displayName")]
+    public string? DisplayName { get; set; }
+
+    /// <summary>for all of the annotations present on the resource.</summary>
+    [JsonPropertyName("effectiveAnnotations")]
+    public IDictionary<string, string>? EffectiveAnnotations { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("effectiveLabels")]
+    public IDictionary<string, string>? EffectiveLabels { get; set; }
+
+    /// <summary>EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key). Structure is documented below.</summary>
+    [JsonPropertyName("encryptionConfig")]
+    public IList<V1beta1ClusterStatusAtProviderEncryptionConfig>? EncryptionConfig { get; set; }
+
+    /// <summary>EncryptionInfo describes the encryption information of a cluster or a backup. Structure is documented below.</summary>
+    [JsonPropertyName("encryptionInfo")]
+    public IList<V1beta1ClusterStatusAtProviderEncryptionInfo>? EncryptionInfo { get; set; }
+
+    /// <summary>For Resource freshness validation (https://google.aip.dev/154)</summary>
+    [JsonPropertyName("etag")]
+    public string? Etag { get; set; }
+
+    /// <summary>an identifier for the resource with format projects/{{project}}/locations/{{location}}/clusters/{{cluster_id}}</summary>
+    [JsonPropertyName("id")]
+    public string? Id { get; set; }
+
+    /// <summary>Initial user to setup during cluster creation. Structure is documented below.</summary>
+    [JsonPropertyName("initialUser")]
+    public IList<V1beta1ClusterStatusAtProviderInitialUser>? InitialUser { get; set; }
+
+    /// <summary>User-defined labels for the alloydb cluster. Note: This field is non-authoritative, and will only manage the labels present in your configuration. Please refer to the field effective_labels for all of the labels present on the resource.</summary>
+    [JsonPropertyName("labels")]
+    public IDictionary<string, string>? Labels { get; set; }
+
+    /// <summary>The location where the alloydb cluster should reside.</summary>
+    [JsonPropertyName("location")]
+    public string? Location { get; set; }
+
+    /// <summary>MaintenanceUpdatePolicy defines the policy for system updates. Structure is documented below.</summary>
+    [JsonPropertyName("maintenanceUpdatePolicy")]
+    public IList<V1beta1ClusterStatusAtProviderMaintenanceUpdatePolicy>? MaintenanceUpdatePolicy { get; set; }
+
+    /// <summary>Cluster created via DMS migration. Structure is documented below.</summary>
+    [JsonPropertyName("migrationSource")]
+    public IList<V1beta1ClusterStatusAtProviderMigrationSource>? MigrationSource { get; set; }
+
+    /// <summary>The name of the cluster resource.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form: "projects/{projectNumber}/global/networks/{network_id}".</summary>
+    [JsonPropertyName("network")]
+    public string? Network { get; set; }
+
+    /// <summary>Metadata related to network configuration. Structure is documented below.</summary>
+    [JsonPropertyName("networkConfig")]
+    public IList<V1beta1ClusterStatusAtProviderNetworkConfig>? NetworkConfig { get; set; }
+
+    /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
+    [JsonPropertyName("project")]
+    public string? Project { get; set; }
+
+    /// <summary>Configuration for Private Service Connect (PSC) for the cluster. Structure is documented below.</summary>
+    [JsonPropertyName("pscConfig")]
+    public IList<V1beta1ClusterStatusAtProviderPscConfig>? PscConfig { get; set; }
+
+    /// <summary>Output only. Reconciling (https://google.aip.dev/128#reconciliation). Set to true if the current state of Cluster does not match the user's intended state, and the service is actively updating the resource to reconcile them. This can happen due to user-triggered updates or system actions like failover or maintenance.</summary>
+    [JsonPropertyName("reconciling")]
+    public bool? Reconciling { get; set; }
+
+    /// <summary>The source when restoring from a backup. Conflicts with 'restore_continuous_backup_source', both can't be set together. Structure is documented below.</summary>
+    [JsonPropertyName("restoreBackupSource")]
+    public IList<V1beta1ClusterStatusAtProviderRestoreBackupSource>? RestoreBackupSource { get; set; }
+
+    /// <summary>The source when restoring via point in time recovery (PITR). Conflicts with 'restore_backup_source', both can't be set together. Structure is documented below.</summary>
+    [JsonPropertyName("restoreContinuousBackupSource")]
+    public IList<V1beta1ClusterStatusAtProviderRestoreContinuousBackupSource>? RestoreContinuousBackupSource { get; set; }
+
+    /// <summary>Configuration of the secondary cluster for Cross Region Replication. This should be set if and only if the cluster is of type SECONDARY. Structure is documented below.</summary>
+    [JsonPropertyName("secondaryConfig")]
+    public IList<V1beta1ClusterStatusAtProviderSecondaryConfig>? SecondaryConfig { get; set; }
+
+    /// <summary>Output only. The current serving state of the cluster.</summary>
+    [JsonPropertyName("state")]
+    public string? State { get; set; }
+
+    /// <summary>The combination of labels configured directly on the resource and default labels configured on the provider.</summary>
+    [JsonPropertyName("terraformLabels")]
+    public IDictionary<string, string>? TerraformLabels { get; set; }
+
+    /// <summary>The system-generated UID of the resource.</summary>
+    [JsonPropertyName("uid")]
+    public string? Uid { get; set; }
+}
+
+public partial class V1beta1ClusterStatusConditions
+{
+    /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
+    [JsonPropertyName("lastTransitionTime")]
+    public string LastTransitionTime { get; set; }
+
+    /// <summary>A Message containing details about this condition's last transition from one status to another, if any.</summary>
+    [JsonPropertyName("message")]
+    public string? Message { get; set; }
+
+    /// <summary>ObservedGeneration represents the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.</summary>
+    [JsonPropertyName("observedGeneration")]
+    public long? ObservedGeneration { get; set; }
+
+    /// <summary>A Reason for this condition's last transition from one status to another.</summary>
+    [JsonPropertyName("reason")]
+    public string Reason { get; set; }
+
+    /// <summary>Status of this condition; is it currently True, False, or Unknown?</summary>
+    [JsonPropertyName("status")]
+    public string Status { get; set; }
+
+    /// <summary>Type of this condition. At most one of each condition type may apply to a resource at any point in time.</summary>
+    [JsonPropertyName("type")]
+    public string Type { get; set; }
+}
+
+public partial class V1beta1ClusterStatus
+{
+    /// <summary></summary>
+    [JsonPropertyName("atProvider")]
+    public V1beta1ClusterStatusAtProvider? AtProvider { get; set; }
+
+    /// <summary>Conditions of the resource.</summary>
+    [JsonPropertyName("conditions")]
+    public IList<V1beta1ClusterStatusConditions>? Conditions { get; set; }
+
+    /// <summary>ObservedGeneration is the latest metadata.generation which resulted in either a ready state, or stalled due to error it can not recover from without human intervention.</summary>
+    [JsonPropertyName("observedGeneration")]
+    public long? ObservedGeneration { get; set; }
+}
+
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1Cluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ClusterSpec>, IStatus<V1beta1ClusterStatus>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "Cluster";
+    public const string KubeGroup = "alloydb.gcp.upbound.io";
+    public const string KubePluralName = "clusters";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ObjectMeta Metadata { get; set; }
+
+    /// <summary>ClusterSpec defines the desired state of Cluster</summary>
+    [JsonPropertyName("spec")]
+    public V1beta1ClusterSpec Spec { get; set; }
+
+    /// <summary>ClusterStatus defines the observed state of Cluster.</summary>
+    [JsonPropertyName("status")]
+    public V1beta1ClusterStatus? Status { get; set; }
+}

@@ -26,11 +26,17 @@ jobs:
           version: 'latest'
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Remove Models from Solution
+        run: dotnet sln remove ./src/Models/**/*.csproj
+
       - name: Clean Models
         run: rm -rf ./src/Models/KubernetesCRDModelGen*
 
       - name: Sync CRDs
         run: dotnet run --project ./src/KubernetesCRDModelGen.Sync/KubernetesCRDModelGen.Sync.csproj --ModelDir ../Models
+
+      - name: Add Models to Solution
+        run: dotnet sln add ./src/Models/**/*.csproj
 
       - name: Build Model packages
         shell: pwsh
@@ -48,24 +54,28 @@ jobs:
         working-directory: src/Models
         shell: pwsh
         run: |
-          $SubDirs = Get-ChildItem -Directory -Path $(Get-Location)
-          $AllDirsHaveYaml = $true
-
-          foreach ($Dir in $SubDirs) {
+          foreach ($Dir in Get-ChildItem -Directory) {
             $YamlFiles = Get-ChildItem -Path $Dir.FullName -Filter *.yaml -File -ErrorAction SilentlyContinue
 
             if ($YamlFiles.Count -eq 0) {
-              Write-Error "No .yaml file found in directory: $($Dir.FullName)"
-              $AllDirsHaveYaml = $false
+              throw "No .yaml file found in directory: $($Dir.FullName)"
             }
           }
 
-          if (-not $AllDirsHaveYaml) {
-            throw "Some subdirectories do not contain a .yaml file."
+      - name: Validate Models
+        working-directory: src/Models
+        shell: pwsh
+        run: |
+          foreach ($Dir in Get-ChildItem -Directory) {
+            $CSFiles = Get-ChildItem -Path $Dir.FullName -Filter *.g.cs -File -ErrorAction SilentlyContinue
+
+            if ($CSFiles.Count -eq 0) {
+              throw "No .g.cs file found in directory: $($Dir.FullName)"
+            }
           }
-          else {
-            Write-Host "All subdirectories contain a .yaml file."
-          }
+
+      - name: .NET Build
+        run: dotnet build -c Release
 
       - name: Check Files Changed
         id: checkfiles

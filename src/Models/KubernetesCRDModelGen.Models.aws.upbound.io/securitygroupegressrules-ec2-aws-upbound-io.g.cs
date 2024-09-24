@@ -1,0 +1,1021 @@
+using k8s;
+using k8s.Models;
+using System;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+using System.Text.Json;
+using System.Text.Json.Nodes;
+using System.Text.Json.Serialization;
+
+namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+public enum V1beta1SecurityGroupEgressRuleSpecDeletionPolicyEnum
+{
+    [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
+    /// <summary>Orphan</summary>
+    Orphan,
+    [EnumMember(Value = "Delete"), JsonStringEnumMemberName("Delete")]
+    /// <summary>Delete</summary>
+    Delete
+}
+
+public enum V1beta1SecurityGroupEgressRuleSpecForProviderPrefixListIdRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1SecurityGroupEgressRuleSpecForProviderPrefixListIdRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecForProviderPrefixListIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SecurityGroupEgressRuleSpecForProviderPrefixListIdRefPolicyResolutionEnum>))]
+    public V1beta1SecurityGroupEgressRuleSpecForProviderPrefixListIdRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SecurityGroupEgressRuleSpecForProviderPrefixListIdRefPolicyResolveEnum>))]
+    public V1beta1SecurityGroupEgressRuleSpecForProviderPrefixListIdRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecForProviderPrefixListIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SecurityGroupEgressRuleSpecForProviderPrefixListIdRefPolicy? Policy { get; set; }
+}
+
+public enum V1beta1SecurityGroupEgressRuleSpecForProviderPrefixListIdSelectorPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1SecurityGroupEgressRuleSpecForProviderPrefixListIdSelectorPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecForProviderPrefixListIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SecurityGroupEgressRuleSpecForProviderPrefixListIdSelectorPolicyResolutionEnum>))]
+    public V1beta1SecurityGroupEgressRuleSpecForProviderPrefixListIdSelectorPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SecurityGroupEgressRuleSpecForProviderPrefixListIdSelectorPolicyResolveEnum>))]
+    public V1beta1SecurityGroupEgressRuleSpecForProviderPrefixListIdSelectorPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecForProviderPrefixListIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SecurityGroupEgressRuleSpecForProviderPrefixListIdSelectorPolicy? Policy { get; set; }
+}
+
+public enum V1beta1SecurityGroupEgressRuleSpecForProviderReferencedSecurityGroupIdRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1SecurityGroupEgressRuleSpecForProviderReferencedSecurityGroupIdRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecForProviderReferencedSecurityGroupIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SecurityGroupEgressRuleSpecForProviderReferencedSecurityGroupIdRefPolicyResolutionEnum>))]
+    public V1beta1SecurityGroupEgressRuleSpecForProviderReferencedSecurityGroupIdRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SecurityGroupEgressRuleSpecForProviderReferencedSecurityGroupIdRefPolicyResolveEnum>))]
+    public V1beta1SecurityGroupEgressRuleSpecForProviderReferencedSecurityGroupIdRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecForProviderReferencedSecurityGroupIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SecurityGroupEgressRuleSpecForProviderReferencedSecurityGroupIdRefPolicy? Policy { get; set; }
+}
+
+public enum V1beta1SecurityGroupEgressRuleSpecForProviderReferencedSecurityGroupIdSelectorPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1SecurityGroupEgressRuleSpecForProviderReferencedSecurityGroupIdSelectorPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecForProviderReferencedSecurityGroupIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SecurityGroupEgressRuleSpecForProviderReferencedSecurityGroupIdSelectorPolicyResolutionEnum>))]
+    public V1beta1SecurityGroupEgressRuleSpecForProviderReferencedSecurityGroupIdSelectorPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SecurityGroupEgressRuleSpecForProviderReferencedSecurityGroupIdSelectorPolicyResolveEnum>))]
+    public V1beta1SecurityGroupEgressRuleSpecForProviderReferencedSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecForProviderReferencedSecurityGroupIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SecurityGroupEgressRuleSpecForProviderReferencedSecurityGroupIdSelectorPolicy? Policy { get; set; }
+}
+
+public enum V1beta1SecurityGroupEgressRuleSpecForProviderSecurityGroupIdRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1SecurityGroupEgressRuleSpecForProviderSecurityGroupIdRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecForProviderSecurityGroupIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SecurityGroupEgressRuleSpecForProviderSecurityGroupIdRefPolicyResolutionEnum>))]
+    public V1beta1SecurityGroupEgressRuleSpecForProviderSecurityGroupIdRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SecurityGroupEgressRuleSpecForProviderSecurityGroupIdRefPolicyResolveEnum>))]
+    public V1beta1SecurityGroupEgressRuleSpecForProviderSecurityGroupIdRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecForProviderSecurityGroupIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SecurityGroupEgressRuleSpecForProviderSecurityGroupIdRefPolicy? Policy { get; set; }
+}
+
+public enum V1beta1SecurityGroupEgressRuleSpecForProviderSecurityGroupIdSelectorPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1SecurityGroupEgressRuleSpecForProviderSecurityGroupIdSelectorPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecForProviderSecurityGroupIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SecurityGroupEgressRuleSpecForProviderSecurityGroupIdSelectorPolicyResolutionEnum>))]
+    public V1beta1SecurityGroupEgressRuleSpecForProviderSecurityGroupIdSelectorPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SecurityGroupEgressRuleSpecForProviderSecurityGroupIdSelectorPolicyResolveEnum>))]
+    public V1beta1SecurityGroupEgressRuleSpecForProviderSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecForProviderSecurityGroupIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SecurityGroupEgressRuleSpecForProviderSecurityGroupIdSelectorPolicy? Policy { get; set; }
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecForProvider
+{
+    /// <summary>The destination IPv4 CIDR range.</summary>
+    [JsonPropertyName("cidrIpv4")]
+    public string? CidrIpv4 { get; set; }
+
+    /// <summary>The destination IPv6 CIDR range.</summary>
+    [JsonPropertyName("cidrIpv6")]
+    public string? CidrIpv6 { get; set; }
+
+    /// <summary>The security group rule description.</summary>
+    [JsonPropertyName("description")]
+    public string? Description { get; set; }
+
+    /// <summary>The start of port range for the TCP and UDP protocols, or an ICMP/ICMPv6 type.</summary>
+    [JsonPropertyName("fromPort")]
+    public double? FromPort { get; set; }
+
+    /// <summary>The IP protocol name or number. Use -1 to specify all protocols. Note that if ip_protocol is set to -1, it translates to all protocols, all port ranges, and from_port and to_port values should not be defined.</summary>
+    [JsonPropertyName("ipProtocol")]
+    public string? IpProtocol { get; set; }
+
+    /// <summary>The ID of the destination prefix list.</summary>
+    [JsonPropertyName("prefixListId")]
+    public string? PrefixListId { get; set; }
+
+    /// <summary>Reference to a ManagedPrefixList in ec2 to populate prefixListId.</summary>
+    [JsonPropertyName("prefixListIdRef")]
+    public V1beta1SecurityGroupEgressRuleSpecForProviderPrefixListIdRef? PrefixListIdRef { get; set; }
+
+    /// <summary>Selector for a ManagedPrefixList in ec2 to populate prefixListId.</summary>
+    [JsonPropertyName("prefixListIdSelector")]
+    public V1beta1SecurityGroupEgressRuleSpecForProviderPrefixListIdSelector? PrefixListIdSelector { get; set; }
+
+    /// <summary>The destination security group that is referenced in the rule.</summary>
+    [JsonPropertyName("referencedSecurityGroupId")]
+    public string? ReferencedSecurityGroupId { get; set; }
+
+    /// <summary>Reference to a SecurityGroup in ec2 to populate referencedSecurityGroupId.</summary>
+    [JsonPropertyName("referencedSecurityGroupIdRef")]
+    public V1beta1SecurityGroupEgressRuleSpecForProviderReferencedSecurityGroupIdRef? ReferencedSecurityGroupIdRef { get; set; }
+
+    /// <summary>Selector for a SecurityGroup in ec2 to populate referencedSecurityGroupId.</summary>
+    [JsonPropertyName("referencedSecurityGroupIdSelector")]
+    public V1beta1SecurityGroupEgressRuleSpecForProviderReferencedSecurityGroupIdSelector? ReferencedSecurityGroupIdSelector { get; set; }
+
+    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string Region { get; set; }
+
+    /// <summary>The ID of the security group.</summary>
+    [JsonPropertyName("securityGroupId")]
+    public string? SecurityGroupId { get; set; }
+
+    /// <summary>Reference to a SecurityGroup in ec2 to populate securityGroupId.</summary>
+    [JsonPropertyName("securityGroupIdRef")]
+    public V1beta1SecurityGroupEgressRuleSpecForProviderSecurityGroupIdRef? SecurityGroupIdRef { get; set; }
+
+    /// <summary>Selector for a SecurityGroup in ec2 to populate securityGroupId.</summary>
+    [JsonPropertyName("securityGroupIdSelector")]
+    public V1beta1SecurityGroupEgressRuleSpecForProviderSecurityGroupIdSelector? SecurityGroupIdSelector { get; set; }
+
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>The end of port range for the TCP and UDP protocols, or an ICMP/ICMPv6 code.</summary>
+    [JsonPropertyName("toPort")]
+    public double? ToPort { get; set; }
+}
+
+public enum V1beta1SecurityGroupEgressRuleSpecInitProviderPrefixListIdRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1SecurityGroupEgressRuleSpecInitProviderPrefixListIdRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderPrefixListIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SecurityGroupEgressRuleSpecInitProviderPrefixListIdRefPolicyResolutionEnum>))]
+    public V1beta1SecurityGroupEgressRuleSpecInitProviderPrefixListIdRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SecurityGroupEgressRuleSpecInitProviderPrefixListIdRefPolicyResolveEnum>))]
+    public V1beta1SecurityGroupEgressRuleSpecInitProviderPrefixListIdRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderPrefixListIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SecurityGroupEgressRuleSpecInitProviderPrefixListIdRefPolicy? Policy { get; set; }
+}
+
+public enum V1beta1SecurityGroupEgressRuleSpecInitProviderPrefixListIdSelectorPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1SecurityGroupEgressRuleSpecInitProviderPrefixListIdSelectorPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderPrefixListIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SecurityGroupEgressRuleSpecInitProviderPrefixListIdSelectorPolicyResolutionEnum>))]
+    public V1beta1SecurityGroupEgressRuleSpecInitProviderPrefixListIdSelectorPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SecurityGroupEgressRuleSpecInitProviderPrefixListIdSelectorPolicyResolveEnum>))]
+    public V1beta1SecurityGroupEgressRuleSpecInitProviderPrefixListIdSelectorPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderPrefixListIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SecurityGroupEgressRuleSpecInitProviderPrefixListIdSelectorPolicy? Policy { get; set; }
+}
+
+public enum V1beta1SecurityGroupEgressRuleSpecInitProviderReferencedSecurityGroupIdRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1SecurityGroupEgressRuleSpecInitProviderReferencedSecurityGroupIdRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderReferencedSecurityGroupIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SecurityGroupEgressRuleSpecInitProviderReferencedSecurityGroupIdRefPolicyResolutionEnum>))]
+    public V1beta1SecurityGroupEgressRuleSpecInitProviderReferencedSecurityGroupIdRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SecurityGroupEgressRuleSpecInitProviderReferencedSecurityGroupIdRefPolicyResolveEnum>))]
+    public V1beta1SecurityGroupEgressRuleSpecInitProviderReferencedSecurityGroupIdRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderReferencedSecurityGroupIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SecurityGroupEgressRuleSpecInitProviderReferencedSecurityGroupIdRefPolicy? Policy { get; set; }
+}
+
+public enum V1beta1SecurityGroupEgressRuleSpecInitProviderReferencedSecurityGroupIdSelectorPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1SecurityGroupEgressRuleSpecInitProviderReferencedSecurityGroupIdSelectorPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderReferencedSecurityGroupIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SecurityGroupEgressRuleSpecInitProviderReferencedSecurityGroupIdSelectorPolicyResolutionEnum>))]
+    public V1beta1SecurityGroupEgressRuleSpecInitProviderReferencedSecurityGroupIdSelectorPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SecurityGroupEgressRuleSpecInitProviderReferencedSecurityGroupIdSelectorPolicyResolveEnum>))]
+    public V1beta1SecurityGroupEgressRuleSpecInitProviderReferencedSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderReferencedSecurityGroupIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SecurityGroupEgressRuleSpecInitProviderReferencedSecurityGroupIdSelectorPolicy? Policy { get; set; }
+}
+
+public enum V1beta1SecurityGroupEgressRuleSpecInitProviderSecurityGroupIdRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1SecurityGroupEgressRuleSpecInitProviderSecurityGroupIdRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderSecurityGroupIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SecurityGroupEgressRuleSpecInitProviderSecurityGroupIdRefPolicyResolutionEnum>))]
+    public V1beta1SecurityGroupEgressRuleSpecInitProviderSecurityGroupIdRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SecurityGroupEgressRuleSpecInitProviderSecurityGroupIdRefPolicyResolveEnum>))]
+    public V1beta1SecurityGroupEgressRuleSpecInitProviderSecurityGroupIdRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderSecurityGroupIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SecurityGroupEgressRuleSpecInitProviderSecurityGroupIdRefPolicy? Policy { get; set; }
+}
+
+public enum V1beta1SecurityGroupEgressRuleSpecInitProviderSecurityGroupIdSelectorPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1SecurityGroupEgressRuleSpecInitProviderSecurityGroupIdSelectorPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderSecurityGroupIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SecurityGroupEgressRuleSpecInitProviderSecurityGroupIdSelectorPolicyResolutionEnum>))]
+    public V1beta1SecurityGroupEgressRuleSpecInitProviderSecurityGroupIdSelectorPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SecurityGroupEgressRuleSpecInitProviderSecurityGroupIdSelectorPolicyResolveEnum>))]
+    public V1beta1SecurityGroupEgressRuleSpecInitProviderSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderSecurityGroupIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SecurityGroupEgressRuleSpecInitProviderSecurityGroupIdSelectorPolicy? Policy { get; set; }
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecInitProvider
+{
+    /// <summary>The destination IPv4 CIDR range.</summary>
+    [JsonPropertyName("cidrIpv4")]
+    public string? CidrIpv4 { get; set; }
+
+    /// <summary>The destination IPv6 CIDR range.</summary>
+    [JsonPropertyName("cidrIpv6")]
+    public string? CidrIpv6 { get; set; }
+
+    /// <summary>The security group rule description.</summary>
+    [JsonPropertyName("description")]
+    public string? Description { get; set; }
+
+    /// <summary>The start of port range for the TCP and UDP protocols, or an ICMP/ICMPv6 type.</summary>
+    [JsonPropertyName("fromPort")]
+    public double? FromPort { get; set; }
+
+    /// <summary>The IP protocol name or number. Use -1 to specify all protocols. Note that if ip_protocol is set to -1, it translates to all protocols, all port ranges, and from_port and to_port values should not be defined.</summary>
+    [JsonPropertyName("ipProtocol")]
+    public string? IpProtocol { get; set; }
+
+    /// <summary>The ID of the destination prefix list.</summary>
+    [JsonPropertyName("prefixListId")]
+    public string? PrefixListId { get; set; }
+
+    /// <summary>Reference to a ManagedPrefixList in ec2 to populate prefixListId.</summary>
+    [JsonPropertyName("prefixListIdRef")]
+    public V1beta1SecurityGroupEgressRuleSpecInitProviderPrefixListIdRef? PrefixListIdRef { get; set; }
+
+    /// <summary>Selector for a ManagedPrefixList in ec2 to populate prefixListId.</summary>
+    [JsonPropertyName("prefixListIdSelector")]
+    public V1beta1SecurityGroupEgressRuleSpecInitProviderPrefixListIdSelector? PrefixListIdSelector { get; set; }
+
+    /// <summary>The destination security group that is referenced in the rule.</summary>
+    [JsonPropertyName("referencedSecurityGroupId")]
+    public string? ReferencedSecurityGroupId { get; set; }
+
+    /// <summary>Reference to a SecurityGroup in ec2 to populate referencedSecurityGroupId.</summary>
+    [JsonPropertyName("referencedSecurityGroupIdRef")]
+    public V1beta1SecurityGroupEgressRuleSpecInitProviderReferencedSecurityGroupIdRef? ReferencedSecurityGroupIdRef { get; set; }
+
+    /// <summary>Selector for a SecurityGroup in ec2 to populate referencedSecurityGroupId.</summary>
+    [JsonPropertyName("referencedSecurityGroupIdSelector")]
+    public V1beta1SecurityGroupEgressRuleSpecInitProviderReferencedSecurityGroupIdSelector? ReferencedSecurityGroupIdSelector { get; set; }
+
+    /// <summary>The ID of the security group.</summary>
+    [JsonPropertyName("securityGroupId")]
+    public string? SecurityGroupId { get; set; }
+
+    /// <summary>Reference to a SecurityGroup in ec2 to populate securityGroupId.</summary>
+    [JsonPropertyName("securityGroupIdRef")]
+    public V1beta1SecurityGroupEgressRuleSpecInitProviderSecurityGroupIdRef? SecurityGroupIdRef { get; set; }
+
+    /// <summary>Selector for a SecurityGroup in ec2 to populate securityGroupId.</summary>
+    [JsonPropertyName("securityGroupIdSelector")]
+    public V1beta1SecurityGroupEgressRuleSpecInitProviderSecurityGroupIdSelector? SecurityGroupIdSelector { get; set; }
+
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>The end of port range for the TCP and UDP protocols, or an ICMP/ICMPv6 code.</summary>
+    [JsonPropertyName("toPort")]
+    public double? ToPort { get; set; }
+}
+
+public enum V1beta1SecurityGroupEgressRuleSpecManagementPoliciesEnum
+{
+    [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
+    /// <summary>Observe</summary>
+    Observe,
+    [EnumMember(Value = "Create"), JsonStringEnumMemberName("Create")]
+    /// <summary>Create</summary>
+    Create,
+    [EnumMember(Value = "Update"), JsonStringEnumMemberName("Update")]
+    /// <summary>Update</summary>
+    Update,
+    [EnumMember(Value = "Delete"), JsonStringEnumMemberName("Delete")]
+    /// <summary>Delete</summary>
+    Delete,
+    [EnumMember(Value = "LateInitialize"), JsonStringEnumMemberName("LateInitialize")]
+    /// <summary>LateInitialize</summary>
+    LateInitialize,
+    [EnumMember(Value = "*"), JsonStringEnumMemberName("*")]
+    /// <summary>*</summary>
+    Option5
+}
+
+public enum V1beta1SecurityGroupEgressRuleSpecProviderConfigRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1SecurityGroupEgressRuleSpecProviderConfigRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecProviderConfigRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SecurityGroupEgressRuleSpecProviderConfigRefPolicyResolutionEnum>))]
+    public V1beta1SecurityGroupEgressRuleSpecProviderConfigRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SecurityGroupEgressRuleSpecProviderConfigRefPolicyResolveEnum>))]
+    public V1beta1SecurityGroupEgressRuleSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecProviderConfigRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SecurityGroupEgressRuleSpecProviderConfigRefPolicy? Policy { get; set; }
+}
+
+public enum V1beta1SecurityGroupEgressRuleSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1SecurityGroupEgressRuleSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecPublishConnectionDetailsToConfigRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SecurityGroupEgressRuleSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum>))]
+    public V1beta1SecurityGroupEgressRuleSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SecurityGroupEgressRuleSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum>))]
+    public V1beta1SecurityGroupEgressRuleSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecPublishConnectionDetailsToConfigRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SecurityGroupEgressRuleSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecPublishConnectionDetailsToMetadata
+{
+    /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
+    [JsonPropertyName("annotations")]
+    public IDictionary<string, string>? Annotations { get; set; }
+
+    /// <summary>Labels are the labels/tags to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.labels". - It is up to Secret Store implementation for others store types.</summary>
+    [JsonPropertyName("labels")]
+    public IDictionary<string, string>? Labels { get; set; }
+
+    /// <summary>Type is the SecretType for the connection secret. - Only valid for Kubernetes Secret Stores.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecPublishConnectionDetailsTo
+{
+    /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+    [JsonPropertyName("configRef")]
+    public V1beta1SecurityGroupEgressRuleSpecPublishConnectionDetailsToConfigRef? ConfigRef { get; set; }
+
+    /// <summary>Metadata is the metadata for connection secret.</summary>
+    [JsonPropertyName("metadata")]
+    public V1beta1SecurityGroupEgressRuleSpecPublishConnectionDetailsToMetadata? Metadata { get; set; }
+
+    /// <summary>Name is the name of the connection secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpecWriteConnectionSecretToRef
+{
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+public partial class V1beta1SecurityGroupEgressRuleSpec
+{
+    /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
+    [JsonPropertyName("deletionPolicy")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SecurityGroupEgressRuleSpecDeletionPolicyEnum>))]
+    public V1beta1SecurityGroupEgressRuleSpecDeletionPolicyEnum? DeletionPolicy { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("forProvider")]
+    public V1beta1SecurityGroupEgressRuleSpecForProvider ForProvider { get; set; }
+
+    /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+    [JsonPropertyName("initProvider")]
+    public V1beta1SecurityGroupEgressRuleSpecInitProvider? InitProvider { get; set; }
+
+    /// <summary>THIS IS A BETA FIELD. It is on by default but can be opted out through a Crossplane feature flag. ManagementPolicies specify the array of actions Crossplane is allowed to take on the managed and external resources. This field is planned to replace the DeletionPolicy field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. If both are custom, the DeletionPolicy field will be ignored. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223 and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md</summary>
+    [JsonPropertyName("managementPolicies")]
+    public IList<V1beta1SecurityGroupEgressRuleSpecManagementPoliciesEnum>? ManagementPolicies { get; set; }
+
+    /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+    [JsonPropertyName("providerConfigRef")]
+    public V1beta1SecurityGroupEgressRuleSpecProviderConfigRef? ProviderConfigRef { get; set; }
+
+    /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+    [JsonPropertyName("publishConnectionDetailsTo")]
+    public V1beta1SecurityGroupEgressRuleSpecPublishConnectionDetailsTo? PublishConnectionDetailsTo { get; set; }
+
+    /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+    [JsonPropertyName("writeConnectionSecretToRef")]
+    public V1beta1SecurityGroupEgressRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
+}
+
+public partial class V1beta1SecurityGroupEgressRuleStatusAtProvider
+{
+    /// <summary>The Amazon Resource Name (ARN) of the security group rule.</summary>
+    [JsonPropertyName("arn")]
+    public string? Arn { get; set; }
+
+    /// <summary>The destination IPv4 CIDR range.</summary>
+    [JsonPropertyName("cidrIpv4")]
+    public string? CidrIpv4 { get; set; }
+
+    /// <summary>The destination IPv6 CIDR range.</summary>
+    [JsonPropertyName("cidrIpv6")]
+    public string? CidrIpv6 { get; set; }
+
+    /// <summary>The security group rule description.</summary>
+    [JsonPropertyName("description")]
+    public string? Description { get; set; }
+
+    /// <summary>The start of port range for the TCP and UDP protocols, or an ICMP/ICMPv6 type.</summary>
+    [JsonPropertyName("fromPort")]
+    public double? FromPort { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("id")]
+    public string? Id { get; set; }
+
+    /// <summary>The IP protocol name or number. Use -1 to specify all protocols. Note that if ip_protocol is set to -1, it translates to all protocols, all port ranges, and from_port and to_port values should not be defined.</summary>
+    [JsonPropertyName("ipProtocol")]
+    public string? IpProtocol { get; set; }
+
+    /// <summary>The ID of the destination prefix list.</summary>
+    [JsonPropertyName("prefixListId")]
+    public string? PrefixListId { get; set; }
+
+    /// <summary>The destination security group that is referenced in the rule.</summary>
+    [JsonPropertyName("referencedSecurityGroupId")]
+    public string? ReferencedSecurityGroupId { get; set; }
+
+    /// <summary>The ID of the security group.</summary>
+    [JsonPropertyName("securityGroupId")]
+    public string? SecurityGroupId { get; set; }
+
+    /// <summary>The ID of the security group rule.</summary>
+    [JsonPropertyName("securityGroupRuleId")]
+    public string? SecurityGroupRuleId { get; set; }
+
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    [JsonPropertyName("tagsAll")]
+    public IDictionary<string, string>? TagsAll { get; set; }
+
+    /// <summary>The end of port range for the TCP and UDP protocols, or an ICMP/ICMPv6 code.</summary>
+    [JsonPropertyName("toPort")]
+    public double? ToPort { get; set; }
+}
+
+public partial class V1beta1SecurityGroupEgressRuleStatusConditions
+{
+    /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
+    [JsonPropertyName("lastTransitionTime")]
+    public string LastTransitionTime { get; set; }
+
+    /// <summary>A Message containing details about this condition's last transition from one status to another, if any.</summary>
+    [JsonPropertyName("message")]
+    public string? Message { get; set; }
+
+    /// <summary>ObservedGeneration represents the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.</summary>
+    [JsonPropertyName("observedGeneration")]
+    public long? ObservedGeneration { get; set; }
+
+    /// <summary>A Reason for this condition's last transition from one status to another.</summary>
+    [JsonPropertyName("reason")]
+    public string Reason { get; set; }
+
+    /// <summary>Status of this condition; is it currently True, False, or Unknown?</summary>
+    [JsonPropertyName("status")]
+    public string Status { get; set; }
+
+    /// <summary>Type of this condition. At most one of each condition type may apply to a resource at any point in time.</summary>
+    [JsonPropertyName("type")]
+    public string Type { get; set; }
+}
+
+public partial class V1beta1SecurityGroupEgressRuleStatus
+{
+    /// <summary></summary>
+    [JsonPropertyName("atProvider")]
+    public V1beta1SecurityGroupEgressRuleStatusAtProvider? AtProvider { get; set; }
+
+    /// <summary>Conditions of the resource.</summary>
+    [JsonPropertyName("conditions")]
+    public IList<V1beta1SecurityGroupEgressRuleStatusConditions>? Conditions { get; set; }
+
+    /// <summary>ObservedGeneration is the latest metadata.generation which resulted in either a ready state, or stalled due to error it can not recover from without human intervention.</summary>
+    [JsonPropertyName("observedGeneration")]
+    public long? ObservedGeneration { get; set; }
+}
+
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SecurityGroupEgressRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SecurityGroupEgressRuleSpec>, IStatus<V1beta1SecurityGroupEgressRuleStatus>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SecurityGroupEgressRule";
+    public const string KubeGroup = "ec2.aws.upbound.io";
+    public const string KubePluralName = "securitygroupegressrules";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ObjectMeta Metadata { get; set; }
+
+    /// <summary>SecurityGroupEgressRuleSpec defines the desired state of SecurityGroupEgressRule</summary>
+    [JsonPropertyName("spec")]
+    public V1beta1SecurityGroupEgressRuleSpec Spec { get; set; }
+
+    /// <summary>SecurityGroupEgressRuleStatus defines the observed state of SecurityGroupEgressRule.</summary>
+    [JsonPropertyName("status")]
+    public V1beta1SecurityGroupEgressRuleStatus? Status { get; set; }
+}

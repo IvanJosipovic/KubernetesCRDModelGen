@@ -1,0 +1,653 @@
+using k8s;
+using k8s.Models;
+using System;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+using System.Text.Json;
+using System.Text.Json.Nodes;
+using System.Text.Json.Serialization;
+
+namespace KubernetesCRDModelGen.Models.devicefarm.aws.upbound.io;
+public enum V1beta1NetworkProfileSpecDeletionPolicyEnum
+{
+    [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
+    /// <summary>Orphan</summary>
+    Orphan,
+    [EnumMember(Value = "Delete"), JsonStringEnumMemberName("Delete")]
+    /// <summary>Delete</summary>
+    Delete
+}
+
+public enum V1beta1NetworkProfileSpecForProviderProjectArnRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1NetworkProfileSpecForProviderProjectArnRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1NetworkProfileSpecForProviderProjectArnRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1NetworkProfileSpecForProviderProjectArnRefPolicyResolutionEnum>))]
+    public V1beta1NetworkProfileSpecForProviderProjectArnRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1NetworkProfileSpecForProviderProjectArnRefPolicyResolveEnum>))]
+    public V1beta1NetworkProfileSpecForProviderProjectArnRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1NetworkProfileSpecForProviderProjectArnRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1NetworkProfileSpecForProviderProjectArnRefPolicy? Policy { get; set; }
+}
+
+public enum V1beta1NetworkProfileSpecForProviderProjectArnSelectorPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1NetworkProfileSpecForProviderProjectArnSelectorPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1NetworkProfileSpecForProviderProjectArnSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1NetworkProfileSpecForProviderProjectArnSelectorPolicyResolutionEnum>))]
+    public V1beta1NetworkProfileSpecForProviderProjectArnSelectorPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1NetworkProfileSpecForProviderProjectArnSelectorPolicyResolveEnum>))]
+    public V1beta1NetworkProfileSpecForProviderProjectArnSelectorPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1NetworkProfileSpecForProviderProjectArnSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1NetworkProfileSpecForProviderProjectArnSelectorPolicy? Policy { get; set; }
+}
+
+public partial class V1beta1NetworkProfileSpecForProvider
+{
+    /// <summary>The description of the network profile.</summary>
+    [JsonPropertyName("description")]
+    public string? Description { get; set; }
+
+    /// <summary>The data throughput rate in bits per second, as an integer from 0 to 104857600. Default value is 104857600.</summary>
+    [JsonPropertyName("downlinkBandwidthBits")]
+    public double? DownlinkBandwidthBits { get; set; }
+
+    /// <summary>Delay time for all packets to destination in milliseconds as an integer from 0 to 2000.</summary>
+    [JsonPropertyName("downlinkDelayMs")]
+    public double? DownlinkDelayMs { get; set; }
+
+    /// <summary>Time variation in the delay of received packets in milliseconds as an integer from 0 to 2000.</summary>
+    [JsonPropertyName("downlinkJitterMs")]
+    public double? DownlinkJitterMs { get; set; }
+
+    /// <summary>Proportion of received packets that fail to arrive from 0 to 100 percent.</summary>
+    [JsonPropertyName("downlinkLossPercent")]
+    public double? DownlinkLossPercent { get; set; }
+
+    /// <summary>The name for the network profile.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The ARN of the project for the network profile.</summary>
+    [JsonPropertyName("projectArn")]
+    public string? ProjectArn { get; set; }
+
+    /// <summary>Reference to a Project in devicefarm to populate projectArn.</summary>
+    [JsonPropertyName("projectArnRef")]
+    public V1beta1NetworkProfileSpecForProviderProjectArnRef? ProjectArnRef { get; set; }
+
+    /// <summary>Selector for a Project in devicefarm to populate projectArn.</summary>
+    [JsonPropertyName("projectArnSelector")]
+    public V1beta1NetworkProfileSpecForProviderProjectArnSelector? ProjectArnSelector { get; set; }
+
+    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string Region { get; set; }
+
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>The type of network profile to create. Valid values are listed are PRIVATE and CURATED.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+
+    /// <summary>The data throughput rate in bits per second, as an integer from 0 to 104857600. Default value is 104857600.</summary>
+    [JsonPropertyName("uplinkBandwidthBits")]
+    public double? UplinkBandwidthBits { get; set; }
+
+    /// <summary>Delay time for all packets to destination in milliseconds as an integer from 0 to 2000.</summary>
+    [JsonPropertyName("uplinkDelayMs")]
+    public double? UplinkDelayMs { get; set; }
+
+    /// <summary>Time variation in the delay of received packets in milliseconds as an integer from 0 to 2000.</summary>
+    [JsonPropertyName("uplinkJitterMs")]
+    public double? UplinkJitterMs { get; set; }
+
+    /// <summary>Proportion of received packets that fail to arrive from 0 to 100 percent.</summary>
+    [JsonPropertyName("uplinkLossPercent")]
+    public double? UplinkLossPercent { get; set; }
+}
+
+public enum V1beta1NetworkProfileSpecInitProviderProjectArnRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1NetworkProfileSpecInitProviderProjectArnRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1NetworkProfileSpecInitProviderProjectArnRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1NetworkProfileSpecInitProviderProjectArnRefPolicyResolutionEnum>))]
+    public V1beta1NetworkProfileSpecInitProviderProjectArnRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1NetworkProfileSpecInitProviderProjectArnRefPolicyResolveEnum>))]
+    public V1beta1NetworkProfileSpecInitProviderProjectArnRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1NetworkProfileSpecInitProviderProjectArnRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1NetworkProfileSpecInitProviderProjectArnRefPolicy? Policy { get; set; }
+}
+
+public enum V1beta1NetworkProfileSpecInitProviderProjectArnSelectorPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1NetworkProfileSpecInitProviderProjectArnSelectorPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1NetworkProfileSpecInitProviderProjectArnSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1NetworkProfileSpecInitProviderProjectArnSelectorPolicyResolutionEnum>))]
+    public V1beta1NetworkProfileSpecInitProviderProjectArnSelectorPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1NetworkProfileSpecInitProviderProjectArnSelectorPolicyResolveEnum>))]
+    public V1beta1NetworkProfileSpecInitProviderProjectArnSelectorPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1NetworkProfileSpecInitProviderProjectArnSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1NetworkProfileSpecInitProviderProjectArnSelectorPolicy? Policy { get; set; }
+}
+
+public partial class V1beta1NetworkProfileSpecInitProvider
+{
+    /// <summary>The description of the network profile.</summary>
+    [JsonPropertyName("description")]
+    public string? Description { get; set; }
+
+    /// <summary>The data throughput rate in bits per second, as an integer from 0 to 104857600. Default value is 104857600.</summary>
+    [JsonPropertyName("downlinkBandwidthBits")]
+    public double? DownlinkBandwidthBits { get; set; }
+
+    /// <summary>Delay time for all packets to destination in milliseconds as an integer from 0 to 2000.</summary>
+    [JsonPropertyName("downlinkDelayMs")]
+    public double? DownlinkDelayMs { get; set; }
+
+    /// <summary>Time variation in the delay of received packets in milliseconds as an integer from 0 to 2000.</summary>
+    [JsonPropertyName("downlinkJitterMs")]
+    public double? DownlinkJitterMs { get; set; }
+
+    /// <summary>Proportion of received packets that fail to arrive from 0 to 100 percent.</summary>
+    [JsonPropertyName("downlinkLossPercent")]
+    public double? DownlinkLossPercent { get; set; }
+
+    /// <summary>The name for the network profile.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The ARN of the project for the network profile.</summary>
+    [JsonPropertyName("projectArn")]
+    public string? ProjectArn { get; set; }
+
+    /// <summary>Reference to a Project in devicefarm to populate projectArn.</summary>
+    [JsonPropertyName("projectArnRef")]
+    public V1beta1NetworkProfileSpecInitProviderProjectArnRef? ProjectArnRef { get; set; }
+
+    /// <summary>Selector for a Project in devicefarm to populate projectArn.</summary>
+    [JsonPropertyName("projectArnSelector")]
+    public V1beta1NetworkProfileSpecInitProviderProjectArnSelector? ProjectArnSelector { get; set; }
+
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>The type of network profile to create. Valid values are listed are PRIVATE and CURATED.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+
+    /// <summary>The data throughput rate in bits per second, as an integer from 0 to 104857600. Default value is 104857600.</summary>
+    [JsonPropertyName("uplinkBandwidthBits")]
+    public double? UplinkBandwidthBits { get; set; }
+
+    /// <summary>Delay time for all packets to destination in milliseconds as an integer from 0 to 2000.</summary>
+    [JsonPropertyName("uplinkDelayMs")]
+    public double? UplinkDelayMs { get; set; }
+
+    /// <summary>Time variation in the delay of received packets in milliseconds as an integer from 0 to 2000.</summary>
+    [JsonPropertyName("uplinkJitterMs")]
+    public double? UplinkJitterMs { get; set; }
+
+    /// <summary>Proportion of received packets that fail to arrive from 0 to 100 percent.</summary>
+    [JsonPropertyName("uplinkLossPercent")]
+    public double? UplinkLossPercent { get; set; }
+}
+
+public enum V1beta1NetworkProfileSpecManagementPoliciesEnum
+{
+    [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
+    /// <summary>Observe</summary>
+    Observe,
+    [EnumMember(Value = "Create"), JsonStringEnumMemberName("Create")]
+    /// <summary>Create</summary>
+    Create,
+    [EnumMember(Value = "Update"), JsonStringEnumMemberName("Update")]
+    /// <summary>Update</summary>
+    Update,
+    [EnumMember(Value = "Delete"), JsonStringEnumMemberName("Delete")]
+    /// <summary>Delete</summary>
+    Delete,
+    [EnumMember(Value = "LateInitialize"), JsonStringEnumMemberName("LateInitialize")]
+    /// <summary>LateInitialize</summary>
+    LateInitialize,
+    [EnumMember(Value = "*"), JsonStringEnumMemberName("*")]
+    /// <summary>*</summary>
+    Option5
+}
+
+public enum V1beta1NetworkProfileSpecProviderConfigRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1NetworkProfileSpecProviderConfigRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1NetworkProfileSpecProviderConfigRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1NetworkProfileSpecProviderConfigRefPolicyResolutionEnum>))]
+    public V1beta1NetworkProfileSpecProviderConfigRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1NetworkProfileSpecProviderConfigRefPolicyResolveEnum>))]
+    public V1beta1NetworkProfileSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1NetworkProfileSpecProviderConfigRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1NetworkProfileSpecProviderConfigRefPolicy? Policy { get; set; }
+}
+
+public enum V1beta1NetworkProfileSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+public enum V1beta1NetworkProfileSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+public partial class V1beta1NetworkProfileSpecPublishConnectionDetailsToConfigRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1NetworkProfileSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum>))]
+    public V1beta1NetworkProfileSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1NetworkProfileSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum>))]
+    public V1beta1NetworkProfileSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+public partial class V1beta1NetworkProfileSpecPublishConnectionDetailsToConfigRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1NetworkProfileSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
+}
+
+public partial class V1beta1NetworkProfileSpecPublishConnectionDetailsToMetadata
+{
+    /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
+    [JsonPropertyName("annotations")]
+    public IDictionary<string, string>? Annotations { get; set; }
+
+    /// <summary>Labels are the labels/tags to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.labels". - It is up to Secret Store implementation for others store types.</summary>
+    [JsonPropertyName("labels")]
+    public IDictionary<string, string>? Labels { get; set; }
+
+    /// <summary>Type is the SecretType for the connection secret. - Only valid for Kubernetes Secret Stores.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
+public partial class V1beta1NetworkProfileSpecPublishConnectionDetailsTo
+{
+    /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+    [JsonPropertyName("configRef")]
+    public V1beta1NetworkProfileSpecPublishConnectionDetailsToConfigRef? ConfigRef { get; set; }
+
+    /// <summary>Metadata is the metadata for connection secret.</summary>
+    [JsonPropertyName("metadata")]
+    public V1beta1NetworkProfileSpecPublishConnectionDetailsToMetadata? Metadata { get; set; }
+
+    /// <summary>Name is the name of the connection secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
+public partial class V1beta1NetworkProfileSpecWriteConnectionSecretToRef
+{
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+public partial class V1beta1NetworkProfileSpec
+{
+    /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
+    [JsonPropertyName("deletionPolicy")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1NetworkProfileSpecDeletionPolicyEnum>))]
+    public V1beta1NetworkProfileSpecDeletionPolicyEnum? DeletionPolicy { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("forProvider")]
+    public V1beta1NetworkProfileSpecForProvider ForProvider { get; set; }
+
+    /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+    [JsonPropertyName("initProvider")]
+    public V1beta1NetworkProfileSpecInitProvider? InitProvider { get; set; }
+
+    /// <summary>THIS IS A BETA FIELD. It is on by default but can be opted out through a Crossplane feature flag. ManagementPolicies specify the array of actions Crossplane is allowed to take on the managed and external resources. This field is planned to replace the DeletionPolicy field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. If both are custom, the DeletionPolicy field will be ignored. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223 and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md</summary>
+    [JsonPropertyName("managementPolicies")]
+    public IList<V1beta1NetworkProfileSpecManagementPoliciesEnum>? ManagementPolicies { get; set; }
+
+    /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+    [JsonPropertyName("providerConfigRef")]
+    public V1beta1NetworkProfileSpecProviderConfigRef? ProviderConfigRef { get; set; }
+
+    /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+    [JsonPropertyName("publishConnectionDetailsTo")]
+    public V1beta1NetworkProfileSpecPublishConnectionDetailsTo? PublishConnectionDetailsTo { get; set; }
+
+    /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+    [JsonPropertyName("writeConnectionSecretToRef")]
+    public V1beta1NetworkProfileSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
+}
+
+public partial class V1beta1NetworkProfileStatusAtProvider
+{
+    /// <summary>The Amazon Resource Name of this network profile.</summary>
+    [JsonPropertyName("arn")]
+    public string? Arn { get; set; }
+
+    /// <summary>The description of the network profile.</summary>
+    [JsonPropertyName("description")]
+    public string? Description { get; set; }
+
+    /// <summary>The data throughput rate in bits per second, as an integer from 0 to 104857600. Default value is 104857600.</summary>
+    [JsonPropertyName("downlinkBandwidthBits")]
+    public double? DownlinkBandwidthBits { get; set; }
+
+    /// <summary>Delay time for all packets to destination in milliseconds as an integer from 0 to 2000.</summary>
+    [JsonPropertyName("downlinkDelayMs")]
+    public double? DownlinkDelayMs { get; set; }
+
+    /// <summary>Time variation in the delay of received packets in milliseconds as an integer from 0 to 2000.</summary>
+    [JsonPropertyName("downlinkJitterMs")]
+    public double? DownlinkJitterMs { get; set; }
+
+    /// <summary>Proportion of received packets that fail to arrive from 0 to 100 percent.</summary>
+    [JsonPropertyName("downlinkLossPercent")]
+    public double? DownlinkLossPercent { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("id")]
+    public string? Id { get; set; }
+
+    /// <summary>The name for the network profile.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The ARN of the project for the network profile.</summary>
+    [JsonPropertyName("projectArn")]
+    public string? ProjectArn { get; set; }
+
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    [JsonPropertyName("tagsAll")]
+    public IDictionary<string, string>? TagsAll { get; set; }
+
+    /// <summary>The type of network profile to create. Valid values are listed are PRIVATE and CURATED.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+
+    /// <summary>The data throughput rate in bits per second, as an integer from 0 to 104857600. Default value is 104857600.</summary>
+    [JsonPropertyName("uplinkBandwidthBits")]
+    public double? UplinkBandwidthBits { get; set; }
+
+    /// <summary>Delay time for all packets to destination in milliseconds as an integer from 0 to 2000.</summary>
+    [JsonPropertyName("uplinkDelayMs")]
+    public double? UplinkDelayMs { get; set; }
+
+    /// <summary>Time variation in the delay of received packets in milliseconds as an integer from 0 to 2000.</summary>
+    [JsonPropertyName("uplinkJitterMs")]
+    public double? UplinkJitterMs { get; set; }
+
+    /// <summary>Proportion of received packets that fail to arrive from 0 to 100 percent.</summary>
+    [JsonPropertyName("uplinkLossPercent")]
+    public double? UplinkLossPercent { get; set; }
+}
+
+public partial class V1beta1NetworkProfileStatusConditions
+{
+    /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
+    [JsonPropertyName("lastTransitionTime")]
+    public string LastTransitionTime { get; set; }
+
+    /// <summary>A Message containing details about this condition's last transition from one status to another, if any.</summary>
+    [JsonPropertyName("message")]
+    public string? Message { get; set; }
+
+    /// <summary>ObservedGeneration represents the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.</summary>
+    [JsonPropertyName("observedGeneration")]
+    public long? ObservedGeneration { get; set; }
+
+    /// <summary>A Reason for this condition's last transition from one status to another.</summary>
+    [JsonPropertyName("reason")]
+    public string Reason { get; set; }
+
+    /// <summary>Status of this condition; is it currently True, False, or Unknown?</summary>
+    [JsonPropertyName("status")]
+    public string Status { get; set; }
+
+    /// <summary>Type of this condition. At most one of each condition type may apply to a resource at any point in time.</summary>
+    [JsonPropertyName("type")]
+    public string Type { get; set; }
+}
+
+public partial class V1beta1NetworkProfileStatus
+{
+    /// <summary></summary>
+    [JsonPropertyName("atProvider")]
+    public V1beta1NetworkProfileStatusAtProvider? AtProvider { get; set; }
+
+    /// <summary>Conditions of the resource.</summary>
+    [JsonPropertyName("conditions")]
+    public IList<V1beta1NetworkProfileStatusConditions>? Conditions { get; set; }
+
+    /// <summary>ObservedGeneration is the latest metadata.generation which resulted in either a ready state, or stalled due to error it can not recover from without human intervention.</summary>
+    [JsonPropertyName("observedGeneration")]
+    public long? ObservedGeneration { get; set; }
+}
+
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1NetworkProfile : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NetworkProfileSpec>, IStatus<V1beta1NetworkProfileStatus>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "NetworkProfile";
+    public const string KubeGroup = "devicefarm.aws.upbound.io";
+    public const string KubePluralName = "networkprofiles";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ObjectMeta Metadata { get; set; }
+
+    /// <summary>NetworkProfileSpec defines the desired state of NetworkProfile</summary>
+    [JsonPropertyName("spec")]
+    public V1beta1NetworkProfileSpec Spec { get; set; }
+
+    /// <summary>NetworkProfileStatus defines the observed state of NetworkProfile.</summary>
+    [JsonPropertyName("status")]
+    public V1beta1NetworkProfileStatus? Status { get; set; }
+}
