@@ -1,6 +1,7 @@
 ﻿using BenchmarkDotNet.Attributes;
 using k8s;
 using k8s.Models;
+using Microsoft.Extensions.Logging;
 
 namespace KubernetesCRDModelGen.Benchmarks;
 
@@ -14,7 +15,9 @@ public class Benchmark
     [GlobalSetup]
     public void GlobalSetup()
     {
-        generator = new Generator();
+        var fac = LoggerFactory.Create((x) => { });
+
+        generator = new Generator(fac.CreateLogger<Generator>());
 
         crd = KubernetesYaml.LoadFromFileAsync<V1CustomResourceDefinition>("managedclusters.containerservice.azure.com.yaml").Result;
     }

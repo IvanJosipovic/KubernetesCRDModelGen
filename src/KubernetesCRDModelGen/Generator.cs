@@ -12,6 +12,7 @@ using k8s.Models;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi;
 using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Models;
@@ -21,6 +22,8 @@ namespace KubernetesCRDModelGen;
 
 public class Generator : IGenerator
 {
+    public readonly ILogger<Generator> logger;
+
     public const string ModelNamespace = "KubernetesCRDModelGen.Models";
 
     private readonly MetadataReference[] _metadataReferences;
@@ -43,8 +46,10 @@ public class Generator : IGenerator
             new("CS1702", ReportDiagnostic.Suppress)
         ]);
 
-    public Generator()
+    public Generator(ILogger<Generator> logger)
     {
+        this.logger = logger;
+
         _metadataReferences ??= GetReferences();
     }
 
@@ -58,14 +63,18 @@ public class Generator : IGenerator
 
         if (diag?.Errors.Count > 0)
         {
-            Console.WriteLine("Error: " + diag.Errors.Select(x => x.Message));
+            logger.LogError("Error: {err}", diag.Errors.Select(x => x.Message));
         }
 
         var namespaceDeclaration = SyntaxFactory.FileScopedNamespaceDeclaration(SyntaxFactory.ParseName(CleanIdentifier(@namespace + "." + crd.Spec.Group, true))).NormalizeWhitespace();
 
         namespaceDeclaration = namespaceDeclaration.AddMembers(GenerateClass(doc, crd.Spec.Names.Kind, version.Name, crd.Spec.Names.Kind, crd.Spec.Group, crd.Spec.Names.Plural));
 
-        var compilationUnit = SyntaxFactory.CompilationUnit().WithUsings(GenerateUsings());
+        var nullableDirective = SyntaxFactory.NullableDirectiveTrivia(SyntaxFactory.Token(SyntaxKind.EnableKeyword), true);
+
+        var compilationUnit = SyntaxFactory.CompilationUnit()
+            .WithUsings(GenerateUsings())
+            .WithLeadingTrivia(SyntaxFactory.Trivia(nullableDirective));
 
         return compilationUnit.AddMembers(namespaceDeclaration);
     }
@@ -571,7 +580,7 @@ public class Generator : IGenerator
 
                 foreach (var diagnostic in failures)
                 {
-                    Console.WriteLine("Error creating Assembly: {0}: {1}", diagnostic.Id, diagnostic.GetMessage());
+                    logger.LogError("Error creating Assembly: {0}: {1}", diagnostic.Id, diagnostic.GetMessage());
                 }
             }
             else
@@ -588,7 +597,7 @@ public class Generator : IGenerator
         }
         catch (Exception ex)
         {
-            Console.WriteLine("Error creating Assembly: {0}", ex);
+            logger.LogError(ex, "Error creating Assembly");
         }
 
         return (null, null);
@@ -622,12 +631,12 @@ public class Generator : IGenerator
         return code.NormalizeWhitespace().ToString();
     }
 
-    public static string XmlString(string text)
+    private static string XmlString(string text)
     {
         if (string.IsNullOrEmpty(text))
         {
             return text;
         }
-        return new XElement("t", text).LastNode.ToString();
+        return new XElement("t", text).LastNode?.ToString() ?? "";
     }
 }
