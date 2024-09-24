@@ -1,0 +1,910 @@
+using k8s;
+using k8s.Models;
+using System;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+using System.Text.Json;
+using System.Text.Json.Nodes;
+using System.Text.Json.Serialization;
+
+namespace KubernetesCRDModelGen.Models.route53resolver.aws.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1EndpointSpecDeletionPolicyEnum
+{
+    [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
+    /// <summary>Orphan</summary>
+    Orphan,
+    [EnumMember(Value = "Delete"), JsonStringEnumMemberName("Delete")]
+    /// <summary>Delete</summary>
+    Delete
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1EndpointSpecForProviderIpAddressSubnetIdRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1EndpointSpecForProviderIpAddressSubnetIdRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointSpecForProviderIpAddressSubnetIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1EndpointSpecForProviderIpAddressSubnetIdRefPolicyResolutionEnum>))]
+    public V1beta1EndpointSpecForProviderIpAddressSubnetIdRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1EndpointSpecForProviderIpAddressSubnetIdRefPolicyResolveEnum>))]
+    public V1beta1EndpointSpecForProviderIpAddressSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointSpecForProviderIpAddressSubnetIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1EndpointSpecForProviderIpAddressSubnetIdRefPolicy? Policy { get; set; }
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1EndpointSpecForProviderIpAddressSubnetIdSelectorPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1EndpointSpecForProviderIpAddressSubnetIdSelectorPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointSpecForProviderIpAddressSubnetIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1EndpointSpecForProviderIpAddressSubnetIdSelectorPolicyResolutionEnum>))]
+    public V1beta1EndpointSpecForProviderIpAddressSubnetIdSelectorPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1EndpointSpecForProviderIpAddressSubnetIdSelectorPolicyResolveEnum>))]
+    public V1beta1EndpointSpecForProviderIpAddressSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointSpecForProviderIpAddressSubnetIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1EndpointSpecForProviderIpAddressSubnetIdSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointSpecForProviderIpAddress
+{
+    /// <summary>The IP address in the subnet that you want to use for DNS queries.</summary>
+    [JsonPropertyName("ip")]
+    public string? Ip { get; set; }
+
+    /// <summary>The ID of the subnet that contains the IP address.</summary>
+    [JsonPropertyName("subnetId")]
+    public string? SubnetId { get; set; }
+
+    /// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
+    [JsonPropertyName("subnetIdRef")]
+    public V1beta1EndpointSpecForProviderIpAddressSubnetIdRef? SubnetIdRef { get; set; }
+
+    /// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
+    [JsonPropertyName("subnetIdSelector")]
+    public V1beta1EndpointSpecForProviderIpAddressSubnetIdSelector? SubnetIdSelector { get; set; }
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1EndpointSpecForProviderSecurityGroupIdRefsPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1EndpointSpecForProviderSecurityGroupIdRefsPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointSpecForProviderSecurityGroupIdRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1EndpointSpecForProviderSecurityGroupIdRefsPolicyResolutionEnum>))]
+    public V1beta1EndpointSpecForProviderSecurityGroupIdRefsPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1EndpointSpecForProviderSecurityGroupIdRefsPolicyResolveEnum>))]
+    public V1beta1EndpointSpecForProviderSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointSpecForProviderSecurityGroupIdRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1EndpointSpecForProviderSecurityGroupIdRefsPolicy? Policy { get; set; }
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1EndpointSpecForProviderSecurityGroupIdSelectorPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1EndpointSpecForProviderSecurityGroupIdSelectorPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointSpecForProviderSecurityGroupIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1EndpointSpecForProviderSecurityGroupIdSelectorPolicyResolutionEnum>))]
+    public V1beta1EndpointSpecForProviderSecurityGroupIdSelectorPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1EndpointSpecForProviderSecurityGroupIdSelectorPolicyResolveEnum>))]
+    public V1beta1EndpointSpecForProviderSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointSpecForProviderSecurityGroupIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1EndpointSpecForProviderSecurityGroupIdSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointSpecForProvider
+{
+    /// <summary>The direction of DNS queries to or from the Route 53 Resolver endpoint. Valid values are INBOUND (resolver forwards DNS queries to the DNS service for a VPC from your network or another VPC) or OUTBOUND (resolver forwards DNS queries from the DNS service for a VPC to your network or another VPC).</summary>
+    [JsonPropertyName("direction")]
+    public string? Direction { get; set; }
+
+    /// <summary>The subnets and IP addresses in your VPC that you want DNS queries to pass through on the way from your VPCs to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.</summary>
+    [JsonPropertyName("ipAddress")]
+    public IList<V1beta1EndpointSpecForProviderIpAddress>? IpAddress { get; set; }
+
+    /// <summary>The friendly name of the Route 53 Resolver endpoint.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The protocols you want to use for the Route 53 Resolver endpoint. Valid values: DoH, Do53, DoH-FIPS.</summary>
+    [JsonPropertyName("protocols")]
+    public IList<string>? Protocols { get; set; }
+
+    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string Region { get; set; }
+
+    /// <summary>The Route 53 Resolver endpoint IP address type. Valid values: IPV4, IPV6, DUALSTACK.</summary>
+    [JsonPropertyName("resolverEndpointType")]
+    public string? ResolverEndpointType { get; set; }
+
+    /// <summary>References to SecurityGroup in ec2 to populate securityGroupIds.</summary>
+    [JsonPropertyName("securityGroupIdRefs")]
+    public IList<V1beta1EndpointSpecForProviderSecurityGroupIdRefs>? SecurityGroupIdRefs { get; set; }
+
+    /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
+    [JsonPropertyName("securityGroupIdSelector")]
+    public V1beta1EndpointSpecForProviderSecurityGroupIdSelector? SecurityGroupIdSelector { get; set; }
+
+    /// <summary>The ID of one or more security groups that you want to use to control access to this VPC.</summary>
+    [JsonPropertyName("securityGroupIds")]
+    public IList<string>? SecurityGroupIds { get; set; }
+
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1EndpointSpecInitProviderIpAddressSubnetIdRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1EndpointSpecInitProviderIpAddressSubnetIdRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointSpecInitProviderIpAddressSubnetIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1EndpointSpecInitProviderIpAddressSubnetIdRefPolicyResolutionEnum>))]
+    public V1beta1EndpointSpecInitProviderIpAddressSubnetIdRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1EndpointSpecInitProviderIpAddressSubnetIdRefPolicyResolveEnum>))]
+    public V1beta1EndpointSpecInitProviderIpAddressSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointSpecInitProviderIpAddressSubnetIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1EndpointSpecInitProviderIpAddressSubnetIdRefPolicy? Policy { get; set; }
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1EndpointSpecInitProviderIpAddressSubnetIdSelectorPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1EndpointSpecInitProviderIpAddressSubnetIdSelectorPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointSpecInitProviderIpAddressSubnetIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1EndpointSpecInitProviderIpAddressSubnetIdSelectorPolicyResolutionEnum>))]
+    public V1beta1EndpointSpecInitProviderIpAddressSubnetIdSelectorPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1EndpointSpecInitProviderIpAddressSubnetIdSelectorPolicyResolveEnum>))]
+    public V1beta1EndpointSpecInitProviderIpAddressSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointSpecInitProviderIpAddressSubnetIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1EndpointSpecInitProviderIpAddressSubnetIdSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointSpecInitProviderIpAddress
+{
+    /// <summary>The IP address in the subnet that you want to use for DNS queries.</summary>
+    [JsonPropertyName("ip")]
+    public string? Ip { get; set; }
+
+    /// <summary>The ID of the subnet that contains the IP address.</summary>
+    [JsonPropertyName("subnetId")]
+    public string? SubnetId { get; set; }
+
+    /// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
+    [JsonPropertyName("subnetIdRef")]
+    public V1beta1EndpointSpecInitProviderIpAddressSubnetIdRef? SubnetIdRef { get; set; }
+
+    /// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
+    [JsonPropertyName("subnetIdSelector")]
+    public V1beta1EndpointSpecInitProviderIpAddressSubnetIdSelector? SubnetIdSelector { get; set; }
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1EndpointSpecInitProviderSecurityGroupIdRefsPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1EndpointSpecInitProviderSecurityGroupIdRefsPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointSpecInitProviderSecurityGroupIdRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1EndpointSpecInitProviderSecurityGroupIdRefsPolicyResolutionEnum>))]
+    public V1beta1EndpointSpecInitProviderSecurityGroupIdRefsPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1EndpointSpecInitProviderSecurityGroupIdRefsPolicyResolveEnum>))]
+    public V1beta1EndpointSpecInitProviderSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointSpecInitProviderSecurityGroupIdRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1EndpointSpecInitProviderSecurityGroupIdRefsPolicy? Policy { get; set; }
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1EndpointSpecInitProviderSecurityGroupIdSelectorPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1EndpointSpecInitProviderSecurityGroupIdSelectorPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointSpecInitProviderSecurityGroupIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1EndpointSpecInitProviderSecurityGroupIdSelectorPolicyResolutionEnum>))]
+    public V1beta1EndpointSpecInitProviderSecurityGroupIdSelectorPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1EndpointSpecInitProviderSecurityGroupIdSelectorPolicyResolveEnum>))]
+    public V1beta1EndpointSpecInitProviderSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointSpecInitProviderSecurityGroupIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1EndpointSpecInitProviderSecurityGroupIdSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointSpecInitProvider
+{
+    /// <summary>The direction of DNS queries to or from the Route 53 Resolver endpoint. Valid values are INBOUND (resolver forwards DNS queries to the DNS service for a VPC from your network or another VPC) or OUTBOUND (resolver forwards DNS queries from the DNS service for a VPC to your network or another VPC).</summary>
+    [JsonPropertyName("direction")]
+    public string? Direction { get; set; }
+
+    /// <summary>The subnets and IP addresses in your VPC that you want DNS queries to pass through on the way from your VPCs to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.</summary>
+    [JsonPropertyName("ipAddress")]
+    public IList<V1beta1EndpointSpecInitProviderIpAddress>? IpAddress { get; set; }
+
+    /// <summary>The friendly name of the Route 53 Resolver endpoint.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The protocols you want to use for the Route 53 Resolver endpoint. Valid values: DoH, Do53, DoH-FIPS.</summary>
+    [JsonPropertyName("protocols")]
+    public IList<string>? Protocols { get; set; }
+
+    /// <summary>The Route 53 Resolver endpoint IP address type. Valid values: IPV4, IPV6, DUALSTACK.</summary>
+    [JsonPropertyName("resolverEndpointType")]
+    public string? ResolverEndpointType { get; set; }
+
+    /// <summary>References to SecurityGroup in ec2 to populate securityGroupIds.</summary>
+    [JsonPropertyName("securityGroupIdRefs")]
+    public IList<V1beta1EndpointSpecInitProviderSecurityGroupIdRefs>? SecurityGroupIdRefs { get; set; }
+
+    /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
+    [JsonPropertyName("securityGroupIdSelector")]
+    public V1beta1EndpointSpecInitProviderSecurityGroupIdSelector? SecurityGroupIdSelector { get; set; }
+
+    /// <summary>The ID of one or more security groups that you want to use to control access to this VPC.</summary>
+    [JsonPropertyName("securityGroupIds")]
+    public IList<string>? SecurityGroupIds { get; set; }
+
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1EndpointSpecManagementPoliciesEnum
+{
+    [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
+    /// <summary>Observe</summary>
+    Observe,
+    [EnumMember(Value = "Create"), JsonStringEnumMemberName("Create")]
+    /// <summary>Create</summary>
+    Create,
+    [EnumMember(Value = "Update"), JsonStringEnumMemberName("Update")]
+    /// <summary>Update</summary>
+    Update,
+    [EnumMember(Value = "Delete"), JsonStringEnumMemberName("Delete")]
+    /// <summary>Delete</summary>
+    Delete,
+    [EnumMember(Value = "LateInitialize"), JsonStringEnumMemberName("LateInitialize")]
+    /// <summary>LateInitialize</summary>
+    LateInitialize,
+    [EnumMember(Value = "*"), JsonStringEnumMemberName("*")]
+    /// <summary>*</summary>
+    Option5
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1EndpointSpecProviderConfigRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1EndpointSpecProviderConfigRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointSpecProviderConfigRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1EndpointSpecProviderConfigRefPolicyResolutionEnum>))]
+    public V1beta1EndpointSpecProviderConfigRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1EndpointSpecProviderConfigRefPolicyResolveEnum>))]
+    public V1beta1EndpointSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointSpecProviderConfigRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1EndpointSpecProviderConfigRefPolicy? Policy { get; set; }
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1EndpointSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1EndpointSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointSpecPublishConnectionDetailsToConfigRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1EndpointSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum>))]
+    public V1beta1EndpointSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1EndpointSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum>))]
+    public V1beta1EndpointSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointSpecPublishConnectionDetailsToConfigRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1EndpointSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointSpecPublishConnectionDetailsToMetadata
+{
+    /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
+    [JsonPropertyName("annotations")]
+    public IDictionary<string, string>? Annotations { get; set; }
+
+    /// <summary>Labels are the labels/tags to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.labels". - It is up to Secret Store implementation for others store types.</summary>
+    [JsonPropertyName("labels")]
+    public IDictionary<string, string>? Labels { get; set; }
+
+    /// <summary>Type is the SecretType for the connection secret. - Only valid for Kubernetes Secret Stores.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointSpecPublishConnectionDetailsTo
+{
+    /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+    [JsonPropertyName("configRef")]
+    public V1beta1EndpointSpecPublishConnectionDetailsToConfigRef? ConfigRef { get; set; }
+
+    /// <summary>Metadata is the metadata for connection secret.</summary>
+    [JsonPropertyName("metadata")]
+    public V1beta1EndpointSpecPublishConnectionDetailsToMetadata? Metadata { get; set; }
+
+    /// <summary>Name is the name of the connection secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointSpecWriteConnectionSecretToRef
+{
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>EndpointSpec defines the desired state of Endpoint</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointSpec
+{
+    /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
+    [JsonPropertyName("deletionPolicy")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1EndpointSpecDeletionPolicyEnum>))]
+    public V1beta1EndpointSpecDeletionPolicyEnum? DeletionPolicy { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("forProvider")]
+    public V1beta1EndpointSpecForProvider ForProvider { get; set; }
+
+    /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+    [JsonPropertyName("initProvider")]
+    public V1beta1EndpointSpecInitProvider? InitProvider { get; set; }
+
+    /// <summary>THIS IS A BETA FIELD. It is on by default but can be opted out through a Crossplane feature flag. ManagementPolicies specify the array of actions Crossplane is allowed to take on the managed and external resources. This field is planned to replace the DeletionPolicy field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. If both are custom, the DeletionPolicy field will be ignored. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223 and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md</summary>
+    [JsonPropertyName("managementPolicies")]
+    public IList<V1beta1EndpointSpecManagementPoliciesEnum>? ManagementPolicies { get; set; }
+
+    /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+    [JsonPropertyName("providerConfigRef")]
+    public V1beta1EndpointSpecProviderConfigRef? ProviderConfigRef { get; set; }
+
+    /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+    [JsonPropertyName("publishConnectionDetailsTo")]
+    public V1beta1EndpointSpecPublishConnectionDetailsTo? PublishConnectionDetailsTo { get; set; }
+
+    /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+    [JsonPropertyName("writeConnectionSecretToRef")]
+    public V1beta1EndpointSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointStatusAtProviderIpAddress
+{
+    /// <summary>The IP address in the subnet that you want to use for DNS queries.</summary>
+    [JsonPropertyName("ip")]
+    public string? Ip { get; set; }
+
+    /// <summary>The ID of the Route 53 Resolver endpoint.</summary>
+    [JsonPropertyName("ipId")]
+    public string? IpId { get; set; }
+
+    /// <summary>The ID of the subnet that contains the IP address.</summary>
+    [JsonPropertyName("subnetId")]
+    public string? SubnetId { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointStatusAtProvider
+{
+    /// <summary>The ARN of the Route 53 Resolver endpoint.</summary>
+    [JsonPropertyName("arn")]
+    public string? Arn { get; set; }
+
+    /// <summary>The direction of DNS queries to or from the Route 53 Resolver endpoint. Valid values are INBOUND (resolver forwards DNS queries to the DNS service for a VPC from your network or another VPC) or OUTBOUND (resolver forwards DNS queries from the DNS service for a VPC to your network or another VPC).</summary>
+    [JsonPropertyName("direction")]
+    public string? Direction { get; set; }
+
+    /// <summary>The ID of the VPC that you want to create the resolver endpoint in.</summary>
+    [JsonPropertyName("hostVpcId")]
+    public string? HostVpcId { get; set; }
+
+    /// <summary>The ID of the Route 53 Resolver endpoint.</summary>
+    [JsonPropertyName("id")]
+    public string? Id { get; set; }
+
+    /// <summary>The subnets and IP addresses in your VPC that you want DNS queries to pass through on the way from your VPCs to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.</summary>
+    [JsonPropertyName("ipAddress")]
+    public IList<V1beta1EndpointStatusAtProviderIpAddress>? IpAddress { get; set; }
+
+    /// <summary>The friendly name of the Route 53 Resolver endpoint.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The protocols you want to use for the Route 53 Resolver endpoint. Valid values: DoH, Do53, DoH-FIPS.</summary>
+    [JsonPropertyName("protocols")]
+    public IList<string>? Protocols { get; set; }
+
+    /// <summary>The Route 53 Resolver endpoint IP address type. Valid values: IPV4, IPV6, DUALSTACK.</summary>
+    [JsonPropertyName("resolverEndpointType")]
+    public string? ResolverEndpointType { get; set; }
+
+    /// <summary>The ID of one or more security groups that you want to use to control access to this VPC.</summary>
+    [JsonPropertyName("securityGroupIds")]
+    public IList<string>? SecurityGroupIds { get; set; }
+
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    [JsonPropertyName("tagsAll")]
+    public IDictionary<string, string>? TagsAll { get; set; }
+}
+
+/// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointStatusConditions
+{
+    /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
+    [JsonPropertyName("lastTransitionTime")]
+    public string LastTransitionTime { get; set; }
+
+    /// <summary>A Message containing details about this condition's last transition from one status to another, if any.</summary>
+    [JsonPropertyName("message")]
+    public string? Message { get; set; }
+
+    /// <summary>ObservedGeneration represents the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.</summary>
+    [JsonPropertyName("observedGeneration")]
+    public long? ObservedGeneration { get; set; }
+
+    /// <summary>A Reason for this condition's last transition from one status to another.</summary>
+    [JsonPropertyName("reason")]
+    public string Reason { get; set; }
+
+    /// <summary>Status of this condition; is it currently True, False, or Unknown?</summary>
+    [JsonPropertyName("status")]
+    public string Status { get; set; }
+
+    /// <summary>Type of this condition. At most one of each condition type may apply to a resource at any point in time.</summary>
+    [JsonPropertyName("type")]
+    public string Type { get; set; }
+}
+
+/// <summary>EndpointStatus defines the observed state of Endpoint.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointStatus
+{
+    /// <summary></summary>
+    [JsonPropertyName("atProvider")]
+    public V1beta1EndpointStatusAtProvider? AtProvider { get; set; }
+
+    /// <summary>Conditions of the resource.</summary>
+    [JsonPropertyName("conditions")]
+    public IList<V1beta1EndpointStatusConditions>? Conditions { get; set; }
+
+    /// <summary>ObservedGeneration is the latest metadata.generation which resulted in either a ready state, or stalled due to error it can not recover from without human intervention.</summary>
+    [JsonPropertyName("observedGeneration")]
+    public long? ObservedGeneration { get; set; }
+}
+
+/// <summary>Endpoint is the Schema for the Endpoints API. Provides a Route 53 Resolver endpoint resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1Endpoint : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1EndpointSpec>, IStatus<V1beta1EndpointStatus>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "Endpoint";
+    public const string KubeGroup = "route53resolver.aws.upbound.io";
+    public const string KubePluralName = "endpoints";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ObjectMeta Metadata { get; set; }
+
+    /// <summary>EndpointSpec defines the desired state of Endpoint</summary>
+    [JsonPropertyName("spec")]
+    public V1beta1EndpointSpec Spec { get; set; }
+
+    /// <summary>EndpointStatus defines the observed state of Endpoint.</summary>
+    [JsonPropertyName("status")]
+    public V1beta1EndpointStatus? Status { get; set; }
+}

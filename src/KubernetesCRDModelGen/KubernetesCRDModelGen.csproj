@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>netstandard2.0;net8.0</TargetFrameworks>
+        <TargetFrameworks>net8.0</TargetFrameworks>
         <Authors>Ivan Josipovic</Authors>
         <Description>Converts Custom Resource Definition Yaml files to Models</Description>
         <PackageTags>Kubernetes Yaml CRD Converts Custom Resource Model</PackageTags>
@@ -19,34 +19,21 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Basic.Reference.Assemblies.Net80" Version="1.7.9" />
+        <PackageReference Include="Humanizer.Core" Version="2.14.1" />
+        <PackageReference Include="KubernetesClient" Version="15.0.1" />
         <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.11.0" />
         <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
         <PackageReference Include="Microsoft.OpenApi.Readers" Version="1.6.21" />
-        <PackageReference Include="Humanizer.Core" Version="2.14.1" />
+        <PackageReference Include="System.Text.Json" Version="9.0.0-rc.1.24431.7" />
     </ItemGroup>
 
-    <ItemGroup>
-        <ProjectReference Include="..\KubernetesCRDModelGen.Models\KubernetesCRDModelGen.Models.csproj" />
-    </ItemGroup>
-
-  <Choose>
-    <When Condition="'$(TargetFramework)' == 'netstandard2.0'">
-        <ItemGroup>
-            <PackageReference Include="Basic.Reference.Assemblies.NetStandard20" Version="1.7.9" />
-        </ItemGroup>
-    </When>
-    <Otherwise>
-        <ItemGroup>
-            <PackageReference Include="Basic.Reference.Assemblies.Net80" Version="1.7.9" />
-        </ItemGroup>
-    </Otherwise>
-  </Choose>
 
     <Target Name="EmbedResolveReferences" AfterTargets="ResolveReferences">
         <ItemGroup>
-            <FilesToEmbed Include="@(ReferencePath)" Condition="('%(ReferencePath.Filename)' == 'KubernetesClient'  Or '%(ReferencePath.Filename)' == 'KubernetesClient.Classic' Or '%(ReferencePath.Filename)' == 'System.Text.Json' Or '%(ReferencePath.Filename)' == 'KubernetesCRDModelGen.Models')" />
+            <FilesToEmbed Include="@(ReferencePath)" Condition="('%(ReferencePath.Filename)' == 'KubernetesClient' Or '%(ReferencePath.Filename)' == 'System.Text.Json')" />
 
-            <XmlFilesToEmbed Include="@(FilesToEmbed-&gt;'%(RelativeDir)%(FileName).xml'-&gt; Exists())" Condition="('%(FilesToEmbed.Filename)' == 'KubernetesClient' Or '%(FilesToEmbed.Filename)' == 'KubernetesClient.Classic')" />
+            <XmlFilesToEmbed Include="@(FilesToEmbed-&gt;'%(RelativeDir)%(FileName).xml'-&gt; Exists())" Condition="('%(FilesToEmbed.Filename)' == 'KubernetesClient')" />
 
             <!-- add these assemblies to the list of embedded resources -->
             <EmbeddedResource Include="@(FilesToEmbed-&gt;'%(RelativeDir)%(FileName).dll'-&gt; Exists())">

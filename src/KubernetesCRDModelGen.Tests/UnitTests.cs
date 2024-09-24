@@ -10,6 +10,8 @@ using System.Reflection;
 using System.Runtime.Serialization;
 using System.Text.Json;
 using System.Collections;
+using Microsoft.Extensions.Logging;
+using System.Reflection.Emit;
 
 namespace KubernetesCRDModelGen.Tests;
 
@@ -19,7 +21,9 @@ public class UnitTest1
 
     private static IGenerator GetGenerator()
     {
-        return new Generator();
+        var fac = LoggerFactory.Create((x) => { });
+
+        return new Generator(fac.CreateLogger<Generator>());
     }
 
     private static Type? GetTypeYaml(string yaml, string kind)

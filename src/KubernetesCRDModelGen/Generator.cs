@@ -1,14 +1,18 @@
-﻿using System.Reflection;
+﻿using System.CodeDom.Compiler;
+using System.Diagnostics.CodeAnalysis;
+using System.Reflection;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Xml;
+using System.Xml.Linq;
 using Humanizer;
 using k8s;
 using k8s.Models;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi;
 using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Models;
@@ -18,6 +22,8 @@ namespace KubernetesCRDModelGen;
 
 public class Generator : IGenerator
 {
+    public readonly ILogger<Generator> logger;
+
     public const string ModelNamespace = "KubernetesCRDModelGen.Models";
 
     private readonly MetadataReference[] _metadataReferences;
@@ -40,8 +46,10 @@ public class Generator : IGenerator
             new("CS1702", ReportDiagnostic.Suppress)
         ]);
 
-    public Generator()
+    public Generator(ILogger<Generator> logger)
     {
+        this.logger = logger;
+
         _metadataReferences ??= GetReferences();
     }
 
@@ -55,14 +63,18 @@ public class Generator : IGenerator
 
         if (diag?.Errors.Count > 0)
         {
-            Console.WriteLine("Error: " + diag.Errors.Select(x => x.Message));
+            logger.LogError("Error: {err}", diag.Errors.Select(x => x.Message));
         }
 
         var namespaceDeclaration = SyntaxFactory.FileScopedNamespaceDeclaration(SyntaxFactory.ParseName(CleanIdentifier(@namespace + "." + crd.Spec.Group, true))).NormalizeWhitespace();
 
         namespaceDeclaration = namespaceDeclaration.AddMembers(GenerateClass(doc, crd.Spec.Names.Kind, version.Name, crd.Spec.Names.Kind, crd.Spec.Group, crd.Spec.Names.Plural));
 
-        var compilationUnit = SyntaxFactory.CompilationUnit().WithUsings(GenerateUsings());
+        var nullableDirective = SyntaxFactory.NullableDirectiveTrivia(SyntaxFactory.Token(SyntaxKind.EnableKeyword), true);
+
+        var compilationUnit = SyntaxFactory.CompilationUnit()
+            .WithUsings(GenerateUsings())
+            .WithLeadingTrivia(SyntaxFactory.Trivia(nullableDirective));
 
         return compilationUnit.AddMembers(namespaceDeclaration);
     }
@@ -88,7 +100,24 @@ public class Generator : IGenerator
         var types = new List<BaseTypeDeclarationSyntax>();
 
         var @class = SyntaxFactory.ClassDeclaration(CleanIdentifier((isRoot ? version : string.Empty) + " " + name))
-                        .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.PartialKeyword));
+                        .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.PartialKeyword))
+                        .AddAttributeLists(SyntaxFactory.AttributeList()
+                            .AddAttributes(
+                            [
+                                SyntaxFactory.Attribute(
+                                    SyntaxFactory.ParseName("global::System.CodeDom.Compiler.GeneratedCode"))
+                                    .WithArgumentList(SyntaxFactory.AttributeArgumentList(SyntaxFactory.SeparatedList(new[]
+                                    {
+                                        SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("KubernetesCRDModelGen.Tool"))),
+                                        SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("1.0.0.0")))
+                                    }))),
+                                SyntaxFactory.Attribute(SyntaxFactory.ParseName("global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage"))
+                            ])
+                        )
+                        .WithLeadingTrivia(
+                            SyntaxFactory.TriviaList(
+                                SyntaxFactory.Comment($"/// <summary>{XmlString(schema.Description?.Replace("\n", " ").Replace("\r", " "))}</summary>"),
+                                SyntaxFactory.CarriageReturnLineFeed));
 
         if (isRoot)
         {
@@ -328,7 +357,19 @@ public class Generator : IGenerator
     private static string GenerateEnum(IList<IOpenApiAny> options, List<BaseTypeDeclarationSyntax> types, string parentClassName, string propertyName)
     {
         var enumDeclaration = SyntaxFactory.EnumDeclaration(CleanIdentifier(parentClassName + " " + propertyName) + "Enum")
-            .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword));
+            .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword))
+            .AddAttributeLists(SyntaxFactory.AttributeList()
+                .AddAttributes(
+                [
+                    SyntaxFactory.Attribute(
+                        SyntaxFactory.ParseName("global::System.CodeDom.Compiler.GeneratedCode"))
+                        .WithArgumentList(SyntaxFactory.AttributeArgumentList(SyntaxFactory.SeparatedList(new[]
+                        {
+                            SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("KubernetesCRDModelGen.Tool"))),
+                            SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("1.0.0.0")))
+                        }))),
+                ])
+            );
 
         for (var i = 0; i < options.Count; i++)
         {
@@ -354,7 +395,7 @@ public class Generator : IGenerator
                     SyntaxFactory.EnumMemberDeclaration(SyntaxFactory.Identifier(identifier))
                         .WithLeadingTrivia(
                             SyntaxFactory.TriviaList(
-                                SyntaxFactory.Comment($"/// <summary>{openApiString.Value?.Replace("\n", " ").Replace("\r", " ")}</summary>"),
+                                SyntaxFactory.Comment($"/// <summary>{XmlString(openApiString.Value?.Replace("\n", " ").Replace("\r", " "))}</summary>"),
                                 SyntaxFactory.CarriageReturnLineFeed))
                         .WithAttributeLists(
                             SyntaxFactory.SingletonList(
@@ -445,7 +486,7 @@ public class Generator : IGenerator
 
         propDecleration = propDecleration.WithLeadingTrivia(
             SyntaxFactory.TriviaList(
-                SyntaxFactory.Comment($"/// <summary>{comment?.Replace("\n", " ").Replace("\r", " ")}</summary>"),
+                SyntaxFactory.Comment($"/// <summary>{XmlString(comment?.Replace("\n", " ").Replace("\r", " "))}</summary>"),
                 SyntaxFactory.CarriageReturnLineFeed));
 
 
@@ -539,7 +580,7 @@ public class Generator : IGenerator
 
                 foreach (var diagnostic in failures)
                 {
-                    Console.WriteLine("Error creating Assembly: {0}: {1}", diagnostic.Id, diagnostic.GetMessage());
+                    logger.LogError("Error creating Assembly: {0}: {1}", diagnostic.Id, diagnostic.GetMessage());
                 }
             }
             else
@@ -556,7 +597,7 @@ public class Generator : IGenerator
         }
         catch (Exception ex)
         {
-            Console.WriteLine("Error creating Assembly: {0}", ex);
+            logger.LogError(ex, "Error creating Assembly");
         }
 
         return (null, null);
@@ -577,18 +618,8 @@ public class Generator : IGenerator
             references.Add(ass);
         }
 
-#if NETSTANDARD2_0
-        references.AddRange(Basic.Reference.Assemblies.NetStandard20.References.All);
-#else
-        references.AddRange(Basic.Reference.Assemblies.Net80.References.All);
-#endif
-
-        var dupe = references.Where(x => x.Display == "System.Text.Json (net80)").First();
-
-        if (dupe != null)
-        {
-            references.Remove(dupe);
-        }
+        references.Add(Basic.Reference.Assemblies.Net80.References.SystemRuntime);
+        references.Add(Basic.Reference.Assemblies.Net80.References.SystemRuntimeSerializationPrimitives);
 
         return [.. references];
     }
@@ -598,5 +629,14 @@ public class Generator : IGenerator
         var code = GenerateCompilationUnit(crd, @namespace);
 
         return code.NormalizeWhitespace().ToString();
+    }
+
+    private static string XmlString(string text)
+    {
+        if (string.IsNullOrEmpty(text))
+        {
+            return text;
+        }
+        return new XElement("t", text).LastNode?.ToString() ?? "";
     }
 }

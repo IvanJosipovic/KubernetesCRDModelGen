@@ -34,6 +34,18 @@ jobs:
       with:
         global-json-file: global.json
 
+    - name: Generate Models
+      shell: pwsh
+      run: |
+        $projects = Get-ChildItem -Path $PWD\src\Models -Recurse -Filter *.csproj
+        foreach($project in $projects){
+
+          dotnet run -c Release --project src\KubernetesCRDModelGen.Tool\KubernetesCRDModelGen.Tool.csproj --FolderPath $($project.Directory)
+            if (-not $?) {
+              throw "CRD Generation Failed"
+            }
+        }
+
     - name: .NET Build
       run: dotnet build -c Release
 
@@ -54,18 +66,6 @@ jobs:
     - name: .NET Pack
       run: dotnet pack -c Release -p:Version=${{ (steps.semantic.outputs.new_release_published && steps.semantic.outputs.new_release_version) || '1.0.0' }}
 
-    - name: Build Model packages
-      shell: pwsh
-      run: |
-        (Get-Content src\Models\Directory.Build.props).Replace('{{Version}}', '${{ (steps.semantic.outputs.new_release_published && steps.semantic.outputs.new_release_version) || '1.0.0' }}') | Set-Content src\Models\Directory.Build.props
-        $projects = Get-ChildItem -Path $PWD\src\Models -Recurse -Filter *.csproj
-        foreach($project in $projects){
-          dotnet pack -c Release -p:Version=${{ (steps.semantic.outputs.new_release_published && steps.semantic.outputs.new_release_version) || '1.0.0' }} $($project.FullName)
-            if (-not $?) {
-                throw "CRD Generation Failed"
-            }
-        }
-
     - name: Semantic Release
       if: steps.semantic.outputs.new_release_published == 'true'
       uses: cycjimmy/semantic-release-action@v4
@@ -77,7 +77,7 @@ jobs:
 
     - name: .NET NuGet Push
       if: steps.semantic.outputs.new_release_published == 'true'
-      run: dotnet nuget push src/**/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }} --skip-duplicate
+      run: dotnet nuget push src/**/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
 
     - uses: actions/upload-artifact@v4
       with:

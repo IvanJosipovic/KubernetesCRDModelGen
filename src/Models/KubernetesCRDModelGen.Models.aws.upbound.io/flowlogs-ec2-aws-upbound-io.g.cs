@@ -1,0 +1,1458 @@
+using k8s;
+using k8s.Models;
+using System;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+using System.Text.Json;
+using System.Text.Json.Nodes;
+using System.Text.Json.Serialization;
+
+namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecDeletionPolicyEnum
+{
+    [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
+    /// <summary>Orphan</summary>
+    Orphan,
+    [EnumMember(Value = "Delete"), JsonStringEnumMemberName("Delete")]
+    /// <summary>Delete</summary>
+    Delete
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecForProviderDestinationOptions
+{
+    /// <summary>The format for the flow log. Default value: plain-text. Valid values: plain-text, parquet.</summary>
+    [JsonPropertyName("fileFormat")]
+    public string? FileFormat { get; set; }
+
+    /// <summary>Indicates whether to use Hive-compatible prefixes for flow logs stored in Amazon S3. Default value: false.</summary>
+    [JsonPropertyName("hiveCompatiblePartitions")]
+    public bool? HiveCompatiblePartitions { get; set; }
+
+    /// <summary>Indicates whether to partition the flow log per hour. This reduces the cost and response time for queries. Default value: false.</summary>
+    [JsonPropertyName("perHourPartition")]
+    public bool? PerHourPartition { get; set; }
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecForProviderIamRoleArnRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecForProviderIamRoleArnRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecForProviderIamRoleArnRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecForProviderIamRoleArnRefPolicyResolutionEnum>))]
+    public V1beta1FlowLogSpecForProviderIamRoleArnRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecForProviderIamRoleArnRefPolicyResolveEnum>))]
+    public V1beta1FlowLogSpecForProviderIamRoleArnRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Role in iam to populate iamRoleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecForProviderIamRoleArnRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1FlowLogSpecForProviderIamRoleArnRefPolicy? Policy { get; set; }
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecForProviderIamRoleArnSelectorPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecForProviderIamRoleArnSelectorPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecForProviderIamRoleArnSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecForProviderIamRoleArnSelectorPolicyResolutionEnum>))]
+    public V1beta1FlowLogSpecForProviderIamRoleArnSelectorPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecForProviderIamRoleArnSelectorPolicyResolveEnum>))]
+    public V1beta1FlowLogSpecForProviderIamRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Role in iam to populate iamRoleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecForProviderIamRoleArnSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1FlowLogSpecForProviderIamRoleArnSelectorPolicy? Policy { get; set; }
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecForProviderLogDestinationRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecForProviderLogDestinationRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecForProviderLogDestinationRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecForProviderLogDestinationRefPolicyResolutionEnum>))]
+    public V1beta1FlowLogSpecForProviderLogDestinationRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecForProviderLogDestinationRefPolicyResolveEnum>))]
+    public V1beta1FlowLogSpecForProviderLogDestinationRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Group in cloudwatchlogs to populate logDestination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecForProviderLogDestinationRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1FlowLogSpecForProviderLogDestinationRefPolicy? Policy { get; set; }
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecForProviderLogDestinationSelectorPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecForProviderLogDestinationSelectorPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecForProviderLogDestinationSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecForProviderLogDestinationSelectorPolicyResolutionEnum>))]
+    public V1beta1FlowLogSpecForProviderLogDestinationSelectorPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecForProviderLogDestinationSelectorPolicyResolveEnum>))]
+    public V1beta1FlowLogSpecForProviderLogDestinationSelectorPolicyResolveEnum? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Group in cloudwatchlogs to populate logDestination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecForProviderLogDestinationSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1FlowLogSpecForProviderLogDestinationSelectorPolicy? Policy { get; set; }
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecForProviderSubnetIdRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecForProviderSubnetIdRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecForProviderSubnetIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecForProviderSubnetIdRefPolicyResolutionEnum>))]
+    public V1beta1FlowLogSpecForProviderSubnetIdRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecForProviderSubnetIdRefPolicyResolveEnum>))]
+    public V1beta1FlowLogSpecForProviderSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecForProviderSubnetIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1FlowLogSpecForProviderSubnetIdRefPolicy? Policy { get; set; }
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecForProviderSubnetIdSelectorPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecForProviderSubnetIdSelectorPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecForProviderSubnetIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecForProviderSubnetIdSelectorPolicyResolutionEnum>))]
+    public V1beta1FlowLogSpecForProviderSubnetIdSelectorPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecForProviderSubnetIdSelectorPolicyResolveEnum>))]
+    public V1beta1FlowLogSpecForProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecForProviderSubnetIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1FlowLogSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecForProviderVpcIdRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecForProviderVpcIdRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecForProviderVpcIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecForProviderVpcIdRefPolicyResolutionEnum>))]
+    public V1beta1FlowLogSpecForProviderVpcIdRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecForProviderVpcIdRefPolicyResolveEnum>))]
+    public V1beta1FlowLogSpecForProviderVpcIdRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+/// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecForProviderVpcIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1FlowLogSpecForProviderVpcIdRefPolicy? Policy { get; set; }
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecForProviderVpcIdSelectorPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecForProviderVpcIdSelectorPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecForProviderVpcIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecForProviderVpcIdSelectorPolicyResolutionEnum>))]
+    public V1beta1FlowLogSpecForProviderVpcIdSelectorPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecForProviderVpcIdSelectorPolicyResolveEnum>))]
+    public V1beta1FlowLogSpecForProviderVpcIdSelectorPolicyResolveEnum? Resolve { get; set; }
+}
+
+/// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecForProviderVpcIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1FlowLogSpecForProviderVpcIdSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecForProvider
+{
+    /// <summary>ARN of the IAM role that allows Amazon EC2 to publish flow logs across accounts.</summary>
+    [JsonPropertyName("deliverCrossAccountRole")]
+    public string? DeliverCrossAccountRole { get; set; }
+
+    /// <summary>Describes the destination options for a flow log. More details below.</summary>
+    [JsonPropertyName("destinationOptions")]
+    public IList<V1beta1FlowLogSpecForProviderDestinationOptions>? DestinationOptions { get; set; }
+
+    /// <summary>Elastic Network Interface ID to attach to</summary>
+    [JsonPropertyName("eniId")]
+    public string? EniId { get; set; }
+
+    /// <summary>The ARN for the IAM role that's used to post flow logs to a CloudWatch Logs log group</summary>
+    [JsonPropertyName("iamRoleArn")]
+    public string? IamRoleArn { get; set; }
+
+    /// <summary>Reference to a Role in iam to populate iamRoleArn.</summary>
+    [JsonPropertyName("iamRoleArnRef")]
+    public V1beta1FlowLogSpecForProviderIamRoleArnRef? IamRoleArnRef { get; set; }
+
+    /// <summary>Selector for a Role in iam to populate iamRoleArn.</summary>
+    [JsonPropertyName("iamRoleArnSelector")]
+    public V1beta1FlowLogSpecForProviderIamRoleArnSelector? IamRoleArnSelector { get; set; }
+
+    /// <summary>The ARN of the logging destination. Either log_destination or log_group_name must be set.</summary>
+    [JsonPropertyName("logDestination")]
+    public string? LogDestination { get; set; }
+
+    /// <summary>Reference to a Group in cloudwatchlogs to populate logDestination.</summary>
+    [JsonPropertyName("logDestinationRef")]
+    public V1beta1FlowLogSpecForProviderLogDestinationRef? LogDestinationRef { get; set; }
+
+    /// <summary>Selector for a Group in cloudwatchlogs to populate logDestination.</summary>
+    [JsonPropertyName("logDestinationSelector")]
+    public V1beta1FlowLogSpecForProviderLogDestinationSelector? LogDestinationSelector { get; set; }
+
+    /// <summary>The type of the logging destination. Valid values: cloud-watch-logs, s3, kinesis-data-firehose. Default: cloud-watch-logs.</summary>
+    [JsonPropertyName("logDestinationType")]
+    public string? LogDestinationType { get; set; }
+
+    /// <summary>The fields to include in the flow log record. Accepted format example: "$${interface-id} $${srcaddr} $${dstaddr} $${srcport} $${dstport}".</summary>
+    [JsonPropertyName("logFormat")]
+    public string? LogFormat { get; set; }
+
+    /// <summary>Deprecated: Use log_destination instead. The name of the CloudWatch log group. Either log_group_name or log_destination must be set.</summary>
+    [JsonPropertyName("logGroupName")]
+    public string? LogGroupName { get; set; }
+
+    /// <summary>The maximum interval of time during which a flow of packets is captured and aggregated into a flow log record. Valid Values: 60 seconds (1 minute) or 600 seconds (10 minutes). Default: 600. When transit_gateway_id or transit_gateway_attachment_id is specified, max_aggregation_interval must be 60 seconds (1 minute).</summary>
+    [JsonPropertyName("maxAggregationInterval")]
+    public double? MaxAggregationInterval { get; set; }
+
+    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string Region { get; set; }
+
+    /// <summary>Subnet ID to attach to</summary>
+    [JsonPropertyName("subnetId")]
+    public string? SubnetId { get; set; }
+
+    /// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
+    [JsonPropertyName("subnetIdRef")]
+    public V1beta1FlowLogSpecForProviderSubnetIdRef? SubnetIdRef { get; set; }
+
+    /// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
+    [JsonPropertyName("subnetIdSelector")]
+    public V1beta1FlowLogSpecForProviderSubnetIdSelector? SubnetIdSelector { get; set; }
+
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>The type of traffic to capture. Valid values: ACCEPT,REJECT, ALL.</summary>
+    [JsonPropertyName("trafficType")]
+    public string? TrafficType { get; set; }
+
+    /// <summary>Transit Gateway Attachment ID to attach to</summary>
+    [JsonPropertyName("transitGatewayAttachmentId")]
+    public string? TransitGatewayAttachmentId { get; set; }
+
+    /// <summary>Transit Gateway ID to attach to</summary>
+    [JsonPropertyName("transitGatewayId")]
+    public string? TransitGatewayId { get; set; }
+
+    /// <summary>VPC ID to attach to</summary>
+    [JsonPropertyName("vpcId")]
+    public string? VpcId { get; set; }
+
+    /// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
+    [JsonPropertyName("vpcIdRef")]
+    public V1beta1FlowLogSpecForProviderVpcIdRef? VpcIdRef { get; set; }
+
+    /// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
+    [JsonPropertyName("vpcIdSelector")]
+    public V1beta1FlowLogSpecForProviderVpcIdSelector? VpcIdSelector { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecInitProviderDestinationOptions
+{
+    /// <summary>The format for the flow log. Default value: plain-text. Valid values: plain-text, parquet.</summary>
+    [JsonPropertyName("fileFormat")]
+    public string? FileFormat { get; set; }
+
+    /// <summary>Indicates whether to use Hive-compatible prefixes for flow logs stored in Amazon S3. Default value: false.</summary>
+    [JsonPropertyName("hiveCompatiblePartitions")]
+    public bool? HiveCompatiblePartitions { get; set; }
+
+    /// <summary>Indicates whether to partition the flow log per hour. This reduces the cost and response time for queries. Default value: false.</summary>
+    [JsonPropertyName("perHourPartition")]
+    public bool? PerHourPartition { get; set; }
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecInitProviderIamRoleArnRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecInitProviderIamRoleArnRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecInitProviderIamRoleArnRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecInitProviderIamRoleArnRefPolicyResolutionEnum>))]
+    public V1beta1FlowLogSpecInitProviderIamRoleArnRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecInitProviderIamRoleArnRefPolicyResolveEnum>))]
+    public V1beta1FlowLogSpecInitProviderIamRoleArnRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Role in iam to populate iamRoleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecInitProviderIamRoleArnRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1FlowLogSpecInitProviderIamRoleArnRefPolicy? Policy { get; set; }
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecInitProviderIamRoleArnSelectorPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecInitProviderIamRoleArnSelectorPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecInitProviderIamRoleArnSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecInitProviderIamRoleArnSelectorPolicyResolutionEnum>))]
+    public V1beta1FlowLogSpecInitProviderIamRoleArnSelectorPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecInitProviderIamRoleArnSelectorPolicyResolveEnum>))]
+    public V1beta1FlowLogSpecInitProviderIamRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Role in iam to populate iamRoleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecInitProviderIamRoleArnSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1FlowLogSpecInitProviderIamRoleArnSelectorPolicy? Policy { get; set; }
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecInitProviderLogDestinationRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecInitProviderLogDestinationRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecInitProviderLogDestinationRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecInitProviderLogDestinationRefPolicyResolutionEnum>))]
+    public V1beta1FlowLogSpecInitProviderLogDestinationRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecInitProviderLogDestinationRefPolicyResolveEnum>))]
+    public V1beta1FlowLogSpecInitProviderLogDestinationRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Group in cloudwatchlogs to populate logDestination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecInitProviderLogDestinationRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1FlowLogSpecInitProviderLogDestinationRefPolicy? Policy { get; set; }
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecInitProviderLogDestinationSelectorPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecInitProviderLogDestinationSelectorPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecInitProviderLogDestinationSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecInitProviderLogDestinationSelectorPolicyResolutionEnum>))]
+    public V1beta1FlowLogSpecInitProviderLogDestinationSelectorPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecInitProviderLogDestinationSelectorPolicyResolveEnum>))]
+    public V1beta1FlowLogSpecInitProviderLogDestinationSelectorPolicyResolveEnum? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Group in cloudwatchlogs to populate logDestination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecInitProviderLogDestinationSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1FlowLogSpecInitProviderLogDestinationSelectorPolicy? Policy { get; set; }
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecInitProviderSubnetIdRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecInitProviderSubnetIdRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecInitProviderSubnetIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecInitProviderSubnetIdRefPolicyResolutionEnum>))]
+    public V1beta1FlowLogSpecInitProviderSubnetIdRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecInitProviderSubnetIdRefPolicyResolveEnum>))]
+    public V1beta1FlowLogSpecInitProviderSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecInitProviderSubnetIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1FlowLogSpecInitProviderSubnetIdRefPolicy? Policy { get; set; }
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecInitProviderSubnetIdSelectorPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecInitProviderSubnetIdSelectorPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecInitProviderSubnetIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecInitProviderSubnetIdSelectorPolicyResolutionEnum>))]
+    public V1beta1FlowLogSpecInitProviderSubnetIdSelectorPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecInitProviderSubnetIdSelectorPolicyResolveEnum>))]
+    public V1beta1FlowLogSpecInitProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecInitProviderSubnetIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1FlowLogSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecInitProviderVpcIdRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecInitProviderVpcIdRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecInitProviderVpcIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecInitProviderVpcIdRefPolicyResolutionEnum>))]
+    public V1beta1FlowLogSpecInitProviderVpcIdRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecInitProviderVpcIdRefPolicyResolveEnum>))]
+    public V1beta1FlowLogSpecInitProviderVpcIdRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+/// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecInitProviderVpcIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1FlowLogSpecInitProviderVpcIdRefPolicy? Policy { get; set; }
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecInitProviderVpcIdSelectorPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecInitProviderVpcIdSelectorPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecInitProviderVpcIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecInitProviderVpcIdSelectorPolicyResolutionEnum>))]
+    public V1beta1FlowLogSpecInitProviderVpcIdSelectorPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecInitProviderVpcIdSelectorPolicyResolveEnum>))]
+    public V1beta1FlowLogSpecInitProviderVpcIdSelectorPolicyResolveEnum? Resolve { get; set; }
+}
+
+/// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecInitProviderVpcIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1FlowLogSpecInitProviderVpcIdSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecInitProvider
+{
+    /// <summary>ARN of the IAM role that allows Amazon EC2 to publish flow logs across accounts.</summary>
+    [JsonPropertyName("deliverCrossAccountRole")]
+    public string? DeliverCrossAccountRole { get; set; }
+
+    /// <summary>Describes the destination options for a flow log. More details below.</summary>
+    [JsonPropertyName("destinationOptions")]
+    public IList<V1beta1FlowLogSpecInitProviderDestinationOptions>? DestinationOptions { get; set; }
+
+    /// <summary>Elastic Network Interface ID to attach to</summary>
+    [JsonPropertyName("eniId")]
+    public string? EniId { get; set; }
+
+    /// <summary>The ARN for the IAM role that's used to post flow logs to a CloudWatch Logs log group</summary>
+    [JsonPropertyName("iamRoleArn")]
+    public string? IamRoleArn { get; set; }
+
+    /// <summary>Reference to a Role in iam to populate iamRoleArn.</summary>
+    [JsonPropertyName("iamRoleArnRef")]
+    public V1beta1FlowLogSpecInitProviderIamRoleArnRef? IamRoleArnRef { get; set; }
+
+    /// <summary>Selector for a Role in iam to populate iamRoleArn.</summary>
+    [JsonPropertyName("iamRoleArnSelector")]
+    public V1beta1FlowLogSpecInitProviderIamRoleArnSelector? IamRoleArnSelector { get; set; }
+
+    /// <summary>The ARN of the logging destination. Either log_destination or log_group_name must be set.</summary>
+    [JsonPropertyName("logDestination")]
+    public string? LogDestination { get; set; }
+
+    /// <summary>Reference to a Group in cloudwatchlogs to populate logDestination.</summary>
+    [JsonPropertyName("logDestinationRef")]
+    public V1beta1FlowLogSpecInitProviderLogDestinationRef? LogDestinationRef { get; set; }
+
+    /// <summary>Selector for a Group in cloudwatchlogs to populate logDestination.</summary>
+    [JsonPropertyName("logDestinationSelector")]
+    public V1beta1FlowLogSpecInitProviderLogDestinationSelector? LogDestinationSelector { get; set; }
+
+    /// <summary>The type of the logging destination. Valid values: cloud-watch-logs, s3, kinesis-data-firehose. Default: cloud-watch-logs.</summary>
+    [JsonPropertyName("logDestinationType")]
+    public string? LogDestinationType { get; set; }
+
+    /// <summary>The fields to include in the flow log record. Accepted format example: "$${interface-id} $${srcaddr} $${dstaddr} $${srcport} $${dstport}".</summary>
+    [JsonPropertyName("logFormat")]
+    public string? LogFormat { get; set; }
+
+    /// <summary>Deprecated: Use log_destination instead. The name of the CloudWatch log group. Either log_group_name or log_destination must be set.</summary>
+    [JsonPropertyName("logGroupName")]
+    public string? LogGroupName { get; set; }
+
+    /// <summary>The maximum interval of time during which a flow of packets is captured and aggregated into a flow log record. Valid Values: 60 seconds (1 minute) or 600 seconds (10 minutes). Default: 600. When transit_gateway_id or transit_gateway_attachment_id is specified, max_aggregation_interval must be 60 seconds (1 minute).</summary>
+    [JsonPropertyName("maxAggregationInterval")]
+    public double? MaxAggregationInterval { get; set; }
+
+    /// <summary>Subnet ID to attach to</summary>
+    [JsonPropertyName("subnetId")]
+    public string? SubnetId { get; set; }
+
+    /// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
+    [JsonPropertyName("subnetIdRef")]
+    public V1beta1FlowLogSpecInitProviderSubnetIdRef? SubnetIdRef { get; set; }
+
+    /// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
+    [JsonPropertyName("subnetIdSelector")]
+    public V1beta1FlowLogSpecInitProviderSubnetIdSelector? SubnetIdSelector { get; set; }
+
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>The type of traffic to capture. Valid values: ACCEPT,REJECT, ALL.</summary>
+    [JsonPropertyName("trafficType")]
+    public string? TrafficType { get; set; }
+
+    /// <summary>Transit Gateway Attachment ID to attach to</summary>
+    [JsonPropertyName("transitGatewayAttachmentId")]
+    public string? TransitGatewayAttachmentId { get; set; }
+
+    /// <summary>Transit Gateway ID to attach to</summary>
+    [JsonPropertyName("transitGatewayId")]
+    public string? TransitGatewayId { get; set; }
+
+    /// <summary>VPC ID to attach to</summary>
+    [JsonPropertyName("vpcId")]
+    public string? VpcId { get; set; }
+
+    /// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
+    [JsonPropertyName("vpcIdRef")]
+    public V1beta1FlowLogSpecInitProviderVpcIdRef? VpcIdRef { get; set; }
+
+    /// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
+    [JsonPropertyName("vpcIdSelector")]
+    public V1beta1FlowLogSpecInitProviderVpcIdSelector? VpcIdSelector { get; set; }
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecManagementPoliciesEnum
+{
+    [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
+    /// <summary>Observe</summary>
+    Observe,
+    [EnumMember(Value = "Create"), JsonStringEnumMemberName("Create")]
+    /// <summary>Create</summary>
+    Create,
+    [EnumMember(Value = "Update"), JsonStringEnumMemberName("Update")]
+    /// <summary>Update</summary>
+    Update,
+    [EnumMember(Value = "Delete"), JsonStringEnumMemberName("Delete")]
+    /// <summary>Delete</summary>
+    Delete,
+    [EnumMember(Value = "LateInitialize"), JsonStringEnumMemberName("LateInitialize")]
+    /// <summary>LateInitialize</summary>
+    LateInitialize,
+    [EnumMember(Value = "*"), JsonStringEnumMemberName("*")]
+    /// <summary>*</summary>
+    Option5
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecProviderConfigRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecProviderConfigRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecProviderConfigRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecProviderConfigRefPolicyResolutionEnum>))]
+    public V1beta1FlowLogSpecProviderConfigRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecProviderConfigRefPolicyResolveEnum>))]
+    public V1beta1FlowLogSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecProviderConfigRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1FlowLogSpecProviderConfigRefPolicy? Policy { get; set; }
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1FlowLogSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecPublishConnectionDetailsToConfigRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum>))]
+    public V1beta1FlowLogSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum>))]
+    public V1beta1FlowLogSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecPublishConnectionDetailsToConfigRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1FlowLogSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecPublishConnectionDetailsToMetadata
+{
+    /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
+    [JsonPropertyName("annotations")]
+    public IDictionary<string, string>? Annotations { get; set; }
+
+    /// <summary>Labels are the labels/tags to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.labels". - It is up to Secret Store implementation for others store types.</summary>
+    [JsonPropertyName("labels")]
+    public IDictionary<string, string>? Labels { get; set; }
+
+    /// <summary>Type is the SecretType for the connection secret. - Only valid for Kubernetes Secret Stores.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecPublishConnectionDetailsTo
+{
+    /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+    [JsonPropertyName("configRef")]
+    public V1beta1FlowLogSpecPublishConnectionDetailsToConfigRef? ConfigRef { get; set; }
+
+    /// <summary>Metadata is the metadata for connection secret.</summary>
+    [JsonPropertyName("metadata")]
+    public V1beta1FlowLogSpecPublishConnectionDetailsToMetadata? Metadata { get; set; }
+
+    /// <summary>Name is the name of the connection secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpecWriteConnectionSecretToRef
+{
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>FlowLogSpec defines the desired state of FlowLog</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogSpec
+{
+    /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
+    [JsonPropertyName("deletionPolicy")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FlowLogSpecDeletionPolicyEnum>))]
+    public V1beta1FlowLogSpecDeletionPolicyEnum? DeletionPolicy { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("forProvider")]
+    public V1beta1FlowLogSpecForProvider ForProvider { get; set; }
+
+    /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+    [JsonPropertyName("initProvider")]
+    public V1beta1FlowLogSpecInitProvider? InitProvider { get; set; }
+
+    /// <summary>THIS IS A BETA FIELD. It is on by default but can be opted out through a Crossplane feature flag. ManagementPolicies specify the array of actions Crossplane is allowed to take on the managed and external resources. This field is planned to replace the DeletionPolicy field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. If both are custom, the DeletionPolicy field will be ignored. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223 and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md</summary>
+    [JsonPropertyName("managementPolicies")]
+    public IList<V1beta1FlowLogSpecManagementPoliciesEnum>? ManagementPolicies { get; set; }
+
+    /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+    [JsonPropertyName("providerConfigRef")]
+    public V1beta1FlowLogSpecProviderConfigRef? ProviderConfigRef { get; set; }
+
+    /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+    [JsonPropertyName("publishConnectionDetailsTo")]
+    public V1beta1FlowLogSpecPublishConnectionDetailsTo? PublishConnectionDetailsTo { get; set; }
+
+    /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+    [JsonPropertyName("writeConnectionSecretToRef")]
+    public V1beta1FlowLogSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogStatusAtProviderDestinationOptions
+{
+    /// <summary>The format for the flow log. Default value: plain-text. Valid values: plain-text, parquet.</summary>
+    [JsonPropertyName("fileFormat")]
+    public string? FileFormat { get; set; }
+
+    /// <summary>Indicates whether to use Hive-compatible prefixes for flow logs stored in Amazon S3. Default value: false.</summary>
+    [JsonPropertyName("hiveCompatiblePartitions")]
+    public bool? HiveCompatiblePartitions { get; set; }
+
+    /// <summary>Indicates whether to partition the flow log per hour. This reduces the cost and response time for queries. Default value: false.</summary>
+    [JsonPropertyName("perHourPartition")]
+    public bool? PerHourPartition { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogStatusAtProvider
+{
+    /// <summary>The ARN of the Flow Log.</summary>
+    [JsonPropertyName("arn")]
+    public string? Arn { get; set; }
+
+    /// <summary>ARN of the IAM role that allows Amazon EC2 to publish flow logs across accounts.</summary>
+    [JsonPropertyName("deliverCrossAccountRole")]
+    public string? DeliverCrossAccountRole { get; set; }
+
+    /// <summary>Describes the destination options for a flow log. More details below.</summary>
+    [JsonPropertyName("destinationOptions")]
+    public IList<V1beta1FlowLogStatusAtProviderDestinationOptions>? DestinationOptions { get; set; }
+
+    /// <summary>Elastic Network Interface ID to attach to</summary>
+    [JsonPropertyName("eniId")]
+    public string? EniId { get; set; }
+
+    /// <summary>The ARN for the IAM role that's used to post flow logs to a CloudWatch Logs log group</summary>
+    [JsonPropertyName("iamRoleArn")]
+    public string? IamRoleArn { get; set; }
+
+    /// <summary>The Flow Log ID</summary>
+    [JsonPropertyName("id")]
+    public string? Id { get; set; }
+
+    /// <summary>The ARN of the logging destination. Either log_destination or log_group_name must be set.</summary>
+    [JsonPropertyName("logDestination")]
+    public string? LogDestination { get; set; }
+
+    /// <summary>The type of the logging destination. Valid values: cloud-watch-logs, s3, kinesis-data-firehose. Default: cloud-watch-logs.</summary>
+    [JsonPropertyName("logDestinationType")]
+    public string? LogDestinationType { get; set; }
+
+    /// <summary>The fields to include in the flow log record. Accepted format example: "$${interface-id} $${srcaddr} $${dstaddr} $${srcport} $${dstport}".</summary>
+    [JsonPropertyName("logFormat")]
+    public string? LogFormat { get; set; }
+
+    /// <summary>Deprecated: Use log_destination instead. The name of the CloudWatch log group. Either log_group_name or log_destination must be set.</summary>
+    [JsonPropertyName("logGroupName")]
+    public string? LogGroupName { get; set; }
+
+    /// <summary>The maximum interval of time during which a flow of packets is captured and aggregated into a flow log record. Valid Values: 60 seconds (1 minute) or 600 seconds (10 minutes). Default: 600. When transit_gateway_id or transit_gateway_attachment_id is specified, max_aggregation_interval must be 60 seconds (1 minute).</summary>
+    [JsonPropertyName("maxAggregationInterval")]
+    public double? MaxAggregationInterval { get; set; }
+
+    /// <summary>Subnet ID to attach to</summary>
+    [JsonPropertyName("subnetId")]
+    public string? SubnetId { get; set; }
+
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    [JsonPropertyName("tagsAll")]
+    public IDictionary<string, string>? TagsAll { get; set; }
+
+    /// <summary>The type of traffic to capture. Valid values: ACCEPT,REJECT, ALL.</summary>
+    [JsonPropertyName("trafficType")]
+    public string? TrafficType { get; set; }
+
+    /// <summary>Transit Gateway Attachment ID to attach to</summary>
+    [JsonPropertyName("transitGatewayAttachmentId")]
+    public string? TransitGatewayAttachmentId { get; set; }
+
+    /// <summary>Transit Gateway ID to attach to</summary>
+    [JsonPropertyName("transitGatewayId")]
+    public string? TransitGatewayId { get; set; }
+
+    /// <summary>VPC ID to attach to</summary>
+    [JsonPropertyName("vpcId")]
+    public string? VpcId { get; set; }
+}
+
+/// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogStatusConditions
+{
+    /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
+    [JsonPropertyName("lastTransitionTime")]
+    public string LastTransitionTime { get; set; }
+
+    /// <summary>A Message containing details about this condition's last transition from one status to another, if any.</summary>
+    [JsonPropertyName("message")]
+    public string? Message { get; set; }
+
+    /// <summary>ObservedGeneration represents the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.</summary>
+    [JsonPropertyName("observedGeneration")]
+    public long? ObservedGeneration { get; set; }
+
+    /// <summary>A Reason for this condition's last transition from one status to another.</summary>
+    [JsonPropertyName("reason")]
+    public string Reason { get; set; }
+
+    /// <summary>Status of this condition; is it currently True, False, or Unknown?</summary>
+    [JsonPropertyName("status")]
+    public string Status { get; set; }
+
+    /// <summary>Type of this condition. At most one of each condition type may apply to a resource at any point in time.</summary>
+    [JsonPropertyName("type")]
+    public string Type { get; set; }
+}
+
+/// <summary>FlowLogStatus defines the observed state of FlowLog.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowLogStatus
+{
+    /// <summary></summary>
+    [JsonPropertyName("atProvider")]
+    public V1beta1FlowLogStatusAtProvider? AtProvider { get; set; }
+
+    /// <summary>Conditions of the resource.</summary>
+    [JsonPropertyName("conditions")]
+    public IList<V1beta1FlowLogStatusConditions>? Conditions { get; set; }
+
+    /// <summary>ObservedGeneration is the latest metadata.generation which resulted in either a ready state, or stalled due to error it can not recover from without human intervention.</summary>
+    [JsonPropertyName("observedGeneration")]
+    public long? ObservedGeneration { get; set; }
+}
+
+/// <summary>FlowLog is the Schema for the FlowLogs API. Provides a VPC/Subnet/ENI Flow Log</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1FlowLog : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FlowLogSpec>, IStatus<V1beta1FlowLogStatus>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "FlowLog";
+    public const string KubeGroup = "ec2.aws.upbound.io";
+    public const string KubePluralName = "flowlogs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ObjectMeta Metadata { get; set; }
+
+    /// <summary>FlowLogSpec defines the desired state of FlowLog</summary>
+    [JsonPropertyName("spec")]
+    public V1beta1FlowLogSpec Spec { get; set; }
+
+    /// <summary>FlowLogStatus defines the observed state of FlowLog.</summary>
+    [JsonPropertyName("status")]
+    public V1beta1FlowLogStatus? Status { get; set; }
+}

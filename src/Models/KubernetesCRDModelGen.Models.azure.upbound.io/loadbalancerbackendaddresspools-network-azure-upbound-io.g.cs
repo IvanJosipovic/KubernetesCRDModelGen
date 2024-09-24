@@ -1,0 +1,542 @@
+using k8s;
+using k8s.Models;
+using System;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+using System.Text.Json;
+using System.Text.Json.Nodes;
+using System.Text.Json.Serialization;
+
+namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1LoadBalancerBackendAddressPoolSpecDeletionPolicyEnum
+{
+    [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
+    /// <summary>Orphan</summary>
+    Orphan,
+    [EnumMember(Value = "Delete"), JsonStringEnumMemberName("Delete")]
+    /// <summary>Delete</summary>
+    Delete
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbalancerIdRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbalancerIdRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbalancerIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbalancerIdRefPolicyResolutionEnum>))]
+    public V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbalancerIdRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbalancerIdRefPolicyResolveEnum>))]
+    public V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbalancerIdRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+/// <summary>Reference to a LoadBalancer in network to populate loadbalancerId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbalancerIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbalancerIdRefPolicy? Policy { get; set; }
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbalancerIdSelectorPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbalancerIdSelectorPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbalancerIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbalancerIdSelectorPolicyResolutionEnum>))]
+    public V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbalancerIdSelectorPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbalancerIdSelectorPolicyResolveEnum>))]
+    public V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbalancerIdSelectorPolicyResolveEnum? Resolve { get; set; }
+}
+
+/// <summary>Selector for a LoadBalancer in network to populate loadbalancerId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbalancerIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbalancerIdSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LoadBalancerBackendAddressPoolSpecForProviderTunnelInterface
+{
+    /// <summary>The unique identifier of this Gateway Lodbalancer Tunnel Interface.</summary>
+    [JsonPropertyName("identifier")]
+    public double? Identifier { get; set; }
+
+    /// <summary>The port number that this Gateway Lodbalancer Tunnel Interface listens to.</summary>
+    [JsonPropertyName("port")]
+    public double? Port { get; set; }
+
+    /// <summary>The protocol used for this Gateway Lodbalancer Tunnel Interface. Possible values are None, Native and VXLAN.</summary>
+    [JsonPropertyName("protocol")]
+    public string? Protocol { get; set; }
+
+    /// <summary>The traffic type of this Gateway Lodbalancer Tunnel Interface. Possible values are None, Internal and External.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LoadBalancerBackendAddressPoolSpecForProvider
+{
+    /// <summary>The ID of the Load Balancer in which to create the Backend Address Pool. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("loadbalancerId")]
+    public string? LoadbalancerId { get; set; }
+
+    /// <summary>Reference to a LoadBalancer in network to populate loadbalancerId.</summary>
+    [JsonPropertyName("loadbalancerIdRef")]
+    public V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbalancerIdRef? LoadbalancerIdRef { get; set; }
+
+    /// <summary>Selector for a LoadBalancer in network to populate loadbalancerId.</summary>
+    [JsonPropertyName("loadbalancerIdSelector")]
+    public V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbalancerIdSelector? LoadbalancerIdSelector { get; set; }
+
+    /// <summary>One or more tunnel_interface blocks as defined below.</summary>
+    [JsonPropertyName("tunnelInterface")]
+    public IList<V1beta1LoadBalancerBackendAddressPoolSpecForProviderTunnelInterface>? TunnelInterface { get; set; }
+
+    /// <summary>The ID of the Virtual Network within which the Backend Address Pool should exist.</summary>
+    [JsonPropertyName("virtualNetworkId")]
+    public string? VirtualNetworkId { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LoadBalancerBackendAddressPoolSpecInitProviderTunnelInterface
+{
+    /// <summary>The unique identifier of this Gateway Lodbalancer Tunnel Interface.</summary>
+    [JsonPropertyName("identifier")]
+    public double? Identifier { get; set; }
+
+    /// <summary>The port number that this Gateway Lodbalancer Tunnel Interface listens to.</summary>
+    [JsonPropertyName("port")]
+    public double? Port { get; set; }
+
+    /// <summary>The protocol used for this Gateway Lodbalancer Tunnel Interface. Possible values are None, Native and VXLAN.</summary>
+    [JsonPropertyName("protocol")]
+    public string? Protocol { get; set; }
+
+    /// <summary>The traffic type of this Gateway Lodbalancer Tunnel Interface. Possible values are None, Internal and External.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LoadBalancerBackendAddressPoolSpecInitProvider
+{
+    /// <summary>One or more tunnel_interface blocks as defined below.</summary>
+    [JsonPropertyName("tunnelInterface")]
+    public IList<V1beta1LoadBalancerBackendAddressPoolSpecInitProviderTunnelInterface>? TunnelInterface { get; set; }
+
+    /// <summary>The ID of the Virtual Network within which the Backend Address Pool should exist.</summary>
+    [JsonPropertyName("virtualNetworkId")]
+    public string? VirtualNetworkId { get; set; }
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1LoadBalancerBackendAddressPoolSpecManagementPoliciesEnum
+{
+    [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
+    /// <summary>Observe</summary>
+    Observe,
+    [EnumMember(Value = "Create"), JsonStringEnumMemberName("Create")]
+    /// <summary>Create</summary>
+    Create,
+    [EnumMember(Value = "Update"), JsonStringEnumMemberName("Update")]
+    /// <summary>Update</summary>
+    Update,
+    [EnumMember(Value = "Delete"), JsonStringEnumMemberName("Delete")]
+    /// <summary>Delete</summary>
+    Delete,
+    [EnumMember(Value = "LateInitialize"), JsonStringEnumMemberName("LateInitialize")]
+    /// <summary>LateInitialize</summary>
+    LateInitialize,
+    [EnumMember(Value = "*"), JsonStringEnumMemberName("*")]
+    /// <summary>*</summary>
+    Option5
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1LoadBalancerBackendAddressPoolSpecProviderConfigRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1LoadBalancerBackendAddressPoolSpecProviderConfigRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LoadBalancerBackendAddressPoolSpecProviderConfigRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1LoadBalancerBackendAddressPoolSpecProviderConfigRefPolicyResolutionEnum>))]
+    public V1beta1LoadBalancerBackendAddressPoolSpecProviderConfigRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1LoadBalancerBackendAddressPoolSpecProviderConfigRefPolicyResolveEnum>))]
+    public V1beta1LoadBalancerBackendAddressPoolSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LoadBalancerBackendAddressPoolSpecProviderConfigRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1LoadBalancerBackendAddressPoolSpecProviderConfigRefPolicy? Policy { get; set; }
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1LoadBalancerBackendAddressPoolSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
+{
+    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
+    /// <summary>Required</summary>
+    Required,
+    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
+    /// <summary>Optional</summary>
+    Optional
+}
+
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
+public enum V1beta1LoadBalancerBackendAddressPoolSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
+{
+    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
+    /// <summary>Always</summary>
+    Always,
+    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
+    /// <summary>IfNotPresent</summary>
+    IfNotPresent
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LoadBalancerBackendAddressPoolSpecPublishConnectionDetailsToConfigRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1LoadBalancerBackendAddressPoolSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum>))]
+    public V1beta1LoadBalancerBackendAddressPoolSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1LoadBalancerBackendAddressPoolSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum>))]
+    public V1beta1LoadBalancerBackendAddressPoolSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
+}
+
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LoadBalancerBackendAddressPoolSpecPublishConnectionDetailsToConfigRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1LoadBalancerBackendAddressPoolSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Metadata is the metadata for connection secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LoadBalancerBackendAddressPoolSpecPublishConnectionDetailsToMetadata
+{
+    /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
+    [JsonPropertyName("annotations")]
+    public IDictionary<string, string>? Annotations { get; set; }
+
+    /// <summary>Labels are the labels/tags to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.labels". - It is up to Secret Store implementation for others store types.</summary>
+    [JsonPropertyName("labels")]
+    public IDictionary<string, string>? Labels { get; set; }
+
+    /// <summary>Type is the SecretType for the connection secret. - Only valid for Kubernetes Secret Stores.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LoadBalancerBackendAddressPoolSpecPublishConnectionDetailsTo
+{
+    /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
+    [JsonPropertyName("configRef")]
+    public V1beta1LoadBalancerBackendAddressPoolSpecPublishConnectionDetailsToConfigRef? ConfigRef { get; set; }
+
+    /// <summary>Metadata is the metadata for connection secret.</summary>
+    [JsonPropertyName("metadata")]
+    public V1beta1LoadBalancerBackendAddressPoolSpecPublishConnectionDetailsToMetadata? Metadata { get; set; }
+
+    /// <summary>Name is the name of the connection secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LoadBalancerBackendAddressPoolSpecWriteConnectionSecretToRef
+{
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>LoadBalancerBackendAddressPoolSpec defines the desired state of LoadBalancerBackendAddressPool</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LoadBalancerBackendAddressPoolSpec
+{
+    /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
+    [JsonPropertyName("deletionPolicy")]
+    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1LoadBalancerBackendAddressPoolSpecDeletionPolicyEnum>))]
+    public V1beta1LoadBalancerBackendAddressPoolSpecDeletionPolicyEnum? DeletionPolicy { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("forProvider")]
+    public V1beta1LoadBalancerBackendAddressPoolSpecForProvider ForProvider { get; set; }
+
+    /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+    [JsonPropertyName("initProvider")]
+    public V1beta1LoadBalancerBackendAddressPoolSpecInitProvider? InitProvider { get; set; }
+
+    /// <summary>THIS IS A BETA FIELD. It is on by default but can be opted out through a Crossplane feature flag. ManagementPolicies specify the array of actions Crossplane is allowed to take on the managed and external resources. This field is planned to replace the DeletionPolicy field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. If both are custom, the DeletionPolicy field will be ignored. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223 and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md</summary>
+    [JsonPropertyName("managementPolicies")]
+    public IList<V1beta1LoadBalancerBackendAddressPoolSpecManagementPoliciesEnum>? ManagementPolicies { get; set; }
+
+    /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+    [JsonPropertyName("providerConfigRef")]
+    public V1beta1LoadBalancerBackendAddressPoolSpecProviderConfigRef? ProviderConfigRef { get; set; }
+
+    /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+    [JsonPropertyName("publishConnectionDetailsTo")]
+    public V1beta1LoadBalancerBackendAddressPoolSpecPublishConnectionDetailsTo? PublishConnectionDetailsTo { get; set; }
+
+    /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+    [JsonPropertyName("writeConnectionSecretToRef")]
+    public V1beta1LoadBalancerBackendAddressPoolSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LoadBalancerBackendAddressPoolStatusAtProviderTunnelInterface
+{
+    /// <summary>The unique identifier of this Gateway Lodbalancer Tunnel Interface.</summary>
+    [JsonPropertyName("identifier")]
+    public double? Identifier { get; set; }
+
+    /// <summary>The port number that this Gateway Lodbalancer Tunnel Interface listens to.</summary>
+    [JsonPropertyName("port")]
+    public double? Port { get; set; }
+
+    /// <summary>The protocol used for this Gateway Lodbalancer Tunnel Interface. Possible values are None, Native and VXLAN.</summary>
+    [JsonPropertyName("protocol")]
+    public string? Protocol { get; set; }
+
+    /// <summary>The traffic type of this Gateway Lodbalancer Tunnel Interface. Possible values are None, Internal and External.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LoadBalancerBackendAddressPoolStatusAtProvider
+{
+    /// <summary>The Backend IP Configurations associated with this Backend Address Pool.</summary>
+    [JsonPropertyName("backendIpConfigurations")]
+    public IList<string>? BackendIpConfigurations { get; set; }
+
+    /// <summary>The ID of the Backend Address Pool.</summary>
+    [JsonPropertyName("id")]
+    public string? Id { get; set; }
+
+    /// <summary>An array of the Load Balancing Inbound NAT Rules associated with this Backend Address Pool.</summary>
+    [JsonPropertyName("inboundNatRules")]
+    public IList<string>? InboundNatRules { get; set; }
+
+    /// <summary>The Load Balancing Rules associated with this Backend Address Pool.</summary>
+    [JsonPropertyName("loadBalancingRules")]
+    public IList<string>? LoadBalancingRules { get; set; }
+
+    /// <summary>The ID of the Load Balancer in which to create the Backend Address Pool. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("loadbalancerId")]
+    public string? LoadbalancerId { get; set; }
+
+    /// <summary>An array of the Load Balancing Outbound Rules associated with this Backend Address Pool.</summary>
+    [JsonPropertyName("outboundRules")]
+    public IList<string>? OutboundRules { get; set; }
+
+    /// <summary>One or more tunnel_interface blocks as defined below.</summary>
+    [JsonPropertyName("tunnelInterface")]
+    public IList<V1beta1LoadBalancerBackendAddressPoolStatusAtProviderTunnelInterface>? TunnelInterface { get; set; }
+
+    /// <summary>The ID of the Virtual Network within which the Backend Address Pool should exist.</summary>
+    [JsonPropertyName("virtualNetworkId")]
+    public string? VirtualNetworkId { get; set; }
+}
+
+/// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LoadBalancerBackendAddressPoolStatusConditions
+{
+    /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
+    [JsonPropertyName("lastTransitionTime")]
+    public string LastTransitionTime { get; set; }
+
+    /// <summary>A Message containing details about this condition's last transition from one status to another, if any.</summary>
+    [JsonPropertyName("message")]
+    public string? Message { get; set; }
+
+    /// <summary>ObservedGeneration represents the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.</summary>
+    [JsonPropertyName("observedGeneration")]
+    public long? ObservedGeneration { get; set; }
+
+    /// <summary>A Reason for this condition's last transition from one status to another.</summary>
+    [JsonPropertyName("reason")]
+    public string Reason { get; set; }
+
+    /// <summary>Status of this condition; is it currently True, False, or Unknown?</summary>
+    [JsonPropertyName("status")]
+    public string Status { get; set; }
+
+    /// <summary>Type of this condition. At most one of each condition type may apply to a resource at any point in time.</summary>
+    [JsonPropertyName("type")]
+    public string Type { get; set; }
+}
+
+/// <summary>LoadBalancerBackendAddressPoolStatus defines the observed state of LoadBalancerBackendAddressPool.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LoadBalancerBackendAddressPoolStatus
+{
+    /// <summary></summary>
+    [JsonPropertyName("atProvider")]
+    public V1beta1LoadBalancerBackendAddressPoolStatusAtProvider? AtProvider { get; set; }
+
+    /// <summary>Conditions of the resource.</summary>
+    [JsonPropertyName("conditions")]
+    public IList<V1beta1LoadBalancerBackendAddressPoolStatusConditions>? Conditions { get; set; }
+
+    /// <summary>ObservedGeneration is the latest metadata.generation which resulted in either a ready state, or stalled due to error it can not recover from without human intervention.</summary>
+    [JsonPropertyName("observedGeneration")]
+    public long? ObservedGeneration { get; set; }
+}
+
+/// <summary>LoadBalancerBackendAddressPool is the Schema for the LoadBalancerBackendAddressPools API. Manages a Load Balancer Backend Address Pool.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LoadBalancerBackendAddressPool : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LoadBalancerBackendAddressPoolSpec>, IStatus<V1beta1LoadBalancerBackendAddressPoolStatus>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LoadBalancerBackendAddressPool";
+    public const string KubeGroup = "network.azure.upbound.io";
+    public const string KubePluralName = "loadbalancerbackendaddresspools";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ObjectMeta Metadata { get; set; }
+
+    /// <summary>LoadBalancerBackendAddressPoolSpec defines the desired state of LoadBalancerBackendAddressPool</summary>
+    [JsonPropertyName("spec")]
+    public V1beta1LoadBalancerBackendAddressPoolSpec Spec { get; set; }
+
+    /// <summary>LoadBalancerBackendAddressPoolStatus defines the observed state of LoadBalancerBackendAddressPool.</summary>
+    [JsonPropertyName("status")]
+    public V1beta1LoadBalancerBackendAddressPoolStatus? Status { get; set; }
+}
